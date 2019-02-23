@@ -100,7 +100,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/09/09/5b948afacb6e4.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/09/09/5b948afa900f2.jpg">
-<meta property="og:updated_time" content="2019-02-22T13:12:13.653Z">
+<meta property="og:updated_time" content="2019-02-23T07:33:18.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello, World!">
 <meta name="twitter:description" content="我只是一只蒟蒻  我在洛谷上的另一个博客：（其实里面什么也没有2333）永远相信美好的事情即将发生 12345678910#include &amp;lt;iostream&amp;gt;using namespace std;int main()&amp;#123;    cout &amp;lt;&amp;lt; &quot;Hello, World!&quot; &amp;lt;&amp;lt; endl;    return 0;&amp;#125; 12345678#i">
@@ -326,7 +326,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018-12-30/Hello-World/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018-12-30/Hello-World/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018-12-30/Hello-World/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -348,7 +348,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  129
+                  120
                 </span>
               
 
@@ -394,7 +394,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"Hello, World!"</span>);</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2018/09/09/5b948afacb6e4.jpg" alt="Undertale" title="Undertale"><br><img src="https://i.loli.net/2018/09/09/5b948afa900f2.jpg" alt="Undertale" title="Undertale"><br><del>盗用一下某巨佬的图</del></p>
-<p>PS.想要评论请去海外</p>
 
       
     </div>
@@ -495,14 +494,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -689,7 +681,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共129字</span>
+  <span class="post-count">全站共120字</span>
 </div>
 
         
@@ -819,26 +811,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://Luckyfuy.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://Luckyfuy.github.io/2018-12-30/Hello-World/';
-          this.page.identifier = '2018-12-30/Hello-World/';
-          this.page.title = 'Hello, World!';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://Luckyfuy.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -854,12 +826,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'sdpxKogMW4QP5eimBM7Ns5HH-gzGzoHsz',
+        appKey: 'Prtgz6GHmNS6lWTJv6nNH3DK',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
