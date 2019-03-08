@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Luckyfuy&#39;s Blog</title>
+  
+  <subtitle>永远相信美好的事情即将发生</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://Luckyfuy.github.io/"/>
+  <updated>2019-03-08T12:28:13.921Z</updated>
+  <id>http://Luckyfuy.github.io/</id>
+  
+  <author>
+    <name>Luckyfuy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello, World!</title>
+    <link href="http://Luckyfuy.github.io/2018-12-30/Hello-World/"/>
+    <id>http://Luckyfuy.github.io/2018-12-30/Hello-World/</id>
+    <published>2018-12-30T10:19:07.000Z</published>
+    <updated>2019-03-08T12:28:13.921Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我只是一只蒟蒻"><a href="#我只是一只蒟蒻" class="headerlink" title="我只是一只蒟蒻"></a>我只是一只蒟蒻</h1><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=39224659&auto=0&height=66"></iframe><p>我在洛谷上的另一个博客：<del>（其实里面什么也没有2333）</del><br><a href="https://luckyfuy.blog.luogu.org/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">永远相信美好的事情即将发生</a></p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello, World!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello, World!\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Hello, World!'</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"Hello, World!"</span>);</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/09/09/5b948afacb6e4.jpg" alt="Undertale" title="Undertale"><br><img src="https://i.loli.net/2018/09/09/5b948afa900f2.jpg" alt="Undertale" title="Undertale"><br><del>盗用一下某巨佬的图</del></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我只是一只蒟蒻&quot;&gt;&lt;a href=&quot;#我只是一只蒟蒻&quot; class=&quot;headerlink&quot; title=&quot;我只是一只蒟蒻&quot;&gt;&lt;/a&gt;我只是一只蒟蒻&lt;/h1&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=39224659&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;我在洛谷上的另一个博客：&lt;del&gt;（其实里面什么也没有2333）&lt;/del&gt;&lt;br&gt;&lt;a href=&quot;https://luckyfuy.blog.luogu.org/&quot; title=&quot;Luckyfuy&amp;#39;s Blog&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;永远相信美好的事情即将发生&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Others" scheme="http://Luckyfuy.github.io/tags/Others/"/>
+    
+  </entry>
+  
+</feed>
