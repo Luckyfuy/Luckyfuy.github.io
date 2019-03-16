@@ -1,66 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>冬至</title>
-      <link href="/2019-03-16/Winter-Solstice/"/>
-      <url>/2019-03-16/Winter-Solstice/</url>
-      
-        <content type="html"><![CDATA[<p>“果然，已经发生过了……”那人望着玻璃外那一颗淡蓝色的球体，说道。</p><a id="more"></a><p>按照飞船上的万年历来看，今天是冬至。他不禁回忆起了三十年前——对于他来说的三十年前。</p><p>那也是一个冬至，晚上，母亲端了几碗热气腾腾的饺子出来，和他一起坐在饭桌前。好久好久，他已经没吃过这样美味的饺子了。“儿子，听说你明天就要走了？”“嗯，对，妈。国家派我作为领航员去外太空，明天就启程。”“那你吃完准备下行李，明天妈就送你去宇航中心……”</p><p>他带着人类的希望，在浩瀚的宇宙中航行，已经三十年了。去过了半人马座，去过了蛇夫座……他去过了各种各样的恒星系，却从未发现过生命。如今，他返航了，除了证明了地球在茫茫宇宙中的孤独以外，什么也没有带回。</p><p>望着窗外的地球，他也是孤独的一个人了。以接近光速的速度航行了三十年，对他来说只是三十年，而对于地球，却已经过了漫长的七百年。这七百年里，地球发生了翻天覆地的变化。现在，他看到的淡蓝色球体，早已不是原来那个蔚蓝与碧绿交织的球体了。</p><p>飞船上的计算机轻松地推测出了原因——随着人口的增长和科技的进步，排碳量急剧增长，导致了全球气候变暖的加剧。于是，洪水肆虐，从开始的沿海城市沉入海底，逐渐到内陆地区也被淹没。地球进入了下一个冰河期，整个地球都被冻结。人类——这个在地球上生存了十万多年的物种，终于被自己打败了。</p><p>但是他还在，他操纵飞船降落在这层近千米的冰上。风雪在呼啸。他走下飞船站在冰上，透过半透明的冰，仍然可见大陆的轮廓。他凝望着冰层下方，他看到了他的祖国，看到了万里长城，看到了东方明珠，看到了他的家乡，看到了他的母亲为他做的饺子……</p><p>凛冬已至，风雪仍在呼啸……</p><p><strong>PS.这是一篇很渣很渣的超短篇科幻小说，当然比不上某位奆佬写的</strong></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Sci-Fi </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>论如何搭建一个静态博客</title>
-      <link href="/2019-03-09/Build-Blog-On-Github-With-Hexo/"/>
-      <url>/2019-03-09/Build-Blog-On-Github-With-Hexo/</url>
-      
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<a href="http://localhost:4000" title="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<a href="http://localhost:端口号" title="http://localhost:端口号" target="_blank" rel="noopener">http://localhost:端口号</a>就行了。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> GitHub </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello, World!</title>
-      <link href="/2018-12-30/Hello-World/"/>
-      <url>/2018-12-30/Hello-World/</url>
-      
-        <content type="html"><![CDATA[<h1 id="我只是一只蒟蒻"><a href="#我只是一只蒟蒻" class="headerlink" title="我只是一只蒟蒻"></a>我只是一只蒟蒻</h1><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=39224659&auto=0&height=66"></iframe><p>我在洛谷上的另一个博客：<del>（其实里面什么也没有2333）</del><br><a href="https://Luckyfuy.blog.luogu.org/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">永远相信美好的事情即将发生</a></p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello, World!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello, World!\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Hello, World!'</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"Hello, World!"</span>);</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/09/09/5b948afacb6e4.jpg" alt="Undertale" title="Undertale"><br><img src="https://i.loli.net/2018/09/09/5b948afa900f2.jpg" alt="Undertale" title="Undertale"><br><del>盗用一下某巨佬的图</del></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Others </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[冬至]]></title>
+    <url>%2F2019-03-16%2FWinter-Solstice%2F</url>
+    <content type="text"><![CDATA[“果然，已经发生过了……”那人望着玻璃外那一颗淡蓝色的球体，说道。 按照飞船上的万年历来看，今天是冬至。他不禁回忆起了三十年前——对于他来说的三十年前。 那也是一个冬至，晚上，母亲端了几碗热气腾腾的饺子出来，和他一起坐在饭桌前。好久好久，他已经没吃过这样美味的饺子了。“儿子，听说你明天就要走了？”“嗯，对，妈。国家派我作为领航员去外太空，明天就启程。”“那你吃完准备下行李，明天妈就送你去宇航中心……” 他带着人类的希望，在浩瀚的宇宙中航行，已经三十年了。去过了半人马座，去过了蛇夫座……他去过了各种各样的恒星系，却从未发现过生命。如今，他返航了，除了证明了地球在茫茫宇宙中的孤独以外，什么也没有带回。 望着窗外的地球，他也是孤独的一个人了。以接近光速的速度航行了三十年，对他来说只是三十年，而对于地球，却已经过了漫长的七百年。这七百年里，地球发生了翻天覆地的变化。现在，他看到的淡蓝色球体，早已不是原来那个蔚蓝与碧绿交织的球体了。 飞船上的计算机轻松地推测出了原因——随着人口的增长和科技的进步，排碳量急剧增长，导致了全球气候变暖的加剧。于是，洪水肆虐，从开始的沿海城市沉入海底，逐渐到内陆地区也被淹没。地球进入了下一个冰河期，整个地球都被冻结。人类——这个在地球上生存了十万多年的物种，终于被自己打败了。 但是他还在，他操纵飞船降落在这层近千米的冰上。风雪在呼啸。他走下飞船站在冰上，透过半透明的冰，仍然可见大陆的轮廓。他凝望着冰层下方，他看到了他的祖国，看到了万里长城，看到了东方明珠，看到了他的家乡，看到了他的母亲为他做的饺子…… 凛冬已至，风雪仍在呼啸…… PS.这是一篇很渣很渣的超短篇科幻小说，当然比不上某位奆佬写的]]></content>
+      <tags>
+        <tag>Sci-Fi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[论如何搭建一个静态博客]]></title>
+    <url>%2F2019-03-09%2FBuild-Blog-On-Github-With-Hexo%2F</url>
+    <content type="text"><![CDATA[前言GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。博客搭建成果见本站。 准备Git我们需要安装Git并配置好Git环境：Git官网。在电脑任意位置右击，若出现Git Bash Here等选项，即说明安装成功。 Node.js由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在Node.js官网下载Node.js。打开Git Bash，分别输入node -v和npm -v，若提示版本号信息则说明安装成功。 HexoGit和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是Hexo的官方网站。在Git Bash中输入npm install hexo-cli -g即可安装。输入hexo -v，检查是否成功安装。 GitHub如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在GitHub官网上注册账号，流程不多赘述。 开始创建一个博客文件夹，在此处打开Git Bash，输入命令hexo init，就这样，博客的本地文件就建好了。文件结构应该是这样的：输入hexo server（可简写为hexo s），打开提示中的网址（默认为http://localhost:4000/），我们就能看到自己的博客了！按下Ctrl+C即可结束预览。如果打不开网页，那么十有八九是端口被占用了，只要输入hexo s -p 端口号，然后打开http://localhost:端口号/就行了。]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello, World!]]></title>
+    <url>%2F2018-12-30%2FHello-World%2F</url>
+    <content type="text"><![CDATA[我只是一只蒟蒻 我在洛谷上的另一个博客：（其实里面什么也没有2333）永远相信美好的事情即将发生 欢迎访问某位奆佬的博客：Summer_Light’s Blog 12345678910#include &lt;iostream&gt;using namespace std;int main()&#123; cout &lt;&lt; "Hello, World!" &lt;&lt; endl; return 0;&#125; 12345678#include &lt;stdio.h&gt;int main()&#123; printf("Hello, World!\n"); return 0;&#125; 1234#!/usr/bin/env python3# -*- coding: utf-8 -*-print('Hello, World!') 1alert("Hello, World!"); 1234567public class HelloWorld&#123; public static void main(String[] args) &#123; System.out.println("Hello, World!"); &#125;&#125; 盗用一下某奆佬的图]]></content>
+      <tags>
+        <tag>Others</tag>
+      </tags>
+  </entry>
 </search>
