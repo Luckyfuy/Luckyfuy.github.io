@@ -5,9 +5,9 @@
   <subtitle>永远相信美好的事情即将发生</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://Luckyfuy.github.io/"/>
+  <link href="http://Luckyfuy.cf/"/>
   <updated>2019-03-16T06:51:26.624Z</updated>
-  <id>http://Luckyfuy.github.io/</id>
+  <id>http://Luckyfuy.cf/</id>
   
   <author>
     <name>Luckyfuy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>冬至</title>
-    <link href="http://Luckyfuy.github.io/2019-03-16/Winter-Solstice/"/>
-    <id>http://Luckyfuy.github.io/2019-03-16/Winter-Solstice/</id>
+    <link href="http://Luckyfuy.cf/2019-03-16/Winter-Solstice/"/>
+    <id>http://Luckyfuy.cf/2019-03-16/Winter-Solstice/</id>
     <published>2019-03-16T06:44:40.000Z</published>
     <updated>2019-03-16T06:51:26.624Z</updated>
     
@@ -32,36 +32,36 @@
     </summary>
     
     
-      <category term="Sci-Fi" scheme="http://Luckyfuy.github.io/tags/Sci-Fi/"/>
+      <category term="Sci-Fi" scheme="http://Luckyfuy.cf/tags/Sci-Fi/"/>
     
   </entry>
   
   <entry>
     <title>论如何搭建一个静态博客</title>
-    <link href="http://Luckyfuy.github.io/2019-03-09/Build-Blog-On-Github-With-Hexo/"/>
-    <id>http://Luckyfuy.github.io/2019-03-09/Build-Blog-On-Github-With-Hexo/</id>
+    <link href="http://Luckyfuy.cf/2019-03-09/Build-Blog-On-Github-With-Hexo/"/>
+    <id>http://Luckyfuy.cf/2019-03-09/Build-Blog-On-Github-With-Hexo/</id>
     <published>2019-03-09T04:21:32.000Z</published>
     <updated>2019-03-16T08:40:43.686Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<a href="http://localhost:4000/" title="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<a href="http://localhost:端口号/" title="http://localhost:端口号/" target="_blank" rel="noopener">http://localhost:端口号/</a>就行了。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<a href="http://localhost:4000/" title="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<a href="http://localhost:端口号/" title="http://localhost:端口号/" target="_blank" rel="noopener">http://localhost:端口号/</a>就行了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。&lt;br&gt;Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。&lt;br&gt;博客搭建成果见&lt;a href=&quot;https://Luckyfuy.github.io/&quot; title=&quot;Luckyfuy&amp;#39;s Blog&quot;&gt;本站&lt;/a&gt;。&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。&lt;br&gt;Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。&lt;br&gt;博客搭建成果见&lt;a href=&quot;https://Luckyfuy.github.io/&quot; title=&quot;Luckyfuy&amp;#39;s Blog&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;本站&lt;/a&gt;。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="Hexo" scheme="http://Luckyfuy.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://Luckyfuy.cf/tags/Hexo/"/>
     
-      <category term="GitHub" scheme="http://Luckyfuy.github.io/tags/GitHub/"/>
+      <category term="GitHub" scheme="http://Luckyfuy.cf/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>Hello, World!</title>
-    <link href="http://Luckyfuy.github.io/2018-12-30/Hello-World/"/>
-    <id>http://Luckyfuy.github.io/2018-12-30/Hello-World/</id>
+    <link href="http://Luckyfuy.cf/2018-12-30/Hello-World/"/>
+    <id>http://Luckyfuy.cf/2018-12-30/Hello-World/</id>
     <published>2018-12-30T10:19:07.000Z</published>
     <updated>2019-03-16T08:39:40.608Z</updated>
     
@@ -77,7 +77,7 @@
     </summary>
     
     
-      <category term="Others" scheme="http://Luckyfuy.github.io/tags/Others/"/>
+      <category term="Others" scheme="http://Luckyfuy.cf/tags/Others/"/>
     
   </entry>
   
