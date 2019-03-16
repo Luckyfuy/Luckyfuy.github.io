@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="更新日志2018年2018.12.30 创建博客  2019年…暂无记录（才不是因为懒得写(￣▽￣)） 2019.02.22 新增右下角Live2D模型，模型为Wanko  2019.02.23 新增顶部进度条 Live2D模型更改为Miku 使用Valine作为评论系统 新增底部全站访问量、访客数、字数统计 新增文章字数、阅读时长统计  2019.03.08 新增阅读进度 新增标签云 添加RSS">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-16T08:40:15.447Z">
+<meta property="og:updated_time" content="2019-03-16T08:56:11.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About">
 <meta name="twitter:description" content="更新日志2018年2018.12.30 创建博客  2019年…暂无记录（才不是因为懒得写(￣▽￣)） 2019.02.22 新增右下角Live2D模型，模型为Wanko  2019.02.23 新增顶部进度条 Live2D模型更改为Miku 使用Valine作为评论系统 新增底部全站访问量、访客数、字数统计 新增文章字数、阅读时长统计  2019.03.08 新增阅读进度 新增标签云 添加RSS">
@@ -341,6 +341,7 @@
 <h3 id="2019-03-16"><a href="#2019-03-16" class="headerlink" title="2019.03.16"></a>2019.03.16</h3><ol>
 <li>新增了文章阅读量统计</li>
 <li>换用了新域名<a href="https://Luckyfuy.cf/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">https://Luckyfuy.cf/</a><del>不蒜子统计的访问量访客数全没了QwQ</del></li>
+<li>新增了运行时间统计</li>
 </ol>
 
         
@@ -553,6 +554,34 @@
   <span class="post-count">全站共1.2k字</span>
 </div>
 
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
         
 
 
