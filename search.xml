@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Learning-Python]]></title>
+    <title><![CDATA[人生苦短，我学Python]]></title>
     <url>%2F2019%2F03-22%2FLearning-Python%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[前言 人生苦短，我用Python。Python]]></content>
       <tags>
         <tag>Python</tag>
       </tags>

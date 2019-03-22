@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-03-22T12:52:09.644Z</updated>
+  <updated>2019-03-22T12:55:01.842Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -17,13 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Learning-Python</title>
+    <title>人生苦短，我学Python</title>
     <link href="http://Luckyfuy.cf/2019/03-22/Learning-Python/"/>
     <id>http://Luckyfuy.cf/2019/03-22/Learning-Python/</id>
     <published>2019-03-22T12:51:35.000Z</published>
-    <updated>2019-03-22T12:52:09.644Z</updated>
+    <updated>2019-03-22T12:55:01.842Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>人生苦短，我用Python。<br>Python</p></blockquote><a id="more"></a>]]></content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;人生苦短，我用Python。&lt;br&gt;Python&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
