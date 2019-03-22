@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-03-17T02:37:42.404Z</updated>
+  <updated>2019-03-22T10:58:24.752Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://Luckyfuy.cf/2019-03-16/Winter-Solstice/"/>
     <id>http://Luckyfuy.cf/2019-03-16/Winter-Solstice/</id>
     <published>2019-03-16T06:44:40.000Z</published>
-    <updated>2019-03-17T02:37:42.404Z</updated>
+    <updated>2019-03-22T10:58:24.752Z</updated>
     
     <content type="html"><![CDATA[<p>“果然，已经发生过了……”那人望着玻璃外那一颗淡蓝色的球体，说道。</p><a id="more"></a><p>按照飞船上的万年历来看，今天是冬至。他不禁回忆起了三十年前——对于他来说的三十年前。</p><p>那也是一个冬至，晚上，母亲端了几碗热气腾腾的饺子出来，和他一起坐在饭桌前。好久好久，他已经没吃过这样美味的饺子了。“儿子，听说你明天就要走了？”“嗯，对，妈。国家派我作为领航员去外太空，明天就启程。”“那你吃完准备下行李，明天妈就送你去宇航中心……”</p><p>他带着人类的希望，在浩瀚的宇宙中航行，已经三十年了。去过了半人马座，去过了蛇夫座……他去过了各种各样的恒星系，却从未发现过生命。如今，他返航了，除了证明了地球在茫茫宇宙中的孤独以外，什么也没有带回。</p><p>望着窗外的地球，他也是孤独的一个人了。以接近光速的速度航行了三十年，对他来说只是三十年，而对于地球，却已经过了漫长的七百年。这七百年里，地球发生了翻天覆地的变化。现在，他看到的淡蓝色球体，早已不是原来那个蔚蓝与碧绿交织的球体了。</p><p>飞船上的计算机轻松地推测出了原因——随着人口的增长和科技的进步，排碳量急剧增长，导致了全球气候变暖的加剧。于是，洪水肆虐，从开始的沿海城市沉入海底，逐渐到内陆地区也被淹没。地球进入了下一个冰河期，整个地球都被冻结。人类——这个在地球上生存了十万多年的物种，终于被自己打败了。</p><p>但是他还在，他操纵飞船降落在这层近千米的冰上。风雪在呼啸。他走下飞船站在冰上，透过半透明的冰，仍然可见大陆的轮廓。他凝望着冰层下方，他看到了他的祖国，看到了万里长城，看到了东方明珠，看到了他的家乡，看到了他的母亲为他做的饺子……</p><p>凛冬已至，风雪仍在呼啸……</p><p><strong>PS.这是一篇很渣很渣的超短篇科幻小说，当然比不上某位奆佬写的</strong></p>]]></content>
     
@@ -34,18 +34,16 @@
     
       <category term="Essays" scheme="http://Luckyfuy.cf/tags/Essays/"/>
     
-      <category term="Sci-Fi" scheme="http://Luckyfuy.cf/tags/Sci-Fi/"/>
-    
   </entry>
   
   <entry>
     <title>论如何搭建一个静态博客</title>
-    <link href="http://Luckyfuy.cf/2019-03-09/Build-Blog-On-Github-With-Hexo/"/>
-    <id>http://Luckyfuy.cf/2019-03-09/Build-Blog-On-Github-With-Hexo/</id>
+    <link href="http://Luckyfuy.cf/2019-03-09/Build-Blog/"/>
+    <id>http://Luckyfuy.cf/2019-03-09/Build-Blog/</id>
     <published>2019-03-09T04:21:32.000Z</published>
-    <updated>2019-03-16T08:40:43.686Z</updated>
+    <updated>2019-03-22T10:57:12.626Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<a href="http://localhost:4000/" title="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<a href="http://localhost:端口号/" title="http://localhost:端口号/" target="_blank" rel="noopener">http://localhost:端口号/</a>就行了。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<code>http://localhost:4000/</code>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<code>http://localhost:端口号/</code>就行了。</p>]]></content>
     
     <summary type="html">
     
