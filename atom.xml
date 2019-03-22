@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-03-22T10:58:24.752Z</updated>
+  <updated>2019-03-22T12:52:09.644Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning-Python</title>
+    <link href="http://Luckyfuy.cf/2019/03-22/Learning-Python/"/>
+    <id>http://Luckyfuy.cf/2019/03-22/Learning-Python/</id>
+    <published>2019-03-22T12:51:35.000Z</published>
+    <updated>2019-03-22T12:52:09.644Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://Luckyfuy.cf/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>冬至</title>
@@ -38,8 +54,8 @@
   
   <entry>
     <title>论如何搭建一个静态博客</title>
-    <link href="http://Luckyfuy.cf/2019/03-09/Build-Blog/"/>
-    <id>http://Luckyfuy.cf/2019/03-09/Build-Blog/</id>
+    <link href="http://Luckyfuy.cf/2019/03-09/Building-Blog/"/>
+    <id>http://Luckyfuy.cf/2019/03-09/Building-Blog/</id>
     <published>2019-03-09T04:21:32.000Z</published>
     <updated>2019-03-22T10:57:12.626Z</updated>
     
