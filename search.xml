@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[人生苦短，我学Python]]></title>
-    <url>%2F2019%2F03-22%2FLearning-Python%2F</url>
+    <url>%2F2019%2F03%2F22%2FLearning-Python%2F</url>
     <content type="text"><![CDATA[前言 人生苦短，我用Python。 Python是Guido van Rossum在1989年圣诞节时出于无聊而设计的一门编程语言。 不同的编程语言各有千秋，而Python是适合用于编写应用程序的高级语言。Python为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称为“内置电池（Batteries Included）”。除了内置的库之外，Python还有大量的第三方库，也就是别人开发出来可以直接供你使用的库。当然，如果你开发的代码经过很好的封装，也可以作为第三方库给别人使用。 Python也有缺点，那就是运行速度慢。与C语言相比，由于Python是解释型语言，代码在执行时会一行一行地翻译成机器码，这个过程非常耗时，所以很慢；而C语言是运行前直接编译成CPU能执行的机器码，所以非常快。 关于Python，Tim Peters曾写过一首诗歌叫做《The Zen of Python》，它被作为了彩蛋加入到了Python。这首诗歌很好地诠释了Python的风格： The Zen of Python, by Tim Peters Beautiful is better than ugly.Explicit is better than implicit.Simple is better than complex.Complex is better than complicated.Flat is better than nested.Sparse is better than dense.Readability counts.Special cases aren’t special enough to break the rules.Although practicality beats purity.Errors should never pass silently.Unless explicitly silenced.In the face of ambiguity, refuse the temptation to guess.There should be one– and preferably only one –obvious way to do it.Although that way may not be obvious at first unless you’re Dutch.Now is better than never.Although never is often better than right now.If the implementation is hard to explain, it’s a bad idea.If the implementation is easy to explain, it may be a good idea.Namespaces are one honking great idea – let’s do more of those! 中文翻译： Python之禅，Tim Peters作 优美胜于丑陋。明了胜于晦涩。简洁胜于复杂。复杂胜于凌乱。扁平胜于嵌套。间隔胜于紧凑。可读性很重要。即便假借特例的实用性之名，也不可违背这些规则。不要包容所有错误，除非你确定需要这样做。当存在多种可能，不要尝试去猜测。而是尽量找一种，最好是唯一一种明显的解决方案。虽然这并不容易，因为你不是Python之父。做也许好过不做，但不假思索就动手还不如不做。如果你的方案难以描述，那肯定不是一个好方案。如果你的方案易于描述，那很有可能是个好方案。命名空间是一种绝妙的理念，我们应当多加利用！ 准备学习Python的第一步，当然是安装Python。安装后，你将会得到Python解释器，一个命令行交互环境，还有一个极其简陋的集成开发环境。 目前，Python有两个版本，分别是2.x和3.x，这两个版本不兼容，因此建议使用最新的3.x版本。进入Python官网以下载Python安装程序。注意，安装时请务必勾选“Add Python 3.x to PATH”，否则须手动添加Python路径到环境变量。 打开命令提示符窗口，输入python后，若出现图中内容，则说明安装成功：如果提示&#39;python&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。，说明环境变量配置有问题。 开始命令行模式在Windows开始菜单中选择“命令提示符”，就进入到了命令行模式，它的提示符类似于C:\&gt;。 Python交互模式在命令行模式中输入python即可进入Python交互模式，它的提示符为&gt;&gt;&gt;。输入exit()并回车以退出Python交互模式回到命令行模式。也可以通过开始菜单的“Python 3.x”直接进入Python交互模式。 运行在Python交互模式下，输入代码并回车，会立即得到运行结果，例如：1234&gt;&gt;&gt; 12345 + 5432166666&gt;&gt;&gt; print('Hello, World!')Hello, World! 其中，print()函数的作用是输出，文本需要用单引号或双引号括起来。 如果要运行一个.py文件，可以在命令行模式中输入python kkk.py，这样就会运行当前目录下的kkk.py了。 此外，Python交互模式会把每一行代码的结果输出，而直接运行代码却不会。例如：12&gt;&gt;&gt; 500 - 200300 可以看到会直接输出结果300。但如果写一个calc.py，内容如下：1500 - 200 然后在命令行模式下执行，会发现什么输出也没有。这是正常的。要想输出结果，必须自己用print()函数输出，于是把calc.py的内容改成如下：1print(500 - 200) 就能看到输出结果300了。 最后，Python交互模式下的代码是输入一行输出一行的，而命令行模式下直接执行.py文件是一次性全部执行的，因此，Python交互模式主要是为了调试代码用的。]]></content>
       <tags>
         <tag>Python</tag>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <title><![CDATA[冬至]]></title>
-    <url>%2F2019%2F03-16%2FWinter-Solstice%2F</url>
+    <url>%2F2019%2F03%2F16%2FWinter-Solstice%2F</url>
     <content type="text"><![CDATA[“果然，已经发生过了……”那人望着玻璃外那一颗淡蓝色的球体，说道。 按照飞船上的万年历来看，今天是冬至。他不禁回忆起了三十年前——对于他来说的三十年前。 那也是一个冬至，晚上，母亲端了几碗热气腾腾的饺子出来，和他一起坐在饭桌前。好久好久，他已经没吃过这样美味的饺子了。“儿子，听说你明天就要走了？”“嗯，对，妈。国家派我作为领航员去外太空，明天就启程。”“那你吃完准备下行李，明天妈就送你去宇航中心……” 他带着人类的希望，在浩瀚的宇宙中航行，已经三十年了。去过了半人马座，去过了蛇夫座……他去过了各种各样的恒星系，却从未发现过生命。如今，他返航了，除了证明了地球在茫茫宇宙中的孤独以外，什么也没有带回。 望着窗外的地球，他也是孤独的一个人了。以接近光速的速度航行了三十年，对他来说只是三十年，而对于地球，却已经过了漫长的七百年。这七百年里，地球发生了翻天覆地的变化。现在，他看到的淡蓝色球体，早已不是原来那个蔚蓝与碧绿交织的球体了。 飞船上的计算机轻松地推测出了原因——随着人口的增长和科技的进步，排碳量急剧增长，导致了全球气候变暖的加剧。于是，洪水肆虐，从开始的沿海城市沉入海底，逐渐到内陆地区也被淹没。地球进入了下一个冰河期，整个地球都被冻结。人类——这个在地球上生存了十万多年的物种，终于被自己打败了。 但是他还在，他操纵飞船降落在这层近千米的冰上。风雪在呼啸。他走下飞船站在冰上，透过半透明的冰，仍然可见大陆的轮廓。他凝望着冰层下方，他看到了他的祖国，看到了万里长城，看到了东方明珠，看到了他的家乡，看到了他的母亲为他做的饺子…… 凛冬已至，风雪仍在呼啸…… PS.这是一篇很渣很渣的超短篇科幻小说，当然比不上某位奆佬写的]]></content>
       <tags>
         <tag>Essays</tag>
@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <title><![CDATA[论如何搭建一个静态博客]]></title>
-    <url>%2F2019%2F03-09%2FBuilding-Blog%2F</url>
+    <url>%2F2019%2F03%2F09%2FBuilding-Blog%2F</url>
     <content type="text"><![CDATA[前言GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。博客搭建成果见本站。 准备Git我们需要安装Git并配置好Git环境：Git官网。在电脑任意位置右击，若出现Git Bash Here等选项，即说明安装成功。 Node.js由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在Node.js官网下载Node.js。打开Git Bash，分别输入node -v和npm -v，若提示版本号信息则说明安装成功。 HexoGit和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是Hexo的官方网站。在Git Bash中输入npm install hexo-cli -g即可安装。输入hexo -v，检查是否成功安装。 GitHub如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在GitHub官网上注册账号，流程不多赘述。 开始创建一个博客文件夹，在此处打开Git Bash，输入命令hexo init，就这样，博客的本地文件就建好了。文件结构应该是这样的：输入hexo server（可简写为hexo s），打开提示中的网址（默认为http://localhost:4000/），我们就能看到自己的博客了！按下Ctrl+C即可结束预览。如果打不开网页，那么十有八九是端口被占用了，只要输入hexo s -p 端口号，然后打开http://localhost:端口号/就行了。]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello, World!]]></title>
-    <url>%2F2018%2F12-30%2FHello-World%2F</url>
+    <url>%2F2018%2F12%2F30%2FHello-World%2F</url>
     <content type="text"><![CDATA[我只是一只蒟蒻 我在洛谷上的另一个博客：（其实里面什么也没有2333）永远相信美好的事情即将发生 欢迎访问某位奆佬的博客：Summer_Light’s Blog 12345678910#include &lt;iostream&gt;using namespace std;int main()&#123; cout &lt;&lt; "Hello, World!" &lt;&lt; endl; return 0;&#125; 12345678#include &lt;stdio.h&gt;int main()&#123; printf("Hello, World!\n"); return 0;&#125; 1234#!/usr/bin/env python3# -*- coding: utf-8 -*-print('Hello, World!') 1alert("Hello, World!"); 1234567public class HelloWorld&#123; public static void main(String[] args) &#123; System.out.println("Hello, World!"); &#125;&#125; 盗用一下某奆佬的图]]></content>
       <tags>
         <tag>Others</tag>
