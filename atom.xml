@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-03-24T05:25:59.853Z</updated>
+  <updated>2019-03-30T13:06:03.053Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python??</title>
+    <link href="http://Luckyfuy.cf/2019/03/30/Python-Fundamentals/"/>
+    <id>http://Luckyfuy.cf/2019/03/30/Python-Fundamentals/</id>
+    <published>2019-03-30T07:56:40.000Z</published>
+    <updated>2019-03-30T13:06:03.053Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h1 id=""><a href="#" class="headerlink" title="?????"></a>?????</h1><h2 id="print"><a href="#print" class="headerlink" title="print()"></a>print()</h2><p>Python??<code>print()</code>??????????<code>print(&#39;Samuel AK IOI&#39;)</code>???<code>Samuel AK IOI</code>?<br><strong><code>print()</code>???????????????????????</strong>?<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Today'</span>, <span class="string">'is'</span>, <span class="string">'Saturday'</span>)</span><br><span class="line">Today <span class="keyword">is</span> Saturday</span><br></pre></td></tr></table></figure></p><p>???????????<strong>??????<code>sep</code>?????????????</strong>?<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Luckyfuy'</span>, <span class="string">'Summer_Light'</span>, <span class="string">'Yummy'</span>, <span class="string">'FZYFZY'</span>, sep=<span class="string">'|---|'</span>)</span><br><span class="line">Luckyfuy|---|Summer_Light|---|Yummy|---|FZYFZY</span><br></pre></td></tr></table></figure></p><p>???<code>print()</code>???????????????<code>\n</code>????<strong>????????<code>end</code>????????????</strong>?<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK?</span><br><span class="line">Are you OK?</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>, end=<span class="string">' '</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK? Are you OK?</span><br></pre></td></tr></table></figure></p><h2 id="input"><a href="#input" class="headerlink" title="input()"></a>input()</h2><h1 id="-1"><a href="#-1" class="headerlink" title="??"></a>??</h1><p>??????????????????????????????????????????????????????????????????????????????????<br>Python?????????????????<code>//</code>?<code>/**/</code>???Python??<strong><code>#</code>???????????<code>&#39;&#39;&#39;</code>?<code>&quot;&quot;&quot;</code>???????</strong>???<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ??????</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Python????????????</span></span><br><span class="line"><span class="string">??????????</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">print(<span class="string">'kkksc03 is stupid'</span>) <span class="comment"># ????????</span></span><br><span class="line"><span class="comment"># ?????????????</span></span><br><span class="line"><span class="comment"># print('Samuel AK IOI')</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">233</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;?????&quot;&gt;&lt;/a&gt;?????&lt;/h1&gt;&lt;h2 id=&quot;print&quot;&gt;&lt;a href=&quot;#print&quot; class=&quot;headerlink&quot; ti
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://Luckyfuy.cf/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>人生苦短，我学Python</title>
