@@ -1,44 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Python基础]]></title>
-    <url>%2F2019%2F03%2F30%2FPython-Fundamentals%2F</url>
-    <content type="text"><![CDATA[输入与输出print()Python使用print()函数来输出信息，例如print(&#39;Samuel AK IOI&#39;)会输出Samuel AK IOI。 print()函数接受多个参数，每个参数之间默认会以空格隔开：12&gt;&gt;&gt; print('Today', 'is', 'Saturday')Today is Saturday 如果不想要默认的空格，可以通过修改sep参数来实现参数间的分隔内容：12&gt;&gt;&gt; print('Luckyfuy', 'Summer_Light', 'Yummy', 'FZYFZY', sep='|---|')Luckyfuy|---|Summer_Light|---|Yummy|---|FZYFZY 同时，print()函数在末尾会自动输出一个换行符\n，因此，我们可以通过修改end参数来修改末尾输出的内容：12345&gt;&gt;&gt; print('Are you OK?'); print('Are you OK?')Are you OK?Are you OK?&gt;&gt;&gt; print('Are you OK?', end=' '); print('Are you OK?')Are you OK? Are you OK? input()输入是通过函数input()来实现的。input()会返回用户输入的内容，其类型为字符串。input()有一个可选参数，用于输出提示信息。例如：123456&gt;&gt;&gt; print(input())kkksc03kkksc03&gt;&gt;&gt; print('Hello', input('Enter your name: '))Enter your name: LuckyfuyHello Luckyfuy 注释编译时，编译器会自动跳过注释。因此，注释不是给机器看的，而是给人看的。在代码中写上注释是一个良好的习惯，这样一来自己看得懂，其他人也能明白你的意图。同时，注释可以把Python中的注释不是和大多数语言一样，使用//或/**/的。在Python中，#号表示单行注释，三引号&#39;&#39;&#39;或&quot;&quot;&quot;表示多行注释。例如：1234567891011# 这是一段注释'''Python编译器会跳过这一大段文字直接去运行下面的代码'''print('kkksc03 is stupid') # 这段代码会被执行# 而下面这段代码则不会被执行# print('Samuel AK IOI')"""233""" 数据类型数字（Number）整数（int）浮点数（float）布尔值（bool）复数（complex）字符串（String）列表（List）元组（Tuple）集合（Set）字典（Dictionary）变量与常量关键字]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[人生苦短，我学Python]]></title>
-    <url>%2F2019%2F03%2F22%2FLearning-Python%2F</url>
-    <content type="text"><![CDATA[前言 人生苦短，我用Python。 Python是Guido van Rossum在1989年圣诞节时出于无聊而设计的一门编程语言。 不同的编程语言各有千秋，而Python是适合用于编写应用程序的高级语言。Python为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称为“内置电池（Batteries Included）”。除了内置的库之外，Python还有大量的第三方库，也就是别人开发出来可以直接供你使用的库。当然，如果你开发的代码经过很好的封装，也可以作为第三方库给别人使用。 Python也有缺点，那就是运行速度慢。与C语言相比，由于Python是解释型语言，代码在执行时会一行一行地翻译成机器码，这个过程非常耗时，所以很慢；而C语言是运行前直接编译成CPU能执行的机器码，所以非常快。 关于Python，Tim Peters曾写过一首诗歌叫做《The Zen of Python》，它被作为了彩蛋加入到了Python。这首诗歌很好地诠释了Python的风格： The Zen of Python, by Tim Peters Beautiful is better than ugly.Explicit is better than implicit.Simple is better than complex.Complex is better than complicated.Flat is better than nested.Sparse is better than dense.Readability counts.Special cases aren’t special enough to break the rules.Although practicality beats purity.Errors should never pass silently.Unless explicitly silenced.In the face of ambiguity, refuse the temptation to guess.There should be one– and preferably only one –obvious way to do it.Although that way may not be obvious at first unless you’re Dutch.Now is better than never.Although never is often better than right now.If the implementation is hard to explain, it’s a bad idea.If the implementation is easy to explain, it may be a good idea.Namespaces are one honking great idea – let’s do more of those! 中文翻译： Python之禅，Tim Peters作 优美胜于丑陋。明了胜于晦涩。简洁胜于复杂。复杂胜于凌乱。扁平胜于嵌套。间隔胜于紧凑。可读性很重要。即便假借特例的实用性之名，也不可违背这些规则。不要包容所有错误，除非你确定需要这样做。当存在多种可能，不要尝试去猜测。而是尽量找一种，最好是唯一一种明显的解决方案。虽然这并不容易，因为你不是Python之父。做也许好过不做，但不假思索就动手还不如不做。如果你的方案难以描述，那肯定不是一个好方案。如果你的方案易于描述，那很有可能是个好方案。命名空间是一种绝妙的理念，我们应当多加利用！ 准备学习Python的第一步，当然是安装Python。安装后，你将会得到Python解释器，一个命令行交互环境，还有一个极其简陋的集成开发环境。 目前，Python有两个版本，分别是2.x和3.x，这两个版本不兼容，因此建议使用最新的3.x版本。进入Python官网以下载Python安装程序。注意，安装时请务必勾选“Add Python 3.x to PATH”，否则须手动添加Python路径到环境变量。 打开命令提示符窗口，输入python后，若出现图中内容，则说明安装成功：如果提示&#39;python&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。，说明环境变量配置有问题。 开始命令行模式在Windows开始菜单中选择“命令提示符”，就进入到了命令行模式，它的提示符类似于C:\&gt;。 Python交互模式在命令行模式中输入python即可进入Python交互模式，它的提示符为&gt;&gt;&gt;。输入exit()并回车以退出Python交互模式回到命令行模式。也可以通过开始菜单的“Python 3.x”直接进入Python交互模式。 运行在Python交互模式下，输入代码并回车，会立即得到运行结果，例如：1234&gt;&gt;&gt; 12345 + 5432166666&gt;&gt;&gt; print('Hello, World!')Hello, World! 其中，print()函数的作用是输出，文本需要用单引号或双引号括起来。 如果要运行一个.py文件，可以在命令行模式中输入python kkk.py，这样就会运行当前目录下的kkk.py了。 此外，Python交互模式会把每一行代码的结果输出，而直接运行代码却不会。例如：12&gt;&gt;&gt; 500 - 200300 可以看到会直接输出结果300。但如果写一个calc.py，内容如下：1500 - 200 然后在命令行模式下执行，会发现什么输出也没有。这是正常的。要想输出结果，必须自己用print()函数输出，于是把calc.py的内容改成如下：1print(500 - 200) 就能看到输出结果300了。 最后，Python交互模式下的代码是输入一行输出一行的，而命令行模式下直接执行.py文件是一次性全部执行的，因此，Python交互模式主要是为了调试代码用的。]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[冬至]]></title>
-    <url>%2F2019%2F03%2F16%2FWinter-Solstice%2F</url>
-    <content type="text"><![CDATA[“果然，已经发生过了……”那人望着玻璃外那一颗淡蓝色的球体，说道。 按照飞船上的万年历来看，今天是冬至。他不禁回忆起了三十年前——对于他来说的三十年前。 那也是一个冬至，晚上，母亲端了几碗热气腾腾的饺子出来，和他一起坐在饭桌前。好久好久，他已经没吃过这样美味的饺子了。“儿子，听说你明天就要走了？”“嗯，对，妈。国家派我作为领航员去外太空，明天就启程。”“那你吃完准备下行李，明天妈就送你去宇航中心……” 他带着人类的希望，在浩瀚的宇宙中航行，已经三十年了。去过了半人马座，去过了蛇夫座……他去过了各种各样的恒星系，却从未发现过生命。如今，他返航了，除了证明了地球在茫茫宇宙中的孤独以外，什么也没有带回。 望着窗外的地球，他也是孤独的一个人了。以接近光速的速度航行了三十年，对他来说只是三十年，而对于地球，却已经过了漫长的七百年。这七百年里，地球发生了翻天覆地的变化。现在，他看到的淡蓝色球体，早已不是原来那个蔚蓝与碧绿交织的球体了。 飞船上的计算机轻松地推测出了原因——随着人口的增长和科技的进步，排碳量急剧增长，导致了全球气候变暖的加剧。于是，洪水肆虐，从开始的沿海城市沉入海底，逐渐到内陆地区也被淹没。地球进入了下一个冰河期，整个地球都被冻结。人类——这个在地球上生存了十万多年的物种，终于被自己打败了。 但是他还在，他操纵飞船降落在这层近千米的冰上。风雪在呼啸。他走下飞船站在冰上，透过半透明的冰，仍然可见大陆的轮廓。他凝望着冰层下方，他看到了他的祖国，看到了万里长城，看到了东方明珠，看到了他的家乡，看到了他的母亲为他做的饺子…… 凛冬已至，风雪仍在呼啸…… PS.这是一篇很渣很渣的超短篇科幻小说，当然比不上某位奆佬写的]]></content>
-      <tags>
-        <tag>Essays</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[论如何搭建一个静态博客]]></title>
-    <url>%2F2019%2F03%2F09%2FBuilding-Blog%2F</url>
-    <content type="text"><![CDATA[前言GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。博客搭建成果见本站。 准备Git我们需要安装Git并配置好Git环境：Git官网。在电脑任意位置右击，若出现Git Bash Here等选项，即说明安装成功。 Node.js由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在Node.js官网下载Node.js。打开Git Bash，分别输入node -v和npm -v，若提示版本号信息则说明安装成功。 HexoGit和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是Hexo的官方网站。在Git Bash中输入npm install hexo-cli -g即可安装。输入hexo -v，检查是否成功安装。 GitHub如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在GitHub官网上注册账号，流程不多赘述。 开始创建一个博客文件夹，在此处打开Git Bash，输入命令hexo init，就这样，博客的本地文件就建好了。文件结构应该是这样的：输入hexo server（可简写为hexo s），打开提示中的网址（默认为http://localhost:4000/），我们就能看到自己的博客了！按下Ctrl+C即可结束预览。如果打不开网页，那么十有八九是端口被占用了，只要输入hexo s -p 端口号，然后打开http://localhost:端口号/就行了。]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello, World!]]></title>
-    <url>%2F2018%2F12%2F30%2FHello-World%2F</url>
-    <content type="text"><![CDATA[我只是一只蒟蒻 我在洛谷上的另一个博客：（其实里面什么也没有2333）永远相信美好的事情即将发生 欢迎访问某位奆佬的博客：Summer_Light’s Blog 12345678910#include &lt;iostream&gt;using namespace std;int main()&#123; cout &lt;&lt; "Hello, World!" &lt;&lt; endl; return 0;&#125; 12345678#include &lt;stdio.h&gt;int main()&#123; printf("Hello, World!\n"); return 0;&#125; 1234#!/usr/bin/env python3# -*- coding: utf-8 -*-print('Hello, World!') 1alert("Hello, World!"); 1234567public class HelloWorld&#123; public static void main(String[] args) &#123; System.out.println("Hello, World!"); &#125;&#125; 盗用一下某奆佬的图]]></content>
-      <tags>
-        <tag>Others</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Python基础</title>
+      <link href="/2019/03/30/Python-Fundamentals/"/>
+      <url>/2019/03/30/Python-Fundamentals/</url>
+      
+        <content type="html"><![CDATA[<h1 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h1><h2 id="print"><a href="#print" class="headerlink" title="print()"></a>print()</h2><p>Python使用<code>print()</code>函数来输出信息，例如<code>print(&#39;Samuel AK IOI&#39;)</code>会输出<code>Samuel AK IOI</code>。</p><a id="more"></a><p><strong><code>print()</code>函数接受多个参数，每个参数之间默认会以空格隔开</strong>：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Today'</span>, <span class="string">'is'</span>, <span class="string">'Saturday'</span>)</span><br><span class="line">Today <span class="keyword">is</span> Saturday</span><br></pre></td></tr></table></figure></p><p>如果不想要默认的空格，<strong>可以通过修改<code>sep</code>参数来实现参数间的分隔内容</strong>：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Luckyfuy'</span>, <span class="string">'Summer_Light'</span>, <span class="string">'Yummy'</span>, <span class="string">'FZYFZY'</span>, sep=<span class="string">'|---|'</span>)</span><br><span class="line">Luckyfuy|---|Summer_Light|---|Yummy|---|FZYFZY</span><br></pre></td></tr></table></figure></p><p>同时，<code>print()</code>函数在末尾会自动输出一个换行符<code>\n</code>，因此，<strong>我们可以通过修改<code>end</code>参数来修改末尾输出的内容</strong>：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK?</span><br><span class="line">Are you OK?</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>, end=<span class="string">' '</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK? Are you OK?</span><br></pre></td></tr></table></figure></p><h2 id="input"><a href="#input" class="headerlink" title="input()"></a>input()</h2><p><strong>输入是通过函数<code>input()</code>来实现的。<code>input()</code>会返回用户输入的内容，其类型为字符串。<code>input()</code>有一个可选参数，用于输出提示信息。</strong>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(input())</span><br><span class="line">kkksc03</span><br><span class="line">kkksc03</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello'</span>, input(<span class="string">'Enter your name: '</span>))</span><br><span class="line">Enter your name: Luckyfuy</span><br><span class="line">Hello Luckyfuy</span><br></pre></td></tr></table></figure></p><h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>编译时，编译器会自动跳过注释。因此，注释不是给机器看的，而是给人看的。在代码中写上注释是一个良好的习惯，这样一来自己看得懂，其他人也能明白你的意图。同时，注释可以把<br>Python中的注释不是和大多数语言一样，使用<code>//</code>或<code>/**/</code>的。在Python中，<strong><code>#</code>号表示单行注释，三引号<code>&#39;&#39;&#39;</code>或<code>&quot;&quot;&quot;</code>表示多行注释。</strong>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一段注释</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Python编译器会跳过这一大段文字</span></span><br><span class="line"><span class="string">直接去运行下面的代码</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">print(<span class="string">'kkksc03 is stupid'</span>) <span class="comment"># 这段代码会被执行</span></span><br><span class="line"><span class="comment"># 而下面这段代码则不会被执行</span></span><br><span class="line"><span class="comment"># print('Samuel AK IOI')</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">233</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure></p><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="数字（Number）"><a href="#数字（Number）" class="headerlink" title="数字（Number）"></a>数字（Number）</h2><h3 id="整数（int）"><a href="#整数（int）" class="headerlink" title="整数（int）"></a>整数（int）</h3><h3 id="浮点数（float）"><a href="#浮点数（float）" class="headerlink" title="浮点数（float）"></a>浮点数（float）</h3><h3 id="布尔值（bool）"><a href="#布尔值（bool）" class="headerlink" title="布尔值（bool）"></a>布尔值（bool）</h3><h3 id="复数（complex）"><a href="#复数（complex）" class="headerlink" title="复数（complex）"></a>复数（complex）</h3><h2 id="字符串（String）"><a href="#字符串（String）" class="headerlink" title="字符串（String）"></a>字符串（String）</h2><h2 id="列表（List）"><a href="#列表（List）" class="headerlink" title="列表（List）"></a>列表（List）</h2><h2 id="元组（Tuple）"><a href="#元组（Tuple）" class="headerlink" title="元组（Tuple）"></a>元组（Tuple）</h2><h2 id="集合（Set）"><a href="#集合（Set）" class="headerlink" title="集合（Set）"></a>集合（Set）</h2><h2 id="字典（Dictionary）"><a href="#字典（Dictionary）" class="headerlink" title="字典（Dictionary）"></a>字典（Dictionary）</h2><h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>人生苦短，我学Python</title>
+      <link href="/2019/03/22/Learning-Python/"/>
+      <url>/2019/03/22/Learning-Python/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>人生苦短，我用Python。</p></blockquote><p><strong>Python</strong>是<em>Guido van Rossum</em>在1989年圣诞节时出于无聊而设计的一门编程语言。</p><p>不同的编程语言各有千秋，而Python是适合用于编写应用程序的高级语言。<br>Python为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称为“<em>内置电池（Batteries Included）</em>”。除了内置的库之外，Python还有大量的第三方库，也就是别人开发出来可以直接供你使用的库。当然，如果你开发的代码经过很好的封装，也可以作为第三方库给别人使用。</p><p>Python也有缺点，那就是运行速度慢。与C语言相比，由于Python是<strong>解释型语言</strong>，代码在执行时会一行一行地翻译成机器码，这个过程非常耗时，所以很慢；而C语言是运行前直接编译成CPU能执行的机器码，所以非常快。</p><a id="more"></a><p>关于Python，<em>Tim Peters</em>曾写过一首诗歌叫做<strong>《The Zen of Python》</strong>，它被作为了彩蛋加入到了Python。这首诗歌很好地诠释了Python的风格：</p><blockquote><p>The Zen of Python, by Tim Peters</p><p>Beautiful is better than ugly.<br>Explicit is better than implicit.<br>Simple is better than complex.<br>Complex is better than complicated.<br>Flat is better than nested.<br>Sparse is better than dense.<br>Readability counts.<br>Special cases aren’t special enough to break the rules.<br>Although practicality beats purity.<br>Errors should never pass silently.<br>Unless explicitly silenced.<br>In the face of ambiguity, refuse the temptation to guess.<br>There should be one– and preferably only one –obvious way to do it.<br>Although that way may not be obvious at first unless you’re Dutch.<br>Now is better than never.<br>Although never is often better than <em>right</em> now.<br>If the implementation is hard to explain, it’s a bad idea.<br>If the implementation is easy to explain, it may be a good idea.<br>Namespaces are one honking great idea – let’s do more of those!</p></blockquote><p>中文翻译：</p><blockquote><p>Python之禅，Tim Peters作</p><p>优美胜于丑陋。<br>明了胜于晦涩。<br>简洁胜于复杂。<br>复杂胜于凌乱。<br>扁平胜于嵌套。<br>间隔胜于紧凑。<br>可读性很重要。<br>即便假借特例的实用性之名，也不可违背这些规则。<br>不要包容所有错误，除非你确定需要这样做。<br>当存在多种可能，不要尝试去猜测。<br>而是尽量找一种，最好是唯一一种明显的解决方案。<br>虽然这并不容易，因为你不是Python之父。<br>做也许好过不做，但不假思索就动手还不如不做。<br>如果你的方案难以描述，那肯定不是一个好方案。<br>如果你的方案易于描述，那很有可能是个好方案。<br>命名空间是一种绝妙的理念，我们应当多加利用！</p></blockquote><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>学习Python的第一步，当然是安装Python。安装后，你将会得到Python解释器，一个命令行交互环境，还有一个极其简陋的集成开发环境。</p><p>目前，Python有两个版本，分别是2.x和3.x，这两个版本不兼容，因此<strong>建议使用最新的3.x版本。</strong>进入<a href="https://www.python.org/" title="Python官网" target="_blank" rel="noopener">Python官网</a>以下载Python安装程序。<br><strong>注意，安装时请务必勾选“Add Python 3.x to PATH”，否则须手动添加Python路径到环境变量。</strong></p><p>打开命令提示符窗口，输入<code>python</code>后，若出现图中内容，则说明安装成功：<br><img src="https://i.loli.net/2019/03/24/5c970eeed51ff.jpg" alt="Python交互环境" title="Python交互环境"><br>如果提示<code>&#39;python&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。</code>，说明环境变量配置有问题。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h2><p>在Windows开始菜单中选择“命令提示符”，就进入到了命令行模式，它的提示符类似于<code>C:\&gt;</code>。<br><img src="https://i.loli.net/2019/03/24/5c97107dc4123.jpg" alt="命令行模式" title="命令行模式"></p><h2 id="Python交互模式"><a href="#Python交互模式" class="headerlink" title="Python交互模式"></a>Python交互模式</h2><p>在命令行模式中输入<code>python</code>即可进入Python交互模式，它的提示符为<code>&gt;&gt;&gt;</code>。<br>输入<code>exit()</code>并回车以退出Python交互模式回到命令行模式。<br><img src="https://i.loli.net/2019/03/24/5c9710a775395.jpg" alt="Python交互模式" title="Python交互模式"><br>也可以通过开始菜单的“Python 3.x”直接进入Python交互模式。</p><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>在Python交互模式下，输入代码并回车，会立即得到运行结果，例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">12345</span> + <span class="number">54321</span></span><br><span class="line"><span class="number">66666</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello, World!'</span>)</span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure></p><p>其中，<code>print()</code>函数的作用是输出，文本需要用单引号或双引号括起来。</p><p>如果要运行一个<code>.py</code>文件，可以在<strong>命令行模式</strong>中输入<code>python kkk.py</code>，这样就会运行当前目录下的<code>kkk.py</code>了。</p><p>此外，Python交互模式会把每一行代码的结果输出，而直接运行代码却不会。<br>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">500</span> - <span class="number">200</span></span><br><span class="line"><span class="number">300</span></span><br></pre></td></tr></table></figure></p><p>可以看到会直接输出结果<code>300</code>。<br>但如果写一个<code>calc.py</code>，内容如下：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">500</span> - <span class="number">200</span></span><br></pre></td></tr></table></figure></p><p>然后在命令行模式下执行，会发现什么输出也没有。<br>这是正常的。要想输出结果，必须自己用<code>print()</code>函数输出，于是把<code>calc.py</code>的内容改成如下：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">500</span> - <span class="number">200</span>)</span><br></pre></td></tr></table></figure></p><p>就能看到输出结果<code>300</code>了。</p><p>最后，<strong>Python交互模式下的代码是输入一行输出一行的，而命令行模式下直接执行<code>.py</code>文件是一次性全部执行的，因此，Python交互模式主要是为了调试代码用的。</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>冬至</title>
+      <link href="/2019/03/16/Winter-Solstice/"/>
+      <url>/2019/03/16/Winter-Solstice/</url>
+      
+        <content type="html"><![CDATA[<p>“果然，已经发生过了……”那人望着玻璃外那一颗淡蓝色的球体，说道。</p><a id="more"></a><p>按照飞船上的万年历来看，今天是冬至。他不禁回忆起了三十年前——对于他来说的三十年前。</p><p>那也是一个冬至，晚上，母亲端了几碗热气腾腾的饺子出来，和他一起坐在饭桌前。好久好久，他已经没吃过这样美味的饺子了。“儿子，听说你明天就要走了？”“嗯，对，妈。国家派我作为领航员去外太空，明天就启程。”“那你吃完准备下行李，明天妈就送你去宇航中心……”</p><p>他带着人类的希望，在浩瀚的宇宙中航行，已经三十年了。去过了半人马座，去过了蛇夫座……他去过了各种各样的恒星系，却从未发现过生命。如今，他返航了，除了证明了地球在茫茫宇宙中的孤独以外，什么也没有带回。</p><p>望着窗外的地球，他也是孤独的一个人了。以接近光速的速度航行了三十年，对他来说只是三十年，而对于地球，却已经过了漫长的七百年。这七百年里，地球发生了翻天覆地的变化。现在，他看到的淡蓝色球体，早已不是原来那个蔚蓝与碧绿交织的球体了。</p><p>飞船上的计算机轻松地推测出了原因——随着人口的增长和科技的进步，排碳量急剧增长，导致了全球气候变暖的加剧。于是，洪水肆虐，从开始的沿海城市沉入海底，逐渐到内陆地区也被淹没。地球进入了下一个冰河期，整个地球都被冻结。人类——这个在地球上生存了十万多年的物种，终于被自己打败了。</p><p>但是他还在，他操纵飞船降落在这层近千米的冰上。风雪在呼啸。他走下飞船站在冰上，透过半透明的冰，仍然可见大陆的轮廓。他凝望着冰层下方，他看到了他的祖国，看到了万里长城，看到了东方明珠，看到了他的家乡，看到了他的母亲为他做的饺子……</p><p>凛冬已至，风雪仍在呼啸……</p><p><strong>PS.这是一篇很渣很渣的超短篇科幻小说，当然比不上某位奆佬写的</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Essays </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>论如何搭建一个静态博客</title>
+      <link href="/2019/03/09/Building-Blog/"/>
+      <url>/2019/03/09/Building-Blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<code>http://localhost:4000/</code>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<code>http://localhost:端口号/</code>就行了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello, World!</title>
+      <link href="/2018/12/30/Hello-World/"/>
+      <url>/2018/12/30/Hello-World/</url>
+      
+        <content type="html"><![CDATA[<h1 id="我只是一只蒟蒻"><a href="#我只是一只蒟蒻" class="headerlink" title="我只是一只蒟蒻"></a>我只是一只蒟蒻</h1><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=39224659&auto=0&height=66"></iframe><p>我在洛谷上的另一个博客：<del>（其实里面什么也没有2333）</del><br><a href="https://Luckyfuy.blog.luogu.org/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">永远相信美好的事情即将发生</a></p><p>欢迎访问某位奆佬的博客：<br><a href="https://doradmon.github.io/" title="Summer_Light&#39;s Blog" target="_blank" rel="noopener">Summer_Light’s Blog</a></p><a id="more"></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello, World!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello, World!\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'Hello, World!'</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"Hello, World!"</span>);</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/09/09/5b948afacb6e4.jpg" alt="Undertale" title="Undertale"><br><img src="https://i.loli.net/2018/09/09/5b948afa900f2.jpg" alt="Undertale" title="Undertale"><br><del>盗用一下某奆佬的图</del></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Others </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
