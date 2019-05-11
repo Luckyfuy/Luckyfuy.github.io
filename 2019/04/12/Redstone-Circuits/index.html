@@ -122,13 +122,13 @@
 
 
 
-<meta name="description" content="注释蓝色羊毛：输入端红色羊毛：输出端黑色羊毛：布线用方块2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）S：粘性活塞N：普通活塞箭头：显示漏斗或投掷器的朝向数字：显示容器中的物品数量（若无特殊说明，指的是不可堆叠物数量） 被红石中继器指向的输入端表示该方块需要强充能。">
+<meta name="description" content="注释蓝色羊毛：输入端红色羊毛：输出端黑色羊毛：布线用方块2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）S：粘性活塞N：普通活塞箭头：显示漏斗或投掷器的朝向数字：显示容器中的物品数量（若无特殊说明，指的是不可堆叠物数量） 被红石中继器指向的输入端表示该方块需要强充能。 本文中的所有设计都可以在Minecraft 1.5中正常运作。">
 <meta name="keywords" content="Minecraft">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【搬运+翻译】红石电路">
 <meta property="og:url" content="http://Luckyfuy.cf/2019/04/12/Redstone-Circuits/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="注释蓝色羊毛：输入端红色羊毛：输出端黑色羊毛：布线用方块2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）S：粘性活塞N：普通活塞箭头：显示漏斗或投掷器的朝向数字：显示容器中的物品数量（若无特殊说明，指的是不可堆叠物数量） 被红石中继器指向的输入端表示该方块需要强充能。">
+<meta property="og:description" content="注释蓝色羊毛：输入端红色羊毛：输出端黑色羊毛：布线用方块2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）S：粘性活塞N：普通活塞箭头：显示漏斗或投掷器的朝向数字：显示容器中的物品数量（若无特殊说明，指的是不可堆叠物数量） 被红石中继器指向的输入端表示该方块需要强充能。 本文中的所有设计都可以在Minecraft 1.5中正常运作。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://luckyfuy.cf/images/redstone/OR_1.jpg">
 <meta property="og:image" content="https://luckyfuy.cf/images/redstone/OR_2.jpg">
@@ -203,10 +203,57 @@
 <meta property="og:image" content="https://luckyfuy.cf/images/redstone/FED_2.jpg">
 <meta property="og:image" content="https://luckyfuy.cf/images/redstone/FED_3.jpg">
 <meta property="og:image" content="https://luckyfuy.cf/images/redstone/FED_4.jpg">
-<meta property="og:updated_time" content="2019-04-13T11:14:14.741Z">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DED_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DED_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DED_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/RSG_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/RSG_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/RSG_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/RSG_4.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_4.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_5.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_6.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_7.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_8.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/BUD_9.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_4.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_5.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_6.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_7.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_8.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_9.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/Cnt_10.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/SR_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/SR_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DPE_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DPE_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DPE_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DPE_4.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/DPE_5.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/LD_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/LD_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/FD_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/FD_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/R_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/R_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/R_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/R_4.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/R_5.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/IW_1.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/IW_2.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/IW_3.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/IW_4.jpg">
+<meta property="og:image" content="https://luckyfuy.cf/images/redstone/IW_5.jpg">
+<meta property="og:updated_time" content="2019-05-11T07:19:23.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【搬运+翻译】红石电路">
-<meta name="twitter:description" content="注释蓝色羊毛：输入端红色羊毛：输出端黑色羊毛：布线用方块2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）S：粘性活塞N：普通活塞箭头：显示漏斗或投掷器的朝向数字：显示容器中的物品数量（若无特殊说明，指的是不可堆叠物数量） 被红石中继器指向的输入端表示该方块需要强充能。">
+<meta name="twitter:description" content="注释蓝色羊毛：输入端红色羊毛：输出端黑色羊毛：布线用方块2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）S：粘性活塞N：普通活塞箭头：显示漏斗或投掷器的朝向数字：显示容器中的物品数量（若无特殊说明，指的是不可堆叠物数量） 被红石中继器指向的输入端表示该方块需要强充能。 本文中的所有设计都可以在Minecraft 1.5中正常运作。">
 <meta name="twitter:image" content="https://luckyfuy.cf/images/redstone/OR_1.jpg">
 
 
@@ -504,7 +551,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  583
+                  1.1k
                 </span>
               
 
@@ -520,7 +567,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -543,6 +590,7 @@
       
         <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>蓝色羊毛：输入端<br>红色羊毛：输出端<br>黑色羊毛：布线用方块<br>2/3/4：中继器延迟2/3/4刻（若无特殊说明，中继器的延迟为1刻）<br>S：粘性活塞<br>N：普通活塞<br>箭头：显示漏斗或投掷器的朝向<br>数字：显示容器中的物品数量（若无特殊说明，指的是<strong>不可堆叠物</strong>数量）</p>
 <p>被红石中继器指向的输入端表示该方块需要<strong>强充能</strong>。</p>
+<p>本文中的所有设计都可以在Minecraft 1.5中正常运作。</p>
 <a id="more"></a>
 <h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h2 id="OR-或门"><a href="#OR-或门" class="headerlink" title="OR | 或门"></a>OR | 或门</h2><p><strong>当至少有一个输入端有信号时输出端有信号。</strong></p>
 <p><img src="https://luckyfuy.cf/images/redstone/OR_1.jpg" alt="OR" title="OR"><br><img src="https://luckyfuy.cf/images/redstone/OR_2.jpg" alt="OR" title="OR"></p>
@@ -570,6 +618,25 @@
 <p><img src="https://luckyfuy.cf/images/redstone/PS_1.jpg" alt="Pulse Sustainer/Lenghtener" title="Pulse Sustainer/Lenghtener"><br><img src="https://luckyfuy.cf/images/redstone/PS_2.jpg" alt="Pulse Sustainer/Lenghtener" title="Pulse Sustainer/Lenghtener"><br><img src="https://luckyfuy.cf/images/redstone/PS_3.jpg" alt="Pulse Sustainer/Lenghtener" title="Pulse Sustainer/Lenghtener"><br><img src="https://luckyfuy.cf/images/redstone/PS_4.jpg" alt="Pulse Sustainer/Lenghtener" title="Pulse Sustainer/Lenghtener"><br><img src="https://luckyfuy.cf/images/redstone/PS_5.jpg" alt="Pulse Sustainer/Lenghtener" title="Pulse Sustainer/Lenghtener"></p>
 <h2 id="Falling-Edge-Detector-下边沿检测器"><a href="#Falling-Edge-Detector-下边沿检测器" class="headerlink" title="Falling Edge Detector | 下边沿检测器"></a>Falling Edge Detector | 下边沿检测器</h2><p><strong>当输入端由有信号变为无信号时发出脉冲的单稳态电路。</strong></p>
 <p><img src="https://luckyfuy.cf/images/redstone/FED_1.jpg" alt="Falling Edge Detector" title="Falling Edge Detector"><br><img src="https://luckyfuy.cf/images/redstone/FED_2.jpg" alt="Falling Edge Detector" title="Falling Edge Detector"><br><img src="https://luckyfuy.cf/images/redstone/FED_3.jpg" alt="Falling Edge Detector" title="Falling Edge Detector"><br><img src="https://luckyfuy.cf/images/redstone/FED_4.jpg" alt="Falling Edge Detector" title="Falling Edge Detector"></p>
+<h2 id="Dual-Edge-Detector-双边沿检测器"><a href="#Dual-Edge-Detector-双边沿检测器" class="headerlink" title="Dual Edge Detector | 双边沿检测器"></a>Dual Edge Detector | 双边沿检测器</h2><p><strong>当输入端信号改变时发出脉冲的单稳态电路。</strong></p>
+<p><img src="https://luckyfuy.cf/images/redstone/DED_1.jpg" alt="Dual Edge Detector" title="Dual Edge Detector"><br><img src="https://luckyfuy.cf/images/redstone/DED_2.jpg" alt="Dual Edge Detector" title="Dual Edge Detector"><br><img src="https://luckyfuy.cf/images/redstone/DED_3.jpg" alt="Dual Edge Detector" title="Dual Edge Detector"></p>
+<h2 id="Reversible-Signal-Generator-ABBA-Switch-可逆信号发生器-ABBA转换器"><a href="#Reversible-Signal-Generator-ABBA-Switch-可逆信号发生器-ABBA转换器" class="headerlink" title="Reversible Signal Generator/ABBA Switch | 可逆信号发生器/ABBA转换器"></a>Reversible Signal Generator/ABBA Switch | 可逆信号发生器/ABBA转换器</h2><p><strong>将输出端以一种顺序输出信号，再以相反的顺序关闭信号。</strong></p>
+<p><img src="https://luckyfuy.cf/images/redstone/RSG_1.jpg" alt="Reversible Signal Generator/ABBA Switch" title="Reversible Signal Generator/ABBA Switch"><br><img src="https://luckyfuy.cf/images/redstone/RSG_2.jpg" alt="Reversible Signal Generator/ABBA Switch" title="Reversible Signal Generator/ABBA Switch"><br><img src="https://luckyfuy.cf/images/redstone/RSG_3.jpg" alt="Reversible Signal Generator/ABBA Switch" title="Reversible Signal Generator/ABBA Switch"><br><img src="https://luckyfuy.cf/images/redstone/RSG_4.jpg" alt="Reversible Signal Generator/ABBA Switch" title="Reversible Signal Generator/ABBA Switch"></p>
+<h2 id="BUD-Block-Update-Detector-Switch-BUD（方块更新检测器）感应器"><a href="#BUD-Block-Update-Detector-Switch-BUD（方块更新检测器）感应器" class="headerlink" title="BUD (Block Update Detector) Switch | BUD（方块更新检测器）感应器"></a>BUD (Block Update Detector) Switch | BUD（方块更新检测器）感应器</h2><p><strong>当特定的方块给予更新时产生一个红石脉冲。</strong>起初他被认为是个bug，但Mojang已经证实他们不会修复它，因为它很有用。<br><strong>当活塞在能被正常充能的位置的下一格时它才有用。由于红石线只能更新两个方块远，而活塞离它有3个方块远，所以活塞需要它旁边的方块给出一个更新以被激活。</strong></p>
+<p><img src="https://luckyfuy.cf/images/redstone/BUD_1.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_2.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_3.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_4.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_5.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_6.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_7.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_8.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"><br><img src="https://luckyfuy.cf/images/redstone/BUD_9.jpg" alt="BUD (Block Update Detector) Switch" title="BUD (Block Update Detector) Switch"></p>
+<h2 id="Counter-计数器"><a href="#Counter-计数器" class="headerlink" title="Counter | 计数器"></a>Counter | 计数器</h2><p>注意，许多这样的设计都需要输入1刻的脉冲。在1.5中，由红石火把制造的脉冲发生器不能产生1刻信号，所以用活塞来制造脉冲更为保险。</p>
+<p><img src="https://luckyfuy.cf/images/redstone/Cnt_1.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_2.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_3.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_4.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_5.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_6.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_7.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_8.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_9.jpg" alt="Counter" title="Counter"><br><img src="https://luckyfuy.cf/images/redstone/Cnt_10.jpg" alt="Counter" title="Counter"></p>
+<h2 id="Shift-Register-移位寄存器"><a href="#Shift-Register-移位寄存器" class="headerlink" title="Shift Register | 移位寄存器"></a>Shift Register | 移位寄存器</h2><p><strong>能将所有数据移动一位的电路。</strong></p>
+<p><img src="https://luckyfuy.cf/images/redstone/SR_1.jpg" alt="Shift Register" title="Shift Register"><br><img src="https://luckyfuy.cf/images/redstone/SR_2.jpg" alt="Shift Register" title="Shift Register"></p>
+<h2 id="Double-Piston-Extender-二段活塞递推"><a href="#Double-Piston-Extender-二段活塞递推" class="headerlink" title="Double Piston Extender | 二段活塞递推"></a>Double Piston Extender | 二段活塞递推</h2><p><img src="https://luckyfuy.cf/images/redstone/DPE_1.jpg" alt="Double Piston Extender" title="Double Piston Extender"><br><img src="https://luckyfuy.cf/images/redstone/DPE_2.jpg" alt="Double Piston Extender" title="Double Piston Extender"><br><img src="https://luckyfuy.cf/images/redstone/DPE_3.jpg" alt="Double Piston Extender" title="Double Piston Extender"><br><img src="https://luckyfuy.cf/images/redstone/DPE_4.jpg" alt="Double Piston Extender" title="Double Piston Extender"><br><img src="https://luckyfuy.cf/images/redstone/DPE_5.jpg" alt="Double Piston Extender" title="Double Piston Extender"></p>
+<h2 id="Last-Detector-Delector-末信号检测器-单选器"><a href="#Last-Detector-Delector-末信号检测器-单选器" class="headerlink" title="Last Detector/Delector | 末信号检测器/单选器"></a>Last Detector/Delector | 末信号检测器/单选器</h2><p><strong>只记住最后一个输入并重置其它所有输出。</strong></p>
+<p><img src="https://luckyfuy.cf/images/redstone/LD_1.jpg" alt="Last Detector/Delector" title="Last Detector/Delector"><br><img src="https://luckyfuy.cf/images/redstone/LD_2.jpg" alt="Last Detector/Delector" title="Last Detector/Delector"></p>
+<h2 id="First-Detector-初信号检测器"><a href="#First-Detector-初信号检测器" class="headerlink" title="First Detector | 初信号检测器"></a>First Detector | 初信号检测器</h2><p><strong>只检测第一个输入，忽略之后的所有信号直到被重置。</strong></p>
+<p><img src="https://luckyfuy.cf/images/redstone/FD_1.jpg" alt="First Detector" title="First Detector"><br><img src="https://luckyfuy.cf/images/redstone/FD_2.jpg" alt="First Detector" title="First Detector"></p>
+<h2 id="Randomizer-随机性发生器"><a href="#Randomizer-随机性发生器" class="headerlink" title="Randomizer | 随机性发生器"></a>Randomizer | 随机性发生器</h2><p>随机数字发生器，随机脉冲发生器……所有输出不能预测的机器。</p>
+<p><img src="https://luckyfuy.cf/images/redstone/R_1.jpg" alt="Randomizer" title="Randomizer"><br><img src="https://luckyfuy.cf/images/redstone/R_2.jpg" alt="Randomizer" title="Randomizer"><br><img src="https://luckyfuy.cf/images/redstone/R_3.jpg" alt="Randomizer" title="Randomizer"><br><img src="https://luckyfuy.cf/images/redstone/R_4.jpg" alt="Randomizer" title="Randomizer"><br><img src="https://luckyfuy.cf/images/redstone/R_5.jpg" alt="Randomizer" title="Randomizer"></p>
+<h2 id="Instant-Wire-无延迟红石"><a href="#Instant-Wire-无延迟红石" class="headerlink" title="Instant Wire | 无延迟红石"></a>Instant Wire | 无延迟红石</h2><p><strong>输出端无延迟地受输入端影响的电路（在同一个游戏刻中）。</strong>这包括中继器，反相器和其它电路。它们都用到了一个原理：活塞改变状态时，它附着的方块会在它原来的位置立即失去充能（或忽略信号）。</p>
+<p><img src="https://luckyfuy.cf/images/redstone/IW_1.jpg" alt="Instant Wire" title="Instant Wire"><br><img src="https://luckyfuy.cf/images/redstone/IW_2.jpg" alt="Instant Wire" title="Instant Wire"><br><img src="https://luckyfuy.cf/images/redstone/IW_3.jpg" alt="Instant Wire" title="Instant Wire"><br><img src="https://luckyfuy.cf/images/redstone/IW_4.jpg" alt="Instant Wire" title="Instant Wire"><br><img src="https://luckyfuy.cf/images/redstone/IW_5.jpg" alt="Instant Wire" title="Instant Wire"></p>
 
       
     </div>
@@ -864,7 +931,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OR-或门"><span class="nav-number">2.1.</span> <span class="nav-text">OR | 或门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOR-或非门"><span class="nav-number">2.2.</span> <span class="nav-text">NOR | 或非门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AND-与门"><span class="nav-number">2.3.</span> <span class="nav-text">AND | 与门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAND-与非门"><span class="nav-number">2.4.</span> <span class="nav-text">NAND | 与非门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XOR-异或门"><span class="nav-number">2.5.</span> <span class="nav-text">XOR | 异或门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XNOR-同或门"><span class="nav-number">2.6.</span> <span class="nav-text">XNOR | 同或门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RS-NOR-Latch-RS（与非）锁存器"><span class="nav-number">2.7.</span> <span class="nav-text">RS (NOR) Latch | RS（与非）锁存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T-Flip-Flop-T触发器"><span class="nav-number">2.8.</span> <span class="nav-text">T-Flip-Flop | T触发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#D-Flip-Flop-D触发器"><span class="nav-number">2.9.</span> <span class="nav-text">D-Flip-Flop | D触发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clock-时钟"><span class="nav-number">2.10.</span> <span class="nav-text">Clock | 时钟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pulse-Limiter-Shortener-脉冲限制器-缩短器"><span class="nav-number">2.11.</span> <span class="nav-text">Pulse Limiter/Shortener | 脉冲限制器/缩短器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pulse-Sustainer-Lenghtener-脉冲维持器-延长器"><span class="nav-number">2.12.</span> <span class="nav-text">Pulse Sustainer/Lenghtener | 脉冲维持器/延长器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Falling-Edge-Detector-下边沿检测器"><span class="nav-number">2.13.</span> <span class="nav-text">Falling Edge Detector | 下边沿检测器</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OR-或门"><span class="nav-number">2.1.</span> <span class="nav-text">OR | 或门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOR-或非门"><span class="nav-number">2.2.</span> <span class="nav-text">NOR | 或非门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AND-与门"><span class="nav-number">2.3.</span> <span class="nav-text">AND | 与门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAND-与非门"><span class="nav-number">2.4.</span> <span class="nav-text">NAND | 与非门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XOR-异或门"><span class="nav-number">2.5.</span> <span class="nav-text">XOR | 异或门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XNOR-同或门"><span class="nav-number">2.6.</span> <span class="nav-text">XNOR | 同或门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RS-NOR-Latch-RS（与非）锁存器"><span class="nav-number">2.7.</span> <span class="nav-text">RS (NOR) Latch | RS（与非）锁存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T-Flip-Flop-T触发器"><span class="nav-number">2.8.</span> <span class="nav-text">T-Flip-Flop | T触发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#D-Flip-Flop-D触发器"><span class="nav-number">2.9.</span> <span class="nav-text">D-Flip-Flop | D触发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clock-时钟"><span class="nav-number">2.10.</span> <span class="nav-text">Clock | 时钟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pulse-Limiter-Shortener-脉冲限制器-缩短器"><span class="nav-number">2.11.</span> <span class="nav-text">Pulse Limiter/Shortener | 脉冲限制器/缩短器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pulse-Sustainer-Lenghtener-脉冲维持器-延长器"><span class="nav-number">2.12.</span> <span class="nav-text">Pulse Sustainer/Lenghtener | 脉冲维持器/延长器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Falling-Edge-Detector-下边沿检测器"><span class="nav-number">2.13.</span> <span class="nav-text">Falling Edge Detector | 下边沿检测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dual-Edge-Detector-双边沿检测器"><span class="nav-number">2.14.</span> <span class="nav-text">Dual Edge Detector | 双边沿检测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reversible-Signal-Generator-ABBA-Switch-可逆信号发生器-ABBA转换器"><span class="nav-number">2.15.</span> <span class="nav-text">Reversible Signal Generator/ABBA Switch | 可逆信号发生器/ABBA转换器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BUD-Block-Update-Detector-Switch-BUD（方块更新检测器）感应器"><span class="nav-number">2.16.</span> <span class="nav-text">BUD (Block Update Detector) Switch | BUD（方块更新检测器）感应器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Counter-计数器"><span class="nav-number">2.17.</span> <span class="nav-text">Counter | 计数器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shift-Register-移位寄存器"><span class="nav-number">2.18.</span> <span class="nav-text">Shift Register | 移位寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Double-Piston-Extender-二段活塞递推"><span class="nav-number">2.19.</span> <span class="nav-text">Double Piston Extender | 二段活塞递推</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Last-Detector-Delector-末信号检测器-单选器"><span class="nav-number">2.20.</span> <span class="nav-text">Last Detector/Delector | 末信号检测器/单选器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#First-Detector-初信号检测器"><span class="nav-number">2.21.</span> <span class="nav-text">First Detector | 初信号检测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Randomizer-随机性发生器"><span class="nav-number">2.22.</span> <span class="nav-text">Randomizer | 随机性发生器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instant-Wire-无延迟红石"><span class="nav-number">2.23.</span> <span class="nav-text">Instant Wire | 无延迟红石</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -914,7 +981,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共3.6k字</span>
+  <span class="post-count">全站共4k字</span>
 </div>
 
 <span id="sitetime"></span>
