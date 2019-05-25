@@ -148,7 +148,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="输入与输出print()Python使用print()函数来输出信息，例如print(&amp;#39;Samuel AK IOI&amp;#39;)会输出Samuel AK IOI。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-25T12:39:33.496Z">
+<meta property="og:updated_time" content="2019-05-25T13:16:46.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础">
 <meta name="twitter:description" content="输入与输出print()Python使用print()函数来输出信息，例如print(&amp;#39;Samuel AK IOI&amp;#39;)会输出Samuel AK IOI。">
@@ -517,7 +517,7 @@
 <li>不可变数据：数字（Number）、字符串（String）、元组（Tuple）</li>
 <li>可变数据：列表（List）、集合（Set）、字典（Dictionary）</li>
 </ul>
-<h2 id="数字（Number）"><a href="#数字（Number）" class="headerlink" title="数字（Number）"></a>数字（Number）</h2><p>存在分为三种不同的数字类型：<em>整数</em>、<em>浮点数</em>和<em>复数</em>。其中，<em>布尔值</em>是整数的子类型。</p>
+<h2 id="数字（Number）"><a href="#数字（Number）" class="headerlink" title="数字（Number）"></a>数字（Number）</h2><p>存在三种不同的数字类型：<em>整数</em>、<em>浮点数</em>和<em>复数</em>。其中，<em>布尔值</em>是整数的子类型。</p>
 <p>数字是由字面值或内置函数与运算符的结果来创建的。不带修饰的整数字面值（包括二进制、八进制和十六进制数）会生成整数；包含小数点或幂运算符的会生成浮点数；在数字字面值末尾加上<code>j</code>或<code>J</code>会生成虚数（实部为零的复数），你可以将其与整数或浮点数相加来得到具有实部和虚部的复数。</p>
 <p><code>type()</code>函数可以用于查询变量所指的数据类型：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, c, d = <span class="number">233</span>, <span class="number">123.321</span>, <span class="keyword">False</span>, <span class="number">5</span>+<span class="number">6j</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(type(a), type(b), type(c), type(d))</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">int</span>'&gt; &lt;<span class="title">class</span> '<span class="title">float</span>'&gt; &lt;<span class="title">class</span> '<span class="title">bool</span>'&gt; &lt;<span class="title">class</span> '<span class="title">complex</span>'&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>此外，<code>isinstance()</code>也可以判断变量是否为指定类型：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(a, int)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(d, float)</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure></p>
@@ -581,7 +581,7 @@
 <td style="text-align:center">将$x$转换为浮点数</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>complex(re, im)</code></td>
+<td style="text-align:center"><code>complex(re[, im])</code></td>
 <td style="text-align:center">一个带有实部$re$和虚部$im$的复数。$im$默认为$0$。</td>
 </tr>
 <tr>
