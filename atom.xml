@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-05-11T08:20:26.760Z</updated>
+  <updated>2019-06-09T06:52:41.767Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>科普·关于那些有趣的常数</title>
+    <link href="http://Luckyfuy.cf/2019/06/09/About-Constants/"/>
+    <id>http://Luckyfuy.cf/2019/06/09/About-Constants/</id>
+    <published>2019-06-09T06:14:50.000Z</published>
+    <updated>2019-06-09T06:52:41.767Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我们在<del>考试</del>生活中会遇到很多有趣的常数，例如著名的$\pi$、$e$等等。<br>于是今天我们来讲讲这些常数。<br><del>只是突然想写而已</del></p><a id="more"></a><h1 id="数学常数"><a href="#数学常数" class="headerlink" title="数学常数"></a>数学常数</h1><h2 id="圆周率-pi"><a href="#圆周率-pi" class="headerlink" title="圆周率$\pi$"></a>圆周率$\pi$</h2><p>这可能是我们最熟悉也是最常用的常数了。</p><p>圆周率（符号$\pi$，也拼写为pi）的定义是圆的周长$C$与直径$d$的比值：</p><script type="math/tex; mode=display">\pi = \frac{C}{d}</script><script type="math/tex; mode=display">\pi = 3.14159265358979323846264338327950288419716939937510\cdots</script><p>与所有无理数一样，$\pi$无法表示成一个分数。但包括$\pi$在内的所有无理数，都可以表示成连分数：</p><script type="math/tex; mode=display">\pi = 3 + \frac{1}{7 + \frac{1}{15 + \frac{1}{1 + \frac{1}{292 + \frac{1}{1 + \frac{1}{1 + \frac{1}{1 + \ddots}}}}}}}</script><p>在这个连分数的任意一点截断化简，都能得到一个$\pi$的近似值，如前四个广为人知的近似值：$3$、$\frac{22}{7}$、$\frac{333}{106}$、$\frac{335}{113}$。</p><p>最早，在古埃及和古巴比伦就有对圆周率估值的记载。两个估值都与圆周率的正确数字相差了不到百分之一。<br>第一个有记录、严谨计算$\pi$数值的算法，是古希腊数学家阿基米德所发明的。阿基米德的算法是计算圆的外切正六边形和内接正六边形的边长，以此计算出$\pi$的上限与下限，之后再将六边形变成十二边形，继续计算……这个算法使用了有一千年之久。<br>在中国历史上，曹魏数学家刘徽创立了割圆术，用用$3072$边形计算出$\pi \approx 3.1416$。祖冲之在公元480年利用割圆术计算$12888$边形的边长，得到$\pi \approx \frac{355}{113}$（现在称之为密率）。<br>16、17世纪时，人们开始使用无穷级数计算圆周率。以下是莱布尼茨公式：</p><script type="math/tex; mode=display">\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + \frac{4}{13} - \cdots</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;我们在&lt;del&gt;考试&lt;/del&gt;生活中会遇到很多有趣的常数，例如著名的$\pi$、$e$等等。&lt;br&gt;于是今天我们来讲讲这些常数。&lt;br&gt;&lt;del&gt;只是突然想写而已&lt;/del&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mathematics" scheme="http://Luckyfuy.cf/tags/Mathematics/"/>
+    
+      <category term="Physics" scheme="http://Luckyfuy.cf/tags/Physics/"/>
+    
+  </entry>
   
   <entry>
     <title>证明$1+1=2$</title>
