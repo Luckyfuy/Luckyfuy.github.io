@@ -1940,7 +1940,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47347e;
+  background: #a6cb85;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3237,4 +3237,18 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+.headband {
+  height: 3px;
+  background: #6cf;
+}
+.site-meta {
+  padding: 20px 0;
+  color: #fff;
+  background: #6cf;
+}
+.site-subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
 }
