@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-06-14T14:02:49.617Z</updated>
+  <updated>2019-06-16T05:58:58.174Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>推荐·实用的Chrome插件们</title>
+    <link href="http://Luckyfuy.cf/2019/06/16/Chrome-Expensions/"/>
+    <id>http://Luckyfuy.cf/2019/06/16/Chrome-Expensions/</id>
+    <published>2019-06-16T04:15:34.000Z</published>
+    <updated>2019-06-16T05:58:58.174Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Chrome作为全球份额最大的浏览器，自然是由于其的强大的功能，其中最重要的一点就是插件丰富。因此，今天我来推荐一些实用的Chrome插件们。</p><a id="more"></a><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>首先，安装插件是最重要的。</p><p>如果有能力，可以到<a href="https://chrome.google.com/webstore/category/extensions?hl=zh-CN" title="Chrome网上应用店" target="_blank" rel="noopener">Chrome网上应用店</a>下载安装插件，安全方便快捷。<br><img src="https://i.loli.net/2019/06/16/5d05c6d4e927b23304.jpg" alt="Chrome网上应用店" title="Chrome网上应用店"></p><p>但是众所周知，由于某些原因，国内无法直接访问Google，所以可以在<a href="https://www.crx4chrome.com/" title="Crx4Chrome" target="_blank" rel="noopener">Crx4Chrome</a>等网站下载<code>.crx</code>格式的Chrome插件，国内可以正常访问。<br><img src="https://i.loli.net/2019/06/16/5d05c716e099e80046.jpg" alt="Crx4Chrome" title="Crx4Chrome"><br>获得了<code>.crx</code>文件后，如何安装呢？自Chrome 67以后，就不能通过离线安装的方式安装本地插件了。因此，我们需要将后缀名改为<code>.zip</code>然后解压，进入<code>chrome://extensions/</code>扩展程序管理页面，打开开发者模式，单击<code>加载已解压的扩展程序</code>，选择解压出的文件夹即可。<br><img src="https://i.loli.net/2019/06/16/5d05c896e26ef36543.jpg" alt="开发者模式" title="开发者模式"></p><h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><h2 id="Adblock-Plus"><a href="#Adblock-Plus" class="headerlink" title="Adblock Plus"></a>Adblock Plus</h2><p>Adblock Plus广受好评，是使用人数最多的广告拦截插件之一。它可以拦截包括横幅、弹出窗口、YouTube视频广告在内的绝大多数广告，同时拥有Android和iOS版本。ABP还提供了丰富的自定义功能，甚至可以用来通过屏蔽部分功能加快某些网站的访问速度。（<a href="http://www.mcbbs.net/thread-774928-1-1.html" title="利用广告屏蔽插件Adblock Plus快速访问模组下载网站CurseForge网站" target="_blank" rel="noopener">例如CurseForge</a>）<br><img src="https://i.loli.net/2019/06/16/5d05ce6a090c342895.jpg" alt="启用前" title="启用前"><br><img src="https://i.loli.net/2019/06/16/5d05ce696e7c146802.jpg" alt="启用后" title="启用后"><br><img src="https://i.loli.net/2019/06/16/5d05ca6b4b48c83906.jpg" alt="Adblock Plus" title="Adblock Plus"><br><a href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb?hl=zh-CN" title="Adblock Plus" target="_blank" rel="noopener">Chrome商店地址</a><br><a href="https://adblockplus.org/" title="Adblock Plus" target="_blank" rel="noopener">官网地址</a></p><h2 id="Infinity新标签页"><a href="#Infinity新标签页" class="headerlink" title="Infinity新标签页"></a>Infinity新标签页</h2><p>Infinity新标签页是一款美观、自定义程度高且实用的新标签页。它拥有丰富的壁纸库，支持云端备份。<br><img src="https://i.loli.net/2019/06/16/5d05d194a0b5072855.jpg" alt="Infinity新标签页" title="Infinity新标签页"><br><a href="https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh?hl=zh-CN" title="Infinity新标签页" target="_blank" rel="noopener">Chrome商店地址</a><br><a href="https://cn.infinitynewtab.com/" title="Infinity新标签页" target="_blank" rel="noopener">官网地址</a></p><h2 id="广告终结者"><a href="#广告终结者" class="headerlink" title="广告终结者"></a>广告终结者</h2><p>广告终结者与前面介绍过的ABP类似，同样可以拦截广告。但广告终结者主要侧重于视频广告，例如ABP拦截不了爱奇艺广告，但广告终结者可以完美去广告。<br><img src="https://img.vim-cn.com/a6/28f29b538a0c2788ba6e73fab5a3516a5dc9a9.gif" alt="广告终结者" title="广告终结者"><br><a href="https://chrome.google.com/webstore/detail/%E5%B9%BF%E5%91%8A%E7%BB%88%E7%BB%93%E8%80%85/fpdnjdlbdmifoocedhkighhlbchbiikl?hl=zh-CN" title="广告终结者" target="_blank" rel="noopener">Chrome商店地址</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Chrome作为全球份额最大的浏览器，自然是由于其的强大的功能，其中最重要的一点就是插件丰富。因此，今天我来推荐一些实用的Chrome插件们。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Chrome" scheme="http://Luckyfuy.cf/tags/Chrome/"/>
+    
+  </entry>
   
   <entry>
     <title>科普·关于那些有趣的常数</title>
