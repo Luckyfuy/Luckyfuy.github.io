@@ -1,4 +1,4 @@
-!function (e, t, a) { 
+!function (e, t, a) {
     var initCopyCode = function() {
         var copyHtml = '';
         copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
