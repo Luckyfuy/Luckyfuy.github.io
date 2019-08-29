@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Mathematics,">
 
 
 
@@ -140,16 +140,18 @@
 
 
 
-<meta name="description" content="蒟蒻Luckyfuy的辣鸡博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Luckyfuy&#39;s Blog">
-<meta property="og:url" content="http://Luckyfuy.cf/archives/2019/index.html">
+<meta name="description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="位运算">
+<meta property="og:url" content="http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="蒟蒻Luckyfuy的辣鸡博客">
+<meta property="og:description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-29T05:43:18.065Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Luckyfuy&#39;s Blog">
-<meta name="twitter:description" content="蒟蒻Luckyfuy的辣鸡博客">
+<meta name="twitter:title" content="位运算">
+<meta name="twitter:description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
 
 
 
@@ -179,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="http://Luckyfuy.cf/archives/2019/">
+  <link rel="canonical" href="http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/">
 
 
 
 
 
-  <title>时间轴 | Luckyfuy's Blog</title>
+  <title>位运算 | Luckyfuy's Blog</title>
   
 
 
@@ -214,7 +216,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -360,391 +362,351 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">位运算</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T17:45:15+08:00">
+                Wed, Aug 28th, 2019
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 16 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/28/Bitwise-Operation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/28/Bitwise-Operation/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
+             <span id="/2019/08/28/Bitwise-Operation/" class="leancloud_visitors" data-flag-title="位运算">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/28/Bitwise-Operation/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">位运算</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.5k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-28T17:45:15+08:00" content="Wed, Aug 28th, 2019">
-          08-28
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/27/Minimum-Spanning-Tree/" itemprop="url">
-              
-                <span itemprop="name">最小生成树</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-27T11:29:42+08:00" content="Tue, Aug 27th, 2019">
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/27/PVZ/" itemprop="url">
-              
-                <span itemprop="name">Plants vs. Zombies一代</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-27T10:32:41+08:00" content="Tue, Aug 27th, 2019">
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。<br>通常在处理器上，位运算的效率比乘除法高。</p>
+<a id="more"></a>
+<h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="非（NOT）"><a href="#非（NOT）" class="headerlink" title="非（NOT）"></a>非（NOT）</h2><p>非运算会对一个二进制数的每一位执行逻辑非运算，即取反，将$0$变成$1$，将$1$变成$0$。<br>在大多数编程语言中，其符号为<code>~</code>。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+NOT&\ 0111 (= (7)_{10})\\
+= &\ 1000 (= (8)_{10})
+\end{aligned}</script><p>非运算的结果是值的二进制补码减一，即$NOT\ x =  -x - 1$。</p>
+<h2 id="与（AND）"><a href="#与（AND）" class="headerlink" title="与（AND）"></a>与（AND）</h2><p>与运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑与运算，相当于将它们相乘。若两个bit都为$1$，则结果为$1$（$1 \times 1 =  1$）；否则结果为$0$（$1 \times 0 =  0, 0 \times 0 =  0$）。<br>在大多数编程语言中，其符号为<code>&amp;</code>。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0101 (= (5)_{10})\\
+AND&\ 0011 (= (3)_{10})\\
+= &\ 0001 (= (1)_{10})
+\end{aligned}</script><p>与运算可以用于确认某一位是$1$还是$0$。<br>例如，对于给定的数$0011 (= (3)_{10})$，我们要确认第$2$位是否是$1$，我们可以用将其和$0010$（只有第$2$位是$1$）进行与运算：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0011 (= (3)_{10})\\
+AND&\ 0010 (= (2)_{10})\\
+= &\ 0010 (= (2)_{10})
+\end{aligned}</script><p>由于结果$0010$不为$0$，所以我们知道原数的第$2$位是$1$。这被称作位掩码(Bit Mask)。</p>
+<p>与运算可以将某一位设置为$0$。例如，我们要把$0110 (= (6)_{10})$的第$3$位设置为$0$，可以将其和$1011$（只有第$3$位是$0$）进行与运算：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0110 (= (6)_{10})\\
+AND&\ 1011 (= (11)_{10})\\
+= &\ 0010 (= (2)_{10})
+\end{aligned}</script><p>由于这个属性，二进制数的奇偶校验就很方便了：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0110 (= (6)_{10})\\
+AND&\ 0001 (= (1)_{10})\\
+= &\ 0000 (= (0)_{10})
+\end{aligned}</script><p>因为$6\ AND\ 1 =  0$，所以$6$可以被$2$整除，因此$6$是偶数。</p>
+<h2 id="或（OR）"><a href="#或（OR）" class="headerlink" title="或（OR）"></a>或（OR）</h2><p>或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑或运算。若两个bit都为$0$，则结果为$0$；否则结果为$1$。<br>在大多数编程语言中，其符号为<code>|</code>。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0101 (= (5)_{10})\\
+OR&\ 0011 (= (3)_{10})\\
+= &\ 0111 (= (7)_{10})
+\end{aligned}</script><p>或运算可以将某一位设置为$1$。例如，我们要把$0110 (= (6)_{10})$的第$4$位设置为$1$，可以将其和$1000$（只有第$4$位是$1$）进行或运算：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0110 (= (6)_{10})\\
+OR&\ 1000 (= (8)_{10})\\
+= &\ 1110 (= (14)_{10})
+\end{aligned}</script><h2 id="异或（XOR）"><a href="#异或（XOR）" class="headerlink" title="异或（XOR）"></a>异或（XOR）</h2><p>或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑异或运算。若只有其中一个bit为$1$，则结果为$1$；否则结果为$0$。即两者状态不同，结果为$1$；两者状态相同，结果为$0$。<br>在大多数编程语言中，其符号为<code>^</code>。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0101 (= (5)_{10})\\
+XOR&\ 0011 (= (3)_{10})\\
+= &\ 0110 (= (6)_{10})
+\end{aligned}</script><p>异或运算可以将某一位反转。例如，我们要把$0110 (= (6)_{10})$的第$1$位和第$3$位反转，可以将其和$0101$（第$1$位和第$3$位是$1$）进行异或运算：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\ 0110 (= (6)_{10})\\
+XOR&\ 0101 (= (5)_{10})\\
+= &\ 0011 (= (3)_{10})
+\end{aligned}</script><p>通过定义可以得到，一个数异或自己总是得$0$。因此，将一个变量归零可以使用异或自己的方式，这种方式的效率通常比直接赋值为$0$要高。</p>
+<h2 id="数学等价"><a href="#数学等价" class="headerlink" title="数学等价"></a>数学等价</h2><p>对于非负整数$x$和$y$，$x \ge y$，位运算可以写成如下形式：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+NOT\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \mod 2 + 1) \mod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x\\
+x\ AND\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)\\
+x\ OR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2)\\
+x\ XOR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \mod 2)
+\end{aligned}</script><h1 id="移位"><a href="#移位" class="headerlink" title="移位"></a>移位</h1><p>移位会将二进制数字整体向左或向右移动，任意一端移出的位会被丢弃。<br>在左移中，$0$会从右侧移入；而在右移中，符号位会从左侧移入。<br>左移$n$位等同于乘以$2^{n}$，而右移$n$位等同于除以$2^{n}$并向负无穷取整。<br>在大多数编程语言中，左移为<code>&lt;&lt;</code>，右移为<code>&gt;&gt;</code>。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+LEFT\ SHIFT&\ 00010111 (= (23)_{10})\\
+= &\ 00101110 (= (46)_{10})
+\end{aligned}</script><script type="math/tex; mode=display">
+\begin{aligned}
+RIGHT\ SHIFT&\ 10010111 (= (-105)_{10})\\
+= &\ 11001011 (= (-53)_{10})
+\end{aligned}</script><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><ul>
+<li><p>乘以$2^{m}$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mulTwoPower</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m=<span class="number">1</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n &lt;&lt; m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>除以$2^{m}$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">divTwoPower</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m=<span class="number">1</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n &gt;&gt; m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断奇偶性</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isOdd</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n &amp; <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取两个数的最大值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 若n为非负数，n &gt;&gt; 31的值为0，否则为-1</span></span><br><span class="line">    <span class="keyword">return</span> (b &amp; ((a - b) &gt;&gt; <span class="number">31</span>)) | (a &amp; (~(a - b) &gt;&gt; <span class="number">31</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取两个数的最小值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 若n为非负数，n &gt;&gt; 31的值为0，否则为-1</span></span><br><span class="line">    <span class="keyword">return</span> (a &amp; ((a - b) &gt;&gt; <span class="number">31</span>)) | (b &amp; (~(a - b) &gt;&gt; <span class="number">31</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取绝对值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">iabs</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 若n为非负数，n &gt;&gt; 31的值为0，否则为-1</span></span><br><span class="line">    <span class="keyword">return</span> (n ^ (n &gt;&gt; <span class="number">31</span>)) - (n &gt;&gt; <span class="number">31</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断是否是$2$的幂</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isTwoPower</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n &gt; <span class="number">0</span> &amp;&amp; (n &amp; (n - <span class="number">1</span>)) == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对$2^{n}$取余</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">modTwoPower</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> m &amp; (n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断符号是否相同</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isSameSign</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (a ^ b) &gt;= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>, carry = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        sum = a ^ b;</span><br><span class="line">        carry = (a &amp; b) &lt;&lt; <span class="number">1</span>;</span><br><span class="line">        a = sum;</span><br><span class="line">        b = carry;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (carry);</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/27/Windows/" itemprop="url">
-              
-                <span itemprop="name">Windows系统镜像</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-27T08:19:16+08:00" content="Tue, Aug 27th, 2019">
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/13/Toposort/" itemprop="url">
-              
-                <span itemprop="name">拓扑排序</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-13T17:59:54+08:00" content="Tue, Aug 13th, 2019">
-          08-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/31/Linked-List/" itemprop="url">
-              
-                <span itemprop="name">链表</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T21:38:41+08:00" content="Wed, Jul 31st, 2019">
-          07-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/29/Heap/" itemprop="url">
-              
-                <span itemprop="name">堆</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-29T10:14:44+08:00" content="Mon, Jul 29th, 2019">
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/29/Basic-Mod-Packs/" itemprop="url">
-              
-                <span itemprop="name">发布·Minecraft基础整合</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-29T13:30:20+08:00" content="Sat, Jun 29th, 2019">
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/16/Chrome-Expensions/" itemprop="url">
-              
-                <span itemprop="name">推荐·实用的Chrome插件们</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-16T12:15:34+08:00" content="Sun, Jun 16th, 2019">
-          06-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/11/1+1=2/" itemprop="url">
-              
-                <span itemprop="name">证明$1 + 1 = 2$</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-11T15:30:14+08:00" content="Sat, May 11th, 2019">
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/" title="位运算">http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/27/Minimum-Spanning-Tree/" rel="next" title="最小生成树">
+                <i class="fa fa-chevron-left"></i> 最小生成树
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -752,6 +714,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -772,8 +741,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -907,6 +885,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算"><span class="nav-number">2.</span> <span class="nav-text">位运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#非（NOT）"><span class="nav-number">2.1.</span> <span class="nav-text">非（NOT）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与（AND）"><span class="nav-number">2.2.</span> <span class="nav-text">与（AND）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#或（OR）"><span class="nav-number">2.3.</span> <span class="nav-text">或（OR）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异或（XOR）"><span class="nav-number">2.4.</span> <span class="nav-text">异或（XOR）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学等价"><span class="nav-number">2.5.</span> <span class="nav-text">数学等价</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移位"><span class="nav-number">3.</span> <span class="nav-text">移位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用"><span class="nav-number">4.</span> <span class="nav-text">应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1094,6 +1088,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
