@@ -124,7 +124,7 @@
   <entry>
     <title><![CDATA[Hello, World!]]></title>
     <url>%2F2018%2F12%2F30%2FHello-World%2F</url>
-    <content type="text"><![CDATA[我只是一只蒟蒻 我在洛谷上的另一个博客：（其实里面什么也没有2333）永远相信美好的事情即将发生 欢迎访问某位奆佬的博客：Summer_Light’s Blog 12345678910#include &lt;iostream&gt;using namespace std;int main()&#123; cout &lt;&lt; "Hello, World!" &lt;&lt; endl; return 0;&#125; 12345678#include &lt;stdio.h&gt;int main()&#123; printf("Hello, World!\n"); return 0;&#125; 1234#!/usr/bin/env python3# -*- coding: utf-8 -*-print('Hello, World!') 12'use strict';console.log('Hello, World!'); 1234567public class HelloWorld&#123; public static void main(String[] args) &#123; System.out.println("Hello, World!"); &#125;&#125; 盗用一下某奆佬的图]]></content>
+    <content type="text"><![CDATA[我只是一只蒟蒻 我在洛谷上的另一个博客：（其实里面什么也没有2333）永远相信美好的事情即将发生 欢迎访问某位奆佬的博客：Summer_Light’s Blog 12345678910#include &lt;iostream&gt;using namespace std;int main()&#123; cout &lt;&lt; "Hello, World!" &lt;&lt; endl; return 0;&#125; 12345678#include &lt;stdio.h&gt;int main()&#123; printf("Hello, World!\n"); return 0;&#125; 1234#!/usr/bin/env python3# -*- coding: utf-8 -*-print('Hello, World!') 12'use strict';console.log('Hello, World!'); 1234567public class HelloWorld&#123; public static void main(String[] args) &#123; System.out.println("Hello, World!"); &#125;&#125;]]></content>
       <tags>
         <tag>Others</tag>
       </tags>
