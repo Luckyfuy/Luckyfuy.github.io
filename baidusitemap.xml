@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://Luckyfuy.cf/2018/12/30/Hello-World/</loc>
+    <lastmod>2019-08-30</lastmod>
+  </url>  <url>
     <loc>http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/</loc>
     <lastmod>2019-08-29</lastmod>
   </url>  <url>
@@ -45,8 +48,5 @@
   </url>  <url>
     <loc>http://Luckyfuy.cf/2019/03/09/Building-Blog/</loc>
     <lastmod>2019-03-22</lastmod>
-  </url>  <url>
-    <loc>http://Luckyfuy.cf/2018/12/30/Hello-World/</loc>
-    <lastmod>2019-03-16</lastmod>
   </url>
 </urlset>
