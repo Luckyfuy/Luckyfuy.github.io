@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Dynamic Programming,">
 
 
 
@@ -140,16 +140,18 @@
 
 
 
-<meta name="description" content="蒟蒻Luckyfuy的辣鸡博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Luckyfuy&#39;s Blog">
-<meta property="og:url" content="http://Luckyfuy.cf/archives/2019/07/index.html">
+<meta name="description" content="简介背包问题是动态规划中基础但重要的一种DP问题，其内容可以描述为：  有$n$种物品和一个容量为$W$的背包，每种物品都有重量$w_i$和价值$v_i$两种属性，在所选物品不超过容量$W$的情况下，选择若干件物品放入背包使得总价值最大。  推荐阅读dd大佬的背包问题九讲。">
+<meta name="keywords" content="Dynamic Programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="背包">
+<meta property="og:url" content="http://Luckyfuy.cf/2019/09/07/Knapsack/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="蒟蒻Luckyfuy的辣鸡博客">
+<meta property="og:description" content="简介背包问题是动态规划中基础但重要的一种DP问题，其内容可以描述为：  有$n$种物品和一个容量为$W$的背包，每种物品都有重量$w_i$和价值$v_i$两种属性，在所选物品不超过容量$W$的情况下，选择若干件物品放入背包使得总价值最大。  推荐阅读dd大佬的背包问题九讲。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-07T08:04:11.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Luckyfuy&#39;s Blog">
-<meta name="twitter:description" content="蒟蒻Luckyfuy的辣鸡博客">
+<meta name="twitter:title" content="背包">
+<meta name="twitter:description" content="简介背包问题是动态规划中基础但重要的一种DP问题，其内容可以描述为：  有$n$种物品和一个容量为$W$的背包，每种物品都有重量$w_i$和价值$v_i$两种属性，在所选物品不超过容量$W$的情况下，选择若干件物品放入背包使得总价值最大。  推荐阅读dd大佬的背包问题九讲。">
 
 
 
@@ -179,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="http://Luckyfuy.cf/archives/2019/07/">
+  <link rel="canonical" href="http://Luckyfuy.cf/2019/09/07/Knapsack/">
 
 
 
 
 
-  <title>时间轴 | Luckyfuy's Blog</title>
+  <title>背包 | Luckyfuy's Blog</title>
   
 
 
@@ -214,7 +216,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
       <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -362,107 +364,263 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 18 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Luckyfuy.cf/2019/09/07/Knapsack/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/07/31/Linked-List/" itemprop="url">
-              
-                <span itemprop="name">链表</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">背包</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T21:38:41+08:00" content="Wed, Jul 31st, 2019">
-          07-31
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-07T14:03:00+08:00">
+                Sat, Sep 7th, 2019
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/07/Knapsack/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/07/Knapsack/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/09/07/Knapsack/" class="leancloud_visitors" data-flag-title="背包">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  410
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/29/Heap/" itemprop="url">
-              
-                <span itemprop="name">堆</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-29T10:14:44+08:00" content="Mon, Jul 29th, 2019">
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>背包问题是动态规划中基础但重要的一种DP问题，其内容可以描述为：</p>
+<blockquote>
+<p>有$n$种物品和一个容量为$W$的背包，每种物品都有重量$w_i$和价值$v_i$两种属性，<br>在所选物品不超过容量$W$的情况下，选择若干件物品放入背包使得总价值最大。</p>
+</blockquote>
+<p>推荐阅读dd大佬的<a href="https://github.com/tianyicui/pack" title="tianyicui/pack" target="_blank" rel="noopener">背包问题九讲</a>。</p>
+<a id="more"></a>
+<h1 id="0-1背包"><a href="#0-1背包" class="headerlink" title="0-1背包"></a>0-1背包</h1><p>这是最基础的背包问题，它的特点是：<br>每种物品只有$1$件，我们只能选择放或不放。</p>
+<p>设$f_{i, j}$表示只考虑前$i$件物品放入容量为$j$的背包的最大价值，可以得到状态转移方程：</p>
+<script type="math/tex; mode=display">f_{i, j} = \max(f_{i - 1, j}, f_{i - 1, j - w_{i}} + v_{i})</script><p>已经放入了$i - 1$件物品之后，对于第$i$个物品，可以选择放或不放：<br>如果不放，那么背包剩余容量不变，总价值也不会变，因此总价值为$f_{i - 1, j}$；<br>如果放，那么背包的剩余容量会减小$w_{i}$，而总价值增加新放进去的$v_{i}$，因此总价值为$f_{i - 1, j - w_{i}} + v_{i}$。</p>
+<p>考虑优化，我们可以去掉第一维，用新的$f_{j}$代替原先的$f_{i - 1, j}$，得出：</p>
+<script type="math/tex; mode=display">f_{i} = \max(f_{i}, f_{i - w_{i}} + v_{i})</script><p>代码如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= w[i]; --j)</span><br><span class="line">        f[j] = max(f[j], f[j - w[i]] + v[i]);</span><br></pre></td></tr></table></figure></p>
+<p>注意，<code>j</code>是逆序循环的。</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><ul>
+<li><a href="https://www.luogu.org/problem/P1048" title="采药" target="_blank" rel="noopener">P1048 采药</a></li>
+<li><a href="https://www.luogu.org/problem/P2871" title="[USACO07DEC]手链Charm Bracelet" target="_blank" rel="noopener">P2871 [USACO07DEC]手链Charm Bracelet</a></li>
+<li><a href="https://www.luogu.org/problem/P2639" title="[USACO09OCT]Bessie的体重问题s" target="_blank" rel="noopener">P2639 [USACO09OCT]Bessie的体重问题</a></li>
+</ul>
+<h1 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h1><p><del>咕咕咕</del></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://Luckyfuy.cf/2019/09/07/Knapsack/" title="背包">http://Luckyfuy.cf/2019/09/07/Knapsack/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Dynamic-Programming/" rel="tag"><i class="fa fa-tag"></i> Dynamic Programming</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/31/MySQL-Installation/" rel="next" title="MySQL安装教程">
+                <i class="fa fa-chevron-left"></i> MySQL安装教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -470,6 +628,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -490,8 +655,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -625,6 +799,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0-1背包"><span class="nav-number">2.</span> <span class="nav-text">0-1背包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">2.1.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#完全背包"><span class="nav-number">3.</span> <span class="nav-text">完全背包</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -812,6 +1002,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
