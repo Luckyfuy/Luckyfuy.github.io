@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Graph Theory,">
+  <meta name="keywords" content="Others,">
 
 
 
@@ -140,28 +140,18 @@
 
 
 
-<meta name="description" content="简介所谓最小生成树，就是一个无向图的极小连通子图，包含原图中的所有节点，且所有边的权值之和最小。因其是一棵树，所以得名最小生成树。 听不懂？那我们来炒一颗栗子：对于这个无向图：下图就是它的最小生成树，边权和为$2 + 2 + 3 = 7$：不过对于一部分图，比如上面炒的栗子，最小生成树有多种解，但是边权和是不变的：">
-<meta name="keywords" content="Graph Theory">
+<meta name="description" content="简介对拍是一种对学竞赛的同学非常有用的Debug技能。在做题时，你肯定会遇到这样的情况：  ？？？我不是过了样例吗？？？为什么WA了2个点？？？代码好像没什么问题啊？？？辣鸡评测姬  这个时候你就需要对拍来调试程序了。 对拍，说白了就是拿一个输入数据分别让你写的程序和标程（暴力程序）跑一遍，比较输出的数据。对拍一般有以下3个步骤：  生成一组输入数据 把这组数据分别让两个程序运行一遍，生成输出数据">
+<meta name="keywords" content="Others">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最小生成树">
-<meta property="og:url" content="http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/index.html">
+<meta property="og:title" content="对拍">
+<meta property="og:url" content="http://Luckyfuy.cf/2019/09/14/Check/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="简介所谓最小生成树，就是一个无向图的极小连通子图，包含原图中的所有节点，且所有边的权值之和最小。因其是一棵树，所以得名最小生成树。 听不懂？那我们来炒一颗栗子：对于这个无向图：下图就是它的最小生成树，边权和为$2 + 2 + 3 = 7$：不过对于一部分图，比如上面炒的栗子，最小生成树有多种解，但是边权和是不变的：">
+<meta property="og:description" content="简介对拍是一种对学竞赛的同学非常有用的Debug技能。在做题时，你肯定会遇到这样的情况：  ？？？我不是过了样例吗？？？为什么WA了2个点？？？代码好像没什么问题啊？？？辣鸡评测姬  这个时候你就需要对拍来调试程序了。 对拍，说白了就是拿一个输入数据分别让你写的程序和标程（暴力程序）跑一遍，比较输出的数据。对拍一般有以下3个步骤：  生成一组输入数据 把这组数据分别让两个程序运行一遍，生成输出数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/at14NrUCkYyTgmP.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/C6wj5gzpVycemP8.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/MSJwfXpvct2Wb7R.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/at14NrUCkYyTgmP.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/iC6sOWgYlofzE3e.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/jdFraR4CAwTGmSK.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/fExbTR7nkDuiQpS.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/C6wj5gzpVycemP8.png">
-<meta property="og:image" content="https://i.loli.net/2019/08/28/MSJwfXpvct2Wb7R.png">
-<meta property="og:updated_time" content="2019-08-31T05:16:02.547Z">
+<meta property="og:updated_time" content="2019-09-14T13:23:10.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="最小生成树">
-<meta name="twitter:description" content="简介所谓最小生成树，就是一个无向图的极小连通子图，包含原图中的所有节点，且所有边的权值之和最小。因其是一棵树，所以得名最小生成树。 听不懂？那我们来炒一颗栗子：对于这个无向图：下图就是它的最小生成树，边权和为$2 + 2 + 3 = 7$：不过对于一部分图，比如上面炒的栗子，最小生成树有多种解，但是边权和是不变的：">
-<meta name="twitter:image" content="https://i.loli.net/2019/08/28/at14NrUCkYyTgmP.png">
+<meta name="twitter:title" content="对拍">
+<meta name="twitter:description" content="简介对拍是一种对学竞赛的同学非常有用的Debug技能。在做题时，你肯定会遇到这样的情况：  ？？？我不是过了样例吗？？？为什么WA了2个点？？？代码好像没什么问题啊？？？辣鸡评测姬  这个时候你就需要对拍来调试程序了。 对拍，说白了就是拿一个输入数据分别让你写的程序和标程（暴力程序）跑一遍，比较输出的数据。对拍一般有以下3个步骤：  生成一组输入数据 把这组数据分别让两个程序运行一遍，生成输出数据">
 
 
 
@@ -191,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/">
+  <link rel="canonical" href="http://Luckyfuy.cf/2019/09/14/Check/">
 
 
 
 
 
-  <title>最小生成树 | Luckyfuy's Blog</title>
+  <title>对拍 | Luckyfuy's Blog</title>
   
 
 
@@ -388,7 +378,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/">
+    <link itemprop="mainEntityOfPage" href="http://Luckyfuy.cf/2019/09/14/Check/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luckyfuy">
@@ -405,7 +395,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">最小生成树</h1>
+          <h1 class="post-title" itemprop="name headline">对拍</h1>
         
 
         <div class="post-meta">
@@ -417,8 +407,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T11:29:42+08:00">
-                Tue, Aug 27th, 2019
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-14T20:06:21+08:00">
+                Sat, Sep 14th, 2019
               </time>
             
 
@@ -436,8 +426,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/27/Minimum-Spanning-Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/27/Minimum-Spanning-Tree/" itemprop="commentCount"></span>
+                <a href="/2019/09/14/Check/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/14/Check/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -445,7 +435,7 @@
 
           
           
-             <span id="/2019/08/27/Minimum-Spanning-Tree/" class="leancloud_visitors" data-flag-title="最小生成树">
+             <span id="/2019/09/14/Check/" class="leancloud_visitors" data-flag-title="对拍">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -470,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  959
+                  1k
                 </span>
               
 
@@ -507,22 +497,40 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>所谓最小生成树，就是一个无向图的极小连通子图，包含原图中的所有节点，且所有边的权值之和最小。因其是一棵树，所以得名最小生成树。</p>
-<p>听不懂？那我们来炒一颗栗子：<br>对于这个无向图：<br><img src="https://i.loli.net/2019/08/28/at14NrUCkYyTgmP.png" alt="E.G." title="E.G."><br>下图就是它的最小生成树，边权和为$2 + 2 + 3 = 7$：<br><img src="https://i.loli.net/2019/08/28/C6wj5gzpVycemP8.png" alt="1" title="1"><br>不过对于一部分图，比如上面炒的栗子，最小生成树有多种解，但是边权和是不变的：<br><img src="https://i.loli.net/2019/08/28/MSJwfXpvct2Wb7R.png" alt="2" title="2"></p>
-<a id="more"></a>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>那么概念知道了，代码怎么写呢？</p>
-<p>最小生成树有两种算法：Prim和Kruskal。<br>在稠密图中，Prim比Kruskal优；但在稀疏图中，Kruskal比Prim优。</p>
-<h2 id="Prim算法"><a href="#Prim算法" class="headerlink" title="Prim算法"></a>Prim算法</h2><p>Prim的思想是：<br>从任意一个节点开始，将已连接和未连接的节点各归为一类。<br>每次找出一个与已连接节点之间边权最小的未连接节点，与其连接。<br>将上述步骤重复$n - 1$次即可。</p>
-<p>Prim每次要选择距离最短的一个节点，并用新的边更新其它节点的距离，这有点像最短路中的Dijkstra算法。</p>
-<p>具体一点，就拿上面那个栗子再炒一遍：<br><img src="https://i.loli.net/2019/08/28/at14NrUCkYyTgmP.png" alt="E.G." title="E.G."><br>我们可以从$1$号点开始：<br><img src="https://i.loli.net/2019/08/28/iC6sOWgYlofzE3e.png" alt="Step 1" title="Step 1"><br>$1$可以连到$2, 3, 4$，但是$1$和$2, 3$两个点之间的边权是最短的，都是$2$，所以我们可以先连其中一个。边权一样，连哪个都无所谓：<br><img src="https://i.loli.net/2019/08/28/jdFraR4CAwTGmSK.png" alt="Step 2" title="Step 2"><br>连了$2$之后，边权最短的仍然是$1 - 3$，所以连上$1$和$3$：<br><img src="https://i.loli.net/2019/08/28/fExbTR7nkDuiQpS.png" alt="Step 3" title="Step 3"><br>现在只剩$4$最后一个点了。由于连接$4$的两条边$1 - 4$和$3 - 4$边权一样，所以连哪条都是正确的，最终结果就会有两个：<br><img src="https://i.loli.net/2019/08/28/C6wj5gzpVycemP8.png" alt="Step 4 / 1" title="Step 4 / 1"><br><img src="https://i.loli.net/2019/08/28/MSJwfXpvct2Wb7R.png" alt="Step 4 / 2" title="Step 4 / 2"></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 建图</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> from, to, dis;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Edge&gt; g[MAX_SIZE];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 由于是无向图，所以要存两条边</span></span><br><span class="line">    g[u].push_back(u, v, w);</span><br><span class="line">    g[v].push_back(v, u, w);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// m是边数，n是节点数</span></span><br><span class="line"><span class="keyword">int</span> m, n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prim</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// now是选择的点，dis是now与其它点的距离，vis标记是否访问过</span></span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>, now = <span class="number">1</span>, dis[MAX_SIZE];</span><br><span class="line">    <span class="keyword">bool</span> vis[MAX_SIZE];</span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        vis[i] = <span class="literal">false</span>;</span><br><span class="line">        dis[i] = INF;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="keyword">int</span>(g[i].size()); ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (g[i][j].to == now)</span><br><span class="line">            &#123;</span><br><span class="line">                dis[i] = <span class="built_in">std</span>::min(dis[i], g[i][j].dis);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; node; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> minn = INF;</span><br><span class="line">        vis[now] = <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 找到边权最小的边，更新now</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[j] &amp;&amp; minn &gt; dis[j])</span><br><span class="line">            &#123;</span><br><span class="line">                minn = dis[j];</span><br><span class="line">                now = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 加上边权</span></span><br><span class="line">        ans += minn;</span><br><span class="line">        <span class="comment">// 更新dis</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; !vis[j] &amp;&amp; k &lt; <span class="keyword">int</span>(g[now].size()); ++k)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (dis[g[now][k].to] &gt; g[now][k].dis)</span><br><span class="line">                &#123;</span><br><span class="line">                    dis[g[now][k].to] = g[now][k].dis;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Kruskal算法"><a href="#Kruskal算法" class="headerlink" title="Kruskal算法"></a>Kruskal算法</h2><p>Kruskal算法比较好理解，它的思想是把所有边按边权排序，然后选择边权最小的边，并依次连接。如果存在环（用并查集判断），就跳过这条边，直到加入了$n - 1$条边。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">Edge g[MAX_SIZE];</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ++i;</span><br><span class="line">    g[i].from = u;</span><br><span class="line">    g[i].to = v;</span><br><span class="line">    g[i].dis = w;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 并查集</span></span><br><span class="line"><span class="keyword">int</span> fa[MAX_SIZE];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (fa[u] == u)</span><br><span class="line">        <span class="keyword">return</span> u;</span><br><span class="line">    <span class="keyword">return</span> fa[u] == find(fa[u]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 比较函数</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Edge a, Edge b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.dis &lt; b.dis;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kruskal</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// tot记录边数</span></span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>, tot = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 排序</span></span><br><span class="line">    <span class="built_in">std</span>::sort(g, g + m, cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        fa[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        Edge&lt;type&gt; e = g[i];</span><br><span class="line">        <span class="comment">// 判断是否连通</span></span><br><span class="line">        <span class="keyword">if</span> (find(e.from) != find(e.to))</span><br><span class="line">        &#123;</span><br><span class="line">            ans += g[i].dis;</span><br><span class="line">            fa[find(e.from)] = find(e.to);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果已经形成最小生成树了就退出</span></span><br><span class="line">        <span class="keyword">if</span> (++tot == edge - <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ul>
-<li><a href="https://www.luogu.org/problem/P3366" title="【模板】最小生成树" target="_blank" rel="noopener">P3366 【模板】最小生成树</a></li>
-<li><a href="https://www.luogu.org/problem/P1546" title="最短网络 Agri-Net" target="_blank" rel="noopener">P1546 最短网络 Agri-Net</a></li>
-<li><a href="https://www.luogu.org/problem/P1194" title="买礼物" target="_blank" rel="noopener">P1194 买礼物</a></li>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>对拍是一种对学竞赛的同学非常有用的Debug技能。在做题时，你肯定会遇到这样的情况：</p>
+<blockquote>
+<p>？？？我不是过了样例吗？？？为什么WA了2个点？？？代码好像没什么问题啊？？？<del>辣鸡评测姬</del></p>
+</blockquote>
+<p>这个时候你就需要对拍来调试程序了。</p>
+<p>对拍，说白了就是拿一个输入数据分别让你写的程序和标程（暴力程序）跑一遍，比较输出的数据。<br>对拍一般有以下3个步骤：</p>
+<ol>
+<li>生成一组输入数据</li>
+<li>把这组数据分别让两个程序运行一遍，生成输出数据</li>
+<li>比较两组输出数据</li>
+</ol>
+<p>那么实现对拍，我们需要：</p>
+<ul>
+<li>你的程序</li>
+<li>标程</li>
+<li>数据生成器</li>
+<li>对拍脚本（批处理脚本）</li>
 </ul>
+<p>如果你懒得看下面的内容可以直接在<a href="https://github.com/Luckyfuy/Check" title="Luckyfuy/Check" target="_blank" rel="noopener">GitHub</a>下载程序。</p>
+<p>本文仅适用于Windows系统<del>（虽然考试大多在Linux上）</del>。</p>
+<a id="more"></a>
+<h1 id="批处理脚本"><a href="#批处理脚本" class="headerlink" title="批处理脚本"></a>批处理脚本</h1><p>假设你已经写好了一个数据生成器并编译成了<code>rand.exe</code>，那么我们可以把它的输出重定向到文件<code>std.in</code>：<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rand.exe &gt; std.<span class="keyword">in</span></span><br></pre></td></tr></table></figure></p>
+<p>当然你也可以直接在源码里重定向输入输出流，不过这样比较麻烦，所以一般不采用这种做法。</p>
+<p>输入重定向也类似，假设<code>my.exe</code>是你的程序，<code>std.exe</code>是标程：<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my.exe &lt; std.<span class="keyword">in</span></span><br><span class="line">std.exe &lt; std.<span class="keyword">in</span></span><br></pre></td></tr></table></figure></p>
+<p>然后再把输出重定向到文件里：<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my.exe &lt; std.<span class="keyword">in</span> &gt; my.out</span><br><span class="line">std.exe &lt; std.<span class="keyword">in</span> &gt; std.out</span><br></pre></td></tr></table></figure></p>
+<p>接下来就是比较了，Windows自带一个<code>fc</code>命令，用于比较两个文件：<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fc my.out std.out /n</span><br></pre></td></tr></table></figure></p>
+<p>当两个文件有差异时，会显示不同处附近的几行文本。<code>/n</code>参数会显示行号。</p>
+<p>这样我们就可以写出一个对拍脚本了：<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">:loop</span><br><span class="line">    rand.exe &gt; std.<span class="keyword">in</span></span><br><span class="line">    my.exe &lt; std.<span class="keyword">in</span> &gt; my.out</span><br><span class="line">    std.exe &lt; std.<span class="keyword">in</span> &gt; std.out</span><br><span class="line">    fc my.out std.out /n</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">errorlevel</span> <span class="number">1</span> <span class="keyword">goto</span> loop</span><br><span class="line">    <span class="built_in">pause</span></span><br><span class="line">    <span class="keyword">goto</span> loop</span><br></pre></td></tr></table></figure></p>
+<p><code>@echo off</code>的作用关掉输入显示：<br><code>:loop</code>的作用与C中的<code>goto</code>类似，标号<code>loop</code>；<br><code>errorlevel</code>是上一个命令的返回值，<code>fc</code>在文件相同时会返回<code>0</code>，不同时返回<code>1</code>，因此<code>if not errorlevel 1 goto loop</code>的作用是如果<code>fc</code>返回的不是<code>1</code>，就跳转到<code>loop</code>（相当于循环）；<br>一旦返回值为<code>1</code>，脚本就会暂停，<code>pause</code>，让你可以看数据；<br>最后<code>goto loop</code>，继续循环。</p>
+<p>把这个脚本命名为<code>check.bat</code>，可以直接运行。</p>
+<h1 id="新鲜的炒栗"><a href="#新鲜的炒栗" class="headerlink" title="新鲜的炒栗"></a>新鲜的炒栗</h1><p>比如<a href="https://www.luogu.org/problem/P1001" title="A+B Problem" target="_blank" rel="noopener">P1001 A+B Problem</a>这道难题，我们先写出标程：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; a + b &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这是不确定对不对的程序：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b, sum = <span class="number">0</span>, carry = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        sum = a ^ b;</span><br><span class="line">        carry = (a &amp; b) &lt;&lt; <span class="number">1</span>;</span><br><span class="line">        a = sum;</span><br><span class="line">        b = carry;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (carry);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; sum &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>数据生成器怎么写呢？<br>头文件<code>stdlib.h</code>中有一个<code>rand()</code>函数，可以生成<code>0</code>到<code>RAND_MAX</code>之间的一个随机整数，<code>RAND_MAX</code>定义在<code>stdlib.h</code>中，其值为<code>2147483647</code>。<br>由于题目要求有负数，因此可以再生成一个随机数来设置符号：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> p = <span class="number">1000000000</span>;</span><br><span class="line">    <span class="keyword">int</span> a = rand() % p, b = rand() % p;</span><br><span class="line">    a = (rand() % <span class="number">2</span> == <span class="number">0</span> ? -a : a), b = (rand() % <span class="number">2</span> == <span class="number">0</span> ? -b : b);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="string">" "</span> &lt;&lt; b &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是，上面的程序重新运行后生成的随机数相同，因为随机数种子相同，因此我们需要用<code>srand()</code>函数设置种子。<br>一般都使用<code>time(NULL)</code>的返回值作为种子（对于C++ 11，建议使用<code>time(nullptr)</code>），<code>time()</code>函数包含在<code>time.h</code>头文件中：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> p = <span class="number">1000000000</span>;</span><br><span class="line">    srand(time(<span class="literal">nullptr</span>));</span><br><span class="line">    <span class="keyword">int</span> a = rand() % p, b = rand() % p;</span><br><span class="line">    a = (rand() % <span class="number">2</span> == <span class="number">0</span> ? -a : a), b = (rand() % <span class="number">2</span> == <span class="number">0</span> ? -b : b);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="string">" "</span> &lt;&lt; b &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -572,7 +580,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/" title="最小生成树">http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/</a>
+    <a href="http://Luckyfuy.cf/2019/09/14/Check/" title="对拍">http://Luckyfuy.cf/2019/09/14/Check/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -587,7 +595,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Graph-Theory/" rel="tag"><i class="fa fa-tag"></i> Graph Theory</a>
+            <a href="/tags/Others/" rel="tag"><i class="fa fa-tag"></i> Others</a>
           
         </div>
       
@@ -600,8 +608,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/27/PVZ/" rel="next" title="Plants vs. Zombies一代">
-                <i class="fa fa-chevron-left"></i> Plants vs. Zombies一代
+              <a href="/2019/09/07/Knapsack/" rel="next" title="背包">
+                <i class="fa fa-chevron-left"></i> 背包
               </a>
             
           </div>
@@ -609,10 +617,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/28/Bitwise-Operation/" rel="prev" title="位运算">
-                位运算 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -821,7 +825,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prim算法"><span class="nav-number">2.1.</span> <span class="nav-text">Prim算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kruskal算法"><span class="nav-number">2.2.</span> <span class="nav-text">Kruskal算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题"><span class="nav-number">3.</span> <span class="nav-text">例题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#批处理脚本"><span class="nav-number">2.</span> <span class="nav-text">批处理脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新鲜的炒栗"><span class="nav-number">3.</span> <span class="nav-text">新鲜的炒栗</span></a></li></ol></div>
             
 
           </div>
@@ -1495,26 +1499,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
