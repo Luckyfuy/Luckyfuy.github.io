@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://Luckyfuy.cf/about/index.html</loc>
+    
+    <lastmod>2019-09-20T13:59:09.540Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Luckyfuy.cf/tags/index.html</loc>
+    
+    <lastmod>2019-09-20T13:29:21.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Luckyfuy.cf/resources/index.html</loc>
+    
+    <lastmod>2019-09-20T13:29:10.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Luckyfuy.cf/games/index.html</loc>
+    
+    <lastmod>2019-09-20T13:21:05.562Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Luckyfuy.cf//404.html</loc>
+    
+    <lastmod>2019-09-20T12:40:11.797Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://Luckyfuy.cf/2019/09/14/Check/</loc>
     
     <lastmod>2019-09-14T13:23:10.188Z</lastmod>
@@ -19,13 +54,6 @@
     <loc>http://Luckyfuy.cf/2019/09/07/Knapsack/</loc>
     
     <lastmod>2019-09-13T04:38:21.919Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Luckyfuy.cf/about/index.html</loc>
-    
-    <lastmod>2019-09-13T03:01:27.645Z</lastmod>
     
   </url>
   
@@ -79,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://Luckyfuy.cf/resources/index.html</loc>
-    
-    <lastmod>2019-08-27T02:33:12.188Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://Luckyfuy.cf/2019/08/27/Windows/</loc>
     
     <lastmod>2019-08-27T01:20:58.882Z</lastmod>
@@ -121,23 +142,9 @@
   </url>
   
   <url>
-    <loc>http://Luckyfuy.cf//404.html</loc>
-    
-    <lastmod>2019-06-06T12:43:37.212Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://Luckyfuy.cf/2019/04/12/Redstone-Circuits/</loc>
     
     <lastmod>2019-05-25T03:58:27.414Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Luckyfuy.cf/sans/index.html</loc>
-    
-    <lastmod>2019-05-25T03:40:35.268Z</lastmod>
     
   </url>
   
@@ -159,13 +166,6 @@
     <loc>http://Luckyfuy.cf/2019/03/09/Building-Blog/</loc>
     
     <lastmod>2019-03-22T10:57:12.626Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Luckyfuy.cf/tags/index.html</loc>
-    
-    <lastmod>2019-03-08T12:58:15.139Z</lastmod>
     
   </url>
   
