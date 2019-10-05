@@ -148,7 +148,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="简介质数和GCD是数论中最基础的部分之一。本篇将会讨论质数的判定与筛法，以及欧几里得算法与扩展欧几里得算法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-04T13:39:53.750Z">
+<meta property="og:updated_time" content="2019-10-05T04:12:16.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="质数与GCD">
 <meta name="twitter:description" content="简介质数和GCD是数论中最基础的部分之一。本篇将会讨论质数的判定与筛法，以及欧几里得算法与扩展欧几里得算法。">
@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.5k
+                  2.6k
                 </span>
               
 
@@ -509,7 +509,7 @@
 </blockquote>
 <p>这个定理也可以表示成：</p>
 <blockquote>
-<p>若$p$为质数，对于任意与p$互质的整数$a$，$a^{p - 1} \equiv 1 \ (\mod p)$。</p>
+<p>若$p$为质数，对于任意与$p$互质的整数$a$，$a^{p - 1} \equiv 1 \ (\mod p)$。</p>
 </blockquote>
 <p>我们可以在$[2, n - 1]$中随机选取整数$a$，检验是否$a^{n - 1} \equiv 1 \ (\mod n)$：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">fermat</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> n == <span class="number">2</span>;</span><br><span class="line">    <span class="comment">// k为测试次数，k越大结果越准确，但过大会影响效率</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a = rand() % (n - <span class="number">2</span>) + <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (quickPow(a, n - <span class="number">1</span>, n) != <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>费马小定理的逆定理并不成立，换而言之，即使满足了$a^{n - 1} \equiv 1 \ (\mod n)$，$n$也不一定是质数。但是上面的做法中随机选择$a$，大大降低了判断错误的概率。</p>
@@ -555,6 +555,7 @@
 <p>首先，显然地，$1^{-1} \equiv 1 \ (\mod p)$，<br>然后设$p = k i + r \ (1 &lt; r &lt; i &lt; p)$，<br>将这个式子放到$\mod p$意义下就会得到：$k i + r \equiv 0 \ (\mod p)$。<br>两边同时乘$i^{-1}, r^{-1}$，得到$k r^{-1} + i^{-1} \equiv 0 \ (\mod p)$，<br>$i^{-1} \equiv -k r^{-1} \ (\mod p)$，<br>$i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \mod i)^{-1} \ (\mod p)$。</p>
 <p>然后我们就可以从前面的逆元推出后面的了：</p>
 <script type="math/tex; mode=display">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \mod i} \mod p</script><p>代码很短：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">    inv[i] = -(p / i) * inv[p % i] % p;</span><br></pre></td></tr></table></figure></p>
+<p>由于这种算法可能会算出负数，如果只求正整数，稍微修改一下代码即可：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">    inv[i] = (p - p / i) * inv[p % i] % p;</span><br></pre></td></tr></table></figure></p>
 <h2 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h2><ul>
 <li><a href="https://www.luogu.org/problem/P3811" title="【模板】乘法逆元" target="_blank" rel="noopener">P3811 【模板】乘法逆元</a></li>
 <li><a href="https://www.luogu.org/problem/P1082" title="同余方程" target="_blank" rel="noopener">P1082 同余方程</a></li>
