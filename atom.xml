@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Luckyfuy.cf/"/>
-  <updated>2019-10-05T04:12:16.926Z</updated>
+  <updated>2019-10-07T03:42:27.158Z</updated>
   <id>http://Luckyfuy.cf/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ST表</title>
+    <link href="http://Luckyfuy.cf/2019/10/07/Sparse-Table/"/>
+    <id>http://Luckyfuy.cf/2019/10/07/Sparse-Table/</id>
+    <published>2019-10-07T02:20:35.000Z</published>
+    <updated>2019-10-07T03:42:27.158Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>RMQ（Range Minimum/Maximum Query），即区间最值查询。<br>解决RMQ问题主要有两种方法：ST表（Sparse Table）和线段树（Segment Tree），本文主要讲ST表。</p><p>ST表适合解决静态区间最值查询，即下面的问题：</p><blockquote><p>给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。</p></blockquote><p>如果暴力做法，每次对区间$[x, y]$扫描一遍，肯定是过不了的，所以我们需要引入ST表。<br>ST表可以实现$O(n \log n)$的预处理和$O(1)$的查询。</p><a id="more"></a><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>ST表基于倍增思想，由于$\min$操作允许区间重叠，也就是$\min(a, b, c) = \min(\min(a, b), \min(b, c))$（$\max$同理），因此我们可以通过两个有重叠的小区间来推出大区间。</p><p>令$f_{i, j}$表示$[i, i + 2^{j} - 1]$的最小值，<br>那么通过定义可得$f_{i, 0} = a_{i}$，<br>状态转移方程：$f_{i, j} = \min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1})$。</p><p><img src="https://i.loli.net/2019/10/07/NUQTCnpI3MSaO4W.png" alt="E.G." title="E.G."></p><p>例如上面这个数组，当$i = 1, j = 2$时，$f_{i, j}$表示的是下标$1 - 4$的最小值$4$,<br>而$\min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1})$表示的是取数组下标$1 - 2$和$3 - 4$中最小值的最小值，即$5, 4$的最小值，所以：<br>$f_{i, j} = \min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1}) = \min(f_{1, 1}, f_{1 + 2, 1}) = \min(5, 4) = 4$</p><p>以下是预处理代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> f[MAXN][LOGN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= logn; ++j)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; ++i)</span><br><span class="line">            f[i][j] = min(f[i][j - <span class="number">1</span>], f[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>那么查询呢？</p><p>对于每个询问$[l, r]$，记区间长度为$len = r - l + 1$，我们从$l$往右找一段长为$2^{\log_{2} len}$的区间，$r$也往左找一段长为$2^{\log_{2} len}$的区间，也就是$[l, \log_{2} len], [r - 2^{\log_{2} len} + 1, \log_{2} len]$，显然这两个区间是覆盖整个区间的，所以取最小值即可。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="built_in">log</span>(r - l + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> min(f[l][len], f[r - (<span class="number">1</span> &lt;&lt; len) + <span class="number">1</span>][len]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>但是每次使用<code>std::log()</code>函数计算$len$会降低效率，因此建议进行如下预处理：</p><script type="math/tex; mode=display">logn_{i} =\begin{cases}0 &\ (i = 1)\\logn_{\frac{i}{2}} + 1 &\ (i > 1)\end{cases}</script><p>完整代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> f[MAXN][LOGN], lg[MAXN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= logn; ++j)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; ++i)</span><br><span class="line">            f[i][j] = min(f[i][j - <span class="number">1</span>], f[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</span><br><span class="line">    lg[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">        lg[i] = lg[i / <span class="number">2</span>] + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = lg[r - l + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> min(f[l][len], f[r - (<span class="number">1</span> &lt;&lt; len) + <span class="number">1</span>][len]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>求最大值同理，只要把<code>min</code>全部换成<code>max</code>就好了：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> f[MAXN][LOGN], lg[MAXN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= logn; ++j)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; ++i)</span><br><span class="line">            f[i][j] = max(f[i][j - <span class="number">1</span>], f[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</span><br><span class="line">    lg[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">        lg[i] = lg[i / <span class="number">2</span>] + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = lg[r - l + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> max(f[l][len], f[r - (<span class="number">1</span> &lt;&lt; len) + <span class="number">1</span>][len]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;RMQ（Range Minimum/Maximum Query），即区间最值查询。&lt;br&gt;解决RMQ问题主要有两种方法：ST表（Sparse Table）和线段树（Segment Tree），本文主要讲ST表。&lt;/p&gt;
+&lt;p&gt;ST表适合解决静态区间最值查询，即下面的问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果暴力做法，每次对区间$[x, y]$扫描一遍，肯定是过不了的，所以我们需要引入ST表。&lt;br&gt;ST表可以实现$O(n \log n)$的预处理和$O(1)$的查询。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Data Structure" scheme="http://Luckyfuy.cf/tags/Data-Structure/"/>
+    
+  </entry>
   
   <entry>
     <title>质数与GCD</title>
@@ -449,28 +474,6 @@
     
     
       <category term="Essays" scheme="http://Luckyfuy.cf/tags/Essays/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论如何搭建一个静态博客</title>
-    <link href="http://Luckyfuy.cf/2019/03/09/Building-Blog/"/>
-    <id>http://Luckyfuy.cf/2019/03/09/Building-Blog/</id>
-    <published>2019-03-09T04:21:32.000Z</published>
-    <updated>2019-03-22T10:57:12.626Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。<br>Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。<br>博客搭建成果见<a href="https://Luckyfuy.github.io/" title="Luckyfuy&#39;s Blog" target="_blank" rel="noopener">本站</a>。</p><a id="more"></a><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>我们需要安装Git并配置好Git环境：<a href="https://git-scm.com/" title="Git" target="_blank" rel="noopener">Git官网</a>。<br>在电脑任意位置右击，若出现<em>Git Bash Here</em>等选项，即说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c8346e049964.jpg" alt="Git" title="Git"></p><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>由于Hexo是Node.js开发的，所以Node.js也是必不可少的，在<a href="https://nodejs.org/zh-cn/" title="Node.js" target="_blank" rel="noopener">Node.js官网</a>下载Node.js。<br>打开Git Bash，分别输入<code>node -v</code>和<code>npm -v</code>，若提示版本号信息则说明安装成功。<br><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="Node.js" title="Node.js"></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>Git和Node.js都安装成功后，就可以开始安装我们的Hexo了，这是<a href="https://hexo.io/zh-cn/" title="Hexo" target="_blank" rel="noopener">Hexo的官方网站</a>。<br>在Git Bash中输入<code>npm install hexo-cli -g</code>即可安装。<br>输入<code>hexo -v</code>，检查是否成功安装。<br><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="Hexo" title="Hexo"></p><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><p>如果要拥有一个域名，GitHub账号是必需的，因此，我们需要在<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub官网</a>上注册账号，流程不多赘述。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>创建一个博客文件夹，在此处打开Git Bash，输入命令<code>hexo init</code>，就这样，博客的本地文件就建好了。文件结构应该是这样的：<br><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构" title="文件结构"><br>输入<code>hexo server</code>（可简写为<code>hexo s</code>），打开提示中的网址（默认为<code>http://localhost:4000/</code>），我们就能看到自己的博客了！<br><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo server" title="hexo server"><br>按下Ctrl+C即可结束预览。<br>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<code>http://localhost:端口号/</code>就行了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;GitHub提供了一个功能叫做GitHub Pages，这个功能可以给用户提供一个专属域名以展示项目，但现在多用于搭建个人博客。基于这个功能，我们可以用Hexo搭建一个简单的静态博客。&lt;br&gt;Hexo是一款快速且简洁的静态博客框架，拥有丰富的插件，本地支持非常优秀，同时可以方便地部署到GitHub Pages上。&lt;br&gt;博客搭建成果见&lt;a href=&quot;https://Luckyfuy.github.io/&quot; title=&quot;Luckyfuy&amp;#39;s Blog&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;本站&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://Luckyfuy.cf/tags/Hexo/"/>
-    
-      <category term="GitHub" scheme="http://Luckyfuy.cf/tags/GitHub/"/>
     
   </entry>
   
