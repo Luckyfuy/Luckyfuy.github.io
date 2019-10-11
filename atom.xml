@@ -5,9 +5,9 @@
   <subtitle>永远相信美好的事情即将发生</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://Luckyfuy.cf/"/>
+  <link href="http://luckyfuy.github.io/"/>
   <updated>2019-10-07T04:32:54.465Z</updated>
-  <id>http://Luckyfuy.cf/</id>
+  <id>http://luckyfuy.github.io/</id>
   
   <author>
     <name>Luckyfuy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ST表</title>
-    <link href="http://Luckyfuy.cf/2019/10/07/Sparse-Table/"/>
-    <id>http://Luckyfuy.cf/2019/10/07/Sparse-Table/</id>
+    <link href="http://luckyfuy.github.io/2019/10/07/Sparse-Table/"/>
+    <id>http://luckyfuy.github.io/2019/10/07/Sparse-Table/</id>
     <published>2019-10-07T02:20:35.000Z</published>
     <updated>2019-10-07T04:32:54.465Z</updated>
     
@@ -37,14 +37,14 @@
     </summary>
     
     
-      <category term="Data Structure" scheme="http://Luckyfuy.cf/tags/Data-Structure/"/>
+      <category term="Data Structure" scheme="http://luckyfuy.github.io/tags/Data-Structure/"/>
     
   </entry>
   
   <entry>
     <title>质数与GCD</title>
-    <link href="http://Luckyfuy.cf/2019/10/02/Prime-And-GCD/"/>
-    <id>http://Luckyfuy.cf/2019/10/02/Prime-And-GCD/</id>
+    <link href="http://luckyfuy.github.io/2019/10/02/Prime-And-GCD/"/>
+    <id>http://luckyfuy.github.io/2019/10/02/Prime-And-GCD/</id>
     <published>2019-10-02T13:40:11.000Z</published>
     <updated>2019-10-05T04:12:16.926Z</updated>
     
@@ -57,14 +57,14 @@
     </summary>
     
     
-      <category term="Mathematics" scheme="http://Luckyfuy.cf/tags/Mathematics/"/>
+      <category term="Mathematics" scheme="http://luckyfuy.github.io/tags/Mathematics/"/>
     
   </entry>
   
   <entry>
     <title>最短路</title>
-    <link href="http://Luckyfuy.cf/2019/10/01/Shortest-Path/"/>
-    <id>http://Luckyfuy.cf/2019/10/01/Shortest-Path/</id>
+    <link href="http://luckyfuy.github.io/2019/10/01/Shortest-Path/"/>
+    <id>http://luckyfuy.github.io/2019/10/01/Shortest-Path/</id>
     <published>2019-10-01T15:08:56.000Z</published>
     <updated>2019-10-02T14:01:23.258Z</updated>
     
@@ -77,14 +77,14 @@
     </summary>
     
     
-      <category term="Graph Theory" scheme="http://Luckyfuy.cf/tags/Graph-Theory/"/>
+      <category term="Graph Theory" scheme="http://luckyfuy.github.io/tags/Graph-Theory/"/>
     
   </entry>
   
   <entry>
     <title>对拍</title>
-    <link href="http://Luckyfuy.cf/2019/09/14/Check/"/>
-    <id>http://Luckyfuy.cf/2019/09/14/Check/</id>
+    <link href="http://luckyfuy.github.io/2019/09/14/Check/"/>
+    <id>http://luckyfuy.github.io/2019/09/14/Check/</id>
     <published>2019-09-14T12:06:21.000Z</published>
     <updated>2019-09-14T13:23:10.188Z</updated>
     
@@ -116,14 +116,14 @@
     </summary>
     
     
-      <category term="Others" scheme="http://Luckyfuy.cf/tags/Others/"/>
+      <category term="Others" scheme="http://luckyfuy.github.io/tags/Others/"/>
     
   </entry>
   
   <entry>
     <title>背包</title>
-    <link href="http://Luckyfuy.cf/2019/09/07/Knapsack/"/>
-    <id>http://Luckyfuy.cf/2019/09/07/Knapsack/</id>
+    <link href="http://luckyfuy.github.io/2019/09/07/Knapsack/"/>
+    <id>http://luckyfuy.github.io/2019/09/07/Knapsack/</id>
     <published>2019-09-07T06:03:00.000Z</published>
     <updated>2019-09-13T04:38:21.919Z</updated>
     
@@ -140,14 +140,14 @@
     </summary>
     
     
-      <category term="Dynamic Programming" scheme="http://Luckyfuy.cf/tags/Dynamic-Programming/"/>
+      <category term="Dynamic Programming" scheme="http://luckyfuy.github.io/tags/Dynamic-Programming/"/>
     
   </entry>
   
   <entry>
     <title>MySQL安装教程</title>
-    <link href="http://Luckyfuy.cf/2019/08/31/MySQL-Installation/"/>
-    <id>http://Luckyfuy.cf/2019/08/31/MySQL-Installation/</id>
+    <link href="http://luckyfuy.github.io/2019/08/31/MySQL-Installation/"/>
+    <id>http://luckyfuy.github.io/2019/08/31/MySQL-Installation/</id>
     <published>2019-08-31T05:02:02.000Z</published>
     <updated>2019-08-31T06:39:01.598Z</updated>
     
@@ -161,14 +161,14 @@
     </summary>
     
     
-      <category term="MySQL" scheme="http://Luckyfuy.cf/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://luckyfuy.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>位运算</title>
-    <link href="http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/"/>
-    <id>http://Luckyfuy.cf/2019/08/28/Bitwise-Operation/</id>
+    <link href="http://luckyfuy.github.io/2019/08/28/Bitwise-Operation/"/>
+    <id>http://luckyfuy.github.io/2019/08/28/Bitwise-Operation/</id>
     <published>2019-08-28T09:45:15.000Z</published>
     <updated>2019-08-31T05:16:04.084Z</updated>
     
@@ -181,14 +181,14 @@
     </summary>
     
     
-      <category term="Mathematics" scheme="http://Luckyfuy.cf/tags/Mathematics/"/>
+      <category term="Mathematics" scheme="http://luckyfuy.github.io/tags/Mathematics/"/>
     
   </entry>
   
   <entry>
     <title>最小生成树</title>
-    <link href="http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/"/>
-    <id>http://Luckyfuy.cf/2019/08/27/Minimum-Spanning-Tree/</id>
+    <link href="http://luckyfuy.github.io/2019/08/27/Minimum-Spanning-Tree/"/>
+    <id>http://luckyfuy.github.io/2019/08/27/Minimum-Spanning-Tree/</id>
     <published>2019-08-27T03:29:42.000Z</published>
     <updated>2019-10-01T15:19:03.327Z</updated>
     
@@ -202,14 +202,14 @@
     </summary>
     
     
-      <category term="Graph Theory" scheme="http://Luckyfuy.cf/tags/Graph-Theory/"/>
+      <category term="Graph Theory" scheme="http://luckyfuy.github.io/tags/Graph-Theory/"/>
     
   </entry>
   
   <entry>
     <title>Plants vs. Zombies一代</title>
-    <link href="http://Luckyfuy.cf/2019/08/27/PVZ/"/>
-    <id>http://Luckyfuy.cf/2019/08/27/PVZ/</id>
+    <link href="http://luckyfuy.github.io/2019/08/27/PVZ/"/>
+    <id>http://luckyfuy.github.io/2019/08/27/PVZ/</id>
     <published>2019-08-27T02:32:41.000Z</published>
     <updated>2019-10-02T05:58:23.819Z</updated>
     
@@ -226,14 +226,14 @@
     </summary>
     
     
-      <category term="Resources" scheme="http://Luckyfuy.cf/tags/Resources/"/>
+      <category term="Resources" scheme="http://luckyfuy.github.io/tags/Resources/"/>
     
   </entry>
   
   <entry>
     <title>Windows系统镜像</title>
-    <link href="http://Luckyfuy.cf/2019/08/27/Windows/"/>
-    <id>http://Luckyfuy.cf/2019/08/27/Windows/</id>
+    <link href="http://luckyfuy.github.io/2019/08/27/Windows/"/>
+    <id>http://luckyfuy.github.io/2019/08/27/Windows/</id>
     <published>2019-08-27T00:19:16.000Z</published>
     <updated>2019-10-02T05:58:30.394Z</updated>
     
@@ -250,14 +250,14 @@
     </summary>
     
     
-      <category term="Resources" scheme="http://Luckyfuy.cf/tags/Resources/"/>
+      <category term="Resources" scheme="http://luckyfuy.github.io/tags/Resources/"/>
     
   </entry>
   
   <entry>
     <title>拓扑排序</title>
-    <link href="http://Luckyfuy.cf/2019/08/13/Toposort/"/>
-    <id>http://Luckyfuy.cf/2019/08/13/Toposort/</id>
+    <link href="http://luckyfuy.github.io/2019/08/13/Toposort/"/>
+    <id>http://luckyfuy.github.io/2019/08/13/Toposort/</id>
     <published>2019-08-13T09:59:54.000Z</published>
     <updated>2019-09-13T12:16:00.707Z</updated>
     
@@ -277,14 +277,14 @@
     </summary>
     
     
-      <category term="Graph Theory" scheme="http://Luckyfuy.cf/tags/Graph-Theory/"/>
+      <category term="Graph Theory" scheme="http://luckyfuy.github.io/tags/Graph-Theory/"/>
     
   </entry>
   
   <entry>
     <title>链表</title>
-    <link href="http://Luckyfuy.cf/2019/07/31/Linked-List/"/>
-    <id>http://Luckyfuy.cf/2019/07/31/Linked-List/</id>
+    <link href="http://luckyfuy.github.io/2019/07/31/Linked-List/"/>
+    <id>http://luckyfuy.github.io/2019/07/31/Linked-List/</id>
     <published>2019-07-31T13:38:41.000Z</published>
     <updated>2019-08-13T10:03:00.316Z</updated>
     
@@ -299,14 +299,14 @@
     </summary>
     
     
-      <category term="Data Structure" scheme="http://Luckyfuy.cf/tags/Data-Structure/"/>
+      <category term="Data Structure" scheme="http://luckyfuy.github.io/tags/Data-Structure/"/>
     
   </entry>
   
   <entry>
     <title>堆</title>
-    <link href="http://Luckyfuy.cf/2019/07/29/Heap/"/>
-    <id>http://Luckyfuy.cf/2019/07/29/Heap/</id>
+    <link href="http://luckyfuy.github.io/2019/07/29/Heap/"/>
+    <id>http://luckyfuy.github.io/2019/07/29/Heap/</id>
     <published>2019-07-29T02:14:44.000Z</published>
     <updated>2019-08-13T10:03:05.935Z</updated>
     
@@ -325,14 +325,14 @@
     </summary>
     
     
-      <category term="Data Structure" scheme="http://Luckyfuy.cf/tags/Data-Structure/"/>
+      <category term="Data Structure" scheme="http://luckyfuy.github.io/tags/Data-Structure/"/>
     
   </entry>
   
   <entry>
     <title>发布·Minecraft基础整合</title>
-    <link href="http://Luckyfuy.cf/2019/06/29/Basic-Mod-Packs/"/>
-    <id>http://Luckyfuy.cf/2019/06/29/Basic-Mod-Packs/</id>
+    <link href="http://luckyfuy.github.io/2019/06/29/Basic-Mod-Packs/"/>
+    <id>http://luckyfuy.github.io/2019/06/29/Basic-Mod-Packs/</id>
     <published>2019-06-29T05:30:20.000Z</published>
     <updated>2019-07-02T04:20:42.083Z</updated>
     
@@ -345,14 +345,14 @@
     </summary>
     
     
-      <category term="Minecraft" scheme="http://Luckyfuy.cf/tags/Minecraft/"/>
+      <category term="Minecraft" scheme="http://luckyfuy.github.io/tags/Minecraft/"/>
     
   </entry>
   
   <entry>
     <title>推荐·实用的Chrome插件们</title>
-    <link href="http://Luckyfuy.cf/2019/06/16/Chrome-Expensions/"/>
-    <id>http://Luckyfuy.cf/2019/06/16/Chrome-Expensions/</id>
+    <link href="http://luckyfuy.github.io/2019/06/16/Chrome-Expensions/"/>
+    <id>http://luckyfuy.github.io/2019/06/16/Chrome-Expensions/</id>
     <published>2019-06-16T04:15:34.000Z</published>
     <updated>2019-08-13T09:58:58.623Z</updated>
     
@@ -366,14 +366,14 @@
     </summary>
     
     
-      <category term="Chrome" scheme="http://Luckyfuy.cf/tags/Chrome/"/>
+      <category term="Chrome" scheme="http://luckyfuy.github.io/tags/Chrome/"/>
     
   </entry>
   
   <entry>
     <title>证明$1 + 1 = 2$</title>
-    <link href="http://Luckyfuy.cf/2019/05/11/1+1=2/"/>
-    <id>http://Luckyfuy.cf/2019/05/11/1+1=2/</id>
+    <link href="http://luckyfuy.github.io/2019/05/11/1+1=2/"/>
+    <id>http://luckyfuy.github.io/2019/05/11/1+1=2/</id>
     <published>2019-05-11T07:30:14.000Z</published>
     <updated>2019-08-28T09:55:22.664Z</updated>
     
@@ -386,14 +386,14 @@
     </summary>
     
     
-      <category term="Mathematics" scheme="http://Luckyfuy.cf/tags/Mathematics/"/>
+      <category term="Mathematics" scheme="http://luckyfuy.github.io/tags/Mathematics/"/>
     
   </entry>
   
   <entry>
     <title>搬运&amp;翻译·红石电路</title>
-    <link href="http://Luckyfuy.cf/2019/04/12/Redstone-Circuits/"/>
-    <id>http://Luckyfuy.cf/2019/04/12/Redstone-Circuits/</id>
+    <link href="http://luckyfuy.github.io/2019/04/12/Redstone-Circuits/"/>
+    <id>http://luckyfuy.github.io/2019/04/12/Redstone-Circuits/</id>
     <published>2019-04-12T13:23:44.000Z</published>
     <updated>2019-05-25T03:58:27.414Z</updated>
     
@@ -408,14 +408,14 @@
     </summary>
     
     
-      <category term="Minecraft" scheme="http://Luckyfuy.cf/tags/Minecraft/"/>
+      <category term="Minecraft" scheme="http://luckyfuy.github.io/tags/Minecraft/"/>
     
   </entry>
   
   <entry>
     <title>Python基础</title>
-    <link href="http://Luckyfuy.cf/2019/03/30/Python-Fundamentals/"/>
-    <id>http://Luckyfuy.cf/2019/03/30/Python-Fundamentals/</id>
+    <link href="http://luckyfuy.github.io/2019/03/30/Python-Fundamentals/"/>
+    <id>http://luckyfuy.github.io/2019/03/30/Python-Fundamentals/</id>
     <published>2019-03-30T07:56:40.000Z</published>
     <updated>2019-08-28T01:50:30.694Z</updated>
     
@@ -428,14 +428,14 @@
     </summary>
     
     
-      <category term="Python" scheme="http://Luckyfuy.cf/tags/Python/"/>
+      <category term="Python" scheme="http://luckyfuy.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>人生苦短，我学Python</title>
-    <link href="http://Luckyfuy.cf/2019/03/22/Learning-Python/"/>
-    <id>http://Luckyfuy.cf/2019/03/22/Learning-Python/</id>
+    <link href="http://luckyfuy.github.io/2019/03/22/Learning-Python/"/>
+    <id>http://luckyfuy.github.io/2019/03/22/Learning-Python/</id>
     <published>2019-03-22T12:51:35.000Z</published>
     <updated>2019-03-24T05:25:59.853Z</updated>
     
@@ -453,14 +453,14 @@
     </summary>
     
     
-      <category term="Python" scheme="http://Luckyfuy.cf/tags/Python/"/>
+      <category term="Python" scheme="http://luckyfuy.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>冬至</title>
-    <link href="http://Luckyfuy.cf/2019/03/16/Winter-Solstice/"/>
-    <id>http://Luckyfuy.cf/2019/03/16/Winter-Solstice/</id>
+    <link href="http://luckyfuy.github.io/2019/03/16/Winter-Solstice/"/>
+    <id>http://luckyfuy.github.io/2019/03/16/Winter-Solstice/</id>
     <published>2019-03-16T06:44:40.000Z</published>
     <updated>2019-03-22T10:58:24.752Z</updated>
     
@@ -473,7 +473,7 @@
     </summary>
     
     
-      <category term="Essays" scheme="http://Luckyfuy.cf/tags/Essays/"/>
+      <category term="Essays" scheme="http://luckyfuy.github.io/tags/Essays/"/>
     
   </entry>
   
