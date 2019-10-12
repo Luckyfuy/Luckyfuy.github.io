@@ -24,13 +24,13 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/08/27/Minimum-Spanning-Tree/');
+  precacheUrls.push('/2019/08/27/Windows/');
 
   precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
-  precacheUrls.push('/2019/10/07/Sparse-Table/');
-
   precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
+
+  precacheUrls.push('/2019/10/07/Sparse-Table/');
 
   precacheUrls.push('/2019/08/31/MySQL-Installation/');
 
