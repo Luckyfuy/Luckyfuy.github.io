@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luckyfuy.top/2019/07/31/Linked-List/</loc>
+    
+    <lastmod>2019-10-18T13:54:14.016Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/2019/07/29/Heap/</loc>
+    
+    <lastmod>2019-10-18T13:53:07.413Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/2019/08/13/Toposort/</loc>
+    
+    <lastmod>2019-10-18T13:51:57.328Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/2019/08/27/Minimum-Spanning-Tree/</loc>
     
-    <lastmod>2019-10-18T13:45:05.071Z</lastmod>
+    <lastmod>2019-10-18T13:51:26.090Z</lastmod>
     
   </url>
   
@@ -107,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/2019/08/13/Toposort/</loc>
-    
-    <lastmod>2019-09-13T12:16:00.707Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luckyfuy.top/2019/09/07/Knapsack/</loc>
     
     <lastmod>2019-09-13T04:38:21.919Z</lastmod>
@@ -145,20 +159,6 @@
     <loc>https://luckyfuy.top/2019/03/30/Python-Fundamentals/</loc>
     
     <lastmod>2019-08-28T01:50:30.694Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/2019/07/29/Heap/</loc>
-    
-    <lastmod>2019-08-13T10:03:05.935Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/2019/07/31/Linked-List/</loc>
-    
-    <lastmod>2019-08-13T10:03:00.316Z</lastmod>
     
   </url>
   
