@@ -1544,10 +1544,19 @@ if(canvas.getContext){
 
 
   
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
 
-  <!--
-    <script type="text/javascript" src="/js/src/text.js"></script>
-  -->
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
 
   <style>
   .copy-btn {
@@ -1636,7 +1645,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1571407116927')
+  navigator.serviceWorker.register('/sw.js?t=1571481102513')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
