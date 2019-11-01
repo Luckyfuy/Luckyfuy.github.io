@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://luckyfuy.top/about/index.html</loc>
+    <loc>https://luckyfuy.top/2019/10/01/Shortest-Path/</loc>
     
-    <lastmod>2019-10-19T10:31:20.300Z</lastmod>
+    <lastmod>2019-11-01T10:47:17.504Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/2019/10/01/Shortest-Path/</loc>
+    <loc>https://luckyfuy.top/2019/08/27/Minimum-Spanning-Tree/</loc>
     
-    <lastmod>2019-10-18T13:57:32.183Z</lastmod>
+    <lastmod>2019-11-01T10:45:55.975Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/about/index.html</loc>
+    
+    <lastmod>2019-10-19T10:31:20.300Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://luckyfuy.top/2019/08/13/Toposort/</loc>
     
     <lastmod>2019-10-18T13:51:57.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/2019/08/27/Minimum-Spanning-Tree/</loc>
-    
-    <lastmod>2019-10-18T13:51:26.090Z</lastmod>
     
   </url>
   
