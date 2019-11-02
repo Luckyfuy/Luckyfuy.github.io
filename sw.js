@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/08/27/PVZ/');
+  precacheUrls.push('/2019/08/27/Windows/');
 
   precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/10/07/Sparse-Table/');
 
-  precacheUrls.push('/2019/10/01/Shortest-Path/');
+  precacheUrls.push('/2019/08/31/MySQL-Installation/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
