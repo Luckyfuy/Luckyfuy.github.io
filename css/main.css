@@ -493,7 +493,7 @@ pre,
 }
 pre,
 code {
-  font-family: 'Ubuntu Mono', consolas, Menlo, 'Noto Serif SC', "Noto Serif SC", sans-serif, monospace;
+  font-family: 'Ubuntu Mono', consolas, Menlo, "Noto Serif SC", monospace;
 }
 code {
   padding: 2px 4px;
@@ -1129,7 +1129,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: normal;
   font-family: 'Ubuntu', 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
@@ -1949,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff03ff;
+  background: #3d74a6;
 }
 .links-of-blogroll {
   font-size: 13px;
