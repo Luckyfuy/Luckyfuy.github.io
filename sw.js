@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/08/13/Toposort/');
+  precacheUrls.push('/2019/08/28/Bitwise-Operation/');
 
   precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
-  precacheUrls.push('/2019/10/07/Sparse-Table/');
+  precacheUrls.push('/2019/11/03/PIP-Mirror/');
 
   precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
 
-  precacheUrls.push('/2019/11/03/PIP-Mirror/');
+  precacheUrls.push('/2019/10/07/Sparse-Table/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
