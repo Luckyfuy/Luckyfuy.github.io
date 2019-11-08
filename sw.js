@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/09/14/Check/');
+  precacheUrls.push('/2019/08/27/Windows/');
 
   precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
-  precacheUrls.push('/2019/10/07/Sparse-Table/');
-
-  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
+  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
 
   precacheUrls.push('/2019/11/03/PIP-Mirror/');
+
+  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
