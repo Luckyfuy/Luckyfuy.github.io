@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[PIP更换国内镜像源]]></title>
     <url>%2F2019%2F11%2F03%2FPIP-Mirror%2F</url>
-    <content type="text"><![CDATA[前言PIP默认使用的是国外的源，因此在国内下载速度会比较慢。为了提高下载速度，我们可以更换成国内一些服务商提供的镜像源。 源国内常用的有以下源： 清华大学：https://pypi.tuna.tsinghua.edu.cn/simple 阿里云：https://mirrors.aliyun.com/pypi/simple/ 豆瓣：https://pypi.douban.com/simple/ 中国科技大学：https://pypi.mirrors.ustc.edu.cn/simple/ 中国科学技术大学：https://pypi.mirrors.ustc.edu.cn/simple/ 网易：https://mirrors.163.com/pypi/simple/ 临时修改如果只是临时使用镜像源下载，只需在pip命令后加上-i参数：1pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple 永久修改对于Windows系统，可以在C:\Users\username\目录下建立pip文件夹，然后在里面新建pip.ini文件，写入以下内容：123[global]index-url = https://pypi.tuna.tsinghua.edu.cn/simpletrusted-host = pypi.tuna.tsinghua.edu.cn]]></content>
+    <content type="text"><![CDATA[前言PIP默认使用的是国外的源，因此在国内下载速度会比较慢。为了提高下载速度，我们可以更换成国内一些服务商提供的镜像源。 源国内常用的有以下源： 清华大学：https://pypi.tuna.tsinghua.edu.cn/simple/ 阿里云：https://mirrors.aliyun.com/pypi/simple/ 豆瓣：https://pypi.douban.com/simple/ 中国科技大学：https://pypi.mirrors.ustc.edu.cn/simple/ 中国科学技术大学：https://pypi.mirrors.ustc.edu.cn/simple/ 网易：https://mirrors.163.com/pypi/simple/ 临时修改如果只是临时使用镜像源下载，只需在pip命令后加上-i参数：1pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple/ 永久修改对于Windows系统，可以在C:\Users\username\目录下建立pip文件夹，然后在里面新建pip.ini文件，写入以下内容：123[global]index-url = https://pypi.tuna.tsinghua.edu.cn/simple/trusted-host = pypi.tuna.tsinghua.edu.cn]]></content>
       <tags>
         <tag>Python</tag>
       </tags>

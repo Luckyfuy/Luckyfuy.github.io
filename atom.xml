@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luckyfuy.top/"/>
-  <updated>2019-11-03T06:19:54.148Z</updated>
+  <updated>2019-11-08T11:56:57.728Z</updated>
   <id>https://luckyfuy.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://luckyfuy.top/2019/11/03/PIP-Mirror/"/>
     <id>https://luckyfuy.top/2019/11/03/PIP-Mirror/</id>
     <published>2019-11-03T05:52:20.000Z</published>
-    <updated>2019-11-03T06:19:54.148Z</updated>
+    <updated>2019-11-08T11:56:57.728Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>PIP默认使用的是国外的源，因此在国内下载速度会比较慢。<br>为了提高下载速度，我们可以更换成国内一些服务商提供的镜像源。</p><a id="more"></a><h1 id="源"><a href="#源" class="headerlink" title="源"></a>源</h1><p>国内常用的有以下源：</p><ul><li>清华大学：<code>https://pypi.tuna.tsinghua.edu.cn/simple</code></li><li>阿里云：<code>https://mirrors.aliyun.com/pypi/simple/</code></li><li>豆瓣：<code>https://pypi.douban.com/simple/</code></li><li>中国科技大学：<code>https://pypi.mirrors.ustc.edu.cn/simple/</code></li><li>中国科学技术大学：<code>https://pypi.mirrors.ustc.edu.cn/simple/</code></li><li>网易：<code>https://mirrors.163.com/pypi/simple/</code></li></ul><h1 id="临时修改"><a href="#临时修改" class="headerlink" title="临时修改"></a>临时修改</h1><p>如果只是临时使用镜像源下载，只需在<code>pip</code>命令后加上<code>-i</code>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></p><h1 id="永久修改"><a href="#永久修改" class="headerlink" title="永久修改"></a>永久修改</h1><p>对于Windows系统，可以在<code>C:\Users\username\</code>目录下建立<code>pip</code>文件夹，然后在里面新建<code>pip.ini</code>文件，写入以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>PIP默认使用的是国外的源，因此在国内下载速度会比较慢。<br>为了提高下载速度，我们可以更换成国内一些服务商提供的镜像源。</p><a id="more"></a><h1 id="源"><a href="#源" class="headerlink" title="源"></a>源</h1><p>国内常用的有以下源：</p><ul><li>清华大学：<code>https://pypi.tuna.tsinghua.edu.cn/simple/</code></li><li>阿里云：<code>https://mirrors.aliyun.com/pypi/simple/</code></li><li>豆瓣：<code>https://pypi.douban.com/simple/</code></li><li>中国科技大学：<code>https://pypi.mirrors.ustc.edu.cn/simple/</code></li><li>中国科学技术大学：<code>https://pypi.mirrors.ustc.edu.cn/simple/</code></li><li>网易：<code>https://mirrors.163.com/pypi/simple/</code></li></ul><h1 id="临时修改"><a href="#临时修改" class="headerlink" title="临时修改"></a>临时修改</h1><p>如果只是临时使用镜像源下载，只需在<code>pip</code>命令后加上<code>-i</code>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure></p><h1 id="永久修改"><a href="#永久修改" class="headerlink" title="永久修改"></a>永久修改</h1><p>对于Windows系统，可以在<code>C:\Users\username\</code>目录下建立<code>pip</code>文件夹，然后在里面新建<code>pip.ini</code>文件，写入以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple/</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
