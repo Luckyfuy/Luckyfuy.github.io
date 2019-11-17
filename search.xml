@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CSP-J 2019学车中学游记]]></title>
+    <url>%2F2019%2F11%2F17%2FCSP-J-2019-Trip%2F</url>
+    <content type="text"><![CDATA[蒟蒻爆零记 Day1嗯……上午要上课，一上完课就坐车到了文渊中学，幸好我上课的地方就在钱塘江对面的钱江新城，十几分钟就到了。到的时候还早，才十二点多，于是在钱江世纪城转了转。 不得不说，学车真的有钱，文渊中学造得如此豪华，我HFLS弱校实在是破烂不堪（毕竟民办有钱）。 下午13:30开始可以进场了，大概等了半小时进考场。不愧是学 车 中 学，放在地下车库考试（OI已经沦落为地下竞赛2333）： CSP-J/S第二轮认证（×）科目二（√） T1T1还是很水的，半分钟就能写出来。 T2T2似乎就是一道大模拟，一开始写出来最坏$O(n^2)$的，第3个大数据要差不多2秒。后面想到可以不用从1开始枚举，只要枚举前45分钟的就够了，因此复杂度是$O(nk), k \le 45$。 T3考场上真的没看出来这道题是完全背包，所以用贪心做了……前2个样例是过了，但是最后一个大样例明显不对，估计一半分都拿不到了吧…… USACO有原题，不过题做得少也没办法。 T4T4我感觉比T3水一点（虽然仍然没过），所以我先写的T4。一开始我的想法是队列，然而大样例超了几百毫秒QAQ。正解似乎是最短路，求$a$号点是否可以走长度为$b$的路径到$1$号点。 如此看来，在强省ZJ我说不定3=都混不到。总之，AFO。]]></content>
+      <tags>
+        <tag>Trip</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[整理·Windows快捷键]]></title>
     <url>%2F2019%2F11%2F08%2FWindows-Shortcut-Keys%2F</url>
     <content type="text"><![CDATA[注释以下快捷键均可以在Windows 10中正常使用，其中大部分可在大多数程序中正常使用。 Win键相关 Win+E：打开资源管理器 Win+D：显示桌面 Win+L：锁定电脑 Win+R：打开运行 Win+I：打开设置 Win+P：打开投影 Win+W：打开Windows Ink工作区 Win+G：打开游戏录制工具 Win+A：打开操作中心 Win+Q/S：打开Cortana Win+M：最小化所有窗口 Win+X：打开开始按钮右键菜单 Win+Tab：显示多窗口/多桌面 Win+Space：切换输入法 Win+Num：打开/切换任务栏中对应程序 Win+ +/-：放大/缩小 Win+↑/↓：窗口最大化/最小化 Win+←/→：窗口停靠左/右侧 Win+Ctrl+D：新建桌面 Win+Ctrl+←/→：切换桌面 Win+Ctrl+O：打开虚拟键盘 Ctrl键相关 Ctrl+C：复制 Ctrl+X：剪切 Ctrl+V：粘贴 Ctrl+A：全选 Ctrl+Z：撤销 Ctrl+Y：重做 Ctrl+N：新建 Ctrl+O：打开 Ctrl+S：保存 Ctrl+F：查找 Ctrl+H：替换 Ctrl+G：定位 Ctrl+W：关闭当前程序的当前窗口 Ctrl+Tab：切换当前程序的窗口 Ctrl+Home：定位到文档首 Ctrl+End：定位到文档末 Ctrl+Shift+N：新建文件夹 Ctrl+Shift+Esc：打开任务管理器 Ctrl+Alt+Del：打开安全窗口 Ctrl+拖拽文件：复制该文件 Shift键相关 Shift+Del：直接删除文件 Shift+↑/↓/←/→：选择 Shift+任务栏图标：新建该窗口 Shift+Home：选中到行首 Shift+End：选中到行末 Shift+PgUp/Dn：选中全页 Alt键相关 Alt+Tab：切换窗口 Alt+Esc：在没有最小化的窗口直接切换 Alt+双击文件/Enter：查看该文件属性 Alt+F4：关闭当前窗口/关机 Alt+↑：打开上一级界面 Alt+←/→：打开上/下一次界面 其它功能键 F1：显示帮助 F2：重命名 F3：查找 F5：刷新 F6：定位到浏览器地址栏 F11：全屏 F12：打开浏览器开发者工具 Home：定位到行首 End：定位到行末 Ins：切换到插入/覆盖模式 PgUp/Dn：向上/下翻页]]></content>
