@@ -144,18 +144,18 @@
 
 
 
-<meta name="description" content="前言MkDocs是一个开源的静态站点生成器，支持Markdown，适合发布文档。而MkDocs Material基于Material设计风格，更加简洁美观，例如OI Wiki就是基于MkDocs Material搭建的。源代码可以在GitHub上查看。 安装MkDocs作为Python模块发布到了PyPI，因此可以通过Python包管理器pip安装：12pip install mkdocspip">
+<meta name="description" content="前言MkDocs是一个开源的静态站点生成器，支持Markdown，适合发布文档。而MkDocs Material基于Material设计风格，更加简洁美观，例如OI Wiki就是基于MkDocs Material搭建的。源代码可以在GitHub上查看。">
 <meta name="keywords" content="MkDocs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建MkDocs Material">
 <meta property="og:url" content="https://luckyfuy.top/2019/11/30/Build-MkDocs-Material/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="前言MkDocs是一个开源的静态站点生成器，支持Markdown，适合发布文档。而MkDocs Material基于Material设计风格，更加简洁美观，例如OI Wiki就是基于MkDocs Material搭建的。源代码可以在GitHub上查看。 安装MkDocs作为Python模块发布到了PyPI，因此可以通过Python包管理器pip安装：12pip install mkdocspip">
+<meta property="og:description" content="前言MkDocs是一个开源的静态站点生成器，支持Markdown，适合发布文档。而MkDocs Material基于Material设计风格，更加简洁美观，例如OI Wiki就是基于MkDocs Material搭建的。源代码可以在GitHub上查看。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-30T06:27:29.973Z">
+<meta property="og:updated_time" content="2019-11-30T08:11:05.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建MkDocs Material">
-<meta name="twitter:description" content="前言MkDocs是一个开源的静态站点生成器，支持Markdown，适合发布文档。而MkDocs Material基于Material设计风格，更加简洁美观，例如OI Wiki就是基于MkDocs Material搭建的。源代码可以在GitHub上查看。 安装MkDocs作为Python模块发布到了PyPI，因此可以通过Python包管理器pip安装：12pip install mkdocspip">
+<meta name="twitter:description" content="前言MkDocs是一个开源的静态站点生成器，支持Markdown，适合发布文档。而MkDocs Material基于Material设计风格，更加简洁美观，例如OI Wiki就是基于MkDocs Material搭建的。源代码可以在GitHub上查看。">
 
 
 
@@ -294,6 +294,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-meta">
+          <a href="/meta/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-circle"></i> <br>
+            
+            元
           </a>
         </li>
       
@@ -464,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  114
+                  490
                 </span>
               
 
@@ -480,7 +490,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -502,9 +512,23 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://www.mkdocs.org/" title="MkDocs" target="_blank" rel="noopener">MkDocs</a>是一个<a href="https://github.com/mkdocs/mkdocs" title="mkdocs" target="_blank" rel="noopener">开源</a>的静态站点生成器，支持Markdown，适合发布文档。<br>而<a href="https://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs" target="_blank" rel="noopener">MkDocs Material</a>基于Material设计风格，更加简洁美观，例如<a href="https://oi-wiki.org/" title="OI Wiki" target="_blank" rel="noopener">OI Wiki</a>就是基于MkDocs Material搭建的。<br>源代码可以在<a href="https://github.com/squidfunk/mkdocs-material" title="mkdocs-material" target="_blank" rel="noopener">GitHub</a>上查看。</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>MkDocs作为Python模块发布到了PyPI，因此可以通过Python包管理器pip安装：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install mkdocs</span><br><span class="line">pip install mkdocs-material</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>MkDocs作为Python模块发布到了PyPI，因此可以通过Python包管理器pip安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install mkdocs</span><br><span class="line">pip install mkdocs-material</span><br></pre></td></tr></table></figure></p>
 <p>如果下载缓慢，可以参考之前的<a href="/2019/11/03/PIP-Mirror/" title="PIP更换国内镜像源">文章</a>更换下载源。</p>
-<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1>
+<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdocs new new-project</span><br></pre></td></tr></table></figure></p>
+<p>生成<code>new-project</code>目录并初始化，其中<code>mkdocs.yml</code>是配置文件。</p>
+<p>进入目录，执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdocs serve</span><br></pre></td></tr></table></figure></p>
+<p>即可在<code>http://127.0.0.1:8000/</code>中预览。<br>按Ctrl+C结束预览。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在<code>mkdocs.yml</code>中，添加以下内容：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">material</span></span><br></pre></td></tr></table></figure></p>
+<p>MkDocs就更换到了Material主题。</p>
+<p>主题还可以进一步配置：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">material</span></span><br><span class="line"><span class="attr">  language:</span> <span class="string">zh</span> <span class="comment"># 语言，默认为en</span></span><br><span class="line"><span class="attr">  feature:</span></span><br><span class="line"><span class="attr">    tabs:</span> <span class="literal">true</span> <span class="comment"># 显示顶部导航栏</span></span><br><span class="line"><span class="attr">  palette:</span> <span class="comment"># 颜色</span></span><br><span class="line"><span class="attr">    primary:</span> <span class="string">indigo</span> <span class="comment"># 主色</span></span><br><span class="line"><span class="attr">    accent:</span> <span class="string">indigo</span> <span class="comment"># 辅助色</span></span><br><span class="line"><span class="attr">  font:</span> <span class="comment"># 字体</span></span><br><span class="line"><span class="attr">    text:</span> <span class="string">Ubuntu</span> <span class="comment"># 正文，默认为Roboto</span></span><br><span class="line"><span class="attr">    code:</span> <span class="string">Ubuntu</span> <span class="string">Mono</span> <span class="comment"># 代码，默认为Roboto Mono</span></span><br><span class="line"><span class="attr">  favicon:</span> <span class="string">/images/favicon.ico</span> <span class="comment"># 网页图标</span></span><br><span class="line"><span class="attr">  logo:</span> <span class="string">/images/icon.png</span> <span class="comment"># 顶端图标</span></span><br></pre></td></tr></table></figure></p>
+<p>注意，资源文件如<code>/images/</code>文件夹应放在<code>/docs/</code>内。</p>
+<p>为了支持更多的Markdown语法，可以开启以下扩展：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown_extensions:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">markdown.extensions.admonition</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">markdown.extensions.codehilite:</span></span><br><span class="line"><span class="attr">      guess_lang:</span> <span class="literal">false</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">markdown.extensions.def_list</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">markdown.extensions.footnotes</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">markdown.extensions.meta</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">markdown.extensions.toc:</span></span><br><span class="line"><span class="attr">      permalink:</span> <span class="literal">true</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.arithmatex</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.betterem:</span></span><br><span class="line"><span class="attr">      smart_enable:</span> <span class="string">all</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.caret</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.critic</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.details</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.emoji:</span></span><br><span class="line"><span class="attr">      emoji_index:</span> <span class="type">!!python</span><span class="string">/name:pymdownx.emoji.twemoji</span></span><br><span class="line"><span class="attr">      emoji_generator:</span> <span class="type">!!python</span><span class="string">/name:pymdownx.emoji.to_svg</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.inlinehilite</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.keys</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.magiclink:</span></span><br><span class="line"><span class="attr">      repo_url_shorthand:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">      user:</span> <span class="string">squidfunk</span></span><br><span class="line"><span class="attr">      repo:</span> <span class="string">mkdocs-material</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.mark</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.smartsymbols</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.superfences</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.tasklist:</span></span><br><span class="line"><span class="attr">      custom_checkbox:</span> <span class="literal">true</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">pymdownx.tilde</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>基本配置完了之后，可以在<code>mkdocs.yml</code>下添加目录：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nav:</span></span><br><span class="line"><span class="attr">  - Introduction:</span> <span class="string">index.md</span></span><br><span class="line"><span class="attr">  - Install:</span></span><br><span class="line"><span class="attr">    - Windows:</span> <span class="string">install/windows.md</span></span><br><span class="line"><span class="attr">    - Linux:</span> <span class="string">install/linux.md</span></span><br><span class="line"><span class="attr">    - macOS:</span> <span class="string">install/macos.md</span></span><br></pre></td></tr></table></figure></p>
+<p>这是一个简单的例子。<br>必须要有<code>index.md</code>。<br><code>windows.md</code>放在<code>new-project/docs/install/</code>中，以此类推。</p>
+<h2 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h2><p>执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdocs bubild</span><br></pre></td></tr></table></figure></p>
+<p>后会生成<code>/site/</code>目录，其中有站点的静态文件。<br>将这些静态文件全部复制到你的站点中即可。</p>
+
       
     </div>
     
@@ -1066,7 +1090,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建"><span class="nav-number">3.</span> <span class="nav-text">搭建</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建"><span class="nav-number">3.</span> <span class="nav-text">搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-number">3.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">3.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">3.3.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成"><span class="nav-number">3.4.</span> <span class="nav-text">生成</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1149,7 +1173,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共24k字</span>
+  <span class="post-count">全站共24.4k字</span>
 </div>
         
 
@@ -1828,7 +1852,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1575095278273')
+  navigator.serviceWorker.register('/sw.js?t=1575102315380')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

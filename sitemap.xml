@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luckyfuy.top/about/index.html</loc>
+    
+    <lastmod>2019-11-30T08:21:38.480Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/2019/11/30/Build-MkDocs-Material/</loc>
     
-    <lastmod>2019-11-30T06:27:29.973Z</lastmod>
+    <lastmod>2019-11-30T08:11:05.641Z</lastmod>
     
   </url>
   
@@ -89,13 +96,6 @@
     <loc>https://luckyfuy.top/2019/09/14/Check/</loc>
     
     <lastmod>2019-11-02T11:09:04.866Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/about/index.html</loc>
-    
-    <lastmod>2019-11-02T03:39:26.448Z</lastmod>
     
   </url>
   
