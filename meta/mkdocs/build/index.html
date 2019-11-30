@@ -508,6 +508,21 @@ pip install mkdocs-material
   name: material
 </pre></div>
 MkDocs就更换到了Material主题。</p>
+<p>主题还可以进一步配置：
+<div class="codehilite"><pre><span></span>theme:
+  name: material
+  language: zh # 语言，默认为en
+  feature:
+    tabs: true # 显示顶部导航栏
+  palette: # 颜色
+    primary: indigo # 主色
+    accent: indigo # 辅助色
+  font: # 字体
+    text: Ubuntu # 正文，默认为Roboto
+    code: Ubuntu Mono # 代码，默认为Roboto Mono
+  favicon: /images/favicon.ico # 网页图标
+  logo: /images/icon.png # 顶端图标
+</pre></div></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>资源文件如<code>/images/</code>文件夹应放在<code>/docs/</code>内。</p>

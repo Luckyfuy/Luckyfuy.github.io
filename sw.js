@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/09/07/Knapsack/');
+  precacheUrls.push('/2019/09/14/Check/');
 
   precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
