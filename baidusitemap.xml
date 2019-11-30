@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://luckyfuy.top/2019/11/30/Build-MkDocs-Material/</loc>
+    <lastmod>2019-11-30</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/03/22/Learn-Python/</loc>
+    <lastmod>2019-11-30</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/03/09/Build-Blog/</loc>
+    <lastmod>2019-11-30</lastmod>
+  </url>  <url>
     <loc>https://luckyfuy.top/2019/11/24/Proofs-in-Triangle/</loc>
     <lastmod>2019-11-24</lastmod>
   </url>  <url>
@@ -73,13 +82,7 @@
     <loc>https://luckyfuy.top/2019/06/29/Basic-Mod-Packs/</loc>
     <lastmod>2019-07-02</lastmod>
   </url>  <url>
-    <loc>https://luckyfuy.top/2019/03/22/Learning-Python/</loc>
-    <lastmod>2019-03-24</lastmod>
-  </url>  <url>
     <loc>https://luckyfuy.top/2019/03/16/Winter-Solstice/</loc>
-    <lastmod>2019-03-22</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2019/03/09/Building-Blog/</loc>
     <lastmod>2019-03-22</lastmod>
   </url>
 </urlset>

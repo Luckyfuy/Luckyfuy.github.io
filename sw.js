@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/10/01/Shortest-Path/');
+  precacheUrls.push('/2019/09/07/Knapsack/');
 
   precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/11/03/PIP-Mirror/');
 
-  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
+  precacheUrls.push('/2019/11/30/Build-MkDocs-Material/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
