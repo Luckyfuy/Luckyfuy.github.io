@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="输入与输出print()Python使用print()函数来输出信息，例如print(&amp;#39;Samuel AK IOI&amp;#39;)会输出Samuel AK IOI。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T01:50:30.694Z">
+<meta property="og:updated_time" content="2019-12-07T14:15:44.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础">
 <meta name="twitter:description" content="输入与输出print()Python使用print()函数来输出信息，例如print(&amp;#39;Samuel AK IOI&amp;#39;)会输出Samuel AK IOI。">
@@ -474,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k
+                  2.5k
                 </span>
               
 
@@ -490,7 +490,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  10
                 </span>
               
             </div>
@@ -513,12 +513,12 @@
       
         <h1 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h1><h2 id="print"><a href="#print" class="headerlink" title="print()"></a>print()</h2><p>Python使用<code>print()</code>函数来输出信息，例如<code>print(&#39;Samuel AK IOI&#39;)</code>会输出<code>Samuel AK IOI</code>。</p>
 <a id="more"></a>
-<p><strong><code>print()</code>函数接受多个参数，每个参数之间默认会以空格隔开</strong>：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Today'</span>, <span class="string">'is'</span>, <span class="string">'Saturday'</span>)</span><br><span class="line">Today <span class="keyword">is</span> Saturday</span><br></pre></td></tr></table></figure></p>
-<p>如果不想要默认的空格，<strong>可以通过修改<code>sep</code>参数来实现参数间的分隔内容</strong>：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Luckyfuy'</span>, <span class="string">'Summer_Light'</span>, <span class="string">'Yummy'</span>, <span class="string">'FZYFZY'</span>, sep=<span class="string">'|---|'</span>)</span><br><span class="line">Luckyfuy|---|Summer_Light|---|Yummy|---|FZYFZY</span><br></pre></td></tr></table></figure></p>
-<p>同时，<code>print()</code>函数在末尾会自动输出一个换行符<code>\n</code>，因此，<strong>我们可以通过修改<code>end</code>参数来修改末尾输出的内容</strong>：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK?</span><br><span class="line">Are you OK?</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>, end=<span class="string">' '</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK? Are you OK?</span><br></pre></td></tr></table></figure></p>
-<p>在上面的例子中我们用到了分号<code>;</code>。<strong><code>;</code>可以用于分隔多个Python语句，达到在一行中运行多句代码的作用。</strong></p>
-<h2 id="input"><a href="#input" class="headerlink" title="input()"></a>input()</h2><p><strong>输入是通过函数<code>input()</code>来实现的。<code>input()</code>会返回用户输入的内容，其类型为字符串。<code>input()</code>有一个可选参数，用于输出提示信息。</strong>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(input())</span><br><span class="line">kkksc03</span><br><span class="line">kkksc03</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello'</span>, input(<span class="string">'Enter your name: '</span>))</span><br><span class="line">Enter your name: Luckyfuy</span><br><span class="line">Hello Luckyfuy</span><br></pre></td></tr></table></figure></p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>编译时，编译器会自动跳过注释。因此，注释不是给机器看的，而是给人看的。在代码中写上注释是一个良好的习惯，这样一来自己看得懂，其他人也能明白你的意图。同时，注释可以把<br>Python中的注释不是和大多数语言一样，使用<code>//</code>或<code>/**/</code>的。在Python中，<strong><code>#</code>号表示单行注释，三引号<code>&#39;&#39;&#39;</code>或<code>&quot;&quot;&quot;</code>表示多行注释。</strong>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一段注释</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Python编译器会跳过这一大段文字</span></span><br><span class="line"><span class="string">直接去运行下面的代码</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">print(<span class="string">'kkksc03 is stupid'</span>) <span class="comment"># 这段代码会被执行</span></span><br><span class="line"><span class="comment"># 而下面这段代码则不会被执行</span></span><br><span class="line"><span class="comment"># print('Samuel AK IOI')</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">233</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure></p>
+<p><code>print()</code>函数接受多个参数，每个参数之间默认会以空格隔开：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Today'</span>, <span class="string">'is'</span>, <span class="string">'Saturday'</span>)</span><br><span class="line">Today <span class="keyword">is</span> Saturday</span><br></pre></td></tr></table></figure></p>
+<p>如果不想要默认的空格，可以通过修改<code>sep</code>参数来实现参数间的分隔内容：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Luckyfuy'</span>, <span class="string">'Summer_Light'</span>, <span class="string">'Yummy'</span>, <span class="string">'FZYFZY'</span>, sep=<span class="string">'|---|'</span>)</span><br><span class="line">Luckyfuy|---|Summer_Light|---|Yummy|---|FZYFZY</span><br></pre></td></tr></table></figure></p>
+<p>同时，<code>print()</code>函数在末尾会自动输出一个换行符<code>\n</code>，因此，我们可以通过修改<code>end</code>参数来修改末尾输出的内容：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK?</span><br><span class="line">Are you OK?</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Are you OK?'</span>, end=<span class="string">' '</span>); print(<span class="string">'Are you OK?'</span>)</span><br><span class="line">Are you OK? Are you OK?</span><br></pre></td></tr></table></figure></p>
+<p>在上面的例子中我们用到了分号<code>;</code>。<br><code>;</code>可以用于分隔多个Python语句，达到在一行中运行多句代码的作用。</p>
+<h2 id="input"><a href="#input" class="headerlink" title="input()"></a>input()</h2><p>输入是通过函数<code>input()</code>来实现的。<code>input()</code>会返回用户输入的内容，其类型为字符串。<code>input()</code>有一个可选参数，用于输出提示信息。<br>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(input())</span><br><span class="line">kkksc03</span><br><span class="line">kkksc03</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello'</span>, input(<span class="string">'Enter your name: '</span>))</span><br><span class="line">Enter your name: Luckyfuy</span><br><span class="line">Hello Luckyfuy</span><br></pre></td></tr></table></figure></p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>编译时，编译器会自动跳过注释。因此，注释不是给机器看的，而是给人看的。在代码中写上注释是一个良好的习惯，这样一来自己看得懂，其他人也能明白你的意图。<br>Python中的注释不是和大多数语言一样，使用<code>//</code>或<code>/**/</code>的。在Python中，<code>#</code>号表示单行注释，三引号<code>&#39;&#39;&#39;</code>或<code>&quot;&quot;&quot;</code>表示多行注释。<br>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一段注释</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Python编译器会跳过这一大段文字</span></span><br><span class="line"><span class="string">直接去运行下面的代码</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">print(<span class="string">'kkksc03 is stupid'</span>) <span class="comment"># 这段代码会被执行</span></span><br><span class="line"><span class="comment"># 而下面这段代码则不会被执行</span></span><br><span class="line"><span class="comment"># print('Samuel AK IOI')</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">233</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>Python中有六个标准数据类型：</p>
 <ul>
 <li>数字（Number）</li>
@@ -661,13 +661,14 @@
 </table>
 </div>
 <p>注：负的移位数会引发<code>ValueError</code>。</p>
-<h4 id="布尔值（Bool）"><a href="#布尔值（Bool）" class="headerlink" title="布尔值（Bool）"></a>布尔值（Bool）</h4><p>布尔值包括两个值：真值<code>True</code>和假值<code>False</code>。<br><code>True</code>和<code>False</code>也可以被视为<code>1</code>和<code>0</code>进行数学运算。</p>
+<h4 id="布尔值（Bool）"><a href="#布尔值（Bool）" class="headerlink" title="布尔值（Bool）"></a>布尔值（Bool）</h4><p>布尔值包括两个值：真值<code>True</code>和假值<code>False</code>。<br><code>True</code>和<code>False</code>也可以被视为<code>1</code>和<code>0</code>进行数学运算，但不建议这样使用。</p>
 <p>以下内置对象被视为假值：</p>
 <ul>
 <li>被定义为假值的常量：<code>None</code>和<code>False</code></li>
 <li>任何数值类型的零：<code>0</code>、<code>0.0</code>、<code>0j</code></li>
-<li>空的序列和多项集：<code>&#39;&#39;</code>、<code>()</code>、<code>[]</code>、<code>{}</code>、<code>set()</code>、<code>range(0)</code><br>其余均视为真值。</li>
+<li>空的序列和多项集：<code>&#39;&#39;</code>、<code>()</code>、<code>[]</code>、<code>{}</code>、<code>set()</code>、<code>range(0)</code></li>
 </ul>
+<p>其余均视为真值。</p>
 <p>布尔运算有三种：<code>and</code>、<code>or</code>、<code>not</code>，分别对应与、或、非。<br>以下布尔运算按优先级升序排列：</p>
 <div class="table-container">
 <table>
@@ -741,7 +742,61 @@
 <p>除了不同数字类型外，不同类型比较必定不相等。<br>当两个对象无法被比较时，会引发<code>TypeError</code>。（例如比较复数与另一个内置数字类型）</p>
 <p><code>is</code>和<code>is not</code>用于检测对象的标识号，当且仅当<code>x</code>和<code>y</code>是同一对象时<code>x is y</code>返回真，<code>is not</code>则相反。<br>这两种运算无法自定义，且可以应用于任意两个对象之间并不引发异常。</p>
 <p>另外还有<code>in</code>和<code>not in</code>两种具有相同优先级的运算，它们用于成员检测。若<code>x</code>是<code>s</code>的成员，则<code>x in s</code>返回真，<code>not in</code>与其相反。<br>对于字符串和字节串类型来说，当且仅当<code>x</code>是<code>y</code>的子串时<code>x in y</code>为<code>True</code>，它等价于<code>y.find(x) != -1</code>。空字符串<code>&#39;&#39;</code>是所有字符串的子串。</p>
-<h3 id="浮点数（Float）"><a href="#浮点数（Float）" class="headerlink" title="浮点数（Float）"></a>浮点数（Float）</h3><h3 id="复数（Complex）"><a href="#复数（Complex）" class="headerlink" title="复数（Complex）"></a>复数（Complex）</h3><h2 id="字符串（String）"><a href="#字符串（String）" class="headerlink" title="字符串（String）"></a>字符串（String）</h2><h2 id="列表（List）"><a href="#列表（List）" class="headerlink" title="列表（List）"></a>列表（List）</h2><h2 id="元组（Tuple）"><a href="#元组（Tuple）" class="headerlink" title="元组（Tuple）"></a>元组（Tuple）</h2><h2 id="集合（Set）"><a href="#集合（Set）" class="headerlink" title="集合（Set）"></a>集合（Set）</h2><h2 id="字典（Dictionary）"><a href="#字典（Dictionary）" class="headerlink" title="字典（Dictionary）"></a>字典（Dictionary）</h2><h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2>
+<h3 id="浮点数（Float）"><a href="#浮点数（Float）" class="headerlink" title="浮点数（Float）"></a>浮点数（Float）</h3><p>浮点数即小数，例如<code>3.14</code>、<code>78.06</code>、<code>-32.5</code>等。<br>浮点数也可以用科学计数法表示，如$1.23 \times 10^{5}$可以用<code>1.23e5</code>表示，$4 \times 10^{-8}$可以用<code>4e-8</code>表示。</p>
+<h3 id="复数（Complex）"><a href="#复数（Complex）" class="headerlink" title="复数（Complex）"></a>复数（Complex）</h3><p>复数包含实部和虚部，各用一个浮点数来表示。<br>一个复数<code>c</code>的实部和虚部可以分别用<code>c.real</code>和<code>c.imag</code>表示。</p>
+<h2 id="字符串（String）"><a href="#字符串（String）" class="headerlink" title="字符串（String）"></a>字符串（String）</h2><p>Python中使用str对象即字符串来处理文本。<br>字符串字面值有以下三种表示方法：</p>
+<ul>
+<li>单引号<code>&#39;</code>：<code>&#39;允许包含&quot;双&quot;引号&#39;</code></li>
+<li>双引号<code>&quot;</code>：<code>&quot;允许包含&#39;单&#39;引号&quot;</code></li>
+<li>三重引号：<code>&#39;&#39;&#39;三重单引号&#39;&#39;&#39;</code>、<code>&quot;&quot;&quot;三重双引号&quot;&quot;&quot;</code></li>
+</ul>
+<p>其中三重引号内允许换行，如以下字符串<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''wa</span></span><br><span class="line"><span class="string">WA</span></span><br><span class="line"><span class="string">Wa</span></span><br><span class="line"><span class="string">wA'''</span></span><br></pre></td></tr></table></figure></p>
+<p>内所有字符都包含在该字符串字面值当中，包括空白字符。</p>
+<p>如果要表示同种引号，可以使用转义字符<code>\</code>：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I\'m OK'</span></span><br><span class="line"><span class="string">"I'm OK"</span></span><br></pre></td></tr></table></figure></p>
+<p>很多字符都需要<code>\</code>进行转义，如<code>\n</code>换行、<code>\t</code>制表符等，<code>\</code>本身也需要转义：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'A\nB'</span>)</span><br><span class="line">A</span><br><span class="line">B</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'A\tB'</span>)</span><br><span class="line">A       B</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'A\\B'</span>)</span><br><span class="line">A\B</span><br></pre></td></tr></table></figure></p>
+<p>如果字符串中有很多需要转义的字符，可以通过字符串前缀<code>r</code>来禁用字符串内的转义：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'\\\n\\'</span>)</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">r'\\\n\\'</span>)</span><br><span class="line">\\\n\\</span><br></pre></td></tr></table></figure></p>
+<p><code>str(object)</code>函数可以把<code>object</code>转化为字符串，如果<code>object</code>为空，那么会返回空字符串<code>&#39;&#39;</code>：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(<span class="number">1</span>)</span><br><span class="line"><span class="string">'1'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(<span class="keyword">True</span>)</span><br><span class="line"><span class="string">'True'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(<span class="number">5e-3j</span>)</span><br><span class="line"><span class="string">'0.005j'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str()</span><br><span class="line"><span class="string">''</span></span><br></pre></td></tr></table></figure></p>
+<p>字符串格式化类似于C，使用<code>%</code>运算符。<br>字符串中<code>%</code>后接转换类型，而在字符串后须跟一个<code>%</code>以及与字符串中的<code>%</code>等数量的值。<br>例如：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I saw %d birds.'</span> % <span class="number">7</span></span><br><span class="line"><span class="string">'I saw 7 birds.'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I saw %d birds and %d dogs.'</span> % (<span class="number">10</span>, <span class="number">2</span>)</span><br><span class="line"><span class="string">'I saw 10 birds and 2 dogs.'</span></span><br></pre></td></tr></table></figure></p>
+<p>常用的转换类型有：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">转换类型</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>d</code></td>
+<td style="text-align:center">十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>o</code></td>
+<td style="text-align:center">八进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>x</code></td>
+<td style="text-align:center">十六进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>f</code></td>
+<td style="text-align:center">浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>e</code></td>
+<td style="text-align:center">浮点数指数形式</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>s</code></td>
+<td style="text-align:center">字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>如果要表示<code>%</code>这个字符本身，可以使用<code>%%</code>。</p>
+<p>此外，我们还可以指定补齐或补零的位数以及浮点数的精度：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'%03d'</span> % <span class="number">5</span></span><br><span class="line"><span class="string">'005'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'%3d'</span> % <span class="number">5</span></span><br><span class="line"><span class="string">'  5'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'%-3d'</span> % <span class="number">5</span></span><br><span class="line"><span class="string">'5  '</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'%.3f'</span> % <span class="number">3.1415926</span></span><br><span class="line"><span class="string">'3.142'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="列表（List）"><a href="#列表（List）" class="headerlink" title="列表（List）"></a>列表（List）</h2><h2 id="元组（Tuple）"><a href="#元组（Tuple）" class="headerlink" title="元组（Tuple）"></a>元组（Tuple）</h2><h2 id="集合（Set）"><a href="#集合（Set）" class="headerlink" title="集合（Set）"></a>集合（Set）</h2><h2 id="字典（Dictionary）"><a href="#字典（Dictionary）" class="headerlink" title="字典（Dictionary）"></a>字典（Dictionary）</h2><h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2>
       
     </div>
     
@@ -1390,7 +1445,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共24.4k字</span>
+  <span class="post-count">全站共25k字</span>
 </div>
         
 
@@ -2089,7 +2144,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1575104338521')
+  navigator.serviceWorker.register('/sw.js?t=1575728236560')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

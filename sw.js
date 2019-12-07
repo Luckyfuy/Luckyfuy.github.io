@@ -30,9 +30,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/11/30/Build-MkDocs-Material/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2019/11/03/PIP-Mirror/');
 
-  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
+  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
