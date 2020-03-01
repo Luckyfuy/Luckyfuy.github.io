@@ -1,0 +1,1353 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Luckyfuy's Blog">
+      
+      
+        <link rel="canonical" href="https://luckyfuy.top/mathematics/prime-and-gcd/">
+      
+      
+        <meta name="author" content="Luckyfuy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>质数与GCD - Meta</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#gcd" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://luckyfuy.top/" title="Meta" class="md-header-nav__button md-logo">
+          
+            <img src="/images/icon.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Meta
+            </span>
+            <span class="md-header-nav__topic">
+              
+                质数与GCD
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          关于
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mkdocs/build/" class="md-tabs__link">
+          MkDocs
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../bitwise-operation/" class="md-tabs__link md-tabs__link--active">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-structure/heap/" class="md-tabs__link">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph-theory/toposort/" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../dynamic-programming/knapsack/" class="md-tabs__link">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://luckyfuy.top/" title="Meta" class="md-nav__button md-logo">
+      
+        <img src="/images/icon.png" width="48" height="48">
+      
+    </a>
+    Meta
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      关于
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theme/" title="主题" class="md-nav__link">
+      主题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      MkDocs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        MkDocs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/build/" title="搭建" class="md-nav__link">
+      搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bitwise-operation/" title="位运算" class="md-nav__link">
+      位运算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        质数与GCD
+      </label>
+    
+    <a href="./" title="质数与GCD" class="md-nav__link md-nav__link--active">
+      质数与GCD
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    质数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    判定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    暴力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miller-rabin" class="md-nav__link">
+    Miller-Rabin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    费马素性测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    二次探测定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    筛法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    埃氏筛
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    欧拉筛
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    例题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    最大公约数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    欧几里得算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    扩展欧几里得算法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    线性同余方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    乘法逆元
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    扩展欧几里得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    快速幂
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    线性算法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    例题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/heap/" title="堆" class="md-nav__link">
+      堆
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/linked-list/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/sparse-table/" title="ST表" class="md-nav__link">
+      ST表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/toposort/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/minimum-spanning-tree/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dynamic-programming/knapsack/" title="背包" class="md-nav__link">
+      背包
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    质数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    判定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    暴力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miller-rabin" class="md-nav__link">
+    Miller-Rabin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    费马素性测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    二次探测定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    筛法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    埃氏筛
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    欧拉筛
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    例题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    最大公约数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    欧几里得算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    扩展欧几里得算法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    线性同余方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    乘法逆元
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    扩展欧几里得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    快速幂
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    线性算法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    例题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="gcd">质数与GCD<a class="headerlink" href="#gcd" title="Permanent link">&para;</a></h1>
+<p>质数和GCD是数论中最基础的部分之一。</p>
+<p>本篇将会讨论质数的判定与筛法，以及欧几里得算法与扩展欧几里得算法。</p>
+<h2 id="_1">质数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>复习一下小学知识：</p>
+<p>设<span><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>满足<span><span class="MathJax_Preview">a \in \mathbb{N^{*}}, b \in \mathbb{N}</span><script type="math/tex">a \in \mathbb{N^{*}}, b \in \mathbb{N}</script></span>。若存在<span><span class="MathJax_Preview">k \in \mathbb{N}</span><script type="math/tex">k \in \mathbb{N}</script></span>使得<span><span class="MathJax_Preview">b = k a</span><script type="math/tex">b = k a</script></span>，那么<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>是<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>的倍数，<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>是<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>的约数（也称因数）。这种关系记作<span><span class="MathJax_Preview">a \mid b</span><script type="math/tex">a \mid b</script></span>，读作<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>整除<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>。所有整数都整除<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
+<p>显然，任意大于<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>的正整数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>都可以被<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>和<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>整除，若除此之外<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>没有其它约数，那么<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>为质数（也称素数），否则<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>为合数。<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>既非质数，也非合数。</p>
+<h3 id="_2">判定<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="_3">暴力<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>要判定一个数是不是质数，只要枚举每个数看看是否可以整除就行了：
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>容易想到，如果<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>是<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的约数，那么<span><span class="MathJax_Preview">\frac{n}{a}</span><script type="math/tex">\frac{n}{a}</script></span>也是<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的约数。</p>
+<p>因此，对于每一对<span><span class="MathJax_Preview">(a, \frac{n}{a})</span><script type="math/tex">(a, \frac{n}{a})</script></span>，只要检验其中的一个就好了。每组数中的较小数都在区间<span><span class="MathJax_Preview">[1, \sqrt{n}]</span><script type="math/tex">[1, \sqrt{n}]</script></span>中：
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<h4 id="miller-rabin">Miller-Rabin<a class="headerlink" href="#miller-rabin" title="Permanent link">&para;</a></h4>
+<p>Miller-Rabin素性测试是一种更好的质数判定方法。</p>
+<p>它对数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>进行<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>轮测试的时间复杂度是<span><span class="MathJax_Preview">O(k \log^{3} n)</span><script type="math/tex">O(k \log^{3} n)</script></span>。</p>
+<h5 id="_4">费马素性测试<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>费马小定理有：</p>
+<blockquote>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p} \equiv a \ (\mod p)</span><script type="math/tex">a^{p} \equiv a \ (\mod p)</script></span>。</p>
+</blockquote>
+<p>这个定理也可以表示成：</p>
+<blockquote>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意与<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>互质的整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \ (\mod p)</span><script type="math/tex">a^{p - 1} \equiv 1 \ (\mod p)</script></span>。</p>
+</blockquote>
+<p>我们可以在<span><span class="MathJax_Preview">[2, n - 1]</span><script type="math/tex">[2, n - 1]</script></span>中随机选取整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，检验是否<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \ (\mod n)</span><script type="math/tex">a^{n - 1} \equiv 1 \ (\mod n)</script></span>：
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">fermat</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="c1">// k为测试次数，k越大结果越准确，但过大会影响效率</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">quickPow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>费马小定理的逆定理并不成立，换而言之，即使满足了<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \ (\mod n)</span><script type="math/tex">a^{n - 1} \equiv 1 \ (\mod n)</script></span>，<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>也不一定是质数。但是上面的做法中随机选择<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，大大降低了判断错误的概率。</p>
+<p>不过仍有一类数会导致错误判断：</p>
+<p>对于合数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，若对于所有与<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>互质的正整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \ (\mod n)</span><script type="math/tex">a^{n - 1} \equiv 1 \ (\mod n)</script></span>都成立，则这个合数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>称为卡迈克尔数（Carmichael），也称费马伪素数。</p>
+<p>例如<span><span class="MathJax_Preview">561 = 3 \times 11 \times 17</span><script type="math/tex">561 = 3 \times 11 \times 17</script></span>就是一个卡迈克尔数。</p>
+<h5 id="_5">二次探测定理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为奇质数，则<span><span class="MathJax_Preview">x^{2} \equiv 1 \ (\mod p)</span><script type="math/tex">x^{2} \equiv 1 \ (\mod p)</script></span>的解为<span><span class="MathJax_Preview">x = 1</span><script type="math/tex">x = 1</script></span>或<span><span class="MathJax_Preview">x = p - 1</span><script type="math/tex">x = p - 1</script></span>。</p>
+</blockquote>
+<p>我们可以结合费马小定理和二次探测定理：</p>
+<p>将<span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span>分解为<span><span class="MathJax_Preview">n - 1 = u \times 2^{t}</span><script type="math/tex">n - 1 = u \times 2^{t}</script></span>，<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>为奇数。不断平方<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>，如果有非平凡平方根那么就不是质数：
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">millerRabin</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">u</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">++</span><span class="n">t</span><span class="p">;</span>
+        <span class="n">u</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// k为测试次数，k越大结果越准确，但过大会影响效率</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">b</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">%</span> <span class="n">n</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<h3 id="_6">筛法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>我们需要知道小于等于<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>有多少个质数。</p>
+<p>最暴力的方法是对每个小于等于<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的数进行判定，但是这样显然不能到达最优复杂度，于是考虑优化。</p>
+<h4 id="_7">埃氏筛<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>如果<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>是合数，那么<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的倍数也一定是合数。我们可以利用这个结论避免很多不必要的检测：
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">eratosthenes</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">prime</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+    <span class="kt">bool</span> <span class="n">vis</span><span class="p">[</span><span class="n">MAXN</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="p">{</span>
+            <span class="n">prime</span><span class="p">[</span><span class="o">++</span><span class="n">tot</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span>
+                <span class="n">vis</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">tot</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+以上为埃氏筛法，即Eratosthenes筛法（埃拉托色尼筛法），时间复杂度为<span><span class="MathJax_Preview">O(n \log \log n)</span><script type="math/tex">O(n \log \log n)</script></span>。</p>
+<p>埃氏筛法仍然有优化空间，因为有的数被重复标记了。</p>
+<h4 id="_8">欧拉筛<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>欧拉筛法（Euler筛法）是一种线性筛法。</p>
+<p>欧拉筛中每个合数只被标记了一次，因此时间复杂度降到了<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>：
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">euler</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">prime</span><span class="p">[</span><span class="n">MAX_SIZE</span><span class="p">];</span>
+    <span class="kt">bool</span> <span class="n">vis</span><span class="p">[</span><span class="n">MAX_SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">prime</span><span class="p">[</span><span class="o">++</span><span class="n">tot</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">tot</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="n">vis</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">tot</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<h3 id="_9">例题<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.luogu.org/problem/P3383" title="【模板】线性筛素数">P3383 【模板】线性筛素数</a></li>
+<li><a href="https://www.luogu.org/problem/P1865" title="A % B Problem">P1865 A % B Problem</a></li>
+<li><a href="https://www.luogu.org/problem/P3912" title="素数个数">P3912 素数个数</a></li>
+</ul>
+<h2 id="_10">最大公约数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>最大公约数即为Greatest Common Divisor，常缩写为GCD。</p>
+<p>最大公约数是指一组数中，每一个数都同时拥有的最大的约数。</p>
+<p>若<span><span class="MathJax_Preview">gcd(a, b) = 1</span><script type="math/tex">gcd(a, b) = 1</script></span>，我们称<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>与<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>互质。</p>
+<h3 id="_11">欧几里得算法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>如果我们已知两个数<span><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>，如何求它们的最大公约数呢？</p>
+<p>不妨设<span><span class="MathJax_Preview">a &gt; b</span><script type="math/tex">a > b</script></span>，</p>
+<p>若<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>为<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>的约数，那么<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>就是两者的最大公约数；</p>
+<p>若<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>不能整除<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，即<span><span class="MathJax_Preview">a = k b + c \ (c &lt; b)</span><script type="math/tex">a = k b + c \ (c < b)</script></span>时：</p>
+<p>显然<span><span class="MathJax_Preview">c = a \mod b</span><script type="math/tex">c = a \mod b</script></span>，设<span><span class="MathJax_Preview">d \mid a, d \mid b</span><script type="math/tex">d \mid a, d \mid b</script></span>，则<span><span class="MathJax_Preview">c = a - k b, \frac{c}{d} = \frac{a}{d} - k \frac{b}{d}</span><script type="math/tex">c = a - k b, \frac{c}{d} = \frac{a}{d} - k \frac{b}{d}</script></span>。易知<span><span class="MathJax_Preview">\frac{c}{d}</span><script type="math/tex">\frac{c}{d}</script></span>为整数，即<span><span class="MathJax_Preview">d \mid c</span><script type="math/tex">d \mid c</script></span>。所以<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>和<span><span class="MathJax_Preview">a \mod b</span><script type="math/tex">a \mod b</script></span>的公约数。</p>
+<p>反过来，设<span><span class="MathJax_Preview">d \mid b, d \mid (a \mod b)</span><script type="math/tex">d \mid b, d \mid (a \mod b)</script></span>，同样得出以下式子<span><span class="MathJax_Preview">\frac{a \mod b}{d} = \frac{a}{d} - k \frac{b}{d}, \frac{a}{d} = \frac{a \mod b}{d} + k \frac{b}{d}</span><script type="math/tex">\frac{a \mod b}{d} = \frac{a}{d} - k \frac{b}{d}, \frac{a}{d} = \frac{a \mod b}{d} + k \frac{b}{d}</script></span>。因为右边为整数，所以<span><span class="MathJax_Preview">\frac{a}{d}</span><script type="math/tex">\frac{a}{d}</script></span>也是整数，即<span><span class="MathJax_Preview">d \mid a</span><script type="math/tex">d \mid a</script></span>。因此<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>和<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>的公约数。</p>
+<p>因<span><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>与<span><span class="MathJax_Preview">b, a \mod b</span><script type="math/tex">b, a \mod b</script></span>的公约数相等，两者的最大公约数也必然相等。</p>
+<p>所以得到式子：</p>
+<div>
+<div class="MathJax_Preview">\gcd(a, b) = \gcd(b, a \mod b)</div>
+<script type="math/tex; mode=display">\gcd(a, b) = \gcd(b, a \mod b)</script>
+</div>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>以上算法为欧几里得算法（Euclidean Algorithm）。</p>
+<h3 id="_12">扩展欧几里得算法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>扩展欧几里得算法（Extended Euclidean Algorithm, EXGCD），常用于求<span><span class="MathJax_Preview">a x + b y = \gcd(a, b)</span><script type="math/tex">a x + b y = \gcd(a, b)</script></span>的一组可行解。</p>
+<p>设<span><span class="MathJax_Preview">a x_{1} + b y_{1} = \gcd(a, b), b x_{2} + (a \mod b) y_{2} = \gcd(b, a \mod b)</span><script type="math/tex">a x_{1} + b y_{1} = \gcd(a, b), b x_{2} + (a \mod b) y_{2} = \gcd(b, a \mod b)</script></span>，</p>
+<p>由欧几里得定理可知：<span><span class="MathJax_Preview">\gcd(a, b) = \gcd(b, a \mod b)</span><script type="math/tex">\gcd(a, b) = \gcd(b, a \mod b)</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">a x_{1} + b y_{1} = b x_{2} + (a \mod b) y_{2}</span><script type="math/tex">a x_{1} + b y_{1} = b x_{2} + (a \mod b) y_{2}</script></span>。</p>
+<p>又因<span><span class="MathJax_Preview">a \mod b = a - (\lfloor \frac{a}{b} \rfloor \times b)</span><script type="math/tex">a \mod b = a - (\lfloor \frac{a}{b} \rfloor \times b)</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">a x_{1} + b y_{1} = b x_{2} + (a - (\lfloor \frac{a}{b} \rfloor \times b)) y_{2}</span><script type="math/tex">a x_{1} + b y_{1} = b x_{2} + (a - (\lfloor \frac{a}{b} \rfloor \times b)) y_{2}</script></span>。</p>
+<p><span><span class="MathJax_Preview">a x_{1} + b y_{1} = a y_{2} + b x_{2} - \lfloor \frac{a}{b} \rfloor \times b y_{2} = a y_{2} + b (x_{2} - \lfloor \frac{a}{b} \rfloor y_{2})</span><script type="math/tex">a x_{1} + b y_{1} = a y_{2} + b x_{2} - \lfloor \frac{a}{b} \rfloor \times b y_{2} = a y_{2} + b (x_{2} - \lfloor \frac{a}{b} \rfloor y_{2})</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">x_{1} = y_{2}, y_{1} = x_{2} - \lfloor \frac{a}{b} \rfloor y_{2}</span><script type="math/tex">x_{1} = y_{2}, y_{1} = x_{2} - \lfloor \frac{a}{b} \rfloor y_{2}</script></span>。</p>
+<p>将<span><span class="MathJax_Preview">x_{2}, y_{2}</span><script type="math/tex">x_{2}, y_{2}</script></span>不断代入递归直到求出最大公约数为止，返回<span><span class="MathJax_Preview">x = 0, y = 1</span><script type="math/tex">x = 0, y = 1</script></span>求解，函数返回值为最大公约数：
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">exgcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span> <span class="o">*</span> <span class="n">y</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<h4 id="_13">线性同余方程<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>线性同余方程是最基础的同余方程，其未知数次数为一次，即形如<span><span class="MathJax_Preview">a x \equiv b \ (\mod c)</span><script type="math/tex">a x \equiv b \ (\mod c)</script></span>的方程。</p>
+<p><span><span class="MathJax_Preview">a x \equiv b \ (\mod c)</span><script type="math/tex">a x \equiv b \ (\mod c)</script></span>的本质其实就是<span><span class="MathJax_Preview">a x + c y = b</span><script type="math/tex">a x + c y = b</script></span>，根据裴蜀定理，当且仅当<span><span class="MathJax_Preview">\gcd(a, c) \mid b</span><script type="math/tex">\gcd(a, c) \mid b</script></span>时该方程存在整数解。</p>
+<p>我们可以先用扩展欧几里得算法求出一组方程<span><span class="MathJax_Preview">a x_{0} + c y_{0} = \gcd(a, c)</span><script type="math/tex">a x_{0} + c y_{0} = \gcd(a, c)</script></span>的解<span><span class="MathJax_Preview">x_{0}, y_{0}</span><script type="math/tex">x_{0}, y_{0}</script></span>，然后两边同时除以<span><span class="MathJax_Preview">\gcd(a, c)</span><script type="math/tex">\gcd(a, c)</script></span>并乘上<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，也就是<span><span class="MathJax_Preview">\frac{a b x_{0}}{\gcd(a, c)} + \frac{b c y_{0}}{\gcd(a, c)} = b</span><script type="math/tex">\frac{a b x_{0}}{\gcd(a, c)} + \frac{b c y_{0}}{\gcd(a, c)} = b</script></span>，我们就得到了方程的一组特解。</p>
+<p>此外，若<span><span class="MathJax_Preview">x_{0}, y_{0}</span><script type="math/tex">x_{0}, y_{0}</script></span>是方程<span><span class="MathJax_Preview">a x + c y = b</span><script type="math/tex">a x + c y = b</script></span>的解，那么该方程的任意解可表示为<span><span class="MathJax_Preview">x = x_{0} + c t, y = y_{0} - a t</span><script type="math/tex">x = x_{0} + c t, y = y_{0} - a t</script></span>，对任意整数<span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>都成立。</p>
+<p>这样，我们就能得到所有解了。但是，题目往往都会让我们求最小正整数解，方法很简单：<span><span class="MathJax_Preview">t = \frac{c}{\gcd(a, c)}, x = (x \mod t + t) \mod t</span><script type="math/tex">t = \frac{c}{\gcd(a, c)}, x = (x \mod t + t) \mod t</script></span>。</p>
+<p>代码：
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">eq</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">%</span> <span class="n">d</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">b</span> <span class="o">/</span> <span class="n">d</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">c</span> <span class="o">/</span> <span class="n">d</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">*=</span> <span class="n">k</span><span class="p">,</span> <span class="n">y</span> <span class="o">*=</span> <span class="n">k</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">t</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span> <span class="o">%</span> <span class="n">t</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<h4 id="_14">乘法逆元<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>如果一个线性同余方程<span><span class="MathJax_Preview">a x \equiv 1 \ (\mod p)</span><script type="math/tex">a x \equiv 1 \ (\mod p)</script></span>，那么<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>称为<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>模<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>意义下的逆元，记作<span><span class="MathJax_Preview">a^{-1}</span><script type="math/tex">a^{-1}</script></span>。</p>
+<h5 id="_15">扩展欧几里得<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<p>用扩展欧几里得的解法和解线性同余方程类似，就不多解释了。</p>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">inv</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">p</span> <span class="o">+</span> <span class="n">p</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h5 id="_16">快速幂<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<p>这个方法需要运用费马小定理。</p>
+<p>费马小定理中：</p>
+<blockquote>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意与<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>互质的整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \ (\mod p)</span><script type="math/tex">a^{p - 1} \equiv 1 \ (\mod p)</script></span>。</p>
+</blockquote>
+<p>我们发现，右边刚好为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
+<p>因为<span><span class="MathJax_Preview">a x \equiv 1 \ (\mod p)</span><script type="math/tex">a x \equiv 1 \ (\mod p)</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">a x \equiv a^{p - 1} \ (\mod p)</span><script type="math/tex">a x \equiv a^{p - 1} \ (\mod p)</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">x \equiv a^{p - 2} \ (\mod p)</span><script type="math/tex">x \equiv a^{p - 2} \ (\mod p)</script></span>。</p>
+<p>然后我们就可以用快速幂求出<span><span class="MathJax_Preview">a^{p - 2} \mod p</span><script type="math/tex">a^{p - 2} \mod p</script></span>的值了，结果就是它的逆元。</p>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">inv</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">power</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(;</span> <span class="n">power</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">power</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">power</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">res</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h5 id="_17">线性算法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
+<p>对于求一连串数字的逆元，就只能用线性算法（<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>）。</p>
+<p>首先，显然地，<span><span class="MathJax_Preview">1^{-1} \equiv 1 \ (\mod p)</span><script type="math/tex">1^{-1} \equiv 1 \ (\mod p)</script></span>，</p>
+<p>然后设<span><span class="MathJax_Preview">p = k i + r \ (1 &lt; r &lt; i &lt; p)</span><script type="math/tex">p = k i + r \ (1 < r < i < p)</script></span>，</p>
+<p>将这个式子放到<span><span class="MathJax_Preview">\mod p</span><script type="math/tex">\mod p</script></span>意义下就会得到：<span><span class="MathJax_Preview">k i + r \equiv 0 \ (\mod p)</span><script type="math/tex">k i + r \equiv 0 \ (\mod p)</script></span>。</p>
+<p>两边同时乘<span><span class="MathJax_Preview">i^{-1}, r^{-1}</span><script type="math/tex">i^{-1}, r^{-1}</script></span>，得到<span><span class="MathJax_Preview">k r^{-1} + i^{-1} \equiv 0 \ (\mod p)</span><script type="math/tex">k r^{-1} + i^{-1} \equiv 0 \ (\mod p)</script></span>，</p>
+<p><span><span class="MathJax_Preview">i^{-1} \equiv -k r^{-1} \ (\mod p)</span><script type="math/tex">i^{-1} \equiv -k r^{-1} \ (\mod p)</script></span>，</p>
+<p><span><span class="MathJax_Preview">i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \mod i)^{-1} \ (\mod p)</span><script type="math/tex">i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \mod i)^{-1} \ (\mod p)</script></span>。</p>
+<p>然后我们就可以从前面的逆元推出后面的了：</p>
+<div>
+<div class="MathJax_Preview">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \mod i} \mod p</div>
+<script type="math/tex; mode=display">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \mod i} \mod p</script>
+</div>
+<p>代码很短：
+<div class="codehilite"><pre><span></span><span class="n">inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">p</span> <span class="o">/</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">inv</span><span class="p">[</span><span class="n">p</span> <span class="o">%</span> <span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+</pre></div>
+由于这种算法可能会算出负数，如果只求正整数，稍微修改一下代码即可：
+<div class="codehilite"><pre><span></span><span class="n">inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="n">p</span> <span class="o">/</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">inv</span><span class="p">[</span><span class="n">p</span> <span class="o">%</span> <span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+</pre></div></p>
+<h3 id="_18">例题<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.luogu.org/problem/P3811" title="【模板】乘法逆元">P3811 【模板】乘法逆元</a></li>
+<li><a href="https://www.luogu.org/problem/P1082" title="同余方程">P1082 同余方程</a></li>
+<li><a href="https://www.luogu.org/problem/P2613" title="【模板】有理数取余">P2613 【模板】有理数取余</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bitwise-operation/" title="位运算" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                位运算
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../data-structure/heap/" title="堆" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                堆
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Luckyfuy
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

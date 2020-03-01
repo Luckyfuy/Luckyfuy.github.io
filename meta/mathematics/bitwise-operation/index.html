@@ -1,0 +1,1140 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Luckyfuy's Blog">
+      
+      
+        <link rel="canonical" href="https://luckyfuy.top/mathematics/bitwise-operation/">
+      
+      
+        <meta name="author" content="Luckyfuy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>位运算 - Meta</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://luckyfuy.top/" title="Meta" class="md-header-nav__button md-logo">
+          
+            <img src="/images/icon.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Meta
+            </span>
+            <span class="md-header-nav__topic">
+              
+                位运算
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          关于
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mkdocs/build/" class="md-tabs__link">
+          MkDocs
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-structure/heap/" class="md-tabs__link">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph-theory/toposort/" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../dynamic-programming/knapsack/" class="md-tabs__link">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://luckyfuy.top/" title="Meta" class="md-nav__button md-logo">
+      
+        <img src="/images/icon.png" width="48" height="48">
+      
+    </a>
+    Meta
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      关于
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theme/" title="主题" class="md-nav__link">
+      主题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      MkDocs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        MkDocs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/build/" title="搭建" class="md-nav__link">
+      搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        位运算
+      </label>
+    
+    <a href="./" title="位运算" class="md-nav__link md-nav__link--active">
+      位运算
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#not" class="md-nav__link">
+    非（NOT）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    与（AND）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    或（OR）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xor" class="md-nav__link">
+    异或（XOR）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数学等价
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    移位
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    应用
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prime-and-gcd/" title="质数与GCD" class="md-nav__link">
+      质数与GCD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/heap/" title="堆" class="md-nav__link">
+      堆
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/linked-list/" title="链表" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-structure/sparse-table/" title="ST表" class="md-nav__link">
+      ST表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/toposort/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/minimum-spanning-tree/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dynamic-programming/knapsack/" title="背包" class="md-nav__link">
+      背包
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#not" class="md-nav__link">
+    非（NOT）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    与（AND）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    或（OR）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xor" class="md-nav__link">
+    异或（XOR）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数学等价
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    移位
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    应用
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">位运算<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。</p>
+<p>通常在处理器上，位运算的效率比乘除法高。</p>
+<h2 id="not">非（NOT）<a class="headerlink" href="#not" title="Permanent link">&para;</a></h2>
+<p>非运算会对一个二进制数的每一位执行逻辑非运算，即取反，将<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>变成<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，将<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>变成<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
+<p>在大多数编程语言中，其符号为<code>~</code>。</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+NOT&amp;\ 0111 (= (7)_{10})\\
+= &amp;\ 1000 (= (8)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+NOT&\ 0111 (= (7)_{10})\\
+= &\ 1000 (= (8)_{10})
+\end{aligned}
+</script>
+</div>
+<p>非运算的结果是值的二进制补码减一，即<span><span class="MathJax_Preview">NOT\ x =  -x - 1</span><script type="math/tex">NOT\ x =  -x - 1</script></span>。</p>
+<h2 id="and">与（AND）<a class="headerlink" href="#and" title="Permanent link">&para;</a></h2>
+<p>与运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑与运算，相当于将它们相乘。若两个bit都为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，则结果为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>（<span><span class="MathJax_Preview">1 \times 1 =  1</span><script type="math/tex">1 \times 1 =  1</script></span>）；否则结果为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>（<span><span class="MathJax_Preview">1 \times 0 =  0, 0 \times 0 =  0</span><script type="math/tex">1 \times 0 =  0, 0 \times 0 =  0</script></span>）。</p>
+<p>在大多数编程语言中，其符号为<code>&amp;</code>。</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0101 (= (5)_{10})\\
+AND \ &amp; 0011 (= (3)_{10})\\
+= \ &amp; 0001 (= (1)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0101 (= (5)_{10})\\
+AND \ & 0011 (= (3)_{10})\\
+= \ & 0001 (= (1)_{10})
+\end{aligned}
+</script>
+</div>
+<p>与运算可以用于确认某一位是<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>还是<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
+<p>例如，对于给定的数<span><span class="MathJax_Preview">0011 (= (3)_{10})</span><script type="math/tex">0011 (= (3)_{10})</script></span>，我们要确认第<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>位是否是<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，我们可以用将其和<span><span class="MathJax_Preview">0010</span><script type="math/tex">0010</script></span>（只有第<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>位是<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>）进行与运算：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0011 (= (3)_{10})\\
+AND \ &amp; 0010 (= (2)_{10})\\
+= \ &amp; 0010 (= (2)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0011 (= (3)_{10})\\
+AND \ & 0010 (= (2)_{10})\\
+= \ & 0010 (= (2)_{10})
+\end{aligned}
+</script>
+</div>
+<p>由于结果<span><span class="MathJax_Preview">0010</span><script type="math/tex">0010</script></span>不为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，所以我们知道原数的第<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>位是<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。这被称作位掩码(Bit Mask)。</p>
+<p>与运算可以将某一位设置为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。例如，我们要把<span><span class="MathJax_Preview">0110 (= (6)_{10})</span><script type="math/tex">0110 (= (6)_{10})</script></span>的第<span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>位设置为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，可以将其和<span><span class="MathJax_Preview">1011</span><script type="math/tex">1011</script></span>（只有第<span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>位是<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>）进行与运算：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0110 (= (6)_{10})\\
+AND \ &amp; 1011 (= (11)_{10})\\
+= \ &amp; 0010 (= (2)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0110 (= (6)_{10})\\
+AND \ & 1011 (= (11)_{10})\\
+= \ & 0010 (= (2)_{10})
+\end{aligned}
+</script>
+</div>
+<p>由于这个属性，二进制数的奇偶校验就很方便了：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0110 (= (6)_{10})\\
+AND \ &amp; 0001 (= (1)_{10})\\
+= \ &amp; 0000 (= (0)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0110 (= (6)_{10})\\
+AND \ & 0001 (= (1)_{10})\\
+= \ & 0000 (= (0)_{10})
+\end{aligned}
+</script>
+</div>
+<p>因为<span><span class="MathJax_Preview">6\ AND\ 1 =  0</span><script type="math/tex">6\ AND\ 1 =  0</script></span>，所以<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>可以被<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>整除，因此<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>是偶数。</p>
+<h2 id="or">或（OR）<a class="headerlink" href="#or" title="Permanent link">&para;</a></h2>
+<p>或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑或运算。若两个bit都为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，则结果为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>；否则结果为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
+<p>在大多数编程语言中，其符号为<code>|</code>。</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0101 (= (5)_{10})\\
+OR \ &amp; 0011 (= (3)_{10})\\
+= \  &amp; 0111 (= (7)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0101 (= (5)_{10})\\
+OR \ & 0011 (= (3)_{10})\\
+= \  & 0111 (= (7)_{10})
+\end{aligned}
+</script>
+</div>
+<p>或运算可以将某一位设置为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。例如，我们要把<span><span class="MathJax_Preview">0110 (= (6)_{10})</span><script type="math/tex">0110 (= (6)_{10})</script></span>的第<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>位设置为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，可以将其和<span><span class="MathJax_Preview">1000</span><script type="math/tex">1000</script></span>（只有第<span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>位是<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>）进行或运算：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0110 (= (6)_{10})\\
+OR \ &amp; 1000 (= (8)_{10})\\
+= \ &amp; 1110 (= (14)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0110 (= (6)_{10})\\
+OR \ & 1000 (= (8)_{10})\\
+= \ & 1110 (= (14)_{10})
+\end{aligned}
+</script>
+</div>
+<h2 id="xor">异或（XOR）<a class="headerlink" href="#xor" title="Permanent link">&para;</a></h2>
+<p>异或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑异或运算。若只有其中一个bit为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，则结果为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>；否则结果为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。即两者状态不同，结果为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>；两者状态相同，结果为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
+<p>在大多数编程语言中，其符号为<code>^</code>。数学中还可以用符号<span><span class="MathJax_Preview">\oplus</span><script type="math/tex">\oplus</script></span>表示异或。</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0101 (= (5)_{10})\\
+XOR \ &amp; 0011 (= (3)_{10})\\
+= \ &amp; 0110 (= (6)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0101 (= (5)_{10})\\
+XOR \ & 0011 (= (3)_{10})\\
+= \ & 0110 (= (6)_{10})
+\end{aligned}
+</script>
+</div>
+<p>异或运算可以将某一位反转。例如，我们要把<span><span class="MathJax_Preview">0110 (= (6)_{10})</span><script type="math/tex">0110 (= (6)_{10})</script></span>的第<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>位和第<span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>位反转，可以将其和<span><span class="MathJax_Preview">0101</span><script type="math/tex">0101</script></span>（第<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>位和第<span><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>位是<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>）进行异或运算：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\ &amp; 0110 (= (6)_{10})\\
+XOR \ &amp; 0101 (= (5)_{10})\\
+= \ &amp; 0011 (= (3)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\ & 0110 (= (6)_{10})\\
+XOR \ & 0101 (= (5)_{10})\\
+= \ & 0011 (= (3)_{10})
+\end{aligned}
+</script>
+</div>
+<p>通过定义可以得到，一个数异或自己总是得<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。因此，将一个变量归零可以使用异或自己的方式，这种方式的效率通常比直接赋值为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>要高。</p>
+<h2 id="_2">数学等价<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>对于非负整数<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，<span><span class="MathJax_Preview">x \ge y</span><script type="math/tex">x \ge y</script></span>，位运算可以写成如下形式：</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+NOT\ x &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \mod 2 + 1) \mod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x\\
+x\ AND\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)\\
+x\ OR\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2)\\
+x\ XOR\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \mod 2)
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+NOT\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \mod 2 + 1) \mod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x\\
+x\ AND\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)\\
+x\ OR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2)\\
+x\ XOR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \mod 2)
+\end{aligned}
+</script>
+</div>
+<h2 id="_3">移位<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>移位会将二进制数字整体向左或向右移动，任意一端移出的位会被丢弃。</p>
+<p>在左移中，<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>会从右侧移入；而在右移中，符号位会从左侧移入。</p>
+<p>左移<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>位等同于乘以<span><span class="MathJax_Preview">2^{n}</span><script type="math/tex">2^{n}</script></span>，而右移<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>位等同于除以<span><span class="MathJax_Preview">2^{n}</span><script type="math/tex">2^{n}</script></span>并向负无穷取整。</p>
+<p>在大多数编程语言中，左移为<code>&lt;&lt;</code>，右移为<code>&gt;&gt;</code>。</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+LEFT\ SHIFT \ &amp; 00010111 (= (23)_{10})\\
+= \ &amp; 00101110 (= (46)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+LEFT\ SHIFT \ & 00010111 (= (23)_{10})\\
+= \ & 00101110 (= (46)_{10})
+\end{aligned}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+RIGHT\ SHIFT\ &amp; 10010111 (= (-105)_{10})\\
+= \ &amp; 11001011 (= (-53)_{10})
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+RIGHT\ SHIFT\ & 10010111 (= (-105)_{10})\\
+= \ & 11001011 (= (-53)_{10})
+\end{aligned}
+</script>
+</div>
+<h2 id="_4">应用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>乘以<span><span class="MathJax_Preview">2^{m}</span><script type="math/tex">2^{m}</script></span>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">mulTwoPower</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>除以<span><span class="MathJax_Preview">2^{m}</span><script type="math/tex">2^{m}</script></span>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">divTwoPower</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>判断奇偶性
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isOdd</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>取两个数的最大值
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// 若n为非负数，n &gt;&gt; 31的值为0，否则为-1</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">))</span> <span class="o">|</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>取两个数的最小值
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">min</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// 若n为非负数，n &gt;&gt; 31的值为0，否则为-1</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">))</span> <span class="o">|</span> <span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>取绝对值
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">iabs</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// 若n为非负数，n &gt;&gt; 31的值为0，否则为-1</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">n</span> <span class="o">^</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>判断是否是<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>的幂
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isTwoPower</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>对<span><span class="MathJax_Preview">2^{n}</span><script type="math/tex">2^{n}</script></span>取余
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">modTwoPower</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">m</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>判断符号是否相同
+<div class="codehilite"><pre><span></span><span class="kt">bool</span> <span class="nf">isSameSign</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>加法
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">do</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="p">;</span>
+        <span class="n">carry</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">sum</span><span class="p">;</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">carry</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">carry</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../mkdocs/build/" title="搭建" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                搭建
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../prime-and-gcd/" title="质数与GCD" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                质数与GCD
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Luckyfuy
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

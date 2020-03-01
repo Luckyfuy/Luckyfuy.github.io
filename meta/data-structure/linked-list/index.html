@@ -1,0 +1,1080 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Luckyfuy's Blog">
+      
+      
+        <link rel="canonical" href="https://luckyfuy.top/data-structure/linked-list/">
+      
+      
+        <meta name="author" content="Luckyfuy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>链表 - Meta</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://luckyfuy.top/" title="Meta" class="md-header-nav__button md-logo">
+          
+            <img src="/images/icon.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Meta
+            </span>
+            <span class="md-header-nav__topic">
+              
+                链表
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          关于
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mkdocs/build/" class="md-tabs__link">
+          MkDocs
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mathematics/bitwise-operation/" class="md-tabs__link">
+          数学
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../heap/" class="md-tabs__link md-tabs__link--active">
+          数据结构
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../graph-theory/toposort/" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../dynamic-programming/knapsack/" class="md-tabs__link">
+          动态规划
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://luckyfuy.top/" title="Meta" class="md-nav__button md-logo">
+      
+        <img src="/images/icon.png" width="48" height="48">
+      
+    </a>
+    Meta
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      关于
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../theme/" title="主题" class="md-nav__link">
+      主题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      MkDocs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        MkDocs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mkdocs/build/" title="搭建" class="md-nav__link">
+      搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数学
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        数学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mathematics/bitwise-operation/" title="位运算" class="md-nav__link">
+      位运算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mathematics/prime-and-gcd/" title="质数与GCD" class="md-nav__link">
+      质数与GCD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../heap/" title="堆" class="md-nav__link">
+      堆
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        链表
+      </label>
+    
+    <a href="./" title="链表" class="md-nav__link md-nav__link--active">
+      链表
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单链表
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sparse-table/" title="ST表" class="md-nav__link">
+      ST表
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/toposort/" title="拓扑排序" class="md-nav__link">
+      拓扑排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/minimum-spanning-tree/" title="最小生成树" class="md-nav__link">
+      最小生成树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graph-theory/shortest-path/" title="最短路" class="md-nav__link">
+      最短路
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      动态规划
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        动态规划
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dynamic-programming/knapsack/" title="背包" class="md-nav__link">
+      背包
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单链表
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">链表<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>链表是一种线性数据结构，最大的特点就是存储不连续，可以用于实现邻接表等。</p>
+<p>链表分为单链表、双向链表和循环链表三种，如下图所示：</p>
+<p><img alt="单链表" src="https://i.loli.net/2019/07/31/5d41a09c9f38b48273.png" title="单链表" /></p>
+<p><img alt="双向链表" src="https://i.loli.net/2019/07/31/5d41a20c17e7394067.png" title="双向链表" /></p>
+<p><img alt="循环链表" src="https://i.loli.net/2019/07/31/5d41a28525d8343284.png" title="循环链表" /></p>
+<p>可以看出，单链表中每个节点都有一个<code>next</code>指针，指向后<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>个节点，而最后<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>个节点的<code>next</code>为空指针；</p>
+<p>双向链表的每个节点还有一个<code>prev</code>指针，指向前<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>个节点；</p>
+<p>循环链表则是在上面的基础上让最后<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>个节点的<code>next</code>指向头节点，如果是双向循环链表还会让头节点的<code>prev</code>指针指向最后<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>个节点。</p>
+<h2 id="_2">单链表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>链表可以用数组和指针两种方式实现，以下我们采用指针来实现单链表。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>以下的代码中使用了C++ 11标准中的<code>nullptr</code>表示空指针，若不支持C++ 11标准，请把代码中的所有<code>nullptr</code>替换成<code>NULL</code></p>
+</div>
+<p>首先，先用<code>struct</code>创建节点的结构体：
+<div class="codehilite"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">Node</span>
+<span class="p">{</span>
+    <span class="n">type</span> <span class="n">data</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">nxt</span><span class="p">;</span>
+
+    <span class="n">Node</span><span class="p">(</span><span class="n">type</span> <span class="n">_data</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">Node</span><span class="p">(</span><span class="n">type</span> <span class="n">_data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">_data</span><span class="p">;</span>
+    <span class="n">nxt</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>然后构建一个链表模板类：
+<div class="codehilite"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">LinkedList</span>
+<span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">LinkedList</span><span class="p">();</span>
+
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">getHead</span><span class="p">();</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">getEnd</span><span class="p">();</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">locate</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">del</span><span class="p">();</span>
+        <span class="kt">void</span> <span class="nf">del</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="nf">size</span><span class="p">();</span>
+        <span class="kt">void</span> <span class="nf">print</span><span class="p">();</span>
+        <span class="kt">bool</span> <span class="nf">empty</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">LinkedList</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>我们用私有变量<code>head</code>储存头指针，初始化时将其设置为<code>nullptr</code>。
+<code>LinkedList</code>的方法有<span><span class="MathJax_Preview">10</span><script type="math/tex">10</script></span>个：
+- <code>getHead()</code>：返回<code>head</code>指针
+- <code>getEnd()</code>：返回最后<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>个节点的指针
+- <code>locate(int pos)</code>：返回第<code>pos</code>个节点的指针
+- <code>ins(type data)</code>：将<code>data</code>插入到末尾
+- <code>ins(type data, int pos)</code>：重载函数，将<code>data</code>插入到<code>pos</code>的位置
+- <code>del()</code>：删除末尾节点
+- <code>del(int pos)</code>：重载函数，删除第<code>pos</code>个节点
+- <code>size()</code>：返回节点数
+- <code>print()</code>：遍历链表，输出每个节点的值
+- <code>empty()</code>：返回链表是否为空</p>
+<p>这几个方法比较好写：
+<div class="codehilite"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">getHead</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">getEnd</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">locate</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">())</span>
+        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">pos</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">getEnd</span><span class="p">();</span>
+        <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">del</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">p</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">int</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">size</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">++</span><span class="n">len</span><span class="p">;</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">print</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">empty</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span> <span class="o">==</span> <span class="k">nullptr</span> <span class="o">||</span> <span class="n">head</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+大部分都是直接遍历链表就好。</p>
+<p>对于插入到链表中间的操作，我们可以让前一个节点指向新节点，而新节点的<code>next</code>指向前一个节点的<code>next</code>。</p>
+<p>例如，对于下图，我们想把<span><span class="MathJax_Preview">233</span><script type="math/tex">233</script></span>插入到第<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>个节点：</p>
+<p><img alt="E.G." src="https://i.loli.net/2019/07/31/5d41a09c9f38b48273.png" title="E.G." /></p>
+<p>可以先创建一个新节点，值为<span><span class="MathJax_Preview">233</span><script type="math/tex">233</script></span>：</p>
+<p><img alt="Step 1" src="https://i.loli.net/2019/08/01/5d425d9924a9650930.png" title="Step 1" /></p>
+<p>然后使<code>Node 1</code>的<code>next</code>指向新节点，新节点的<code>next</code>指向原<code>Node 2</code>（原<code>Node 2</code>变成<code>Node 3</code>，原<code>Node 3</code>变成<code>Node 4</code>）：</p>
+<p><img alt="Step 2" src="https://i.loli.net/2019/08/01/5d425ef475a8921315.png" title="Step 2" /></p>
+<p>代码：
+<div class="codehilite"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">())</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">locate</span><span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">node</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>同样，对于删除操作，我们只要让前一个节点的<code>next</code>指向待删除节点的<code>next</code>，然后删除节点即可。</p>
+<p><img alt="E.G." src="https://i.loli.net/2019/08/01/5d425fd15103866397.png" title="E.G." /></p>
+<p><img alt="Step 1" src="https://i.loli.net/2019/08/01/5d426099b043236658.png" title="Step 1" /></p>
+<p>代码如下：
+<div class="codehilite"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">del</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">())</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">locate</span><span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="k">delete</span> <span class="n">p</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>完整代码：
+<div class="codehilite"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">Node</span>
+<span class="p">{</span>
+    <span class="n">type</span> <span class="n">data</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">nxt</span><span class="p">;</span>
+
+    <span class="n">Node</span><span class="p">(</span><span class="n">type</span> <span class="n">_data</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">Node</span><span class="p">(</span><span class="n">type</span> <span class="n">_data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">_data</span><span class="p">;</span>
+    <span class="n">nxt</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">LinkedList</span>
+<span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">LinkedList</span><span class="p">();</span>
+
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">getHead</span><span class="p">();</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">getEnd</span><span class="p">();</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">locate</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">del</span><span class="p">();</span>
+        <span class="kt">void</span> <span class="nf">del</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="nf">size</span><span class="p">();</span>
+        <span class="kt">void</span> <span class="nf">print</span><span class="p">();</span>
+        <span class="kt">bool</span> <span class="nf">empty</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">LinkedList</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">getHead</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">getEnd</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;*</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">locate</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">())</span>
+        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">pos</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">getEnd</span><span class="p">();</span>
+        <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">ins</span><span class="p">(</span><span class="n">type</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">())</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">locate</span><span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">node</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">del</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">p</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="k">delete</span> <span class="n">ptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">del</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">size</span><span class="p">())</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">locate</span><span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="k">delete</span> <span class="n">p</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">int</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">size</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">++</span><span class="n">len</span><span class="p">;</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">print</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Node</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">nxt</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">ptr</span> <span class="o">-&gt;</span> <span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">empty</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span> <span class="o">==</span> <span class="k">nullptr</span> <span class="o">||</span> <span class="n">head</span> <span class="o">-&gt;</span> <span class="n">nxt</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>双向链表和循环链表的实现与单链表类似，不多赘述。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../heap/" title="堆" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                堆
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../sparse-table/" title="ST表" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                ST表
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Luckyfuy
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
