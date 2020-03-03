@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/10/07/Sparse-Table/');
-
-  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
+  precacheUrls.push('/2019/08/27/Windows/');
 
   precacheUrls.push('/2019/12/13/The-Prophet/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2019/11/03/PIP-Mirror/');
 
-  precacheUrls.push('/2019/11/30/Build-MkDocs-Material/');
+  precacheUrls.push('/2019/06/29/Basic-Mod-Packs/');
+
+  precacheUrls.push('/2019/10/02/Prime-And-GCD/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
