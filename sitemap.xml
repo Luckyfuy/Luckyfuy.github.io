@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luckyfuy.top/games/index.html</loc>
+    
+    <lastmod>2020-05-04T04:41:18.659Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/2019/11/30/Build-MkDocs-Material/</loc>
     
     <lastmod>2020-03-01T13:33:57.767Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://luckyfuy.top/2019/08/28/Bitwise-Operation/</loc>
     
     <lastmod>2019-11-24T04:16:25.554Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/games/index.html</loc>
-    
-    <lastmod>2019-11-23T13:41:56.155Z</lastmod>
     
   </url>
   
