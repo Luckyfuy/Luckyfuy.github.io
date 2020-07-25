@@ -24,11 +24,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
+  precacheUrls.push('/2019/10/01/Shortest-Path/');
 
   precacheUrls.push('/2020/07/19/The-Historical-Atlas-of-China/');
 
-  precacheUrls.push('/2019/10/07/Sparse-Table/');
+  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
 
   precacheUrls.push('/2019/03/16/Winter-Solstice/');
 
