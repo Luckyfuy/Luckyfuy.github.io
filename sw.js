@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/09/14/Check/');
+  precacheUrls.push('/2019/10/01/Shortest-Path/');
 
   precacheUrls.push('/2020/07/19/The-Historical-Atlas-of-China/');
 
-  precacheUrls.push('/2019/08/13/Toposort/');
+  precacheUrls.push('/2019/10/07/Sparse-Table/');
 
-  precacheUrls.push('/2019/03/22/Learn-Python/');
+  precacheUrls.push('/2019/03/16/Winter-Solstice/');
 
-  precacheUrls.push('/2019/06/29/Basic-Mod-Packs/');
+  precacheUrls.push('/2019/05/11/1+1=2/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
