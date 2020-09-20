@@ -1,63 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://luckyfuy.top/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/theme/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/mkdocs/build/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/mathematics/bitwise-operation/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/mathematics/prime-and-gcd/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/data-structure/heap/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/data-structure/linked-list/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/data-structure/sparse-table/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/graph-theory/toposort/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/graph-theory/minimum-spanning-tree/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/graph-theory/shortest-path/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
-    </url>
-    <url>
+    </url><url>
      <loc>https://luckyfuy.top/dynamic-programming/knapsack/</loc>
-     <lastmod>2020-03-01</lastmod>
+     <lastmod>2020-09-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
