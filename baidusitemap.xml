@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://luckyfuy.top/2020/10/01/LaTeX-Math/</loc>
+    <lastmod>2020-10-01</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/10/02/Prime-And-GCD/</loc>
+    <lastmod>2020-10-01</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/08/28/Bitwise-Operation/</loc>
+    <lastmod>2020-10-01</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/11/24/Proofs-in-Triangle/</loc>
+    <lastmod>2020-10-01</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/10/07/Sparse-Table/</loc>
+    <lastmod>2020-10-01</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2019/05/11/1+1=2/</loc>
+    <lastmod>2020-10-01</lastmod>
+  </url>  <url>
     <loc>https://luckyfuy.top/2019/11/30/Build-MkDocs-Material/</loc>
     <lastmod>2020-09-20</lastmod>
   </url>  <url>
@@ -30,15 +48,6 @@
   </url>  <url>
     <loc>https://luckyfuy.top/2019/03/09/Build-Blog/</loc>
     <lastmod>2019-11-30</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2019/11/24/Proofs-in-Triangle/</loc>
-    <lastmod>2019-11-24</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2019/10/07/Sparse-Table/</loc>
-    <lastmod>2019-11-24</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2019/08/28/Bitwise-Operation/</loc>
-    <lastmod>2019-11-24</lastmod>
   </url>  <url>
     <loc>https://luckyfuy.top/2019/11/17/CSP-J-2019-Trip/</loc>
     <lastmod>2019-11-17</lastmod>
@@ -76,17 +85,11 @@
     <loc>https://luckyfuy.top/2019/10/11/Change-Blog-Domain/</loc>
     <lastmod>2019-10-11</lastmod>
   </url>  <url>
-    <loc>https://luckyfuy.top/2019/10/02/Prime-And-GCD/</loc>
-    <lastmod>2019-10-05</lastmod>
-  </url>  <url>
     <loc>https://luckyfuy.top/2019/09/07/Knapsack/</loc>
     <lastmod>2019-09-13</lastmod>
   </url>  <url>
     <loc>https://luckyfuy.top/2019/08/31/MySQL-Installation/</loc>
     <lastmod>2019-08-31</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2019/05/11/1+1=2/</loc>
-    <lastmod>2019-08-28</lastmod>
   </url>  <url>
     <loc>https://luckyfuy.top/2019/03/16/Winter-Solstice/</loc>
     <lastmod>2019-03-22</lastmod>
