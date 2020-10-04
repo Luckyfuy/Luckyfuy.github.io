@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="前言$\LaTeX$是一种强大的排版系统，非常适用于生成高印刷质量的科技和数学类文档。其中，$\LaTeX$最强大的一点在于对数学符号和公式的排版，而且由于大多数Markdown编辑器都支持插入$\LaTeX$公式，因此学会$\LaTeX$可以方便许多。 推荐阅读一份（不太）简短的LATEX 2ε介绍。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-10-01T03:46:12.463Z">
+<meta property="og:updated_time" content="2020-10-04T12:36:05.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LaTeX数学公式">
 <meta name="twitter:description" content="前言$\LaTeX$是一种强大的排版系统，非常适用于生成高印刷质量的科技和数学类文档。其中，$\LaTeX$最强大的一点在于对数学符号和公式的排版，而且由于大多数Markdown编辑器都支持插入$\LaTeX$公式，因此学会$\LaTeX$可以方便许多。 推荐阅读一份（不太）简短的LATEX 2ε介绍。">
@@ -514,7 +514,7 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>$\LaTeX$是一种强大的排版系统，非常适用于生成高印刷质量的科技和数学类文档。<br>其中，$\LaTeX$最强大的一点在于对数学符号和公式的排版，而且由于大多数Markdown编辑器都支持插入$\LaTeX$公式，因此学会$\LaTeX$可以方便许多。</p>
 <p>推荐阅读<a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf" title="一份（不太）简短的LATEX 2ε介绍" target="_blank" rel="noopener">一份（不太）简短的LATEX 2ε介绍</a>。</p>
 <a id="more"></a>
-<h1 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h1><h2 id="一般符号"><a href="#一般符号" class="headerlink" title="一般符号"></a>一般符号</h2><p>希腊字母符号使用其英文名称，如$\alpha$（<code>\alpha</code>）、$\beta$（<code>\beta</code>）等。<br>大写字母将首字母大写，如$\Gamma$（<code>\Gamma</code>）、$\Delta$（<code>\Delta</code>）等。<br>常见希腊字母见下表：</p>
+<h1 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h1><h2 id="一般符号"><a href="#一般符号" class="headerlink" title="一般符号"></a>一般符号</h2><p>希腊字母符号使用其英文名称，如$\alpha$（<code>\alpha</code>）、$\beta$（<code>\beta</code>）等。<br>大写字母将首字母大写，如$\Gamma$（<code>\Gamma</code>）、$\Delta$（<code>\Delta</code>）等。<br>常用希腊字母见下表：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -710,9 +710,9 @@
 </table>
 </div>
 <p>无穷大符号为$\infty$（<code>\infty</code>）。</p>
-<p>省略号有$\dots$（<code>\dots</code>或<code>\ldots</code>）和$\cdots$（<code>\cdots</code>），此外，在矩阵中也会用到$\vdots$（<code>\vdots</code>）和$\ddots$（<code>\ddots</code>）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_&#123;0&#125; + a_&#123;1&#125; + \dots + a_&#123;n&#125; \\</span><br><span class="line">a_&#123;0&#125; + a_&#123;1&#125; + \cdots + a_&#123;n&#125;</span><br></pre></td></tr></table></figure></p>
+<p>省略号有$\dots$（<code>\dots</code>或<code>\ldots</code>）和$\cdots$（<code>\cdots</code>），此外，在矩阵中也会用到$\vdots$（<code>\vdots</code>）和$\ddots$（<code>\ddots</code>）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_&#123;0&#125;, a_&#123;1&#125;, \dots, a_&#123;n&#125; \\</span><br><span class="line">a_&#123;0&#125; + a_&#123;1&#125; + \cdots + a_&#123;n&#125;</span><br></pre></td></tr></table></figure></p>
 <script type="math/tex; mode=display">
-a_{0} + a_{1} + \dots + a_{n} \\
+a_{0}, a_{1}, \dots, a_{n} \\
 a_{0} + a_{1} + \cdots + a_{n}</script><h2 id="指数、上下标和导数"><a href="#指数、上下标和导数" class="headerlink" title="指数、上下标和导数"></a>指数、上下标和导数</h2><p><code>^</code>和<code>_</code>分别用于表示上标和下标。由于这两个符号只对后一个字符起作用，因此上下标的内容通常需要用大括号<code>{}</code>包裹起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a_0 \qquad x^2 \qquad a^&#123;x+y&#125; \qquad \sum_&#123;k=1&#125;^3 k</span><br></pre></td></tr></table></figure></p>
 <script type="math/tex; mode=display">a_0 \qquad x^2 \qquad a^{x+y} \qquad \sum_{k=1}^3 k</script><p>导数符号$’$（<code>&#39;</code>）是一类特殊的上标，可以适当连用表示多阶导数，也可以在其后连用上标。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f(x) = x^2 \qquad f&apos;(x) = 2x \qquad f&apos;&apos;^&#123;2&#125;(x) = 4</span><br></pre></td></tr></table></figure></p>
 <script type="math/tex; mode=display">f(x) = x^2 \qquad f'(x) = 2x \qquad f''^{2}(x) = 4</script><h2 id="分式和根式"><a href="#分式和根式" class="headerlink" title="分式和根式"></a>分式和根式</h2><p>分式用<code>\frac{分子}{分母}</code>来表示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\frac&#123;7&#125;&#123;16&#125; \qquad \frac&#123;1&#125;&#123;2&#125; \qquad 1\frac&#123;2&#125;&#123;3&#125;</span><br></pre></td></tr></table></figure></p>
@@ -2604,7 +2604,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1601524031526')
+  navigator.serviceWorker.register('/sw.js?t=1601815014632')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
