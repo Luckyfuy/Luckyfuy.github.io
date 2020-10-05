@@ -1009,13 +1009,13 @@
 <h5 id="_4">费马素性测试<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
 <p>费马小定理有：</p>
 <blockquote>
-<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p} \equiv a \ (\mod p)</span><script type="math/tex">a^{p} \equiv a \ (\mod p)</script></span>。</p>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p} \equiv a \pmod{p}</span><script type="math/tex">a^{p} \equiv a \pmod{p}</script></span>。</p>
 </blockquote>
 <p>这个定理也可以表示成：</p>
 <blockquote>
-<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意与<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>互质的整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \ (\mod p)</span><script type="math/tex">a^{p - 1} \equiv 1 \ (\mod p)</script></span>。</p>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意与<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>互质的整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \pmod{p}</span><script type="math/tex">a^{p - 1} \equiv 1 \pmod{p}</script></span>。</p>
 </blockquote>
-<p>我们可以在<span><span class="MathJax_Preview">[2, n - 1]</span><script type="math/tex">[2, n - 1]</script></span>中随机选取整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，检验是否<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \ (\mod n)</span><script type="math/tex">a^{n - 1} \equiv 1 \ (\mod n)</script></span>：
+<p>我们可以在<span><span class="MathJax_Preview">[2, n - 1]</span><script type="math/tex">[2, n - 1]</script></span>中随机选取整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，检验是否<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \pmod{n}</span><script type="math/tex">a^{n - 1} \equiv 1 \pmod{n}</script></span>：
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span> <span class="nf">fermat</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
@@ -1030,13 +1030,13 @@
     <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<p>费马小定理的逆定理并不成立，换而言之，即使满足了<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \ (\mod n)</span><script type="math/tex">a^{n - 1} \equiv 1 \ (\mod n)</script></span>，<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>也不一定是质数。但是上面的做法中随机选择<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，大大降低了判断错误的概率。</p>
+<p>费马小定理的逆定理并不成立，换而言之，即使满足了<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \pmod{n}</span><script type="math/tex">a^{n - 1} \equiv 1 \pmod{n}</script></span>，<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>也不一定是质数。但是上面的做法中随机选择<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，大大降低了判断错误的概率。</p>
 <p>不过仍有一类数会导致错误判断：</p>
-<p>对于合数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，若对于所有与<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>互质的正整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \ (\mod n)</span><script type="math/tex">a^{n - 1} \equiv 1 \ (\mod n)</script></span>都成立，则这个合数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>称为卡迈克尔数（Carmichael），也称费马伪素数。</p>
+<p>对于合数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，若对于所有与<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>互质的正整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{n - 1} \equiv 1 \pmod{n}</span><script type="math/tex">a^{n - 1} \equiv 1 \pmod{n}</script></span>都成立，则这个合数<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>称为卡迈克尔数（Carmichael），也称费马伪素数。</p>
 <p>例如<span><span class="MathJax_Preview">561 = 3 \times 11 \times 17</span><script type="math/tex">561 = 3 \times 11 \times 17</script></span>就是一个卡迈克尔数。</p>
 <h5 id="_5">二次探测定理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
 <blockquote>
-<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为奇质数，则<span><span class="MathJax_Preview">x^{2} \equiv 1 \ (\mod p)</span><script type="math/tex">x^{2} \equiv 1 \ (\mod p)</script></span>的解为<span><span class="MathJax_Preview">x = 1</span><script type="math/tex">x = 1</script></span>或<span><span class="MathJax_Preview">x = p - 1</span><script type="math/tex">x = p - 1</script></span>。</p>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为奇质数，则<span><span class="MathJax_Preview">x^{2} \equiv 1 \pmod{p}</span><script type="math/tex">x^{2} \equiv 1 \pmod{p}</script></span>的解为<span><span class="MathJax_Preview">x = 1</span><script type="math/tex">x = 1</script></span>或<span><span class="MathJax_Preview">x = p - 1</span><script type="math/tex">x = p - 1</script></span>。</p>
 </blockquote>
 <p>我们可以结合费马小定理和二次探测定理：</p>
 <p>将<span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span>分解为<span><span class="MathJax_Preview">n - 1 = u \times 2^{t}</span><script type="math/tex">n - 1 = u \times 2^{t}</script></span>，<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>为奇数。不断平方<span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span>，如果有非平凡平方根那么就不是质数：
@@ -1123,19 +1123,19 @@
 <h2 id="_10">最大公约数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>最大公约数即为Greatest Common Divisor，常缩写为GCD。</p>
 <p>最大公约数是指一组数中，每一个数都同时拥有的最大的约数。</p>
-<p>若<span><span class="MathJax_Preview">gcd(a, b) = 1</span><script type="math/tex">gcd(a, b) = 1</script></span>，我们称<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>与<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>互质。</p>
+<p>若<span><span class="MathJax_Preview">\gcd(a, b) = 1</span><script type="math/tex">\gcd(a, b) = 1</script></span>，我们称<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>与<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>互质。</p>
 <h3 id="_11">欧几里得算法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>如果我们已知两个数<span><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>，如何求它们的最大公约数呢？</p>
 <p>不妨设<span><span class="MathJax_Preview">a &gt; b</span><script type="math/tex">a > b</script></span>，</p>
 <p>若<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>为<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>的约数，那么<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>就是两者的最大公约数；</p>
 <p>若<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>不能整除<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，即<span><span class="MathJax_Preview">a = k b + c \ (c &lt; b)</span><script type="math/tex">a = k b + c \ (c < b)</script></span>时：</p>
-<p>显然<span><span class="MathJax_Preview">c = a \mod b</span><script type="math/tex">c = a \mod b</script></span>，设<span><span class="MathJax_Preview">d \mid a, d \mid b</span><script type="math/tex">d \mid a, d \mid b</script></span>，则<span><span class="MathJax_Preview">c = a - k b, \frac{c}{d} = \frac{a}{d} - k \frac{b}{d}</span><script type="math/tex">c = a - k b, \frac{c}{d} = \frac{a}{d} - k \frac{b}{d}</script></span>。易知<span><span class="MathJax_Preview">\frac{c}{d}</span><script type="math/tex">\frac{c}{d}</script></span>为整数，即<span><span class="MathJax_Preview">d \mid c</span><script type="math/tex">d \mid c</script></span>。所以<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>和<span><span class="MathJax_Preview">a \mod b</span><script type="math/tex">a \mod b</script></span>的公约数。</p>
-<p>反过来，设<span><span class="MathJax_Preview">d \mid b, d \mid (a \mod b)</span><script type="math/tex">d \mid b, d \mid (a \mod b)</script></span>，同样得出以下式子<span><span class="MathJax_Preview">\frac{a \mod b}{d} = \frac{a}{d} - k \frac{b}{d}, \frac{a}{d} = \frac{a \mod b}{d} + k \frac{b}{d}</span><script type="math/tex">\frac{a \mod b}{d} = \frac{a}{d} - k \frac{b}{d}, \frac{a}{d} = \frac{a \mod b}{d} + k \frac{b}{d}</script></span>。因为右边为整数，所以<span><span class="MathJax_Preview">\frac{a}{d}</span><script type="math/tex">\frac{a}{d}</script></span>也是整数，即<span><span class="MathJax_Preview">d \mid a</span><script type="math/tex">d \mid a</script></span>。因此<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>和<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>的公约数。</p>
-<p>因<span><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>与<span><span class="MathJax_Preview">b, a \mod b</span><script type="math/tex">b, a \mod b</script></span>的公约数相等，两者的最大公约数也必然相等。</p>
+<p>显然<span><span class="MathJax_Preview">c = a \bmod b</span><script type="math/tex">c = a \bmod b</script></span>，设<span><span class="MathJax_Preview">d \mid a, d \mid b</span><script type="math/tex">d \mid a, d \mid b</script></span>，则<span><span class="MathJax_Preview">c = a - k b, \frac{c}{d} = \frac{a}{d} - k \frac{b}{d}</span><script type="math/tex">c = a - k b, \frac{c}{d} = \frac{a}{d} - k \frac{b}{d}</script></span>。易知<span><span class="MathJax_Preview">\frac{c}{d}</span><script type="math/tex">\frac{c}{d}</script></span>为整数，即<span><span class="MathJax_Preview">d \mid c</span><script type="math/tex">d \mid c</script></span>。所以<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>和<span><span class="MathJax_Preview">a \bmod b</span><script type="math/tex">a \bmod b</script></span>的公约数。</p>
+<p>反过来，设<span><span class="MathJax_Preview">d \mid b, d \mid (a \bmod b)</span><script type="math/tex">d \mid b, d \mid (a \bmod b)</script></span>，同样得出以下式子<span><span class="MathJax_Preview">\frac{a \bmod b}{d} = \frac{a}{d} - k \frac{b}{d}, \frac{a}{d} = \frac{a \bmod b}{d} + k \frac{b}{d}</span><script type="math/tex">\frac{a \bmod b}{d} = \frac{a}{d} - k \frac{b}{d}, \frac{a}{d} = \frac{a \bmod b}{d} + k \frac{b}{d}</script></span>。因为右边为整数，所以<span><span class="MathJax_Preview">\frac{a}{d}</span><script type="math/tex">\frac{a}{d}</script></span>也是整数，即<span><span class="MathJax_Preview">d \mid a</span><script type="math/tex">d \mid a</script></span>。因此<span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>是<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>和<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>的公约数。</p>
+<p>因<span><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>与<span><span class="MathJax_Preview">b, a \bmod b</span><script type="math/tex">b, a \bmod b</script></span>的公约数相等，两者的最大公约数也必然相等。</p>
 <p>所以得到式子：</p>
 <div>
-<div class="MathJax_Preview">\gcd(a, b) = \gcd(b, a \mod b)</div>
-<script type="math/tex; mode=display">\gcd(a, b) = \gcd(b, a \mod b)</script>
+<div class="MathJax_Preview">\gcd(a, b) = \gcd(b, a \bmod b)</div>
+<script type="math/tex; mode=display">\gcd(a, b) = \gcd(b, a \bmod b)</script>
 </div>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1148,10 +1148,10 @@
 <p>以上算法为欧几里得算法（Euclidean Algorithm）。</p>
 <h3 id="_12">扩展欧几里得算法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>扩展欧几里得算法（Extended Euclidean Algorithm, EXGCD），常用于求<span><span class="MathJax_Preview">a x + b y = \gcd(a, b)</span><script type="math/tex">a x + b y = \gcd(a, b)</script></span>的一组可行解。</p>
-<p>设<span><span class="MathJax_Preview">a x_{1} + b y_{1} = \gcd(a, b), b x_{2} + (a \mod b) y_{2} = \gcd(b, a \mod b)</span><script type="math/tex">a x_{1} + b y_{1} = \gcd(a, b), b x_{2} + (a \mod b) y_{2} = \gcd(b, a \mod b)</script></span>，</p>
-<p>由欧几里得定理可知：<span><span class="MathJax_Preview">\gcd(a, b) = \gcd(b, a \mod b)</span><script type="math/tex">\gcd(a, b) = \gcd(b, a \mod b)</script></span>，</p>
-<p>所以<span><span class="MathJax_Preview">a x_{1} + b y_{1} = b x_{2} + (a \mod b) y_{2}</span><script type="math/tex">a x_{1} + b y_{1} = b x_{2} + (a \mod b) y_{2}</script></span>。</p>
-<p>又因<span><span class="MathJax_Preview">a \mod b = a - (\lfloor \frac{a}{b} \rfloor \times b)</span><script type="math/tex">a \mod b = a - (\lfloor \frac{a}{b} \rfloor \times b)</script></span>，</p>
+<p>设<span><span class="MathJax_Preview">a x_{1} + b y_{1} = \gcd(a, b), b x_{2} + (a \bmod b) y_{2} = \gcd(b, a \bmod b)</span><script type="math/tex">a x_{1} + b y_{1} = \gcd(a, b), b x_{2} + (a \bmod b) y_{2} = \gcd(b, a \bmod b)</script></span>，</p>
+<p>由欧几里得定理可知：<span><span class="MathJax_Preview">\gcd(a, b) = \gcd(b, a \bmod b)</span><script type="math/tex">\gcd(a, b) = \gcd(b, a \bmod b)</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">a x_{1} + b y_{1} = b x_{2} + (a \bmod b) y_{2}</span><script type="math/tex">a x_{1} + b y_{1} = b x_{2} + (a \bmod b) y_{2}</script></span>。</p>
+<p>又因<span><span class="MathJax_Preview">a \bmod b = a - (\lfloor \frac{a}{b} \rfloor \times b)</span><script type="math/tex">a \bmod b = a - (\lfloor \frac{a}{b} \rfloor \times b)</script></span>，</p>
 <p>所以<span><span class="MathJax_Preview">a x_{1} + b y_{1} = b x_{2} + (a - (\lfloor \frac{a}{b} \rfloor \times b)) y_{2}</span><script type="math/tex">a x_{1} + b y_{1} = b x_{2} + (a - (\lfloor \frac{a}{b} \rfloor \times b)) y_{2}</script></span>。</p>
 <p><span><span class="MathJax_Preview">a x_{1} + b y_{1} = a y_{2} + b x_{2} - \lfloor \frac{a}{b} \rfloor \times b y_{2} = a y_{2} + b (x_{2} - \lfloor \frac{a}{b} \rfloor y_{2})</span><script type="math/tex">a x_{1} + b y_{1} = a y_{2} + b x_{2} - \lfloor \frac{a}{b} \rfloor \times b y_{2} = a y_{2} + b (x_{2} - \lfloor \frac{a}{b} \rfloor y_{2})</script></span>，</p>
 <p>所以<span><span class="MathJax_Preview">x_{1} = y_{2}, y_{1} = x_{2} - \lfloor \frac{a}{b} \rfloor y_{2}</span><script type="math/tex">x_{1} = y_{2}, y_{1} = x_{2} - \lfloor \frac{a}{b} \rfloor y_{2}</script></span>。</p>
@@ -1170,11 +1170,11 @@
 <span class="p">}</span>
 </code></pre></div></p>
 <h4 id="_13">线性同余方程<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<p>线性同余方程是最基础的同余方程，其未知数次数为一次，即形如<span><span class="MathJax_Preview">a x \equiv b \ (\mod c)</span><script type="math/tex">a x \equiv b \ (\mod c)</script></span>的方程。</p>
-<p><span><span class="MathJax_Preview">a x \equiv b \ (\mod c)</span><script type="math/tex">a x \equiv b \ (\mod c)</script></span>的本质其实就是<span><span class="MathJax_Preview">a x + c y = b</span><script type="math/tex">a x + c y = b</script></span>，根据裴蜀定理，当且仅当<span><span class="MathJax_Preview">\gcd(a, c) \mid b</span><script type="math/tex">\gcd(a, c) \mid b</script></span>时该方程存在整数解。</p>
+<p>线性同余方程是最基础的同余方程，其未知数次数为一次，即形如<span><span class="MathJax_Preview">a x \equiv b \pmod{c}</span><script type="math/tex">a x \equiv b \pmod{c}</script></span>的方程。</p>
+<p><span><span class="MathJax_Preview">a x \equiv b \pmod{c}</span><script type="math/tex">a x \equiv b \pmod{c}</script></span>的本质其实就是<span><span class="MathJax_Preview">a x + c y = b</span><script type="math/tex">a x + c y = b</script></span>，根据裴蜀定理，当且仅当<span><span class="MathJax_Preview">\gcd(a, c) \mid b</span><script type="math/tex">\gcd(a, c) \mid b</script></span>时该方程存在整数解。</p>
 <p>我们可以先用扩展欧几里得算法求出一组方程<span><span class="MathJax_Preview">a x_{0} + c y_{0} = \gcd(a, c)</span><script type="math/tex">a x_{0} + c y_{0} = \gcd(a, c)</script></span>的解<span><span class="MathJax_Preview">x_{0}, y_{0}</span><script type="math/tex">x_{0}, y_{0}</script></span>，然后两边同时除以<span><span class="MathJax_Preview">\gcd(a, c)</span><script type="math/tex">\gcd(a, c)</script></span>并乘上<span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，也就是<span><span class="MathJax_Preview">\frac{a b x_{0}}{\gcd(a, c)} + \frac{b c y_{0}}{\gcd(a, c)} = b</span><script type="math/tex">\frac{a b x_{0}}{\gcd(a, c)} + \frac{b c y_{0}}{\gcd(a, c)} = b</script></span>，我们就得到了方程的一组特解。</p>
 <p>此外，若<span><span class="MathJax_Preview">x_{0}, y_{0}</span><script type="math/tex">x_{0}, y_{0}</script></span>是方程<span><span class="MathJax_Preview">a x + c y = b</span><script type="math/tex">a x + c y = b</script></span>的解，那么该方程的任意解可表示为<span><span class="MathJax_Preview">x = x_{0} + c t, y = y_{0} - a t</span><script type="math/tex">x = x_{0} + c t, y = y_{0} - a t</script></span>，对任意整数<span><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>都成立。</p>
-<p>这样，我们就能得到所有解了。但是，题目往往都会让我们求最小正整数解，方法很简单：<span><span class="MathJax_Preview">t = \frac{c}{\gcd(a, c)}, x = (x \mod t + t) \mod t</span><script type="math/tex">t = \frac{c}{\gcd(a, c)}, x = (x \mod t + t) \mod t</script></span>。</p>
+<p>这样，我们就能得到所有解了。但是，题目往往都会让我们求最小正整数解，方法很简单：<span><span class="MathJax_Preview">t = \frac{c}{\gcd(a, c)}, x = (x \bmod t + t) \bmod t</span><script type="math/tex">t = \frac{c}{\gcd(a, c)}, x = (x \bmod t + t) \bmod t</script></span>。</p>
 <p>代码：
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">eq</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1187,7 +1187,7 @@
 <span class="p">}</span>
 </code></pre></div></p>
 <h4 id="_14">乘法逆元<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>如果一个线性同余方程<span><span class="MathJax_Preview">a x \equiv 1 \ (\mod p)</span><script type="math/tex">a x \equiv 1 \ (\mod p)</script></span>，那么<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>称为<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>模<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>意义下的逆元，记作<span><span class="MathJax_Preview">a^{-1}</span><script type="math/tex">a^{-1}</script></span>。</p>
+<p>如果一个线性同余方程<span><span class="MathJax_Preview">a x \equiv 1 \pmod{p}</span><script type="math/tex">a x \equiv 1 \pmod{p}</script></span>，那么<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>称为<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>模<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>意义下的逆元，记作<span><span class="MathJax_Preview">a^{-1}</span><script type="math/tex">a^{-1}</script></span>。</p>
 <h5 id="_15">扩展欧几里得<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
 <p>用扩展欧几里得的解法和解线性同余方程类似，就不多解释了。</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">inv</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
@@ -1201,13 +1201,13 @@
 <p>这个方法需要运用费马小定理。</p>
 <p>费马小定理中：</p>
 <blockquote>
-<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意与<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>互质的整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \ (\mod p)</span><script type="math/tex">a^{p - 1} \equiv 1 \ (\mod p)</script></span>。</p>
+<p>若<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>为质数，对于任意与<span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>互质的整数<span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，<span><span class="MathJax_Preview">a^{p - 1} \equiv 1 \pmod{p}</span><script type="math/tex">a^{p - 1} \equiv 1 \pmod{p}</script></span>。</p>
 </blockquote>
 <p>我们发现，右边刚好为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
-<p>因为<span><span class="MathJax_Preview">a x \equiv 1 \ (\mod p)</span><script type="math/tex">a x \equiv 1 \ (\mod p)</script></span>，</p>
-<p>所以<span><span class="MathJax_Preview">a x \equiv a^{p - 1} \ (\mod p)</span><script type="math/tex">a x \equiv a^{p - 1} \ (\mod p)</script></span>，</p>
-<p>所以<span><span class="MathJax_Preview">x \equiv a^{p - 2} \ (\mod p)</span><script type="math/tex">x \equiv a^{p - 2} \ (\mod p)</script></span>。</p>
-<p>然后我们就可以用快速幂求出<span><span class="MathJax_Preview">a^{p - 2} \mod p</span><script type="math/tex">a^{p - 2} \mod p</script></span>的值了，结果就是它的逆元。</p>
+<p>因为<span><span class="MathJax_Preview">a x \equiv 1 \pmod{p}</span><script type="math/tex">a x \equiv 1 \pmod{p}</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">a x \equiv a^{p - 1} \pmod{p}</span><script type="math/tex">a x \equiv a^{p - 1} \pmod{p}</script></span>，</p>
+<p>所以<span><span class="MathJax_Preview">x \equiv a^{p - 2} \pmod{p}</span><script type="math/tex">x \equiv a^{p - 2} \pmod{p}</script></span>。</p>
+<p>然后我们就可以用快速幂求出<span><span class="MathJax_Preview">a^{p - 2} \bmod p</span><script type="math/tex">a^{p - 2} \bmod p</script></span>的值了，结果就是它的逆元。</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">inv</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">power</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -1220,16 +1220,16 @@
 
 <h5 id="_17">线性算法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
 <p>对于求一连串数字的逆元，就只能用线性算法（<span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>）。</p>
-<p>首先，显然地，<span><span class="MathJax_Preview">1^{-1} \equiv 1 \ (\mod p)</span><script type="math/tex">1^{-1} \equiv 1 \ (\mod p)</script></span>，</p>
+<p>首先，显然地，<span><span class="MathJax_Preview">1^{-1} \equiv 1 \pmod{p}</span><script type="math/tex">1^{-1} \equiv 1 \pmod{p}</script></span>，</p>
 <p>然后设<span><span class="MathJax_Preview">p = k i + r \ (1 &lt; r &lt; i &lt; p)</span><script type="math/tex">p = k i + r \ (1 < r < i < p)</script></span>，</p>
-<p>将这个式子放到<span><span class="MathJax_Preview">\mod p</span><script type="math/tex">\mod p</script></span>意义下就会得到：<span><span class="MathJax_Preview">k i + r \equiv 0 \ (\mod p)</span><script type="math/tex">k i + r \equiv 0 \ (\mod p)</script></span>。</p>
-<p>两边同时乘<span><span class="MathJax_Preview">i^{-1}, r^{-1}</span><script type="math/tex">i^{-1}, r^{-1}</script></span>，得到<span><span class="MathJax_Preview">k r^{-1} + i^{-1} \equiv 0 \ (\mod p)</span><script type="math/tex">k r^{-1} + i^{-1} \equiv 0 \ (\mod p)</script></span>，</p>
-<p><span><span class="MathJax_Preview">i^{-1} \equiv -k r^{-1} \ (\mod p)</span><script type="math/tex">i^{-1} \equiv -k r^{-1} \ (\mod p)</script></span>，</p>
-<p><span><span class="MathJax_Preview">i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \mod i)^{-1} \ (\mod p)</span><script type="math/tex">i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \mod i)^{-1} \ (\mod p)</script></span>。</p>
+<p>将这个式子放到<span><span class="MathJax_Preview">\bmod p</span><script type="math/tex">\bmod p</script></span>意义下就会得到：<span><span class="MathJax_Preview">k i + r \equiv 0 \pmod{p}</span><script type="math/tex">k i + r \equiv 0 \pmod{p}</script></span>。</p>
+<p>两边同时乘<span><span class="MathJax_Preview">i^{-1}, r^{-1}</span><script type="math/tex">i^{-1}, r^{-1}</script></span>，得到<span><span class="MathJax_Preview">k r^{-1} + i^{-1} \equiv 0 \pmod{p}</span><script type="math/tex">k r^{-1} + i^{-1} \equiv 0 \pmod{p}</script></span>，</p>
+<p><span><span class="MathJax_Preview">i^{-1} \equiv -k r^{-1} \pmod{p}</span><script type="math/tex">i^{-1} \equiv -k r^{-1} \pmod{p}</script></span>，</p>
+<p><span><span class="MathJax_Preview">i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \bmod i)^{-1} \pmod{p}</span><script type="math/tex">i^{-1} \equiv -\lfloor \frac{p}{i} \rfloor (p \bmod i)^{-1} \pmod{p}</script></span>。</p>
 <p>然后我们就可以从前面的逆元推出后面的了：</p>
 <div>
-<div class="MathJax_Preview">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \mod i} \mod p</div>
-<script type="math/tex; mode=display">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \mod i} \mod p</script>
+<div class="MathJax_Preview">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \bmod i} \bmod p</div>
+<script type="math/tex; mode=display">\operatorname{inv}_{i} = -\lfloor \frac{p}{i} \rfloor \operatorname{inv}_{p \bmod i} \bmod p</script>
 </div>
 <p>代码很短：
 <div class="highlight"><pre><span></span><code><span class="n">inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>

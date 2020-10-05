@@ -728,33 +728,33 @@
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-NOT&amp;\ 0111 (= (7)_{10})\\
+\rm{NOT}&amp;\ 0111 (= (7)_{10}) \\
 = &amp;\ 1000 (= (8)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-NOT&\ 0111 (= (7)_{10})\\
+\rm{NOT}&\ 0111 (= (7)_{10}) \\
 = &\ 1000 (= (8)_{10})
 \end{aligned}
 </script>
 </div>
-<p>非运算的结果是值的二进制补码减一，即<span><span class="MathJax_Preview">NOT\ x =  -x - 1</span><script type="math/tex">NOT\ x =  -x - 1</script></span>。</p>
+<p>非运算的结果是值的二进制补码减一，即<span><span class="MathJax_Preview">\rm{NOT}\ x =  -x - 1</span><script type="math/tex">\rm{NOT}\ x =  -x - 1</script></span>。</p>
 <h2 id="and">与（AND）<a class="headerlink" href="#and" title="Permanent link">&para;</a></h2>
 <p>与运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑与运算，相当于将它们相乘。若两个bit都为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，则结果为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>（<span><span class="MathJax_Preview">1 \times 1 =  1</span><script type="math/tex">1 \times 1 =  1</script></span>）；否则结果为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>（<span><span class="MathJax_Preview">1 \times 0 =  0, 0 \times 0 =  0</span><script type="math/tex">1 \times 0 =  0, 0 \times 0 =  0</script></span>）。</p>
 <p>在大多数编程语言中，其符号为<code>&amp;</code>。</p>
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0101 (= (5)_{10})\\
-AND \ &amp; 0011 (= (3)_{10})\\
+\ &amp; 0101 (= (5)_{10}) \\
+\rm{AND} \ &amp; 0011 (= (3)_{10}) \\
 = \ &amp; 0001 (= (1)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0101 (= (5)_{10})\\
-AND \ & 0011 (= (3)_{10})\\
+\ & 0101 (= (5)_{10}) \\
+\rm{AND} \ & 0011 (= (3)_{10}) \\
 = \ & 0001 (= (1)_{10})
 \end{aligned}
 </script>
@@ -764,15 +764,15 @@ AND \ & 0011 (= (3)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0011 (= (3)_{10})\\
-AND \ &amp; 0010 (= (2)_{10})\\
+\ &amp; 0011 (= (3)_{10}) \\
+\rm{AND} \ &amp; 0010 (= (2)_{10}) \\
 = \ &amp; 0010 (= (2)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0011 (= (3)_{10})\\
-AND \ & 0010 (= (2)_{10})\\
+\ & 0011 (= (3)_{10}) \\
+\rm{AND} \ & 0010 (= (2)_{10}) \\
 = \ & 0010 (= (2)_{10})
 \end{aligned}
 </script>
@@ -782,15 +782,15 @@ AND \ & 0010 (= (2)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0110 (= (6)_{10})\\
-AND \ &amp; 1011 (= (11)_{10})\\
+\ &amp; 0110 (= (6)_{10}) \\
+\rm{AND} \ &amp; 1011 (= (11)_{10}) \\
 = \ &amp; 0010 (= (2)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10})\\
-AND \ & 1011 (= (11)_{10})\\
+\ & 0110 (= (6)_{10}) \\
+\rm{AND} \ & 1011 (= (11)_{10}) \\
 = \ & 0010 (= (2)_{10})
 \end{aligned}
 </script>
@@ -799,35 +799,35 @@ AND \ & 1011 (= (11)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0110 (= (6)_{10})\\
-AND \ &amp; 0001 (= (1)_{10})\\
+\ &amp; 0110 (= (6)_{10}) \\
+\rm{AND} \ &amp; 0001 (= (1)_{10}) \\
 = \ &amp; 0000 (= (0)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10})\\
-AND \ & 0001 (= (1)_{10})\\
+\ & 0110 (= (6)_{10}) \\
+\rm{AND} \ & 0001 (= (1)_{10}) \\
 = \ & 0000 (= (0)_{10})
 \end{aligned}
 </script>
 </div>
-<p>因为<span><span class="MathJax_Preview">6\ AND\ 1 =  0</span><script type="math/tex">6\ AND\ 1 =  0</script></span>，所以<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>可以被<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>整除，因此<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>是偶数。</p>
+<p>因为<span><span class="MathJax_Preview">6\ \rm{AND}\ 1 =  0</span><script type="math/tex">6\ \rm{AND}\ 1 =  0</script></span>，所以<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>可以被<span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>整除，因此<span><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span>是偶数。</p>
 <h2 id="or">或（OR）<a class="headerlink" href="#or" title="Permanent link">&para;</a></h2>
 <p>或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑或运算。若两个bit都为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，则结果为<span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>；否则结果为<span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <p>在大多数编程语言中，其符号为<code>|</code>。</p>
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0101 (= (5)_{10})\\
-OR \ &amp; 0011 (= (3)_{10})\\
+\ &amp; 0101 (= (5)_{10}) \\
+\rm{OR} \ &amp; 0011 (= (3)_{10}) \\
 = \  &amp; 0111 (= (7)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0101 (= (5)_{10})\\
-OR \ & 0011 (= (3)_{10})\\
+\ & 0101 (= (5)_{10}) \\
+\rm{OR} \ & 0011 (= (3)_{10}) \\
 = \  & 0111 (= (7)_{10})
 \end{aligned}
 </script>
@@ -836,15 +836,15 @@ OR \ & 0011 (= (3)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0110 (= (6)_{10})\\
-OR \ &amp; 1000 (= (8)_{10})\\
+\ &amp; 0110 (= (6)_{10}) \\
+\rm{OR} \ &amp; 1000 (= (8)_{10}) \\
 = \ &amp; 1110 (= (14)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10})\\
-OR \ & 1000 (= (8)_{10})\\
+\ & 0110 (= (6)_{10}) \\
+\rm{OR} \ & 1000 (= (8)_{10}) \\
 = \ & 1110 (= (14)_{10})
 \end{aligned}
 </script>
@@ -855,15 +855,15 @@ OR \ & 1000 (= (8)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0101 (= (5)_{10})\\
-XOR \ &amp; 0011 (= (3)_{10})\\
+\ &amp; 0101 (= (5)_{10}) \\
+\rm{XOR} \ &amp; 0011 (= (3)_{10}) \\
 = \ &amp; 0110 (= (6)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0101 (= (5)_{10})\\
-XOR \ & 0011 (= (3)_{10})\\
+\ & 0101 (= (5)_{10}) \\
+\rm{XOR} \ & 0011 (= (3)_{10}) \\
 = \ & 0110 (= (6)_{10})
 \end{aligned}
 </script>
@@ -872,15 +872,15 @@ XOR \ & 0011 (= (3)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-\ &amp; 0110 (= (6)_{10})\\
-XOR \ &amp; 0101 (= (5)_{10})\\
+\ &amp; 0110 (= (6)_{10}) \\
+\rm{XOR} \ &amp; 0101 (= (5)_{10}) \\
 = \ &amp; 0011 (= (3)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10})\\
-XOR \ & 0101 (= (5)_{10})\\
+\ & 0110 (= (6)_{10}) \\
+\rm{XOR} \ & 0101 (= (5)_{10}) \\
 = \ & 0011 (= (3)_{10})
 \end{aligned}
 </script>
@@ -891,18 +891,18 @@ XOR \ & 0101 (= (5)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-NOT\ x &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \mod 2 + 1) \mod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x\\
-x\ AND\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)\\
-x\ OR\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2)\\
-x\ XOR\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \mod 2)
+\rm{NOT}\ x &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2 + 1) \bmod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x \\
+x\ \rm{AND}\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2) \\
+x\ \rm{OR}\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) \\
+x\ \rm{XOR}\ y &amp;= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \bmod 2)
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-NOT\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \mod 2 + 1) \mod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x\\
-x\ AND\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)\\
-x\ OR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \mod 2) (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2)\\
-x\ XOR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \mod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \mod 2)) \mod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \mod 2)
+\rm{NOT}\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2 + 1) \bmod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x \\
+x\ \rm{AND}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2) \\
+x\ \rm{OR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) \\
+x\ \rm{XOR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \bmod 2)
 \end{aligned}
 </script>
 </div>
@@ -914,13 +914,13 @@ x\ XOR\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \m
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-LEFT\ SHIFT \ &amp; 00010111 (= (23)_{10})\\
+\rm{LEFT\ SHIFT} \ &amp; 00010111 (= (23)_{10}) \\
 = \ &amp; 00101110 (= (46)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-LEFT\ SHIFT \ & 00010111 (= (23)_{10})\\
+\rm{LEFT\ SHIFT} \ & 00010111 (= (23)_{10}) \\
 = \ & 00101110 (= (46)_{10})
 \end{aligned}
 </script>
@@ -928,13 +928,13 @@ LEFT\ SHIFT \ & 00010111 (= (23)_{10})\\
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-RIGHT\ SHIFT\ &amp; 10010111 (= (-105)_{10})\\
+\rm{RIGHT\ SHIFT} \ &amp; 10010111 (= (-105)_{10}) \\
 = \ &amp; 11001011 (= (-53)_{10})
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-RIGHT\ SHIFT\ & 10010111 (= (-105)_{10})\\
+\rm{RIGHT\ SHIFT} \ & 10010111 (= (-105)_{10}) \\
 = \ & 11001011 (= (-53)_{10})
 \end{aligned}
 </script>
