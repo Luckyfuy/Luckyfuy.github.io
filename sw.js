@@ -30,7 +30,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2020/10/01/LaTeX-Math/');
 
-  precacheUrls.push('/2019/11/03/PIP-Mirror/');
+  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
 
   precacheUrls.push('/2019/03/22/Learn-Python/');
 

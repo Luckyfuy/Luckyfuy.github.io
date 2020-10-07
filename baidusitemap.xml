@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://luckyfuy.top/2019/03/30/Python-Fundamentals/</loc>
+    <lastmod>2020-10-07</lastmod>
+  </url>  <url>
+    <loc>https://luckyfuy.top/2020/10/01/LaTeX-Math/</loc>
+    <lastmod>2020-10-07</lastmod>
+  </url>  <url>
     <loc>https://luckyfuy.top/2019/10/02/Prime-And-GCD/</loc>
     <lastmod>2020-10-05</lastmod>
   </url>  <url>
     <loc>https://luckyfuy.top/2019/08/28/Bitwise-Operation/</loc>
     <lastmod>2020-10-05</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2020/10/01/LaTeX-Math/</loc>
-    <lastmod>2020-10-04</lastmod>
   </url>  <url>
     <loc>https://luckyfuy.top/2019/11/24/Proofs-in-Triangle/</loc>
     <lastmod>2020-10-01</lastmod>
@@ -39,9 +42,6 @@
   </url>  <url>
     <loc>https://luckyfuy.top/2019/12/13/The-Prophet/</loc>
     <lastmod>2019-12-13</lastmod>
-  </url>  <url>
-    <loc>https://luckyfuy.top/2019/03/30/Python-Fundamentals/</loc>
-    <lastmod>2019-12-07</lastmod>
   </url>  <url>
     <loc>https://luckyfuy.top/2019/03/22/Learn-Python/</loc>
     <lastmod>2019-12-07</lastmod>

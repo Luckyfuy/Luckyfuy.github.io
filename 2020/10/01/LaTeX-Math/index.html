@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="前言$\LaTeX$是一种强大的排版系统，非常适用于生成高印刷质量的科技和数学类文档。其中，$\LaTeX$最强大的一点在于对数学符号和公式的排版，而且由于大多数Markdown编辑器都支持插入$\LaTeX$公式，因此学会$\LaTeX$可以方便许多。 推荐阅读一份（不太）简短的LATEX 2ε介绍。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-10-04T12:36:05.522Z">
+<meta property="og:updated_time" content="2020-10-07T07:28:16.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LaTeX数学公式">
 <meta name="twitter:description" content="前言$\LaTeX$是一种强大的排版系统，非常适用于生成高印刷质量的科技和数学类文档。其中，$\LaTeX$最强大的一点在于对数学符号和公式的排版，而且由于大多数Markdown编辑器都支持插入$\LaTeX$公式，因此学会$\LaTeX$可以方便许多。 推荐阅读一份（不太）简短的LATEX 2ε介绍。">
@@ -474,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  1.8k
                 </span>
               
 
@@ -490,7 +490,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  8
                 </span>
               
             </div>
@@ -1260,7 +1260,340 @@ x \equiv a \pmod{b}</script><h2 id="巨算符"><a href="#巨算符" class="heade
 </table>
 </div>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\sum_&#123;i=1&#125;^&#123;n&#125; \qquad \prod_&#123;\epsilon&#125; \qquad \int_&#123;0&#125;^&#123;\frac&#123;\pi&#125;&#123;2&#125;&#125; \qquad \oint_&#123;0&#125;^&#123;\frac&#123;\pi&#125;&#123;2&#125;&#125;</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">\sum_{i=1}^{n} \qquad \prod_{\epsilon} \qquad \int_{0}^{\frac{\pi}{2}} \qquad \oint_{0}^{\frac{\pi}{2}}</script>
+<script type="math/tex; mode=display">\sum_{i=1}^{n} \qquad \prod_{\epsilon} \qquad \int_{0}^{\frac{\pi}{2}} \qquad \oint_{0}^{\frac{\pi}{2}}</script><h2 id="数学重音和上下括号"><a href="#数学重音和上下括号" class="headerlink" title="数学重音和上下括号"></a>数学重音和上下括号</h2><p>数学符号可以像文字一样加重音，比如求导符号$\dot{r}$（<code>\dot{r}</code>）、$\ddot{r}$（<code>\ddot{r}</code>）、表示向量的箭头$\vec{r}$（<code>\vec{r}</code>）、表示单位向量的符号$\hat{\bf{e}}$（<code>\hat{\bf{e}}</code>）等。<br>常用重音符号见下表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\hat{a}$</td>
+<td style="text-align:center"><code>\hat{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\check{a}$</td>
+<td style="text-align:center"><code>\check{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\tilde{a}$</td>
+<td style="text-align:center"><code>\tilde{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\acute{a}$</td>
+<td style="text-align:center"><code>\acute{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\grave{a}$</td>
+<td style="text-align:center"><code>\grave{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\breve{a}$</td>
+<td style="text-align:center"><code>\breve{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\bar{a}$</td>
+<td style="text-align:center"><code>\bar{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\vec{a}$</td>
+<td style="text-align:center"><code>\vec{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathring{a}$</td>
+<td style="text-align:center"><code>\mathring{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\dot{a}$</td>
+<td style="text-align:center"><code>\dot{a}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\ddot{a}$</td>
+<td style="text-align:center"><code>\ddot{a}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>多个字符同样能加重音符号，例如直接画线的<code>\overline</code>和<code>\underline</code>命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\overline&#123;114 + 514&#125; = \underline&#123;\underline&#123;628&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<script type="math/tex; mode=display">\overline{114 + 514} = \underline{\underline{628}}</script><p>更多的重音符号见下表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\widehat{ABC}$</td>
+<td style="text-align:center"><code>\widehat{ABC}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\widetilde{ABC}$</td>
+<td style="text-align:center"><code>\widetilde{ABC}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\overrightarrow{AB}$</td>
+<td style="text-align:center"><code>\overrightarrow{AB}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\overleftarrow{AB}$</td>
+<td style="text-align:center"><code>\overleftarrow{AB}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code>\overbrace</code>和<code>\underbrace</code>命令用于生成上/下括号，并支持上/下标公式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\underbrace&#123;\overbrace&#123;1 + 1 + 4&#125;^&#123;\text&#123;いいよ&#125;&#125; + \overbrace&#123;5 + 1 + 4&#125;^&#123;\text&#123;こいよ&#125;&#125;&#125;_&#123;\text&#123;良い世！来いよ！&#125;&#125; = 16</span><br></pre></td></tr></table></figure></p>
+<script type="math/tex; mode=display">\underbrace{\overbrace{1 + 1 + 4}^{\text{いいよ}} + \overbrace{5 + 1 + 4}^{\text{こいよ}}}_{\text{良い世！来いよ！}} = 16</script><h2 id="箭头"><a href="#箭头" class="headerlink" title="箭头"></a>箭头</h2><p>常用箭头符号见下表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\gets$</td>
+<td style="text-align:center"><code>\leftarrow</code>或<code>\gets</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\to$</td>
+<td style="text-align:center"><code>\rightarrow</code>或<code>\to</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\leftrightarrow$</td>
+<td style="text-align:center"><code>\leftrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\longleftarrow$</td>
+<td style="text-align:center"><code>\longleftarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\longrightarrow$</td>
+<td style="text-align:center"><code>\longrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\longleftrightarrow$</td>
+<td style="text-align:center"><code>\longleftrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Leftarrow$</td>
+<td style="text-align:center"><code>\Leftarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Rightarrow$</td>
+<td style="text-align:center"><code>\Rightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Leftrightarrow$</td>
+<td style="text-align:center"><code>\Leftrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Longleftarrow$</td>
+<td style="text-align:center"><code>\Longleftarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Longrightarrow$</td>
+<td style="text-align:center"><code>\Longrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Longleftrightarrow$</td>
+<td style="text-align:center"><code>\Longleftrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\mapsto$</td>
+<td style="text-align:center"><code>\mapsto</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\longmapsto$</td>
+<td style="text-align:center"><code>\longmapsto</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\hookleftarrow$</td>
+<td style="text-align:center"><code>\hookleftarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\hookrightarrow$</td>
+<td style="text-align:center"><code>\hookrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\leftharpoonup$</td>
+<td style="text-align:center"><code>\leftharpoonup</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\rightharpoonup$</td>
+<td style="text-align:center"><code>\rightharpoonup</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\leftharpoondown$</td>
+<td style="text-align:center"><code>\leftharpoondown</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\rightharpoondown$</td>
+<td style="text-align:center"><code>\rightharpoondown</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\rightleftharpoons$</td>
+<td style="text-align:center"><code>\rightleftharpoons</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\iff$</td>
+<td style="text-align:center"><code>\iff</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\uparrow$</td>
+<td style="text-align:center"><code>\uparrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\downarrow$</td>
+<td style="text-align:center"><code>\downarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\updownarrow$</td>
+<td style="text-align:center"><code>\updownarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Uparrow$</td>
+<td style="text-align:center"><code>\Uparrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Downarrow$</td>
+<td style="text-align:center"><code>\Downarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Updownarrow$</td>
+<td style="text-align:center"><code>\Updownarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\nearrow$</td>
+<td style="text-align:center"><code>\nearrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\searrow$</td>
+<td style="text-align:center"><code>\searrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\swarrow$</td>
+<td style="text-align:center"><code>\swarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\nwarrow$</td>
+<td style="text-align:center"><code>\nwarrow</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="括号和定界符"><a href="#括号和定界符" class="headerlink" title="括号和定界符"></a>括号和定界符</h2><p>常用的括号和定界符见下表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$($</td>
+<td style="text-align:center"><code>(</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$)$</td>
+<td style="text-align:center"><code>)</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$[$</td>
+<td style="text-align:center"><code>[</code>或<code>\lbrack</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$]$</td>
+<td style="text-align:center"><code>]</code>或<code>\rbrack</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\{$</td>
+<td style="text-align:center"><code>\{</code>或<code>\lbrace</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\}$</td>
+<td style="text-align:center"><code>\}</code>或<code>\rbrace</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\vert$</td>
+<td style="text-align:center"><code>&#124;</code>或<code>\vert</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Vert$</td>
+<td style="text-align:center"><code>\&#124;</code>或<code>\Vert</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\langle$</td>
+<td style="text-align:center"><code>\langle</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\rangle$</td>
+<td style="text-align:center"><code>\rangle</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$/$</td>
+<td style="text-align:center"><code>/</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\backslash$</td>
+<td style="text-align:center"><code>\backslash</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\uparrow$</td>
+<td style="text-align:center"><code>\uparrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\downarrow$</td>
+<td style="text-align:center"><code>\downarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\updownarrow$</td>
+<td style="text-align:center"><code>\updownarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Uparrow$</td>
+<td style="text-align:center"><code>\Uparrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Downarrow$</td>
+<td style="text-align:center"><code>\Downarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Updownarrow$</td>
+<td style="text-align:center"><code>\Updownarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\lceil$</td>
+<td style="text-align:center"><code>\lceil</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\rceil$</td>
+<td style="text-align:center"><code>\rceil</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\lfloor$</td>
+<td style="text-align:center"><code>\lfloor</code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\rfloor$</td>
+<td style="text-align:center"><code>\rfloor</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code>\left</code>和<code>\right</code>命令会根据括号内的公式自动调节括号或定界符的大小。这两个命令必须成对使用，若只要用到其中一个时，另一个需要写成<code>\left.</code>或<code>\right.</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(\frac&#123;1&#125;&#123;x - 1&#125;)^&#123;2&#125; + 1 \qquad \left(\frac&#123;1&#125;&#123;x - 1&#125;\right)^&#123;2&#125; + 1 \\</span><br><span class="line">\left.\frac&#123;\partial f&#125;&#123;\partial t&#125;\right|_&#123;t=0&#125;</span><br></pre></td></tr></table></figure></p>
+<script type="math/tex; mode=display">
+(\frac{1}{x - 1})^{2} + 1 \qquad \left(\frac{1}{x - 1}\right)^{2} + 1 \\
+\left.\frac{\partial f}{\partial t}\right|_{t=0}</script>
       
     </div>
     
@@ -1822,7 +2155,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号"><span class="nav-number">2.</span> <span class="nav-text">符号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一般符号"><span class="nav-number">2.1.</span> <span class="nav-text">一般符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数、上下标和导数"><span class="nav-number">2.2.</span> <span class="nav-text">指数、上下标和导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分式和根式"><span class="nav-number">2.3.</span> <span class="nav-text">分式和根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系符"><span class="nav-number">2.4.</span> <span class="nav-text">关系符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算符"><span class="nav-number">2.5.</span> <span class="nav-text">算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#巨算符"><span class="nav-number">2.6.</span> <span class="nav-text">巨算符</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号"><span class="nav-number">2.</span> <span class="nav-text">符号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一般符号"><span class="nav-number">2.1.</span> <span class="nav-text">一般符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数、上下标和导数"><span class="nav-number">2.2.</span> <span class="nav-text">指数、上下标和导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分式和根式"><span class="nav-number">2.3.</span> <span class="nav-text">分式和根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系符"><span class="nav-number">2.4.</span> <span class="nav-text">关系符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算符"><span class="nav-number">2.5.</span> <span class="nav-text">算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#巨算符"><span class="nav-number">2.6.</span> <span class="nav-text">巨算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学重音和上下括号"><span class="nav-number">2.7.</span> <span class="nav-text">数学重音和上下括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#箭头"><span class="nav-number">2.8.</span> <span class="nav-text">箭头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#括号和定界符"><span class="nav-number">2.9.</span> <span class="nav-text">括号和定界符</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1905,7 +2238,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共244.3k字</span>
+  <span class="post-count">全站共244.8k字</span>
 </div>
         
 
@@ -2604,7 +2937,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1601910269348')
+  navigator.serviceWorker.register('/sw.js?t=1602058398881')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
