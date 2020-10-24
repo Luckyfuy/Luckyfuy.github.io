@@ -154,6 +154,11 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/c8GykghiXHLW2Cu.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/24/tAHziDYGrmfQT7y.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/24/Jk8gq7KHQGT3dwO.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/24/9rjnRmkuSVCvs3F.png">
+<meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
+<meta property="og:image" content="https://i.loli.net/2019/11/24/c8GykghiXHLW2Cu.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/c8GykghiXHLW2Cu.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/RrTBpkqHXZmahVn.png">
@@ -161,7 +166,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/11/24/O4IAKW3fdMmtxNP.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/58jnKqLtdfb7cPW.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/EXbJx8aznTWlrUs.png">
-<meta property="og:updated_time" content="2020-10-01T02:03:20.668Z">
+<meta property="og:updated_time" content="2020-10-24T12:30:04.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于三角形的一些证明">
 <meta name="twitter:description" content="这好像是全博客第一篇与文化课有点关系的…… （rgq：真好玩）">
@@ -484,7 +489,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  948
+                  1.2k
                 </span>
               
 
@@ -500,7 +505,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -524,7 +529,41 @@
         <p>这好像是全博客第一篇与文化课有点关系的……</p>
 <p><del>（rgq：真好玩）</del></p>
 <a id="more"></a>
-<h1 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h1><p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt=""></p>
+<h1 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h1><p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt=""></p>
+<p>如图，在$\triangle ABC$中，$BC = a, AC = b, AB = c$，$r$为$\triangle ABC$的外接圆半径，正弦定理有：</p>
+<script type="math/tex; mode=display">\frac{a}{\sin \angle A} = \frac{b}{\sin \angle B} = \frac{c}{\sin \angle C} = 2r</script><p>证明如下：</p>
+<p><img src="https://i.loli.net/2019/11/24/c8GykghiXHLW2Cu.png" alt=""><br>如图，过点$C$作$CD \perp AB$交$AB$于点$D$，$CD = h$。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\because \ & \sin \angle A = \frac{h}{b}, \sin \angle B = \frac{h}{a} \\
+\therefore \ & h = b \sin \angle A = a \sin \angle B \\
+\therefore \ & \frac{a}{\sin \angle A} = \frac{b}{\sin \angle B}
+\end{aligned}</script><p>同理：</p>
+<script type="math/tex; mode=display">\frac{b}{\sin \angle B} = \frac{c}{\sin \angle C}</script><p>作$\triangle ABC$的外接圆，设半径为$r$。</p>
+<ul>
+<li>$\angle A$为锐角时<br><img src="https://i.loli.net/2020/10/24/tAHziDYGrmfQT7y.png" alt=""></li>
+</ul>
+<p>根据圆周角定理，$\angle D = \angle A$<br>由于$CD$为外接圆直径，$\angle CBD = \frac{\pi}{2}$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\therefore \ & \sin \angle A = \sin \angle D = \frac{a}{2r} \\
+\therefore \ & \frac{a}{\sin \angle A} = 2r
+\end{aligned}</script><ul>
+<li>$\angle A$为直角时<br><img src="https://i.loli.net/2020/10/24/Jk8gq7KHQGT3dwO.png" alt=""></li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\because \ & BC = a = 2r, \sin \angle A = \sin \frac{\pi}{2} = 1 \\
+\therefore \ & \frac{a}{\sin \angle A} = 2r
+\end{aligned}</script><ul>
+<li>$\angle A$为钝角时<br><img src="https://i.loli.net/2020/10/24/9rjnRmkuSVCvs3F.png" alt=""></li>
+</ul>
+<p>由于$A, B, D, C$四点共圆，所以$\angle D + \angle A = 180^{\circ}$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\therefore \ & \sin \angle A = \sin \angle D = \frac{a}{2r} \\
+\therefore \ & \frac{a}{\sin \angle A} = 2r
+\end{aligned}</script><h1 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h1><p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt=""></p>
 <p>如图，在$\triangle ABC$中，$BC = a, AC = b, AB = c, \angle A = \alpha, \angle B = \beta, \angle C = \gamma$。<br>余弦定理：</p>
 <script type="math/tex; mode=display">c^{2} = a^{2} + b^{2} - 2ab \cos \gamma</script><p>同理：</p>
 <script type="math/tex; mode=display">b^{2} = c^{2} + a^{2} - 2ca \cos \beta</script><script type="math/tex; mode=display">a^{2} = b^{2} + c^{2} - 2bc \cos \alpha</script><p>证明如下：</p>
@@ -560,7 +599,7 @@ S &= \frac{c \cdot h}{2} \\
 &= \sqrt{\frac{c^{2}}{4} \cdot \frac{4s (s - a) (s - b) (s - c)}{c^{2}}} \\
 & = \sqrt{s (s - a) (s - b) (s - c)}
 \end{aligned}</script><h1 id="高线"><a href="#高线" class="headerlink" title="高线"></a>高线</h1><p><img src="https://i.loli.net/2019/11/24/RrTBpkqHXZmahVn.png" alt=""></p>
-<p>根据海伦公式，可以推出过以三角形三边$a, b, c$为底的高线$h_{a}, h_{b}, h_{c}$长度：</p>
+<p>根据海伦公式，可以推出以三角形三边$a, b, c$为底的高线$h_{a}, h_{b}, h_{c}$长度：</p>
 <script type="math/tex; mode=display">h_{a} = \frac{2 \sqrt{s (s - a) (s - b) (s - c)}}{a}</script><script type="math/tex; mode=display">h_{b} = \frac{2 \sqrt{s (s - a) (s - b) (s - c)}}{b}</script><script type="math/tex; mode=display">h_{c} = \frac{2 \sqrt{s (s - a) (s - b) (s - c)}}{c}</script><h1 id="中线"><a href="#中线" class="headerlink" title="中线"></a>中线</h1><p><img src="https://i.loli.net/2019/11/24/pPCrJK3S8RIyv47.png" alt=""></p>
 <p>平分三角形三边$a, b, c$的中线$m_{a}, m_{b}, m_{c}$可以用以下公式计算长度：</p>
 <script type="math/tex; mode=display">m_{a} = \frac{\sqrt{2(b^{2} + c^{2}) - a^{2}}}{2}</script><script type="math/tex; mode=display">m_{b} = \frac{\sqrt{2(c^{2} + a^{2}) - b^{2}}}{2}</script><script type="math/tex; mode=display">m_{c} = \frac{\sqrt{2(a^{2} + b^{2}) - c^{2}}}{2}</script><p>证明如下：</p>
@@ -1167,7 +1206,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#余弦定理"><span class="nav-number">1.</span> <span class="nav-text">余弦定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面积（海伦公式）"><span class="nav-number">2.</span> <span class="nav-text">面积（海伦公式）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高线"><span class="nav-number">3.</span> <span class="nav-text">高线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中线"><span class="nav-number">4.</span> <span class="nav-text">中线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#角平分线"><span class="nav-number">5.</span> <span class="nav-text">角平分线</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#正弦定理"><span class="nav-number">1.</span> <span class="nav-text">正弦定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#余弦定理"><span class="nav-number">2.</span> <span class="nav-text">余弦定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面积（海伦公式）"><span class="nav-number">3.</span> <span class="nav-text">面积（海伦公式）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高线"><span class="nav-number">4.</span> <span class="nav-text">高线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中线"><span class="nav-number">5.</span> <span class="nav-text">中线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#角平分线"><span class="nav-number">6.</span> <span class="nav-text">角平分线</span></a></li></ol></div>
             
 
           </div>
@@ -1250,7 +1289,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共244.8k字</span>
+  <span class="post-count">全站共245.1k字</span>
 </div>
         
 
@@ -1949,7 +1988,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1602058398881')
+  navigator.serviceWorker.register('/sw.js?t=1603543112936')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
