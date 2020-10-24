@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/03/PIP-Mirror/');
+  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
 
   precacheUrls.push('/2020/09/12/MaoXuan-1/');
 
   precacheUrls.push('/2020/10/01/LaTeX-Math/');
 
-  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
+  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
 
-  precacheUrls.push('/2019/05/11/1+1=2/');
+  precacheUrls.push('/2019/03/16/Winter-Solstice/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
