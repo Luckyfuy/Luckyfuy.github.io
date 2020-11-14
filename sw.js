@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/10/11/Change-Blog-Domain/');
+  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
 
   precacheUrls.push('/2020/09/12/MaoXuan-1/');
 
