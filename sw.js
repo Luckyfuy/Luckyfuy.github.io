@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
+  precacheUrls.push('/2019/11/03/PIP-Mirror/');
 
   precacheUrls.push('/2020/09/12/MaoXuan-1/');
 
@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2020/10/01/LaTeX-Math/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
