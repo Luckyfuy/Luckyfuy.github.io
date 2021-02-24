@@ -30,9 +30,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
 
-  precacheUrls.push('/2019/03/16/Winter-Solstice/');
+  precacheUrls.push('/2019/03/09/Build-Blog/');
 
-  precacheUrls.push('/2019/03/22/Learn-Python/');
+  precacheUrls.push('/2019/06/29/Basic-Mod-Packs/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
