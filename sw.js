@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
+  precacheUrls.push('/2019/11/30/Build-MkDocs-Material/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
