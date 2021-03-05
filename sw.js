@@ -30,9 +30,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/2021/03/05/The-Communist-Manifesto/');
 
-  precacheUrls.push('/2021/03/06/Mao-Selected-Works-3/');
-
   precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
+
+  precacheUrls.push('/2021/03/06/Mao-Selected-Works-3/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
