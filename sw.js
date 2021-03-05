@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
+  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
   precacheUrls.push('/2021/03/05/The-Communist-Manifesto/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
 
-  precacheUrls.push('/2019/08/27/PVZ/');
+  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
