@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luckyfuy.top/"/>
-  <updated>2021-03-05T16:35:39.390Z</updated>
+  <updated>2021-03-27T14:01:17.124Z</updated>
   <id>https://luckyfuy.top/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>youtube-dl使用</title>
+    <link href="https://luckyfuy.top/2021/03/27/youtube-dl-Usage/"/>
+    <id>https://luckyfuy.top/2021/03/27/youtube-dl-Usage/</id>
+    <published>2021-03-27T13:17:57.000Z</published>
+    <updated>2021-03-27T14:01:17.124Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://www.youtube-dl.org/" title="youtube-dl" target="_blank" rel="noopener">youtube-dl</a>是命令行下的一款视频下载工具，虽然名字叫youtube-dl，但除了YouTube外，还支持很多视频网站，例如哔哩哔哩、优酷、爱奇艺等，具体支持网站可参考<a href="https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md" title="Supported Sites" target="_blank" rel="noopener">这份列表</a>。</p><a id="more"></a><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>推荐使用pip安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install youtube-dl</span><br></pre></td></tr></table></figure></p><p>如果下载缓慢，可以参考<a href="/2019/11/03/PIP-Mirror/" title="PIP更换国内镜像源">这篇文章</a>。</p><p>FFmpeg是一个多媒体处理工具，主要用于音视频合并及转换等功能，虽然不是必须的，但强烈建议<a href="https://ffmpeg.org/download.html" title="Download FFmpeg" target="_blank" rel="noopener">安装</a>。</p><h1 id="下载视频"><a href="#下载视频" class="headerlink" title="下载视频"></a>下载视频</h1><p>使用<code>youtube-dl URL</code>会自动选择最佳视频进行下载，以视频<code>https://www.youtube.com/watch?v=6PrQrcZ8nQQ</code>为例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p>但是由于YouTube的视频1080p及以上的分辨率是音视频分离的，我们需要自己选择下载的视频格式。<br>参数<code>-F</code>或者<code>--list-formats</code>可以列出所有的音视频格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl -F https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p><img src="https://i.loli.net/2021/03/27/OxX6H7mtiUfZwkJ.jpg" alt="列表" title="列表"></p><p>我们可以使用<code>-f FORMAT</code>或<code>--format FORMAT</code>来选择下载指定格式的文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl -f 137+140 https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p>这里的<code>137</code>和<code>140</code>就是上面列表中的<code>format code</code>。<br>如果已经安装了FFmpeg了的话，youtube-dl会自动合并下载好的视频与音频。</p><h1 id="下载字幕"><a href="#下载字幕" class="headerlink" title="下载字幕"></a>下载字幕</h1><p><code>--write-sub</code>用于下载字幕文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --write-sub https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p><code>--write-auto-sub</code>用于下载自动生成的字幕文件（仅支持YouTube）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --write-auto-sub https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p><code>--skip-download</code>会跳过下载视频，从而做到只下载字幕文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --write-sub --skip-download https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p><code>--all-subs</code>可以下载所有可用的字幕：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --write-sub --all-subs https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p>如果要选择下载的字幕，可先用<code>--list-subs</code>列出所有可用的字幕：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --list-subs https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><p>使用<code>--sub-lang LANGS</code>选择字幕语言：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --sub-lang zh-CN https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p><h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>如果不是全局代理，需要另外设置代理的，可以使用<code>--proxy URL</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">youtube-dl --proxy &quot;127.0.0.1:19180&quot; https://www.youtube.com/watch?v=6PrQrcZ8nQQ</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube-dl.org/&quot; title=&quot;youtube-dl&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;youtube-dl&lt;/a&gt;是命令行下的一款视频下载工具，虽然名字叫youtube-dl，但除了YouTube外，还支持很多视频网站，例如哔哩哔哩、优酷、爱奇艺等，具体支持网站可参考&lt;a href=&quot;https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md&quot; title=&quot;Supported Sites&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这份列表&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>《毛泽东选集》第三卷</title>
@@ -467,27 +485,6 @@
     
     
       <category term="Dynamic Programming" scheme="https://luckyfuy.top/tags/Dynamic-Programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL安装教程</title>
-    <link href="https://luckyfuy.top/2019/08/31/MySQL-Installation/"/>
-    <id>https://luckyfuy.top/2019/08/31/MySQL-Installation/</id>
-    <published>2019-08-31T05:02:02.000Z</published>
-    <updated>2019-08-31T06:39:01.598Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>MySQL是目前使用最广泛的开源的关系数据库，最初是由瑞典的MySQL AB开发的，后来Sun收购了该公司，Sun又被Oracle收购，因此MySQL现在是Oracle旗下的产品。</p><p>MySQL的安装过程较为繁琐，所以我参考了网上的一些资料安装，然后整理出这篇文章。<br>本教程仅适用于Windows系统。</p><a id="more"></a><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>MySQL的Community Server是免费的，可以在<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">官网</a>下载到<code>.zip</code>压缩包。</p><p>在下载页面可以选择不登录，点击<code>No thanks, just start my download.</code>直接开始下载：<br><img src="https://i.loli.net/2019/08/31/iYE6oPR1ku9Oxvp.jpg" alt="Download Page" title="Download Page"></p><p>下载完成之后将压缩包解压到安装目录，例如我解压到了<code>D:\mysql-8.0.17-winx64</code>。</p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p>将安装目录下的<code>bin</code>路径添加到环境变量：<br><img src="https://i.loli.net/2019/08/31/I6JzVegmyMshSHc.jpg" alt="Path" title="Path"></p><h2 id="my-ini"><a href="#my-ini" class="headerlink" title="my.ini"></a>my.ini</h2><p>接下来我们需要在安装目录新建一个文件<code>my.ini</code>，写入以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"># 设置端口</span><br><span class="line">port = 3306</span><br><span class="line"># MySQL的安装目录</span><br><span class="line">basedir = D:/mysql-8.0.17-winx64</span><br><span class="line"># 允许最大连接数</span><br><span class="line">max_connections = 200</span><br><span class="line"># 允许连接失败的次数</span><br><span class="line">max_connect_errors = 10</span><br><span class="line"># 服务端使用的字符集</span><br><span class="line">character-set-server = utf8</span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line">default-storage-engine = INNODB</span><br><span class="line"></span><br><span class="line">[client]</span><br><span class="line"># MySQL客户端连接服务端时默认使用的端口</span><br><span class="line">port = 3306</span><br><span class="line"># MySQL客户端默认字符集</span><br><span class="line">default-character-set = utf8</span><br></pre></td></tr></table></figure></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>以管理员身份运行cmd，然后在<code>bin</code>目录下执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure></p><p>等待执行完成之后，会打印root用户的初始密码：<br><img src="https://i.loli.net/2019/08/31/3TvjxBCAmKZewuY.jpg" alt="Password" title="Password"><br>注意，输出结果中有一段<code>[Note] [MY-010454] [Server] A temporary password is generated for root@localhost: V6p.vdVi?#AP</code>，其中最后的<code>V6p.vdVi?#AP</code>就是初始密码。在更改密码前，请务必记住这个密码。</p><h2 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h2><p>在<code>bin</code>目录下执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --install [服务名]</span><br></pre></td></tr></table></figure></p><p>服务名默认为<code>mysql</code>，可以不填，但如果你要在同一台电脑上安装不同的MySQL服务，就需要用不同的名字加以区分。</p><p>安装完成后，就可以通过命令<code>net start mysql</code>启动MySQL服务，通过命令<code>net stop mysql</code>停止服务。<br>命令<code>sc delete MySQL/mysqld -remove</code>可以卸载MySQL服务。</p><h1 id="更改密码"><a href="#更改密码" class="headerlink" title="更改密码"></a>更改密码</h1><p>在<code>bin</code>目录下执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></p><p>若密码正确，就会进入MySQL命令行，提示符变成<code>mysql&gt;</code>，输入<code>exit</code>可以退出命令行。<br>在MySQL命令行中，输入以下语句：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">'新密码'</span>;</span><br></pre></td></tr></table></figure></p><p>注意不要漏掉末尾的分号<code>;</code>。</p><p>至此，MySQL的安装就算完成了。</p><p>关于如何使用MySQL，也许以后我会写，<del>不过肯定要咕很久啦</del>。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;MySQL是目前使用最广泛的开源的关系数据库，最初是由瑞典的MySQL AB开发的，后来Sun收购了该公司，Sun又被Oracle收购，因此MySQL现在是Oracle旗下的产品。&lt;/p&gt;
-&lt;p&gt;MySQL的安装过程较为繁琐，所以我参考了网上的一些资料安装，然后整理出这篇文章。&lt;br&gt;本教程仅适用于Windows系统。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="MySQL" scheme="https://luckyfuy.top/tags/MySQL/"/>
     
   </entry>
   

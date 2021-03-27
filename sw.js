@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/17/CSP-J-2019-Trip/');
+  precacheUrls.push('/2019/11/03/PIP-Mirror/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
