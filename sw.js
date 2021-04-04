@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2019/09/07/Knapsack/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2021/04/04/Timeline-of-Chinese-and-Foreign-History/');
 
-  precacheUrls.push('/2021/03/27/youtube-dl-Usage/');
+  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
