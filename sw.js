@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/03/PIP-Mirror/');
+  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
   precacheUrls.push('/2021/03/05/The-Communist-Manifesto/');
 
-  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
+  precacheUrls.push('/2021/04/04/Timeline-of-Chinese-and-Foreign-History/');
 
-  precacheUrls.push('/2021/03/06/Mao-Selected-Works-3/');
+  precacheUrls.push('/2021/03/27/youtube-dl-Usage/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
