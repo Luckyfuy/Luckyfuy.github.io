@@ -9,7 +9,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[youtube-dl使用]]></title>
+    <title><![CDATA[youtube-dl的简要使用]]></title>
     <url>%2F2021%2F03%2F27%2Fyoutube-dl-Usage%2F</url>
     <content type="text"><![CDATA[前言youtube-dl是命令行下的一款视频下载工具，虽然名字叫youtube-dl，但除了YouTube外，还支持很多视频网站，例如哔哩哔哩、优酷、爱奇艺等，具体支持网站可参考这份列表。 安装推荐使用pip安装：1pip install youtube-dl 如果下载缓慢，可以参考这篇文章。 FFmpeg是一个多媒体处理工具，主要用于音视频合并及转换等功能，虽然不是必须的，但强烈建议安装。 下载视频使用youtube-dl URL会自动选择最佳视频进行下载，以视频https://www.youtube.com/watch?v=6PrQrcZ8nQQ为例：1youtube-dl https://www.youtube.com/watch?v=6PrQrcZ8nQQ 但是由于YouTube的视频1080p及以上的分辨率是音视频分离的，我们需要自己选择下载的视频格式。参数-F或者--list-formats可以列出所有的音视频格式：1youtube-dl -F https://www.youtube.com/watch?v=6PrQrcZ8nQQ 我们可以使用-f FORMAT或--format FORMAT来选择下载指定格式的文件：1youtube-dl -f 137+140 https://www.youtube.com/watch?v=6PrQrcZ8nQQ 这里的137和140就是上面列表中的format code。如果已经安装了FFmpeg了的话，youtube-dl会自动合并下载好的视频与音频。 下载字幕--write-sub用于下载字幕文件：1youtube-dl --write-sub https://www.youtube.com/watch?v=6PrQrcZ8nQQ --write-auto-sub用于下载自动生成的字幕文件（仅支持YouTube）：1youtube-dl --write-auto-sub https://www.youtube.com/watch?v=6PrQrcZ8nQQ --skip-download会跳过下载视频，从而做到只下载字幕文件：1youtube-dl --write-sub --skip-download https://www.youtube.com/watch?v=6PrQrcZ8nQQ --all-subs可以下载所有可用的字幕：1youtube-dl --write-sub --all-subs https://www.youtube.com/watch?v=6PrQrcZ8nQQ 如果要选择下载的字幕，可先用--list-subs列出所有可用的字幕：1youtube-dl --list-subs https://www.youtube.com/watch?v=6PrQrcZ8nQQ 使用--sub-lang LANGS选择字幕语言：1youtube-dl --sub-lang zh-CN https://www.youtube.com/watch?v=6PrQrcZ8nQQ 代理如果不是全局代理，需要另外设置代理的，可以使用--proxy URL：1youtube-dl --proxy &quot;127.0.0.1:19180&quot; https://www.youtube.com/watch?v=6PrQrcZ8nQQ]]></content>
   </entry>
