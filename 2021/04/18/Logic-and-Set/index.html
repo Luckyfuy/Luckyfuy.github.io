@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-23T16:48:55.723Z">
+<meta property="og:updated_time" content="2021-04-24T03:53:50.701Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
@@ -589,10 +589,10 @@
 <p>容易看出，$p, q$同时为真时$p \land q$为真，而$p, q$只要有一为真时$p \lor q$为真。</p>
 <p>与和或满足：</p>
 <ul>
-<li><strong>交换律</strong>：$p \land q = q \land q, p \lor q = q \lor q$</li>
-<li><strong>结合律</strong>：$(p \land q) \land r = p \land (q \land r), (p \lor q) \lor r = p \lor (q \lor r)$</li>
-<li><strong>分配律</strong>：$p \land (q \lor r) = (p \land q) \lor (p \land r), p \lor (q \land r) = (p \lor q) \land (p \lor r)$</li>
-<li><strong>幂等律</strong>：$p \land p = p, p \lor p = p$</li>
+<li><strong>交换律</strong>：$p \land q = q \land p$<br>　　　　$p \lor q = p \lor q$</li>
+<li><strong>结合律</strong>：$(p \land q) \land r = p \land (q \land r)$<br>　　　　$(p \lor q) \lor r = p \lor (q \lor r)$</li>
+<li><strong>分配律</strong>：$p \land (q \lor r) = (p \land q) \lor (p \land r)$<br>　　　　$p \lor (q \land r) = (p \lor q) \land (p \lor r)$</li>
+<li><strong>幂等律</strong>：$p \land p = p$<br>　　　　$p \lor p = p$</li>
 </ul>
 <p><strong>非（否定，negation）</strong>用于对命题进行否定，符号为$\lnot$。<br>非的真值表如下：</p>
 <div class="table-container">
@@ -2039,7 +2039,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1619196576692')
+  navigator.serviceWorker.register('/sw.js?t=1619236482530')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
+  precacheUrls.push('/2019/11/30/Build-MkDocs-Material/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2021/04/04/Timeline-of-Chinese-and-Foreign-History/');
 
-  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
+  precacheUrls.push('/2021/03/06/Mao-Selected-Works-3/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
