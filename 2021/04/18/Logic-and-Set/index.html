@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-24T03:53:50.701Z">
+<meta property="og:updated_time" content="2021-04-24T06:22:10.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
@@ -474,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  1.4k
                 </span>
               
 
@@ -490,7 +490,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -516,7 +516,7 @@
 <p>全程量词符号为$\forall$，用于表示<em>任意</em>这样的词。<br>例如<em>所有小朋友$x$都考了100分</em>，可以表示为$\forall x \  P(x)$。</p>
 <p>存在量词符号为$\exists$，也称<strong>特称量词（particular quantifier）</strong>，用于表示<em>存在</em>这样的词。<br>例如<em>至少有一个小朋友$x$考了100分</em>，可以表示为$\exists x \  P(x)$。</p>
 <a id="more"></a>
-<h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p><strong>命题（proposition）</strong>指一个陈述句所表达的判断，通常我们用一个字母来表示命题，如$p, q, r$等。一般我们所指的命题非<strong>真（true）</strong>即<strong>假（false）</strong>，这里的真和假表示的就是命题的<strong>真值（truth value）</strong>。</p>
+<h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p><strong>命题（proposition）</strong>指一个陈述句所表达的判断，不涉及谓词时，我们通常用一个字母来表示命题，如$p, q, r$等。一般我们所指的命题非<strong>真（true）</strong>即<strong>假（false）</strong>，这里的真和假表示的就是命题的<strong>真值（truth value）</strong>。</p>
 <h3 id="逻辑联结词"><a href="#逻辑联结词" class="headerlink" title="逻辑联结词"></a>逻辑联结词</h3><p>命题之间可以用<strong>逻辑联结词（logical connective）</strong>连接起来，构成复合命题。</p>
 <p><strong>与（合取，conjunction）</strong>和<strong>或（析取，disjunction）</strong>是最常见的两个连结词，一般用符号$\land$和$\lor$表示。<del>（不是非法符号！）</del><br>例如，用$p$表示小刚考了100分，$q$表示小强考了100分。$p \land q$表示他们都考了100分，而$p \lor q$表示他们之中有人考了100分。</p>
 <p>我们可以用<strong>真值表（truth table）</strong>来计算复合命题的真值：（T表示真，F表示假）</p>
@@ -694,8 +694,9 @@
 </ul>
 <h3 id="全称命题与存在命题"><a href="#全称命题与存在命题" class="headerlink" title="全称命题与存在命题"></a>全称命题与存在命题</h3><p>设所有的元素为$x_{1}, \cdots, x_{n}$，那么对于全称命题$\forall x \  P(x)$，实际上表示的是$P(x_{1}) \land P(x_{2}) \land \cdots \land P(x_{n})$，即这些命题中每个都是真的。因此不难得出全称命题的否定：$\lnot (\forall x \  P(x)) = \exists x \  \lnot P(x)$。</p>
 <p>同样，存在命题$\exists x \  P(x)$表示$P(x_{1}) \lor P(x_{2}) \lor \cdots \lor P(x_{n})$，即至少有一个是真的。<br>那么$\lnot (\exists x \  P(x)) = \forall x \  \lnot P(x)$。<br>这样，只要证明$\forall x \  \lnot P(x) \Rightarrow \bot$，就能证明原命题了。</p>
-<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>懒得写</p>
-
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><strong>集合（set）</strong>是一个或多个对象所构成的整体，这些构成的集合的对象称为<strong>元素（element）</strong>。<br>集合通常用大写字母如$A, B, C$等来表示，而元素通常用小写字母如$a, b, c$等表示。</p>
+<p>如果元素$x$在集合$A$内，我们称$x$<strong>属于</strong>$A$，记作$x \in A$；<br>否则，$x$<strong>不属于</strong>$A$，记作$x \notin A$。<br>若两个集合$A, B$中的元素完全一样，则二者相等，记作$A = B$。</p>
+<h2 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h2><h2 id="集合的势与基数"><a href="#集合的势与基数" class="headerlink" title="集合的势与基数"></a>集合的势与基数</h2>
       
     </div>
     
@@ -1257,7 +1258,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑"><span class="nav-number">1.</span> <span class="nav-text">逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">1.1.1.</span> <span class="nav-text">量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.2.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑联结词"><span class="nav-number">1.2.1.</span> <span class="nav-text">逻辑联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全称命题与存在命题"><span class="nav-number">1.2.2.</span> <span class="nav-text">全称命题与存在命题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">2.</span> <span class="nav-text">集合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑"><span class="nav-number">1.</span> <span class="nav-text">逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">1.1.1.</span> <span class="nav-text">量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.2.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑联结词"><span class="nav-number">1.2.1.</span> <span class="nav-text">逻辑联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全称命题与存在命题"><span class="nav-number">1.2.2.</span> <span class="nav-text">全称命题与存在命题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">2.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的运算"><span class="nav-number">2.1.</span> <span class="nav-text">集合的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的势与基数"><span class="nav-number">2.2.</span> <span class="nav-text">集合的势与基数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1340,7 +1341,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共535.2k字</span>
+  <span class="post-count">全站共535.4k字</span>
 </div>
         
 
@@ -2039,7 +2040,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1619236482530')
+  navigator.serviceWorker.register('/sw.js?t=1619245407275')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
