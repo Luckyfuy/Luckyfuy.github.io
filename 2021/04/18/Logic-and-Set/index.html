@@ -152,10 +152,17 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-30T16:10:26.380Z">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/gwqQjMCGnNe4E53.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/7c2QURpAh1GdmkK.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Aez1Xfndu4CSx6g.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg">
+<meta property="og:updated_time" content="2021-05-01T08:00:22.413Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/01/gwqQjMCGnNe4E53.jpg">
 
 
 
@@ -474,7 +481,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.3k
+                  2.9k
                 </span>
               
 
@@ -490,7 +497,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  12
                 </span>
               
             </div>
@@ -616,7 +623,9 @@
 </table>
 </div>
 <p>不难证明：</p>
-<script type="math/tex; mode=display">\lnot (p \land q) = (\lnot p) \lor (\lnot q), \lnot (p \lor q) = (\lnot p) \land (\lnot q)</script><p>即<strong>反演律</strong>，也称<strong>德·摩根定律（De Morgan’s laws）</strong>。</p>
+<script type="math/tex; mode=display">
+\lnot (p \land q) = \lnot p \lor \lnot q \\
+\lnot (p \lor q) = \lnot p \land \lnot q</script><p>即<strong>反演律</strong>，也称<strong>德·摩根定律（De Morgan’s laws）</strong>。</p>
 <p>此外，<strong>条件</strong>连结词也在数学证明中被大量用到，符号为$\rightarrow$，也称<strong>蕴涵（implication）</strong>，但在具体的数学推理中一般使用$\Rightarrow$。条件连结词可以写成<em>若$p$，则$q$</em>的形式，其中$p$称为<strong>前件（antecedent）</strong>，$q$称为<strong>后件（consequent）</strong>。<br>$p \rightarrow q$等价于$\lnot p \lor q$，由此可以计算出蕴涵的真值表：</p>
 <div class="table-container">
 <table>
@@ -709,7 +718,8 @@
 <li><strong>互异性</strong>：集合中任意两个元素都不相同，每个元素只能出现一次</li>
 <li><strong>确定性</strong>：对于一个集合，一个元素属于或不属于该集合是确定的，不能模棱两可</li>
 </ul>
-<h2 id="集合间的关系"><a href="#集合间的关系" class="headerlink" title="集合间的关系"></a>集合间的关系</h2><p>若$\forall x \in A, x \in B$，则称$A$是$B$的<strong>子集（subset）</strong>，$B$是$A$的<strong>超集（superset）</strong>，记作$A \subseteq B$或$B \supseteq A$，也称$A$<strong>包含于</strong>$B$或$B$<strong>包含</strong>$A$。<br>若$A \subseteq B \land A \ne B$，即$(\forall x \in A, x \in B) \land (\exists x \in B, x \notin A)$，则称$A$是$B$的<strong>真子集（proper subset / strict subset）</strong>，$B$是$A$的<strong>真超集（proper superset / strict superset）</strong>，记作$A \subsetneqq B$（$A \subset B$）或$B \supsetneqq A$（$B \supset A$），也称$A$<strong>真包含于</strong>$B$或$B$<strong>真包含</strong>$A$。</p>
+<h2 id="集合间的关系"><a href="#集合间的关系" class="headerlink" title="集合间的关系"></a>集合间的关系</h2><p>若$\forall x \in A, x \in B$，则称$A$是$B$的<strong>子集（subset）</strong>，$B$是$A$的<strong>超集（superset）</strong>，记作$A \subseteq B$或$B \supseteq A$，也称$A$<strong>包含于</strong>$B$或$B$<strong>包含</strong>$A$。<br>若$A \subseteq B \land A \ne B$，即$(\forall x \in A, x \in B) \land (\exists x \in B, x \notin A)$，则称$A$是$B$的<strong>真子集（proper subset）</strong>，$B$是$A$的<strong>真超集（proper superset）</strong>，记作$A \subsetneqq B$（$A \subset B$）或$B \supsetneqq A$（$B \supset A$），也称$A$<strong>真包含于</strong>$B$或$B$<strong>真包含</strong>$A$。</p>
+<p>集合也可以通过<strong>Venn图（维恩图/文氏图，Venn diagram）</strong>形象地表示出来。<br>例如下图就表示$A$是$B$的子集：<br><img src="https://i.loli.net/2021/05/01/gwqQjMCGnNe4E53.jpg" alt="子集" title="子集"></p>
 <p>包含关系具有</p>
 <ul>
 <li><strong>自反性</strong>：$A \subseteq A$</li>
@@ -720,7 +730,7 @@
 <p>不含任何元素的集合被称为<strong>空集（empty set）</strong>，符号为$\varnothing$或$\emptyset$。<br>空集有基本性质：</p>
 <script type="math/tex; mode=display">\forall A, \varnothing \subseteq A</script><p>这是一个可证明的定理，证明如下：<br>证明$\varnothing \subseteq A$只要证明$x \in \varnothing \Rightarrow x \in A$，其逆否命题为$x \notin A \Rightarrow x \notin \varnothing$。根据空集的定义以及蕴涵的真值表，这是真的。$\Box$<br>由这个性质不难得出：</p>
 <script type="math/tex; mode=display">\forall A \ne \varnothing, \varnothing \subsetneqq A</script><h2 id="特殊集合"><a href="#特殊集合" class="headerlink" title="特殊集合"></a>特殊集合</h2><p>不同的数集通常有专门的符号表示：<br>$\mathbb{N}$表示<strong>自然数集</strong>，$\mathbb{N^{\ast}}$表示<strong>正整数集</strong>，$\mathbb{Z}$表示<strong>整数集</strong>，$\mathbb{Q}$表示<strong>有理数集</strong>，$\mathbb{R}$表示<strong>实数集</strong>，$\mathbb{C}$表示<strong>复数集</strong>。</p>
-<script type="math/tex; mode=display">\mathbb{N^{*}} \subseteq \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}</script><p>此外，还有一种特殊的实数集称为<strong>区间（interval）</strong>，有时用符号$I$表示：（$a, b \in \mathbb{R}$且$a &lt; b$）</p>
+<script type="math/tex; mode=display">\mathbb{N^{*}} \subseteq \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}</script><p>此外，还有一种特殊的实数集称为<strong>区间（interval）</strong>，有时用字母$I$表示：（$a, b \in \mathbb{R}$且$a &lt; b$）</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
 \lbrack a, b \rbrack &= \{x \in \mathbb{R} | a \le x \le b\} \\
@@ -735,8 +745,34 @@
 (a, +\infty) &= \{x \in \mathbb{R} | x > a\} \\
 (-\infty, b \rbrack &= \{x \in \mathbb{R} | x \le b\} \\
 (-\infty, b) &= \{x \in \mathbb{R} | x < b\}
-\end{aligned}</script><p>特殊地，$(-\infty, +\infty) = \mathbb{R}$。<br>含有符号$\infty$的称为<strong>无界区间</strong>。</p>
-<h2 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h2><h2 id="集合的势与基数"><a href="#集合的势与基数" class="headerlink" title="集合的势与基数"></a>集合的势与基数</h2>
+\end{aligned}</script><p>特殊地，$(-\infty, +\infty) = \mathbb{R}$。<br>含有符号$\infty$的区间称为<strong>无界区间</strong>。</p>
+<h2 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h2><p>对于两个集合$A, B$，其<strong>并集（union）</strong>定义为：</p>
+<script type="math/tex; mode=display">A \cup B = \{x | x \in A \lor x \in B\}</script><p>即两个集合中的所有元素构成的集合。<br><img src="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg" alt="并集" title="并集"></p>
+<p>容易得到，</p>
+<script type="math/tex; mode=display">A \cup B = B \Leftrightarrow A \subseteq B</script><p>对于两个集合$A, B$，其<strong>交集（intersection）</strong>定义为：</p>
+<script type="math/tex; mode=display">A \cap B = \{x | x \in A \land x \in B\}</script><p>即两个集合共同拥有的元素构成的集合。<br><img src="https://i.loli.net/2021/05/01/7c2QURpAh1GdmkK.jpg" alt="交集" title="交集"></p>
+<script type="math/tex; mode=display">A \cap B = A \Leftrightarrow A \subseteq B</script><p>与逻辑与和或运算类似，交集和并集也具有以下性质：</p>
+<ul>
+<li><strong>交换律</strong>：$A \cap B = B \cap A$<br>　　　　$A \cup B = B \cup A$</li>
+<li><strong>结合律</strong>：$(A \cap B) \cap C = A \cap (B \cap C)$<br>　　　　$(A \cup B) \cup C = A \cup (B \cup C)$</li>
+<li><strong>分配律</strong>：$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$<br>　　　　$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$</li>
+<li><strong>幂等律</strong>：$A \cap A = A$<br>　　　　$A \cup A = A$</li>
+</ul>
+<p>对于空集$\varnothing$，交集和并集还满足：</p>
+<script type="math/tex; mode=display">
+A \cap \varnothing = \varnothing \\
+A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<strong>差集（set difference）</strong>或<strong>相对补集（relative complement）</strong>定义为：</p>
+<script type="math/tex; mode=display">B \setminus A = \{x \in B | x \notin A\}</script><p>$B \setminus A$也记作$B - A$。<br><img src="https://i.loli.net/2021/05/01/Aez1Xfndu4CSx6g.jpg" alt="差集" title="差集"></p>
+<p><strong>补集（complement）</strong>是一种特殊的差集，有时也称<strong>绝对补集（absolute complement）</strong>。<br>在研究问题时，所有的研究对象构成的集合被称为<strong>全集（universe）</strong>。对于全集$U$的子集$A$，其补集定义为：</p>
+<script type="math/tex; mode=display">\complement_{U}A = U - A = \{x \in U | x \notin A\}</script><p>在不产生歧义的情况下，$\complement_{U}A$也可以表示为$A^{C}$。<br><img src="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg" alt="补集" title="补集"></p>
+<script type="math/tex; mode=display">A - B = \varnothing \Leftrightarrow \complement_{U}B \subseteq \complement_{U}A \Leftrightarrow A \subseteq B</script><p>由前面的$\lnot (p \land q) = \lnot p \lor \lnot q, \lnot (p \lor q) = \lnot p \land \lnot q$可以推出<strong>反演律/德·摩根定律</strong>：</p>
+<script type="math/tex; mode=display">
+\complement_{U}(A \cap B) = \complement_{U}A \cup \complement_{U}B \\
+\complement_{U}(A \cup B) = \complement_{U}A \cap \complement_{U}B</script><p>对于两个集合$A, B$，其<strong>对称差（symmetric difference）</strong>定义为：</p>
+<script type="math/tex; mode=display">A \bigtriangleup B = (A - B) \cup (B - A)</script><p>或</p>
+<script type="math/tex; mode=display">A \bigtriangleup B = (A \cup B) - (A \cap B)</script><p><img src="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg" alt="对称差" title="对称差"></p>
+<h2 id="集合的势"><a href="#集合的势" class="headerlink" title="集合的势"></a>集合的势</h2><p>如果要计算一个集合中的元素个数，我们可以用<strong>势（cardinality）</strong>或<strong>基数（cardinal number）</strong>的概念表示。<br>集合$A$的势或基数记作$|A|$或$\rm{card}(A)$。<br>势和基数一般是同义词。有时候前者仅用于描述无限集的大小而后者用于描述有限集，但通常不加区分。本章一律使用势来表示集合的大小。</p>
+<h3 id="有限集合的势"><a href="#有限集合的势" class="headerlink" title="有限集合的势"></a>有限集合的势</h3><h3 id="无限集合的势"><a href="#无限集合的势" class="headerlink" title="无限集合的势"></a>无限集合的势</h3>
       
     </div>
     
@@ -1298,7 +1334,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑"><span class="nav-number">1.</span> <span class="nav-text">逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">1.1.1.</span> <span class="nav-text">量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.2.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑联结词"><span class="nav-number">1.2.1.</span> <span class="nav-text">逻辑联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全称命题与存在命题"><span class="nav-number">1.2.2.</span> <span class="nav-text">全称命题与存在命题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">2.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合间的关系"><span class="nav-number">2.1.</span> <span class="nav-text">集合间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊集合"><span class="nav-number">2.2.</span> <span class="nav-text">特殊集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的运算"><span class="nav-number">2.3.</span> <span class="nav-text">集合的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的势与基数"><span class="nav-number">2.4.</span> <span class="nav-text">集合的势与基数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑"><span class="nav-number">1.</span> <span class="nav-text">逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">1.1.1.</span> <span class="nav-text">量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.2.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑联结词"><span class="nav-number">1.2.1.</span> <span class="nav-text">逻辑联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全称命题与存在命题"><span class="nav-number">1.2.2.</span> <span class="nav-text">全称命题与存在命题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">2.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合间的关系"><span class="nav-number">2.1.</span> <span class="nav-text">集合间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊集合"><span class="nav-number">2.2.</span> <span class="nav-text">特殊集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的运算"><span class="nav-number">2.3.</span> <span class="nav-text">集合的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的势"><span class="nav-number">2.4.</span> <span class="nav-text">集合的势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有限集合的势"><span class="nav-number">2.4.1.</span> <span class="nav-text">有限集合的势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无限集合的势"><span class="nav-number">2.4.2.</span> <span class="nav-text">无限集合的势</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1381,7 +1417,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共536.2k字</span>
+  <span class="post-count">全站共536.8k字</span>
 </div>
         
 
@@ -2080,7 +2116,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1619799474235')
+  navigator.serviceWorker.register('/sw.js?t=1619856159771')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
