@@ -158,7 +158,8 @@
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Aez1Xfndu4CSx6g.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg">
-<meta property="og:updated_time" content="2021-05-01T08:00:22.413Z">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
+<meta property="og:updated_time" content="2021-05-01T15:55:10.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
@@ -481,7 +482,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.9k
+                  3.4k
                 </span>
               
 
@@ -497,7 +498,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  14
                 </span>
               
             </div>
@@ -771,8 +772,18 @@ A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<str
 \complement_{U}(A \cup B) = \complement_{U}A \cap \complement_{U}B</script><p>对于两个集合$A, B$，其<strong>对称差（symmetric difference）</strong>定义为：</p>
 <script type="math/tex; mode=display">A \bigtriangleup B = (A - B) \cup (B - A)</script><p>或</p>
 <script type="math/tex; mode=display">A \bigtriangleup B = (A \cup B) - (A \cap B)</script><p><img src="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg" alt="对称差" title="对称差"></p>
+<p>对于两个集合$A, B$，其<strong>笛卡尔积（Cartesian product）</strong>或<strong>直积</strong>定义为：</p>
+<script type="math/tex; mode=display">A \times B = \{(a, b) | a \in A \land b \in B\}</script><p>例如，集合$A$是13个元素的点数集合$\{A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K\}$，$B$是4个元素的花色集合$\{\clubsuit, \diamondsuit, \heartsuit, \spadesuit\}$，那么$A \times B$就是52个元素的一副标准扑克牌的集合$\{(A, \clubsuit), (A, \diamondsuit), \cdots, (K, \heartsuit), (K, \spadesuit)\}$。注意，笛卡尔积不满足交换律，这个集合与$B \times A$得到的$\{(\clubsuit, A), (\diamondsuit, A), \cdots, (\heartsuit, K), (\spadesuit, K)\}$是完全不同的，甚至不相交。</p>
 <h2 id="集合的势"><a href="#集合的势" class="headerlink" title="集合的势"></a>集合的势</h2><p>如果要计算一个集合中的元素个数，我们可以用<strong>势（cardinality）</strong>或<strong>基数（cardinal number）</strong>的概念表示。<br>集合$A$的势或基数记作$|A|$或$\rm{card}(A)$。<br>势和基数一般是同义词。有时候前者仅用于描述无限集的大小而后者用于描述有限集，但通常不加区分。本章一律使用势来表示集合的大小。</p>
-<h3 id="有限集合的势"><a href="#有限集合的势" class="headerlink" title="有限集合的势"></a>有限集合的势</h3><h3 id="无限集合的势"><a href="#无限集合的势" class="headerlink" title="无限集合的势"></a>无限集合的势</h3>
+<h3 id="有限集合的势"><a href="#有限集合的势" class="headerlink" title="有限集合的势"></a>有限集合的势</h3><p>顾名思义，<strong>有限集合（finite set）</strong>就是指元素个数有限的集合。有限集合的势就是其元素个数。例如集合$A = \{-3, 0, 2, 7, 9\}$，则$|A| = 5$。</p>
+<p><strong>容斥原理（inclusion–exclusion principle）</strong>是<strong>组合计数（enumerative combinatorics）</strong>中的基本原理之一，表达为</p>
+<script type="math/tex; mode=display">|A \cup B| = |A| + |B| - |A \cap B|</script><p>从Venn图上可以很直观地理解这个原理。<br><img src="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg" alt="容斥原理" title="容斥原理"></p>
+<p>容斥原理还可以推广到三个乃至更多集合之间：</p>
+<script type="math/tex; mode=display">|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|</script><p>可以理解为三个集合相交的部分计算了三次，减去所有两两相交的部分多减了一次，因此加回三者相交的部分。<br>对于更多的集合，先将单个集合的势加起来，然后减去所有两个集合相交的部分，再加回所有三个集合相交的部分，再减去所有四个集合相交的部分，依此类推。</p>
+<p>集合的<strong>幂集（power set）</strong>，定义为该集合全部子集构成的集合。<br>对于集合$S$，其幂集$\mathcal{P}(S)$可以表示为：</p>
+<script type="math/tex; mode=display">\mathcal{P}(S) = \{x | x \subseteq S\}</script><p>$S$的幂集也可以记作$2^{S}$。<br>例如一集合$S = \{a, b, c\}$，那么$S$的幂集</p>
+<script type="math/tex; mode=display">\mathcal{P}(S) = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}</script><p>幂集的实质就是考虑集合$S$中每一个元素选或不选，每一种选择构成一个集合，因此可以得出</p>
+<script type="math/tex; mode=display">|S| = n, |\mathcal{P}(S)| = 2^{n}</script><h3 id="无限集合的势"><a href="#无限集合的势" class="headerlink" title="无限集合的势"></a>无限集合的势</h3>
       
     </div>
     
@@ -1417,7 +1428,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共536.8k字</span>
+  <span class="post-count">全站共537.3k字</span>
 </div>
         
 
@@ -2116,7 +2127,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1619856159771')
+  navigator.serviceWorker.register('/sw.js?t=1619884555096')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
