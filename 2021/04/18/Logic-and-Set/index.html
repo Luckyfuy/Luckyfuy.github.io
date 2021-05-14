@@ -159,7 +159,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
-<meta property="og:updated_time" content="2021-05-02T07:33:51.903Z">
+<meta property="og:updated_time" content="2021-05-14T15:03:30.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
@@ -775,7 +775,7 @@ A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<str
 <p>对于两个集合$A, B$，其<strong>笛卡尔积（Cartesian product）</strong>或<strong>直积</strong>定义为：</p>
 <script type="math/tex; mode=display">A \times B = \{(a, b) | a \in A \land b \in B\}</script><p>例如，集合$A$是13个元素的点数集合$\{A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K\}$，$B$是4个元素的花色集合$\{\clubsuit, \diamondsuit, \heartsuit, \spadesuit\}$，那么$A \times B$就是52个元素的一副标准扑克牌的集合$\{(A, \clubsuit), (A, \diamondsuit), \cdots, (K, \heartsuit), (K, \spadesuit)\}$。注意，笛卡尔积不满足交换律，这个集合与$B \times A$得到的$\{(\clubsuit, A), (\diamondsuit, A), \cdots, (\heartsuit, K), (\spadesuit, K)\}$是完全不同的，甚至不相交。</p>
 <h2 id="集合的势"><a href="#集合的势" class="headerlink" title="集合的势"></a>集合的势</h2><p>如果要计算一个集合中的元素个数，我们可以用<strong>势（cardinality）</strong>或<strong>基数（cardinal number）</strong>的概念表示。<br>集合$A$的势或基数记作$|A|$或$\rm{card}(A)$。<br>势和基数一般是同义词。有时候前者仅用于描述无限集的大小而后者用于描述有限集，但通常不加区分。本章一律使用势来表示集合的大小。</p>
-<h3 id="有限集合的势"><a href="#有限集合的势" class="headerlink" title="有限集合的势"></a>有限集合的势</h3><p>顾名思义，<strong>有限集合（finite set）</strong>就是指元素个数有限的集合。<br>严格定义需要用到<a href="">映射</a>：若存在自然数$n$以及双射$f: A \rightarrow \{1, 2, 3, \cdots, n\}$，则$A$为有限集合。<br>有限集合的势就是其元素个数$n$。例如集合$A = \{-3, 0, 2, 7, 9\}$，则$|A| = 5$。</p>
+<h3 id="有限集合的势"><a href="#有限集合的势" class="headerlink" title="有限集合的势"></a>有限集合的势</h3><p>顾名思义，<strong>有限集合（finite set）</strong>就是指元素个数有限的集合。<br>严格定义需要用到<a href="/2021/05/14/Function/#映射">映射</a>：若存在自然数$n$以及双射$f: A \rightarrow \{1, 2, 3, \cdots, n\}$，则$A$为有限集合。<br>有限集合的势就是其元素个数$n$。例如集合$A = \{-3, 0, 2, 7, 9\}$，则$|A| = 5$。</p>
 <p><strong>容斥原理（inclusion–exclusion principle）</strong>是<strong>组合计数（enumerative combinatorics）</strong>中的基本原理之一，表达为</p>
 <script type="math/tex; mode=display">|A \cup B| = |A| + |B| - |A \cap B|</script><p>从Venn图上可以很直观地理解这个原理。<br><img src="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg" alt="容斥原理" title="容斥原理"></p>
 <p>容斥原理还可以推广到三个乃至更多集合之间：</p>
@@ -892,6 +892,10 @@ A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<str
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2021/05/14/Function/" rel="prev" title="学习笔记·函数">
+                学习笔记·函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -974,7 +978,7 @@ A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<str
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1450,7 +1454,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共538.9k字</span>
+  <span class="post-count">全站共539.4k字</span>
 </div>
         
 
@@ -2149,7 +2153,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1620037532501')
+  navigator.serviceWorker.register('/sw.js?t=1621008347110')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
