@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
+  precacheUrls.push('/2021/03/27/youtube-dl-Usage/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
+
+  precacheUrls.push('/2021/05/15/Fen/');
 
   precacheUrls.push('/2021/03/05/The-Communist-Manifesto/');
 
   precacheUrls.push('/2021/04/04/Timeline-of-Chinese-and-Foreign-History/');
-
-  precacheUrls.push('/2021/04/18/Logic-and-Set/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};

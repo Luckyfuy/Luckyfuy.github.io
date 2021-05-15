@@ -156,7 +156,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/05/14/y851rK6kBqiseoR.png">
 <meta property="og:image" content="https://i.loli.net/2021/05/14/gYe1iQtuCNjFlcD.png">
 <meta property="og:image" content="https://i.loli.net/2021/05/14/JbH8peIWNdoawYm.png">
-<meta property="og:updated_time" content="2021-05-14T16:04:10.348Z">
+<meta property="og:updated_time" content="2021-05-15T06:24:28.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -479,7 +479,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  431
+                  686
                 </span>
               
 
@@ -495,7 +495,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -521,7 +521,16 @@
 <a id="more"></a>
 <p>如图：<br><img src="https://i.loli.net/2021/05/14/2I8D3PKiHZOpa4m.png" alt="单射但非满射" title="单射但非满射"><br><img src="https://i.loli.net/2021/05/14/y851rK6kBqiseoR.png" alt="满射但非单射" title="满射但非单射"><br><img src="https://i.loli.net/2021/05/14/gYe1iQtuCNjFlcD.png" alt="双射" title="双射"><br><img src="https://i.loli.net/2021/05/14/JbH8peIWNdoawYm.png" alt="非满射非单射" title="非满射非单射"></p>
 <p>事实上，<a href="/2021/04/18/Logic-and-Set/#谓词逻辑">谓词</a>就是一个把主词映射到$\{T, F\}$的映射。</p>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>一般来说，对于映射$f: A \rightarrow B$，如果$A, B$是非空的实数集合，那么称$f$是一个从$A$到$B$的<strong>函数（function）</strong>。<br>在函数$f$中，$x \in A, y \in B$，$x$与$y$相对应，则称$y$为$x$的<strong>像（image）</strong>，记作$y = f(x)$；$x$为$y$的<strong>原像（inverse image/preimage）</strong>，记作$x = f^{-1}(y)$。<br>集合$A$称为$f$的<strong>定义域（domain）</strong>，$B$称为<strong>陪域（codomain）</strong>，而$A$映射到$B$上的像$f(A)$称为<strong>值域（range）</strong>，值域是陪域的子集。如果函数表达式已知，那么使得函数$f(x)$有意义的$x$的集合称为<strong>自然定义域（natural domain）</strong>。<br>平面上的点集$\{(x, f(x)) | x \in A\}$是函数$f$的<strong>图像（graph）</strong>。</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>一般来说，对于映射$f: A \rightarrow B$，如果$A, B$是非空的实数集合，那么称$f$是一个从$A$到$B$的<strong>函数（function）</strong>。<br>在函数$f$中，$x \in A, y \in B$，$x$与$y$相对应，则称$y$为$x$的<strong>像（image）</strong>，记作$y = f(x)$；$x$为$y$的<strong>原像（inverse image/preimage）</strong>，记作$x = f^{-1}(y)$。<br>集合$A$称为$f$的<strong>定义域（domain）</strong>，$B$称为<strong>陪域（codomain）</strong>，而$A$映射到$B$上的像$f(A)$称为<strong>值域（range）</strong>。值域是陪域的子集，即$f(A) \subseteq B$。如果函数表达式已知，那么使得函数$f(x)$有意义的$x$的集合称为<strong>自然定义域（natural domain）</strong>。<br>平面上的点集$\{(x, f(x)) | x \in A\}$是函数$f$的<strong>图像（graph）</strong>。</p>
+<p>如果两个函数$f, g$的定义域相等，都是$A$，且有$\forall x \in A, f(x) = g(x)$，那么称函数$f, g$<strong>相等</strong>。例如$f(x) = x$与$g(x) = \sqrt[3]{x^{3}}$就是相等函数。<br>设函数$f: A \rightarrow B, g: B \rightarrow C$，$f$与$g$的<strong>复合（composition）</strong>为$f \circ g: A \rightarrow C$，$(f \circ g)(x) = g(f(x))$。</p>
+<p>如果函数$f: A \rightarrow B$是双射的，即值域$B$中每一个元素的原像都是唯一的，那么这个函数就有<strong>反函数（inverse function）</strong>$f^{-1}$，$(f^{-1} \circ f)(x) = x$。例如函数$f(x) = 2x + 1$，它的反函数为$f^{-1}(x) = \frac{x - 1}{2}$。<br>如果一个函数有反函数，那么称这个函数是<strong>可逆的（invertible）</strong>。</p>
+<p>由多个子函数分段定义的函数称为<strong>分段函数（piecewise function）</strong>，如绝对值函数</p>
+<script type="math/tex; mode=display">
+|x| =
+\begin{cases}
+x &\ (x \ge 0) \\
+-x &\ (x < 0)
+\end{cases}</script><p>分段函数的定义域是各段函数定义域的并集，值域是各段函数值域的并集。</p>
 <h2 id="函数的性质"><a href="#函数的性质" class="headerlink" title="函数的性质"></a>函数的性质</h2><h3 id="单调性"><a href="#单调性" class="headerlink" title="单调性"></a>单调性</h3><h3 id="对称性"><a href="#对称性" class="headerlink" title="对称性"></a>对称性</h3><h3 id="周期性"><a href="#周期性" class="headerlink" title="周期性"></a>周期性</h3><h3 id="连续性"><a href="#连续性" class="headerlink" title="连续性"></a>连续性</h3><h1 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h1><h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2>
       
     </div>
@@ -609,6 +618,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2021/05/15/Fen/" rel="prev" title="坟">
+                坟 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -691,7 +704,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1167,7 +1180,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共539.4k字</span>
+  <span class="post-count">全站共597.2k字</span>
 </div>
         
 
@@ -1866,7 +1879,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1621008347110')
+  navigator.serviceWorker.register('/sw.js?t=1621065755967')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
