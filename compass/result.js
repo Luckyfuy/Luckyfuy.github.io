@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     function drawGraph() {
         const width = 600;
-        const height = 800;
+        const height = 1000;
         const Y_STEP = 100;
         const font_l = {
             family: 'Helvetica',
@@ -204,7 +204,7 @@ $(document).ready(function () {
     $("#btn-result-save").click(function () {
         let canvas = document.createElement("canvas");
         canvas.width = 600;
-        canvas.height = 800;
+        canvas.height = 1000;
         canvas.style.position = 'absolute';
         canvas.style.top = '0';
         canvas.style.left = '0';
