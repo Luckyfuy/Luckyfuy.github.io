@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2021/03/06/Mao-Selected-Works-3/');
+  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
