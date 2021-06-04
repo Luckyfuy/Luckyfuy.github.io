@@ -159,7 +159,9 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/04/m8HKjAuORo7MbSY.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/04/kOBlgP7e9XUhmf8.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/04/E6wtxbQeNSLBXoH.png">
-<meta property="og:updated_time" content="2021-06-04T15:22:47.099Z">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/C31s9ndcu8OJRgv.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
+<meta property="og:updated_time" content="2021-06-04T17:12:00.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -482,7 +484,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.5k
+                  2.9k
                 </span>
               
 
@@ -498,7 +500,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11
+                  12
                 </span>
               
             </div>
@@ -633,7 +635,15 @@ x, & x \ge 0 \\
 & a^{m} \cdot a^{n} = a^{m + n} \\
 & a^{m} \cdot b^{m} = (ab)^{m} \\
 & (a^{m})^{n} = a^{mn}
-\end{aligned}</script><h3 id="幂函数-1"><a href="#幂函数-1" class="headerlink" title="幂函数"></a>幂函数</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h3 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h3><h3 id="对数函数-1"><a href="#对数函数-1" class="headerlink" title="对数函数"></a>对数函数</h3><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
+\end{aligned}</script><h3 id="幂函数-1"><a href="#幂函数-1" class="headerlink" title="幂函数"></a>幂函数</h3><p><strong>幂函数（power function）</strong>：</p>
+<script type="math/tex; mode=display">f(x) = x^{\alpha}, \alpha \in \mathbb{R}</script><p>先来考察$\alpha \in \mathbb{Q}$时幂函数的定义域。<br>将$\alpha$表示为分数形式，设$\alpha = \frac{p}{q}$，由有理数指数幂的定义可以得到：<br>若$p &gt; 0$且$q$为奇数，则定义域为$\mathbb{R}$；<br>若$p &gt; 0$且$q$为偶数，则定义域为$[0, +\infty)$；<br>若$p &lt; 0$且$q$为奇数，则定义域为$\{x | x \ne 0\}$；<br>若$p &lt; 0$且$q$为偶数，则定义域为$(0, +\infty)$。</p>
+<p>$\alpha$为无理数时比较复杂。因为$x &lt; 0$时截取的近似值$\alpha_{n}$用分数形式表示分母可能为偶数，一般认为$\alpha$为正无理数时定义域为$[0, +\infty)$，而负无理数为$(0, +\infty)$。</p>
+<p>分别取$\alpha = 1, 2, 3, -1, \frac{1}{2}$时画出图像：<br><img src="https://i.loli.net/2021/06/05/C31s9ndcu8OJRgv.png" alt="幂函数" title="幂函数"></p>
+<p>从图中可以发现，幂函数在第一象限总是有定义，并且恒过定点$(1, 1)$。</p>
+<p>考察幂函数的单调性：<br>可以证明，<br>$\alpha &gt; 0$时，幂函数在$(0, +\infty)$上为增函数；<br>$\alpha &lt; 0$时，幂函数在$(0, +\infty)$上为减函数。</p>
+<p>奇偶性：<br>设$\alpha = \frac{p}{q}$，如果$q$为奇数，$p$为奇数则为奇函数，$p$为偶数则为偶函数。<br>（$q = \pm1$时实际上就是$\alpha$为奇数时则为奇函数，$\alpha$为偶数时则为偶函数）</p>
+<p>看这张动图会更容易理解一些：<br><img src="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif" alt="幂函数" title="幂函数"></p>
+<h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h3 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h3><h3 id="对数函数-1"><a href="#对数函数-1" class="headerlink" title="对数函数"></a>对数函数</h3><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
       
     </div>
     
@@ -1282,7 +1292,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共676.4k字</span>
+  <span class="post-count">全站共676.7k字</span>
 </div>
         
 
@@ -1981,7 +1991,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1622820261718')
+  navigator.serviceWorker.register('/sw.js?t=1622826850750')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
