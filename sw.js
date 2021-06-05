@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/08/Windows-Shortcut-Keys/');
+  precacheUrls.push('/2019/09/07/Knapsack/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
