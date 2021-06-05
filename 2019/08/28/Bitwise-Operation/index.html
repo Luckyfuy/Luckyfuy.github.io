@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-10-05T14:02:25.569Z">
+<meta property="og:updated_time" content="2021-06-05T05:47:35.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="位运算">
 <meta name="twitter:description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
@@ -516,59 +516,59 @@
 <h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="非（NOT）"><a href="#非（NOT）" class="headerlink" title="非（NOT）"></a>非（NOT）</h2><p>非运算会对一个二进制数的每一位执行逻辑非运算，即取反，将$0$变成$1$，将$1$变成$0$。<br>在大多数编程语言中，其符号为<code>~</code>。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\rm{NOT}&\ 0111 (= (7)_{10}) \\
-= &\ 1000 (= (8)_{10})
+\rm{NOT}&\ 0111 \ (= (7)_{10}) \\
+= &\ 1000 \ (= (8)_{10})
 \end{aligned}</script><p>非运算的结果是值的二进制补码减一，即$\rm{NOT}\ x =  -x - 1$。</p>
 <h2 id="与（AND）"><a href="#与（AND）" class="headerlink" title="与（AND）"></a>与（AND）</h2><p>与运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑与运算，相当于将它们相乘。若两个bit都为$1$，则结果为$1$（$1 \times 1 =  1$）；否则结果为$0$（$1 \times 0 =  0, 0 \times 0 =  0$）。<br>在大多数编程语言中，其符号为<code>&amp;</code>。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0101 (= (5)_{10}) \\
-\rm{AND} \ & 0011 (= (3)_{10}) \\
-= \ & 0001 (= (1)_{10})
-\end{aligned}</script><p>与运算可以用于确认某一位是$1$还是$0$。<br>例如，对于给定的数$0011 (= (3)_{10})$，我们要确认第$2$位是否是$1$，我们可以用将其和$0010$（只有第$2$位是$1$）进行与运算：</p>
+\ & 0101 \ (= (5)_{10}) \\
+\rm{AND} \ & 0011 \ (= (3)_{10}) \\
+= \ & 0001 \ (= (1)_{10})
+\end{aligned}</script><p>与运算可以用于确认某一位是$1$还是$0$。<br>例如，对于给定的数$0011 \ (= (3)_{10})$，我们要确认第$2$位是否是$1$，我们可以用将其和$0010$（只有第$2$位是$1$）进行与运算：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0011 (= (3)_{10}) \\
-\rm{AND} \ & 0010 (= (2)_{10}) \\
-= \ & 0010 (= (2)_{10})
-\end{aligned}</script><p>由于结果$0010$不为$0$，所以我们知道原数的第$2$位是$1$。这被称作位掩码(Bit Mask)。</p>
-<p>与运算可以将某一位设置为$0$。例如，我们要把$0110 (= (6)_{10})$的第$3$位设置为$0$，可以将其和$1011$（只有第$3$位是$0$）进行与运算：</p>
+\ & 0011 \ (= (3)_{10}) \\
+\rm{AND} \ & 0010 \ (= (2)_{10}) \\
+= \ & 0010 \ (= (2)_{10})
+\end{aligned}</script><p>由于结果$0010$不为$0$，所以我们知道原数的第$2$位是$1$。这被称作位掩码（Bit Mask）。</p>
+<p>与运算可以将某一位设置为$0$。例如，我们要把$0110 \ (= (6)_{10})$的第$3$位设置为$0$，可以将其和$1011$（只有第$3$位是$0$）进行与运算：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10}) \\
-\rm{AND} \ & 1011 (= (11)_{10}) \\
-= \ & 0010 (= (2)_{10})
+\ & 0110 \ (= (6)_{10}) \\
+\rm{AND} \ & 1011 \ (= (11)_{10}) \\
+= \ & 0010 \ (= (2)_{10})
 \end{aligned}</script><p>由于这个属性，二进制数的奇偶校验就很方便了：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10}) \\
-\rm{AND} \ & 0001 (= (1)_{10}) \\
-= \ & 0000 (= (0)_{10})
+\ & 0110 \ (= (6)_{10}) \\
+\rm{AND} \ & 0001 \ (= (1)_{10}) \\
+= \ & 0000 \ (= (0)_{10})
 \end{aligned}</script><p>因为$6\ \rm{AND}\ 1 =  0$，所以$6$可以被$2$整除，因此$6$是偶数。</p>
 <h2 id="或（OR）"><a href="#或（OR）" class="headerlink" title="或（OR）"></a>或（OR）</h2><p>或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑或运算。若两个bit都为$0$，则结果为$0$；否则结果为$1$。<br>在大多数编程语言中，其符号为<code>|</code>。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0101 (= (5)_{10}) \\
-\rm{OR} \ & 0011 (= (3)_{10}) \\
-= \  & 0111 (= (7)_{10})
-\end{aligned}</script><p>或运算可以将某一位设置为$1$。例如，我们要把$0110 (= (6)_{10})$的第$4$位设置为$1$，可以将其和$1000$（只有第$4$位是$1$）进行或运算：</p>
+\ & 0101 \ (= (5)_{10}) \\
+\rm{OR} \ & 0011 \ (= (3)_{10}) \\
+= \  & 0111 \ (= (7)_{10})
+\end{aligned}</script><p>或运算可以将某一位设置为$1$。例如，我们要把$0110 \ (= (6)_{10})$的第$4$位设置为$1$，可以将其和$1000$（只有第$4$位是$1$）进行或运算：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10}) \\
-\rm{OR} \ & 1000 (= (8)_{10}) \\
-= \ & 1110 (= (14)_{10})
+\ & 0110 \ (= (6)_{10}) \\
+\rm{OR} \ & 1000 \ (= (8)_{10}) \\
+= \ & 1110 \ (= (14)_{10})
 \end{aligned}</script><h2 id="异或（XOR）"><a href="#异或（XOR）" class="headerlink" title="异或（XOR）"></a>异或（XOR）</h2><p>异或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑异或运算。若只有其中一个bit为$1$，则结果为$1$；否则结果为$0$。即两者状态不同，结果为$1$；两者状态相同，结果为$0$。<br>在大多数编程语言中，其符号为<code>^</code>。数学中还可以用符号$\oplus$表示异或。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0101 (= (5)_{10}) \\
-\rm{XOR} \ & 0011 (= (3)_{10}) \\
-= \ & 0110 (= (6)_{10})
-\end{aligned}</script><p>异或运算可以将某一位反转。例如，我们要把$0110 (= (6)_{10})$的第$1$位和第$3$位反转，可以将其和$0101$（第$1$位和第$3$位是$1$）进行异或运算：</p>
+\ & 0101 \ (= (5)_{10}) \\
+\rm{XOR} \ & 0011 \ (= (3)_{10}) \\
+= \ & 0110 \ (= (6)_{10})
+\end{aligned}</script><p>异或运算可以将某一位反转。例如，我们要把$0110 \ (= (6)_{10})$的第$1$位和第$3$位反转，可以将其和$0101$（第$1$位和第$3$位是$1$）进行异或运算：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\ & 0110 (= (6)_{10}) \\
-\rm{XOR} \ & 0101 (= (5)_{10}) \\
-= \ & 0011 (= (3)_{10})
+\ & 0110 \ (= (6)_{10}) \\
+\rm{XOR} \ & 0101 \ (= (5)_{10}) \\
+= \ & 0011 \ (= (3)_{10})
 \end{aligned}</script><p>通过定义可以得到，一个数异或自己总是得$0$。因此，将一个变量归零可以使用异或自己的方式，这种方式的效率通常比直接赋值为$0$要高。</p>
 <h2 id="数学等价"><a href="#数学等价" class="headerlink" title="数学等价"></a>数学等价</h2><p>对于非负整数$x$和$y$，$x \ge y$，位运算可以写成如下形式：</p>
 <script type="math/tex; mode=display">
@@ -580,12 +580,12 @@ x\ \rm{XOR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rflo
 \end{aligned}</script><h1 id="移位"><a href="#移位" class="headerlink" title="移位"></a>移位</h1><p>移位会将二进制数字整体向左或向右移动，任意一端移出的位会被丢弃。<br>在左移中，$0$会从右侧移入；而在右移中，符号位会从左侧移入。<br>左移$n$位等同于乘以$2^{n}$，而右移$n$位等同于除以$2^{n}$并向负无穷取整。<br>在大多数编程语言中，左移为<code>&lt;&lt;</code>，右移为<code>&gt;&gt;</code>。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\rm{LEFT\ SHIFT} \ & 00010111 (= (23)_{10}) \\
-= \ & 00101110 (= (46)_{10})
+\rm{LEFT\ SHIFT} \ & 00010111 \ (= (23)_{10}) \\
+= \ & 00101110 \ (= (46)_{10})
 \end{aligned}</script><script type="math/tex; mode=display">
 \begin{aligned}
-\rm{RIGHT\ SHIFT} \ & 10010111 (= (-105)_{10}) \\
-= \ & 11001011 (= (-53)_{10})
+\rm{RIGHT\ SHIFT} \ & 10010111 \ (= (-105)_{10}) \\
+= \ & 11001011 \ (= (-53)_{10})
 \end{aligned}</script><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><ul>
 <li><p>乘以$2^{m}$</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mulTwoPower</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m=<span class="number">1</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> n &lt;&lt; m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1965,7 +1965,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1622826850750')
+  navigator.serviceWorker.register('/sw.js?t=1622872295704')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

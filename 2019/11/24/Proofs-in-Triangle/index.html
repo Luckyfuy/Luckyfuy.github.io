@@ -166,7 +166,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/11/24/O4IAKW3fdMmtxNP.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/58jnKqLtdfb7cPW.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/EXbJx8aznTWlrUs.png">
-<meta property="og:updated_time" content="2020-10-24T12:42:52.333Z">
+<meta property="og:updated_time" content="2021-06-05T05:49:56.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于三角形的一些证明">
 <meta name="twitter:description" content="这好像是全博客第一篇与文化课有点关系的…… （rgq：真好玩）">
@@ -531,38 +531,38 @@
 <a id="more"></a>
 <h1 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h1><p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt=""></p>
 <p>如图，在$\triangle ABC$中，$BC = a, AC = b, AB = c$，$r$为$\triangle ABC$的外接圆半径，正弦定理有：</p>
-<script type="math/tex; mode=display">\frac{a}{\sin \angle A} = \frac{b}{\sin \angle B} = \frac{c}{\sin \angle C} = 2r</script><p>证明如下：</p>
+<script type="math/tex; mode=display">\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2r</script><p>证明如下：</p>
 <p><img src="https://i.loli.net/2019/11/24/c8GykghiXHLW2Cu.png" alt=""><br>如图，过点$C$作$CD \perp AB$交$AB$于点$D$，$CD = h$。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\because \ & \sin \angle A = \frac{h}{b}, \sin \angle B = \frac{h}{a} \\
-\therefore \ & h = b \sin \angle A = a \sin \angle B \\
-\therefore \ & \frac{a}{\sin \angle A} = \frac{b}{\sin \angle B}
+\because \ & \sin A = \frac{h}{b}, \sin B = \frac{h}{a} \\
+\therefore \ & h = b \sin A = a \sin B \\
+\therefore \ & \frac{a}{\sin A} = \frac{b}{\sin B}
 \end{aligned}</script><p>同理：</p>
-<script type="math/tex; mode=display">\frac{b}{\sin \angle B} = \frac{c}{\sin \angle C}</script><p>作$\triangle ABC$的外接圆，设半径为$r$。</p>
+<script type="math/tex; mode=display">\frac{b}{\sin B} = \frac{c}{\sin C}</script><p>作$\triangle ABC$的外接圆，设半径为$r$。</p>
 <ul>
 <li>$\angle A$为锐角时<br><img src="https://i.loli.net/2020/10/24/tAHziDYGrmfQT7y.png" alt=""></li>
 </ul>
 <p>根据圆周角定理，$\angle D = \angle A$。<br>由于$CD$为外接圆直径，$\angle CBD = \frac{\pi}{2}$。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\therefore \ & \sin \angle A = \sin \angle D = \frac{a}{2r} \\
-\therefore \ & \frac{a}{\sin \angle A} = 2r
+\therefore \ & \sin A = \sin D = \frac{a}{2r} \\
+\therefore \ & \frac{a}{\sin A} = 2r
 \end{aligned}</script><ul>
 <li>$\angle A$为直角时<br><img src="https://i.loli.net/2020/10/24/Jk8gq7KHQGT3dwO.png" alt=""></li>
 </ul>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\because \ & BC = a = 2r, \sin \angle A = \sin \frac{\pi}{2} = 1 \\
-\therefore \ & \frac{a}{\sin \angle A} = 2r
+\because \ & BC = a = 2r, \sin A = \sin \frac{\pi}{2} = 1 \\
+\therefore \ & \frac{a}{\sin A} = 2r
 \end{aligned}</script><ul>
 <li>$\angle A$为钝角时<br><img src="https://i.loli.net/2020/10/24/9rjnRmkuSVCvs3F.png" alt=""></li>
 </ul>
 <p>由于$A, B, D, C$四点共圆，所以$\angle D + \angle A = 180^{\circ}$。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\therefore \ & \sin \angle A = \sin \angle D = \frac{a}{2r} \\
-\therefore \ & \frac{a}{\sin \angle A} = 2r
+\therefore \ & \sin A = \sin D = \frac{a}{2r} \\
+\therefore \ & \frac{a}{\sin A} = 2r
 \end{aligned}</script><h1 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h1><p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt=""></p>
 <p>如图，在$\triangle ABC$中，$BC = a, AC = b, AB = c, \angle A = \alpha, \angle B = \beta, \angle C = \gamma$。<br>余弦定理：</p>
 <script type="math/tex; mode=display">c^{2} = a^{2} + b^{2} - 2ab \cos \gamma</script><p>同理：</p>
@@ -1988,7 +1988,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1622826850750')
+  navigator.serviceWorker.register('/sw.js?t=1622872295704')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
