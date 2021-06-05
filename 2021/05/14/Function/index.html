@@ -159,9 +159,12 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/04/m8HKjAuORo7MbSY.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/04/kOBlgP7e9XUhmf8.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/04/E6wtxbQeNSLBXoH.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/4hXMLf3Uqgldo2e.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/C31s9ndcu8OJRgv.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
-<meta property="og:updated_time" content="2021-06-04T17:12:00.119Z">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png">
+<meta property="og:updated_time" content="2021-06-05T08:09:56.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -484,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.9k
+                  3.6k
                 </span>
               
 
@@ -500,7 +503,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  15
                 </span>
               
             </div>
@@ -528,7 +531,6 @@
 <p>事实上，<a href="/2021/04/18/Logic-and-Set/#谓词逻辑">谓词</a>就是一个把主词映射到$\{T, F\}$的映射。</p>
 <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>一般来说，对于映射$f: A \rightarrow B$，如果$A, B$是非空的实数集合，那么称$f$是一个从$A$到$B$的<strong>函数（function）</strong>。<br>在函数$f$中，$x \in A, y \in B$，$x$与$y$相对应，则称$y$为$x$的<strong>像（image）</strong>，记作$y = f(x)$；$x$为$y$的<strong>原像（inverse image/preimage）</strong>，记作$x = f^{-1}(y)$。<br>集合$A$称为$f$的<strong>定义域（domain）</strong>，$B$称为<strong>陪域（codomain）</strong>，而$A$映射到$B$上的像$f(A)$称为<strong>值域（range）</strong>。值域是陪域的子集，即$f(A) \subseteq B$。如果函数表达式已知，那么使得函数$f(x)$有意义的$x$的集合称为<strong>自然定义域（natural domain）</strong>。<br>平面上的点集$\{(x, f(x)) | x \in A\}$是函数$f$的<strong>图像（graph）</strong>。</p>
 <p>如果两个函数$f, g$的定义域相等，都是$A$，且有$\forall x \in A, f(x) = g(x)$，那么称函数$f, g$<strong>相等</strong>。例如$f(x) = x$与$g(x) = \sqrt[3]{x^{3}}$就是相等函数。<br>设函数$f: A \rightarrow B, g: B \rightarrow C$，$f$与$g$的<strong>复合（composition）</strong>为$f \circ g: A \rightarrow C$，$(f \circ g)(x) = g(f(x))$。</p>
-<p>如果函数$f: A \rightarrow B$是双射的，即值域$B$中每一个元素的原像都是唯一的，那么这个函数就有<strong>反函数（inverse function）</strong>$f^{-1}$，$(f^{-1} \circ f)(x) = x$。例如函数$f(x) = 2x + 1$，它的反函数为$f^{-1}(x) = \frac{x - 1}{2}$。<br>如果一个函数有反函数，那么称这个函数是<strong>可逆的（invertible）</strong>。</p>
 <p>由多个子函数分段定义的函数称为<strong>分段函数（piecewise function）</strong>，如绝对值函数</p>
 <script type="math/tex; mode=display">
 |x| =
@@ -557,6 +559,10 @@ x, & x \ge 0 \\
 <p>以上是用$\varepsilon - \delta$语言对函数连续性的定义。<br>$\varepsilon - \delta$语言最初由法国数学家柯西（Cauchy）提出。$\varepsilon$和$\delta$可以看作是两个无穷小量，无论函数值的距离$\varepsilon$多小，都能找到一段长为$\delta$的区间与之对应。</p>
 <p>连续函数有一重要性质，即<strong>介值定理（intermediate value theorem）</strong>：<br>设连续函数$f: [a, b] \rightarrow \mathbb{R}$，$u$为$f(a), f(b)$之间的任意实数，则存在$c \in [a, b]$，使得$f(c) = u$。</p>
 <p>如果$f(x) = 0$，$x$称为函数$f$的一个<strong>零点（zero point）</strong>。<br>特殊地，$c = 0$时的介值定理称为<strong>零点定理</strong>：<br>若$f(a) f(b) &lt; 0$，则存在$c \in (a, b)$使得$f(c) = 0$。</p>
+<h2 id="反函数"><a href="#反函数" class="headerlink" title="反函数"></a>反函数</h2><p>如果函数$f: A \rightarrow B$是双射的，即值域$B$中每一个元素的原像都是唯一的，那么这个函数就有<strong>反函数（inverse function）</strong>$f^{-1}$，$(f^{-1} \circ f)(x) = x$。例如函数$f(x) = 2x + 1$，它的反函数为$f^{-1}(x) = \frac{x - 1}{2}$。<br>如果一个函数有反函数，那么称这个函数是<strong>可逆的（invertible）</strong>。</p>
+<p>一个函数有反函数当且仅当是双射函数，<br>因此，单调函数总是有反函数，并且反函数的单调性与原函数一致。</p>
+<p>从图像可以看出来，原函数与反函数的图像关于函数$y = x$的图像对称：<br><img src="https://i.loli.net/2021/06/05/4hXMLf3Uqgldo2e.png" alt="反函数" title="原函数与反函数"></p>
+<p>不难发现，原函数的定义域与值域正好是反函数的值域与定义域。</p>
 <h1 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h1><h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><h3 id="指数幂"><a href="#指数幂" class="headerlink" title="指数幂"></a>指数幂</h3><p>我们已经知道整数指数幂：（$n \in \mathbb{N^{*}}$）</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
@@ -643,7 +649,38 @@ x, & x \ge 0 \\
 <p>考察幂函数的单调性：<br>可以证明，<br>$\alpha &gt; 0$时，幂函数在$(0, +\infty)$上为增函数；<br>$\alpha &lt; 0$时，幂函数在$(0, +\infty)$上为减函数。</p>
 <p>奇偶性：<br>设$\alpha = \frac{p}{q}$，如果$q$为奇数，$p$为奇数则为奇函数，$p$为偶数则为偶函数。<br>（$q = \pm1$时实际上就是$\alpha$为奇数时则为奇函数，$\alpha$为偶数时则为偶函数）</p>
 <p>看这张动图会更容易理解一些：<br><img src="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif" alt="幂函数" title="幂函数"></p>
-<h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h3 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h3><h3 id="对数函数-1"><a href="#对数函数-1" class="headerlink" title="对数函数"></a>对数函数</h3><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
+<h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><strong>指数函数（exponential function）</strong>：</p>
+<script type="math/tex; mode=display">f(x) = a^{x}, a > 0, a \ne 1</script><p>因为$a &gt; 0$，指数函数的定义域为$\mathbb{R}$，值域为$(0, +\infty)$。</p>
+<p>根据图像，<br>若$a &gt; 1$，则指数函数为增函数；<br>若$0 &lt; a &lt; 1$，则指数函数为减函数。<br><img src="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png" alt="指数函数" title="指数函数"></p>
+<p>证明如下：<br>设$f(x) = a^{x}, a &gt; 1, x_{1} &lt; x_{2}$，有</p>
+<script type="math/tex; mode=display">\frac{f(x_{1})}{f(x_{2})} = a^{x_{1} - x_{2}}</script><p>设$g(x) = x^{x_{1} - x_{2}}$，<br>我们知道$g(x)$是幂函数，由于$x_{1} - x_{2} &lt; 0$，$g(x)$为减函数，因此</p>
+<script type="math/tex; mode=display">a^{x_{1} - x_{2}} = g(a) < g(0) = 1</script><p>故$f(x_{1}) &lt; f(x_{2})$，$f(x)$为增函数。<br>$0 &lt; a &lt; 1$时考虑$f(x) = (\frac{1}{a})^{x}$即可。$\Box$</p>
+<p>可以发现，底数互为倒数的两个指数函数的图像关于$y$轴对称。<br>指数函数的图像总是通过点$(0, 1)$。</p>
+<p>指数函数中，有一种函数特别重要：</p>
+<script type="math/tex; mode=display">f(x) = \mathrm{e}^{x}</script><p>$\rm{e}$是一个无理数，近似值为</p>
+<script type="math/tex; mode=display">\rm{e} = 2.71828\cdots</script><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h3 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h3><p>设$a^{b} = c$，那么$b$称为以$a$为底$c$的<strong>对数（logarithm）</strong>，记作</p>
+<script type="math/tex; mode=display">b = \log_{a} c</script><p>其中$a$称为对数的<strong>底数（base）</strong>，$c$称为<strong>真数（antilogarithm）</strong>。</p>
+<p>设指数函数$f(x) = a^{x}$，对数函数就是指数函数的反函数$f^{-1}(x) = \log_{a} x$。<br>同样，$a &gt; 0, a \ne 1$。</p>
+<p>以$10$为底的对数称作<strong>常用对数（common logarithm）</strong>，记作$\lg$；<br>以$\rm{e}$为底的对数称作<strong>自然对数（natural logarithm）</strong>，记作$\ln$。</p>
+<p>由对数的定义可得：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& a^{\log_{a} x} = x \\
+& \log_{a} a^{x} = x
+\end{aligned}</script><p>由对数与指数的关系，可得对数的运算性质：（$a &gt; 0, a \ne 1, m, n &gt; 0$）</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \log_{a} (m n) = \log_{a} m + \log_{a} n \\
+& \log_{a} m^{n} = n \log_{a} m
+\end{aligned}</script><p>设$\log_{a} b = x$，则$a^{x} = b$，<br>可得$\log_{c} a^{x} = \log_{c} b$，<br>再根据运算性质得$x \log_{c} a = \log_{c} b$，<br>即得<strong>换底公式</strong>：</p>
+<script type="math/tex; mode=display">\log_{a} b = \frac{\log_{c} b}{\log_{c} a}</script><p>特别地，$\log_{a} b \cdot \log_{b} a = 1$。</p>
+<h3 id="对数函数-1"><a href="#对数函数-1" class="headerlink" title="对数函数"></a>对数函数</h3><p><strong>对数函数（logarithm function）</strong>：</p>
+<script type="math/tex; mode=display">f(x) = \log_{a} x, a > 0, a \ne 1</script><p>由于对数函数是指数函数的反函数，很多性质可以由指数函数得出。</p>
+<p>对数函数与指数函数的定义域与值域对调，<br>对数函数的定义域为$(0, +\infty)$，值域为$\mathbb{R}$。</p>
+<p>$a &gt; 1$时，对数函数为增函数；<br>$0 &lt; a &lt; 1$时，对数函数为减函数。</p>
+<p><img src="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png" alt="对数函数" title="对数函数"></p>
+<p>可以发现，底数互为倒数的两个对数函数的图像关于$x$轴对称。<br>指数函数的图像总是通过点$(1, 0)$。</p>
+<h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
       
     </div>
     
@@ -1209,7 +1246,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#映射"><span class="nav-number">1.</span> <span class="nav-text">映射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的性质"><span class="nav-number">2.1.</span> <span class="nav-text">函数的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单调性"><span class="nav-number">2.1.1.</span> <span class="nav-text">单调性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对称性与奇偶性"><span class="nav-number">2.1.2.</span> <span class="nav-text">对称性与奇偶性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周期性"><span class="nav-number">2.1.3.</span> <span class="nav-text">周期性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续性"><span class="nav-number">2.1.4.</span> <span class="nav-text">连续性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初等函数"><span class="nav-number">3.</span> <span class="nav-text">初等函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#幂函数"><span class="nav-number">3.1.</span> <span class="nav-text">幂函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指数幂"><span class="nav-number">3.1.1.</span> <span class="nav-text">指数幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有理数指数幂"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">有理数指数幂</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数指数幂"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">实数指数幂</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#幂函数-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">幂函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数函数"><span class="nav-number">3.2.</span> <span class="nav-text">指数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数函数"><span class="nav-number">3.3.</span> <span class="nav-text">对数函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对数"><span class="nav-number">3.3.1.</span> <span class="nav-text">对数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对数函数-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">对数函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角函数"><span class="nav-number">3.4.</span> <span class="nav-text">三角函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任意角"><span class="nav-number">3.4.1.</span> <span class="nav-text">任意角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弧度制"><span class="nav-number">3.4.2.</span> <span class="nav-text">弧度制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数的概念"><span class="nav-number">3.4.3.</span> <span class="nav-text">三角函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#诱导公式"><span class="nav-number">3.4.4.</span> <span class="nav-text">诱导公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数的图像与性质"><span class="nav-number">3.4.5.</span> <span class="nav-text">三角函数的图像与性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反三角函数"><span class="nav-number">3.4.6.</span> <span class="nav-text">反三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角恒等变换"><span class="nav-number">3.4.7.</span> <span class="nav-text">三角恒等变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解三角形"><span class="nav-number">3.4.8.</span> <span class="nav-text">解三角形</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#映射"><span class="nav-number">1.</span> <span class="nav-text">映射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的性质"><span class="nav-number">2.1.</span> <span class="nav-text">函数的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单调性"><span class="nav-number">2.1.1.</span> <span class="nav-text">单调性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对称性与奇偶性"><span class="nav-number">2.1.2.</span> <span class="nav-text">对称性与奇偶性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周期性"><span class="nav-number">2.1.3.</span> <span class="nav-text">周期性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续性"><span class="nav-number">2.1.4.</span> <span class="nav-text">连续性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反函数"><span class="nav-number">2.2.</span> <span class="nav-text">反函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初等函数"><span class="nav-number">3.</span> <span class="nav-text">初等函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#幂函数"><span class="nav-number">3.1.</span> <span class="nav-text">幂函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指数幂"><span class="nav-number">3.1.1.</span> <span class="nav-text">指数幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有理数指数幂"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">有理数指数幂</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数指数幂"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">实数指数幂</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#幂函数-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">幂函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数函数"><span class="nav-number">3.2.</span> <span class="nav-text">指数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数函数"><span class="nav-number">3.3.</span> <span class="nav-text">对数函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对数"><span class="nav-number">3.3.1.</span> <span class="nav-text">对数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对数函数-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">对数函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角函数"><span class="nav-number">3.4.</span> <span class="nav-text">三角函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任意角"><span class="nav-number">3.4.1.</span> <span class="nav-text">任意角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弧度制"><span class="nav-number">3.4.2.</span> <span class="nav-text">弧度制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数的概念"><span class="nav-number">3.4.3.</span> <span class="nav-text">三角函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#诱导公式"><span class="nav-number">3.4.4.</span> <span class="nav-text">诱导公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数的图像与性质"><span class="nav-number">3.4.5.</span> <span class="nav-text">三角函数的图像与性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反三角函数"><span class="nav-number">3.4.6.</span> <span class="nav-text">反三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角恒等变换"><span class="nav-number">3.4.7.</span> <span class="nav-text">三角恒等变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解三角形"><span class="nav-number">3.4.8.</span> <span class="nav-text">解三角形</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1292,7 +1329,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共676.7k字</span>
+  <span class="post-count">全站共677.4k字</span>
 </div>
         
 
@@ -1991,7 +2028,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1622873270387')
+  navigator.serviceWorker.register('/sw.js?t=1622880618297')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
