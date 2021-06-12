@@ -164,7 +164,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png">
-<meta property="og:updated_time" content="2021-06-05T08:09:56.053Z">
+<meta property="og:updated_time" content="2021-06-12T07:00:39.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -667,11 +667,12 @@ x, & x \ge 0 \\
 \begin{aligned}
 & a^{\log_{a} x} = x \\
 & \log_{a} a^{x} = x
-\end{aligned}</script><p>由对数与指数的关系，可得对数的运算性质：（$a &gt; 0, a \ne 1, m, n &gt; 0$）</p>
+\end{aligned}</script><p>由对数与指数的关系，可得对数的运算性质：（$a &gt; 0, a \ne 1, m, n &gt; 0, b \in \mathbb{R}$）</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
 & \log_{a} (m n) = \log_{a} m + \log_{a} n \\
-& \log_{a} m^{n} = n \log_{a} m
+& \log_{a} \frac{m}{n} = \log_{a} m - \log_{a} n \\
+& \log_{a} m^{b} = b \log_{a} m
 \end{aligned}</script><p>设$\log_{a} b = x$，则$a^{x} = b$，<br>可得$\log_{c} a^{x} = \log_{c} b$，<br>再根据运算性质得$x \log_{c} a = \log_{c} b$，<br>即得<strong>换底公式</strong>：</p>
 <script type="math/tex; mode=display">\log_{a} b = \frac{\log_{c} b}{\log_{c} a}</script><p>特别地，$\log_{a} b \cdot \log_{b} a = 1$。</p>
 <h3 id="对数函数-1"><a href="#对数函数-1" class="headerlink" title="对数函数"></a>对数函数</h3><p><strong>对数函数（logarithm function）</strong>：</p>
@@ -1329,7 +1330,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共685.9k字</span>
+  <span class="post-count">全站共686k字</span>
 </div>
         
 
@@ -2028,7 +2029,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1622910121661')
+  navigator.serviceWorker.register('/sw.js?t=1623481258214')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
