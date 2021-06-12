@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/10/07/Sparse-Table/');
+  precacheUrls.push('/2021/02/26/Taiwan-Version-Historical-Atlas-of-China/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
