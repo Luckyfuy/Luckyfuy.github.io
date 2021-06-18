@@ -164,7 +164,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png">
-<meta property="og:updated_time" content="2021-06-12T07:00:39.485Z">
+<meta property="og:updated_time" content="2021-06-18T11:44:37.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -487,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.6k
+                  3.8k
                 </span>
               
 
@@ -503,7 +503,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  15
+                  16
                 </span>
               
             </div>
@@ -547,11 +547,23 @@ x, & x \ge 0 \\
 <h3 id="对称性与奇偶性"><a href="#对称性与奇偶性" class="headerlink" title="对称性与奇偶性"></a>对称性与奇偶性</h3><p>如果一个函数$f: A \rightarrow B$的定义域满足$x \in A \Leftrightarrow -x \in A$，且$\forall x \in A, f(x) = f(-x)$，那么称$f$为<strong>偶函数（even function）</strong>。偶函数的图像关于$y$轴对称。<br>例如函数$f(x) = x^{2}$，$\forall x \in \mathbb{R}$，都有$f(-x) = (-x)^{2} = x^{2} = f(x)$，因此$f$为偶函数。</p>
 <p><img src="https://i.loli.net/2021/06/04/m8HKjAuORo7MbSY.png" alt="偶函数" title="偶函数"></p>
 <p>不难得到，函数$f(x)$关于直线$x = a$对称的充要条件是$f(a + x) = f(a - x)$。<br>因此，函数$f(x + a)$为偶函数。</p>
-<p><img src="https://i.loli.net/2021/06/04/kOBlgP7e9XUhmf8.png" alt="奇函数" title="奇函数"></p>
 <p>如果一个函数$f: A \rightarrow B$的定义域满足$x \in A \Leftrightarrow -x \in A$，且$\forall x \in A, f(-x) = -f(x)$，那么称$f$为<strong>奇函数（odd function）</strong>。奇函数的图像关于原点中心对称。<br>例如函数$f(x) = x^{3}$，$\forall x \in \mathbb{R}$，都有$f(-x) = (-x)^{3} = -x^{3} = -f(x)$，因此$f$为奇函数。</p>
+<p><img src="https://i.loli.net/2021/06/04/kOBlgP7e9XUhmf8.png" alt="奇函数" title="奇函数"></p>
 <p>不难得到，函数$f(x)$关于点$(a, b)$对称的充要条件是$f(a + x) + f(a - x) = 2b$。<br>因此，函数$f(x + a) - b$为奇函数。</p>
 <p>只有函数$f(x) = 0$同时是奇函数和偶函数。</p>
 <p>一般来说，奇函数与偶函数之和为非奇非偶函数；<br>两个奇函数之和为奇函数，两个偶函数之和为偶函数；<br>两个奇函数之积为奇函数，两个偶函数之积为偶函数；<br>两个奇函数之商为奇函数，两个偶函数之商为偶函数；<br>两个奇函数的复合为奇函数，两个偶函数的复合为偶函数；<br>奇函数与偶函数之积为奇函数，奇函数与偶函数之商为奇函数，奇函数与偶函数的复合为偶函数。</p>
+<p>任意一个定义在关于原点对称的集合上的函数可以唯一地表示为一个奇函数与一个偶函数之和。<br>证明：<br>设任意函数$f(x)$，$f(x) = f_{1}(x) + f_{2}(x)$，其中$f_{1}(x)$为奇函数，$f_{2}(x)$为偶函数，因此</p>
+<script type="math/tex; mode=display">f(-x) = f_{1}(-x) + f_{2}(-x) = -f_{1}(x) + f_{2}(x)</script><p>解关于$f_{1}(x), f_{2}(x)$的方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+f(x) = f_{1}(x) + f_{2}(x) \\
+f(-x) = -f_{1}(x) + f_{2}(x)
+\end{cases}
+\Rightarrow
+\begin{cases}
+f_{1}(x) = \frac{f(x) - f(-x)}{2} \\
+f_{2}(x) = \frac{f(x) + f(-x)}{2}
+\end{cases}</script><p>存在性得证。<br>再设$f(x) = g_{1}(x) + g_{2}(x)$，且$g_{1}(x)$为奇函数，$g_{2}(x)$为偶函数，仿照前面推理可得$g_{1}(x) = f_{1}(x), g_{2}(x) = f_{2}(x)$，唯一性得证。$\Box$</p>
 <h3 id="周期性"><a href="#周期性" class="headerlink" title="周期性"></a>周期性</h3><p>对于函数$f$，如果存在一个非零常数$T$，使得定义域内的每一个$x$都有$f(x + T) = f(x)$，那么称$f$为<strong>周期函数（periodic function）</strong>，$T$为函数$f$的<strong>周期（period）</strong>。<br>显然，周期不是唯一的。如果所有可能的周期$T$中存在一个最小正数$T_{0}$，那么称$T_{0}$为<strong>最小正周期（minimal positive period）</strong>。</p>
 <p>例如，方波就是一种周期函数：<br><img src="https://i.loli.net/2021/06/04/E6wtxbQeNSLBXoH.png" alt="方波" title="最小正周期为2"></p>
 <p>如果周期函数$f$存在最小正周期$T_{0}$，那么对于任何$f$的周期$T$，都存在整数$n$使得$T = n T_{0}$。</p>
@@ -655,7 +667,7 @@ x, & x \ge 0 \\
 <p>证明如下：<br>设$f(x) = a^{x}, a &gt; 1, x_{1} &lt; x_{2}$，有</p>
 <script type="math/tex; mode=display">\frac{f(x_{1})}{f(x_{2})} = a^{x_{1} - x_{2}}</script><p>设$g(x) = x^{x_{1} - x_{2}}$，<br>我们知道$g(x)$是幂函数，由于$x_{1} - x_{2} &lt; 0$，$g(x)$为减函数，因此</p>
 <script type="math/tex; mode=display">a^{x_{1} - x_{2}} = g(a) < g(0) = 1</script><p>故$f(x_{1}) &lt; f(x_{2})$，$f(x)$为增函数。<br>$0 &lt; a &lt; 1$时考虑$f(x) = (\frac{1}{a})^{x}$即可。$\Box$</p>
-<p>可以发现，底数互为倒数的两个指数函数的图像关于$y$轴对称。<br>指数函数的图像总是通过点$(0, 1)$。</p>
+<p>由于$(\frac{1}{a})^{x} = a^{-x}$，底数互为倒数的两个指数函数的图像关于$y$轴对称。<br>指数函数的图像总是通过点$(0, 1)$。</p>
 <p>指数函数中，有一种函数特别重要：</p>
 <script type="math/tex; mode=display">f(x) = \mathrm{e}^{x}</script><p>$\rm{e}$是一个无理数，近似值为</p>
 <script type="math/tex; mode=display">\rm{e} = 2.71828\cdots</script><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h3 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h3><p>设$a^{b} = c$，那么$b$称为以$a$为底$c$的<strong>对数（logarithm）</strong>，记作</p>
@@ -680,7 +692,7 @@ x, & x \ge 0 \\
 <p>对数函数与指数函数的定义域与值域对调，<br>对数函数的定义域为$(0, +\infty)$，值域为$\mathbb{R}$。</p>
 <p>$a &gt; 1$时，对数函数为增函数；<br>$0 &lt; a &lt; 1$时，对数函数为减函数。</p>
 <p><img src="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png" alt="对数函数" title="对数函数"></p>
-<p>可以发现，底数互为倒数的两个对数函数的图像关于$x$轴对称。<br>指数函数的图像总是通过点$(1, 0)$。</p>
+<p>由于$\log_{\frac{1}{a}} x = -\log_{a} x$，底数互为倒数的两个对数函数的图像关于$x$轴对称。<br>对数函数的图像总是通过点$(1, 0)$。</p>
 <h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
       
     </div>
@@ -1330,7 +1342,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共687.3k字</span>
+  <span class="post-count">全站共687.5k字</span>
 </div>
         
 
@@ -2029,7 +2041,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1623495519008')
+  navigator.serviceWorker.register('/sw.js?t=1624016898304')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
