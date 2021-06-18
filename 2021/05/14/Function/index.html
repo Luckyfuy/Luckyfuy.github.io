@@ -164,7 +164,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png">
-<meta property="og:updated_time" content="2021-06-18T11:44:37.043Z">
+<meta property="og:updated_time" content="2021-06-18T12:02:36.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -487,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.8k
+                  3.9k
                 </span>
               
 
@@ -665,8 +665,8 @@ f_{2}(x) = \frac{f(x) + f(-x)}{2}
 <script type="math/tex; mode=display">f(x) = a^{x}, a > 0, a \ne 1</script><p>因为$a &gt; 0$，指数函数的定义域为$\mathbb{R}$，值域为$(0, +\infty)$。</p>
 <p>根据图像，<br>若$a &gt; 1$，则指数函数为增函数；<br>若$0 &lt; a &lt; 1$，则指数函数为减函数。<br><img src="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png" alt="指数函数" title="指数函数"></p>
 <p>证明如下：<br>设$f(x) = a^{x}, a &gt; 1, x_{1} &lt; x_{2}$，有</p>
-<script type="math/tex; mode=display">\frac{f(x_{1})}{f(x_{2})} = a^{x_{1} - x_{2}}</script><p>设$g(x) = x^{x_{1} - x_{2}}$，<br>我们知道$g(x)$是幂函数，由于$x_{1} - x_{2} &lt; 0$，$g(x)$为减函数，因此</p>
-<script type="math/tex; mode=display">a^{x_{1} - x_{2}} = g(a) < g(0) = 1</script><p>故$f(x_{1}) &lt; f(x_{2})$，$f(x)$为增函数。<br>$0 &lt; a &lt; 1$时考虑$f(x) = (\frac{1}{a})^{x}$即可。$\Box$</p>
+<script type="math/tex; mode=display">\frac{f(x_{1})}{f(x_{2})} = a^{x_{1} - x_{2}}</script><p>设$g(x) = x^{x_{1} - x_{2}}$，<br>我们知道$g(x)$是幂函数，由于$x_{1} - x_{2} &lt; 0$，$g(x)$在$(0, +\infty)$上单调递减，因此</p>
+<script type="math/tex; mode=display">a^{x_{1} - x_{2}} = g(a) < g(1) = 1</script><p>故$f(x_{1}) &lt; f(x_{2})$，$f(x)$为增函数。<br>$0 &lt; a &lt; 1$时考虑$f(x) = (\frac{1}{a})^{x}$即可。$\Box$</p>
 <p>由于$(\frac{1}{a})^{x} = a^{-x}$，底数互为倒数的两个指数函数的图像关于$y$轴对称。<br>指数函数的图像总是通过点$(0, 1)$。</p>
 <p>指数函数中，有一种函数特别重要：</p>
 <script type="math/tex; mode=display">f(x) = \mathrm{e}^{x}</script><p>$\rm{e}$是一个无理数，近似值为</p>
@@ -2041,7 +2041,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1624016898304')
+  navigator.serviceWorker.register('/sw.js?t=1624017839097')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
