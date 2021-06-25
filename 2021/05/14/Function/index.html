@@ -164,7 +164,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png">
-<meta property="og:updated_time" content="2021-06-18T12:02:36.935Z">
+<meta property="og:updated_time" content="2021-06-25T17:53:17.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -487,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.9k
+                  4.3k
                 </span>
               
 
@@ -503,7 +503,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  16
+                  18
                 </span>
               
             </div>
@@ -693,7 +693,20 @@ f_{2}(x) = \frac{f(x) + f(-x)}{2}
 <p>$a &gt; 1$时，对数函数为增函数；<br>$0 &lt; a &lt; 1$时，对数函数为减函数。</p>
 <p><img src="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png" alt="对数函数" title="对数函数"></p>
 <p>由于$\log_{\frac{1}{a}} x = -\log_{a} x$，底数互为倒数的两个对数函数的图像关于$x$轴对称。<br>对数函数的图像总是通过点$(1, 0)$。</p>
-<h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
+<h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><p>一条射线绕其端点逆时针旋转形成的角叫做<strong>正角</strong>，顺时针旋转形成的角叫做<strong>负角</strong>，不做旋转形成的角叫做<strong>零角</strong>。<br>将周角分为$360$份，那么每一份都是$1^{\circ}$。<br>如果正角$\alpha$含有$x$份，那么$\alpha = x^{\circ}$；<br>如果负角$\beta$含有$y$份，那么$\beta = -y^{\circ}$；<br>任意零角$\gamma = 0^{\circ}$。<br>两个旋转方向和旋转量相同的角$\alpha, \beta$是相等的，记作$\alpha = \beta$。</p>
+<p>定义角的加法$\alpha + \beta$为角$\alpha$的终边旋转角$\beta$所得的角，<br>减法$\alpha - \beta = \alpha + (-\beta)$。</p>
+<p>显然，所有与角$\alpha$终边相同的角都可以表示为$\alpha$与整数个周角之和。</p>
+<p>在平面直角坐标系内，使角的顶点与原点重合，角的始边与$x$非负半轴重合，那么，根据终边的位置在第一、二、三、四象限，分别称之为第一、二、三、四<strong>象限角</strong>。<br>容易求出角$\alpha$是第一、二、三、四象限角的充要条件：</p>
+<ol>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} &lt; \alpha &lt; k \cdot 360^{\circ} + 90^{\circ}$</li>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} + 90^{\circ} &lt; \alpha &lt; k \cdot 360^{\circ} + 180^{\circ}$</li>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} + 180^{\circ} &lt; \alpha &lt; k \cdot 360^{\circ} + 270^{\circ}$</li>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} + 270^{\circ} &lt; \alpha &lt; (k + 1) \cdot 360^{\circ}$</li>
+</ol>
+<p>不是象限角的角，即在终边在坐标轴上的角称为<strong>轴线角</strong>。<br>一个周角范围内，轴线角有零角、直角、平角、$270^{\circ}$角和周角。</p>
+<h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><p>以$1^{\circ}$为周角的$\frac{1}{360}$来度量角的单位制为<strong>角度制</strong>，<br>而在<strong>弧度制</strong>中，<br>$1$<strong>弧度（radian）</strong>定义为长度等于半径的圆弧所对的圆心角，记作$1 \ \rm{rad}$，弧度单位$\rm{rad}$通常省略不写。<br>这样，周角就是$2 \pi$，平角就是$\pi$，$1^{\circ}$就是$\frac{\pi}{180}$。</p>
+<p>在半径为$r$的圆中，弧长为$l$的圆弧所对的圆心角为$\alpha \ \rm{rad}$，那么</p>
+<script type="math/tex; mode=display">|\alpha| = \frac{l}{r}</script><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
       
     </div>
     
@@ -1342,7 +1355,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共688.3k字</span>
+  <span class="post-count">全站共688.8k字</span>
 </div>
         
 
@@ -2041,7 +2054,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1624120861509')
+  navigator.serviceWorker.register('/sw.js?t=1624643640431')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
