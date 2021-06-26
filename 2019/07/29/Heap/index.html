@@ -161,7 +161,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e66b18f38096530.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e6d1bd0b4d55856.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e652e8487870872.png">
-<meta property="og:updated_time" content="2019-10-18T13:53:07.413Z">
+<meta property="og:updated_time" content="2021-06-26T13:41:41.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆">
 <meta name="twitter:description" content="简介堆是一种树型数据结构，具有以下特点：  堆中某个节点的值总是不大于或不小于其父节点的值 堆总是一棵完全二叉树  根节点最大的堆称为大根堆，相反则称之为小根堆。堆可以用于排序。 例如图中就是一个大根堆：">
@@ -532,7 +532,7 @@
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>大根堆较小根堆更容易实现，以下，我们用C++来实现大根堆模板。</p>
 <p>我们用<code>class</code>来封装堆的模板类：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_SIZE = <span class="number">100000</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Heap</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="keyword">int</span> ele[MAX_SIZE];</span><br><span class="line">        <span class="keyword">int</span> tot;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">le</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">rt</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">dad</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        Heap();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> e)</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>我们定义了堆的最大空间<code>MAX_SIZE</code>为<code>100000</code>，然后用数组<code>ele</code>来储存元素。<code>tot</code>用于储存当前元素数量，同时也是最后一个元素的位置。</p>
-<p><img src="https://i.loli.net/2019/07/29/5d3e6476764cd57070.png" alt="编号" title="编号"><br>我们给每个节点编号，可以发现编号为$n$的节点的左子节点为$2n$、右子节点为$2n + 1$、父节点为$\lfloor \frac{n}{2} \rfloor$，因此，我们用三个私有方法<code>le(int n)</code>、<code>rt(int n)</code>、<code>dad(int n)</code>分别表示<code>n</code>号元素的左子节点、右子节点和父节点的位置：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> Heap::le(<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> n &lt;&lt; <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Heap::rt(<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> (n &lt;&lt; <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Heap::dad(<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> n &gt;&gt; <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2019/07/29/5d3e6476764cd57070.png" alt="编号" title="编号"><br>我们给每个节点编号，可以发现编号为$n$的节点的左子节点为$2n$、右子节点为$2n + 1$、父节点为$\lfloor \dfrac{n}{2} \rfloor$，因此，我们用三个私有方法<code>le(int n)</code>、<code>rt(int n)</code>、<code>dad(int n)</code>分别表示<code>n</code>号元素的左子节点、右子节点和父节点的位置：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> Heap::le(<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> n &lt;&lt; <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Heap::rt(<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> (n &lt;&lt; <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Heap::dad(<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> n &gt;&gt; <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>构造函数<code>Heap()</code>用于初始化：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Heap::Heap()</span><br><span class="line">&#123;</span><br><span class="line">    tot = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>我写的堆模板中有$5$个公有方法：</p>
 <ul>
@@ -745,7 +745,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1221,7 +1221,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共689.5k字</span>
+  <span class="post-count">全站共776.6k字</span>
 </div>
         
 
@@ -1920,7 +1920,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1624692636385')
+  navigator.serviceWorker.register('/sw.js?t=1624717727572')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

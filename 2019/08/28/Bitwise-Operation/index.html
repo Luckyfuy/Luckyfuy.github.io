@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-06-05T05:47:35.950Z">
+<meta property="og:updated_time" content="2021-06-26T13:44:38.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="位运算">
 <meta name="twitter:description" content="简介位运算（Bitwise Operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
@@ -573,10 +573,10 @@
 <h2 id="数学等价"><a href="#数学等价" class="headerlink" title="数学等价"></a>数学等价</h2><p>对于非负整数$x$和$y$，$x \ge y$，位运算可以写成如下形式：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-\rm{NOT}\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2 + 1) \bmod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x \\
-x\ \rm{AND}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2) \\
-x\ \rm{OR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) \\
-x\ \rm{XOR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \frac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \frac{x}{2^{n}} + \lfloor \frac{y}{2^{n}} \rfloor) \bmod 2)
+\rm{NOT}\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2 + 1) \bmod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x \\
+x\ \rm{AND}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2) \\
+x\ \rm{OR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) \\
+x\ \rm{XOR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \dfrac{x}{2^{n}} + \lfloor \dfrac{y}{2^{n}} \rfloor) \bmod 2)
 \end{aligned}</script><h1 id="移位"><a href="#移位" class="headerlink" title="移位"></a>移位</h1><p>移位会将二进制数字整体向左或向右移动，任意一端移出的位会被丢弃。<br>在左移中，$0$会从右侧移入；而在右移中，符号位会从左侧移入。<br>左移$n$位等同于乘以$2^{n}$，而右移$n$位等同于除以$2^{n}$并向负无穷取整。<br>在大多数编程语言中，左移为<code>&lt;&lt;</code>，右移为<code>&gt;&gt;</code>。</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
@@ -790,7 +790,7 @@ x\ \rm{XOR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \frac{x}{2^{n}} \rflo
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1266,7 +1266,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共689.5k字</span>
+  <span class="post-count">全站共776.6k字</span>
 </div>
         
 
@@ -1965,7 +1965,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1624692636385')
+  navigator.serviceWorker.register('/sw.js?t=1624717727572')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
