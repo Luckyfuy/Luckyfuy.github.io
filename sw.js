@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/24/Proofs-in-Triangle/');
+  precacheUrls.push('/2021/06/30/Outline-of-Contemporary-Chinese-History/');
 
   precacheUrls.push('/2020/11/14/Mao-Selected-Works-2/');
 
