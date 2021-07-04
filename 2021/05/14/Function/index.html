@@ -167,7 +167,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/26/IRFnNfoUt4a3jGz.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/26/lSvIXfJxNW1e7V9.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/26/i7Z3OeuIaw6jMP9.jpg">
-<meta property="og:updated_time" content="2021-06-26T14:27:32.856Z">
+<meta property="og:updated_time" content="2021-07-04T02:55:04.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \rightarrow B$。映射$f: A \rightarrow B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集">
@@ -490,7 +490,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5k
+                  5.6k
                 </span>
               
 
@@ -506,7 +506,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  21
+                  24
                 </span>
               
             </div>
@@ -739,7 +739,59 @@ f_{2}(x) = \dfrac{f(x) + f(-x)}{2}
 <li>六边形相对的两个顶点上的三角函数乘积等于$1$<br>例如：$\sin \alpha \csc \alpha = 1$</li>
 <li>三个阴影三角形中，上面两个顶点的平方和等于下面顶点的平方<br>例如：$1 + \cot^{2} \alpha = \csc^{2} \alpha$</li>
 </ul>
-<h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
+<h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><p>两个相差$2 k \pi (k \in \mathbb{Z})$的角，终边一定是相等的，因此它们的三角函数值也一定相等，即<br><strong>诱导公式一</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (2 k \pi + \alpha) = \sin \alpha \\
+& \cos (2 k \pi + \alpha) = \cos \alpha \\
+& \tan (2 k \pi + \alpha) = \tan \alpha
+\end{aligned}</script><p>如果两个角相差$\pi$，那么其终边与单位圆的交点关于原点对称，此时两点的横坐标和纵坐标互为相反数。由三角函数定义可得<br><strong>诱导公式二</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (\pi + \alpha) = -\sin \alpha \\
+& \cos (\pi + \alpha) = -\cos \alpha \\
+& \tan (\pi + \alpha) = \tan \alpha
+\end{aligned}</script><p>同样，结合单位圆，可以得到<br><strong>诱导公式三</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (-\alpha) = -\sin \alpha \\
+& \cos (-\alpha) = \cos \alpha \\
+& \tan (-\alpha) = -\tan \alpha
+\end{aligned}</script><p><strong>诱导公式四</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (\pi - \alpha) = \sin \alpha \\
+& \cos (\pi - \alpha) = -\cos \alpha \\
+& \tan (\pi - \alpha) = -\tan \alpha
+\end{aligned}</script><p>这四条公式足以把所有三角函数都转化为锐角三角函数进行计算：<br>任取一角$\alpha = 2 k \pi + \beta, k \in \mathbb{Z}, \beta \in [0, 2 \pi)$，使用公式一将其转化为$\beta$的三角函数。如果是负角，也可以先使用公式三。</p>
+<ol>
+<li>如果$\beta \in [\pi, 2\pi)$，使用公式二，转化为$[0, \pi)$的三角函数；</li>
+<li>如果$\beta \in [\dfrac{\pi}{2}, \pi)$，使用公式四，转化为$[0, \dfrac{\pi}{2})$即锐角三角函数。</li>
+</ol>
+<p>已知角$\alpha$，求$k \pi + \alpha (k \in \mathbb{Z})$的三个三角函数值。</p>
+<ul>
+<li>如果$k$是偶数<br>那么$\sin (k \pi + \alpha) = \sin \alpha$<br>同理，$\cos (k \pi + \alpha) = \cos \alpha, \tan (k \pi + \alpha) = \tan \alpha$</li>
+<li>如果$k$是奇数，则$k - 1$是偶数<br>那么$\sin (k \pi + \alpha) = \sin (2 \cdot \dfrac{k - 1}{2} + \pi + \alpha) = \sin (\pi + \alpha) = -\sin \alpha$<br>同理，$\cos (k \pi + \alpha) = -\cos \alpha, \tan (k \pi + \alpha) = \tan \alpha$</li>
+</ul>
+<p>由此可得</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (k \pi + \alpha) = (-1)^{k} \sin \alpha \\
+& \cos (k \pi + \alpha) = (-1)^{k} \cos \alpha \\
+& \tan (k \pi + \alpha) = \tan \alpha
+\end{aligned}</script><p>如果两个角和为$\dfrac{\pi}{2}$，那么其终边与单位圆的交点关于直线$y = x$对称，此时两点的横坐标和纵坐标互换。由三角函数定义可得<br><strong>诱导公式五</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (\dfrac{\pi}{2} - \alpha) = \cos \alpha \\
+& \cos (\dfrac{\pi}{2} - \alpha) = \sin \alpha \\
+& \tan (\dfrac{\pi}{2} - \alpha) = \cot \alpha
+\end{aligned}</script><p>类似地，可以得到<br><strong>诱导公式六</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \sin (\dfrac{\pi}{2} + \alpha) = \cos \alpha \\
+& \cos (\dfrac{\pi}{2} + \alpha) = -\sin \alpha \\
+& \tan (\dfrac{\pi}{2} + \alpha) = -\cot \alpha
+\end{aligned}</script><h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><h3 id="三角恒等变换"><a href="#三角恒等变换" class="headerlink" title="三角恒等变换"></a>三角恒等变换</h3><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3>
       
     </div>
     
@@ -1388,7 +1440,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共779.1k字</span>
+  <span class="post-count">全站共779.7k字</span>
 </div>
         
 
@@ -2087,7 +2139,7 @@ if(canvas.getContext){
   <script src="/dist/js/social-share.min.js"></script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1625317233636')
+  navigator.serviceWorker.register('/sw.js?t=1625367533516')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
