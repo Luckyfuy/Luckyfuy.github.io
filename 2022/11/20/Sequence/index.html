@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·数列">
+<meta property="og:url" content="https://luckyfuy.top/2022/11/20/Sequence/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-12-10T08:11:51.651Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·数列">
+<meta name="twitter:description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2022/11/20/Sequence/">
+
+
+
+
+
+  <title>学习笔记·数列 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2022/11/20/Sequence/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·数列</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-11-20T20:42:29+08:00">
+                Sun, Nov 20th, 2022
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/11/20/Sequence/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/11/20/Sequence/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2022/11/20/Sequence/" class="leancloud_visitors" data-flag-title="学习笔记·数列">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  21
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="数列"><a href="#数列" class="headerlink" title="数列"></a>数列</h1><p><strong>数列（sequence）</strong>是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的<strong>项（term）</strong>，$a_{1}$称为数列的<strong>首项（initial term）</strong>。定义在无限集合上的数列叫做<strong>无穷数列（infinite sequence）</strong>；否则叫做<strong>有穷数列（finite sequence）</strong>，最后一项称为数列的<strong>末项</strong>。<br>有时候，我们也允许零甚至负数的下标，如$a_{0}, a_{-1}$等。我们通过额外的标注来表现这些，例如$\{a_{n}\}_{0}^{\infty}$表示一个从$a_{0}$开始的无穷数列。</p>
+<a id="more"></a>
+<p>对于数列$\{a_{n}\}$，如果$\forall n \in \mathbb{N}^{\ast}, a_{n + 1} \ge a_{n}$成立，则称其为<strong>递增数列（monotonically increasing sequence）</strong>；如果$\forall n \in \mathbb{N}^{\ast}, a_{n + 1} \le a_{n}$成立，则称其为<strong>递减数列（monotonically decreasing sequence）</strong>。递增数列和递减数列统称<strong>单调数列（monotonic sequence）</strong>。所有项都相等的数列称为<strong>常数列（constant sequence）</strong>。<br>如果存在正整数$k$，使得$\forall n \in \mathbb{N}^{\ast}, a_{n + k} = a_{n}$成立，则称数列$\{a_{n}\}$为<strong>周期数列（periodic sequence）</strong>，$k$就是数列的<strong>周期（period）</strong>。周期数列一定有<strong>最小正周期（minimal positive period）</strong>。</p>
+<p>数列$\{a_{n}\}$的第$n$项$a_{n}$与$n$之间存在某种关系，这个关系式就是数列的<strong>通项公式</strong>，也就是数列的函数解析式。例如，对于数列$-\dfrac{1}{2}, \dfrac{1}{4}, -\dfrac{1}{8}, \dfrac{1}{16}, \cdots$，$a_{n} = (-\dfrac{1}{2})^{n}$是它的一个通项公式。<br><strong>递推公式（recurrence relation）</strong>给出了项与前一项的关系式，同样能确定数列。一般地，递推公式可以表示为$f(a_{1}, \cdots, a_{n}) = 0$。例如，<strong>斐波那契数列（Fibonacci sequence）</strong>的递推公式是$a_{n} = a_{n - 1} + a_{n - 2}$。</p>
+<p>对于数列$\{a_{n}\}$，令$S_{n} = \sum\limits_{i=1}^{n} a_{i}$，则$S_{n}$称为数列的<strong>前$n$项和（series）</strong>。显然，$a_{n} = S_{n} - S_{n - 1} (n \ge 2)$。</p>
+<h1 id="等差数列与等比数列"><a href="#等差数列与等比数列" class="headerlink" title="等差数列与等比数列"></a>等差数列与等比数列</h1><h2 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h2><p>观察自然数序列$0, 1, 2, 3, \cdots$，可以发现，数列的每一项与前一项的差都是常数$1$。一般地，数列$\{a_{n}\}$若满足存在常数$d$使得$\forall n \in \mathbb{N}^{\ast}, a_{n + 1} - a_{n} = d$，则称为<strong>等差数列（arithmetic progression）</strong>，常数$d$称为等差数列的<strong>公差（common difference）</strong>。<br>最简单的等差数列只有三项。对于等差数列$a, A, b$，显然$A = \dfrac{a + b}{2}$。$A$称为$a, b$的<strong>等差中项</strong>，它实际上也是两个数的算术平均数。</p>
+<p>根据定义，每一项与前一项相差$d$，那么第$n$项就与首项相差$(n - 1) d$，于是得到等差数列的通项公式：</p>
+<script type="math/tex; mode=display">a_{n} = a_{1} + (n - 1) d</script><p>等差数列的通项公式是一个关于$n$的一次函数，反过来，通项公式是一次函数的数列也都是等差数列。</p>
+<p>从通项公式出发，还能进一步得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& a_{n} = a_{k} + (n - k) d (n, k \in \mathbb{N}^{\ast}) \\
+& d = \dfrac{a_{m} - a_{n}}{m - n} (m \ne n)
+\end{align}</script><p>如果有正整数$m, n, p, q$，使得$m + n = p + q$，那么有：</p>
+<script type="math/tex; mode=display">a_{m} + a_{n} = a_{p} + a_{q}</script><p>证明如下：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+a_{m} + a_{n} &= a_{1} + (m - 1) d + a_{1} + (n - 1) d \\
+&= 2a_{1} + (m + n - 2) d \\
+&= 2a_{1} + (p + q - 2) d \\
+&= a_{1} + (p - 1) d + a_{1} + (q - 1) d \\
+&= a_{p} + a_{q} \quad \Box
+\end{align}</script><p>从这条性质出发可以得到：</p>
+<script type="math/tex; mode=display">a_{n - k} + a_{n + k} = 2a_{n} (n, k \in \mathbb{N}^{\ast}, k < n)</script><p>德国数学家高斯（Carl Friedrich Gauss，1777－1855）读小学时就发现了求等差数列前$n$项和的方法。把$S_{n}$的加项倒过来可得$S_{n} = \sum\limits_{i=1}^{n} a_{n + 1 - i}$，那么，$2S_{n} = \sum\limits_{i=1}^{n} (a_{i} + a_{n + 1 - i}) = \sum\limits_{i=1}^{n} (a_{1} + a_{n}) = n (a_{1} + a_{n})$，即</p>
+<script type="math/tex; mode=display">S_{n} = \dfrac{n (a_{1} + a_{n})}{2}</script><p>这就是等差数列的前$n$项和公式。<br>代入$a_{n} = a_{1} + (n - 1) d$，可得</p>
+<script type="math/tex; mode=display">S_{n} = na_{1} + \dfrac{n (n - 1)}{2} d</script><p>设正整数$N$为常数，等差数列$\{a_{n}\}$的前$n$项和是$S_{n}$，令$S_{0} = 0$，则不难发现，数列$\{S_{nN} - S_{(n - 1) N}\}$也是等差数列。<br>设$\{a_{n}\}$的公差是$d$，直接计算：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+S_{nN} - S_{(n - 1) N} &= nNa_{1} + \dfrac{nN (nN - 1)}{2} d - (n - 1) Na_{1} - \dfrac{(n - 1) N ((n - 1) N - 1)}{2} d \\
+&= Na_{1} + \dfrac{(2n - 1) N^{2} - N}{2} d \\
+&= n \cdot N^{2} d + Na_{1} - \dfrac{N (N + 1)}{2} d \quad \Box
+\end{align}</script><p>顺便得到这个数列的公差是$N^{2} d$。</p>
+<p>等差数列的概念可以进一步推广。数列$\{a_{n + 1} - a_{n}\}$称为数列$\{a_{n}\}$的<strong>差分</strong>。根据定义，等差数列的差分是常数列。如果对数列差分再进行差分，即$(a_{n + 2} - a_{n + 1}) - (a_{n + 1} - a_{n}) = a_{n + 2} - 2a_{n + 1} + a_{n}$，得到的数列称为$\{a_{n}\}$的二阶差分。以此类推，可以得到数列的<strong>$N$阶差分</strong>。如果一个数列的$N$阶差分是非零常数列，那么称其为<strong>$N$阶等差数列</strong>。二阶及以上的等差数列统称为<strong>高阶等差数列</strong>。</p>
+<h2 id="等比数列"><a href="#等比数列" class="headerlink" title="等比数列"></a>等比数列</h2><p>一般地，数列$\{a_{n}\}$若满足存在常数$q \ne 0$使得$\forall n \in \mathbb{N}^{\ast}, \dfrac{a_{n + 1}}{a_{n}} = q$，则称为<strong>等比数列（geometric progression）</strong>，常数$q$称为等比数列的<strong>公比（common ratio）</strong>。<br>最简单的等比数列只有三项。对于等比数列$a, G, b$，显然$q = \dfrac{G}{a} = \dfrac{b}{G}$，即$G = \pm \sqrt{ab}$。$G$称为$a, b$的<strong>等比中项</strong>，它的绝对值实际上也是两个数的几何平均数。</p>
+<p>等比数列的通项公式是：</p>
+<script type="math/tex; mode=display">a_{n} = a_{1} \cdot q^{n - 1}</script><p>等比数列有类似等差数列的推论：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& a_{n} = a_{k} \cdot q^{n - k} (n, k \in \mathbb{N}^{\ast}) \\
+& q^{m - n} = \dfrac{a_{m}}{a_{n}} (m \ne n)
+\end{align}</script><p>如果有正整数$m, n, p, q$，使得$m + n = p + q$，那么有：</p>
+<script type="math/tex; mode=display">a_{m} a_{n} = a_{p} a_{q}</script><p>从这条性质出发可以得到：</p>
+<script type="math/tex; mode=display">a_{n - k} a_{n + k} = a_{n}^{2} (n, k \in \mathbb{N}^{\ast}, k < n)</script><p>等比数列的前$n$项和公式可以利用错位相减法推出：<br>由定义，有$S_{n} = \sum\limits_{i=1}^{n} a_{i}$。两边同时乘以$q$，得$qS_{n} = \sum\limits_{i=1}^{n} qa_{i} = \sum\limits_{i=1}^{n} a_{i + 1} = \sum\limits_{i=2}^{n + 1} a_{i}$。两式相减，$(1 - q) S_{n} = a_{1} - a_{n + 1} = a_{1} (1 - q^{n})$，即得</p>
+<script type="math/tex; mode=display">S_{n} = a_{1} \cdot \dfrac{1 - q^{n}}{1 - q}</script><p>从第$k$项开始求和，结果类似：</p>
+<script type="math/tex; mode=display">\sum\limits_{i=k}^{n} a_{i} = a_{k} \cdot \dfrac{1 - q^{n - k + 1}}{1 - q} = a_{1} \cdot \dfrac{q^{k - 1} - q^{n}}{1 - q}</script><p>设正整数$N$为常数，等比数列$\{a_{n}\}$的前$n$项和是$S_{n}$且$S_{N} \ne 0$，令$S_{0} = 0$，则不难发现，数列$\{S_{nN} - S_{(n - 1) N}\}$也是等比数列。<br>设$\{a_{n}\}$的公比是$q$，直接计算：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+S_{nN} - S_{(n - 1) N} &= a_{1} \dfrac{1 - q^{nN}}{1 - q} - a_{1} \dfrac{1 - q^{(n - 1) N}}{1 - q} \\
+&= a_{1} \dfrac{q^{(n - 1) N} - q^{nN}}{1 - q} \\
+&= \dfrac{a_{1} (1 - q^{N})}{1 - q} \cdot q^{(n - 1) N} \quad \Box
+\end{align}</script><p>顺便得到这个数列的公比是$q^{N}$。</p>
+<h1 id="递推数列"><a href="#递推数列" class="headerlink" title="递推数列"></a>递推数列</h1><h2 id="逐差法"><a href="#逐差法" class="headerlink" title="逐差法"></a>逐差法</h2><p>如果数列的递推公式可以转化为$a_{n + 1} - a_{n} = f(n)$的形式，那么就可以像推导等差数列通项公式一样累加，这种求解递推数列的方法叫做<strong>逐差法</strong>：</p>
+<script type="math/tex; mode=display">a_{n} = a_{1} + \sum\limits_{i=1}^{n - 1} f(i)</script><p>例如，设数列$\{a_{n}\}$满足$a_{1} = 1, a_{n + 1} - 2a_{n} = 3^{n}$，求$\{a_{n}\}$的通项公式：<br>等式两边同时除以$2^{n}$，得到$\dfrac{a_{n + 1}}{2^{n}} - \dfrac{a_{n}}{2^{n - 1}} = (\dfrac{3}{2})^{n}$。令$b_{n} = \dfrac{a_{n}}{2^{n - 1}}$，则$b_{1} = 1, b_{n + 1} - b_{n} = (\dfrac{3}{2})^{n}$。根据等比数列的前$n$项和公式，$b_{n} = b_{1} + \sum\limits_{i=1}^{n - 1} (\dfrac{3}{2})^{i} = 2 ((\dfrac{3}{2})^{n} - 1)$。所以$a_{n} = 2^{n - 1} b_{n} = 3^{n} - 2^{n}$。</p>
+<h2 id="齐次常系数线性递推数列"><a href="#齐次常系数线性递推数列" class="headerlink" title="齐次常系数线性递推数列"></a>齐次常系数线性递推数列</h2><p>最常见的递推数列就是<strong>齐次常系数线性递推数列</strong>，递推公式形如</p>
+<script type="math/tex; mode=display">a_{n} = c_{1} a_{n - 1} + c_{2} a_{n - 2} + \cdots + c_{k} a_{n - k} (n > k)</script><p>其中$c_{1}, \cdots, c_{k}$是与$n$无关的常数，$c_{k} \ne 0$。数列$\{a_{n}\}$称为<strong>齐次常系数$k$阶线性递推数列</strong>。一阶线性递推数列就是等比数列。</p>
+<p>二阶线性递推数列比较重要。设数列$\{a_{n}\}$满足$a_{n} = ua_{n - 1} + va_{n - 2} (n \ge 3)$。可以通过等比数列求解，设复数$\alpha, \beta$满足$a_{n} - \alpha a_{n - 1} = \beta (a_{n - 1} - \alpha a_{n - 2})$，则数列$\{a_{n} - \alpha a_{n - 1}\}$是等比数列。比较递推公式，满足$\begin{cases} \alpha + \beta = u \\ \alpha \beta = -v \end{cases}$，也就是说$\alpha, \beta$是方程$x^{2} - ux - v = 0$的两根。<br>如果$\alpha \ne \beta$，即$u^{2} + 4v \ne 0$，根据等比数列通项公式，有$a_{n + 1} - \alpha a_{n} = \beta^{n - 1} (a_{2} - \alpha a_{1}) = c \beta^{n}$，其中$c = \dfrac{1}{\beta} (a_{2} - \alpha a_{1})$。两边同时除以$\alpha^{n}$，$\dfrac{a_{n + 1}}{\alpha^{n}} - \dfrac{a_{n}}{\alpha^{n - 1}} = c (\dfrac{\beta}{\alpha})^{n}$。利用逐差法，$\dfrac{a_{n}}{\alpha^{n - 1}} = a_{1} + \sum\limits_{i=1}^{n - 1} c (\dfrac{\beta}{\alpha})^{i} = a_{1} + c \dfrac{\beta - \dfrac{\beta^{n}}{\alpha^{n - 1}}}{\alpha - \beta}$，即$a_{n} = (a_{1} + \dfrac{c \beta}{\alpha - \beta}) \alpha^{n - 1} - \dfrac{c}{\alpha - \beta} \beta^{n} = c_{1} \alpha^{n} + c_2 \beta^{n}$，其中$c_{1} = \dfrac{1}{\alpha} (a_{1} + \dfrac{c \beta}{\alpha - \beta}) = \dfrac{a_{2} - \beta a_{1}}{\alpha (\alpha - \beta)}, c_{2} = -\dfrac{c}{\alpha - \beta} = \dfrac{a_{2} - \alpha a_{1}}{\beta (\beta - \alpha)}$。<br>如果$\alpha = \beta$，即$u^{2} + 4v = 0$，那么$\alpha^{n}$，$\dfrac{a_{n + 1}}{\alpha^{n}} - \dfrac{a_{n}}{\alpha^{n - 1}} = c$，其中$c = \dfrac{1}{\alpha} (a_{2} - \alpha a_{1})$。这样就得到一个等差数列，$\dfrac{a_{n}}{\alpha^{n - 1}} = a_{1} + (n - 1) c$，即$a_{n} = (a_{1} - c + cn) \alpha^{n - 1} = (c_{1} + c_{2} n) \alpha^{n}$，其中$c_{1} = \dfrac{1}{\alpha} (a_{1} - c) = \dfrac{2\alpha a_{1} - a_{2}}{\alpha^{2}}, c_{2} = \dfrac{c}{\alpha} = \dfrac{a_{2} - \alpha a_{1}}{\alpha^{2}}$。</p>
+<p>总结一下：设数列$\{a_{n}\}$满足$a_{n} = ua_{n - 1} + va_{n - 2} (n \ge 3)$，$\alpha, \beta$是方程$x^{2} - ux - v = 0$的两个复数根，<br>若$\alpha \ne \beta$，则$a_{n} = c_{1} \alpha^{n} + c_2 \beta^{n}$，其中$c_{1}, c_{2}$满足方程组$\begin{cases} c_{1} \alpha + c_{2} \beta = a_{1} \\ c_{1} \alpha^{2} + c_{2} \beta^{2} = a_{2} \end{cases}$；<br>若$\alpha = \beta$，则$a_{n} = (c_{1} + c_{2} n) \alpha^{n}$，其中$c_{1}, c_{2}$满足方程组$\begin{cases} (c_{1} + c_{2}) \alpha = a_{1} \\ (c_{1} + 2c_{2}) \alpha^{2} = a_{2} \end{cases}$。</p>
+<p>方程$x^{2} - ux - v = 0$称为<strong>特征方程</strong>，$\alpha, \beta$称为<strong>特征根</strong>。这种方法就称为<strong>特征根法</strong>。</p>
+<p>对于一般的递推公式$a_{n} = c_{1} a_{n - 1} + \cdots + c_{k} a_{n - k} (n &gt; k)$，其特征方程是$x^{k} - \sum\limits_{i=1}^{k} c_{i} x^{k - i} = 0$。</p>
+<p>若特征方程有$k$个两两不同的特征根$\alpha_{1}, \cdots, \alpha_{k}$，则数列的通项公式为$a_{n} = \sum\limits_{i=1}^{k} u_{i} \alpha_{i}^{n}$，其中常数$u_{1}, \cdots, u_{k}$满足方程组$\begin{cases} u_{1} \alpha_{1} + \cdots + u_{k} \alpha_{k} = a_{1} \\ u_{1} \alpha_{1}^{2} + \cdots + u_{k} \alpha_{k}^{2} = a_{2} \\ \quad \vdots \\ u_{1} \alpha_{1}^{k} + \cdots + u_{k} \alpha_{k}^{k} = a_{k} \end{cases}$。</p>
+<p>若有些特征根相同，可以将特征方程因式分解为$\prod\limits_{i = 1}^{t} (x - \alpha_{i})^{m_{i}}$，其中$\alpha_{i}$为互不相同的复数，$m_{i} \in \mathbb{N}^{\ast}, \sum\limits_{i = 1}^{t} m_{i} = k$。数列的通项公式则是$a_{n} = \sum\limits_{i = 1}^{t} P_{i}(n) \alpha_{i}^{n}$，其中$P_{i}$为低于$m_{i}$次的多项式。</p>
+<h2 id="不动点法"><a href="#不动点法" class="headerlink" title="不动点法"></a>不动点法</h2><p>设数列$\{a_{n}\}$有递推公式$a_{n + 1} = \dfrac{Aa_{n} + B}{Ca_{n} + D} (C \ne 0, AD - BC \ne 0)$，方程$x = \dfrac{Ax + B}{Cx + D}$的根称为数列$\{a_{n}\}$的<strong>不动点</strong>。<br>如果有两个不动点$x_{1}, x_{2}$，对$k \in \{1, 2\}$，$a_{n + 1} - x_{k} = \dfrac{Aa_{n} + B}{Ca_{n} + D} - \dfrac{Ax_{k} + B}{Cx_{k} + D} = \dfrac{(AD - BC) (a_{n} - x_{k})}{(Ca_{n} + D) (Cx_{k} + D)}$。两式相除，得到$\dfrac{a_{n + 1} - x_{1}}{a_{n + 1} - x_{2}} = \dfrac{Cx_{2} + D}{Cx_{1} + D} \cdot \dfrac{a_{n} - x_{1}}{a_{n} - x_{2}}$，数列$\{\dfrac{a_{n} - x_{1}}{a_{n} - x_{2}}\}$就是等比数列。<br>如果只有一个不动点$x_{0}$，那么$\dfrac{1}{a_{n + 1} - x_{0}} = \dfrac{1}{a_{n} - x_{0}} + \dfrac{2C}{A + D}$，数列$\{\dfrac{1}{a_{n} - x_{0}}\}$就是等差数列。</p>
+<h1 id="数列求和"><a href="#数列求和" class="headerlink" title="数列求和"></a>数列求和</h1><h2 id="高阶等差数列"><a href="#高阶等差数列" class="headerlink" title="高阶等差数列"></a>高阶等差数列</h2><p>等差数列的通项公式是一个一次多项式，前$n$项和是一个二次多项式。而对于一般的$N$阶等差数列，其通项公式是$N$次多项式，前$n$项和是$N + 1$次多项式。<br>设数列$\{a_{n}\}$的通项公式是$a_{n} = \sum\limits_{i = 0}^{N} c_{i} n^{i}$，则前$n$项和是$S_{n} = \sum\limits_{k = 1}^{n} a_{k} = \sum\limits_{k = 1}^{n} \sum\limits_{i = 0}^{N} c_{i} k^{i} = \sum\limits_{i = 0}^{N} c_{i} (\sum\limits_{k = 1}^{n} k^{i})$。<br>这样，就只要对$\sum\limits_{k = 1}^{n} k^{i}$求和，称为<strong>正整数的$i$次幂和</strong>。零次幂和即$\sum\limits_{k = 1}^{n} 1 = n$；一次幂和就是等差数列求和，即$\sum\limits_{k = 1}^{n} k = \dfrac{1}{2} n (n + 1)$。</p>
+<p>对于$N$次幂和，可以借助$N$次之前的全部幂和来求解。例如，对任意正整数$k$，由$(k + 1)^{3} - k^{3} = 3k^{2} + 3k + 1$，从而累加可得$(n + 1)^{3} - 1 = \sum\limits_{k = 1}^{n} ((k + 1)^{3} - k^{3}) = \sum\limits_{k = 1}^{n} (3k^{2} + 3k + 1)$。展开得到$n^{3} + 3n^{2} + 3n = 3 \sum\limits_{k = 1}^{n} k^{2} + 3 \sum\limits_{k = 1}^{n} k + n = 3 \sum\limits_{k = 1}^{n} k^{2} + \dfrac{3}{2} n^{2} + \dfrac{5}{2} n$。化简得到</p>
+<script type="math/tex; mode=display">\sum\limits_{k = 1}^{n} k^{2} = \dfrac{1}{6} n (n + 1) (2n + 1)</script><p>类似地，可以得到三次幂和：</p>
+<script type="math/tex; mode=display">\sum\limits_{k = 1}^{n} k^{3} = \dfrac{1}{4} n^{2} (n + 1)^{2}</script><h2 id="错位相减法"><a href="#错位相减法" class="headerlink" title="错位相减法"></a>错位相减法</h2><p>设$\{a_{n}\}, \{b_{n}\}$分别是等差数列和等比数列，公差和公比分别是$d, q$，求数列$\{a_{n} b_{n}\}$的前$n$项和。<br>令$S_{n} = \sum\limits_{i = 1}^{n} a_{i} b_{i}$，那么有$qS_{n} = \sum\limits_{i = 1}^{n} a_{i} (qb_{i}) = \sum\limits_{i = 1}^{n} a_{i} b_{i + 1} = \sum\limits_{i = 2}^{n + 1} a_{i - 1} b_{i}$。我们发现乘以公比之后$a_{i}, b_{i}$之间错开了一位。两式相减，得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+(1 - q) S_{n} &= \sum\limits_{i = 1}^{n} a_{i} b_{i} - \sum\limits_{i = 2}^{n + 1} a_{i - 1} b_{i} \\
+&= a_{1} b_{1} - a_{n} b_{n + 1} + \sum\limits_{i = 2}^{n} (a_{i} - a_{i - 1}) b_{i} \\
+&= a_{1} b_{1} - a_{n} b_{n + 1} + d \sum\limits_{i = 2}^{n} b_{i} \\
+&= a_{1} b_{1} - (a_{1} + (n - 1) d) b_{1} q^{n} + db_{1} \dfrac{q - q^{n}}{1 - q}
+\end{align}</script><p>也就是$S_{n} = \dfrac{a_{1} b_{1} - (a_{1} + (n - 1) d) b_{1} q^{n}}{1 - q} + \dfrac{db_{1} (q - q^{n})}{(1 - q)^{2}}$。这种求数列前$n$项和的方法叫做<strong>错位相减法</strong>。</p>
+<h2 id="裂项法"><a href="#裂项法" class="headerlink" title="裂项法"></a>裂项法</h2><p>对任意数列$\{a_{n}\}$，求$S_{n} = \sum\limits_{i = 1}^{n} a_{i}$时，如果存在一个数列$\{b_{n}\}$使得$a_{n} = b_{n + 1} - b_{n}$，则可以求出$S_{n} = \sum\limits_{i = 1}^{n} (b_{i + 1} - b_{i}) = b_{n + 1} - b_{1}$，将求和问题转化为求解$\{b_{n}\}$。这种方法叫做<strong>裂项法</strong>。</p>
+<p>例如，设数列$\{a_{n}\}$的通项公式是$a_{n} = \dfrac{1}{n (n + 1)}$，求$\{a_{n}\}$的前$n$项和。<br>令$S_{n} = \sum\limits_{i = 1}^{n} \dfrac{1}{i (i + 1)}$，注意到$\dfrac{1}{i (i + 1)} = \dfrac{1}{i} - \dfrac{1}{i + 1}$，那么有$S_{n} = \sum\limits_{i = 1}^{n} (\dfrac{1}{i} - \dfrac{1}{i + 1})$。求和中每一项的减数与下一项的被减数抵消，最后就得到结果$S_{n} = 1 - \dfrac{1}{n + 1} = \dfrac{n}{n + 1}$。</p>
+<h1 id="数学归纳法"><a href="#数学归纳法" class="headerlink" title="数学归纳法"></a>数学归纳法</h1><p>要证明一个命题对所有值成立，我们可以证明命题对第一个值成立，而且从一个值到下一个值的过程有效。如同多米诺骨牌效应，第一块骨牌的倒下会导致所有骨牌都倒下。这种证明方法叫做<strong>数学归纳法（mathematical induction）</strong>。</p>
+<p><strong>第一数学归纳法原理</strong>有：<br>设$P(n)$是关于正整数$n$的命题。如果$P(1)$成立，且对任意正整数$k$，$P(k)$成立可以推出$P(k + 1)$成立，那么$P(n)$对任意正整数$n$成立。<br>用逻辑符号表示就是：</p>
+<script type="math/tex; mode=display">P(1) \land (\forall k \in \mathbb{N}^{\ast}, P(k) \to P(k + 1)) \to \forall n \in \mathbb{N}^{\ast}, P(n)</script><p>例如，用数学归纳法证明$\sum\limits_{i = 1}^{n} i^{2} = \dfrac{1}{6} n (n + 1) (2n + 1)$。<br>$n = 1$时，$1^{2} = \dfrac{1}{6} \times 1 \times (1 + 1) \times (2 + 1)$成立；<br>假设命题对$n = k$成立，即$\sum\limits_{i = 1}^{k} i^{2} = \dfrac{1}{6} k (k + 1) (2k + 1)$，则$n = k + 1$时，</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\sum\limits_{i = 1}^{k + 1} i^{2} &= \sum\limits_{i = 1}^{k} i^{2} + (k + 1)^{2} \\
+&= \dfrac{1}{6} k (k + 1) (2k + 1) + (k + 1)^{2} \\
+&= \dfrac{1}{6} (k + 1) (k (2k + 1) + 6 (k + 1)) \\
+&= \dfrac{1}{6} (k + 1) (k + 2) (2k + 3)
+\end{align}</script><p>命题对$n = k + 1$也成立。所以命题对任意正整数$n$成立。$\Box$</p>
+<p>数学归纳法以<strong>良序原理（well-ordering theorem）</strong>为基础：<br>对$\mathbb{N}^{\ast}$的任意非空子集$S$，$S$必有最小元素。也就是存在$a \in S$，使得对任意$b \in S$都有$b \ge a$。</p>
+<p>数学归纳法还有另一种形式，即<strong>第二数学归纳法原理</strong>：<br>设$P(n)$是关于正整数$n$的命题。如果$P(1)$成立，且对任意正整数$k$，$P(m)$对任意正整数$m \le k$成立可以推出$P(k + 1)$成立，那么$P(n)$对任意正整数$n$成立。</p>
+<p>第二数学归纳法允许我们在证明中采用更强的假设。数学归纳法还有其它的形式，都可以由良序原理或者已有的归纳法原理推导出来。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2022/11/20/Sequence/" title="学习笔记·数列">https://luckyfuy.top/2022/11/20/Sequence/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/11/07/Analytic-Geometry/" rel="next" title="学习笔记·解析几何">
+                <i class="fa fa-chevron-left"></i> 学习笔记·解析几何
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/12/08/Household-Medications/" rel="prev" title="家庭常备药物">
+                家庭常备药物 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数列"><span class="nav-number">1.</span> <span class="nav-text">数列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#等差数列与等比数列"><span class="nav-number">2.</span> <span class="nav-text">等差数列与等比数列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#等差数列"><span class="nav-number">2.1.</span> <span class="nav-text">等差数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等比数列"><span class="nav-number">2.2.</span> <span class="nav-text">等比数列</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递推数列"><span class="nav-number">3.</span> <span class="nav-text">递推数列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#逐差法"><span class="nav-number">3.1.</span> <span class="nav-text">逐差法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#齐次常系数线性递推数列"><span class="nav-number">3.2.</span> <span class="nav-text">齐次常系数线性递推数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不动点法"><span class="nav-number">3.3.</span> <span class="nav-text">不动点法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数列求和"><span class="nav-number">4.</span> <span class="nav-text">数列求和</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶等差数列"><span class="nav-number">4.1.</span> <span class="nav-text">高阶等差数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错位相减法"><span class="nav-number">4.2.</span> <span class="nav-text">错位相减法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#裂项法"><span class="nav-number">4.3.</span> <span class="nav-text">裂项法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学归纳法"><span class="nav-number">5.</span> <span class="nav-text">数学归纳法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

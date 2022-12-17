@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Music,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="声学基础音乐是由声音构成的艺术，在物理上实际上就是一段声波。声波是一种由振动产生、需要通过介质传播的机械波。声波既然是波，就能分解为一系列特定频率的波的叠加（数学上用傅里叶展开描述），而以某个特定频率进行简谐振动所产生的声波称为纯音（pure tone）。纯音是单一频率的音，是一种正弦波。声音有三要素：响度/音量（volume/loudness）、音调/音高（pitch）和音色（timbre），声">
+<meta name="keywords" content="Music">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·乐理基础">
+<meta property="og:url" content="https://luckyfuy.top/2021/08/09/Music-Theory-Fundamentals/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="声学基础音乐是由声音构成的艺术，在物理上实际上就是一段声波。声波是一种由振动产生、需要通过介质传播的机械波。声波既然是波，就能分解为一系列特定频率的波的叠加（数学上用傅里叶展开描述），而以某个特定频率进行简谐振动所产生的声波称为纯音（pure tone）。纯音是单一频率的音，是一种正弦波。声音有三要素：响度/音量（volume/loudness）、音调/音高（pitch）和音色（timbre），声">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2021/12/03/2TBZIYVM1OH6Elc.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/sP4dSJDNnypKx9q.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/LDQnq8SZtjKIcpG.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/wDqJFvE1RpzXsh6.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/qIL6NCtFPeWwYKm.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/Zmi9VtnlDFOsE6c.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/GrQ4dm51q7liBsX.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/RsJgHdIwGcXxVLa.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/7RBjAN8Y1vClqW5.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/12/tmbjgD3rnHhLdTQ.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/04/hsLMZevXPuNJQwY.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/LDQnq8SZtjKIcpG.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/tClqVfKmk59rZeL.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/G7lfsH9WSDdujcb.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/KfSkmEDsW8aTutd.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/67lQk5fM1JgALRW.jpg">
+<meta property="og:image" content="https://s2.loli.net/2021/12/25/SPyEaM4WsIX3leA.png">
+<meta property="og:updated_time" content="2022-06-04T08:15:36.816Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·乐理基础">
+<meta name="twitter:description" content="声学基础音乐是由声音构成的艺术，在物理上实际上就是一段声波。声波是一种由振动产生、需要通过介质传播的机械波。声波既然是波，就能分解为一系列特定频率的波的叠加（数学上用傅里叶展开描述），而以某个特定频率进行简谐振动所产生的声波称为纯音（pure tone）。纯音是单一频率的音，是一种正弦波。声音有三要素：响度/音量（volume/loudness）、音调/音高（pitch）和音色（timbre），声">
+<meta name="twitter:image" content="https://i.loli.net/2021/12/03/2TBZIYVM1OH6Elc.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2021/08/09/Music-Theory-Fundamentals/">
+
+
+
+
+
+  <title>学习笔记·乐理基础 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2021/08/09/Music-Theory-Fundamentals/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·乐理基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-08-09T10:01:32+08:00">
+                Mon, Aug 9th, 2021
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/乐理笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">乐理笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/08/09/Music-Theory-Fundamentals/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/08/09/Music-Theory-Fundamentals/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2021/08/09/Music-Theory-Fundamentals/" class="leancloud_visitors" data-flag-title="学习笔记·乐理基础">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  6.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  24
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="声学基础"><a href="#声学基础" class="headerlink" title="声学基础"></a>声学基础</h1><p>音乐是由声音构成的艺术，在物理上实际上就是一段声波。声波是一种由振动产生、需要通过介质传播的机械波。声波既然是波，就能分解为一系列特定频率的波的叠加（数学上用傅里叶展开描述），而以某个特定频率进行简谐振动所产生的声波称为<strong>纯音（pure tone）</strong>。纯音是单一频率的音，是一种正弦波。声音有三要素：<strong>响度/音量（volume/loudness）</strong>、<strong>音调/音高（pitch）</strong>和<strong>音色（timbre）</strong>，声波的振幅决定了其响度，而频率决定了其音高。<br>与纯音相对，多个纯音的叠加就是<strong>复音</strong>。在时间的维度下，大量不同的复音的排列成了音乐。</p>
+<a id="more"></a>
+<p>以标准的正弦波作为<strong>基波</strong>，频率是基波整数倍的波就是<strong>谐波（harmonic）</strong>，基音外的各个谐波在音乐中也被称为<strong>泛音（overtone）</strong>。例如以频率为$f$的纯音为基波，其谐波的频率可分别为$2f, 3f, 4f, \cdots$，这些谐波分别称为二次谐波、三次谐波、四次谐波等等。</p>
+<p><img src="https://i.loli.net/2021/12/03/2TBZIYVM1OH6Elc.png" alt="基波与谐波的关系" title="基波与谐波的关系"></p>
+<p>一般乐器发音都是复音，由基波及其一系列谐波叠加构成，这样的音称为<strong>单音</strong>。不同乐器的单音所叠加的谐波在频率和振幅上都不相同，因而造成了千差万别的音色。频谱可以定量地刻画音色。</p>
+<p><img src="https://s2.loli.net/2021/12/04/sP4dSJDNnypKx9q.png" alt="基波与谐波的叠加" title="基波与谐波的叠加"></p>
+<h1 id="十二平均律"><a href="#十二平均律" class="headerlink" title="十二平均律"></a>十二平均律</h1><p>为了便于乐器或人声奏唱，我们需要把连续的频谱切分出一个个单独的固定频率的音，这就是律制。较为常见的律制有纯律和五度相生律（古称三分损益法），但现今最主流的律制是<strong>十二平均律（equal temperament）</strong>。<br>十二平均律把频率为$f$到$2f$的区域（也就是一个<strong>八度（octave）</strong>）等比例地划分成12个频段，每个频段为一个<strong>半音（semitone）</strong>，两个半音为一个<strong>全音（whole tone）</strong>。这样就得到了13个单音。</p>
+<p><strong>音程（interval）</strong>描述了两个音的音高的距离，也就是频率差。音程可以从<strong>度数</strong>和<strong>音数</strong>来描述。一个半音的音数为0.5，一个全音的音数为1。也就是说，十二平均律中任意两个单音之间的音数为0.5。<br>频率比为$1:2$的两个单音之间的音程被定义为纯八度。按照十二平均律，根据等比数列，可以得到区间$[f_{1}, 2f_{1}]$上的13个单音：</p>
+<script type="math/tex; mode=display">f_{1}, 2^{\frac{1}{12}} f_{1}, 2^{\frac{2}{12}} f_{1}, 2^{\frac{3}{12}} f_{1}, \cdots, 2^{\frac{11}{12}} f_{1}, 2f_{1}</script><p>第$n$个单音的频率为：</p>
+<script type="math/tex; mode=display">f_{n} = 2^{\frac{n - 1}{12}} f_{1}</script><p>每一个单音的频率都是前一个单音的$2^{\frac{1}{12}} \approx 1.06$倍。</p>
+<p>如果算上和自己的音程，13个单音之间正好有13种音程，它们都有自己的名称：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">音数</th>
+<th style="text-align:center">音程名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">纯一度</td>
+</tr>
+<tr>
+<td style="text-align:center">0.5</td>
+<td style="text-align:center">小二度</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">大二度</td>
+</tr>
+<tr>
+<td style="text-align:center">1.5</td>
+<td style="text-align:center">小三度</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">大三度</td>
+</tr>
+<tr>
+<td style="text-align:center">2.5</td>
+<td style="text-align:center">纯四度</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">增四度/减五度（三全音）</td>
+</tr>
+<tr>
+<td style="text-align:center">3.5</td>
+<td style="text-align:center">纯五度</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">小六度</td>
+</tr>
+<tr>
+<td style="text-align:center">4.5</td>
+<td style="text-align:center">大六度</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">小七度</td>
+</tr>
+<tr>
+<td style="text-align:center">5.5</td>
+<td style="text-align:center">大七度</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">纯八度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="五线谱"><a href="#五线谱" class="headerlink" title="五线谱"></a>五线谱</h1><p>十二平均律只规定了单音的相对音高，要规定绝对音高，需要用到<strong>五线谱（staff）</strong>。</p>
+<p><img src="https://i.loli.net/2021/08/09/LDQnq8SZtjKIcpG.png" alt></p>
+<p>上图是一个简单的五线谱。五线谱由5条线以及中间的4个间组成，分别称为第一线、第二线、第三线、第四线、第五线和第一间、第二间、第三间、第四间。线和间对应了不同的音高，如果要表示的音高高于或低于五线四间的范围，则要临时加线，依位置称为上加一线、上加二线、上加一间、上加二间或下加一线、下加二线、下加一间、下加二间等等。五线谱实际上是一个二维直角坐标系，从下到上是频率轴，从左到右是时间轴。</p>
+<p>这些线和间并不表示某个具体的音高，要确定绝对音高，需要引入<strong>谱号（clef）</strong>。常见的谱号有高音谱号和低音谱号。上图中的谱号是高音谱号，也称G谱号，通过高音谱号中间圆圈的那条线（通常在第二线）定为名为G的音（小字一组的g<sup>1</sup>）。低音谱号也称F谱号，低音谱号两点之间的线（通常在第四线）定为名为F的音（小字组的f）。中音谱号较为少见，也称C谱号，中音谱号中间夹住的那条线定为名为C的音（小字一组的c<sup>1</sup>），一般放在第三线，也有放在第四线作次中音谱号的。<br>下图中，1、2、3、4分别为高音谱号、中音谱号、次中音谱号、低音谱号。<br><img src="https://s2.loli.net/2021/12/04/wDqJFvE1RpzXsh6.png" alt="常用的四种谱号" title="常用的四种谱号"></p>
+<p>线和间上的<strong>音符（note）</strong>由符头、符杆、符尾三部分组成。<br>不同的音符表示不同的时值。五线谱中时值最长的音符是只有一个空心符头的全音符。空心符头和符杆组成了时值是全音符1/2的二分音符，实心符头和符杆组成了时值是全音符1/4的四分音符。在四分音符基础上，每加一条符尾，音符时值减半，形成了八分音符、十六分音符等等。</p>
+<p><img src="https://s2.loli.net/2021/12/04/qIL6NCtFPeWwYKm.jpg" alt="音符" title="音符"><br><img src="https://s2.loli.net/2021/12/04/Zmi9VtnlDFOsE6c.jpg" alt="不同时值的音符" title="不同时值的音符"></p>
+<p>与音符相对，<strong>休止符（rest）</strong>表示音乐停顿的时长，不同的休止符见下图：<br><img src="https://s2.loli.net/2021/12/04/GrQ4dm51q7liBsX.jpg" alt="不同时值的休止符" title="不同时值的休止符"></p>
+<p>五线谱中，每个音符都有一个名称，即<strong>音名</strong>。音名一共有7个，分别为A、B、C、D、E、F、G，每高或低八度又重复这7个音名。与音名相对应又有7个<strong>唱名（solfège）</strong>，分别为do、re、mi、fa、sol、la、si（西方国家使用ti）。在固定唱名法中，唱名与音名一一对应，do即是C。而在首调唱名法中，只要保证七个单音之间的音程比例关系相等，唱名可以任意平移。也就是说，音名表示绝对音高，而唱名表示相对音高。<br>音名和唱名对应如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">D</th>
+<th style="text-align:center">E</th>
+<th style="text-align:center">F</th>
+<th style="text-align:center">G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">la</td>
+<td style="text-align:center">si（ti）</td>
+<td style="text-align:center">do</td>
+<td style="text-align:center">re</td>
+<td style="text-align:center">mi</td>
+<td style="text-align:center">fa</td>
+<td style="text-align:center">sol</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>国际标准化组织在ISO 16中将A440定为标准音高，以高音谱中第二线的A（小字一组的a<sup>1</sup>）作为基准音，频率为440Hz。按照十二平均律，可以算出其它各音的频率。<br><img src="https://s2.loli.net/2021/12/04/RsJgHdIwGcXxVLa.jpg" alt="高音谱中的音名" title="高音谱中的音名"></p>
+<p>十二平均律中，去掉音名重复的2倍频率音，一个八度里应该有12个单音，但是音名只有7个，这就需要用到升降记号。音符的后面可以添加<strong>升号♯（sharp）</strong>或<strong>降号♭（flat）</strong>表示升高或降低一个半音。如果只是临时改变一个小节中的音符，可以在音符前添上升号或降号，<strong>还原号♮（natural）</strong>可以将音符还原。<strong>重升号（double sharp）𝄪</strong>和<strong>重降号（double flat）𝄫</strong>表示升高或降低两个半音。<br><strong>临时升降记号（accidental）</strong>只对本小节之后的所有音符生效，其它小节以及高或低八度的同音名音符不受影响。如下图中，各音分别是G♯、G♯、G、E、A、G、G♭、E。<br><img src="https://s2.loli.net/2021/12/04/7RBjAN8Y1vClqW5.png" alt="临时升降记号" title="临时升降记号"><br><img src="https://s2.loli.net/2021/12/12/tmbjgD3rnHhLdTQ.jpg" alt="重升号与重降号" title="重升号与重降号"></p>
+<p>如果要改变乐谱中所有的同音名音符（包括高或低八度的音符），可以在谱号后记升降号，称为<strong>调号（key signature）</strong>。如下图中，各音分别是F♯、G♯、A、B、C♯、D♯、E、F♯。<br><img src="https://s2.loli.net/2021/12/04/hsLMZevXPuNJQwY.png" alt="调号" title="调号"></p>
+<h1 id="节奏"><a href="#节奏" class="headerlink" title="节奏"></a>节奏</h1><p><strong>拍（beat）</strong>是音乐中时间的基本单位。<br>每分钟的拍数，即<strong>bpm（beats per minute）</strong>，用于表示音乐的<strong>速度（tempo）</strong>。例如120 bpm表示每分钟120拍。通常，乐曲的开头会有形如♩=120的标记，表示120 bpm，速度是每分钟120个四分音符。<br>此外，乐曲中还常用一些意大利语词汇来不太精确地表示速度：（排列从慢到快）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">意大利文</th>
+<th style="text-align:center">中文</th>
+<th style="text-align:center">速度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Grave</em></td>
+<td style="text-align:center">庄板</td>
+<td style="text-align:center">25-45 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Largo</em></td>
+<td style="text-align:center">广板</td>
+<td style="text-align:center">40-60 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Lento</em></td>
+<td style="text-align:center">慢板</td>
+<td style="text-align:center">45-60 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Adagio</em></td>
+<td style="text-align:center">柔板</td>
+<td style="text-align:center">66-76 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Andante</em></td>
+<td style="text-align:center">行板</td>
+<td style="text-align:center">76-108 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Moderato</em></td>
+<td style="text-align:center">中板</td>
+<td style="text-align:center">108-120 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Allegretto</em></td>
+<td style="text-align:center">小快板</td>
+<td style="text-align:center">112-120 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Allegro</em></td>
+<td style="text-align:center">快板</td>
+<td style="text-align:center">120-156 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Vivace</em></td>
+<td style="text-align:center">活板</td>
+<td style="text-align:center">156-176 bpm</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Presto</em></td>
+<td style="text-align:center">急板</td>
+<td style="text-align:center">168-200 bpm</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>还有一些意大利语词汇表示速度的变化：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">意大利文</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Ritardando</em></td>
+<td style="text-align:center"><em>rit.</em></td>
+<td style="text-align:center">渐慢</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Rallentando</em></td>
+<td style="text-align:center"><em>rall.</em></td>
+<td style="text-align:center">渐慢</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Allargando</em></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">渐慢渐强</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Accelerando</em></td>
+<td style="text-align:center"><em>accel.</em></td>
+<td style="text-align:center">渐快</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Tempo rubato</em></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">自由速度</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>a tempo</em></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">恢复原速</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>Tempo primo</em></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">恢复原速</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="https://i.loli.net/2021/08/09/LDQnq8SZtjKIcpG.png" alt></p>
+<p>若干拍构成一个<strong>小节（bar）</strong>，五线谱中用小节线来区分小节。小节与拍子的关系用<strong>拍号</strong>表示，一般写成分数形式，最常见的就是上面的四四拍。<br>拍号的分子表示每小节有多少拍，分母表示一拍的音符时值。<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1em;text-align:center">4<br>4</span>就表示以四分音符为一拍，每小节四拍。<br>常见的单拍子有<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1em;text-align:center">2<br>4</span>和<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1em;text-align:center">3<br>4</span>。<br>如果把每拍细分，就是复拍子，例如<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1em;text-align:center">9<br>8</span>。注意，<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1em;text-align:center">9<br>8</span>是复合三拍子，是把简单三拍子中的每拍细分成了三拍，而不能说是简单九拍子。<br>拍号分子是2、3的，说明这是单拍子；而4、6、9、12，即前面单拍子的倍数，则说明这是复拍子。（在西方英美等国的体系中，四拍子属于单拍子）</p>
+<p><img src="https://i.loli.net/2021/08/09/tClqVfKmk59rZeL.png" alt></p>
+<h1 id="钢琴键盘"><a href="#钢琴键盘" class="headerlink" title="钢琴键盘"></a>钢琴键盘</h1><p><img src="https://i.loli.net/2021/08/09/G7lfsH9WSDdujcb.jpg" alt></p>
+<p>这是一个标准的钢琴<strong>键盘（keyboard）</strong>，共有88个琴键。每个键对应一个音，越往左音越低，越往右音越高。<br>相邻两个琴键上的音，无论是白键与黑键还是白键与白键之间，都差半音。</p>
+<p><img src="https://i.loli.net/2021/08/09/KfSkmEDsW8aTutd.jpg" alt></p>
+<p>钢琴键盘是由这一组键不断重复排列而成的，白键7个，黑键5个，一共12个键。<br>七个白键的音名依次为C、D、E、F、G、A、B。<br>黑键上的音通过升号♯或降号♭表示，例如B左边降一个半音的黑键是降B（B-flat），记为B♭。B♭同时又是A升一个半音，因此也可以记作升A（A-sharp），A♯。这里的五个黑键依次表示为C♯/D♭、D♯/E♭、F♯/G♭、G♯/A♭、A♯/B♭。</p>
+<p>B后面又是下一轮的C。为了区分键盘上不同的C，需要对这些音进行分组。</p>
+<p><img src="https://i.loli.net/2021/08/09/67lQk5fM1JgALRW.jpg" alt></p>
+<p>我国采用的分组方法将钢琴键盘分为9个音组。从右边第一个完整的音组开始依次是<strong>小字四组</strong>、<strong>小字三组</strong>、<strong>小字二组</strong>、<strong>小字一组</strong>、<strong>小字组</strong>、<strong>大字组</strong>、<strong>大字一组</strong>，再加上左右两个不完整的音组，最右边的C被归为<strong>小字五组</strong>，最左边的A和B被归为<strong>大字二组</strong>。<br>小字五组的C记作c<sup>5</sup>，小字四组的C记作c<sup>4</sup>，以此类推，小字组的C记作c。大字组的A记作A，大字一组的A记作A<sub>1</sub>，大字二组的A记作A<sub>2</sub>，以此类推。通常说的<strong>中央C（middle C）</strong>指的是小字一组的C，即c<sup>1</sup>。</p>
+<p>美国等国使用的<strong>科学音高记号（scientific pitch notation, SPN）</strong>直接用音名加上表示所属八度的数字，将钢琴键盘最左边的音记作A<sub>0</sub>（即大字二组的A<sub>2</sub>），将中央C记作C<sub>4</sub>。</p>
+<h1 id="自然音程与音阶"><a href="#自然音程与音阶" class="headerlink" title="自然音程与音阶"></a>自然音程与音阶</h1><p>通过五线谱，我们可以从度数的维度重新看待音程。五线谱上两个音之间的线数和间数为音程的度数。度数只与音名有关，而与升降记号如何无关。但是，同样的度数可能包含不同的音数，此时音程要根据音数来分析。<br>一度和八度显然都只有一种情况，因此音程为<em>纯一度/纯八度</em>；<br>二度时，音数可能为1（如C和D）或0.5（如E和F），音程分别为<em>大二度/小二度</em>，类似地，有<em>大三度/小三度</em>、<em>大六度/小六度</em>、<em>大七度/小七度</em>；<br>四度时，绝大多数情况都是音数为2.5，音程为<em>纯四度</em>，但F和B相差音数为3，大于纯四度，此时音程为<em>增四度</em>；<br>五度和四度类似，除了C和F为<em>减五度</em>之外，其它音程为<em>纯五度</em>，增四度/减五度因为音数都是3，也称为<strong>三全音（tritone）</strong>。</p>
+<p>由此就能总结出规律：<br>1、4、5、8度有<strong>纯（perfect，也译作“完全”）</strong>，还有<strong>增4</strong>、<strong>减5</strong>；<br>2、3、6、7度有<strong>大（major）</strong>、<strong>小（minor）</strong>。</p>
+<p>从一个八度里任意选取一组音，就产生了<strong>音阶（scale）</strong>。常见的音阶有7个音，故称<strong>七声音阶（heptatonic scale）</strong>。do、re、mi、fa、sol、la、si这七个音组成的七声音阶早在十二平均律发明之前就流传于欧洲的教会音乐。这七个音之间分别相隔全音、全音、半音、全音、全音、全音、半音，这样由5个全音和2个半音构成的音阶称为<strong>自然音阶（diatonic scale）</strong>。由于自然音阶中，只存在上述音程关系（纯一/四/五/八度、大小二/三/六/七度、增四度/减五度），故称其为<strong>自然音程</strong>。<br>从自然音阶的任何一个音开始，往上数7个音，就能得到一种新调式。例如re、mi、fa、sol、la、si、do，就构成了“全半全全全半全”的关系，这条音阶就是Dorian调式音阶。显然，自然音阶有7种调式。<br>在七种调式中，有两种调式成为了主流。第一种是Ionian调式，音阶以“全全半全全全半”排列，被称为<strong>（自然）大调（major scale）</strong>；第二种是Aeolian调式，音阶以“全半全全半全全”排列，被称为<strong>自然小调（natural minor scale）</strong>。</p>
+<p>从C开始，按大调的“全全半全全全半”排列，就得到了C大调：C、D、E、F、G、A、B；<br>类似地，可以得到D大调：D、E、F♯、G、A、B、C♯。<br>从A开始，按自然小调的“全半全全半全全”排列，就得到了a小调：A、B、C、D、E、F、G；<br>类似地，可以得到c小调：C、D、E♭、F、G、A♭、B♭。<br>一个八度有12个单音，那么每个音就有12种大调和小调。<br>需要注意的是，黑键上的音既可以用升号表示，又可以用降号表示，如A♯=B♭。除了C大调和a小调没有升降记号外，选择升降号须按照是升号调还是降号调。<br>升号调：G、D、A、E、B、F♯、C♯<br>降号调：F、B♭、E♭、A♭、D♭、G♭、C♭</p>
+<h1 id="调性"><a href="#调性" class="headerlink" title="调性"></a>调性</h1><p><strong>调式（mode）</strong>是若干个不同的音的集合。调式由7个<strong>音级（degree）</strong>构成，分别用罗马数字表示为I、II、III、IV、V、VI、VII。<br>主音是调式中最稳定的音，是调式的中心。从主音开始，按音高顺序排列调式各音，就是该调式的音阶。</p>
+<p><strong>主音（tonic）</strong>I上方相邻的II级音称为<strong>上主音（supertonic）</strong>，而下方的VII级音可能是小二度（大调）或大二度（小调），前者称为<strong>导音（leading-tone）</strong>，后者称为<strong>下主音（subtonic）</strong>；主音的上方纯五度是<strong>属音（dominant）</strong>，下方纯五度是<strong>下属音（subdominant）</strong>；主音与属音中间的III级音是<strong>中音（mediant）</strong>，下属音与主音中间的VI级音则是<strong>下中音（submediant）</strong>。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">音级</th>
+<th style="text-align:center">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">I</td>
+<td style="text-align:center">主音</td>
+</tr>
+<tr>
+<td style="text-align:center">II</td>
+<td style="text-align:center">上主音</td>
+</tr>
+<tr>
+<td style="text-align:center">III</td>
+<td style="text-align:center">中音</td>
+</tr>
+<tr>
+<td style="text-align:center">IV</td>
+<td style="text-align:center">下属音</td>
+</tr>
+<tr>
+<td style="text-align:center">V</td>
+<td style="text-align:center">属音</td>
+</tr>
+<tr>
+<td style="text-align:center">VI</td>
+<td style="text-align:center">下中音</td>
+</tr>
+<tr>
+<td style="text-align:center">VII</td>
+<td style="text-align:center">导音/下主音</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>其中，I、IV、V三个音级（主、下属、属）称为<strong>正音级</strong>，而其余四个音级称为<strong>副音级</strong>。</p>
+<p>这些音级可以分为稳定音和不稳定音，不稳定音具有进入稳定音的倾向，而不稳定音根据其倾向进入稳定音的过程称为“<strong>解决（resolution）</strong>”。主音是最稳定的，其次是属音、中音，这3个音级属于稳定音，其余4个则是不稳定音。下中音和上主音较不稳定，下中音向下解决到属音，有时也可向上移动到主音；上主音解决到主音，也可以解决到中音。下属音和导音最不稳定，有强烈的解决到稳定音的倾向，下属音解决到中音，导音解决到主音。</p>
+<p>最主要的调式有两种：大调和小调。<br>在（自然）大调中，除了中音和下属音、下主音和主音之间是小二度外，其它相邻两音之间均是大二度，也就是“全全半全全全半”。只要确定主音，那么根据调式，<strong>调性（tonality）</strong>就能确定下来。例如以C为主音的大调式就是最常见的调性——C大调：C、D、E、F、G、A、B。<br>自然小调的音阶排列为“全半全全半全全”，例如a自然小调：A、B、C、D、E、F、G。习惯上，大调的调名使用大写字母，而小调的调名使用小写字母，如无标明大小，通常指的是大调。</p>
+<p>对比C大调（C、D、E、F、G、A、B）和a小调（A、B、C、D、E、F、G）可以发现，C大调从VI级音开始实际上就是a小调，或者说a小调从III级音开始就是C大调。两者是由同一个音阶构成的。这样的两个调，称为<strong>关系调（relative key）</strong>。C大调是a小调的关系大调，a小调是C大调的关系小调。<br>对比C大调（C、D、E、F、G、A、B）和c小调（C、D、E♭、F、G、A♭、B♭）可以发现，两者主音相同，但c小调的III、VI、VII级音比C大调低半音。这样的两个调，称为<strong>同主音调（parallel key）</strong>。</p>
+<p>小调还有两种较为少见的变体。<strong>和声小调（harmonic minor scale）</strong>的VII级音比自然小调高半音，<strong>旋律小调（melodic minor scale）</strong>的VI级音比和声小调高半音。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">I</th>
+<th style="text-align:center">II</th>
+<th style="text-align:center">III</th>
+<th style="text-align:center">IV</th>
+<th style="text-align:center">V</th>
+<th style="text-align:center">VI</th>
+<th style="text-align:center">VII</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a自然小调</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">B</td>
+<td style="text-align:center">C</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">E</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">G</td>
+</tr>
+<tr>
+<td style="text-align:center">a和声小调</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">B</td>
+<td style="text-align:center">C</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">E</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">G♯</td>
+</tr>
+<tr>
+<td style="text-align:center">a旋律小调</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">B</td>
+<td style="text-align:center">C</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">E</td>
+<td style="text-align:center">F♯</td>
+<td style="text-align:center">G♯</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="变化音程"><a href="#变化音程" class="headerlink" title="变化音程"></a>变化音程</h1><p>前面提到，基本音级C、D、E、F、G、A、B（即自然音阶的7个音级）中只存在自然音程，但如果带上升降号，就是复杂的<strong>变化音程</strong>了。<br>在变化音程中，度数的判断和之前一致。如果音数比大音程/纯音程高0.5，则为<strong>增（augmented）</strong>音程；如果音数比小音程/纯音程低0.5，则为<strong>减（diminished）</strong>音程。例如，F和G是大二度，F和G♯则为增二度；G♯和A为小二度，G♯和A♭则为减二度。<br>。如果音数比增音程高0.5，则为<strong>倍增（doubly augmented）</strong>音程；如果音数比减音程低0.5，则为<strong>倍减（doubly diminished）</strong>音程。例如，F和G♯为增二度，F和G𝄪则为倍增二度；G♯和A♭为减二度，G♯和A𝄫则为倍减二度。</p>
+<p>根据听觉上的<strong>协和（consonance）</strong>与<strong>不协和（dissonance）</strong>程度，音程可以分为以下四类：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">协和程度</th>
+<th style="text-align:center">音程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">极完全协和音程</td>
+<td style="text-align:center">纯一度、纯八度</td>
+</tr>
+<tr>
+<td style="text-align:center">完全协和音程</td>
+<td style="text-align:center">纯四度、纯五度</td>
+</tr>
+<tr>
+<td style="text-align:center">不完全协和音程</td>
+<td style="text-align:center">大小三度、大小六度</td>
+</tr>
+<tr>
+<td style="text-align:center">不协和音程</td>
+<td style="text-align:center">大小二度、大小七度、所有增/减/倍增/倍减音程</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>将两个音中的低音升高八度或高音降低八度，两个音的音程会发生变化，也就是<strong>转位音程</strong>。转位后的音程和原音程的度数和始终为9，而大音程变成小音程，增音程变成减音程，倍增音程变成倍减音程，反之亦然，纯音程不变。例如，音程D—B是大六度，则其转位B—D为小三度。</p>
+<h1 id="和弦"><a href="#和弦" class="headerlink" title="和弦"></a>和弦</h1><p><strong>和弦（chord）</strong>是多个音的组合，通常是按三度叠置构成。常见的和弦有由三个音组成的<strong>三和弦（triad）</strong>和由四个音组成的<strong>七和弦（seventh chord）</strong>，当然，五个及以上的音也可以组成九和弦等等。</p>
+<p>三和弦是三度叠置的三个音构成的和弦，其中，最低的那个音称为<strong>根音（root）</strong>，往上分别是三音和五音。三和弦的相邻两音之间一定是三度的关系，根据不同音程，可以将三和弦分为四种：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">和弦</th>
+<th style="text-align:center">根音－三音</th>
+<th style="text-align:center">三音－五音</th>
+<th style="text-align:center">根音－五音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">大三和弦</td>
+<td style="text-align:center">大三度</td>
+<td style="text-align:center">小三度</td>
+<td style="text-align:center">纯五度</td>
+</tr>
+<tr>
+<td style="text-align:center">小三和弦</td>
+<td style="text-align:center">小三度</td>
+<td style="text-align:center">大三度</td>
+<td style="text-align:center">纯五度</td>
+</tr>
+<tr>
+<td style="text-align:center">增三和弦</td>
+<td style="text-align:center">大三度</td>
+<td style="text-align:center">大三度</td>
+<td style="text-align:center">增五度</td>
+</tr>
+<tr>
+<td style="text-align:center">减三和弦</td>
+<td style="text-align:center">小三度</td>
+<td style="text-align:center">小三度</td>
+<td style="text-align:center">减五度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>例如，<br>以C为根音的<strong>大三和弦（major triad）</strong>为C、E、G，记作C或Cmaj；<br>以D为根音的<strong>小三和弦（minor triad）</strong>为D、F、A，记作Dm或Dmin；<br>以B为根音的<strong>减三和弦（diminished triad）</strong>为B、C、E，记作Bdim或B<sup>o</sup>；<br>以C为根音的<strong>增三和弦（augmented triad）</strong>为C、E、G♯，记作Caug或C<sup>+</sup>。</p>
+<p>以C大调的7个音为根音，顺阶三度叠置，可以得到7个三和弦，分别为C、Dm、Em、F、G、Am、Bdim。这些和弦称为<strong>顺阶和弦（diatonic chord）</strong>或<strong>调内和弦</strong>。<br>顺阶和弦以调式中的7个音级为根音，可以相应地记作I、II、III、IV、V、VI、VII级和弦。以正音级为根音的三和弦称为<strong>正三和弦</strong>，以副音级为根音的三和弦称为<strong>副三和弦</strong>。<br>正三和弦还可以进一步细分：I级和弦为<strong>主和弦</strong>，IV级和弦为<strong>下属和弦</strong>，V级和弦为<strong>属和弦</strong>。对于C大调而言，3个正三和弦分别是C（主和弦）、F（下属和弦）、G（属和弦）。<br>在标记级数和弦时，大三和弦用大写罗马数字表示，小三和弦用小写罗马数字表示，增三和弦在大三和弦后上标+号，减三和弦在小三和弦后上标o号。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">I级和弦</th>
+<th style="text-align:center">II级和弦</th>
+<th style="text-align:center">III级和弦</th>
+<th style="text-align:center">IV级和弦</th>
+<th style="text-align:center">V级和弦</th>
+<th style="text-align:center">VI级和弦</th>
+<th style="text-align:center">VII级和弦</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">I</td>
+<td style="text-align:center">ii</td>
+<td style="text-align:center">iii</td>
+<td style="text-align:center">IV</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">vi</td>
+<td style="text-align:center">vii<sup>o</sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>如果以三和弦的三音或五音为低音来得到新的和弦，这个过程就叫<strong>转位（inversion）</strong>，和弦转位性质不变。每个三和弦都有两个转位：以三音为低音是<strong>第一转位（first inversion）</strong>，以五音为低音是<strong>第二转位（second inversion）</strong>。<br>例如，大三和弦C由C、E、G构成，其第一转位就是E、G、C，记作C/E。第一转位音程关系是三度加四度，低音和上面两个音分别是三度和六度，所以也叫<strong>六和弦</strong>，记作C<sup>6</sup>，大三和弦的第一转位就是大六和弦。<br>C的第二转位是G、C、E，记作C/G。第二转位音程关系是四度加三度，低音和上面两个音分别是四度和六度，所以也叫<strong>四六和弦</strong>，记作C<sub>4</sub><sup style="margin-left:-6px">6</sup>，大三和弦的第二转位就是大四六和弦。</p>
+<p>七和弦可以看作是三和弦的基础上增加了根音上方七度的音，因此七和弦有八种：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">常用名称</th>
+<th style="text-align:center">系统名称</th>
+<th style="text-align:center">三和弦</th>
+<th style="text-align:center">根音－七音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">属七和弦</td>
+<td style="text-align:center">大小七和弦</td>
+<td style="text-align:center">大三和弦</td>
+<td style="text-align:center">小七度</td>
+</tr>
+<tr>
+<td style="text-align:center">大七和弦</td>
+<td style="text-align:center">大大七和弦</td>
+<td style="text-align:center">大三和弦</td>
+<td style="text-align:center">大七度</td>
+</tr>
+<tr>
+<td style="text-align:center">小七和弦</td>
+<td style="text-align:center">小小七和弦</td>
+<td style="text-align:center">小三和弦</td>
+<td style="text-align:center">小七度</td>
+</tr>
+<tr>
+<td style="text-align:center">小大七和弦</td>
+<td style="text-align:center">小大七和弦</td>
+<td style="text-align:center">小三和弦</td>
+<td style="text-align:center">大七度</td>
+</tr>
+<tr>
+<td style="text-align:center">半减七和弦</td>
+<td style="text-align:center">减小七和弦</td>
+<td style="text-align:center">减三和弦</td>
+<td style="text-align:center">小七度</td>
+</tr>
+<tr>
+<td style="text-align:center">减七和弦</td>
+<td style="text-align:center">减减七和弦</td>
+<td style="text-align:center">减三和弦</td>
+<td style="text-align:center">大七度</td>
+</tr>
+<tr>
+<td style="text-align:center">增属七和弦</td>
+<td style="text-align:center">增小七和弦</td>
+<td style="text-align:center">增三和弦</td>
+<td style="text-align:center">小七度</td>
+</tr>
+<tr>
+<td style="text-align:center">增大七和弦</td>
+<td style="text-align:center">增大七和弦</td>
+<td style="text-align:center">增三和弦</td>
+<td style="text-align:center">大七度</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>例如，<br>以C为根音的<strong>大七和弦（major seventh chord）</strong>为C、E、G、B，记作Cmaj<sup>7</sup>或CM<sup>7</sup>；<br>以D为根音的<strong>小七和弦（minor seventh chord）</strong>为D、F、A、C，记作Dm<sup>7</sup>或Dmin<sup>7</sup>；<br>以G为根音的<strong>属七和弦（dominant seventh chord）</strong>为G、B、D、F，记作G<sup>7</sup>；<br>以C为根音的<strong>小大七和弦（minor major seventh chord）</strong>为C、E♭、G、B，记作Cm<sup>M7</sup>或Cm<sup>maj7</sup>；<br>以B为根音的<strong>半减七和弦（half-diminished seventh chord）</strong>为B、D、F、A，记作B<sup>ø</sup>或Bm<sup>7-5</sup>或Bm<sup>7(♭5)</sup>，因为在小七和弦的基础上降低了五音，也叫<strong>小七减五和弦</strong>；<br>以C为根音的<strong>减七和弦（diminished seventh chord）</strong>为C、E♭、G♭、B𝄫，记作Cdim<sup>7</sup>或C<sup>o7</sup>；<br>以C为根音的<strong>增大七和弦（augmented major seventh chord）</strong>为C、E、G♯、B，记作Caug<sup>M7</sup>或Cmaj<sup>7(♯5)</sup>；<br>以C为根音的<strong>增属七和弦（augmented dominant seventh chord）</strong>为C、E、G♯、B♭，记作Caug<sup>7</sup>或C<sup>7(♯5)</sup>。</p>
+<p>C大调的顺阶七和弦分别是Cmaj<sup>7</sup>、Dm<sup>7</sup>、Em<sup>7</sup>、Fmaj<sup>7</sup>、G<sup>7</sup>、Am<sup>7</sup>、B<sup>ø</sup>，级数和弦可以对应表示为I<sup>M7</sup>、ii<sup>7</sup>、iii<sup>7</sup>、IV<sup>M7</sup>、V<sup>7</sup>、vi<sup>7</sup>、vii<sup>ø</sup>。</p>
+<p>七和弦有三个转位：<br>第一转位的低音与上面三个音分别是三度、五度、六度，所以也叫<strong>五六和弦</strong>，CM<sup>7</sup>/E也记作C<sub>5</sub><sup style="margin-left:-6px">6</sup>；<br>第二转位的低音与上面三个音分别是三度、四度、六度，所以也叫<strong>三四和弦</strong>，CM<sup>7</sup>/G也记作C<sub>3</sub><sup style="margin-left:-6px">4</sup>；<br>第三转位的低音与上面三个音分别是二度、四度、六度，所以也叫<strong>二和弦</strong>，CM<sup>7</sup>/B也记作C<sup>2</sup>。</p>
+<h1 id="五度循环圈"><a href="#五度循环圈" class="headerlink" title="五度循环圈"></a>五度循环圈</h1><p><img src="https://s2.loli.net/2021/12/25/SPyEaM4WsIX3leA.png" alt="五度循环圈" title="五度循环圈"></p>
+<p>C大调没有升降记号。从C大调开始，G、D、A、E、B、F♯、C♯大调的调号依次多一个升号，F、B♭、E♭、A♭、D♭、G♭、C♭大调的调号依次多一个降号。把升号调顺时针排列，降号调逆时针排列，就得到了<strong>五度循环圈（circle of fifths）</strong>。其中，B/C♭、F♯/G♭、C♯/D♭分别是同一个音，这就解释了为什么理论上有15个大调（1个C大调、7个升号调、7个降号调），而实际上只有12个大调，因为有3个调是重复的。<br>在五度圈中也可以找到升号调或降号调调号的排列顺序。从F顺时针到B，F、C、G、D、A、E、B即是升号的添加顺序；从B逆时针到F，B、E、A、D、G、C、F即是降号的添加顺序。<br>可以发现，五度圈的相邻两格总是相差纯五度。<br>我们知道，把大调的III、VI、VII级音降半音就可以得到同主音小调。因此，每个大调逆时针数3格，就可以得到对应的同主音小调；而关系大小调调号一致，顺时针数3格得到的大调的同主音小调就是该大调的关系小调。例如，C大调逆时针数3格是E♭大调，那么c小调的调号就和E♭大调相同；C大调顺时针数3格是A大调，那么C大调的关系小调就是a小调。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="800" height="810" src="../../../../images/circleOfFifths/" "></iframe>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2021/08/09/Music-Theory-Fundamentals/" title="学习笔记·乐理基础">https://luckyfuy.top/2021/08/09/Music-Theory-Fundamentals/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Music/" rel="tag"><i class="fa fa-tag"></i> Music</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/06/30/Outline-of-Contemporary-Chinese-History/" rel="next" title="中国现代史纲要">
+                <i class="fa fa-chevron-left"></i> 中国现代史纲要
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/11/06/Vector/" rel="prev" title="学习笔记·向量">
+                学习笔记·向量 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#声学基础"><span class="nav-number">1.</span> <span class="nav-text">声学基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二平均律"><span class="nav-number">2.</span> <span class="nav-text">十二平均律</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五线谱"><span class="nav-number">3.</span> <span class="nav-text">五线谱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#节奏"><span class="nav-number">4.</span> <span class="nav-text">节奏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#钢琴键盘"><span class="nav-number">5.</span> <span class="nav-text">钢琴键盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自然音程与音阶"><span class="nav-number">6.</span> <span class="nav-text">自然音程与音阶</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#调性"><span class="nav-number">7.</span> <span class="nav-text">调性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变化音程"><span class="nav-number">8.</span> <span class="nav-text">变化音程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#和弦"><span class="nav-number">9.</span> <span class="nav-text">和弦</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五度循环圈"><span class="nav-number">10.</span> <span class="nav-text">五度循环圈</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

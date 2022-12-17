@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·逻辑与集合">
+<meta property="og:url" content="https://luckyfuy.top/2021/04/18/Logic-and-Set/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/gwqQjMCGnNe4E53.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/7c2QURpAh1GdmkK.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Aez1Xfndu4CSx6g.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
+<meta property="og:updated_time" content="2022-12-09T05:57:59.001Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·逻辑与集合">
+<meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/01/gwqQjMCGnNe4E53.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2021/04/18/Logic-and-Set/">
+
+
+
+
+
+  <title>学习笔记·逻辑与集合 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2021/04/18/Logic-and-Set/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·逻辑与集合</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-18T14:06:41+08:00">
+                Sun, Apr 18th, 2021
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/04/18/Logic-and-Set/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/04/18/Logic-and-Set/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2021/04/18/Logic-and-Set/" class="leancloud_visitors" data-flag-title="学习笔记·逻辑与集合">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  19
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h1><h2 id="谓词逻辑"><a href="#谓词逻辑" class="headerlink" title="谓词逻辑"></a>谓词逻辑</h2><p><strong>谓词（predicate）</strong>是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为<strong>主词（subject）</strong>。<br>例如，用$P$表示考了100分，$x$表示小刚，那么命题<em>小刚考了100分</em>可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。<br>谓词和主词构成了原子命题，即不可再分的简单命题。</p>
+<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><p>有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为<strong>量词（quantifier）</strong>。<br>最基本的两种量词是<strong>全称量词（universal quantifier）</strong>和<strong>存在量词（existential quantifier）</strong>。</p>
+<p>全称量词符号为$\forall$，用于表示<em>任意</em>这样的词。<br>例如<em>所有小朋友$x$都考了100分</em>，可以表示为$\forall x \  P(x)$。</p>
+<p>存在量词符号为$\exists$，也称<strong>特称量词（particular quantifier）</strong>，用于表示<em>存在</em>这样的词。<br>例如<em>至少有一个小朋友$x$考了100分</em>，可以表示为$\exists x \  P(x)$。</p>
+<a id="more"></a>
+<h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p><strong>命题（proposition）</strong>指一个陈述句所表达的判断，不涉及谓词时，我们通常用一个字母来表示命题，如$p, q, r$等。一般我们所指的命题非<strong>真（true）</strong>即<strong>假（false）</strong>，这里的真和假表示的就是命题的<strong>真值（truth value）</strong>。</p>
+<h3 id="逻辑联结词"><a href="#逻辑联结词" class="headerlink" title="逻辑联结词"></a>逻辑联结词</h3><p>命题之间可以用<strong>逻辑联结词（logical connective）</strong>连接起来，构成复合命题。</p>
+<p><strong>与（合取，conjunction）</strong>和<strong>或（析取，disjunction）</strong>是最常见的两个连结词，一般用符号$\land$和$\lor$表示。<del>（不是非法符号！）</del><br>例如，用$p$表示小刚考了100分，$q$表示小强考了100分。$p \land q$表示他们都考了100分，而$p \lor q$表示他们之中有人考了100分。</p>
+<p>我们可以用<strong>真值表（truth table）</strong>来计算复合命题的真值：（T表示真，F表示假）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p \land q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p \lor q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>容易看出，$p, q$同时为真时$p \land q$为真，而$p, q$只要有一为真时$p \lor q$为真。</p>
+<p>与和或满足：</p>
+<ul>
+<li><strong>交换律</strong>：$p \land q = q \land p$<br>　　　　$p \lor q = p \lor q$</li>
+<li><strong>结合律</strong>：$(p \land q) \land r = p \land (q \land r)$<br>　　　　$(p \lor q) \lor r = p \lor (q \lor r)$</li>
+<li><strong>分配律</strong>：$p \land (q \lor r) = (p \land q) \lor (p \land r)$<br>　　　　$p \lor (q \land r) = (p \lor q) \land (p \lor r)$</li>
+<li><strong>幂等律</strong>：$p \land p = p$<br>　　　　$p \lor p = p$</li>
+</ul>
+<p><strong>非（否定，negation）</strong>用于对命题进行否定，符号为$\lnot$。<br>非的真值表如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$\lnot p$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>不难证明：</p>
+<script type="math/tex; mode=display">
+\lnot (p \land q) = \lnot p \lor \lnot q \\
+\lnot (p \lor q) = \lnot p \land \lnot q</script><p>即<strong>反演律</strong>，也称<strong>德·摩根定律（De Morgan’s laws）</strong>。</p>
+<p>此外，<strong>条件</strong>连结词也在数学证明中被大量用到，符号为$\to$，也称<strong>蕴涵（implication）</strong>，但在具体的数学推理中一般使用$\Rightarrow$。条件连结词可以写成<em>若$p$，则$q$</em>的形式，其中$p$称为<strong>前件（antecedent）</strong>，$q$称为<strong>后件（consequent）</strong>。<br>$p \to q$等价于$\lnot p \lor q$，由此可以计算出蕴涵的真值表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p \to q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>若命题$p \to q$为真，则称$p$为$q$的<strong>充分条件（sufficient condition）</strong>，$q$为$p$的<strong>必要条件（necessary condition）</strong>。</p>
+<p>对于命题$p \to q$，其<strong>否命题</strong>为$\lnot p \to \lnot q$，<strong>逆命题</strong>为$q \to p$，<strong>逆否命题</strong>为$\lnot q \to \lnot p$。其中原命题与其逆否命题是等价的，证明如下：<br>由定义，$\lnot q \to \lnot p = \lnot (\lnot q) \lor \lnot p = \lnot p \lor q = p \to q$。$\Box$</p>
+<p><strong>双条件</strong>连结词，即<strong>等价（equivalence）</strong>，符号为$\leftrightarrow$或$\Leftrightarrow$，也称<strong>当且仅当（if and only if, iff）</strong>。<br>$p \leftrightarrow q$表示$(p \to q) \land (q \to p)$，此时$p$与$q$互为<strong>充要条件（sufficient and necessary condition）</strong>。<br>双条件连结词可以写成<em>当且仅当$p$，则$q$</em>的形式，英文直译导致其并不符合汉语语法。一般<em>当且仅当</em>也用于描述两者互为充要条件。<br>双条件连结词的真值表：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p \leftrightarrow q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>根据复合命题在真值表最后一列的真值情况，我们将其分为三类：</p>
+<ul>
+<li><strong>永真式</strong>或<strong>重言式（tautology）</strong>：最后一列全是T，符号为$\top$。如$p \lor \lnot p$与$p \to p$等。</li>
+<li><strong>矛盾式（contradiction）</strong>：最后一列全是F，符号为$\bot$。如$p \land \lnot p$。</li>
+<li><strong>或然式（contingency）</strong>：最后一列既存在T也存在F。</li>
+</ul>
+<h3 id="全称命题与存在命题"><a href="#全称命题与存在命题" class="headerlink" title="全称命题与存在命题"></a>全称命题与存在命题</h3><p>设所有的元素为$x_{1}, \cdots, x_{n}$，那么对于全称命题$\forall x \  P(x)$，实际上表示的是$P(x_{1}) \land P(x_{2}) \land \cdots \land P(x_{n})$，即这些命题中每个都是真的。因此不难得出全称命题的否定：</p>
+<script type="math/tex; mode=display">\lnot (\forall x \  P(x)) = \exists x \  \lnot P(x)</script><p>同样，存在命题$\exists x \  P(x)$表示$P(x_{1}) \lor P(x_{2}) \lor \cdots \lor P(x_{n})$，即至少有一个是真的。<br>那么</p>
+<script type="math/tex; mode=display">\lnot (\exists x \  P(x)) = \forall x \  \lnot P(x)</script><p>这样，只要证明$\forall x \  \lnot P(x) \Rightarrow \bot$，就能证明原命题了。</p>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><strong>集合（set）</strong>是一个或多个对象所构成的整体，这些构成的集合的对象称为<strong>元素（element）</strong>。<br>集合通常用大写字母如$A, B, C$等来表示，而元素通常用小写字母如$a, b, c$等表示。</p>
+<p>如果元素$x$在集合$A$内，我们称$x$<strong>属于</strong>$A$，记作$x \in A$；<br>否则，$x$<strong>不属于</strong>$A$，记作$x \notin A$。<br>若两个集合$A, B$中的元素完全一样，即$x \in A \Leftrightarrow x \in B$，则二者相等，记作$A = B$。</p>
+<p>集合可以用在大括号中列举其元素的方式表示，即<strong>列举法</strong>：</p>
+<script type="math/tex; mode=display">A = \{1, 2, 3, 4, 5\}</script><p>对于元素较多或具有无限元素的集合，如果具有明显的规律，可以使用省略号$\cdots$。<br>例如前100个正整数：</p>
+<script type="math/tex; mode=display">B = \{1, 2, \cdots, 100\}</script><p>自然数集：</p>
+<script type="math/tex; mode=display">\mathbb{N} = \{0, 1, 2, \cdots\}</script><p>集合也可以通过文字或数学符号来表示，即<strong>描述法</strong>。<br>例如下面的集合表示$1$到$5$之间的整数：</p>
+<script type="math/tex; mode=display">C = \{x \in \mathbb{Z} | 1 \le x \le 5\}</script><p>显然，集合$A = C$。</p>
+<p>集合具有以下三个性质：</p>
+<ul>
+<li><strong>无序性</strong>：集合中的元素是无序的，可以任意排列</li>
+<li><strong>互异性</strong>：集合中任意两个元素都不相同，每个元素只能出现一次</li>
+<li><strong>确定性</strong>：对于一个集合，一个元素属于或不属于该集合是确定的，不能模棱两可</li>
+</ul>
+<h2 id="集合间的关系"><a href="#集合间的关系" class="headerlink" title="集合间的关系"></a>集合间的关系</h2><p>若$\forall x \in A, x \in B$，则称$A$是$B$的<strong>子集（subset）</strong>，$B$是$A$的<strong>超集（superset）</strong>，记作$A \subseteq B$或$B \supseteq A$，也称$A$<strong>包含于</strong>$B$或$B$<strong>包含</strong>$A$。<br>若$A \subseteq B \land A \ne B$，即$(\forall x \in A, x \in B) \land (\exists x \in B, x \notin A)$，则称$A$是$B$的<strong>真子集（proper subset）</strong>，$B$是$A$的<strong>真超集（proper superset）</strong>，记作$A \subsetneqq B$（$A \subset B$）或$B \supsetneqq A$（$B \supset A$），也称$A$<strong>真包含于</strong>$B$或$B$<strong>真包含</strong>$A$。</p>
+<p>集合也可以通过<strong>Venn图（维恩图/文氏图，Venn diagram）</strong>形象地表示出来。<br>例如下图就表示$A$是$B$的子集：<br><img src="https://i.loli.net/2021/05/01/gwqQjMCGnNe4E53.jpg" alt="子集" title="子集"></p>
+<p>包含关系具有</p>
+<ul>
+<li><strong>自反性</strong>：$A \subseteq A$</li>
+<li><strong>反对称性</strong>：$A \subseteq B \land B \subseteq A \Leftrightarrow A = B$</li>
+<li><strong>传递性</strong>：$A \subseteq B \land B \subseteq C \Rightarrow A \subseteq C$</li>
+</ul>
+<p>真包含关系同样具有传递性。</p>
+<p>不含任何元素的集合被称为<strong>空集（empty set）</strong>，符号为$\varnothing$或$\emptyset$。<br>空集有基本性质：</p>
+<script type="math/tex; mode=display">\forall A, \varnothing \subseteq A</script><p>这是一个可证明的定理，证明如下：<br>证明$\varnothing \subseteq A$只要证明$x \in \varnothing \Rightarrow x \in A$，其逆否命题为$x \notin A \Rightarrow x \notin \varnothing$。根据空集的定义以及蕴涵的真值表，这是真的。$\Box$<br>由这个性质不难得出：</p>
+<script type="math/tex; mode=display">\forall A \ne \varnothing, \varnothing \subsetneqq A</script><h2 id="特殊集合"><a href="#特殊集合" class="headerlink" title="特殊集合"></a>特殊集合</h2><p>不同的数集通常有专门的符号表示：<br>$\mathbb{N}$表示<strong>自然数集</strong>，$\mathbb{N}^{\ast}$表示<strong>正整数集</strong>，$\mathbb{Z}$表示<strong>整数集</strong>，$\mathbb{Q}$表示<strong>有理数集</strong>，$\mathbb{R}$表示<strong>实数集</strong>，$\mathbb{C}$表示<strong>复数集</strong>。</p>
+<script type="math/tex; mode=display">\mathbb{N}^{\ast} \subseteq \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}</script><p>此外，还有一种特殊的实数集称为<strong>区间（interval）</strong>，有时用字母$I$表示：（$a, b \in \mathbb{R}$且$a &lt; b$）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\lbrack a, b \rbrack &= \{x \in \mathbb{R} | a \le x \le b\} \\
+(a, b) &= \{x \in \mathbb{R} | a < x < b\} \\
+\lbrack a, b) &= \{x \in \mathbb{R} | a \le x < b\} \\
+(a, b \rbrack &= \{x \in \mathbb{R} | a < x \le b\}
+\end{align}</script><p>以上区间分别是<strong>闭区间</strong>、<strong>开区间</strong>、<strong>左闭右开区间</strong>和<strong>左开右闭区间</strong>。这些都是<strong>有界区间</strong>。<br>$a$和$b$为区间的<strong>端点</strong>，区间的<strong>长度</strong>为$b - a$，<strong>中点</strong>为$\frac{a + b}{2}$。</p>
+<p>用符号$+\infty$和$-\infty$表示<strong>正无穷大</strong>和<strong>负无穷大</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\lbrack a, +\infty) &= \{x \in \mathbb{R} | x \ge a\} \\
+(a, +\infty) &= \{x \in \mathbb{R} | x > a\} \\
+(-\infty, b \rbrack &= \{x \in \mathbb{R} | x \le b\} \\
+(-\infty, b) &= \{x \in \mathbb{R} | x < b\}
+\end{align}</script><p>特殊地，$(-\infty, +\infty) = \mathbb{R}$。<br>含有符号$\infty$的区间称为<strong>无界区间</strong>。</p>
+<h2 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h2><p>对于两个集合$A, B$，其<strong>并集（union）</strong>定义为：</p>
+<script type="math/tex; mode=display">A \cup B = \{x | x \in A \lor x \in B\}</script><p>即两个集合中的所有元素构成的集合。<br><img src="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg" alt="并集" title="并集"></p>
+<p>容易得到，</p>
+<script type="math/tex; mode=display">A \cup B = B \Leftrightarrow A \subseteq B</script><p>对于两个集合$A, B$，其<strong>交集（intersection）</strong>定义为：</p>
+<script type="math/tex; mode=display">A \cap B = \{x | x \in A \land x \in B\}</script><p>即两个集合共同拥有的元素构成的集合。<br><img src="https://i.loli.net/2021/05/01/7c2QURpAh1GdmkK.jpg" alt="交集" title="交集"></p>
+<script type="math/tex; mode=display">A \cap B = A \Leftrightarrow A \subseteq B</script><p>与逻辑与和或运算类似，交集和并集也具有以下性质：</p>
+<ul>
+<li><strong>交换律</strong>：$A \cap B = B \cap A$<br>　　　　$A \cup B = B \cup A$</li>
+<li><strong>结合律</strong>：$(A \cap B) \cap C = A \cap (B \cap C)$<br>　　　　$(A \cup B) \cup C = A \cup (B \cup C)$</li>
+<li><strong>分配律</strong>：$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$<br>　　　　$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$</li>
+<li><strong>幂等律</strong>：$A \cap A = A$<br>　　　　$A \cup A = A$</li>
+</ul>
+<p>对于空集$\varnothing$，交集和并集还满足：</p>
+<script type="math/tex; mode=display">
+A \cap \varnothing = \varnothing \\
+A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<strong>差集（set difference）</strong>或<strong>相对补集（relative complement）</strong>定义为：</p>
+<script type="math/tex; mode=display">B \setminus A = \{x \in B | x \notin A\}</script><p>$B \setminus A$也记作$B - A$。<br><img src="https://i.loli.net/2021/05/01/Aez1Xfndu4CSx6g.jpg" alt="差集" title="差集"></p>
+<p><strong>补集（complement）</strong>是一种特殊的差集，有时也称<strong>绝对补集（absolute complement）</strong>。<br>在研究问题时，所有的研究对象构成的集合被称为<strong>全集（universe）</strong>。对于全集$U$的子集$A$，其补集定义为：</p>
+<script type="math/tex; mode=display">\complement_{U}A = U - A = \{x \in U | x \notin A\}</script><p>在不产生歧义的情况下，$\complement_{U}A$也可以表示为$A^{C}$。<br><img src="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg" alt="补集" title="补集"></p>
+<script type="math/tex; mode=display">A - B = \varnothing \Leftrightarrow \complement_{U}B \subseteq \complement_{U}A \Leftrightarrow A \subseteq B</script><p>由前面的$\lnot (p \land q) = \lnot p \lor \lnot q, \lnot (p \lor q) = \lnot p \land \lnot q$可以推出<strong>反演律/德·摩根定律</strong>：</p>
+<script type="math/tex; mode=display">
+\complement_{U}(A \cap B) = \complement_{U}A \cup \complement_{U}B \\
+\complement_{U}(A \cup B) = \complement_{U}A \cap \complement_{U}B</script><p>对于两个集合$A, B$，其<strong>对称差（symmetric difference）</strong>定义为：</p>
+<script type="math/tex; mode=display">A \bigtriangleup B = (A - B) \cup (B - A)</script><p>或</p>
+<script type="math/tex; mode=display">A \bigtriangleup B = (A \cup B) - (A \cap B)</script><p><img src="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg" alt="对称差" title="对称差"></p>
+<p>对于两个集合$A, B$，其<strong>笛卡尔积（Cartesian product）</strong>或<strong>直积</strong>定义为：</p>
+<script type="math/tex; mode=display">A \times B = \{(a, b) | a \in A \land b \in B\}</script><p>例如，集合$A$是13个元素的点数集合$\{A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K\}$，$B$是4个元素的花色集合$\{\clubsuit, \diamondsuit, \heartsuit, \spadesuit\}$，那么$A \times B$就是52个元素的一副标准扑克牌的集合$\{(A, \clubsuit), (A, \diamondsuit), \cdots, (K, \heartsuit), (K, \spadesuit)\}$。注意，笛卡尔积不满足交换律，这个集合与$B \times A$得到的$\{(\clubsuit, A), (\diamondsuit, A), \cdots, (\heartsuit, K), (\spadesuit, K)\}$是完全不同的，甚至不相交。</p>
+<h2 id="集合的势"><a href="#集合的势" class="headerlink" title="集合的势"></a>集合的势</h2><p>如果要计算一个集合中的元素个数，我们可以用<strong>势（cardinality）</strong>或<strong>基数（cardinal number）</strong>的概念表示。<br>集合$A$的势或基数记作$|A|$或$\mathrm{card}(A)$。<br>势和基数一般是同义词。有时候前者仅用于描述无限集的大小而后者用于描述有限集，但通常不加区分。本章一律使用势来表示集合的大小。</p>
+<h3 id="有限集合的势"><a href="#有限集合的势" class="headerlink" title="有限集合的势"></a>有限集合的势</h3><p>顾名思义，<strong>有限集合（finite set）</strong>就是指元素个数有限的集合。<br>严格定义需要用到<a href="/2021/05/14/Function/#映射">映射</a>：若存在自然数$n$以及双射$f: A \to \{1, 2, \cdots, n\}$，则$A$为有限集合。<br>有限集合的势就是其元素个数$n$。例如集合$A = \{-3, 0, 2, 7, 9\}$，则$|A| = 5$。</p>
+<p><strong>容斥原理（inclusion–exclusion principle）</strong>是<strong>组合计数（enumerative combinatorics）</strong>中的基本原理之一，表达为</p>
+<script type="math/tex; mode=display">|A \cup B| = |A| + |B| - |A \cap B|</script><p>从Venn图上可以很直观地理解这个原理。<br><img src="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg" alt="容斥原理" title="容斥原理"></p>
+<p>容斥原理还可以推广到三个乃至更多集合之间：</p>
+<script type="math/tex; mode=display">|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|</script><p>可以理解为三个集合相交的部分计算了三次，减去所有两两相交的部分多减了一次，因此加回三者相交的部分。<br>对于更多的集合，先将单个集合的势加起来，然后减去所有两个集合相交的部分，再加回所有三个集合相交的部分，再减去所有四个集合相交的部分，依此类推。</p>
+<p>集合的<strong>幂集（power set）</strong>，定义为该集合全部子集构成的集合。<br>对于集合$S$，其幂集$\mathcal{P}(S)$可以表示为：</p>
+<script type="math/tex; mode=display">\mathcal{P}(S) = \{x | x \subseteq S\}</script><p>$S$的幂集也可以记作$2^{S}$。<br>例如一集合$S = \{a, b, c\}$，那么$S$的幂集</p>
+<script type="math/tex; mode=display">\mathcal{P}(S) = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}</script><p>幂集的实质就是考虑集合$S$中每一个元素选或不选，每一种选择构成一个集合，因此可以得出</p>
+<script type="math/tex; mode=display">|S| = n, |\mathcal{P}(S)| = 2^{n}</script><h3 id="无限集合的势"><a href="#无限集合的势" class="headerlink" title="无限集合的势"></a>无限集合的势</h3><p>不是有限集合的集合就是<strong>无限集合（infinite set）</strong>。<br>若两个集合$A, B$之间存在双射$f: A \to B$，则称这两个集合<strong>等势</strong>。</p>
+<p>对于自然数集$\mathbb{N}$，我们定义它的势为$\aleph_{0}$，读作<strong>阿列夫零（aleph-naught）</strong>。<br>若集合$A$与$\mathbb{N}$等势，则称$A$为<strong>可数集（countable set）</strong>，$|A| = \aleph_{0}$。<br>可数集和有限集统称<strong>至多可数集合（at most countable set）</strong>。</p>
+<p>设集合$S$，若存在单射$f: S \to \mathbb{N}$或满射$g: \mathbb{N} \to S$，则$S$为至多可数集合。</p>
+<p>至多可数集合的子集都是至多可数集合，可以通过将第$n$个元素映射到自然数$n$上证明。<br>类似地，我们也能证明$\mathbb{Z}$和$\mathbb{Q}$都是可数集，即使看上去它们要比$\mathbb{N}$大。</p>
+<p>可数个至多可数集合的并集是至多可数集合。<br>证明：<br>设可数集$A, B, C, \cdots$，它们的元素分别为$A = \{a_{0}, a_{1}, a_{2}, \cdots\}, B = \{b_{0}, b_{1}, b_{2}, \cdots\}, \cdots$。将这些集合的元素排列为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&a_{0} \quad b_{0} \quad c_{0} \quad \cdots \\
+&a_{1} \quad b_{1} \quad c_{1} \quad \cdots \\
+&a_{2} \quad b_{2} \quad c_{2} \quad \cdots \\
+&\ \vdots \quad\ \  \vdots \quad\ \ \  \vdots
+\end{align}</script><p>将这些元素按对角线与下面的自然数一一对应：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&0 \quad 2 \quad 5 \quad \cdots \\
+&1 \quad 4 \quad 8 \quad \cdots \\
+&3 \quad 7 \quad 12 \quad \cdots \\
+&\vdots \quad\  \vdots \quad\  \vdots
+\end{align}</script><p>即可得这些集合的并集为可数集。$\Box$</p>
+<p>无限集合中不是可数集的就是<strong>不可数集（uncountable set）</strong>，例如$\mathbb{R}$。<br>不可数集的势大于可数集。</p>
+<p>记$|\mathbb{R}| = \aleph_{1}$，读作<strong>阿列夫一（aleph-one）</strong>。</p>
+<p>我们知道，$\aleph_{0} &lt; \aleph_{1}$，那么这两者之间是否还有其它基数？<br>德国数学家康托尔（Georg Cantor，1845－1918）对这个问题给出了否定的答案，提出了<strong>连续统假设（continuum hypothesis, CH）</strong>，表述为：<br><em>不存在一个集合，其势大于$\mathbb{N}$而小于$\mathbb{R}$。</em><br>连续统假设等价于以下等式：</p>
+<script type="math/tex; mode=display">2^{\aleph_{0}} = \aleph_{1}</script><p>这个猜想后来被证明独立于我们常用的这个公理系统之外，即不可被证明或证伪。</p>
+<h1 id="附：大型运算符"><a href="#附：大型运算符" class="headerlink" title="附：大型运算符"></a>附：大型运算符</h1><p>常见的<strong>大型运算符</strong>有</p>
+<script type="math/tex; mode=display">\sum, \prod, \bigcup, \bigcap, \bigvee, \bigwedge</script><p>给定一些数$a_{1}, a_{2}, a_{3}, \cdots, a_{n}$，它们的和$a_{1} + a_{2} + a_{3} + \cdots + a_{n}$可以写作</p>
+<script type="math/tex; mode=display">\sum_{i = 1}^{n} a_{i}</script><p>其中下标$i = 1$表示$i$的初始值为$1$，上标$n$表示$i$从初始值$1$遍历到$n$。上式的意思即$a_{i}$的和，$i$从$1$到$n$。<br>特别注意，如果下标大于上标，式子的值一般定义为$0$。</p>
+<p>例如，</p>
+<script type="math/tex; mode=display">\sum_{i = 3}^{6} i^{2} = 3^{2} + 4^{2} + 5^{2} + 6^{2} = 86</script><p>在不造成歧义的情况下，$\sum\limits_{i=1}^{n}$可以直接简写成$\sum$，例如，</p>
+<script type="math/tex; mode=display">\sum a_{i} = \sum_{i = 1}^{n} a_{i}</script><p>同理，<br>$\prod\limits_{i = 1}^{n} a_{i}$表示$a_{1}, a_{2}, \cdots, a_{n}$的乘积；<br>$\bigcap\limits_{i = 1}^{n} A_{i}$表示集合$A_{1}, A_{2}, \cdots, A_{n}$的交集；<br>$\bigvee\limits_{i = 1}^{n} p_{i}$表示对命题$p_{1}, p_{2}, \cdots, p_{n}$取或。</p>
+<p>此外，如果我们要限定下标的值，例如下标$i$属于非负整数集合$A$，可以写作</p>
+<script type="math/tex; mode=display">\sum_{i \in A} a_{i}</script><p>如果集合$A$可以用描述法写成$A = \{i | p(i)\}$，那么可以写作</p>
+<script type="math/tex; mode=display">\sum_{p(i)} a_{i}</script><p>如果下标要排除某个数$m$，可以写作</p>
+<script type="math/tex; mode=display">\sum_{i \ne m} a_{i}</script><p>如果要使用多个大型运算符如$\sum\limits_{i} \sum\limits_{j}$，可以简写作</p>
+<script type="math/tex; mode=display">\sum_{i, j}</script><p>求和符号比较特殊，它具有<strong>线性性</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sum (a_{i} + b_{i}) = \sum a_{i} + \sum b_{i} \\
+& \sum k a_{i} = k \sum a_{i}
+\end{align}</script><p>连乘符号也有类似的性质：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \prod a_{i} b_{i} = \prod a_{i} \prod b_{i} \\
+& (\prod a_{i})^{k} = \prod a_{i}^{k}
+\end{align}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2021/04/18/Logic-and-Set/" title="学习笔记·逻辑与集合">https://luckyfuy.top/2021/04/18/Logic-and-Set/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/04/04/Timeline-of-Chinese-and-Foreign-History/" rel="next" title="中外历史年表">
+                <i class="fa fa-chevron-left"></i> 中外历史年表
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/14/Function/" rel="prev" title="学习笔记·函数">
+                学习笔记·函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑"><span class="nav-number">1.</span> <span class="nav-text">逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#谓词逻辑"><span class="nav-number">1.1.</span> <span class="nav-text">谓词逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量词"><span class="nav-number">1.1.1.</span> <span class="nav-text">量词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题逻辑"><span class="nav-number">1.2.</span> <span class="nav-text">命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑联结词"><span class="nav-number">1.2.1.</span> <span class="nav-text">逻辑联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全称命题与存在命题"><span class="nav-number">1.2.2.</span> <span class="nav-text">全称命题与存在命题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">2.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合间的关系"><span class="nav-number">2.1.</span> <span class="nav-text">集合间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊集合"><span class="nav-number">2.2.</span> <span class="nav-text">特殊集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的运算"><span class="nav-number">2.3.</span> <span class="nav-text">集合的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合的势"><span class="nav-number">2.4.</span> <span class="nav-text">集合的势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有限集合的势"><span class="nav-number">2.4.1.</span> <span class="nav-text">有限集合的势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无限集合的势"><span class="nav-number">2.4.2.</span> <span class="nav-text">无限集合的势</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附：大型运算符"><span class="nav-number">3.</span> <span class="nav-text">附：大型运算符</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

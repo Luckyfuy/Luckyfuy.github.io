@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="open-iconic/font/css/open-iconic-foundation.min.css" rel="stylesheet">
+
+    <title>测试结果</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-light bg-light">
+        <a class="navbar-brand" href="/compass/">政治倾向测试</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">主页</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-title">
+                <h2 class="text-center mt-2">
+                    测试结果
+                    <button class="d-inline btn btn-primary" id="btn-result-save" disabled>
+                        <span class="fi-cloud-download" title="save" aria-hidden="true"></span>
+                        保存
+                    </button>
+                </h2>
+            </div>
+            <hr />
+            <div class="card-body">
+                <svg id="graph" x="0px" y="0px" width="600" style="width: 100%">
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/svg.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="result.js"></script>
+</body>
+
+</html>

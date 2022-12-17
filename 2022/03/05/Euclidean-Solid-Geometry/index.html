@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="立体几何基本公理平面几何研究的对象是点（point）与直线（line），而在立体几何中，平面（plane）也成为了研究对象。尽管平面是无限延伸的，但在画图时我们用一个平行四边形来表示平面。平面可以用一个希腊字母表示，例如$\alpha, \beta$；也可以用平面内的点表示，例如平面$ABCD$。 平面几何是在欧几里得（Euclid，约前325－约前270）的五条公理上建立起来的，这些公理在立体几">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·古典立体几何">
+<meta property="og:url" content="https://luckyfuy.top/2022/03/05/Euclidean-Solid-Geometry/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="立体几何基本公理平面几何研究的对象是点（point）与直线（line），而在立体几何中，平面（plane）也成为了研究对象。尽管平面是无限延伸的，但在画图时我们用一个平行四边形来表示平面。平面可以用一个希腊字母表示，例如$\alpha, \beta$；也可以用平面内的点表示，例如平面$ABCD$。 平面几何是在欧几里得（Euclid，约前325－约前270）的五条公理上建立起来的，这些公理在立体几">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/wlyPmUGM63gbZ8e.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/ilrucEMAKazQofR.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/izUBljkHYv3FO6p.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/itCUvW6GhAZ84dF.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/b9qkQjilKePAtES.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/NHDuzKLmiPI2Q5A.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/UngmsXHOIavjzVL.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/Ffz36I9NQEA2u5L.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/XC6gQfRNwlB5kO2.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/sQKAN9WCZOwvSjH.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/bNtRSfJs7jirzQ8.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/86QKO9JSFDGHhvf.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/19/nrFjVisGP7mSfJI.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/mVQxedLOTHvUb3f.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/nqTCXQ97SNAusRE.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/oZIUfz2VDFJSxYm.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/qSXvk5esY4BcOzd.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/VTmSsMk6nCwd4rc.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/sRGaWzEZ2qYgmMp.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/k3X4nhWNI1ceyu2.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/6BjdXQ7TIEAConP.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/Vb7qdgnzJ1ot3Hv.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/22/E5il9Nqgc8ChZJf.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/P9XWqz3NT578jVU.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/4wYuZT5mXPltpvb.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/Sy53wGPZoAeDX8C.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/bD1gF2wrVQGdPOe.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/jL2eTgaFkpyq37K.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/SilCxWKgF8DetXV.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/sYnvDfz2WqEpMJm.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/23/u1GEtgQYZ7ipkFf.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/25/LfhItX8OVl3NzwG.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/25/wEhI8WCnrpuPjez.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/25/5EhsHt9WamMiDen.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/25/1KuVGOBLhJajcPS.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/26/5glX1Ssq4IJeicP.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/26/GHItBjmLD5QoEWc.png">
+<meta property="og:image" content="https://s2.loli.net/2022/03/26/quEv4fcow7xaTBO.png">
+<meta property="og:updated_time" content="2022-11-08T08:16:55.136Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·古典立体几何">
+<meta name="twitter:description" content="立体几何基本公理平面几何研究的对象是点（point）与直线（line），而在立体几何中，平面（plane）也成为了研究对象。尽管平面是无限延伸的，但在画图时我们用一个平行四边形来表示平面。平面可以用一个希腊字母表示，例如$\alpha, \beta$；也可以用平面内的点表示，例如平面$ABCD$。 平面几何是在欧几里得（Euclid，约前325－约前270）的五条公理上建立起来的，这些公理在立体几">
+<meta name="twitter:image" content="https://s2.loli.net/2022/03/19/wlyPmUGM63gbZ8e.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2022/03/05/Euclidean-Solid-Geometry/">
+
+
+
+
+
+  <title>学习笔记·古典立体几何 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2022/03/05/Euclidean-Solid-Geometry/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·古典立体几何</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-03-05T22:20:29+08:00">
+                Sat, Mar 5th, 2022
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/03/05/Euclidean-Solid-Geometry/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/03/05/Euclidean-Solid-Geometry/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2022/03/05/Euclidean-Solid-Geometry/" class="leancloud_visitors" data-flag-title="学习笔记·古典立体几何">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  9.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  39
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="立体几何基本公理"><a href="#立体几何基本公理" class="headerlink" title="立体几何基本公理"></a>立体几何基本公理</h1><p>平面几何研究的对象是<strong>点（point）</strong>与<strong>直线（line）</strong>，而在立体几何中，<strong>平面（plane）</strong>也成为了研究对象。<br>尽管平面是无限延伸的，但在画图时我们用一个平行四边形来表示平面。平面可以用一个希腊字母表示，例如$\alpha, \beta$；也可以用平面内的点表示，例如平面$ABCD$。</p>
+<p>平面几何是在欧几里得（Euclid，约前325－约前270）的五条公理上建立起来的，这些公理在立体几何中仍然成立，并与下面的三条立体几何基本公理共同构成了立体几何。</p>
+<a id="more"></a>
+<p><strong>公理1</strong>：过不在同一直线上的三点有且只有一个平面。<br>这条公理也可以表述为“不共线的三点唯一确定一个平面”。<br>如果一个点$A$在平面$\alpha$内，那么记为$A \in \alpha$，否则记为$A \notin \alpha$。</p>
+<p><img src="https://s2.loli.net/2022/03/19/wlyPmUGM63gbZ8e.png" alt></p>
+<p><strong>公理2</strong>：若一条直线上的两个点都在平面内，则直线上的所有点都在该平面内。<br>如果一个点$A$在直线$l$上，那么记为$A \in l$，否则记为$A \notin l$。如果直线$l$上的所有点都在平面$\alpha$内，即直线$l$在平面$\alpha$内，那么记为$l \subset \alpha$，否则记为$l \not\subset \alpha$。这样的记号实际上是把直线和平面看作点的集合。<br>公理2就能用形式化的语言表示为：</p>
+<script type="math/tex; mode=display">A \in l, B \in l, A \in \alpha, B \in \alpha \Rightarrow l \subset \alpha</script><p><img src="https://s2.loli.net/2022/03/19/ilrucEMAKazQofR.png" alt></p>
+<p>通过这两条公理，可以得到推论：</p>
+<ol>
+<li>经过一条直线和直线外一点有且只有一个平面；</li>
+<li>经过两条相交直线有且只有一个平面；</li>
+<li>经过两条平行直线有且只有一个平面。</li>
+</ol>
+<p>证明：</p>
+<ol>
+<li>设直线$l$和点$A$。在直线$l$上取两点$B, C$，根据公理1，$A, B, C$三点确定唯一平面$\alpha$。因为$B, C \in l$，所以根据公理2，$l \subset \alpha$。$\Box$</li>
+<li>设直线$m, n$相交于点$A$。在直线$m$上取点$B$，且$A, B$不重合；在直线$n$上取点$C$，且$A, C$不重合。根据公理1，$A, B, C$三点确定唯一平面$\alpha$。因为$A, B \in m$，所以根据公理2，$m \subset \alpha$，同理$n \subset \alpha$。$\Box$</li>
+<li>设直线$m \parallel n$。在直线$m$上取两点$A, B$，在直线$n$上取点$C$。根据公理1，$A, B, C$三点确定唯一平面$\alpha$。因为$A, B \in m$，所以根据公理2，$m \subset \alpha$。在直线$n$上取除$C$外任意一点$D$，$A, B, D$三点确定平面$\beta$。因为$C \in \alpha, m \parallel n$，所以根据公理4，$n \subset \alpha$，所以$D \in \alpha$。因为$A, B, D$三点确定平面$\beta$，所以$\alpha, \beta$重合。$\Box$</li>
+</ol>
+<p>两条直线不在同一平面内称为<strong>异面（skewness）</strong>，异面直线没有公共点。两条直线有公共点称为<strong>相交（intersection）</strong>，根据推论2，两条相交直线必然共面。无公共点且在同一平面内称为<strong>平行（parallelism）</strong>。</p>
+<p><strong>公理3</strong>：若两个不重合的平面有一个公共点，则它们有且只有一条过该点的公共直线，称为两个平面的<strong>交线（intersection line）</strong>。<br>如图，平面$\alpha, \beta$的交线是直线$l$，记为$\alpha \cap \beta = l$。<br>公理3用形式化的语言可以表示为：</p>
+<script type="math/tex; mode=display">P \in \alpha, P \in \beta \Rightarrow \alpha \cap \beta = l, P \in l</script><p><img src="https://s2.loli.net/2022/03/19/izUBljkHYv3FO6p.png" alt></p>
+<p>两个平面有交线称为<strong>相交（intersection）</strong>，没有公共点称为<strong>平行（parallelism）</strong>。</p>
+<p>对于直线和平面的位置关系：直线<strong>在平面内</strong>时，与平面有无数个公共点；直线与平面没有公共点称为<strong>平行（parallelism）</strong>，既不在平面内又不与平面平行称为<strong>相交（intersection）</strong>，这两者统称为<strong>在平面外</strong>。<br>相交的直线与平面有唯一的交点。<br>证明：<br>设直线$l$与平面$\alpha$相交。假设有两交点$P, Q$。$P, Q \in \alpha, P, Q \in l$，由公理2，$l \subset \alpha$，与相交的定义矛盾，故交点唯一。$\Box$。</p>
+<p>此外，平面几何中的平行公理在立体几何中依然适用，这里一并列出。<br><strong>公理4</strong>：过直线外一点，有且只有一条直线与该直线平行。</p>
+<h1 id="平行的判定与性质定理"><a href="#平行的判定与性质定理" class="headerlink" title="平行的判定与性质定理"></a>平行的判定与性质定理</h1><h2 id="直线与直线平行"><a href="#直线与直线平行" class="headerlink" title="直线与直线平行"></a>直线与直线平行</h2><p>由公理4，可以得到一个推论：<br>平行于同一直线的两条直线平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">l \parallel m, l \parallel n \Rightarrow m \parallel n</script><p>这条定理可以用于立体几何中直线与直线平行的判定。<br>证明这条定理需要用到后面的线面平行性质定理：<br>设$l, m$确定平面$\alpha$，$l, n$确定平面$\beta$。不妨设$\alpha, \beta$不是同一个平面，则$m \not\subset \beta$。用反证法，假设$m \nparallel n$。<br>若$m, n$共面，则一定相交，设交点为$P$。因为$\alpha \cap \beta = l, P \in m \subset \alpha, P \in n \subset \beta$，所以$P \in \alpha \cap \beta = l$，$l, m, n$三线共点，矛盾。<br>若$m, n$异面，因为$m \parallel l, l \subset \beta, m \not\subset \beta$，所以$\beta \parallel \beta$。任取点$Q \in n$，$m, Q$确定一个平面$\gamma$。设$\beta \cap \gamma = k$，则$Q \in k$，且$m \parallel k$。此时$m \parallel l$，若$l, k$相交，则情况同上，矛盾，因此$l \parallel k$。由于$m, n$异面，$n, k$必不是同一条直线，则过一点$Q$可以作$l$的两条平行线$n, k$，与公理4矛盾。$\Box$</p>
+<p>与此相关还有一个性质定理：<br>若两个角的边分别对应平行，则这两个角相等或互补。</p>
+<p>证明：<br>如图，$\angle ABC, \angle DEF$的两边对应平行，即$AB \parallel DE, BC \parallel EF$。不妨设$|AB| = |DE|, |BC| = |EF|$，$AB, DE$方向相同。<br>首先证明$EF, BC$方向相同时的情况。因为$AB \stackrel{\parallel}{=} DE$，所以$ABED$是平行四边形，可得$AD \stackrel{\parallel}{=} BE$。同理，$CF \stackrel{\parallel}{=} BE$，所以$AB \stackrel{\parallel}{=} CF$。因此，$ACFD$是平行四边形，$|AC| = |DF|$，故$\triangle ABC \cong \triangle DEF$，从而$\angle ABC = \angle DEF$。<br>对于$EF, BC$方向相反时的情况，可以反向延长其中一条线，然后得到类似的结论。$\Box$<br><img src="https://s2.loli.net/2022/03/19/itCUvW6GhAZ84dF.png" alt></p>
+<h2 id="直线与平面平行"><a href="#直线与平面平行" class="headerlink" title="直线与平面平行"></a>直线与平面平行</h2><p>对于直线与平面的平行关系，有判定定理：<br>若平面外一条直线与平面内的一条直线平行，则该直线与此平面平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">l \not\subset \alpha, m \subset \alpha, l \parallel m \Rightarrow l \parallel \alpha</script><p>用反证法可以证明：<br>假设$l \cap \alpha = P$。直线$l, m$确定一个平面$\beta$，那么$m = \alpha \cap \beta$。因为$l \subset \beta, m \subset \alpha$，所以$P \in \alpha \cap \beta = m$，得到$l \cap m = P$，与平行矛盾。$\Box$</p>
+<p>对于直线与平面的平行关系，有性质定理：<br>若一条直线与一个平面平行，且过该直线的平面与此平面相交，则该直线与交线平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">l \parallel \alpha, l \subset \beta, \alpha \cap \beta = m \Rightarrow l \parallel m</script><p>证明：<br>因为$l \parallel \alpha$，所以$l \cap \alpha = \varnothing$，又$m \subset \alpha$，故$l \cap m = \varnothing$。$l, m \subset \beta$，由平行定义得到$l \parallel m$。</p>
+<p><img src="https://s2.loli.net/2022/03/19/b9qkQjilKePAtES.png" alt></p>
+<h2 id="平面与平面平行"><a href="#平面与平面平行" class="headerlink" title="平面与平面平行"></a>平面与平面平行</h2><p>对于平面与平面的平行关系，有判定定理：<br>若一个平面内的两条相交直线都与另一个平面平行，则这两个平面平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">a \subset \beta, b \subset \beta, a \cap b = P, a \parallel \alpha, b \parallel \alpha \Rightarrow \alpha \parallel \beta</script><p>用反证法可以证明：<br>假设$\alpha \cap \beta = l$。不妨设$a \cap l = Q$，则$Q \in l = \alpha \cap \beta$，所以$a \cap \alpha = Q$，与$a \parallel \alpha$矛盾。若$a \parallel l, b \parallel l$，则过一点$P$可以作$l$的两条平行线$a, b$，矛盾。$\Box$</p>
+<p><img src="https://s2.loli.net/2022/03/19/NHDuzKLmiPI2Q5A.png" alt></p>
+<p>由这个判定定理可以得到推论：<br>若两个平面内各有一组相交直线对应平行，则这两个平面平行。</p>
+<p>对于平面与平面的平行关系，有两条性质定理：</p>
+<p>两个平面平行，则其中一个平面上任意一条直线与另一个平面平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">\alpha \parallel \beta, l \subset \alpha \Rightarrow l \parallel \beta</script><p>两个平面平行，若另一个平面与这两个平面相交，则两条交线平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">\alpha \parallel \beta, \gamma \cap \alpha = a, \gamma \cap \beta = b \Rightarrow a \parallel b</script><p>证明：<br>因为$\alpha \parallel \beta$，所以$\alpha \cap \beta = \varnothing$，又$a \subset \alpha, b \subset \beta$，故$a \cap b = \varnothing$。$a, b \subset \gamma$，由平行定义得到$a \parallel b$。$\Box$</p>
+<p><img src="https://s2.loli.net/2022/03/19/UngmsXHOIavjzVL.png" alt></p>
+<h1 id="垂直的判定与性质定理"><a href="#垂直的判定与性质定理" class="headerlink" title="垂直的判定与性质定理"></a>垂直的判定与性质定理</h1><h2 id="直线与直线垂直"><a href="#直线与直线垂直" class="headerlink" title="直线与直线垂直"></a>直线与直线垂直</h2><p>在平面几何中，两条直线相交形成4个角，其中不大于$\dfrac{\pi}{2}$的称为两条直线的夹角。但在立体几何中，由于异面直线的存在，我们需要根据公理4，通过直线的平移来定义夹角。<br>设$a, b$是异面直线。在直线$a$上任取一点$A$，根据公理4，存在唯一的直线$b’$过点$A$且有$b’ \parallel b$。<br><img src="https://s2.loli.net/2022/03/19/Ffz36I9NQEA2u5L.png" alt="夹角"><br>异面直线$a, b$的<strong>夹角（included angle）</strong>就是相交直线$a, b’$的夹角。夹角的范围是$[0, \dfrac{\pi}{2}]$。</p>
+<p>规定平行直线的夹角是$0$。<br>如果两条直线$a, b$的夹角是$\dfrac{\pi}{2}$，那么称两条直线<strong>垂直（perpendicularity）</strong>，记作$a \perp b$。</p>
+<h2 id="直线与平面垂直"><a href="#直线与平面垂直" class="headerlink" title="直线与平面垂直"></a>直线与平面垂直</h2><p>如果直线与平面内任意一条直线都垂直，那么称该直线与此平面垂直。直线$l$与平面$\alpha$垂直记作$l \perp \alpha$，若$l \cap \alpha = P$，则称$P$为<strong>垂足（foot）</strong>。</p>
+<p>直线与平面垂直的判定同样只需要两条相交直线：<br>若一条直线与平面内的两条相交直线都垂直，则该直线与平面垂直。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">l \perp a, l \perp b, a \subset \alpha, b \subset \alpha, a \cap b = P \Rightarrow l \perp \alpha</script><p><img src="https://s2.loli.net/2022/03/19/XC6gQfRNwlB5kO2.png" alt><br>可以把所有直线都平移到一起来证明：<br>如图，设$l$过点$P$，以$P$为圆心，任意长度为半径作一个圆，交$a$于点$A, C$，交$b$于点$B, D$，任取$E \in l$。此时$|PA| = |PB| = |PC| = |PD|$，同时条件有$\angle EPA = \angle EPB = \angle EPV = \angle EPD = \dfrac{\pi}{2}$，得到$\triangle EPA \cong \triangle EPB \cong \triangle EPC \cong \triangle EPD$。这样有$|EA| = |EB| = |EC| = |ED|$，并由圆的性质有$|AB| = |CD|, |AD| = |BC|$。<br>任取直线$m \subset \alpha, P \in m$，$m$分别交$AB, CD$于点$F, G$。$ABCD$是矩形，因此有$AB \parallel CD$，得到比例关系$\dfrac{|AF|}{|GC|} = \dfrac{|FP|}{|PG|} = \dfrac{|AP|}{|PC|} = 1$，所以$|AF| = |CG|, |PF| = |PG|$。容易得到，$\triangle EAF \cong \triangle ECG$，从而$|EF| = |EG|$。而$|PF| = |PG|$，故$\triangle EPF \cong \triangle EPG$，$\angle EPF = \angle EPG = \dfrac{\pi}{2}$，因此$l \perp m$。<br>由$m$的任意性，得$l \perp \alpha$。$\Box$</p>
+<p>过平面外一点，有且只有一条直线与该平面垂直。<br>证明：<br><em>存在性</em>：设$O$为平面$\alpha$外一点。任取$m \subset \alpha$，过点$O$作$m$的垂线，垂足为$Q$；过点$Q$在平面$\alpha$内作$m$的垂线$n$；过点$O$作$n$的垂线，垂足为$P$。因为$OQ \perp m, PQ \perp m$，所以$m \perp $平面$OPQ$，得到$m \perp OP$。而$OP \perp n$，且$m \subset \alpha, n \subset \alpha, m \cap n = Q$，所以$OP \perp \alpha$。<br><em>唯一性</em>：假设$OA, OB \perp \alpha$，则$OA, OB$相交于一点$O$。根据后面的线面垂直性质定理，$OA \parallel OB$，矛盾。$\Box$</p>
+<p><img src="https://s2.loli.net/2022/03/19/sQKAN9WCZOwvSjH.png" alt></p>
+<p>过点$O$作平面$\alpha$的唯一垂线，垂足为$P$，则线段$OP$称为点$O$到平面$\alpha$的<strong>垂线段（perpendicular line segment）</strong>，垂线段的长度$|OP|$称为<strong>点$O$到平面$\alpha$的距离（distance from a point to a plane）</strong>。<br>$OQ$所在的直线与平面$\alpha$相交但不垂直，称为平面$\alpha$的<strong>斜线</strong>，交点$Q$称为<strong>斜足</strong>。$\angle OQP$称为<strong>直线$OQ$与平面$\alpha$所成的角</strong>。平面与其平行线所成的角是$0$，平面与其垂线所成的角是$\dfrac{\pi}{2}$，因此，直线与平面所成的角范围是$[0, \dfrac{\pi}{2}]$。<br>直线$PQ$称为直线$OQ$在平面$\alpha$内的<strong>射影（projection）</strong>。</p>
+<p>从上面存在性的证明得到启发，有<strong>三垂线定理</strong>：<br>平面内的直线与斜线垂直的充要条件是：该直线与斜线的射影垂直。</p>
+<p>由三垂线定理可以得到<strong>三余弦定理</strong>：<br>平面内一条直线与该平面一条斜线夹角的余弦值，等于斜线与平面所成的角的余弦值，乘以平面内直线与斜线射影的夹角的余弦值。<br><img src="https://s2.loli.net/2022/03/19/bNtRSfJs7jirzQ8.png" alt="三余弦定理" title="三余弦定理"><br>如图，$OA \subset \alpha$，$OC$为斜线$OB$在平面$\alpha$的射影，三余弦定理有</p>
+<script type="math/tex; mode=display">\cos \angle AOB = \cos \angle AOC \cos \angle BOC</script><p>下面是直线与平面垂直的性质：<br>垂直于同一平面的两条直线平行。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">m \perp \alpha, n \perp \alpha \Rightarrow m \parallel n</script><p>用反证法可以证明：<br>假设$m \nparallel n$。设$n \cap \alpha = P$，作直线$m’$过点$P$且有$m’ \parallel m$，则$m’ \cap n = P$。设$m’, n$确定平面$\beta$，$\alpha \cap \beta = l$。此时有$m’ \perp l, n \perp l$，且$m’, n, l \subset \beta$，得到$m’ \parallel n$，矛盾。$\Box$</p>
+<h2 id="平面与平面垂直"><a href="#平面与平面垂直" class="headerlink" title="平面与平面垂直"></a>平面与平面垂直</h2><p>一条直线把平面分成两部分，每一部分都叫做一个<strong>半平面（half-plane）</strong>，直线叫做半平面的<strong>边界</strong>。一条直线与以它为边界的两个半平面组成了一个<strong>二面角（dihedral angle）</strong>。这条直线叫做二面角的<strong>棱</strong>，两个半平面叫做二面角的<strong>面</strong>。棱为$l$，面分别为$\alpha, \beta$的二面角记作$\alpha-l-\beta$；也可在半平面$\alpha, \beta$内分别取点$P, Q$，棱用$AB$来表示，记作$P-AB-Q$。<br>在二面角$\alpha-l-\beta$的棱$l$上任取一点$O$，在半平面$\alpha, \beta$内分别作射线$OA \perp l, OB \perp l$，则$\angle AOB$称为二面角的<strong>平面角</strong>。二面角的大小就是其平面角的大小，取值范围是$[0, \pi]$。<br>两个平行的平面所成的二面角大小规定为$0$。大小为$\dfrac{\pi}{2}$的二面角称为<strong>直二面角</strong>，此时两个平面垂直。平面$\alpha, \beta$垂直，记为$\alpha \perp \beta$。</p>
+<p>解直角三角形可以得到<strong>三正弦定理</strong>：<br>设二面角$\alpha-l-\beta$的大小为$x$，半平面$\alpha$上一条直线与$l$的夹角为$y$，与平面$\beta$所成的角为$z$，则有</p>
+<script type="math/tex; mode=display">\sin z = \sin x \sin y</script><p><img src="https://s2.loli.net/2022/03/19/86QKO9JSFDGHhvf.png" alt="三正弦定理" title="三正弦定理"></p>
+<p>对于平面与平面的垂直关系，有判定定理：<br>若一个平面过另一个平面的垂线，则这两个平面垂直。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">l \perp \beta, l \subset \alpha \Rightarrow \alpha \perp \beta</script><p>证明：<br>设$\alpha \cap \beta = m$，则$m \subset \beta$。由$l \perp \beta$，得到$l \perp m$。设$l \perp m = O$，过$O$在平面$\beta$内作$m$的垂线$n$。由$l \perp \beta$，得到$l \perp n$。此时$l, n$的夹角是$\dfrac{\pi}{2}$，即二面角$\alpha-m-\beta$的大小。$\Box$</p>
+<p><img src="https://s2.loli.net/2022/03/19/nrFjVisGP7mSfJI.png" alt></p>
+<p>对于平面与平面的垂直关系，有性质定理：<br>两个平面垂直，若一个平面内有一条直线垂直于这两个平面的交线，则这条直线垂直于另一个平面。<br>用形式化的语言表示就是：</p>
+<script type="math/tex; mode=display">\alpha \perp \beta, \alpha \cap \beta = l, a \subset \alpha, a \perp l \Rightarrow a \perp \beta</script><p>证明：<br>设$a \cap l = P$，过点$P$在平面$\beta$内作$l$的垂线$b$。这样$a, b$的夹角即二面角的大小$\dfrac{\pi}{2}$，$a \perp b$。而$a \perp l, l \cap b = P, l \subset \beta, b \subset \beta$，故$a \perp \beta$。$\Box$</p>
+<h1 id="几何体"><a href="#几何体" class="headerlink" title="几何体"></a>几何体</h1><h2 id="基本几何体"><a href="#基本几何体" class="headerlink" title="基本几何体"></a>基本几何体</h2><h3 id="多面体"><a href="#多面体" class="headerlink" title="多面体"></a>多面体</h3><p><strong>多面体（polyhedron）</strong>是边界由若干个平面多边形组成的几何体。这些多边形叫做多面体的<strong>面（face）</strong>，面的公共边叫做多面体的<strong>棱（edge）</strong>，棱的公共点叫做多面体的<strong>顶点（vertex）</strong>。<br>有公共点的$n (n \ge 3)$条射线，以及相邻两条射线之间的平面，构成了一个<strong>多面角</strong>。这些射线叫做多面角的<strong>棱</strong>，公共点叫做多面角的<strong>顶点</strong>，平面叫做多面角的<strong>面</strong>。有$n$条棱的多面角称为<strong>$n$面角</strong>。相邻两条棱的夹角叫做多面角的<strong>平面角</strong>，相邻两个平面的夹角叫做多面角的<strong>二面角</strong>。<br>如果多面体的所有面都是全等的正多边形，并且所有多面角都全等，那么这样的多面体称为<strong>正多面体（regular polyhedron）</strong>。正多面体只有5种：<strong>正四面体（regular tetrahedron）</strong>、<strong>正六面体（正方体，cube）</strong>、<strong>正八面体（regular octahedron）</strong>、<strong>正十二面体（regular dodecahedron）</strong>、<strong>正二十面体（regular icosahedron）</strong>。<br><img src="https://s2.loli.net/2022/03/22/mVQxedLOTHvUb3f.png" alt="正多面体" title="正多面体"></p>
+<p><strong>棱柱（prism）</strong>是有两个面平行且全等，其余各面都是四边形，并且这些四边形的公共边都互相平行的多面体。两个平行的面叫做棱柱的<strong>底面（base）</strong>，其余各面叫做棱柱的<strong>侧面</strong>，侧面的公共边叫做棱柱的<strong>侧棱</strong>。<br>侧棱垂直于底面的棱柱称为<strong>直棱柱（right prism）</strong>，否则称为<strong>斜棱柱（oblique prism）</strong>。<br>底面为$n$边形的棱柱叫做<strong>$n$棱柱（n-gonal prism）</strong>，底面为正$n$边形的棱柱叫做<strong>正$n$棱柱（regular n-gonal prism）</strong>。底面为平行四边形的棱柱又叫<strong>平行六面体（parallelepiped）</strong>。<br><img src="https://s2.loli.net/2022/03/22/nqTCXQ97SNAusRE.png" alt="六棱柱" title="六棱柱"><br><img src="https://s2.loli.net/2022/03/22/oZIUfz2VDFJSxYm.png" alt="平行六面体" title="平行六面体"><br>棱柱用底面来表示。设棱柱的两个底面分别是$n$边形$A_{1} A_{2} \cdots A_{n}, B_{1} B_{2} \cdots B_{n}$，其中$A_{k}, B_{k}$之间有侧棱联结，则棱柱表示为$A_{1} A_{2} \cdots A_{n}-B_{1} B_{2} \cdots B_{n}$。</p>
+<p><strong>棱锥（pyramid）</strong>是多面角被一个平面所截得到的多面体。平面被多面角截得的面叫做棱锥的<strong>底面（base）</strong>，其余各面叫做棱锥的<strong>侧面</strong>，侧面的公共边叫做棱锥的<strong>侧棱</strong>，多面角的顶点叫做棱锥的<strong>顶点（apex）</strong>。<br>底面为$n$边形的棱锥叫做<strong>$n$棱锥（n-gonal pyramid）</strong>，底面为正$n$边形且顶点与底面中心的连线垂直于底面的棱锥叫做<strong>正$n$棱锥（regular n-gonal pyramid）</strong>。底面为三角形的棱锥又叫<strong>四面体（tetrahedron）</strong>，所有棱长相等的四面体叫做<strong>正四面体</strong>。<br><img src="https://s2.loli.net/2022/03/22/qSXvk5esY4BcOzd.png" alt="棱锥" title="棱锥"><br>棱锥用顶点和底面来表示。设棱锥的顶点是$P$，底面是$n$边形$A_{1} A_{2} \cdots A_{n}$，则棱锥表示为$P-A_{1} A_{2} \cdots A_{n}$。四面体的四个顶点都可以作为棱锥的顶点，所以设四个顶点是$A, B, C, D$，四面体也可以记为$ABCD$。</p>
+<p><strong>棱台（frustum）</strong>是用平行于棱锥底面的平面截棱锥，所得的底面与截面之间的部分。原棱锥的底面和截面分别叫做棱台的<strong>下底面</strong>和<strong>上底面</strong>，原棱锥的侧面截得的部分叫做棱台的<strong>侧面</strong>，原棱锥的侧棱截得的部分叫做棱台的<strong>侧棱</strong>。<br>底面和截面为$n$边形的棱台叫做<strong>$n$棱台（n-gonal frustum）</strong>。<br><img src="https://s2.loli.net/2022/03/22/VTmSsMk6nCwd4rc.png" alt="四棱台" title="四棱台"><br>棱台和棱柱一样，用底面来表示。</p>
+<h3 id="旋转体"><a href="#旋转体" class="headerlink" title="旋转体"></a>旋转体</h3><p><strong>旋转体（solid of revolution）</strong>是平面图形绕同一平面内的一条直线旋转一周形成的几何体。这条直线叫做旋转体的<strong>轴（axis）</strong>。</p>
+<p><strong>圆柱（cylinder）</strong>是矩形绕其一边旋转一周形成的旋转体。垂直于轴的边旋转而成的圆面叫做圆柱的<strong>底面</strong>，平行于轴的边旋转而成的曲面叫做圆柱的<strong>侧面</strong>，这条平行于轴的边旋转得到的任何线段都叫做圆柱的<strong>母线（generatrix）</strong>。<br><img src="https://s2.loli.net/2022/03/22/sRGaWzEZ2qYgmMp.png" alt="圆柱" title="圆柱"><br>圆柱用底面的圆心来表示。设圆柱底面的圆心是$O_{1}, O_{2}$，则圆柱表示为$O_{1} O_{2}$。</p>
+<p>圆柱和棱柱都属于<strong>柱体</strong>。柱体是一个平面图形沿某一不在平面内的方向平移得到的几何体。如果这个方向与平面垂直，那么称为<strong>直柱体</strong>，否则称为<strong>斜柱体</strong>。两个底面之间的垂线段叫做柱体的<strong>高（height）</strong>，圆柱的母线和高等长。</p>
+<p><strong>圆锥（cone）</strong>是直角三角形绕其一直角边旋转一周形成的旋转体。轴的非直角顶点叫做圆锥的<strong>顶点</strong>，另一条直角边旋转而成的圆面叫做圆锥的<strong>底面</strong>，斜边旋转而成的曲面叫做圆锥的<strong>侧面</strong>，斜边旋转得到的任何线段都叫做圆锥的<strong>母线</strong>。作为圆锥的轴的直角边叫做圆锥的<strong>高</strong>，圆锥的高与底面垂直。<br><img src="https://s2.loli.net/2022/03/22/k3X4nhWNI1ceyu2.png" alt="圆锥" title="圆锥"><br>圆锥用顶点和底面圆心来表示。设圆锥的顶点是$S$，底面的圆心是$O$，则圆锥表示为$SO$。</p>
+<p>圆锥和棱锥都属于<strong>锥体</strong>。锥体是一个平面图形上的点与平面外一点所连线段的并集。过这一点的平面的垂线叫做锥体的<strong>高</strong>。</p>
+<p><strong>圆台（truncated cone）</strong>是用平行于圆锥底面的平面截圆锥，所得的底面与截面之间的部分。原圆锥的底面和截面分别叫做圆台的<strong>下底面</strong>和<strong>上底面</strong>，原圆锥的侧面截得的部分叫做圆台的<strong>侧面</strong>，原圆锥的母线截得的部分叫做圆台的<strong>母线</strong>。<br><img src="https://s2.loli.net/2022/03/22/6BjdXQ7TIEAConP.png" alt="圆台" title="圆台"><br>圆台和圆柱一样，用底面的圆心来表示。</p>
+<p>圆台的棱台都属于<strong>台体</strong>。台体是一个锥体被平行于锥体底面的平面所截，所得的底面与截面之间的部分。两个底面之间的垂线段叫做台体的<strong>高</strong>。</p>
+<p><strong>球（ball）</strong>是半圆绕其直径旋转一周形成的旋转体。半圆的圆心叫做球的<strong>球心（center）</strong>，连接球心和球面上任意一点的线段叫做球的<strong>半径（radius）</strong>。<br><img src="https://s2.loli.net/2022/03/22/Vb7qdgnzJ1ot3Hv.png" alt="球" title="球"><br>球用球心表示。设球的球心是$O$，则球表示为$O$。</p>
+<p>一个与球内部相交的平面把球分为两部分，每个部分都叫做<strong>球缺（spherical cap）</strong>。截面叫做球缺的<strong>底面</strong>，球面与底面的最远距离叫做球缺的<strong>高</strong>。<br><img src="https://s2.loli.net/2022/03/22/E5il9Nqgc8ChZJf.png" alt="球缺" title="球缺"></p>
+<h2 id="几何体的表面积和体积"><a href="#几何体的表面积和体积" class="headerlink" title="几何体的表面积和体积"></a>几何体的表面积和体积</h2><h3 id="祖暅原理与体积公式"><a href="#祖暅原理与体积公式" class="headerlink" title="祖暅原理与体积公式"></a>祖暅原理与体积公式</h3><p>三国时期，魏国数学家刘徽（约225－约295）发现了《九章算术》中的一个错误：球的体积是同等高度和底面半径的圆柱体积的$\dfrac{3}{4}$。刘徽在一个正方体中内切两个垂直的圆柱，取这两个圆柱的交集，构造出一个几何体，他称为“牟合方盖”。刘徽发现，球的体积是对应的牟合方盖的$\dfrac{3}{4}$，而牟合方盖的体积又比圆柱小，因此《九章算术》给出的球的体积一定是错误的。只要能算出牟合方盖的体积，就能得到球的体积。<br><img src="https://s2.loli.net/2022/03/23/P9XWqz3NT578jVU.png" alt="牟合方盖" title="牟合方盖"><br>不过，刘徽始终没能算出牟合方盖的体积。直到南北朝时期，祖冲之的儿子祖暅计算出了牟合方盖的体积，进而得到了导出各种几何体体积的通法，这就是<strong>祖暅原理</strong>：<br>幂势既同，则积不容异。</p>
+<p>其含义是：<br>夹在两个平行平面之间的两个几何体，被平行于这两个平行平面的平面所截，若截得的两个截面积总是相等，则这两个几何体体积相等。</p>
+<p>祖暅原理在17世纪由意大利数学家卡瓦列里（Bonaventura Cavalieri，1598－1647）重新发现，因此在西方被称为<strong>卡瓦列里原理（Cavalieri’s principle）</strong>。这个原理需要用到微积分才能解释。</p>
+<p>首先，我们知道三条棱长为$a, b, c$的长方体体积公式为：</p>
+<script type="math/tex; mode=display">V = abc</script><p>设柱体底面积为$S$，高为$h$，利用祖暅原理，作与柱体的底面积和高都相等的长方体，就能得到一般的<strong>柱体体积公式</strong>：</p>
+<script type="math/tex; mode=display">V = Sh</script><p>由祖暅原理可得，所有底面积和高相等的锥体体积相等。那么，只要得到三棱锥的体积公式，就能作与锥体的底面积和高都相等的三棱锥，从而得到一般的锥体体积公式。<br>如图，已知三棱锥$D-ABC$，设其体积为$V$。过点$D$作平面$\alpha$平行于平面$ABC$，并分别过$B, C$作$AD$的平行线，交$\alpha$于点$E, F$。这样得到三棱柱$ABC-DEF$。<br><img src="https://s2.loli.net/2022/03/23/4wYuZT5mXPltpvb.png" alt><br>三棱柱的体积是$Sh$，而三棱柱又由$D-ABC, B-DEF, B-CDF$三个三棱锥组成，所以$Sh = V + V_{B-DEF} + V_{B-CDF}$。因为$\triangle ABC \cong \triangle DEF$，所以$B-DEF, D-ABC$的底面积和高相等，$V_{B-DEF} = V$；因为$ACFD$是平行四边形，所以$\triangle CDF \cong \triangle DCA$，三棱锥$D-ABC$也可以写成$B-DCA$，$B-CDF, B-DCA$的底面积和高相等，$V_{B-CDF} = V$。代入得$Sh = 3V$，这样就得到<strong>锥体体积公式</strong>：</p>
+<script type="math/tex; mode=display">V = \dfrac{1}{3} Sh</script><p>台体的体积可以通过转化为锥体来解决。设台体的两个底面积为$S, S’$，高为$h$。如图，已知三棱台$ABC-DEF$，不妨设$S’ &lt; S$，沿$S’$方向延长侧棱，交于一点$G$，得到三棱锥$G-ABC$。<br><img src="https://s2.loli.net/2022/03/23/Sy53wGPZoAeDX8C.png" alt><br>两个底面图形相似，上下底面相似比为$k = \sqrt{\dfrac{S’}{S}}$。设点$G$到上、下底面的距离分别是$h_{1}, h_{2}$，则$h_{1} = kh_{2}, h = h_{2} - h_{1}$，从而得到$h_{2} = \dfrac{1}{1 - k} h, h_{1} = \dfrac{k}{1 - k} h$。<br>根据锥体体积公式，</p>
+<script type="math/tex; mode=display">
+\begin{align}
+V &= \dfrac{1}{3} (Sh_{2} - S'h_{1}) \\
+&= \dfrac{1}{3 (1 - k)} (S - kS') h \\
+&= \dfrac{1}{3} (\dfrac{\sqrt{S^{3}} - \sqrt{S'^{3}}}{\sqrt{S} - \sqrt{S'}}) h \\
+&= \dfrac{1}{3} (S + \sqrt{SS'} + S') h
+\end{align}</script><p>于是，<strong>台体体积公式</strong>：</p>
+<script type="math/tex; mode=display">V = \dfrac{1}{3} (S + \sqrt{SS'} + S') h</script><p>特别地，<strong>圆柱、圆锥、圆台体积公式</strong>分别为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& V = \pi r^{2} h \\
+& V = \dfrac{1}{3} \pi r^{2} h \\
+& V = \dfrac{1}{3} \pi (r_{1}^{2} + r_{1} r_{2} + r_{2}^{2}) h
+\end{align}</script><p>其中，$r$是圆柱、圆锥的底面半径，$r_{1}, r_{2}$是圆台的两个底面的半径。</p>
+<h3 id="圆柱、圆锥、圆台的表面积公式"><a href="#圆柱、圆锥、圆台的表面积公式" class="headerlink" title="圆柱、圆锥、圆台的表面积公式"></a>圆柱、圆锥、圆台的表面积公式</h3><p>圆柱、圆锥、圆台的底面都是圆，所以问题主要是侧面积的计算。我们可以通过<strong>展开图（net）</strong>来计算侧面的面积。</p>
+<p>圆柱侧面的展开图是一个矩形，一条边长是底面的周长$2 \pi r$，另一条边长是圆柱的高$h$，因此加上两个底面的圆，就得到<strong>圆柱表面积公式</strong>：</p>
+<script type="math/tex; mode=display">S = 2 \pi r (r + h)</script><p><img src="https://s2.loli.net/2022/03/23/bD1gF2wrVQGdPOe.png" alt="圆柱的展开图" title="圆柱的展开图"></p>
+<p>圆锥侧面的展开图是一个扇形，半径是母线长$l$，弧长是底面的周长$2 \pi r$，所以<strong>圆锥表面积公式</strong>是：</p>
+<script type="math/tex; mode=display">S = \pi r (r + l)</script><p><img src="https://s2.loli.net/2022/03/23/jL2eTgaFkpyq37K.png" alt="圆锥的展开图" title="圆锥的展开图"></p>
+<p>圆台侧面的展开图是一个扇环，内外半径差是母线长$l$，内、外弧长分别是两个底面的周长$2 \pi r_{1}, 2 \pi r_{2}$，所以<strong>圆台表面积公式</strong>是：</p>
+<script type="math/tex; mode=display">S = \pi (r_{1}^{2} + r_{2}^{2} + r_{1} l + r_{2} l)</script><p><img src="https://s2.loli.net/2022/03/23/SilCxWKgF8DetXV.png" alt="圆台的展开图" title="圆台的展开图"></p>
+<h3 id="球的表面积和体积公式"><a href="#球的表面积和体积公式" class="headerlink" title="球的表面积和体积公式"></a>球的表面积和体积公式</h3><p>前面提到，刘徽用牟合方盖给出了计算球的体积的方法。而在刘徽之前，古希腊数学家阿基米德（Archimedes，约前287－约前212）用另一种方法算出了球的体积：</p>
+<script type="math/tex; mode=display">V = \dfrac{4}{3} \pi r^{3}</script><p>其中$r$是球的半径。</p>
+<p>接下来用阿基米德的方法来证明：<br>设球的体积为$V$，半径为$r$。如图，构造一个底面半径和高都等于$r$的圆柱，并挖去一个圆锥。平面$\alpha$经过球的球心和圆柱的底面与圆锥的顶点。<br><img src="https://s2.loli.net/2022/03/23/sYnvDfz2WqEpMJm.png" alt><br>首先，平面$\alpha$上面的半球和圆柱的底面积相等。然后任意作一个与平面$\alpha$平行的平面$\beta$截半球和右边的几何体，设$\alpha$与$\beta$的距离为$d$。截面和半球相交得到一个圆，半径为$\sqrt{r^{2} - d^{2}}$，所以面积为$\pi (r^{2} - d^{2})$；右边的几何体截面是一个圆环，内半径由相似关系得到是$d$，外半径是$r$，所以圆环面积为$\pi (r^{2} - d^{2})$。这样，两者截面积总是相等，根据祖暅原理，半球和右边的几何体体积相等。而这个几何体的体积可以直接计算：</p>
+<script type="math/tex; mode=display">\dfrac{1}{2} V = \pi r^{2} \cdot r - \dfrac{1}{3} \pi r^{2} \cdot r = \dfrac{2}{3} \pi r^{3}</script><p>于是得到球的体积$V = \dfrac{4}{3} \pi r^{3}$。$\Box$</p>
+<p>球的表面积公式是：</p>
+<script type="math/tex; mode=display">S = 4 \pi r^{2}</script><p>可以通过细分球面的方法来证明：<br>如图，把球面按照经纬线的方式分成很多小块，设有$n$块，每块面积为$S_{i}$，则$\sum\limits_{i=1}^{n} S_{i} = S$。<br><img src="https://s2.loli.net/2022/03/23/u1GEtgQYZ7ipkFf.png" alt><br>如果每块足够小，那就可以近似地看为锥体，所以$V_{i} \approx \dfrac{1}{3} r S_{i}$，从而</p>
+<script type="math/tex; mode=display">V \approx \sum_{i=1}^{n} V_{i} = \dfrac{1}{3} r \sum_{i=1}^{n} S_{i} = \dfrac{1}{3} r S</script><p>当$n$趋于无穷大时，误差趋近于$0$，所以$V = \dfrac{1}{3} r S = \dfrac{4}{3} \pi r^{3}$，得到$S = 4 \pi r^{2}$。$\Box$</p>
+<h2 id="球"><a href="#球" class="headerlink" title="球"></a>球</h2><p>球也可以定义为空间中到一个定点距离不大于定长的点的集合，是圆在三维空间中的推广，因此也有一些重要的性质。</p>
+<p>平面几何中，不共线的三点唯一确定一个圆。类似地：<br>不共面的四点唯一确定一个球。</p>
+<p>证明：<br><em>存在性</em>：如图，$A, B, C, D$四点不共面，设$\triangle ABC$的外心是$O_{1}$，$\triangle DBC$的外心是$O_{2}$，$BC$中点是$E$。在平面$O_{1}O_{2}E$内作两条直线$OO_{1} \perp O_{1}E, OO_{2} \perp O_{2}E$，两线交于点$O$。因为$O_{1}, O_{2}$是外心，所以$O_{1}E \perp BC, O_{2} \perp BC$，得到$BC \perp$平面$O_{1}O_{2}E$。<br>$OO_{1} \subset$平面$O_{1}O_{2}E$，所以$BC \perp OO_{1}$，又$BC \perp O_{1}E, BC \cap O_{1}E = E$，且$BC, O_{1}E \subset$平面$ABC$，所以$OO_{1} \perp$平面$ABC$。由$|O_{1}A| = |O_{1}B| = |O_{1}C|$可证得全等三角形，故$|OA| = |OB| = |OC|$，同理$|OD| = |OB| = |OC|$。这样就有$|OA| = |OB| = |OC| = |OD|$，得到球$O$。<br><img src="https://s2.loli.net/2022/03/25/LfhItX8OVl3NzwG.png" alt><br><em>唯一性</em>：$A, B, C, D$四点确定的球心，是由四个三角形$ABC, BCD, CDA, DAB$的外心引出的与各自平面垂直的直线交点。因为两点唯一确定一条直线，所以这样的点至多只有一个。$\Box$</p>
+<p>这个球也叫四面体$ABCD$的<strong>外接球（circumscribed sphere）</strong>，球心$O$叫做四面体的<strong>外心</strong>。</p>
+<p>球被一个平面所截，如果球与平面没有交点，那么称球与平面<strong>相离</strong>；如果恰有一个交点，那么称球与平面<strong>相切</strong>，交点称为<strong>切点</strong>；如果至少有两个交点，那么称球与平面<strong>相交</strong>。球被平面所截，还有一个显而易见的重要性质：<br>球体被任何平面所截，截面是一个圆。</p>
+<p><img src="https://s2.loli.net/2022/03/25/wEhI8WCnrpuPjez.png" alt><br>证明：<br>如图，设球$O$被平面$\alpha$所截，球面与平面$\alpha$的交集为曲线$C$。作$OP \perp \alpha$，垂足为$P$，并取$Q \in C$。因为$PQ \subset \alpha$，所以$OP \perp PQ$，由勾股定理知道$|PQ| = \sqrt{|OQ|^{2} - |OP|^{2}} = \sqrt{r^{2} - |OP|^{2}}$为定值。因此$C$的点都在一个圆心为$P$，半径为$d = \sqrt{r^{2} - |OP|^{2}}$的圆$\gamma$上。<br>任取点$R \in \gamma$，则$|PR| = d$。而$OP \perp PR$，由勾股定理知道$|OR| = \sqrt{d^{2} + |OP|^{2}} = r$，所以$R$在球面上，也就是圆$\gamma$的点都在$C$上。由此得到$C$就是圆$\gamma$。$\Box$</p>
+<p>球体被平面所截得到的圆有两种：经过圆心的圆称为<strong>大圆（great circle）</strong>，不经过圆心的圆称为<strong>小圆（small circle）</strong>。大圆是所有截面圆中半径最大的。<br>设球$O$的一个小圆为圆$O_{1}$，则$OO_{1}$垂直于圆$O_{1}$所在平面。</p>
+<p><img src="https://s2.loli.net/2022/03/25/5EhsHt9WamMiDen.png" alt><br>证明：<br>作圆$O_{1}$的内接矩形$ABCD$，则$O_{1}$为$AC, BD$中点。因为$|OA| = |OC|$，所以$\triangle OO_{1}A \cong \triangle OO_{1}C$。所以$\angle OO_{1}A = \angle OO_{1}C = \dfrac{\pi}{2}$，得到$OO_{1} \perp AC$，同理$OO_{1} \perp BD$。又$AC \cap BD = O_{1}$，所以$OO_{1} \perp$平面$ABCD$。$\Box$</p>
+<p>类似地，有相切关系的定理：<br>设球$O$与平面$\alpha$相切，切点为$P$，则$OP \perp \alpha$；<br>设球$O$与直线$l$相切，切点为$P$，则$OP \perp l$。</p>
+<p>在平面几何中，有圆的相交弦定理、切割线定理和割线定理，这三条定理都来源于圆幂定理。而在立体几何中，也有相应的<strong>球幂定理</strong>。<br>设球$O$的半径是$r$，$P$为空间中一点，我们称$|OP|^{2} - r^{2}$的绝对值为点$P$关于球$O$的<strong>幂</strong>：<br>设$P$是不在球$O$的球面上的点，过点$P$作直线$l$与球面交于两点$A, B$，则$|PA| \cdot |PB|$等于点$P$关于球$O$的幂；<br>设$P$是不在球$O$的球面上的点，过点$P$作直线$l$与球面相切于点$T$，则$|PT|^{2}$等于点$P$关于球$O$的幂。</p>
+<p><img src="https://s2.loli.net/2022/03/25/1KuVGOBLhJajcPS.png" alt="球幂定理"><br>证明：<br>设$C$为$AB$中点，易得$OC \perp AB$。这样，</p>
+<script type="math/tex; mode=display">
+\begin{align}
+|PA| \cdot |PB| &= (|PC| - |AC|) (|PC| + |BC|) \\
+&= |PC|^{2} - |AC|^{2} \\
+&= (|OP|^{2} - |OC|^{2}) - (|OA|^{2} - |OC|^{2}) \\
+&= |OP|^{2} - r^{2}
+\end{align}</script><p>相切时的情况证明类似。$\Box$</p>
+<p>由球幂定理，就可以轻松推出球的相交弦定理、切割线定理和割线定理。</p>
+<h2 id="四面体"><a href="#四面体" class="headerlink" title="四面体"></a>四面体</h2><p>四个不共线的点两两相连，构成四个平面，这四个平面围成了一个四面体。四面体的六条棱可以分为三组<strong>对棱</strong>，每组对棱相互异面。</p>
+<p>前面提到，四面体有一个唯一的外接球，这个外接球的球心就是四面体的<strong>外心（circumcenter）</strong>。将经过线段中点的垂面称为<strong>垂直平分面（perpendicular bisector）</strong>，四面体的外心同时也是六条棱的垂直平分面的交点。</p>
+<p><img src="https://s2.loli.net/2022/03/26/5glX1Ssq4IJeicP.png" alt><br>如图，设四面体$ABCD$的外心是$O$，三角形$ADC, ABC$的外心分别是$O_{1}, O_{2}$，$AC$中点是$E$，则$O, E, O_{1}, O_{2}$四点共圆。用平面几何可以求出$O_{1}E, O_{2}E$，根据二面角$D-AC-B$的值可以解三角形$O_{1}O_{2}E$，得到圆的直径$OE$。最后就能得到外接球半径</p>
+<script type="math/tex; mode=display">R = |OC| = \sqrt{|OE|^{2} + |CE|^{2}} = \sqrt{|OE|^{2} + \dfrac{1}{4} |AC|^{2}}</script><p>和三角形类似，四面体有外心，也自然有<strong>内心（incenter）</strong>。将经过二面角的棱，并且平分二面角的半平面称为<strong>角平分面（angle bisector）</strong>，四面体的内心就是六个角平分面的交点。<br>和角平分线类似，角平分面上的点到二面角的两个半平面距离相等，其逆定理同样成立。转化为平面几何就能容易证明。<br>由这个定理可知，三面角的三个角平分面共线。</p>
+<p>过四面体的内心可以作一个球与四面体的四个面都相切，因此四面体的内心同时也是四面体的<strong>内切球（inscribed sphere）</strong>的球心。总结成一个结论就是：<br>四面体的六个角平分面有唯一的交点，这个交点到四个面的距离相等。</p>
+<p>这个结论的证明如下：<br><em>存在性</em>：四面体$ABCD$中，$A$对应的三面角的三个角平分面共线$l$，$l$显然穿过$\triangle BCD$内部。二面角$A-BD-C$的角平分面经过线段$AC$，因此一定与$l$相交。设交点为$I$，则$I$到四面体的四个面距离相等。<br><em>唯一性</em>：设点$I$到四面体的四个面距离相等，则$I$一定在六个二面角的角平分面上，也就是四个三面角对应直线的交点，这样的点至多只有一个。$\Box$</p>
+<p>内心可以用于求四面体的体积。设四面体的内切球半径是$r$，四面体的表面积是$S$，则四面体的体积</p>
+<script type="math/tex; mode=display">V = \dfrac{1}{3} rS</script><p>用体积法可以证明：<br>设四面体$ABCD$的内心是$I$，则$V = V_{I-ABC} + V_{I-BCD} + V_{I-CDA} + V_{I-DAB}$。这四个三棱锥的高都是内切球半径$r$，因此$V = \dfrac{1}{3} r (S_{\triangle ABC} + S_{\triangle BCD} + S_{\triangle CDA} + S_{\triangle DAB}) = \dfrac{1}{3} rS$。$\Box$</p>
+<p>类似可以得到角平分面的性质定理。设四面体$ABCD$中，二面角$D-AB-C$的角平分面与线段$DC$交于点$E$，则</p>
+<script type="math/tex; mode=display">\dfrac{|DE|}{|EC|} = \dfrac{S_{\triangle DAB}}{S_{\triangle ABC}}</script><p>将四面体的一个顶点与对面重心的连线称为四面体的<strong>中线（median）</strong>，四面体的<strong>重心（centroid）</strong>就是四条中线的交点。<br>四面体的四条中线交于重心一点。设四面体$D-ABC$中，$DP$为一条中线，$G$为重心，则$\dfrac{|DG|}{|GP|} = 3$。</p>
+<p><img src="https://s2.loli.net/2022/03/26/GHItBjmLD5QoEWc.png" alt><br>这个结论的证明如下：<br>如图，设四面体$D-ABC$中，$D_{1}, D_{2}, D_{3}$分别是$AB, BC, CA$的中点，则$\triangle ABC$的三条中线交于重心一点$P$，$DP$就是四面体的一条中线。设$Q$是$\triangle DBC$的重心，则$Q$在$DD_{2}$上，$AQ$也是四面体的一条中线。$DP, AQ \subset$平面$DAD_{2}$，所以两条中线显然相交，设交点是$G$。$G \in$平面$DBD_{3}$，则$CG$与平面$DAC$的交点在$DD_{3}$上，设交点是$R$。<br>在平面$DAD_{2}$中，过点$P$作$PE \parallel AQ$交$DD_{2}$于点$E$，则$\dfrac{|QE|}{|ED_{2}|} = \dfrac{|AP|}{|PD_{2}|} = 2$，得到$\dfrac{|DG|}{|GP|} = \dfrac{|DQ|}{|QE|} = 3$。<br>在平面$DBD_{3}$中，过点$G$作$GF \parallel BD_{3}$交$DD_{3}$于点$F$，则$\dfrac{|DF|}{|FD_{3}|} = \dfrac{|DG|}{|GP|} = 3, \dfrac{|FG|}{|D_{3}P|} = \dfrac{|AG|}{|AP|} = \dfrac{3}{4}$。那么$\dfrac{|RF|}{|RD_{3}|} = \dfrac{|FG|}{|D_{3}B|} = \dfrac{|FG|}{|D_{3}P|} \cdot \dfrac{|D_{3}P|}{|D_{3}B|} = \dfrac{1}{4}$，得到$\dfrac{|DR|}{|RD_{3}|} = 2$。因此$R$为$\triangle DAC$重心，$BR$是四面体的一条中线，三条中线交于一点。由于四面体的四个面相同，故四条中线交于一点。$\Box$</p>
+<p>四面体的四条高并不一定交于一点，因此不是任何四面体都有<strong>垂心（orthocenter）</strong>。有垂心的四面体叫做<strong>垂心四面体（orthocentric tetrahedron）</strong>。<br>一个四面体是垂心四面体的充要条件是：三组对棱分别垂直。</p>
+<p><img src="https://s2.loli.net/2022/03/26/quEv4fcow7xaTBO.png" alt><br>证明：<br><em>充分性</em>：如图，在四面体$ABCD$中，作$CE \perp AB$，垂足是$E$。因为$CD \perp AB$，所以$AB \perp$平面$CDE$，得到$DE \perp AB$。作$AF \perp BC$，垂足是$F$，同理可得$BC \perp$平面$ADF$，于是$DF \perp BC$。设$CE, AF$交于点$P$，则$P$为$\triangle ABC$的垂心。因为$DP \subset$平面$CDE$，所以$DP \perp AB$，同理$DP \perp BC$，得到$DP \perp$平面$ABC$，是四面体的一条高。同理，作$CG \perp BD$，垂足为$G$，$CG, DF$交于点$Q$，则$BD \perp$平面$ACG$，$AQ$也是四面体的一条高。此时$DP, AQ \subset$平面$ADF$，一定有交点，设交点为$H$。<br>因为$CH \subset$平面$CDE$，所以$CH \perp AB$；因为$CH \subset$平面$ACG$，所以$CH \perp BD$。这样得到$CH \perp$平面$ABD$，同理$BH \perp$平面$ACD$。因此四条高交于一点，$ABCD$就是垂心四面体。<br><em>必要性</em>：因为$DP \perp$平面$ABC$，所以$CP$是$CD$在平面$ABC$的射影。$CP \perp AB$，由三垂线定理，$CD \perp AB$。同理，三组对棱分别垂直。$\Box$</p>
+<p>还有进一步的定理：<br>若四面体的两组对棱分别垂直，则第三组对棱也垂直。</p>
+<p>此外，从上面存在性的证明，可以得到垂心四面体的一个性质：<br>垂心四面体的任意一个顶点在对面的射影是对面三角形的垂心。</p>
+<p>在棱长这一方面，垂心四面体有性质：<br>四面体$ABCD$是垂心四面体的充要条件是：</p>
+<script type="math/tex; mode=display">|AB|^{2} + |CD|^{2} = |AD|^{2} + |BC|^{2} = |AC|^{2} + |BD|^{2}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2022/03/05/Euclidean-Solid-Geometry/" title="学习笔记·古典立体几何">https://luckyfuy.top/2022/03/05/Euclidean-Solid-Geometry/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/03/04/Outline-of-Medieval-European-History/" rel="next" title="欧洲中世纪史纲要">
+                <i class="fa fa-chevron-left"></i> 欧洲中世纪史纲要
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/04/17/Mao-Selected-Poems/" rel="prev" title="毛泽东诗词选">
+                毛泽东诗词选 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#立体几何基本公理"><span class="nav-number">1.</span> <span class="nav-text">立体几何基本公理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#平行的判定与性质定理"><span class="nav-number">2.</span> <span class="nav-text">平行的判定与性质定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直线与直线平行"><span class="nav-number">2.1.</span> <span class="nav-text">直线与直线平行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直线与平面平行"><span class="nav-number">2.2.</span> <span class="nav-text">直线与平面平行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平面与平面平行"><span class="nav-number">2.3.</span> <span class="nav-text">平面与平面平行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#垂直的判定与性质定理"><span class="nav-number">3.</span> <span class="nav-text">垂直的判定与性质定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直线与直线垂直"><span class="nav-number">3.1.</span> <span class="nav-text">直线与直线垂直</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直线与平面垂直"><span class="nav-number">3.2.</span> <span class="nav-text">直线与平面垂直</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平面与平面垂直"><span class="nav-number">3.3.</span> <span class="nav-text">平面与平面垂直</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几何体"><span class="nav-number">4.</span> <span class="nav-text">几何体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本几何体"><span class="nav-number">4.1.</span> <span class="nav-text">基本几何体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多面体"><span class="nav-number">4.1.1.</span> <span class="nav-text">多面体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转体"><span class="nav-number">4.1.2.</span> <span class="nav-text">旋转体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几何体的表面积和体积"><span class="nav-number">4.2.</span> <span class="nav-text">几何体的表面积和体积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#祖暅原理与体积公式"><span class="nav-number">4.2.1.</span> <span class="nav-text">祖暅原理与体积公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#圆柱、圆锥、圆台的表面积公式"><span class="nav-number">4.2.2.</span> <span class="nav-text">圆柱、圆锥、圆台的表面积公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#球的表面积和体积公式"><span class="nav-number">4.2.3.</span> <span class="nav-text">球的表面积和体积公式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#球"><span class="nav-number">4.3.</span> <span class="nav-text">球</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四面体"><span class="nav-number">4.4.</span> <span class="nav-text">四面体</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

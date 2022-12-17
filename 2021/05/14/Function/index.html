@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·函数">
+<meta property="og:url" content="https://luckyfuy.top/2021/05/14/Function/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2021/05/14/2I8D3PKiHZOpa4m.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/14/y851rK6kBqiseoR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/14/gYe1iQtuCNjFlcD.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/14/JbH8peIWNdoawYm.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/m8HKjAuORo7MbSY.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/kOBlgP7e9XUhmf8.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/04/E6wtxbQeNSLBXoH.png">
+<meta property="og:image" content="https://i.loli.net/2021/10/23/cRzYKfAgQvPuO9k.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/4hXMLf3Uqgldo2e.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/S1acPUbgGV3uTOi.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/26/IRFnNfoUt4a3jGz.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/26/lSvIXfJxNW1e7V9.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/26/i7Z3OeuIaw6jMP9.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/KGz9a5gRXCVBpbT.gif">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/4AIhwYUpGSuCqR3.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/FErz1wxjLsh6ZJT.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/3oDtfgqjE1rxTY7.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/NlngUV2hfQowk4H.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/RxhIcvJd5Pu3OZK.png">
+<meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
+<meta property="og:updated_time" content="2022-12-16T10:56:02.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·函数">
+<meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/14/2I8D3PKiHZOpa4m.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2021/05/14/Function/">
+
+
+
+
+
+  <title>学习笔记·函数 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2021/05/14/Function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·函数</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-14T22:59:18+08:00">
+                Fri, May 14th, 2021
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/05/14/Function/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/05/14/Function/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2021/05/14/Function/" class="leancloud_visitors" data-flag-title="学习笔记·函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  10.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  45
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h1><p>设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中<strong>唯一确定</strong>的$y$与之对应，则称$f$是一个从$A$到$B$的<strong>映射（map）</strong>，记作$f: A \to B$。<br>映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$，存在唯一的$y \in B$使得$(x, y) \in f$。</p>
+<p>对于一个映射$f: A \to B$，<br>如果$\forall x, y \in A, f(x) = f(y) \Rightarrow x = y$，那么称$f$为<strong>单射（injection）</strong>；<br>如果$\forall y \in B, \exists x \in A, y = f(x)$，那么称$f$为<strong>满射（surjection）</strong>；<br>如果映射$f$既是单射又是满射，那么称$f$为<strong>双射（bijection）</strong>。</p>
+<a id="more"></a>
+<p>如图：<br><img src="https://i.loli.net/2021/05/14/2I8D3PKiHZOpa4m.png" alt="单射但非满射" title="单射但非满射"><br><img src="https://i.loli.net/2021/05/14/y851rK6kBqiseoR.png" alt="满射但非单射" title="满射但非单射"><br><img src="https://i.loli.net/2021/05/14/gYe1iQtuCNjFlcD.png" alt="双射" title="双射"><br><img src="https://i.loli.net/2021/05/14/JbH8peIWNdoawYm.png" alt="非满射非单射" title="非满射非单射"></p>
+<p>事实上，<a href="/2021/04/18/Logic-and-Set/#谓词逻辑">谓词</a>就是一个把主词映射到$\{T, F\}$的映射。</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>一般来说，对于映射$f: A \to B$，如果$A, B$是非空的实数集合，那么称$f$是一个从$A$到$B$的<strong>函数（function）</strong>。<br>在函数$f$中，$x \in A, y \in B$，$x$与$y$相对应，则称$y$为$x$的<strong>像（image）</strong>，记作$y = f(x)$；$x$为$y$的<strong>原像（inverse image）</strong>，记作$x = f^{-1}(y)$。<br>集合$A$称为$f$的<strong>定义域（domain）</strong>，$B$称为<strong>陪域（codomain）</strong>，而$A$映射到$B$上的像$f(A)$称为<strong>值域（range）</strong>。值域是陪域的子集，即$f(A) \subseteq B$。如果函数表达式已知，那么使得函数$f(x)$有意义的$x$的集合称为<strong>自然定义域（natural domain）</strong>。<br>平面内的点集$\{(x, f(x)) | x \in A\}$是函数$f$的<strong>图像（graph）</strong>。</p>
+<p>如果两个函数$f, g$的定义域相等，都是$A$，且有$\forall x \in A, f(x) = g(x)$，那么称函数$f, g$<strong>相等</strong>。例如$f(x) = x$与$g(x) = \sqrt[3]{x^{3}}$就是相等函数。<br>设函数$f: A \to B, g: B \to C$，$f$与$g$的<strong>复合（composition）</strong>为$f \circ g: A \to C$，$(f \circ g)(x) = f(g(x))$。</p>
+<p>由多个子函数分段定义的函数称为<strong>分段函数（piecewise function）</strong>，如绝对值函数</p>
+<script type="math/tex; mode=display">
+|x| =
+\begin{cases}
+x, & x \ge 0 \\
+-x, & x < 0
+\end{cases}</script><p>分段函数的定义域是各段函数定义域的并集，值域是各段函数值域的并集。</p>
+<p><strong>符号函数（sign function）</strong>是一种常用的分段函数：</p>
+<script type="math/tex; mode=display">
+\operatorname{sgn} x =
+\begin{cases}
+1, & x > 0 \\
+0, & x = 0 \\
+-1, & x < 0
+\end{cases}</script><p>这样就有$x = (\operatorname{sgn} x) |x|$。</p>
+<h2 id="函数的性质"><a href="#函数的性质" class="headerlink" title="函数的性质"></a>函数的性质</h2><h3 id="单调性"><a href="#单调性" class="headerlink" title="单调性"></a>单调性</h3><p>设函数$f: A \to B, C \subseteq A$，<br>如果$\forall x, y \in C, x &gt; y \Rightarrow f(x) &gt; f(y)$，那么称$f$在区间$C$上<strong>单调递增（monotonically increasing）</strong>；<br>如果$\forall x, y \in C, x &lt; y \Rightarrow f(x) &gt; f(y)$，那么称$f$在区间$C$上<strong>单调递减（monotonically decreasing）</strong>。<br>如果函数$f$在定义域$A$上单调递增或单调递减，我们称$f$为<strong>增函数（increasing function）</strong>或<strong>减函数（decreasing function）</strong>。增函数与减函数统称<strong>单调函数（monotonic function）</strong>。</p>
+<p>上面的定义都是<strong>严格单调（strictly monotone）</strong>，我们说的单调一般都是指严格单调。<br>如果把定义中的$&gt;$或$&lt;$换成$\ge$或$\le$，那么称之为<strong>不严格单调</strong>。</p>
+<p>由定义反过来，对于增函数$f$、减函数$g$，$f(x) &gt; f(y) \Rightarrow x &gt; y, g(x) &gt; g(y) \Rightarrow x &lt; y$同样成立。换言之，两者互为充要条件。</p>
+<p>（严格）单调函数都是单射。<br>这个定理可以通过反证法证明：<br>不妨设$f: A \to B$为增函数，任取$x, y \in A, x \ne y, f(x) = f(y)$。由于$x \ne y$，那么$x &gt; y$或$x &lt; y$。由增函数的定义可知，此时$f(x) &gt; f(y)$或$f(x) &lt; f(y)$，矛盾。因此$f$为单射。<br>对于减函数的情况，只要考虑函数$g(x) = -f(x)$就好了。$\Box$</p>
+<p>设函数$f: A \to B, C \subseteq A$，若实数$M$满足$\exists x_{0} \in C, f(x_{0}) = M$且$\forall x \in C, f(x) \le M$，那么$M$是区间$C$上的<strong>最大值（maximum value）</strong>，$x_{0}$是<strong>最大值点（maximum point）</strong>。<br>类似地，可以得出<strong>最小值（minimum value）</strong>与<strong>最小值点（minimum point）</strong>的定义。</p>
+<p>显然，对于单调函数$f: [a, b] \to B$，<br>若$f$为增函数，则最大值为$f(b)$，最小值为$f(a)$；<br>若$f$为减函数，则最大值为$f(a)$，最小值为$f(b)$。</p>
+<h3 id="对称性与奇偶性"><a href="#对称性与奇偶性" class="headerlink" title="对称性与奇偶性"></a>对称性与奇偶性</h3><p>如果一个函数$f: A \to B$的定义域满足$x \in A \Leftrightarrow -x \in A$，且$\forall x \in A, f(x) = f(-x)$，那么称$f$为<strong>偶函数（even function）</strong>。偶函数的图像关于$y$轴对称。<br>例如函数$f(x) = x^{2}$，$\forall x \in \mathbb{R}$，都有$f(-x) = (-x)^{2} = x^{2} = f(x)$，因此$f$为偶函数。</p>
+<p><img src="https://i.loli.net/2021/06/04/m8HKjAuORo7MbSY.png" alt="偶函数" title="偶函数"></p>
+<p>不难得到，函数$f(x)$关于直线$x = a$对称的充要条件是$f(a + x) = f(a - x)$。<br>因此，函数$f(x + a)$为偶函数。</p>
+<p>如果一个函数$f: A \to B$的定义域满足$x \in A \Leftrightarrow -x \in A$，且$\forall x \in A, f(-x) = -f(x)$，那么称$f$为<strong>奇函数（odd function）</strong>。奇函数的图像关于原点中心对称。<br>例如函数$f(x) = x^{3}$，$\forall x \in \mathbb{R}$，都有$f(-x) = (-x)^{3} = -x^{3} = -f(x)$，因此$f$为奇函数。</p>
+<p><img src="https://i.loli.net/2021/06/04/kOBlgP7e9XUhmf8.png" alt="奇函数" title="奇函数"></p>
+<p>不难得到，函数$f(x)$关于点$(a, b)$对称的充要条件是$f(a + x) + f(a - x) = 2b$。<br>因此，函数$f(x + a) - b$为奇函数。</p>
+<p>只有函数$f(x) = 0$同时是奇函数和偶函数。</p>
+<p>一般来说，奇函数与偶函数之和为非奇非偶函数；<br>两个奇函数之和为奇函数，两个偶函数之和为偶函数；<br>两个奇函数之积为奇函数，两个偶函数之积为偶函数；<br>两个奇函数之商为奇函数，两个偶函数之商为偶函数；<br>两个奇函数的复合为奇函数，两个偶函数的复合为偶函数；<br>奇函数与偶函数之积为奇函数，奇函数与偶函数之商为奇函数，奇函数与偶函数的复合为偶函数。</p>
+<p>任意一个定义在关于原点对称的集合上的函数可以唯一地表示为一个奇函数与一个偶函数之和。<br>证明：<br><em>存在性</em>：设任意函数$f(x)$，$f(x) = f_{1}(x) + f_{2}(x)$，其中$f_{1}(x)$为奇函数，$f_{2}(x)$为偶函数，因此</p>
+<script type="math/tex; mode=display">f(-x) = f_{1}(-x) + f_{2}(-x) = -f_{1}(x) + f_{2}(x)</script><p>解关于$f_{1}(x), f_{2}(x)$的方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+f(x) = f_{1}(x) + f_{2}(x) \\
+f(-x) = -f_{1}(x) + f_{2}(x)
+\end{cases}
+\Rightarrow
+\begin{cases}
+f_{1}(x) = \dfrac{f(x) - f(-x)}{2} \\
+f_{2}(x) = \dfrac{f(x) + f(-x)}{2}
+\end{cases}</script><p><em>唯一性</em>：再设$f(x) = g_{1}(x) + g_{2}(x)$，且$g_{1}(x)$为奇函数，$g_{2}(x)$为偶函数，仿照前面推理可得$g_{1}(x) = f_{1}(x), g_{2}(x) = f_{2}(x)$。$\Box$</p>
+<h3 id="周期性"><a href="#周期性" class="headerlink" title="周期性"></a>周期性</h3><p>对于函数$f$，如果存在一个非零常数$T$，使得定义域内的每一个$x$都有$f(x + T) = f(x)$，那么称$f$为<strong>周期函数（periodic function）</strong>，$T$为函数$f$的<strong>周期（period）</strong>。<br>显然，周期不是唯一的。如果所有可能的周期$T$中存在一个最小正数$T_{0}$，那么称$T_{0}$为<strong>最小正周期（minimal positive period）</strong>。</p>
+<p>例如，方波就是一种周期函数：<br><img src="https://i.loli.net/2021/06/04/E6wtxbQeNSLBXoH.png" alt="方波" title="最小正周期为2"></p>
+<p>如果周期函数$f$存在最小正周期$T_{0}$，那么对于任何$f$的周期$T$，都存在整数$n$使得$T = n T_{0}$。</p>
+<h3 id="连续性"><a href="#连续性" class="headerlink" title="连续性"></a>连续性</h3><p>设函数$f: A \to \mathbb{R}, x_{0} \in A$，如果对于任意的$\varepsilon &gt; 0$，都存在$\delta &gt; 0$，使得只要$x \in A, |x - x_{0}| &lt; \delta$，就有$|f(x) - f(x_{0})| &lt; \varepsilon$，那么称$f$在点$x_{0}$<strong>连续</strong>。<br>如果函数$f$在定义域$A$的每一点$x_{0}$处都连续，那么称$f$为<strong>连续函数（continuous function）</strong>。</p>
+<p>以上是用$\varepsilon - \delta$语言对函数连续性的定义。<br>$\varepsilon - \delta$语言最初由法国数学家柯西（Augustin-Louis Cauchy，1789－1857）提出。$\varepsilon$和$\delta$可以看作是两个无穷小量，无论函数值的距离$\varepsilon$多小，都能找到一段长为$\delta$的区间与之对应。</p>
+<p>连续函数有一重要性质，即<strong>介值定理（intermediate value theorem）</strong>：<br>设连续函数$f: [a, b] \to \mathbb{R}$，$u$为$f(a), f(b)$之间的任意实数，则存在$c \in [a, b]$，使得$f(c) = u$。</p>
+<p>如果$f(x) = 0$，$x$称为函数$f$的一个<strong>零点（zero point）</strong>。<br>特殊地，$c = 0$时的介值定理称为<strong>零点定理</strong>：<br>若$f(a) f(b) &lt; 0$，则存在$c \in (a, b)$使得$f(c) = 0$。</p>
+<h3 id="凹凸性"><a href="#凹凸性" class="headerlink" title="凹凸性"></a>凹凸性</h3><p>从函数图像上来看，曲线的凹凸决定了函数的凹凸性，所以，我们可以通过几何直观来得到凹凸性的定义：<br>如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是凹的，反之类似。取一个特殊的点，即弦的中点，凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。</p>
+<p>设函数$f$在区间$I$上连续，$\forall x_{1}, x_{2} \in I$，恒有$f(\dfrac{x_{1} + x_{2}}{2}) \le \dfrac{f(x_{1}) + f(x_{2})}{2}$，则称函数在$I$上为<strong>凹函数（convex function）</strong>或<strong>下凸函数</strong>；<br>若恒有$f(\dfrac{x_{1} + x_{2}}{2}) \ge \dfrac{f(x_{1}) + f(x_{2})}{2}$，则称函数在$I$上为<strong>凸函数（concave function）</strong>或<strong>上凸函数</strong>。</p>
+<p>如果把定义中的$\le$或$\ge$换为$&lt;$或$&gt;$，那么称之为严格凹函数或严格凸函数。</p>
+<p><img src="https://i.loli.net/2021/10/23/cRzYKfAgQvPuO9k.png" alt="凹函数" title="凹函数"></p>
+<p>此外，从几何的另一个角度来看，凹凸性的定义也可以表述成这样：<br>设函数$f$在区间$I$上连续，$\forall x_{1}, x_{2} \in I, \forall \lambda \in (0, 1)$，恒有$f(\lambda x_{1} + (1 - \lambda) x_{2}) \le \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$，则称函数在$I$上为凹函数或下凸函数；<br>若恒有$f(\lambda x_{1} + (1 - \lambda) x_{2}) \ge \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$，则称函数在$I$上为凸函数或上凸函数。</p>
+<p>要理解这个定义，可以先分析下凸的情况，上凸的思考过程类似：<br>对于下凸的曲线来说，曲线上任意两点间的弧段总是位于这两点连线的下方。<br>设$(x_{1}, f(x_{1})), (x_{2}, f(x_{2}))$为曲线上两点，则两点连线的方程为</p>
+<script type="math/tex; mode=display">g(x) = f(x_{1}) + \dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}}(x - x_{1})</script><p>而$x_{1}$与$x_{2}$之间的任意一点$x$可以表示为</p>
+<script type="math/tex; mode=display">x = \lambda x_{1} + (1 - x) x_{2}, \lambda \in (0, 1)</script><p>所以曲线上两点间弧段始终位于两点连线下方等价于</p>
+<script type="math/tex; mode=display">f(\lambda x_{1} + (1 - \lambda) x_{2}) \le g(\lambda x_{1} + (1 - \lambda) x_{2})</script><p>也就是</p>
+<script type="math/tex; mode=display">f(\lambda x_{1} + (1 - \lambda) x_{2}) \le \lambda f(x_{1}) + (1 - \lambda) f(x_{2})</script><h2 id="反函数"><a href="#反函数" class="headerlink" title="反函数"></a>反函数</h2><p>如果函数$f: A \to B$是双射的，即值域$B$中每一个元素的原像都是唯一的，那么这个函数就有<strong>反函数（inverse function）</strong>$f^{-1}$，$(f^{-1} \circ f)(x) = x$。例如函数$f(x) = 2x + 1$，它的反函数为$f^{-1}(x) = \dfrac{x - 1}{2}$。<br>如果一个函数有反函数，那么称这个函数是<strong>可逆的（invertible）</strong>。</p>
+<p>一个函数有反函数当且仅当是双射函数。<br>因此，单调函数总是有反函数，并且反函数的单调性与原函数一致。</p>
+<p>从图像可以看出来，原函数与反函数的图像关于函数$y = x$的图像对称：<br><img src="https://i.loli.net/2021/06/05/4hXMLf3Uqgldo2e.png" alt="反函数" title="原函数与反函数"></p>
+<p>不难发现，原函数的定义域与值域正好是反函数的值域与定义域。</p>
+<h1 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h1><h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><h3 id="指数幂"><a href="#指数幂" class="headerlink" title="指数幂"></a>指数幂</h3><p>我们已经知道整数指数幂：（$n \in \mathbb{N}^{\ast}$）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& a^{n} = \underbrace{a \times a \times \cdots \times a}_{n} \\
+& a^{-n} = \dfrac{1}{a^{n}} \ (a \ne 0) \\
+& a^{0} = 1 \ (a \ne 0)
+\end{align}</script><p>接下来，我们将会扩展指数幂的定义到实数域。</p>
+<h4 id="有理数指数幂"><a href="#有理数指数幂" class="headerlink" title="有理数指数幂"></a>有理数指数幂</h4><p>设$a, b \in \mathbb{R}, n \in \mathbb{N}^{\ast}$，若满足$b^{n} = a$，则称$b$为$a$的<strong>$n$次方根（nth root）</strong>，记作$b = \sqrt[n]{a}$，也记作$b = a^{\frac{1}{n}}$。</p>
+<p>$n$为奇数时，$b$是唯一的，$a$正则$b$正，$a$负则$b$负，$a = 0$则$b = 0$。<br>$n$为偶数时，须分三种情况讨论：<br>$a &gt; 0$时，$b$有两值，互为相反数，分别为$\sqrt[n]{a}$与$-\sqrt[n]{a}$；<br>$a = 0$时，$b = 0$；<br>$a &lt; 0$时，$b$不存在。</p>
+<p>由定义可得，$(a^{\frac{1}{n}})^{n} = a$。<br>我们可以接着得到：<br>若$n$为奇数，则$(a^{n})^{\frac{1}{n}} = a$；<br>若$n$为偶数，则$(a^{n})^{\frac{1}{n}} = |a|$。</p>
+<p>对于$a \in \mathbb{R}, m \in \mathbb{Z}, n \in \mathbb{N}^{\ast}$，如果$a^{\frac{1}{n}}$有定义，那么定义<strong>$a$的$\dfrac{m}{n}$次幂</strong>为：</p>
+<script type="math/tex; mode=display">a^{\frac{m}{n}} = (a^{m})^{\frac{1}{n}} = \sqrt[n]{a^{m}}</script><h4 id="实数指数幂"><a href="#实数指数幂" class="headerlink" title="实数指数幂"></a>实数指数幂</h4><p>无理数指数幂比较难定义，我们以$5^{\sqrt{2}}$为例：</p>
+<p>通过计算器可以得知，$\sqrt{2} = 1.414213562\cdots$。<br>我们取不同的小数点后位数的不足近似值$n$来计算$5^{n}$：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">小数点后位数</th>
+<th style="text-align:center">不足近似值$n$</th>
+<th style="text-align:center">$5^{n}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1.4</td>
+<td style="text-align:center">9.518269694</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1.41</td>
+<td style="text-align:center">9.672699729</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1.414</td>
+<td style="text-align:center">9.735171039</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1.4142</td>
+<td style="text-align:center">9.738305174</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1.41421</td>
+<td style="text-align:center">9.738461907</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1.414213</td>
+<td style="text-align:center">9.738508928</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1.4142135</td>
+<td style="text-align:center">9.738516765</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1.41421356</td>
+<td style="text-align:center">9.738517705</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1.414213562</td>
+<td style="text-align:center">9.738517736</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>可以发现，随着$n$逐渐增大逼近$\sqrt{2}$，$5^{n}$趋向于一个固定的值，这个值就是$5^{\sqrt{2}}$。</p>
+<p>对于实数指数幂，我们有以下运算法则：（$a \in \mathbb{R^{+}}, m, n \in \mathbb{R}$）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& a^{m} \cdot a^{n} = a^{m + n} \\
+& a^{m} \cdot b^{m} = (ab)^{m} \\
+& (a^{m})^{n} = a^{mn}
+\end{align}</script><h3 id="幂函数-1"><a href="#幂函数-1" class="headerlink" title="幂函数"></a>幂函数</h3><p><strong>幂函数（power function）</strong>：</p>
+<script type="math/tex; mode=display">f(x) = x^{\alpha}, \alpha \in \mathbb{R}</script><p>先来考察$\alpha \in \mathbb{Q}$时幂函数的定义域。<br>将$\alpha$表示为分数形式，设$\alpha = \dfrac{p}{q}$，由有理数指数幂的定义可以得到：<br>若$p &gt; 0$且$q$为奇数，则定义域为$\mathbb{R}$；<br>若$p &gt; 0$且$q$为偶数，则定义域为$[0, +\infty)$；<br>若$p &lt; 0$且$q$为奇数，则定义域为$\{x | x \ne 0\}$；<br>若$p &lt; 0$且$q$为偶数，则定义域为$(0, +\infty)$。</p>
+<p>$\alpha$为无理数时比较复杂。因为$x &lt; 0$时截取的近似值$\alpha_{n}$用分数形式表示分母可能为偶数，一般认为$\alpha$为正无理数时定义域为$[0, +\infty)$，而负无理数为$(0, +\infty)$。</p>
+<p>分别取$\alpha = 1, 2, 3, -1, \dfrac{1}{2}$时画出图像：<br><img src="https://i.loli.net/2021/07/09/S1acPUbgGV3uTOi.png" alt="幂函数" title="幂函数"></p>
+<p>从图中可以发现，幂函数在第一象限总是有定义，并且恒过定点$(1, 1)$。</p>
+<p>考察幂函数的单调性：<br>可以证明，<br>$\alpha &gt; 0$时，幂函数在$(0, +\infty)$上为增函数；<br>$\alpha &lt; 0$时，幂函数在$(0, +\infty)$上为减函数。</p>
+<p>奇偶性：<br>设$\alpha = \dfrac{p}{q}$，如果$q$为奇数，$p$为奇数则为奇函数，$p$为偶数则为偶函数。<br>（$q = \pm1$时实际上就是$\alpha$为奇数时则为奇函数，$\alpha$为偶数时则为偶函数）</p>
+<p>看这张动图会更容易理解一些：<br><img src="https://i.loli.net/2021/06/05/sqxbl2oupDaJRIi.gif" alt="幂函数" title="幂函数"></p>
+<h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><strong>指数函数（exponential function）</strong>：</p>
+<script type="math/tex; mode=display">f(x) = a^{x}, a > 0, a \ne 1</script><p>因为$a &gt; 0$，指数函数的定义域为$\mathbb{R}$，值域为$(0, +\infty)$。</p>
+<p>根据图像，<br>若$a &gt; 1$，则指数函数为增函数；<br>若$0 &lt; a &lt; 1$，则指数函数为减函数。<br><img src="https://i.loli.net/2021/06/05/TrQXq3RjMNLopa5.png" alt="指数函数" title="指数函数"></p>
+<p>证明如下：<br>设$f(x) = a^{x}, a &gt; 1, x_{1} &lt; x_{2}$，有</p>
+<script type="math/tex; mode=display">\dfrac{f(x_{1})}{f(x_{2})} = a^{x_{1} - x_{2}}</script><p>设$g(x) = x^{x_{1} - x_{2}}$，<br>我们知道$g(x)$是幂函数，由于$x_{1} - x_{2} &lt; 0$，$g(x)$在$(0, +\infty)$上单调递减，因此</p>
+<script type="math/tex; mode=display">a^{x_{1} - x_{2}} = g(a) < g(1) = 1</script><p>故$f(x_{1}) &lt; f(x_{2})$，$f(x)$为增函数。<br>$0 &lt; a &lt; 1$时考虑$f(x) = (\dfrac{1}{a})^{x}$即可。$\Box$</p>
+<p>由于$(\dfrac{1}{a})^{x} = a^{-x}$，底数互为倒数的两个指数函数的图像关于$y$轴对称。<br>指数函数的图像总是通过点$(0, 1)$。</p>
+<p>指数函数中，有一种函数特别重要：</p>
+<script type="math/tex; mode=display">f(x) = \mathrm{e}^{x}</script><p>$\mathrm{e}$是一个无理数，近似值为</p>
+<script type="math/tex; mode=display">\mathrm{e} = 2.71828\cdots</script><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><h3 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h3><p>设$a^{b} = c$，那么$b$称为以$a$为底$c$的<strong>对数（logarithm）</strong>，记作</p>
+<script type="math/tex; mode=display">b = \log_{a} c</script><p>其中$a$称为对数的<strong>底数（base）</strong>，$c$称为<strong>真数（antilogarithm）</strong>。</p>
+<p>设指数函数$f(x) = a^{x}$，对数函数就是指数函数的反函数$f^{-1}(x) = \log_{a} x$。<br>同样，$a &gt; 0, a \ne 1$。</p>
+<p>以$10$为底的对数称作<strong>常用对数（common logarithm）</strong>，记作$\lg$；<br>以$\mathrm{e}$为底的对数称作<strong>自然对数（natural logarithm）</strong>，记作$\ln$。</p>
+<p>由对数的定义可得：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& a^{\log_{a} x} = x \\
+& \log_{a} a^{x} = x
+\end{align}</script><p>由对数与指数的关系，可得对数的运算性质：（$a &gt; 0, a \ne 1, m, n &gt; 0, b \in \mathbb{R}$）</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \log_{a} (m n) = \log_{a} m + \log_{a} n \\
+& \log_{a} \dfrac{m}{n} = \log_{a} m - \log_{a} n \\
+& \log_{a} m^{b} = b \log_{a} m
+\end{align}</script><p>设$\log_{a} b = x$，则$a^{x} = b$，<br>可得$\log_{c} a^{x} = \log_{c} b$，<br>再根据运算性质得$x \log_{c} a = \log_{c} b$，<br>即得<strong>换底公式</strong>：</p>
+<script type="math/tex; mode=display">\log_{a} b = \dfrac{\log_{c} b}{\log_{c} a}</script><p>特别地，$\log_{a} b \cdot \log_{b} a = 1$。</p>
+<h3 id="对数函数-1"><a href="#对数函数-1" class="headerlink" title="对数函数"></a>对数函数</h3><p><strong>对数函数（logarithm function）</strong>：</p>
+<script type="math/tex; mode=display">f(x) = \log_{a} x, a > 0, a \ne 1</script><p>由于对数函数是指数函数的反函数，很多性质可以由指数函数得出。</p>
+<p>对数函数与指数函数的定义域与值域对调，<br>对数函数的定义域为$(0, +\infty)$，值域为$\mathbb{R}$。</p>
+<p>$a &gt; 1$时，对数函数为增函数；<br>$0 &lt; a &lt; 1$时，对数函数为减函数。</p>
+<p><img src="https://i.loli.net/2021/06/05/xzyplkTE1j6UsOh.png" alt="对数函数" title="对数函数"></p>
+<p>由于$\log_{\frac{1}{a}} x = -\log_{a} x$，底数互为倒数的两个对数函数的图像关于$x$轴对称。<br>对数函数的图像总是通过点$(1, 0)$。</p>
+<h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><h3 id="任意角"><a href="#任意角" class="headerlink" title="任意角"></a>任意角</h3><p>一条射线绕其端点逆时针旋转形成的角叫做<strong>正角</strong>，顺时针旋转形成的角叫做<strong>负角</strong>，不做旋转形成的角叫做<strong>零角</strong>。<br>将周角分为$360$份，那么每一份都是$1^{\circ}$。<br>如果正角$\alpha$含有$x$份，那么$\alpha = x^{\circ}$；<br>如果负角$\beta$含有$y$份，那么$\beta = -y^{\circ}$；<br>任意零角$\gamma = 0^{\circ}$。<br>两个旋转方向和旋转量相同的角$\alpha, \beta$是相等的，记作$\alpha = \beta$。</p>
+<p>定义角的加法$\alpha + \beta$为角$\alpha$的终边旋转角$\beta$所得的角，<br>减法$\alpha - \beta = \alpha + (-\beta)$。</p>
+<p>显然，所有与角$\alpha$终边相同的角都可以表示为$\alpha$与整数个周角之和。</p>
+<p>在平面直角坐标系内，使角的顶点与原点重合，角的始边与$x$非负半轴重合，那么，根据终边的位置在第一、二、三、四象限，分别称之为第一、二、三、四<strong>象限角</strong>。<br>容易求出角$\alpha$是第一、二、三、四象限角的充要条件：</p>
+<ol>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} &lt; \alpha &lt; k \cdot 360^{\circ} + 90^{\circ}$</li>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} + 90^{\circ} &lt; \alpha &lt; k \cdot 360^{\circ} + 180^{\circ}$</li>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} + 180^{\circ} &lt; \alpha &lt; k \cdot 360^{\circ} + 270^{\circ}$</li>
+<li>$k \in \mathbb{Z}, k \cdot 360^{\circ} + 270^{\circ} &lt; \alpha &lt; (k + 1) \cdot 360^{\circ}$</li>
+</ol>
+<p>不是象限角的角，即终边在坐标轴上的角称为<strong>轴线角</strong>。<br>一个周角范围内，轴线角有零角、直角、平角、$270^{\circ}$角和周角。</p>
+<h3 id="弧度制"><a href="#弧度制" class="headerlink" title="弧度制"></a>弧度制</h3><p>以$1^{\circ}$为周角的$\dfrac{1}{360}$来度量角的单位制为<strong>角度制</strong>，<br>而在<strong>弧度制</strong>中，<br>$1$<strong>弧度（radian）</strong>定义为长度等于半径的圆弧所对的圆心角，记作$1 \ \mathrm{rad}$，弧度单位$\mathrm{rad}$通常省略不写。<br>这样，周角就是$2 \pi$，平角就是$\pi$，$1^{\circ}$就是$\dfrac{\pi}{180}$。</p>
+<p>在半径为$r$的圆中，弧长为$l$的圆弧所对的圆心角为$\alpha \ \mathrm{rad}$，那么</p>
+<script type="math/tex; mode=display">|\alpha| = \dfrac{l}{r}</script><h3 id="三角函数的概念"><a href="#三角函数的概念" class="headerlink" title="三角函数的概念"></a>三角函数的概念</h3><p>以原点为圆心，作一个半径为$1$的单位圆。设角$\alpha$的始边为$x$非负半轴，终边与单位圆的交点是$P(x, y)$。对于一个确定的$\alpha$，$x$和$y$都是唯一确定的。定义：</p>
+<ul>
+<li>角$\alpha$的<strong>正弦（sine）</strong>：$\sin \alpha = y$</li>
+<li>角$\alpha$的<strong>余弦（cosine）</strong>：$\cos \alpha = x$</li>
+<li>角$\alpha$的<strong>正切（tangent）</strong>：$\tan \alpha = \dfrac{y}{x}$</li>
+</ul>
+<p>特别注意，当$\alpha = k \pi + \dfrac{\pi}{2} (k \in \mathbb{Z})$时，角$\alpha$的终边在$y$轴上，此时$x = 0$，$\tan \alpha$没有定义。</p>
+<p>正弦、余弦和正切是最重要的三个<strong>三角函数（trigonometric function）</strong>。</p>
+<p><img src="https://i.loli.net/2021/06/26/IRFnNfoUt4a3jGz.png" alt="三角函数的单位圆定义" title="三角函数的单位圆定义"></p>
+<p>此外，还有三个较少用到的三角函数，分别是正弦、余弦和正切的倒数：</p>
+<ul>
+<li>角$\alpha$的<strong>余割（cosecant）</strong>：$\csc \alpha = \dfrac{1}{y}$</li>
+<li>角$\alpha$的<strong>正割（secant）</strong>：$\sec \alpha = \dfrac{1}{x}$</li>
+<li>角$\alpha$的<strong>余切（cotangent）</strong>：$\cot \alpha = \dfrac{x}{y}$</li>
+</ul>
+<p>同样，在$\alpha = k \pi (k \in \mathbb{Z})$时，$\cot \alpha$和$\csc \alpha$没有定义；$\alpha = k \pi + \dfrac{\pi}{2} (k \in \mathbb{Z})$时，$\sec \alpha$没有定义。</p>
+<p><img src="https://i.loli.net/2021/06/26/lSvIXfJxNW1e7V9.png" alt></p>
+<p>在平面直角坐标系中，设角$\alpha$的始边为$x$非负半轴，终边上一点坐标为$P(x, y)$，$|OP| = r$。<br>作单位圆，通过相似三角形可以证得</p>
+<script type="math/tex; mode=display">\sin \alpha = \dfrac{y}{r}, \cos \alpha = \dfrac{x}{r}, \tan \alpha = \dfrac{y}{x}</script><p>由勾股定理可知$r = \sqrt{x^{2} + y^{2}}$，因此只要知道角$\alpha$终边上任意一点坐标，就可以求得其所有三角函数值。</p>
+<p>由这一点可以推出，<br>第一、二、三、四象限角，其<br>正弦函数的符号分别为正、正、负、负，<br>余弦函数的符号分别为正、负、负、正，<br>正切函数的符号分别为正、负、正、负。</p>
+<p>以上对三角函数的定义都是依赖几何直观的，而数学家用泰勒级数给出了不依赖几何直观的代数定义：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin x = x - \dfrac{x^3}{3!} + \dfrac{x^5}{5!} - \dfrac{x^7}{7!} + \cdots \\
+& \cos x = 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \dfrac{x^6}{6!} + \cdots
+\end{align}</script><p>用求和符号表示就是</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin x = \sum_{n = 0}^{\infty} \dfrac{(-1)^{n} x^{2n + 1}}{(2n + 1)!} \\
+& \cos x = \sum_{n = 0}^{\infty} \dfrac{(-1)^{n} x^{2n}}{(2n)!}
+\end{align}</script><p>在精度要求不是很高的情况下，我们可以取这个式子的前几项粗略地计算三角函数值，$x$越小精度越高。</p>
+<h3 id="同角三角函数关系式"><a href="#同角三角函数关系式" class="headerlink" title="同角三角函数关系式"></a>同角三角函数关系式</h3><p>由三角函数的定义可以得到</p>
+<script type="math/tex; mode=display">\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} (\alpha \ne k \pi + \dfrac{\pi}{2}, k \in \mathbb{Z})</script><p>设角$\alpha$的始边为$x$非负半轴，终边与单位圆的交点是$P(x, y)$。<br>过$P$作$x$轴的垂线，垂足为$M$，则勾股定理有</p>
+<script type="math/tex; mode=display">|OM|^{2} + |MP|^{2} = |OP|^{2} = 1</script><p>故</p>
+<script type="math/tex; mode=display">x^{2} + y^{2} = 1</script><p>即<strong>毕达哥拉斯三角恒等式（Pythagorean trigonometric identity）</strong></p>
+<script type="math/tex; mode=display">\sin^{2} \alpha + \cos^{2} \alpha = 1</script><p>从这两个公式还能得到很多公式，可以用一个六边形形象地概括：<br><img src="https://i.loli.net/2021/06/26/i7Z3OeuIaw6jMP9.jpg" alt="三角函数间的关系" title="三角函数间的关系"></p>
+<ul>
+<li>六边形每个顶点上的三角函数等于相邻两个顶点上三角函数的乘积<br>例如：$\cos \alpha = \sin \alpha \cot \alpha$</li>
+<li>六边形相对的两个顶点上的三角函数乘积等于$1$<br>例如：$\sin \alpha \csc \alpha = 1$</li>
+<li>三个阴影三角形中，上面两个顶点的平方和等于下面顶点的平方<br>例如：$1 + \cot^{2} \alpha = \csc^{2} \alpha$</li>
+</ul>
+<h3 id="诱导公式"><a href="#诱导公式" class="headerlink" title="诱导公式"></a>诱导公式</h3><p>两个相差$2 k \pi (k \in \mathbb{Z})$的角，终边一定是相等的，因此它们的三角函数值也一定相等，即<br><strong>诱导公式一</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(2 k \pi + \alpha) = \sin \alpha \\
+& \cos(2 k \pi + \alpha) = \cos \alpha \\
+& \tan(2 k \pi + \alpha) = \tan \alpha
+\end{align}</script><p>如果两个角相差$\pi$，那么其终边与单位圆的交点关于原点对称，此时两点的横坐标和纵坐标互为相反数。由三角函数定义可得<br><strong>诱导公式二</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(\pi + \alpha) = -\sin \alpha \\
+& \cos(\pi + \alpha) = -\cos \alpha \\
+& \tan(\pi + \alpha) = \tan \alpha
+\end{align}</script><p>同样，结合单位圆，可以得到<br><strong>诱导公式三</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(-\alpha) = -\sin \alpha \\
+& \cos(-\alpha) = \cos \alpha \\
+& \tan(-\alpha) = -\tan \alpha
+\end{align}</script><p><strong>诱导公式四</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(\pi - \alpha) = \sin \alpha \\
+& \cos(\pi - \alpha) = -\cos \alpha \\
+& \tan(\pi - \alpha) = -\tan \alpha
+\end{align}</script><p>这四条公式足以把所有三角函数都转化为锐角三角函数进行计算：<br>任取一角$\alpha = 2 k \pi + \beta, k \in \mathbb{Z}, \beta \in [0, 2 \pi)$，使用公式一将其转化为$\beta$的三角函数。如果是负角，也可以先使用公式三。</p>
+<ol>
+<li>如果$\beta \in [\pi, 2\pi)$，使用公式二，转化为$[0, \pi)$的三角函数；</li>
+<li>如果$\beta \in [\dfrac{\pi}{2}, \pi)$，使用公式四，转化为$[0, \dfrac{\pi}{2})$即锐角三角函数。</li>
+</ol>
+<p>已知角$\alpha$，求$k \pi + \alpha (k \in \mathbb{Z})$的三个三角函数值。</p>
+<ul>
+<li>如果$k$是偶数<br>那么$\sin(k \pi + \alpha) = \sin \alpha$<br>同理，$\cos(k \pi + \alpha) = \cos \alpha, \tan(k \pi + \alpha) = \tan \alpha$</li>
+<li>如果$k$是奇数，则$k - 1$是偶数<br>那么$\sin(k \pi + \alpha) = \sin(2 \cdot \dfrac{k - 1}{2} + \pi + \alpha) = \sin(\pi + \alpha) = -\sin \alpha$<br>同理，$\cos(k \pi + \alpha) = -\cos \alpha, \tan(k \pi + \alpha) = \tan \alpha$</li>
+</ul>
+<p>由此可得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(k \pi + \alpha) = (-1)^{k} \sin \alpha \\
+& \cos(k \pi + \alpha) = (-1)^{k} \cos \alpha \\
+& \tan(k \pi + \alpha) = \tan \alpha
+\end{align}</script><p>如果两个角和为$\dfrac{\pi}{2}$，那么其终边与单位圆的交点关于直线$y = x$对称，此时两点的横坐标和纵坐标互换。由三角函数定义可得<br><strong>诱导公式五</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(\dfrac{\pi}{2} - \alpha) = \cos \alpha \\
+& \cos(\dfrac{\pi}{2} - \alpha) = \sin \alpha \\
+& \tan(\dfrac{\pi}{2} - \alpha) = \cot \alpha
+\end{align}</script><p>类似地，可以得到<br><strong>诱导公式六</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(\dfrac{\pi}{2} + \alpha) = \cos \alpha \\
+& \cos(\dfrac{\pi}{2} + \alpha) = -\sin \alpha \\
+& \tan(\dfrac{\pi}{2} + \alpha) = -\cot \alpha
+\end{align}</script><p>用这两条公式可以化简更多的三角函数，例如</p>
+<script type="math/tex; mode=display">\sin(\dfrac{3\pi}{2} - \alpha) = \sin(\pi + \dfrac{\pi}{2} - \alpha) = -\sin(\dfrac{\pi}{2} - \alpha) = -\cos \alpha</script><p>这些公式可以总结为$\dfrac{k \pi}{2} \pm \alpha (k \in \mathbb{Z})$的三角函数，用一个口诀概括就是：奇变偶不变，符号看象限。<br>$k$为奇数时，$\sin$变为$\cos$，$\cos$变为$\sin$，$\tan$变为$\cot$；而$k$为偶数时，三角函数不变。<br>正负号可以先看角$\dfrac{k \pi}{2} \pm \alpha$的终边在哪一象限，再通过原三角函数在该象限的符号确定。</p>
+<h3 id="三角函数的图像与性质"><a href="#三角函数的图像与性质" class="headerlink" title="三角函数的图像与性质"></a>三角函数的图像与性质</h3><h4 id="正弦函数与余弦函数"><a href="#正弦函数与余弦函数" class="headerlink" title="正弦函数与余弦函数"></a>正弦函数与余弦函数</h4><p>以函数$f(x) = \sin x$为例，要画出它的图像，要从定义出发。<br>在单位圆上作出弧度为$x_{0}$的角，终边交单位圆于点$B$。根据正弦函数的定义，点$B$的纵坐标$y_{0} = \sin x_{0}$。以$x_{0}$为横坐标，$y_{0}$为纵坐标，即可得到函数图像上的点$T(x_{0}, \sin x_{0})$。<br>画出足够多的点并用光滑的曲线连接起来，我们就得到了正弦函数的图像，即<strong>正弦曲线（sinusoid）</strong>。</p>
+<p><img src="https://i.loli.net/2021/07/09/KGz9a5gRXCVBpbT.gif" alt="正弦曲线与余弦曲线" title="正弦曲线与余弦曲线"></p>
+<p>实际上，我们只要画出$[0, 2 \pi]$上的图像，然后根据诱导公式一，将这个图像不断地向左右平移$2 \pi$的整数倍个单位，就能得到正弦曲线了。</p>
+<p>如果只要粗略地画出图像，可以采用五点法：<br>找出正弦函数在$0, \dfrac{\pi}{2}, \pi, \dfrac{3 \pi}{2}, 2 \pi$的值$0, 1, 0, -1, 0$，描出这5个点，用光滑的曲线依次连接起来，就能得到正弦函数的简图。</p>
+<p>类似地，我们可以得到余弦函数的图像，即<strong>余弦曲线</strong>。</p>
+<p>根据诱导公式六$\cos \alpha = \sin(\dfrac{\pi}{2} + \alpha)$，可知余弦曲线实际上就是正弦曲线向左平移$\dfrac{\pi}{2}$个单位。</p>
+<p><img src="https://i.loli.net/2021/07/09/4AIhwYUpGSuCqR3.png" alt="正弦曲线与余弦曲线" title="正弦曲线与余弦曲线"></p>
+<p>三角函数最显著的性质是周期性。<br>观察图像以及诱导公式一可以得出，<br>正弦函数和余弦函数的周期为$2 k \pi (k \in \mathbb{Z})$，最小正周期为$2 \pi$。<br>证明：<br>首先我们需要假定两个命题是正确的：一是正弦函数和余弦函数是连续的；二是连续的非常数的周期函数存在最小正周期。<br>设正弦函数存在最小正周期$T$，已知$2 \pi$是正弦函数的一个周期，那么存在正整数$n$使得$n T = 2 \pi$。<br>若$n &gt; 2$，有$0 = \sin 0 = \sin T = \sin \dfrac{2 \pi}{n}$，显然矛盾，因此$n \le 2$。<br>若$n = 2$，有$1 = \sin \dfrac{\pi}{2} = \sin(\pi + \dfrac{\pi}{2}) = -1$，依然矛盾，因此$n = 1$，$T = 2 \pi$。<br>余弦函数的证明同理。$\Box$</p>
+<p>由诱导公式三$\sin(-\alpha) = -\sin \alpha, \cos(-\alpha) = \cos \alpha$可得：<br>正弦函数是奇函数，余弦函数是偶函数。</p>
+<p>由诱导公式二$\sin(\pi + \alpha) = -\sin \alpha$可得$\sin(\pi + \alpha)$也是奇函数，因此$(\pi, 0)$和原点一样也是正弦函数的对称中心。<br>由诱导公式二和六$\sin(\dfrac{\pi}{2} + \alpha) = \cos \alpha, \sin(\dfrac{3 \pi}{2} + \alpha) = -\cos \alpha$可得$\sin(\dfrac{\pi}{2} + \alpha)$和$\sin(\dfrac{3 \pi}{2} + \alpha)$都是偶函数，因此直线$x = \dfrac{\pi}{2}, x = \dfrac{3 \pi}{2}$和$y$轴一样也是正弦函数的对称轴。<br>根据正弦函数的周期性有：<br>正弦曲线以$(k \pi, 0) (k \in \mathbb{Z})$为对称中心，以直线$x = \dfrac{\pi}{2} + k \pi (k \in \mathbb{Z})$为对称轴。<br>同理，<br>余弦曲线以$(\dfrac{\pi}{2} + k \pi, 0) (k \in \mathbb{Z})$为对称中心，以直线$x = k \pi (k \in \mathbb{Z})$为对称轴。</p>
+<p>周期性和对称性使得我们只需要研究$[0, \dfrac{\pi}{2}]$上的单调性，转化为锐角三角函数。<br>通过几何容易证明，正弦函数在$[0, \dfrac{\pi}{2}]$上单调递增。由对称轴$x = \dfrac{\pi}{2}$可以得到，正弦函数在$[\dfrac{\pi}{2}, \pi]$上单调递减。再通过中心对称可以得到正弦函数在长度为$2 \pi$的区间上的单调性，最后由周期性扩展到整个定义域：<br>正弦函数在$[2 k \pi - \dfrac{\pi}{2}, 2 k \pi + \dfrac{\pi}{2}] (k \in \mathbb{Z})$上单调递增，在$[2 k \pi + \dfrac{\pi}{2}, 2 k \pi + \dfrac{3 \pi}{2}] (k \in \mathbb{Z})$上单调递减。</p>
+<p>由单调性可以得到，<br>正弦函数当且仅当$x = 2 k \pi + \dfrac{\pi}{2} (k \in \mathbb{Z})$时取得最大值$1$，当且仅当$x = 2 k \pi - \dfrac{\pi}{2} (k \in \mathbb{Z})$时取得最小值$-1$。<br>最值也可以通过同角三角函数关系式得到：</p>
+<script type="math/tex; mode=display">\sin^{2} \alpha \le \sin^{2} \alpha + \cos^{2} \alpha = 1 \Rightarrow |\sin \alpha| \le 1 \Rightarrow -1 \le \sin \alpha \le 1</script><p>等号成立当且仅当$\cos \alpha = 0$即$\alpha = k \pi + \dfrac{\pi}{2} (k \in \mathbb{Z})$。</p>
+<p>因为余弦曲线是正弦曲线的平移，所以不难得到：<br>余弦函数在$[2 k \pi -\pi, 2 k \pi] (k \in \mathbb{Z})$上单调递增，在$[2 k \pi, 2 k \pi + \pi] (k \in \mathbb{Z})$上单调递减。<br>余弦函数当且仅当$x = 2 k \pi (k \in \mathbb{Z})$时取得最大值$1$，当且仅当$x = 2 k \pi + \pi (k \in \mathbb{Z})$时取得最小值$-1$。</p>
+<h4 id="正切函数"><a href="#正切函数" class="headerlink" title="正切函数"></a>正切函数</h4><p>前面已经提到过，正切函数的定义域是$\{x | x \ne k \pi + \dfrac{\pi}{2}, k \in \mathbb{Z}\}$。</p>
+<p>由诱导公式二$\tan(\pi + \alpha) = \tan \alpha$可得，$\pi$是正切函数的一个周期。事实上，<br>正切函数的最小正周期为$\pi$。</p>
+<p>在单位圆上作出弧度为$x_{0}$的角，终边交单位圆于点$B$，交直线$x = 1$于点$N$。设$A(1, 0)$并过点$B$作$x$轴的垂线，垂足为$M$。那么三角形$OBM, ONA$相似，因此点$N$的纵坐标</p>
+<script type="math/tex; mode=display">y_{0} = |AN| = \dfrac{|NA|}{|OA|} = \dfrac{|BM|}{|OM|} = \tan x_{0}</script><p>以$x_{0}$为横坐标，$y_{0}$为纵坐标，即可得到函数图像上的点$T(x_{0}, \sin x_{0})$。<br>画出足够多的点并用光滑的曲线连接起来，我们就得到了正切函数的图像，即<strong>正切曲线</strong>。</p>
+<p><img src="https://i.loli.net/2021/07/09/FErz1wxjLsh6ZJT.png" alt="正切曲线" title="正切曲线"></p>
+<p>可以看出，正切函数以$(\dfrac{k \pi}{2}, 0)$为对称中心。<br>由诱导公式三$\tan(-\alpha) = -\tan \alpha$可得，正切函数是奇函数。</p>
+<p>正切函数在$(k \pi - \dfrac{\pi}{2}, k \pi + \dfrac{\pi}{2}) (k \in \mathbb{Z})$上单调递增。</p>
+<script type="math/tex; mode=display">\tan x = \dfrac{\sin x}{\cos x}</script><p>$x$从左边趋近于$\dfrac{\pi}{2}$，$\sin x$增大趋于$1$，而$\cos x$减小趋于$0$，使得$\tan x$趋于正无穷大。$x$从右边趋近于$\dfrac{\pi}{2}$时则$\tan x$趋于负无穷大。<br>因此正切函数的值域是$\mathbb{R}$。</p>
+<h3 id="函数-f-x-A-sin-omega-x-varphi"><a href="#函数-f-x-A-sin-omega-x-varphi" class="headerlink" title="函数$f(x) = A \sin(\omega x + \varphi)$"></a>函数$f(x) = A \sin(\omega x + \varphi)$</h3><p>三角函数常用来刻画一些物理现象，例如匀速圆周运动。<br>设一半径为$r$的圆形水车以角速度$\omega$匀速转动。以水车的中心为原点，一个水桶在开始转动时位于角$\varphi$的终边上，那么在旋转时间$t$后，水桶对应的角就是$\omega t + \varphi$。此时水桶的高度（纵坐标）</p>
+<script type="math/tex; mode=display">h = r \sin(\omega t + \varphi)</script><p>这个函数就是我们所要研究的。</p>
+<p>函数$f(x) = A \sin(\omega x + \varphi)$有三个参数：<br><strong>振幅（amplitude）</strong>$A$、<strong>圆频率（circular frequency）</strong>或<strong>角频率（angular frequency）</strong>$\omega$和<strong>初相（initial phase）</strong>$\varphi$。<br>它们对函数图像的影响各不一样。</p>
+<p>首先，$f(x + \varphi)$的图像是$f(x)$平移$\varphi$个单位得到的，那么初相$\varphi$的作用就是平移；<br>其次，从$f(x)$变为$A f(x)$，函数值变为了原来的$A$倍，那么振幅$A$的作用就是纵向的拉伸，由此得到函数的值域为$[-A, A]$；<br>最后，从$f(x)$变为$f(\omega x)$，$f(\omega \cdot \dfrac{x}{\omega}) = f(x)$，函数图像上每一点$(x, f(x))$都变为了$(\dfrac{x}{\omega}, f(x))$，那么振幅$A$的作用就是横向的压缩。</p>
+<p>因此，函数$f(x) = A \sin(\omega x + \varphi) (A &gt; 0, \omega &gt; 0)$的图像可以通过三步从正弦曲线变化而来：</p>
+<ol>
+<li>把正弦曲线平移$\varphi$个单位，左加右减；</li>
+<li>把得到的曲线上每一点横坐标都变为原来的$\dfrac{1}{\omega}$；</li>
+<li>把得到的曲线上每一点纵坐标都变为原来的$A$倍。</li>
+</ol>
+<p>此外，五点法也可以画出图像：<br>令$z = \omega x + \varphi$，分别解方程$z = 0, \dfrac{\pi}{2}, \pi, \dfrac{3 \pi}{2}, 2 \pi$，描出这5个点$(x, A \sin x)$，用光滑的曲线依次连接起来，就能得到一个周期内的图像。</p>
+<p>令$z = \omega x + \varphi$，则函数$f(z) = A \sin z$的最小正周期为$2 \pi$。<br>因为</p>
+<script type="math/tex; mode=display">z + 2 \pi = (\omega x + \varphi) + 2 \pi = \omega (x + \dfrac{2 \pi}{\omega}) + \varphi</script><p>所以函数$f(x) = A \sin(\omega x + \varphi) (A \ne 0, \omega \ne 0)$的最小正周期$T = \dfrac{2 \pi}{|\omega|}$。</p>
+<p><img src="https://i.loli.net/2021/07/09/3oDtfgqjE1rxTY7.png" alt="$f(x) = 2 \sin(3 x + \dfrac{\pi}{4})$" title="$f(x) = 2 \sin(3 x + \dfrac{\pi}{4})$"></p>
+<p>用函数$f(x) = A \sin(\omega x + \varphi) (A &gt; 0, \omega &gt; 0)$来刻画简谐运动，$\omega x + \varphi$实际上就是简谐运动的<strong>相位（phase）</strong>，简谐运动的<strong>周期（period）</strong>$T = \dfrac{2 \pi}{\omega}$，<strong>频率（frequency）</strong>$f = \dfrac{1}{T} = \dfrac{\omega}{2 \pi}$。</p>
+<h3 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h3><p>有时候，我们需要求三角函数的反函数，例如求解方程$\sin x = a, a \in [-1, 1]$。<br>但是三角函数是周期函数，不是双射，没有反函数。因此先对三角函数的定义域加以限制，使其成为双射函数，这时就可以定义<strong>反三角函数（inverse trigonometric function）</strong>了。</p>
+<p>函数$f(x) = \sin x, x \in [-\dfrac{\pi}{2}, \dfrac{\pi}{2}]$是一个双射函数，在这个区间上是增函数，从$-1$递增到$1$。这样的函数的反函数$f^{-1}(x)$称作<strong>反正弦函数（arcsine function）</strong>，记作$\arcsin x$。也记作$\sin^{-1} x$，但容易与$\dfrac{1}{\sin x}$混淆。<br>反正弦函数的定义域是$[-1, 1]$，值域是$[-\dfrac{\pi}{2}, \dfrac{\pi}{2}]$，是一个增函数和奇函数。<br>反正弦函数与正弦函数对比的图像如下：<br><img src="https://i.loli.net/2021/07/09/NlngUV2hfQowk4H.png" alt="反正弦函数与正弦函数" title="反正弦函数与正弦函数"></p>
+<p>我们可以利用反正弦函数来解三角方程$\sin x = a, a \in [-1, 1]$。<br>若$a = 1$，则解为$x = 2 k \pi + \dfrac{\pi}{2} (k \in \mathbb{Z})$；<br>若$a = -1$，则解为$x = 2 k \pi - \dfrac{\pi}{2} (k \in \mathbb{Z})$；<br>若$-1 &lt; a &lt; 1$，我们先找到方程在一个周期$[-\dfrac{\pi}{2}, \dfrac{3 \pi}{2})$内的解，为$\arcsin a$和$\pi - \arcsin a$。扩展到所有周期，就得到解为$x = 2 k \pi + \arcsin a (k \in \mathbb{Z})$或$x = (2 k + 1) \pi - \arcsin a (k \in \mathbb{Z})$。<br>综上，$\sin x = a, a \in [-1, 1]$的解为</p>
+<script type="math/tex; mode=display">x = k \pi + (-1)^{k} \arcsin a (k \in \mathbb{Z})</script><p>对于余弦函数和正切函数，分别定义：<br>$g(x) = \cos x, x \in [0, \pi]$的反函数为<strong>反余弦函数（arccosine function）</strong>，记作$\arccos x$，有时也记作$\cos^{-1} x$；<br>$h(x) = \tan x, x \in (-\dfrac{\pi}{2}, \dfrac{\pi}{2})$的反函数为<strong>反正切函数（arctangent function）</strong>，记作$\arctan x$，有时也记作$\tan^{-1} x$。</p>
+<h3 id="和差角公式与二倍角公式"><a href="#和差角公式与二倍角公式" class="headerlink" title="和差角公式与二倍角公式"></a>和差角公式与二倍角公式</h3><p><img src="https://i.loli.net/2021/07/09/RxhIcvJd5Pu3OZK.png" alt="单位圆"><br>如图，设$\alpha \ne 2 k \pi + \beta (k \in \mathbb{Z})$且$\alpha &gt; \beta$，角$\alpha, \beta$的终边分别是射线$OC, OB$。<br>由三角函数定义，得$B(\cos \beta, \sin \beta), C(\cos \alpha, \sin \alpha)$，所以</p>
+<script type="math/tex; mode=display">|BC|^{2} = (\cos \alpha - \cos \beta)^{2} + (\sin \alpha - \sin \beta)^{2}</script><p>过点$C$作$OB$的垂线，垂足为$D$，则$|CD| = |\sin(\alpha - \beta)|, |BD| = |1 - \cos(\alpha - \beta)|$。</p>
+<script type="math/tex; mode=display">|BC|^{2} = |BD|^{2} + |CD|^{2} = \sin^{2} (\alpha - \beta) + (1 - \cos(\alpha - \beta))^{2}</script><p>比较两式，得</p>
+<script type="math/tex; mode=display">\cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta</script><p>$\alpha = 2 k \pi + \beta (k \in \mathbb{Z})$时，容易证明上式仍然成立。</p>
+<p>我们知道$\alpha + \beta = \alpha - (-\beta)$，因此利用上式和诱导公式三可以证明</p>
+<script type="math/tex; mode=display">\cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta</script><p>用诱导公式五或六将余弦转化为正弦，可以得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+& \sin(\alpha - \beta) = \sin \alpha \cos \beta - \cos \alpha \sin \beta
+\end{align}</script><p>利用同角三角函数关系式，可以得到</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \tan(\alpha + \beta) = \dfrac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+& \tan(\alpha - \beta) = \dfrac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\end{align}</script><p>以上六个公式中，用于求任意角$\alpha, \beta$的和角$\alpha + \beta$的三角函数的三个公式，叫做<strong>和角公式</strong>；<br>用于求差角$\alpha - \beta$的三角函数的三个公式，叫做<strong>差角公式</strong>。</p>
+<p>取和角公式中的$\beta = \alpha$，可以得到<strong>二倍角公式</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin 2 \alpha = 2 \sin \alpha \cos \alpha \\
+& \cos 2 \alpha = \cos^{2} \alpha - \sin^{2} \alpha \\
+& \tan 2 \alpha = \dfrac{2 \tan \alpha}{1 - \tan^{2} \alpha}
+\end{align}</script><p>利用同角三角函数关系式又可以得到</p>
+<script type="math/tex; mode=display">\cos 2 \alpha = 1 - 2 \sin^{2} \alpha = 2 \cos^{2} \alpha - 1</script><p>由于</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+& \sin(\alpha - \beta) = \sin \alpha \cos \beta - \cos \alpha \sin \beta
+\end{align}</script><p>两式相加可得到</p>
+<script type="math/tex; mode=display">\sin \alpha \cos \beta = \dfrac{\sin(\alpha + \beta) + \sin(\alpha - \beta)}{2}</script><p>将$\alpha = \dfrac{\theta + \varphi}{2}, \beta = \dfrac{\theta - \varphi}{2}$代入上式，则$\alpha + \beta = \theta, \alpha - \beta = \varphi$，得到</p>
+<script type="math/tex; mode=display">\sin \theta + \sin \varphi = 2 \sin \dfrac{\theta + \varphi}{2} \cos \dfrac{\theta - \varphi}{2}</script><p>第一个公式属于<strong>积化和差公式</strong>，第二个公式属于<strong>和差化积公式</strong>，同理可以推出带减号的以及余弦和正切的类似公式。</p>
+<p><strong>辅助角公式</strong>也是一个常用公式：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+a \sin x + b \cos x &= \sqrt{a^{2} + b^{2}} \sin(x + \arctan \dfrac{b}{a}), a > 0 \\
+&= \sqrt{a^{2} + b^{2}} \cos(x - \arctan \dfrac{b}{a}), b > 0
+\end{align}</script><p>推导并不复杂：</p>
+<script type="math/tex; mode=display">a \sin x + b \cos x = \sqrt{a^{2} + b^{2}} (\dfrac{a}{\sqrt{a^{2} + b^{2}}} \sin x + \dfrac{b}{\sqrt{a^{2} + b^{2}}} \cos x)</script><p>设点$(a, b)$为角$\varphi (-\dfrac{\pi}{2} &lt; \varphi &lt; \dfrac{\pi}{2})$终边上的一点，则$\cos \varphi = \dfrac{a}{\sqrt{a^{2} + b^{2}}}, \sin \varphi = \dfrac{b}{\sqrt{a^{2} + b^{2}}}$。得到</p>
+<script type="math/tex; mode=display">a \sin x + b \cos x = \sqrt{a^{2} + b^{2}} (\sin x \cos \varphi + \cos x \sin \varphi)</script><p>即</p>
+<script type="math/tex; mode=display">a \sin x + b \cos x = \sqrt{a^{2} + b^{2}} \sin(x + \varphi)</script><p>其中$\varphi = \arctan \dfrac{b}{a}, a &gt; 0$。余弦形式的证明同理。<br>如果$a, b$取负数，则辅助角$\varphi = \arctan \dfrac{b}{a} \pm \pi$，正弦或余弦前要相应地添上负号。$\Box$</p>
+<h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3><p>给出三角函数的一些边和角，求出符合条件的三角形，这种问题叫做<strong>解三角形</strong>。<br>以下介绍一些解三角形中重要的定理：</p>
+<p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt></p>
+<p>如图，在$\triangle ABC$中，$BC = a, AC = b, AB = c$，$r$为$\triangle ABC$的外接圆半径。<br><strong>正弦定理（law of sines）</strong>：</p>
+<script type="math/tex; mode=display">\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2r</script><p>几何证明见<a href="/2019/11/24/Proofs-in-Triangle/#正弦定理" title="正弦定理">这里</a>。</p>
+<p><strong>余弦定理（law of cosines）</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& c^{2} = a^{2} + b^{2} - 2ab \cos C \\
+& b^{2} = c^{2} + a^{2} - 2ca \cos B \\
+& a^{2} = b^{2} + c^{2} - 2bc \cos A
+\end{align}</script><p>几何证明见<a href="/2019/11/24/Proofs-in-Triangle/#余弦定理" title="余弦定理">这里</a>。<br>以下给出代数证明：<br>根据正弦定理，$c = 2 r \sin C, a = 2 r \sin A, b = 2 r \sin B$，<br>代入$c^{2} = a^{2} + b^{2} - 2ab \cos C$，约去$4 r^{2}$得</p>
+<script type="math/tex; mode=display">\sin^{2} C = \sin^{2} A + \sin^{2} B - 2 \sin A \sin B \cos C</script><p>右边使用二倍角公式与积化和差、和差化积公式化简：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \ \quad \sin^{2} A + \sin^{2} B - 2 \sin A \sin B \cos C \\
+&= 1 - \dfrac{1}{2} (\cos 2 A + \cos 2 B) - (\cos(A - B) - \cos(A + B)) \cos C \\
+&= 1 - \cos(A - B) \cos(A + B) - \cos(A - B) \cos C - \cos^{2} C \\
+&= 1 - \cos^{2} C \\
+&= \sin^{2} C
+\end{align}</script><p>其中由于$A + B + C = \pi$，得$\cos(A + B) = -\cos C$。$\Box$</p>
+<p><strong>射影定理</strong>：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& a = b \cos C + c \cos B \\
+& b = c \cos A + a \cos C \\
+& c = a \cos B + b \cos A
+\end{align}</script><p>几何证明见<a href="/2019/11/24/Proofs-in-Triangle/#射影定理" title="射影定理">这里</a>。</p>
+<h3 id="附：欧拉公式与三角函数"><a href="#附：欧拉公式与三角函数" class="headerlink" title="附：欧拉公式与三角函数"></a>附：欧拉公式与三角函数</h3><p><strong>欧拉公式（Euler’s formula）</strong>有：</p>
+<script type="math/tex; mode=display">\mathrm{e}^{\mathrm{i} x} = \cos x + \mathrm{i} \sin x</script><p>这个公式涉及到了<a href="/2022/02/08/Complex-Number/" title="复数">虚数</a>，不过暂时只要知道虚数单位$\mathrm{i}^2 = -1$就好了。</p>
+<p>由</p>
+<script type="math/tex; mode=display">\mathrm{e}^{\mathrm{i} (\alpha + \beta)} = \mathrm{e}^{\mathrm{i} \alpha} \cdot \mathrm{e}^{\mathrm{i} \beta}</script><p>得</p>
+<script type="math/tex; mode=display">\cos(\alpha + \beta) + \mathrm{i} \sin(\alpha + \beta) = (\cos \alpha + \mathrm{i} \sin \alpha) (\cos \beta + \mathrm{i} \sin \beta)</script><p>将实部与实部对应，虚部与虚部对应，整理可得前面的和角公式：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+& \sin(\alpha + \beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta
+\end{align}</script><p>令$\beta = \alpha$，可得前面的二倍角公式。</p>
+<p>令$\beta = -\beta$，可得前面的差角公式：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta \\
+& \sin(\alpha - \beta) = \sin \alpha \cos \beta - \cos \alpha \sin \beta
+\end{align}</script><p>再通过对和角公式与差角公式作和或差，可得积化和差公式；<br>令$\alpha = \dfrac{\alpha + \beta}{2}, \beta = \dfrac{\alpha - \beta}{2}$，代入积化和差公式，可得和差化积公式。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2021/05/14/Function/" title="学习笔记·函数">https://luckyfuy.top/2021/05/14/Function/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/04/18/Logic-and-Set/" rel="next" title="学习笔记·逻辑与集合">
+                <i class="fa fa-chevron-left"></i> 学习笔记·逻辑与集合
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/15/Fen/" rel="prev" title="坟">
+                坟 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#映射"><span class="nav-number">1.</span> <span class="nav-text">映射</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的性质"><span class="nav-number">2.1.</span> <span class="nav-text">函数的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单调性"><span class="nav-number">2.1.1.</span> <span class="nav-text">单调性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对称性与奇偶性"><span class="nav-number">2.1.2.</span> <span class="nav-text">对称性与奇偶性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周期性"><span class="nav-number">2.1.3.</span> <span class="nav-text">周期性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续性"><span class="nav-number">2.1.4.</span> <span class="nav-text">连续性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凹凸性"><span class="nav-number">2.1.5.</span> <span class="nav-text">凹凸性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反函数"><span class="nav-number">2.2.</span> <span class="nav-text">反函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初等函数"><span class="nav-number">3.</span> <span class="nav-text">初等函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#幂函数"><span class="nav-number">3.1.</span> <span class="nav-text">幂函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指数幂"><span class="nav-number">3.1.1.</span> <span class="nav-text">指数幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有理数指数幂"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">有理数指数幂</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实数指数幂"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">实数指数幂</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#幂函数-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">幂函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数函数"><span class="nav-number">3.2.</span> <span class="nav-text">指数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数函数"><span class="nav-number">3.3.</span> <span class="nav-text">对数函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对数"><span class="nav-number">3.3.1.</span> <span class="nav-text">对数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对数函数-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">对数函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角函数"><span class="nav-number">3.4.</span> <span class="nav-text">三角函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任意角"><span class="nav-number">3.4.1.</span> <span class="nav-text">任意角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弧度制"><span class="nav-number">3.4.2.</span> <span class="nav-text">弧度制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数的概念"><span class="nav-number">3.4.3.</span> <span class="nav-text">三角函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同角三角函数关系式"><span class="nav-number">3.4.4.</span> <span class="nav-text">同角三角函数关系式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#诱导公式"><span class="nav-number">3.4.5.</span> <span class="nav-text">诱导公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数的图像与性质"><span class="nav-number">3.4.6.</span> <span class="nav-text">三角函数的图像与性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正弦函数与余弦函数"><span class="nav-number">3.4.6.1.</span> <span class="nav-text">正弦函数与余弦函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正切函数"><span class="nav-number">3.4.6.2.</span> <span class="nav-text">正切函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数-f-x-A-sin-omega-x-varphi"><span class="nav-number">3.4.7.</span> <span class="nav-text">函数$f(x) = A \sin(\omega x + \varphi)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反三角函数"><span class="nav-number">3.4.8.</span> <span class="nav-text">反三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#和差角公式与二倍角公式"><span class="nav-number">3.4.9.</span> <span class="nav-text">和差角公式与二倍角公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解三角形"><span class="nav-number">3.4.10.</span> <span class="nav-text">解三角形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附：欧拉公式与三角函数"><span class="nav-number">3.4.11.</span> <span class="nav-text">附：欧拉公式与三角函数</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

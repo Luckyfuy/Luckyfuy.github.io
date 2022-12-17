@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="坐标系极坐标系在平面内取一点$O$，称为极点（pole）；作一条以它为起点的射线$x$，称为极轴（polar axis）。这样就构成了极坐标系（polar coordinate system）。对极点外任意一点$P$，$|OP|$称为点$P$的极径（radial coordinate），一般用$r$表示；从极轴到射线$OP$的角，称为点$P$的极角（angular coordinate），一般用$">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·解析几何">
+<meta property="og:url" content="https://luckyfuy.top/2022/11/07/Analytic-Geometry/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="坐标系极坐标系在平面内取一点$O$，称为极点（pole）；作一条以它为起点的射线$x$，称为极轴（polar axis）。这样就构成了极坐标系（polar coordinate system）。对极点外任意一点$P$，$|OP|$称为点$P$的极径（radial coordinate），一般用$r$表示；从极轴到射线$OP$的角，称为点$P$的极角（angular coordinate），一般用$">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.loli.net/2022/11/08/lxmI47iSd2eOnG6.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/08/RxtW8FJwISUqB2V.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/08/srwVy3SUjhfDKot.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/08/DMmnov9IcEO2UQq.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/08/vT19laJnYEQV7zR.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/09/61I9kvKHwGSclzq.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/09/KlvkFgx1AjqEdNw.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/09/91Oxz6HKoBTN8gA.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/19/QqgJMbZiLYGtO5V.png">
+<meta property="og:updated_time" content="2022-12-13T13:18:35.225Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·解析几何">
+<meta name="twitter:description" content="坐标系极坐标系在平面内取一点$O$，称为极点（pole）；作一条以它为起点的射线$x$，称为极轴（polar axis）。这样就构成了极坐标系（polar coordinate system）。对极点外任意一点$P$，$|OP|$称为点$P$的极径（radial coordinate），一般用$r$表示；从极轴到射线$OP$的角，称为点$P$的极角（angular coordinate），一般用$">
+<meta name="twitter:image" content="https://s2.loli.net/2022/11/08/lxmI47iSd2eOnG6.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2022/11/07/Analytic-Geometry/">
+
+
+
+
+
+  <title>学习笔记·解析几何 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2022/11/07/Analytic-Geometry/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·解析几何</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-11-07T20:18:10+08:00">
+                Mon, Nov 7th, 2022
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/11/07/Analytic-Geometry/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/11/07/Analytic-Geometry/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2022/11/07/Analytic-Geometry/" class="leancloud_visitors" data-flag-title="学习笔记·解析几何">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  8.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  38
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h1><h2 id="极坐标系"><a href="#极坐标系" class="headerlink" title="极坐标系"></a>极坐标系</h2><p>在平面内取一点$O$，称为<strong>极点（pole）</strong>；作一条以它为起点的射线$x$，称为<strong>极轴（polar axis）</strong>。这样就构成了<strong>极坐标系（polar coordinate system）</strong>。对极点外任意一点$P$，$|OP|$称为点$P$的<strong>极径（radial coordinate）</strong>，一般用$r$表示；从极轴到射线$OP$的角，称为点$P$的<strong>极角（angular coordinate）</strong>，一般用$\theta$表示。有序实数对$(r, \theta)$就是点$P$的<strong>极坐标（polar coordinates）</strong>。</p>
+<p><img src="https://s2.loli.net/2022/11/08/lxmI47iSd2eOnG6.png" alt="极坐标系" title="极坐标系"></p>
+<a id="more"></a>
+<p>这样，平面内除极点外的任意一点都能用极坐标来表示。对于极坐标为$(r, \theta)$的点，$(r, \theta + 2k \pi) (k \in \mathbb{Z})$也是它的极坐标，也就是说，一个点有无穷多个极坐标。规定$\theta \in [0, 2\pi)$，极点外的每一点才对应唯一的极坐标。极点的极径是$0$，极角没有定义。</p>
+<p>通过余弦定理，可以计算得到极坐标系中两点$(r_{1}, \theta_{1}), (r_{2}, \theta_{2})$之间的距离公式：</p>
+<script type="math/tex; mode=display">d = \sqrt{r_{1}^{2} + r_{2}^{2} - 2 r_{1} r_{2} \cos(\theta_{1} - \theta_{2})}</script><p><img src="https://s2.loli.net/2022/11/08/RxtW8FJwISUqB2V.png" alt="极坐标与直角坐标" title="极坐标与直角坐标"></p>
+<p>将直角坐标系的原点与极坐标系的极点重合，直角坐标系的$x$非负半轴与极坐标系的极轴重合，设极点外一点$P$的直角坐标和极坐标分别是$(x, y), (r, \theta)$，可以得到</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = r \cos \theta \\
+y = r \sin \theta
+\end{cases}</script><p>这样就可以将极坐标变换为直角坐标。反过来，如果$\theta \ne k \pi + \dfrac{\pi}{2} (k \in \mathbb{Z})$，也就是$y \ne 0$，那么</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+r = \sqrt{x^{2} + y^{2}} \\
+\tan \theta = \dfrac{y}{x}
+\end{cases}</script><h2 id="柱坐标系"><a href="#柱坐标系" class="headerlink" title="柱坐标系"></a>柱坐标系</h2><p>如果把空间直角坐标系的坐标平面$Oxy$换成极坐标系，得到的就是<strong>柱坐标系（cylindrical coordinate system）</strong>。除原点外的任意一点都有<strong>柱坐标（cylindrical coordinates）</strong>$(r, \theta, z)$。</p>
+<p><img src="https://s2.loli.net/2022/11/08/srwVy3SUjhfDKot.png" alt="柱坐标系" title="柱坐标系"></p>
+<p>柱坐标与直角坐标的对应关系如下：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = r \cos \theta \\
+y = r \sin \theta \\
+z = z
+\end{cases}</script><h2 id="球坐标系"><a href="#球坐标系" class="headerlink" title="球坐标系"></a>球坐标系</h2><p>在空间直角坐标系内，对原点外任意一点$P$，令$r = |OP|$；$\theta$表示$\overrightarrow{OP}$与$z$轴正方向的夹角，称为<strong>天顶角（zenith angle）</strong>；设$P$在$Oxy$平面的投影为$Q$，$\varphi$表示从$x$轴逆时针旋转到$OQ$的角，称为<strong>方位角（azimuth angle）</strong>。这样，点$P$就能用有序实数对$(r, \theta, \varphi)$表示，称为其<strong>球坐标（spherical coordinates）</strong>。用球坐标来表示的坐标系称为<strong>球坐标系（spherical coordinate system）</strong>。</p>
+<p><img src="https://s2.loli.net/2022/11/08/DMmnov9IcEO2UQq.png" alt="球坐标系"></p>
+<p>由定义可知，$\theta \in [0, \pi], \varphi \in [0, 2\pi)$。球坐标与直角坐标的对应关系如下：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = r \sin \theta \cos \varphi \\
+y = r \sin \theta \sin \varphi \\
+z = r \cos \theta
+\end{cases}</script><h1 id="平面解析几何"><a href="#平面解析几何" class="headerlink" title="平面解析几何"></a>平面解析几何</h1><h2 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h2><h3 id="倾斜角与斜率"><a href="#倾斜角与斜率" class="headerlink" title="倾斜角与斜率"></a>倾斜角与斜率</h3><p>在平面直角坐标系内，定义直线与$x$轴所夹的较小的角为<strong>倾斜角（angle of inclination）</strong>，其取值范围就是$[0, \pi)$。如果直线$l$的倾斜角$\alpha \ne \dfrac{\pi}{2}$，令$k = \tan \alpha$，称$k$为直线$l$的<strong>斜率（slope）</strong>。斜率反映了直线的倾斜程度，斜坡的斜率越大，斜坡也就越陡。</p>
+<p><img src="https://s2.loli.net/2022/11/08/vT19laJnYEQV7zR.png" alt="倾斜角" title="倾斜角"></p>
+<p>与直线平行的非零向量称为直线的<strong>方向向量（direction vector）</strong>。设直线$l$的方向向量是$\mathbf{a} = (x, y)$，则满足$\cos \alpha = \dfrac{x}{\sqrt{x^{2} + y^{2}}}, \sin \alpha = \dfrac{y}{\sqrt{x^{2} + y^{2}}}$的角$\alpha \in [0, \pi)$称为直线$l$的倾斜角。如果$\alpha \ne \dfrac{\pi}{2}$，也就是$x \ne 0$，称$k = \tan \alpha = \dfrac{y}{x}$为直线$l$的斜率。这是倾斜角与斜率的另一个定义。</p>
+<p>正比例函数$y = kx$的图像是一条直线，根据上面的定义，系数$k$实际上就是它的斜率。对于图像上除原点外任意一点$(x, y)$，满足</p>
+<script type="math/tex; mode=display">k = \tan \alpha = \dfrac{y}{x}</script><p>一般地，设直线$l$斜率为$k$，它与$x, y$轴分别交于$(a, 0), (0, b)$，$a$称为直线$l$在$x$轴上的<strong>截距（intercept）</strong>，$b$称为直线$l$在$y$轴上的截距。直线$l$向下平移$b$个单位，就是经过原点的正比例函数，满足$y - b = kx$，也就是</p>
+<script type="math/tex; mode=display">y = kx + b</script><p>这样，直线$l$就用方程的形式表示出来。这就是直线的<strong>斜截式方程（slope–intercept equation）</strong>。它实际上等同于一次函数的表达式。如果已知斜率和$x$轴上的截距$a$，那么可以得到类似的方程：</p>
+<script type="math/tex; mode=display">y = k (x - a)</script><p>由斜率的定义可知：<br>设不重合的两条直线$l_{1}, l_{2}$的斜率分别是$k_{1}, k_{2}$，$l_{1} \parallel l_{2}$当且仅当$k_{1} = k_{2}$。</p>
+<p>$l_{1} \perp l_{2}$当且仅当$k_{1} k_{2} = -1$。证明如下：<br>设$l_{1}, l_{2}$的方向向量分别是$\mathbf{a} = (1, k_{1}), \mathbf{b} = (1, k_{2})$，那么</p>
+<script type="math/tex; mode=display">l_{1} \perp l_{2} \Leftrightarrow \mathbf{a} \perp \mathbf{b} \Leftrightarrow \mathbf{a} \cdot \mathbf{b} = 0 \Leftrightarrow 1 + k_{1} k_{2} = 0 \Leftrightarrow k_{1} k_{2} = -1</script><p>我们还可以用斜率来计算直线之间的夹角。设两条直线$l_{1}, l_{2}$的一个夹角$\alpha \in (0, \dfrac{\pi}{2}) \cup (\dfrac{\pi}{2}, \pi)$，斜率分别为$k_{1}, k_{2}$，有<strong>夹角公式</strong>：</p>
+<script type="math/tex; mode=display">|\tan \alpha| = \left|\dfrac{k_{1} - k_{2}}{1 + k_{1} k_{2}} \right|</script><p>证明如下：<br>设$l_{1}, l_{2}$的方向向量分别是$\mathbf{a} = (1, k_{1}), \mathbf{b} = (1, k_{2})$，则$|\cos \alpha| = \dfrac{|\mathbf{a} \cdot \mathbf{b}|}{|\mathbf{a}| |\mathbf{b}|}$；设空间向量$\mathbf{a}’ = (1, k_{1}, 0), \mathbf{b}’ = (1, k_{2}, 0)$，则根据向量积的定义，$\sin \alpha = \dfrac{|\mathbf{a}’ \times \mathbf{b}’|}{|\mathbf{a}’| |\mathbf{b}’|} = \dfrac{|\mathbf{a}’ \times \mathbf{b}’|}{|\mathbf{a}| |\mathbf{b}|}$。两式相除得到$|\tan \alpha| = \dfrac{|\mathbf{a}’ \times \mathbf{b}’|}{|\mathbf{a} \cdot \mathbf{b}|}$。$\mathbf{a}’ \times \mathbf{b}’ = (0, 0, k_{2} - k_{1}), \mathbf{a} \cdot \mathbf{b} = 1 + k_{1} k_{2}$，所以$|\tan \alpha| = \left|\dfrac{k_{1} - k_{2}}{1 + k_{1} k_{2}} \right|$。$\Box$</p>
+<h3 id="直线的方程"><a href="#直线的方程" class="headerlink" title="直线的方程"></a>直线的方程</h3><p>已知直线$l$的斜率和截距，我们可以用斜截式方程来表示$l$。而在其它的场景下，我们还会用到不同的方程来表示直线。</p>
+<p>已知直线$l$上一点$P_{0}(x_{0}, y_{0})$，斜率是$k$：<br>设$l$上任意一点$P(x, y)$，因为截距不变，利用斜截式，可以得到$y - kx = b = y_{0} - kx_{0}$，整理得</p>
+<script type="math/tex; mode=display">y - y_{0} = k (x - x_{0})</script><p>这就是直线的<strong>点斜式方程（point–slope equation）</strong>。斜截式方程可以认为是$P_{0}(0, b)$时得点斜式方程。</p>
+<p>已知直线$l$上不同的两点$P_{1}(x_{1}, y_{1}), P_{2}(x_{2}, y_{2})$：<br>首先，如果$x_{1} = x_{2} = x_{0}$，那么直线$l$的方程是$x = x_{0}$，倾斜角是$\dfrac{\pi}{2}$，斜率没有定义。<br>否则，可以设斜截式为$y = kx + b$，代入点的坐标得到方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+y_{1} = kx_{1} + b \\
+y_{2} = kx_{2} + b
+\end{cases}</script><p>两式相减，得到$y_{1} - y_{2} = k (x_{1} - x_{2})$，得到斜率</p>
+<script type="math/tex; mode=display">k = \dfrac{y_{1} - y_{2}}{x_{1} - x_{2}}</script><p>直线$l$经过点$P_{1}$，斜率是$\dfrac{y_{1} - y_{2}}{x_{1} - x_{2}}$，可以用点斜式表示为$y - y_{1} = \dfrac{y_{1} - y_{2}}{x_{1} - x_{2}} (x - x_{1})$，也就是</p>
+<script type="math/tex; mode=display">(y - y_{1}) (x_{1} - x_{2}) = (x - x_{1}) (y_{1} - y_{2})</script><p>这就是直线的<strong>两点式方程（two–point equation）</strong>。</p>
+<p>已知直线$l$在$x, y$轴上的截距分别是$a, b$，且$ab \ne 0$：<br>直线$l$经过点$A(a, 0), B(0, b)$，由两点式得到$(y - 0) (a - 0) = (x - a) (0 - b)$，也就是</p>
+<script type="math/tex; mode=display">\dfrac{x}{a} + \dfrac{y}{b} = 1</script><p>这就是直线的<strong>截距式方程（intercept equation）</strong>。</p>
+<p>用向量也能得到直线的方程。已知直线$l$的一个法向量$\mathbf{n} = (a, b)$，且经过点$P_{0}(x_{0}, y_{0})$：<br>对于直线上任意一点$P(x, y)$都有$\overrightarrow{PP_{0}} \cdot \mathbf{n} = 0$，也就是</p>
+<script type="math/tex; mode=display">a (x - x_{0}) + b (y - y_{0}) = 0</script><p>这就是直线的<strong>点法式方程（point–normal equation）</strong>。</p>
+<p>上面表示直线的方程都是一次方程。我们考虑一般的二元一次方程</p>
+<script type="math/tex; mode=display">Ax + By + C = 0 (A, B, C \in \mathbb{R}, A^{2} + B^{2} > 0)</script><p>如果$B = 0$，那么根据条件$A \ne 0$，方程可以化为$x = -\dfrac{C}{A}$，表示一条垂直于$x$轴的直线；<br>如果$B \ne 0$，那么方程可以化为$y = -\dfrac{A}{B} x - \dfrac{C}{B}$，是点斜式方程。<br>这样，所有的二元一次方程都表示一条直线。$A^{2} + B^{2} &gt; 0$时，$Ax + By + C = 0$就是直线的<strong>一般式方程（general equation）</strong>。比较点法式方程可知，直线一定有一个法向量$\mathbf{n} = (A, B)$。</p>
+<p><img src="https://s2.loli.net/2022/11/09/61I9kvKHwGSclzq.png" alt><br>在极坐标系中，如果直线经过极点，那么直线上除极点外任意一点的极角就是$\theta_{0}$或$\pi + \theta_{0}$，其中$\theta_{0} \in [0, \pi)$，直线的极坐标方程就是$\theta = \theta_{0}$或$\pi + \theta_{0} (r \in \mathbb{R})$。为了方便起见，对$\theta \in [0, \pi)$，规定$(r, \theta), (-r, \pi + \theta)$表示同一个点，这样经过极点的直线方程就可以写成</p>
+<script type="math/tex; mode=display">\theta = \theta_{0} (r \in \mathbb{R})</script><p><img src="https://s2.loli.net/2022/11/09/KlvkFgx1AjqEdNw.png" alt><br>对于不过极点的直线，设直线经过点$P_{0}(r_{0}, \theta_{0})$，交极轴于点$Q$，极轴到直线的角是$\alpha$，$P(r, \theta)$是直线上任意一点。<br>图中$\angle OPQ = \alpha - \theta, \angle OP_{0}Q = \alpha - \theta_{0}$，根据正弦定理$\dfrac{r}{\sin(\alpha - \theta_{0})} = \dfrac{r_{0}}{\sin(\alpha - \theta)}$，得到</p>
+<script type="math/tex; mode=display">r \sin(\alpha - \theta) = r_{0} \sin(\alpha - \theta_{0})</script><p>这就是不过极点的直线的极坐标方程。</p>
+<h3 id="点到直线、平行直线之间的距离"><a href="#点到直线、平行直线之间的距离" class="headerlink" title="点到直线、平行直线之间的距离"></a>点到直线、平行直线之间的距离</h3><p>将直线转化为方程后，就能得到点到直线的距离公式：<br>点$P(x_{0}, y_{0})$到直线$l: Ax + By + C = 0$的距离</p>
+<script type="math/tex; mode=display">d = \dfrac{|Ax_{0} + By_{0} + C|}{\sqrt{A^{2} + B^{2}}}</script><p>利用向量可以简便地证明：<br>首先求直线$l$的一个法向量。设$l$上不同的两点$P_{1}(x_{1}, y_{1}), P_{2}(x_{2}, y_{2})$，则$\overrightarrow{P_{1}P_{2}} = (x_{2} - x_{1}, y_{2} - y_{1})$是$l$的方向向量。由直线方程可知</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+Ax_{1} + By_{1} + C = 0 \\
+Ax_{2} + By_{2} + C = 0
+\end{cases}</script><p>两式相减得$A(x_{1} - x_{2}) + B(y_{1} - y_{2}) = 0$，也就是$(A, B) \cdot (x_{2} - x_{1}, y_{2} - y_{1}) = 0$，$\mathbf{n} = (A, B)$是$l$的法向量。<br>根据投影向量的定义，设$Q(x, y)$是$l$上任意一点，则</p>
+<script type="math/tex; mode=display">d = |\operatorname{proj}_{\mathbf{n}} \overrightarrow{PQ}| = \dfrac{|\overrightarrow{PQ} \cdot \mathbf{n}|}{|\mathbf{n}|}</script><p>$\overrightarrow{PQ} \cdot \mathbf{n} = A (x - x_{0}) + B (y - y_{0}), |\mathbf{n}| = \sqrt{A^{2} + B^{2}}$，由直线方程得$Ax + By = -C$，代入得</p>
+<script type="math/tex; mode=display">d = \dfrac{|Ax_{0} + By_{0} + C|}{\sqrt{A^{2} + B^{2}}} \quad \Box</script><p>两条平行直线之间的距离就是它们的公垂线段的长，实际上可以化为点到直线的距离。设平行直线</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& l_{1}: Ax + By + C_{1} = 0 \\
+& l_{2}: Ax + By + C_{2} = 0
+\end{align}</script><p>任取$l_{2}$上一点$P(x_{0}, y_{0})$，$P$到$l_{1}$的距离就是$l_{1}, l_{2}$之间的距离。由$l_{2}$方程得$Ax_{0} + By_{0} = -C_{2}$，代入点到直线的距离公式，</p>
+<script type="math/tex; mode=display">d = \dfrac{|C_{1} - C_{2}|}{\sqrt{A^{2} + B^{2}}}</script><h2 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h2><h3 id="圆的方程"><a href="#圆的方程" class="headerlink" title="圆的方程"></a>圆的方程</h3><p>圆是平面内到定点距离等于定长的点的集合。设圆的圆心是点$A(a, b)$，半径是$r$，$P(x, y)$是圆上任意一点，根据这个定义，可以利用两点之间的距离公式建立方程：</p>
+<script type="math/tex; mode=display">|PA| = \sqrt{(x - a)^{2} + (y - b)^{2}} = r</script><p>即</p>
+<script type="math/tex; mode=display">(x - a)^{2} + (y - b)^{2} = r^{2}</script><p>这就是圆的<strong>标准方程</strong>。</p>
+<p>这样，就能用代数方法判定点和圆的位置关系。对于圆$C: (x - a)^{2} + (y - b)^{2} = r^{2}$，点$P(x_{0}, y_{0})$在圆上的充要条件是$(x - a)^{2} + (y - b)^{2} = r^{2}$，在圆内的充要条件是$(x - a)^{2} + (y - b)^{2} &lt; r^{2}$，在圆外的充要条件是$(x - a)^{2} + (y - b)^{2} &gt; r^{2}$。</p>
+<p>展开圆的标准方程并整理，可以得到$x^{2} + y^{2} - 2ax - 2by + a^{2} + b^{2} - r^{2} = 0$。令$D = -2a, E = -2b, F = a^{2} + b^{2} - r^{2}$，就得到</p>
+<script type="math/tex; mode=display">x^{2} + y^{2} + Dx + Ey + F = 0</script><p>配方，得到</p>
+<script type="math/tex; mode=display">\left(x + \dfrac{D}{2} \right)^{2} + \left(y + \dfrac{E}{2} \right)^{2} = \dfrac{D^{2} + E^{2} - 4F}{4}</script><p>令$K = D^{2} + E^{2} - 4F$，<br>如果$K &gt; 0$，比较圆的标准方程，可以看出该方程表示一个以$\left(-\dfrac{D}{2}, -\dfrac{E}{2} \right)$为圆心，$\dfrac{\sqrt{K}}{2}$为半径的圆；<br>如果$K = 0$，方程表示一个点$\left(-\dfrac{D}{2}, -\dfrac{E}{2} \right)$；<br>如果$K &lt; 0$，方程没有实数解，不表示任何图形。<br>$K &gt; 0$时，方程$x^{2} + y^{2} + Dx + Ey + F = 0$称为圆的<strong>一般方程</strong>。</p>
+<p>在极坐标系中，设圆的圆心是点$A(\rho_{0}, \theta_{0})$，半径是$r$，$P(\rho, \theta)$是圆上任意一点，利用极坐标系中两点之间的距离公式可以建立方程：</p>
+<script type="math/tex; mode=display">\rho^{2} + \rho_{0}^{2} - 2 \rho \rho_{0} \cos(\theta - \theta_{0}) = r^{2}</script><p>这就是圆的极坐标方程。</p>
+<p>如果圆的圆心是极点，那么令$\rho_{0} = 0$，得到</p>
+<script type="math/tex; mode=display">\rho = r</script><p>如果圆经过极点，那么令$\rho_{0} = r$，得到</p>
+<script type="math/tex; mode=display">\rho = 2r \cos(\theta - \theta_{0})</script><h3 id="直线与圆、圆与圆的位置关系"><a href="#直线与圆、圆与圆的位置关系" class="headerlink" title="直线与圆、圆与圆的位置关系"></a>直线与圆、圆与圆的位置关系</h3><p>直线与圆有相交、相切、相离三种位置关系，等价于与圆有2、1、0个交点。将直线和圆都转化为方程后，位置关系的判定就可以转化为方程的解。<br>联立直线方程与圆的方程，得到一个一元二次方程。设方程是$ax^{2} + bx + c = 0, \Delta = b^{2} - 4ac$，则$\Delta &gt; 0$时，方程有两个解，直线与圆相交；$\Delta = 0$时，方程有一个解，直线与圆相切；$\Delta &lt; 0$时，方程没有实数解，直线与圆相离。</p>
+<p>直线与圆的位置关系，也可以通过直线到圆心的距离$d$和圆的半径$r$的大小关系来判定。$0 \le d &lt; r$时，直线与圆相交；$d = r$时，直线与圆相切；$d &gt; r$时，直线与圆相离。</p>
+<p>圆与圆之间也有相交、相切、相离三种位置关系，其中相切包括外切和内切，相离包括外离和内含。<br>设$r_{1}, r_{2}$为两个圆的半径，计算出两个圆连心线的长$d$，则$d &gt; r_{1} + r_{2}$时，两圆外离；$d = r_{1} + r_{2}$时，两圆外切；$|r_{1} - r_{2}| &lt; d &lt; r_{1} + r_{2}$时，两圆相交；$ d = |r_{1} - r_{2}|$时，两圆内切；$0 \le d &lt; |r_{1} - r_{2}|$时，两圆内含。</p>
+<p>如果只需要判断相交、相切、相离这三种位置关系，也可以用纯代数的方法。设两个圆的方程</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& C_{1}: x^{2} + y^{2} + D_{1}x + E_{1}y + F_{1} = 0 \\
+& C_{2}: x^{2} + y^{2} + D_{2}x + E_{2}y + F_{2} = 0
+\end{align}</script><p>两式相减，得到</p>
+<script type="math/tex; mode=display">(D_{1} - D_{2}) x + (E_{1} - E_{2}) y + F_{1} - F_{2} = 0</script><p>如果$D_{1} = D_{2}, E_{1} = E_{2}$，两圆圆心相同，半径不同，显然是内含关系；否则，该方程就表示一条直线，这条直线称为两个圆的<strong>根轴（radical axis）</strong>。</p>
+<p>由根轴定义可知：<br>一个点是两个圆的交点的充要条件是它在其中一个圆和两个圆的根轴上。<br>证明：<br>设圆$C_{1}, C_{2}$的方程分别是$f_{1}(x, y) = 0, f_{2}(x, y) = 0$，则根轴方程是</p>
+<script type="math/tex; mode=display">f_{1}(x, y) - f_{2}(x, y) = 0</script><p><em>必要性</em>：设$P(x_{0}, y_{0})$在圆$C_{1}, C_{2}$上，那么$f_{1}(x_{0}, y_{0}) = 0, f_{2}(x_{0}, y_{0}) = 0$，这样$f_{1}(x_{0}, y_{0}) - f_{2}(x_{0}, y_{0}) = 0$；<br><em>充分性</em>：设$P(x_{0}, y_{0})$在圆$C_{2}$和根轴上，则$f_{1}(x_{0}, y_{0}) = f_{2}(x_{0}, y_{0}) + (f_{1}(x_{0}, y_{0}) - f_{2}(x_{0}, y_{0})) = 0$，也在圆$C_{1}$上。$\Box$</p>
+<p>对于两个相交的圆，既然两个交点都在根轴上，那么两点确定一条直线。两个圆的公共弦所在直线就是根轴。</p>
+<p>两个圆的公共点个数与它们的根轴和其中一个圆的交点个数是相同的，圆与圆的位置关系判定问题就可以转化为直线与圆的位置关系判定问题。</p>
+<h2 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h2><p>一般的平面<strong>曲线（curve）</strong>是指平面上的点集，在平面直角坐标系中可以表示成下面的形式：</p>
+<script type="math/tex; mode=display">C = \{(x, y) | f(x, y) = 0\}</script><p>点$P \in C$即点$P$在曲线$C$上的充要条件是$f(x, y) = 0$，$f(x, y) = 0$就是曲线$C$的方程。</p>
+<p>平面上的动点$S(x, y)$满足条件$P$，它在平面上运动得到的曲线可以表示为</p>
+<script type="math/tex; mode=display">\{S | P(S)\}</script><p>如果$P(S)$等价于$f(x, y) = 0$，则$f(x, y) = 0$称为动点$S$的<strong>轨迹方程（locus equation）</strong>，曲线称为动点$S$的<strong>轨迹（locus）</strong>。</p>
+<p>有时候，曲线不是用$f(x, y) = 0$的形式来表示的。点$P(x, y)$在曲线$C$上等价于存在实数$t$使得</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = g(t) \\
+y = h(t)
+\end{cases}</script><p>其中$g, h$是两个函数。这就是曲线$C$的<strong>参数方程（parametric equation）</strong>，$t$称为<strong>参数（parameter）</strong>。</p>
+<p>设一个圆的圆心是$(a, b)$，半径是$r$，其标准方程就是$(x - a)^{2} + (y - b)^{2} = r^{2}$。这样就有$|x - a|, |y - b| \le r$。令$x - a = r \cos \theta (\theta \in [0, 2\pi])$，代入可得$y - b = \pm r \sin \theta$，不妨取正号，得到</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = a + r \cos \theta \\
+y = b + r \sin \theta
+\end{cases}</script><p>这就是圆的参数方程。参数$\theta$的几何意义就是从$(a, b + r)$出发的动点逆时针转过的角度。</p>
+<p><img src="https://s2.loli.net/2022/11/09/91Oxz6HKoBTN8gA.png" alt></p>
+<p>设一条直线的倾斜角是$\theta$，经过点$P_{0}(x_{0}, y_{0})$。取单位方向向量$\mathbf{u} = (\cos \theta, \sin \theta)$，任取直线上一点$P(x, y)$，则存在实数$t$使得$\overrightarrow{OP} = \overrightarrow{OP_{0}} + t \mathbf{u}$。用坐标形式表示，就是</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = x_{0} + t \cos \theta \\
+y = y_{0} + t \sin \theta
+\end{cases}</script><p>这就是直线的参数方程。参数$t$的几何意义就是$P_{0}, P$之间的距离，其正负由$\mathbf{u}$的方向决定。</p>
+<h1 id="空间解析几何"><a href="#空间解析几何" class="headerlink" title="空间解析几何"></a>空间解析几何</h1><h2 id="空间平面与空间直线"><a href="#空间平面与空间直线" class="headerlink" title="空间平面与空间直线"></a>空间平面与空间直线</h2><h3 id="平面的方程"><a href="#平面的方程" class="headerlink" title="平面的方程"></a>平面的方程</h3><p>在空间直角坐标系中，设平面$\alpha$的一个法向量$\mathbf{n} = (a, b, c)$，且经过点$P_{0}(x_{0}, y_{0}, z_{0})$，则对平面内任意一点$P(x, y, z)$都有$\overrightarrow{PP_{0}} \cdot \mathbf{n} = 0$，也就是</p>
+<script type="math/tex; mode=display">a (x - x_{0}) + b (y - y_{0}) + c (z - z_{0}) = 0</script><p>这就是平面的<strong>点法式方程（point–normal equation）</strong>。</p>
+<p>一般地，三元一次方程</p>
+<script type="math/tex; mode=display">Ax + By + Cz + D = 0 (A, B, C, D \in \mathbb{R}, A^{2} + B^{2} + C^{2} > 0)</script><p>总是表示一个平面。这样的方程就称为平面的<strong>一般式方程（general equation）</strong>。比较点法式方程可知，平面一定有一个法向量$\mathbf{n} = (A, B, C)$。</p>
+<p>此外，设平面$\alpha$经过点$P_{0}(x_{0}, y_{0}, z_{0})$，且与两个不共线的向量$\mathbf{u} = (a_{1}, b_{1}, c_{1}), \mathbf{v} = (a_{2}, b_{2}, c_{2})$都平行。根据共面向量定理，对平面内任意一点$P(x, y, z)$都有$\overrightarrow{PP_{0}} = s \mathbf{u} + t \mathbf(v) (s, t \in \mathbb{R})$，代入得</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = x_{0} + sa_{1} + ta_{2} \\
+y = y_{0} + sb_{1} + tb_{2} \\
+z = z_{0} + sc_{1} + tc_{2}
+\end{cases}</script><p>方程含有$s, t$两个参数，因此称为平面的参数方程。由$\overrightarrow{PP_{0}} \cdot (\mathbf{u} \times \mathbf{v}) = 0$，也能得到平面的点法式方程。</p>
+<p>设平面$\alpha$与$x, y, z$轴分别交于点$P_{1}(a, 0, 0), P_{2}(0, b, 0), P_{3}(0, 0, c)$，其中$abc \ne 0$。利用上面的结论，设$\mathbf{u} = \overrightarrow{P_{1}P_{2}} = (-a, b, 0), \mathbf{v} = \overrightarrow{P_{1}P_{3}} = (-a, 0, c)$，则$\mathbf{u} \times \mathbf{v} = (bc, ac, ab)$。对平面内任意一点$P(x, y)$都有$\overrightarrow{PP_{1}} \cdot (\mathbf{u} \times \mathbf{v}) = 0$，得到$(x - a) bc + yac + zab = 0$，也就是</p>
+<script type="math/tex; mode=display">\dfrac{x}{a} + \dfrac{y}{b} + \dfrac{z}{c} = 1</script><p>这就是平面的<strong>截距式方程（intercept equation）</strong>。</p>
+<h3 id="直线的方程-1"><a href="#直线的方程-1" class="headerlink" title="直线的方程"></a>直线的方程</h3><p>设空间直角坐标系中一条直线的方向向量$\mathbf{u} = (a, b, c)$，且经过点$P_{0}(x_{0}, y_{0}, z_{0})$。对于直线上任意一点$P(x, y, z)$，$\overrightarrow{PP_{0}} = t \mathbf{u} (t \in \mathbb{R})$，得到</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = x_{0} + ta \\
+y = y_{0} + tb \\
+z = z_{0} + tc
+\end{cases}</script><p>这就是直线的参数方程。消去参数$t$，可以得到</p>
+<script type="math/tex; mode=display">\dfrac{x - x_{0}}{a} = \dfrac{y - y_{0}}{b} = \dfrac{z - z_{0}}{c}</script><p>这就是直线的标准方程。</p>
+<p>此外，也可以把直线看成两个平面的交线，用三元一次方程组表示为</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+A_{1}x + B_{1}y + C_{1}z + D_{1} = 0 \\
+A_{2}x + B_{2}y + C_{2}z + D_{2} = 0
+\end{cases}</script><p>这就是直线的一般方程。</p>
+<h3 id="平面与直线的位置关系"><a href="#平面与直线的位置关系" class="headerlink" title="平面与直线的位置关系"></a>平面与直线的位置关系</h3><h4 id="平面与平面的位置关系"><a href="#平面与平面的位置关系" class="headerlink" title="平面与平面的位置关系"></a>平面与平面的位置关系</h4><p>设两个平面$\pi_{1}, \pi_{2}$，$\pi_{i}$的一般式方程是$A_{i}x + B_{i}y + C_{i}z + D_{i} = 0$，显然：<br>$\pi_{1} \parallel \pi_{2}$的充要条件是$\dfrac{A_{1}}{A_{2}} = \dfrac{B_{1}}{B_{2}} = \dfrac{C_{1}}{C_{2}} \ne \dfrac{D_{1}}{D_{2}}$;<br>$\pi_{1} \perp \pi_{2}$的充要条件是$A_{1}A_{2} + B_{1}B_{2} + C_{1}C_{2} = 0$。</p>
+<p>设三个平面$\pi_{1}, \pi_{2}, \pi_{3}$两两不平行，$\pi_{i}$的法向量是$\mathbf{n}_{i}$，则三个平面有唯一交点的充要条件是$(\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}_{3}) \ne 0$。<br>证明：<br><em>必要性</em>：$\mathbf{n}_{1} \times \mathbf{n}_{2}, \mathbf{n}_{2} \times \mathbf{n}_{3}, \mathbf{n}_{3} \times \mathbf{n}_{1}$三个向量不共面，因此$(\mathbf{n}_{1} \times \mathbf{n}_{2}, \mathbf{n}_{2} \times \mathbf{n}_{3}, \mathbf{n}_{3} \times \mathbf{n}_{1}) \ne 0$。根据拉格朗日恒等式：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+(\mathbf{n}_{1} \times \mathbf{n}_{2}, \mathbf{n}_{2} \times \mathbf{n}_{3}, \mathbf{n}_{3} \times \mathbf{n}_{1}) &= ((\mathbf{n}_{1} \times \mathbf{n}_{2}) \times (\mathbf{n}_{2} \times \mathbf{n}_{3})) \cdot (\mathbf{n}_{3} \times \mathbf{n}_{1}) \\
+&= ((\mathbf{n}_{1} \cdot (\mathbf{n}_{2} \times \mathbf{n}_{3})) \mathbf{n}_{2} - (\mathbf{n}_{2} \cdot (\mathbf{n}_{2} \times \mathbf{n}_{3})) \mathbf{n}_{1}) \cdot (\mathbf{n}_{3} \times \mathbf{n}_{1}) \\
+&= ((\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}_{3}) \mathbf{n}_{2} - (\mathbf{n}_{2}, \mathbf{n}_{2}, \mathbf{n}_{3}) \mathbf{n}_{1}) \cdot (\mathbf{n}_{3} \times \mathbf{n}_{1}) \\
+&= (\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}_{3}) \mathbf{n}_{2} \cdot (\mathbf{n}_{3} \times \mathbf{n}_{1}) \\
+&= (\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}_{3})^{2}
+\end{align}</script><p>所以$(\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}_{3}) \ne 0$。<br><em>充分性</em>：同上，如果$(\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}_{3}) \ne 0$，那么$(\mathbf{n}_{1} \times \mathbf{n}_{2}, \mathbf{n}_{2} \times \mathbf{n}_{3}, \mathbf{n}_{3} \times \mathbf{n}_{1}) \ne 0$。设$l_{ij} = \pi_{i} \cap \pi_{j}$，此时$l_{12}, l_{23}, l_{31}$没有平行或重合的。设$P = l_{12} \cap l_{23}$，则$P \in \pi_{1} \cap \pi_{2} \cap \pi_{3}$，从而$P \in l_{23}$，故$P$是$\pi_{1}, \pi_{2}, \pi_{3}$的唯一交点。$\Box$</p>
+<h4 id="平面与直线的位置关系-1"><a href="#平面与直线的位置关系-1" class="headerlink" title="平面与直线的位置关系"></a>平面与直线的位置关系</h4><p>设平面$\pi$的方程是$Ax + By + Cz + D = 0$，直线$l$的标准方程是$\dfrac{x - x_{0}}{X} = \dfrac{y - y_{0}}{Y} = \dfrac{z - z_{0}}{Z}$，那么：<br>$l \parallel \pi$的充要条件是$AX + BY + CZ = 0, Ax_{0} + By_{0} + Cz_{0} + D \ne 0$；<br>$l \subset \pi$的充要条件是$AX + BY + CZ = 0, Ax_{0} + By_{0} + Cz_{0} + D = 0$；<br>$l \perp \pi$的充要条件是$\dfrac{A}{X} = \dfrac{B}{Y} = \dfrac{C}{Z}$。</p>
+<p>设平面$\pi$的法向量是$\mathbf{n} = (A, B, C)$，考虑直线$l$的一般方程</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+A_{1}x + B_{1}y + C_{1}z + D_{1} = 0 \\
+A_{2}x + B_{2}y + C_{2}z + D_{2} = 0
+\end{cases}</script><p>其中$\mathbf{n}_{1} = (A_{1}, B_{1}, C_{1}), \mathbf{n}_{2} = (A_{2}, B_{2}, C_{2})$，则$l, \pi$交于一点的充要条件是$(\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}) \ne 0$。</p>
+<p>再用标准方程讨论$l \parallel \pi, l \subset \pi$两种情况。$(\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}) = 0$，则$\mathbf{n}_{1}, \mathbf{n}_{2}, \mathbf{n}$共面。设$\mathbf{n} = \lambda \mathbf{n}_{1} + \mu \mathbf{n}_{2}$，则$A = \lambda A_{1} + \mu A_{2}, B = \lambda B_{1} + \mu B_{2}, C = \lambda C_{1} + \mu C_{2}$，进一步得到：<br>$l \subset \pi$的充要条件是存在不全为零的实数$\lambda, \mu$使得$(A, B, C, D) = \lambda (A_{1}, B_{1}, C_{1}, D_{1}) + \mu (A_{2}, B_{2}, C_{2}, D_{2})$。</p>
+<p>这告诉我们，设直线$l = \pi_{1} \cap \pi_{2}$，平面$\pi_{i}$的方程是$f_{i} = 0$，则所有经过直线$l$的平面都可以表示为</p>
+<script type="math/tex; mode=display">\lambda f_{1} + \mu f_{2} = 0</script><p>这些平面称为以$l$为轴的<strong>共轴平面系</strong>。</p>
+<h4 id="直线与直线的位置关系"><a href="#直线与直线的位置关系" class="headerlink" title="直线与直线的位置关系"></a>直线与直线的位置关系</h4><p>设直线$l_{1}, l_{2}$分别经过两个不同的点$P_{1}, P_{2}$，方向向量分别是$\mathbf{u}_{1}, \mathbf{u}_{2}$，设$\mathbf{u} = \overrightarrow{P_{1}P_{2}}$，则：<br>$l_{1}, l_{2}$共面的充要条件是$(\mathbf{u}, \mathbf{u}_{1}, \mathbf{u}_{2}) = 0$；<br>$l_{1} \parallel l_{2}$的充要条件是$\mathbf{u}_{1} \parallel \mathbf{u}_{2}$；<br>$l_{1} \perp  l_{2}$的充要条件是$\mathbf{u}_{1} \perp \mathbf{u}_{2}$；<br>$l_{1}, l_{2}$重合的充要条件是$\mathbf{u}, \mathbf{u}_{1}, \mathbf{u}_{2}$共线。</p>
+<h2 id="解析表示与空间向量的应用"><a href="#解析表示与空间向量的应用" class="headerlink" title="解析表示与空间向量的应用"></a>解析表示与空间向量的应用</h2><h3 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h3><p>与平面解析几何类似，点$P(x_{0}, y_{0}, z_{0})$到平面$\pi: Ax + By + Cz + D = 0$的距离公式是：</p>
+<script type="math/tex; mode=display">d = \dfrac{|Ax_{0} + By_{0} + Cz_{0} + D|}{\sqrt{A^{2} + B^{2} + C^{2}}}</script><p>类似地，两个平行平面的距离就是</p>
+<script type="math/tex; mode=display">d = \dfrac{|D_{1} - D_{2}|}{\sqrt{A^{2} + B^{2} + C^{2}}}</script><p><img src="https://s2.loli.net/2022/11/19/QqgJMbZiLYGtO5V.png" alt="异面直线的距离" title="异面直线的距离"><br>两条异面直线的公垂线是指与两条直线均垂直相交的直线，两条异面直线的距离就是其公垂线上两个垂足之间的距离。<br>设两条异面直线$l_{1}, l_{2}$分别经过点$P_{1}, P_{2}$，方向向量是$\mathbf{u}_{1}, \mathbf{u}_{2}$。过$l_{2}$作平面$\pi \parallel l_{1}$，则$\pi$的法向量是$\mathbf{n} = \mathbf{u}_{1} \times \mathbf{u}_{2}$。两条直线的距离就是$P_{1}$到$\pi$的距离：</p>
+<script type="math/tex; mode=display">d = \dfrac{|(\mathbf{u}_{1} \times \mathbf{u}_{1}) \cdot \overrightarrow{P_{1}P_{2}}|}{|\mathbf{u}_{1} \times \mathbf{u}_{1}|} = \dfrac{|(\mathbf{u}_{1}, \mathbf{u}_{2}, \overrightarrow{P_{1}P_{2}})|}{|\mathbf{u}_{1} \times \mathbf{u}_{1}|}</script><p>点到直线的距离依然可以利用直线的方向向量求得。设直线$l$经过点$P_{0}$，方向向量是$\mathbf{u}$，则点$P$到直线$l$的距离就是向量$\overrightarrow{P_{0}P}$在$\mathbf{u}$上的外投影长度：</p>
+<script type="math/tex; mode=display">d = \dfrac{|\mathbf{u} \times \overrightarrow{P_{0}P}|}{|\mathbf{u}|}</script><h3 id="夹角"><a href="#夹角" class="headerlink" title="夹角"></a>夹角</h3><p>设两条直线的方向向量分别是$\mathbf{u}_{1}, \mathbf{u}_{2}$，则较小的夹角</p>
+<script type="math/tex; mode=display">\theta = \arccos |\cos \langle \mathbf{u}_{1}, \mathbf{u}_{2} \rangle| = \arccos \dfrac{|\mathbf{u}_{1} \cdot \mathbf{u}_{2}|}{|\mathbf{u}_{1}||\mathbf{u}_{2}|}</script><p>直线与平面的夹角也就是直线与其在平面上射影的夹角。设直线的方向向量是$\mathbf{u}$，平面的法向量是$\mathbf{n}$，则</p>
+<script type="math/tex; mode=display">\theta = \arccos |\sin \langle \mathbf{u}, \mathbf{n} \rangle| = \arccos \dfrac{|\mathbf{u} \times \mathbf{n}|}{|\mathbf{u}||\mathbf{n}|}</script><p>设两个半平面的法向量分别是$\mathbf{n}_{1}, \mathbf{n}_{2}$，$\theta_{0} = \langle \mathbf{n}_{1}, \mathbf{n}_{2} \rangle = \arccos \dfrac{\mathbf{n}_{1} \cdot \mathbf{n}_{2}}{|\mathbf{n}_{1}||\mathbf{n}_{2}|}$，则二面角$\theta = \theta_{0}$或$\theta = \pi - \theta_{0}$。<br>实际上，为了确定取值，可以按以下方法计算二面角：<br>设二面角$A-BC-D$，$\mathbf{n}_{1} = \overrightarrow{BA} \times \overrightarrow{BC}, \mathbf{n}_{2} = \overrightarrow{BD} \times \overrightarrow{BC}$，则二面角</p>
+<script type="math/tex; mode=display">\theta = \langle \mathbf{n}_{1}, \mathbf{n}_{2} \rangle = \arccos \dfrac{\mathbf{n}_{1} \cdot \mathbf{n}_{2}}{|\mathbf{n}_{1}||\mathbf{n}_{2}|}</script><h2 id="基本空间曲面"><a href="#基本空间曲面" class="headerlink" title="基本空间曲面"></a>基本空间曲面</h2><p>一般的<strong>曲面（surface）</strong>是指空间上的点集。如果点$P(x, y, z)$在曲面$S$上的充要条件是满足方程$F(x, y, z) = 0$，那么称$F(x, y, z) = 0$为曲面$S$的方程。<br>曲面的参数方程一般含有两个参数，也就是</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = f(u, v) \\
+y = g(u, v) \\
+z = h(u, v)
+\end{cases}</script><p>那么，曲面就可以看成是从二维空间$\mathbb{R}^{2}$到三维空间$\mathbb{R}^{3}$的映射。</p>
+<p>类似地，三维空间中的曲线就是$\mathbb{R}$到$\mathbb{R}^{3}$的映射，可以表示成参数方程</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = f(t) \\
+y = g(t) \\
+z = h(t)
+\end{cases}</script><p>曲线有时候也可以表示成两个曲面的交线，写成</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+F(x, y, z) = 0 \\
+G(x, y, z) = 0
+\end{cases}</script><h3 id="旋转面"><a href="#旋转面" class="headerlink" title="旋转面"></a>旋转面</h3><p><strong>旋转面（surface of revolution）</strong>是空间曲线绕一条直线旋转一周形成的曲面。这条直线称为旋转面的<strong>轴线（axis）</strong>，曲线称为旋转面的<strong>母线（generatrix）</strong>。母线上的一点经过旋转形成的圆称为旋转面的<strong>纬圆</strong>。以轴线为界的半平面与旋转面的交线是母线，称为旋转面的<strong>经线（meridian）</strong>。</p>
+<p>已知曲线$\gamma$的方程和轴线$l$的方程，可以通过定义来求出旋转面$S$的方程。设空间中一点$P \in S$，也就是说，$P$由$\gamma$上某个点$P_{0}$旋转而来，存在一点$P_{0}$使其对应的纬圆经过点$P$。设直线$l$的方向向量是$\mathbf{u}$，则$\overrightarrow{PP_{0}} \cdot \mathbf{u} = 0$，且$P, P_{0}$到$l$距离相等。设$Q$为直线$l$上一点，则$|PQ| = |P_{0}Q|$，得到方程</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\overrightarrow{PP_{0}} \cdot \mathbf{u} = 0 \\
+|PQ| = |P_{0}Q|
+\end{cases}</script><p>对于一些特殊情况，可以直接求出旋转面的方程。设平面$Oyz$内的曲线$\gamma$方程是$\begin{cases} f(y, z) = 0 \\ x = 0 \end{cases}$，则$\gamma$绕$z$轴旋转得到的曲面方程是</p>
+<script type="math/tex; mode=display">f(\sqrt{x^{2} + y^{2}}, z) \cdot f(-\sqrt{x^{2} + y^{2}}, z) = 0</script><h4 id="以直线为母线的旋转面"><a href="#以直线为母线的旋转面" class="headerlink" title="以直线为母线的旋转面"></a>以直线为母线的旋转面</h4><p>有一些旋转面以直线为母线。根据母线与轴线的位置关系，有四种不同的情况。</p>
+<p>母线与轴线垂直时，旋转面为平面。如果垂直相交，则是完整的平面；如果垂直异面，则是平面的子集。</p>
+<p>母线与轴线平行时，旋转面为<strong>圆柱面（cylindrical surface）</strong>。圆柱面上的点到轴线的距离称为<strong>半径（radius）</strong>。<br>设圆柱面$S$的轴线$l$经过点$P_{0}$且方向向量是$\mathbf{u}$，半径是$r$，则根据点到直线的距离公式，点$P \in S$当且仅当$\dfrac{|\overrightarrow{P_{0}P} \times \mathbf{u}|}{|\mathbf{u}|} = r$。圆柱面的<strong>向量式方程（vector equation）</strong>就是</p>
+<script type="math/tex; mode=display">|\overrightarrow{P_{0}P} \times \mathbf{u}| = r |\mathbf{u}|</script><p>如果已知圆柱面上一点$Q$，则方程还可以表示为</p>
+<script type="math/tex; mode=display">|\overrightarrow{P_{0}P} \times \mathbf{u}| = |\overrightarrow{P_{0}Q} \times \mathbf{u}|</script><p>母线与轴线相交但不垂直时，旋转面为<strong>圆锥面（circular conical surface）</strong>。母线与轴线的交点称为<strong>顶点（apex）</strong>，夹角称为<strong>半顶角</strong>。<br>设圆锥面$S$的顶点是$P_{0}$，半顶角是$\alpha$，轴线的方向向量是$\mathbf{u}$，则点$P \in S$当且仅当$P_{0}P$与轴线的夹角是$\alpha$，得到圆锥面的<strong>向量式方程</strong>：</p>
+<script type="math/tex; mode=display">|\overrightarrow{P_{0}P} \cdot \mathbf{u}| = |\overrightarrow{P_{0}P}||\mathbf{u}| \cos \alpha</script><p>如果已知圆柱面上一点$Q$，则$\dfrac{|\overrightarrow{P_{0}P} \cdot \mathbf{u}|}{|\overrightarrow{P_{0}P}||\mathbf{u}|} = \cos \alpha = \dfrac{|\overrightarrow{P_{0}Q} \cdot \mathbf{u}|}{|\overrightarrow{P_{0}Q}||\mathbf{u}|}$，即</p>
+<script type="math/tex; mode=display">|\overrightarrow{P_{0}P} \cdot \mathbf{u}||\overrightarrow{P_{0}Q}| = |\overrightarrow{P_{0}Q} \cdot \mathbf{u}||\overrightarrow{P_{0}P}|</script><p>母线与轴线异面且不垂直时，旋转面为<strong>单叶双曲面（one-sheet hyperboloid）</strong>，这里不多讨论。</p>
+<h3 id="柱面与锥面"><a href="#柱面与锥面" class="headerlink" title="柱面与锥面"></a>柱面与锥面</h3><h4 id="柱面"><a href="#柱面" class="headerlink" title="柱面"></a>柱面</h4><p>考虑空间曲线$\gamma$和非零向量$\mathbf{u}$。对于$\gamma$上每一点，都过该点作与$\mathbf{u}$平行的直线。这些直线的并集形成一个曲面，称为<strong>柱面（general cylindrical surface）</strong>。这些直线称为柱面的<strong>直母线</strong>，曲线$\gamma$及其平移得到的曲线称为柱面的<strong>准线（directrix）</strong>，$\mathbf{u}$称为柱面的<strong>方向</strong>。圆柱面就是以圆为准线的柱面。<br>平面是一种特殊的柱面，任何非零向量都可以作为其方向。除此以外，柱面方向唯一，我们说柱面平行于$\mathbf{u}$。</p>
+<p>设柱面$S$平行于$\mathbf{u}$，准线是$\gamma$，则点$P \in S$当且仅当$P$在$S$的直母线上，也就是说，存在点$P_{0} \in \gamma$和实数$t$使得$\overrightarrow{P_{0}P} = t \mathbf{u}$，即：<br>设$\mathbf{u} = (k, m, n)$，准线$\gamma: \begin{cases} F(x, y, z) = 0 \\ G(x, y, z) = 0 \end{cases}$，则$P(x, y, z) \in S$的充要条件是：存在实数$t$使得</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+F(x + tk, y + tm, z + tn) = 0 \\
+G(x + tk, y + tm, z + tn) = 0
+\end{cases}</script><p>我们通常要消去$t$，得到曲面的一般方程。有时，柱面的准线是平面曲线，即曲线上各点共面，方程表示为</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+Ax + By + Cz + D = 0 \\
+F(x, y, z) = 0
+\end{cases}</script><p>如果$Ak + Bm + Cn \ne 0$，则柱面的方程是</p>
+<script type="math/tex; mode=display">F(x - x_{0}, y - y_{0}, z - z_{0}) = 0</script><p>其中</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x_{0} = \dfrac{k (Ax + By + Cz + D)}{Ak + Bm + Cn} \\
+y_{0} = \dfrac{m (Ax + By + Cz + D)}{Ak + Bm + Cn} \\
+z_{0} = \dfrac{n (Ax + By + Cz + D)}{Ak + Bm + Cn}
+\end{cases}</script><p>如果柱面的准线在平面$Oxy$内，方程是$\begin{cases} f(x, y) = 0 \\ z = 0 \end{cases}$，柱面平行于$\mathbf{u} = (k, m, n) (n \ne 0)$，可以更简便地得到柱面方程为$f(x - \dfrac{k}{n} z, y - \dfrac{m}{n} z)$；<br>如果柱面的准线在平面$Oxy$内，方程是$\begin{cases} f(x, y) = 0 \\ z = 0 \end{cases}$，柱面平行于$z$轴，则柱面方程为$f(x, y) = 0$。</p>
+<h4 id="锥面"><a href="#锥面" class="headerlink" title="锥面"></a>锥面</h4><p>考虑空间曲线$\gamma$和$\gamma$外一点$P_{0}$。对于$\gamma$上每一点，都与$P_{0}$相连，得到直线的并集形成一个曲面，称为<strong>锥面（conical surface）</strong>。$P_{0}$称为锥面的<strong>顶点</strong>，这些直线称为锥面的<strong>直母线</strong>，$\gamma$及其位似像称为锥面的<strong>准线</strong>。圆锥面就是以圆为准线的锥面。</p>
+<p>设锥面$S$的顶点是$P_{0}$，准线是$\gamma$，则顶点外一点$P \in S$当且仅当存在点$P’ \in \gamma$使得$P, P’, P_{0}$三点共线，也就是$\overrightarrow{OP’} = t \overrightarrow{OP} + (1 - t) \overrightarrow{OP_{0}}$，于是：<br>设$P_{0}(x_{0}, y_{0}, z_{0})$，准线$\gamma: \begin{cases} F(x, y, z) = 0 \\ G(x, y, z) = 0 \end{cases}$，则$P(x, y, z) \in S$的充要条件是：存在实数$t$使得</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+F(tx + (1 - t) x_{0}, ty + (1 - t) y_{0}, tz + (1 - t) z_{0}) = 0 \\
+G(tx + (1 - t) x_{0}, ty + (1 - t) y_{0}, tz + (1 - t) z_{0}) = 0
+\end{cases}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2022/11/07/Analytic-Geometry/" title="学习笔记·解析几何">https://luckyfuy.top/2022/11/07/Analytic-Geometry/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/09/10/Outline-of-Ancient-Japanese-History/" rel="next" title="日本古代史纲要">
+                <i class="fa fa-chevron-left"></i> 日本古代史纲要
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/11/20/Sequence/" rel="prev" title="学习笔记·数列">
+                学习笔记·数列 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#坐标系"><span class="nav-number">1.</span> <span class="nav-text">坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#极坐标系"><span class="nav-number">1.1.</span> <span class="nav-text">极坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#柱坐标系"><span class="nav-number">1.2.</span> <span class="nav-text">柱坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#球坐标系"><span class="nav-number">1.3.</span> <span class="nav-text">球坐标系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#平面解析几何"><span class="nav-number">2.</span> <span class="nav-text">平面解析几何</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直线"><span class="nav-number">2.1.</span> <span class="nav-text">直线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#倾斜角与斜率"><span class="nav-number">2.1.1.</span> <span class="nav-text">倾斜角与斜率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直线的方程"><span class="nav-number">2.1.2.</span> <span class="nav-text">直线的方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点到直线、平行直线之间的距离"><span class="nav-number">2.1.3.</span> <span class="nav-text">点到直线、平行直线之间的距离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆"><span class="nav-number">2.2.</span> <span class="nav-text">圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#圆的方程"><span class="nav-number">2.2.1.</span> <span class="nav-text">圆的方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直线与圆、圆与圆的位置关系"><span class="nav-number">2.2.2.</span> <span class="nav-text">直线与圆、圆与圆的位置关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#曲线"><span class="nav-number">2.3.</span> <span class="nav-text">曲线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#空间解析几何"><span class="nav-number">3.</span> <span class="nav-text">空间解析几何</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间平面与空间直线"><span class="nav-number">3.1.</span> <span class="nav-text">空间平面与空间直线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#平面的方程"><span class="nav-number">3.1.1.</span> <span class="nav-text">平面的方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直线的方程-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">直线的方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平面与直线的位置关系"><span class="nav-number">3.1.3.</span> <span class="nav-text">平面与直线的位置关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#平面与平面的位置关系"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">平面与平面的位置关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平面与直线的位置关系-1"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">平面与直线的位置关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直线与直线的位置关系"><span class="nav-number">3.1.3.3.</span> <span class="nav-text">直线与直线的位置关系</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析表示与空间向量的应用"><span class="nav-number">3.2.</span> <span class="nav-text">解析表示与空间向量的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#距离"><span class="nav-number">3.2.1.</span> <span class="nav-text">距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#夹角"><span class="nav-number">3.2.2.</span> <span class="nav-text">夹角</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本空间曲面"><span class="nav-number">3.3.</span> <span class="nav-text">基本空间曲面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转面"><span class="nav-number">3.3.1.</span> <span class="nav-text">旋转面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以直线为母线的旋转面"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">以直线为母线的旋转面</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柱面与锥面"><span class="nav-number">3.3.2.</span> <span class="nav-text">柱面与锥面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#柱面"><span class="nav-number">3.3.2.1.</span> <span class="nav-text">柱面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锥面"><span class="nav-number">3.3.2.2.</span> <span class="nav-text">锥面</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Music,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="在乐理基础中，我们学习过了和弦与调式等理论。在和声学中，我们会深入研究和弦的构成与进行，也就是和声（harmony）。 和弦功能每个正三和弦的上方三度或下方三度都各有一个副三和弦，由于正三和弦和相邻的副三和弦有两个共同音，因此功能接近。主和弦I的上方三度为iii，下方三度为vi，这两个副三和弦与主和弦一起，被归为主功能组（tonic）和弦，记为T（在和声小调中记为t）。主功能组和弦是最稳定的。类似">
+<meta name="keywords" content="Music">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·和声学基础">
+<meta property="og:url" content="https://luckyfuy.top/2022/01/01/Harmony-Fundamentals/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="在乐理基础中，我们学习过了和弦与调式等理论。在和声学中，我们会深入研究和弦的构成与进行，也就是和声（harmony）。 和弦功能每个正三和弦的上方三度或下方三度都各有一个副三和弦，由于正三和弦和相邻的副三和弦有两个共同音，因此功能接近。主和弦I的上方三度为iii，下方三度为vi，这两个副三和弦与主和弦一起，被归为主功能组（tonic）和弦，记为T（在和声小调中记为t）。主功能组和弦是最稳定的。类似">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.loli.net/2022/01/20/SQW3VGhdKFal1ZY.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/PwAspj6mQIZqxho.png">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/PwkL65ENa2qMdQA.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/2r4nQXbI3ehjFws.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/JSpGbuINz3Vmlgo.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/9FZYK8JUdNgBlmq.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/9dQWhBq6ewczZki.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/kita4zf3x729VmN.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/06/96t3BAWEvfsmK1g.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/20/VyPeAvC9afLzIR2.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/01/20/kvnjqL6yicPY7AS.jpg">
+<meta property="og:updated_time" content="2022-06-04T08:15:43.417Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·和声学基础">
+<meta name="twitter:description" content="在乐理基础中，我们学习过了和弦与调式等理论。在和声学中，我们会深入研究和弦的构成与进行，也就是和声（harmony）。 和弦功能每个正三和弦的上方三度或下方三度都各有一个副三和弦，由于正三和弦和相邻的副三和弦有两个共同音，因此功能接近。主和弦I的上方三度为iii，下方三度为vi，这两个副三和弦与主和弦一起，被归为主功能组（tonic）和弦，记为T（在和声小调中记为t）。主功能组和弦是最稳定的。类似">
+<meta name="twitter:image" content="https://s2.loli.net/2022/01/20/SQW3VGhdKFal1ZY.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2022/01/01/Harmony-Fundamentals/">
+
+
+
+
+
+  <title>学习笔记·和声学基础 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2022/01/01/Harmony-Fundamentals/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·和声学基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-01-01T17:03:05+08:00">
+                Sat, Jan 1st, 2022
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/乐理笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">乐理笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/01/01/Harmony-Fundamentals/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/01/01/Harmony-Fundamentals/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2022/01/01/Harmony-Fundamentals/" class="leancloud_visitors" data-flag-title="学习笔记·和声学基础">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在<a href="/2021/08/09/Music-Theory-Fundamentals/" title="学习笔记·乐理基础">乐理基础</a>中，我们学习过了和弦与调式等理论。在和声学中，我们会深入研究和弦的构成与进行，也就是<strong>和声（harmony）</strong>。</p>
+<h1 id="和弦功能"><a href="#和弦功能" class="headerlink" title="和弦功能"></a>和弦功能</h1><p>每个正三和弦的上方三度或下方三度都各有一个副三和弦，由于正三和弦和相邻的副三和弦有两个共同音，因此功能接近。<br>主和弦I的上方三度为iii，下方三度为vi，这两个副三和弦与主和弦一起，被归为<strong>主功能组（tonic）</strong>和弦，记为T（在和声小调中记为t）。主功能组和弦是最稳定的。<br>类似地，属和弦V和两个副三和弦vii<sup>o</sup>、iii都属于<strong>属功能组（dominant）</strong>和弦，记为D（在和声小调中记为D）。属功能组和弦含有最不稳定的导音，并且属七和弦V<sup>7</sup>和导和弦vii<sup>o</sup>中下属音和导音构成了极不协和的三全音，因此属功能组是最不稳定的。<br><strong>下属功能组（subdominant）</strong>和弦由下属和弦IV和vi、ii组成，记为S（在和声小调中记为s）。下属功能组和弦含有下属音但不含导音，因此和弦的张力介于主功能组和弦与属功能组和弦之间，可以起到从主功能组转向属功能组的衔接过渡作用。<br>七和弦的功能与三和弦相同。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">主功能组和弦（T）</th>
+<th style="text-align:center">下属功能组和弦（S）</th>
+<th style="text-align:center">属功能组和弦（D）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">vi、I、iii</td>
+<td style="text-align:center">ii、IV、vi</td>
+<td style="text-align:center">iii、V、vii<sup>o</sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+<a id="more"></a>
+<p><img src="https://s2.loli.net/2022/01/20/SQW3VGhdKFal1ZY.jpg" alt="和声发展公式" title="和声发展公式"></p>
+<p>和弦进行一般是从稳定的和弦引入到不稳定的和弦，最后又解决到稳定的和弦。<br>最常用的就是T→S→D→T，例如C大调的C—F—G—C。这样的进行，使用了下属和弦渐进地引入到属和弦，又解决了属和弦到主和弦的倾向性，称为<strong>顺功能进行（functional progression）</strong>。而与顺功能进行相反，T→D→S→T这样的和弦进行称为<strong>反功能进行（functional retrogression）</strong>。<br>同时包括主和弦、属和弦和下属和弦三种功能的进行，称为<strong>完全进行</strong>。</p>
+<p>当然，不经过下属功能组S，T→D→T的进行也是可以的。这种进行只包括主和弦和属和弦，突出属和弦的不稳定性以及向主和弦进行的倾向性，称为<strong>正格进行（authentic progression）</strong>。<br>不经过属功能组D，T→S→T的进行不具有正格进行的紧张感和戏剧性，下属和弦的倾向性不那么强，而有一种安宁、平静的感觉。这种进行只包括主和弦和下属和弦，称为<strong>变格进行（plagal progression）</strong>。</p>
+<p>上面的T、S、D中，除了使用最具代表性的I、IV、V外，也可以使用对应功能组里的副和弦替代，称为<strong>代理和弦（substitutional chord）</strong>。</p>
+<h1 id="终止式"><a href="#终止式" class="headerlink" title="终止式"></a>终止式</h1><p><strong>终止式（cadence）</strong>是乐句结尾的和声安排，在调性音乐中通常起到强调主音的作用。</p>
+<p>终止式一般分为4种：<br><strong>正格终止（authentic cadence）</strong>从属和弦解决到主和弦，即V—I，是最强的终止式。<br><strong>半终止（half cadence）</strong>以属和弦V作结，给人一种意犹未尽的感觉，因此可以作为乐句的停顿，是弱终止式。以属和弦V结束的半终止称为整个半终止，而如果以下属和弦IV结束，称为变格半终止。<br><strong>变格终止（plagal cadence）</strong>从下属和弦解决到主和弦，即IV—I。和正格终止相比，变格终止的终止感较弱，确立主音以及调性的能力也更弱。变格终止因为经常出现在圣诗“阿门”的部分，因此也称<strong>教会终止（Amen cadence）</strong>。<br><strong>阻碍终止（deceptive cadence）</strong>从属和弦开始，但不接到主和弦，一般是下中音和弦vi，即V—vi。由于属和弦后接的并不是预期的主和弦，这样的弱终止式可以创造悬念感。</p>
+<h1 id="和弦外音"><a href="#和弦外音" class="headerlink" title="和弦外音"></a>和弦外音</h1><p>不属于和弦构成音的音称为<strong>和弦外音（nonchord tone, NCT）</strong>。旋律通常是由和弦音和和弦外音共同构成的。<br>常见的和弦外音有以下5种：</p>
+<p><strong>经过音（passing tone, PT）</strong>是出现在向上或向下级进的两个和弦音之间的和弦外音。<br><strong>辅助音（auxiliary note, AUX）</strong>，也叫<strong>邻音（neighbor tone, NT）</strong>，出现在相同的两个和弦音之间，比其高一级或低一级。<br><strong>延留音（suspension, SUS）</strong>出现在强拍上，作为前一个和弦的和弦音从前一个和弦上延长到当前和弦并成为当前和弦的和弦外音，并随后解决。<br><strong>先现音（anticipation, ANT）</strong>是后一个和弦的和弦音，但出现在前一个和弦的弱拍上。<br><strong>倚音（appoggiatura, APP）</strong>出现在强拍上，作为不协和的和弦外音随后解决到和弦音上。</p>
+<!-- ![辅助音、经过音、倚音](https://s2.loli.net/2022/01/06/gnZt7srQ5djCM2V.jpg "辅助音、经过音、倚音") -->
+<p><img src="https://s2.loli.net/2022/01/06/PwAspj6mQIZqxho.png" alt="和弦外音" title="和弦外音"></p>
+<h1 id="小调式"><a href="#小调式" class="headerlink" title="小调式"></a>小调式</h1><p>在小调中，级数和弦如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">I级和弦</th>
+<th style="text-align:center">II级和弦</th>
+<th style="text-align:center">III级和弦</th>
+<th style="text-align:center">IV级和弦</th>
+<th style="text-align:center">V级和弦</th>
+<th style="text-align:center">VI级和弦</th>
+<th style="text-align:center">VII级和弦</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">i</td>
+<td style="text-align:center">ii<sup>o</sup></td>
+<td style="text-align:center">III</td>
+<td style="text-align:center">iv</td>
+<td style="text-align:center">v</td>
+<td style="text-align:center">VI</td>
+<td style="text-align:center">VII</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>大调的属和弦V有强烈解决到主和弦I的倾向，因为属和弦的三音是有强烈解决到主音倾向的导音。但在小调中，属和弦v的三音与主音是大二度的关系，并非导音而是下主音，而且属七和弦v<sup>7</sup>不含极不协和的三全音，因此解决到主和弦i的倾向就不那么强烈。也就是说，自然小调没有导音。<br>为了解决这个问题，将自然小调的VII级音升高半音，就得到了和声小调。因此，在小调调性音乐中，写到属和弦时，会临时变为和声小调。<br>但在和声小调中，VI级音和VII级音是增二度的关系，不太协和，在上行时不好奏唱，因此将VI级音也升高半音，就得到了旋律小调。在小调调性音乐中，音阶上行会使用旋律小调，而下行恢复自然小调。</p>
+<h1 id="中古调式"><a href="#中古调式" class="headerlink" title="中古调式"></a>中古调式</h1><p>从自然音阶的任何一个音开始，往上数7个音，就能得到一种调式。这7种调式在中世纪罗马教会的音乐中广为使用，故称<strong>中古调式</strong>或<strong>教会调式（Gregorian mode）</strong>。<br>7种中古调式分别是：</p>
+<p><strong>Ionian（伊奥尼亚）调式</strong>，音阶为do、re、mi、fa、sol、la、si，按“全全半全全全半”排列，也就是今天的大调。Ionian调式通常给人以欢快的感觉。<br><img src="https://s2.loli.net/2022/01/06/PwkL65ENa2qMdQA.jpg" alt="Ionian调式"></p>
+<p><strong>Dorian（多利亚）调式</strong>，音阶为re、mi、fa、sol、la、si、do，按“全半全全全半全”排列。Dorian调式特别的大六度使得其听感不像Aeolian那样悲伤，而是悠闲、神秘的感觉。I级小七和弦同样是Dorian调式的特征之一。例如，英国民歌《斯卡布罗集市》（<em>Scarborough Fair</em>）就使用了Dorian调式。<br><img src="https://s2.loli.net/2022/01/06/2r4nQXbI3ehjFws.jpg" alt="Dorian调式" title="Dorian调式"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=3405868&auto=0&height=66"></iframe>
+
+<p><strong>Phrygian（弗里几亚）调式</strong>，音阶为mi、fa、sol、la、si、do、re，按“半全全全半全全”排列。Phrygian调式的特别之处在于I级和II级的小二度关系，这使其有着独特的西班牙风味；而更常用的Phrygian Dominant调式将Phrygian调式的第3个音升高了半音，更有异域风情。<br><img src="https://s2.loli.net/2022/01/06/JSpGbuINz3Vmlgo.jpg" alt="Phrygian调式" title="Phrygian调式"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1338149091&auto=0&height=66"></iframe>
+
+<p><strong>Lydian（利底亚）调式</strong>，音阶为fa、sol、la、si、do、re、mi，按“全全全半全全半”排列。Lydian调式最具特色的音是IV级的增四度，同时，Lydian调式具有大调色彩，有奇幻飘渺的感觉。<br><img src="https://s2.loli.net/2022/01/06/9FZYK8JUdNgBlmq.jpg" alt="Lydian调式" title="Lydian调式"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1003035&auto=0&height=66"></iframe>
+
+<p><strong>Mixolydian（混合利底亚）调式</strong>，音阶为sol、la、si、do、re、mi、fa，按“全全半全全半全”排列。Mixolydian调式同样具有大调色彩，其特征音是于VI级的小七度，因此明亮度没那么强。Mixolydian调式有点像大调和小调的混合，听感复杂，可以是柔和、庄严或是活力的。<br><img src="https://s2.loli.net/2022/01/06/9dQWhBq6ewczZki.jpg" alt="Mixolydian调式" title="Mixolydian调式"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=4940920&auto=0&height=66"></iframe>
+
+<p><strong>Aeolian（爱奥尼亚）调式</strong>，音阶为la、si、do、re、mi、fa、sol，按“全半全全半全全”排列，也就是今天的自然小调。Aeolian调式通常给人以悲伤的感觉。<br><img src="https://s2.loli.net/2022/01/06/kita4zf3x729VmN.jpg" alt="Aeolian调式" title="Aeolian调式"></p>
+<p><strong>Locrian（洛克里亚）调式</strong>，音阶为si、do、re、mi、fa、sol、la，按“半全全半全全全”排列。Locrian调式是唯一一个V级音是减五度的调式，因此主和弦是减三和弦，使其情感色彩黑暗、恐怖。<br><img src="https://s2.loli.net/2022/01/06/96t3BAWEvfsmK1g.jpg" alt="Locrian调式" title="Locrian调式"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1876515300&auto=0&height=66"></iframe>
+
+<p>和弦可以任意调式互换，借用同主音的其它调式上的和弦。</p>
+<h1 id="变化和弦"><a href="#变化和弦" class="headerlink" title="变化和弦"></a>变化和弦</h1><p>除了以前提到的最基础的三和弦和七和弦外，和弦还有几种变化形式。</p>
+<p><strong>挂留和弦（suspended chord）</strong>将和弦的三度音换成了二度音或四度音，记作sus2或sus4。例如大三和弦C的构成音是C、E、G，挂四和弦C<sup>sus4</sup>则是C、F、G。<br><strong>加音和弦（added tone chord）</strong>在原和弦的基础上增加了某个音，用add表示。例如大三和弦C的构成音是C、E、G，加六和弦C<sup>add6</sup>则是C、E、G、A，增加了六度音。通常，加六和弦C<sup>add6</sup>记为C<sup>6</sup>（易与三和弦第一转位的六和弦混淆）；加九和弦C<sup>add9</sup>的add不能省略，但因为是增加了二度音，也称加二和弦，记为C<sup>add2</sup>或C<sup>2</sup>（易与七和弦第三转位的二和弦混淆）。<br><strong>省音和弦（omitted tone chord）</strong>在原和弦的基础上省略了某个音，用omit或no表示。例如大三和弦C的构成音是C、E、G，C (omit 3)或C (no 3)则是C、G，省略了三音。这个和弦只有根音和五音，也被称为<strong>强力和弦（power chord）</strong>或<strong>五和弦</strong>，记作C5。</p>
+<p>挂留和弦在流行音乐里大量使用，最常见的用法就是直接替代三和弦。挂二和弦有向其属和弦的倾向，例如C<sup>sus2</sup>有向G的倾向；挂四和弦可以看作其下属音的挂二，所以有回到主和弦的倾向，例如C<sup>sus4</sup>（F<sup>sus2</sup>）有回到C的倾向。<br>加九和弦同样是在流行音乐中非常常见的和弦，可以直接替代三和弦。加六和弦使用较少，通常是I级和IV级加六和弦，用于替代三和弦。</p>
+<h1 id="离调"><a href="#离调" class="headerlink" title="离调"></a>离调</h1><p>在一个调性的和弦进行中，临时地插入调外的和弦，然后又迅速地回到原调，这个过程称为<strong>离调</strong>，这些调外和弦所属的调称为<strong>副调</strong>。以副调的主和弦作为临时主和弦，与主调一样，副调上也有<strong>副下属和弦（secondary subdominant）</strong>和<strong>副属和弦（secondary dominant）</strong>。<br>离调通常是先进入副属和弦或副下属和弦，再进入临时主和弦，然后回到主调或进行新的离调。</p>
+<p>以C大调的和弦进行C—B—Em为例，B显然是C大调的调外和弦，因为C大调的VII级和弦是Bdim。但如果以Em为临时主和弦，也就是以e小调为副调，B就是副调的V级和弦，即副属和弦。B还可以换成紧张感更强的属七和弦B<sup>7</sup>，构成C—B<sup>7</sup>—Em。<br>副属和弦可以不断堆叠，例如E<sup>7</sup>—A<sup>7</sup>—D<sup>7</sup>—G<sup>7</sup>—C，每一个和弦都是前一个和弦的属和弦。<br>副下属和弦也类似，例如A♭<sup>7</sup>—E♭<sup>7</sup>—B♭<sup>7</sup>—F<sup>7</sup>—C，每一个和弦都是前一个和弦的下属和弦。</p>
+<p>副属和弦中，有一个比较特殊的和弦，临时主和弦的属和弦的属和弦——<strong>重属和弦（tertiary dominant）</strong>。例如，D<sup>7</sup>—G<sup>7</sup>—C中的D<sup>7</sup>就是重属七和弦。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="800" height="810" src="../../../../images/circleOfFifths/" "></iframe>
+
+<p>在五度圈上，逆时针走一格就是正格终止，如G—C；顺时针走一格就是变格终止，如F—C。因此，逆时针走数格就可以得到副属和弦的堆叠，例如E—A—D—G—C；顺时针走数格就可以得到副下属和弦的堆叠，例如A♭—E♭—B♭—F—C。</p>
+<h1 id="251进行"><a href="#251进行" class="headerlink" title="251进行"></a>251进行</h1><p>II级→V级→I级的和弦进行符合S→D→T，是终止感非常强的进行，常见于流行音乐中。一般，使用II级七和弦→V级属七和弦→I级三和弦，俗称<strong>251进行</strong>，如C大调下的Dm<sup>7</sup>—G<sup>7</sup>—C。临时251可以丰富和声进行，巧妙地用于转调。</p>
+<p>以目标和弦的主音为临时主音，在对应的副调中找到II级音和V级音，构造和弦。在大调中，使用II级小七和弦→V级属七和弦→I级大三和弦，即ii<sup>7</sup>—V<sup>7</sup>—I。在小调中，使用II级半减七和弦→V级属七和弦→I级小三和弦，即ii<sup>ø</sup>—V<sup>7</sup>—i。大、小调都使用属七和弦以保留倾向性。<br>例如，以C为目标和弦，可以使用Dm<sup>7</sup>—G<sup>7</sup>—C；以Am为目标和弦，可以使用B<sup>ø</sup>—E<sup>7</sup>—Am。</p>
+<h1 id="拿坡里和弦"><a href="#拿坡里和弦" class="headerlink" title="拿坡里和弦"></a>拿坡里和弦</h1><p><strong>拿坡里和弦（Neapolitan chord）</strong>是降二级的大三和弦，即♭II。例如，C大调的二级是D，那么降二级就是D♭，其拿坡里和弦就是D♭和弦——D♭、F、A♭。<br>拿坡里和弦也译作<strong>那不勒斯和弦</strong>，名称源于意大利南部的城市那不勒斯（Naples, <small>it</small> <em>Napoli</em>），这里以斯卡拉蒂（Alessandro Scarlatti，1660－1725）为代表的那不勒斯学派将拿坡里和弦发扬光大。</p>
+<p>拿坡里和弦可以替代下属功能组和弦。<br>拿坡里和弦也可以使用转位D♭/F或D♭/A♭，但最常使用的是其第一转位D♭/F。<br>由于拿坡里和弦通常以第一转位的形式出现，故称作<strong>拿坡里六和弦（Neapolitan sixth）</strong>，记作♭II<sup>6</sup>或N<sup>6</sup>。</p>
+<h1 id="三全音代理"><a href="#三全音代理" class="headerlink" title="三全音代理"></a>三全音代理</h1><p>属七和弦很强的倾向性是由于其中极不协和的三全音，如果另一个属七和弦有同样的三全音，那么就可以替代原来的属七和弦，这就是<strong>三全音代理（tritone substitution）</strong>。<br>例如，G<sup>7</sup>中的B和F是三全音，而B♭<sup>7</sup>中也有F和C♭（即B），是同样的三全音，因此G<sup>7</sup>和D♭<sup>7</sup>可以相互替换。C大调中，G<sup>7</sup>是五级和弦，D♭<sup>7</sup>是降二级和弦，所以三全音代理也叫<strong>降二代五</strong>。<br>要注意的是，同样是降二级和弦，拿坡里和弦用于替代下属功能组和弦，而三全音代理是替代属七和弦。<br>有了三全音代理，251进行就可以替换为2-♭2-1进行。和弦前可以接上方五度音的属七和弦，也可以接高半音的属七和弦。<br>五度圈中，三全音代理的两个属七和弦的构成音正好在对面。</p>
+<h1 id="四六和弦"><a href="#四六和弦" class="headerlink" title="四六和弦"></a>四六和弦</h1><p>四六和弦即三和弦的第二转位，根据功能常可以分为三类：</p>
+<p><strong>终止四六和弦（cadential six-four chord）</strong>是最常见的四六和弦，记作K<sub>4</sub><sup style="margin-left:-6px">6</sup>。终止四六和弦是V—I终止式前使用的I级四六和弦，即I<sub>4</sub><sup style="margin-left:-6px">6</sup>—V—I，用功能来表示就是K<sub>4</sub><sup style="margin-left:-6px">6</sup>—D—T。终止四六和弦同时具有主功能和属功能。</p>
+<p><img src="https://s2.loli.net/2022/01/20/VyPeAvC9afLzIR2.jpg" alt="终止四六和弦" title="终止四六和弦"></p>
+<p><strong>经过四六和弦（passing six-four chord）</strong>是最低音恰好是经过音的四六和弦。例如，经过主三和弦和其六和弦（或者反过来）的属四六和弦，T—D<sub>4</sub><sup style="margin-left:-6px">6</sup>—T<sup>6</sup>或T<sup>6</sup>—D<sub>4</sub><sup style="margin-left:-6px">6</sup>—T；在下属三和弦和其六和弦（或者反过来）之间的主四六和弦同样是经过四六和弦，S—T<sub>4</sub><sup style="margin-left:-6px">6</sup>—S<sup>6</sup>或S<sup>6</sup>—T<sub>4</sub><sup style="margin-left:-6px">6</sup>—S。</p>
+<p><strong>辅助四六和弦（auxiliary six-four chord）</strong>也叫<strong>持续低音四六和弦（pedal six-four chord）</strong>，低音和前后和弦相同。两个主三和弦之间的下属四六和弦（T—S<sub>4</sub><sup style="margin-left:-6px">6</sup>—T）或者两个属三和弦之间的主四六和弦（D—T<sub>4</sub><sup style="margin-left:-6px">6</sup>—D）都是辅助四六和弦。</p>
+<h1 id="减七和弦与半减七和弦"><a href="#减七和弦与半减七和弦" class="headerlink" title="减七和弦与半减七和弦"></a>减七和弦与半减七和弦</h1><p>减七和弦由根音往上堆叠三个小三度构成，因此减七和弦内存在两组三全音，有强烈的紧张感。减七和弦往往有阴森或不安的感觉，而减七和弦接到另一个减七和弦，连续地半音下降时最为明显，这种用法称为<strong>减七连锁</strong>。</p>
+<p><img src="https://s2.loli.net/2022/01/20/kvnjqL6yicPY7AS.jpg" alt="减七连锁" title="减七连锁"></p>
+<p>减七和弦还有一些特殊的性质。一个八度内有12个音，因此表面上能构成12种减七和弦。但实际上，构成音不同的减七和弦只有3种，即C♭dim<sup>7</sup>（G♯dim<sup>7</sup>、Fdim<sup>7</sup>、Ddim<sup>7</sup>）、Cdim<sup>7</sup>（Adim<sup>7</sup>、G♭dim<sup>7</sup>、E♭dim<sup>7</sup>）和C♯dim<sup>7</sup>（B♭dim<sup>7</sup>、Gdim<sup>7</sup>、Edim<sup>7</sup>）。将减七和弦中的一个音作为导音，接到对应的主音，就可以实现转调。例如，Bdim<sup>7</sup>的构成音是B、D、F、G♯，那么对应的就可以接到C、E♭、G♭、A，接到小调Cm、E♭m、G♭m、Am也是可以的。这样，每种减七和弦就可以接8种和弦，3种减七和弦一共就有24种接法，减七和弦因此能成为万能转调和弦。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26705085&auto=0&height=66"></iframe>
+
+<p>半减七和弦最自然的用法是作为小调II级或大调VII级和弦，尤其是在小调251进行中使用颇多。<br>半减七和弦的根音、三音、五音组成了一个减三和弦，因此会有减三和弦的倾向性，可以直接替代对应的属和弦，例如用E<sup>ø</sup>—F替换Edim—F。<br>半减七和弦还有一个常见用法是作为刹车和弦，制造悬停感。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2022/01/01/Harmony-Fundamentals/" title="学习笔记·和声学基础">https://luckyfuy.top/2022/01/01/Harmony-Fundamentals/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Music/" rel="tag"><i class="fa fa-tag"></i> Music</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/11/06/Vector/" rel="next" title="学习笔记·向量">
+                <i class="fa fa-chevron-left"></i> 学习笔记·向量
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/01/15/Wikipedia-Mirror/" rel="prev" title="维基百科镜像">
+                维基百科镜像 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#和弦功能"><span class="nav-number">1.</span> <span class="nav-text">和弦功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终止式"><span class="nav-number">2.</span> <span class="nav-text">终止式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#和弦外音"><span class="nav-number">3.</span> <span class="nav-text">和弦外音</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小调式"><span class="nav-number">4.</span> <span class="nav-text">小调式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中古调式"><span class="nav-number">5.</span> <span class="nav-text">中古调式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变化和弦"><span class="nav-number">6.</span> <span class="nav-text">变化和弦</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#离调"><span class="nav-number">7.</span> <span class="nav-text">离调</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#251进行"><span class="nav-number">8.</span> <span class="nav-text">251进行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拿坡里和弦"><span class="nav-number">9.</span> <span class="nav-text">拿坡里和弦</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三全音代理"><span class="nav-number">10.</span> <span class="nav-text">三全音代理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四六和弦"><span class="nav-number">11.</span> <span class="nav-text">四六和弦</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#减七和弦与半减七和弦"><span class="nav-number">12.</span> <span class="nav-text">减七和弦与半减七和弦</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="平面向量有一些量，既具有大小，也具有方向，例如物理学中的力和速度。这样的量，我们称之为向量（vector），在物理上也称为矢量。与之相对，只有大小、没有方向的量（实际上就是实数），我们称之为标量（scalar）或数量。 在空间中，我们可以用一个带箭头的有向线段来表示向量，箭头指向表示方向，线段长度表示大小。在欧氏几何中，向量被严格定义为空间中点的一个有序对$(A, B)$，$A$为起点（initi">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·向量">
+<meta property="og:url" content="https://luckyfuy.top/2021/11/06/Vector/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="平面向量有一些量，既具有大小，也具有方向，例如物理学中的力和速度。这样的量，我们称之为向量（vector），在物理上也称为矢量。与之相对，只有大小、没有方向的量（实际上就是实数），我们称之为标量（scalar）或数量。 在空间中，我们可以用一个带箭头的有向线段来表示向量，箭头指向表示方向，线段长度表示大小。在欧氏几何中，向量被严格定义为空间中点的一个有序对$(A, B)$，$A$为起点（initi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2021/11/06/oCwfvqamj5WSMc8.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/06/vzleKY8CmioXgAw.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/06/QPnViayAvKcSJsw.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/07/Zzfun5GQ729UlMA.png">
+<meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/07/eNIwDBJaZT1ES6F.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/13/W1HYpfTsZieQIM3.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/17/LwSr17EhMjNOpWb.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/17/wpLrDenHo91xaPS.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/18/nzPivSerXxFcMdO.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/18/JLW4n26rogspdBM.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/18/5XMePgl3szNuU1p.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/18/bsUgGYqFXIPWcJu.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/18/XWnj5siwmRYu9ch.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/18/6sxVFd4WyLwH9SZ.png">
+<meta property="og:updated_time" content="2022-06-04T08:14:36.153Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·向量">
+<meta name="twitter:description" content="平面向量有一些量，既具有大小，也具有方向，例如物理学中的力和速度。这样的量，我们称之为向量（vector），在物理上也称为矢量。与之相对，只有大小、没有方向的量（实际上就是实数），我们称之为标量（scalar）或数量。 在空间中，我们可以用一个带箭头的有向线段来表示向量，箭头指向表示方向，线段长度表示大小。在欧氏几何中，向量被严格定义为空间中点的一个有序对$(A, B)$，$A$为起点（initi">
+<meta name="twitter:image" content="https://i.loli.net/2021/11/06/oCwfvqamj5WSMc8.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2021/11/06/Vector/">
+
+
+
+
+
+  <title>学习笔记·向量 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2021/11/06/Vector/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·向量</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-11-06T15:19:38+08:00">
+                Sat, Nov 6th, 2021
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/11/06/Vector/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/11/06/Vector/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2021/11/06/Vector/" class="leancloud_visitors" data-flag-title="学习笔记·向量">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  6.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  31
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="平面向量"><a href="#平面向量" class="headerlink" title="平面向量"></a>平面向量</h1><p>有一些量，既具有大小，也具有方向，例如物理学中的力和速度。这样的量，我们称之为<strong>向量（vector）</strong>，在物理上也称为<strong>矢量</strong>。与之相对，只有大小、没有方向的量（实际上就是实数），我们称之为<strong>标量（scalar）</strong>或<strong>数量</strong>。</p>
+<p>在空间中，我们可以用一个带箭头的有向线段来表示向量，箭头指向表示方向，线段长度表示大小。在欧氏几何中，向量被严格定义为空间中点的一个有序对$(A, B)$，$A$为<strong>起点（initial point）</strong>，$B$为<strong>终点（terminal point）</strong>，记作$\overrightarrow{AB}$。有向线段的长度$|\overrightarrow{AB}|$称为向量的<strong>长度</strong>或<strong>模（magnitude）</strong>。</p>
+<p>在不需要知道向量的起点和终点的情况下，向量可以用粗体字母表示，如向量$\mathbf{a}, \mathbf{b}$。手写可以用$\vec{a}, \vec{b}$。</p>
+<a id="more"></a>
+<p>长度为$0$，也就是起点和终点相同的向量，称为<strong>零向量（zero vector）</strong>，记作$\mathbf{0}$。长度为$1$的向量称为<strong>单位向量（unit vector）</strong>。</p>
+<p>两个非零向量$\overrightarrow{AB}, \overrightarrow{CD}$，如果$AB \parallel CD$或$A, B, C, D$四点共线，那么称这两个向量为<strong>平行向量（parallel vector）</strong>。向量$\mathbf{a}, \mathbf{b}$平行，记作$\mathbf{a} \parallel \mathbf{b}$。平行向量通过平移可以放到同一条直线上，因此平行向量也叫<strong>共线向量（collinear vector）</strong>。<br>如图，两个平行向量$\overrightarrow{AB}, \overrightarrow{CD}$，作平行四边形$ABEC$后若线段$CE, CD$存在包含关系，则称之为<strong>同向的</strong>，否则称之为<strong>反向的</strong>。<br><img src="https://i.loli.net/2021/11/06/oCwfvqamj5WSMc8.png" alt="同向向量" title="同向向量"></p>
+<p>若两个同向向量$\mathbf{a}, \mathbf{b}$长度相等，则称这两个向量<strong>相等</strong>，记作$\mathbf{a} = \mathbf{b}$。<br>若两个反向向量$\mathbf{a}, \mathbf{b}$长度相等，则称这两个向量<strong>相反</strong>，记作$\mathbf{a} = -\mathbf{b}$或$\mathbf{b} = -\mathbf{a}$。易知$-(-\mathbf{a}) = \mathbf{a}$。</p>
+<p>零向量与任意向量平行；<br>所有零向量相等，且互为相反。</p>
+<h2 id="线性运算"><a href="#线性运算" class="headerlink" title="线性运算"></a>线性运算</h2><p>由位移的合成得到启发，可以定义向量的加法：<br>设非零向量$\mathbf{a}, \mathbf{b}$，取任意一点$A$，作$\overrightarrow{AB} = \mathbf{a}, \overrightarrow{BC} = \mathbf{b}$，则</p>
+<script type="math/tex; mode=display">\mathbf{a} + \mathbf{b} = \overrightarrow{AC}</script><p>这种求向量和的方法叫做<strong>三角形法则</strong>。</p>
+<p>而由力的合成，可以用另一种方式定义向量的加法：<br>设非零向量$\mathbf{a}, \mathbf{b}$，取任意一点$A$，作$\overrightarrow{AB} = \mathbf{a}, \overrightarrow{AC} = \mathbf{b}$，作平行四边形$ABDC$，则</p>
+<script type="math/tex; mode=display">\mathbf{a} + \mathbf{b} = \overrightarrow{AD}</script><p>这种求向量和的方法叫做<strong>平行四边形法则</strong>。</p>
+<p>从几何上不难证明平行四边形法则和三角形法则是等价的。</p>
+<p><img src="https://i.loli.net/2021/11/06/vzleKY8CmioXgAw.png" alt="向量加法" title="向量加法"></p>
+<p>零向量与任意向量相加结果不变，即$\mathbf{a} + \mathbf{0} = \mathbf{0} + \mathbf{a} = \mathbf{a}$。<br>向量加法也满足交换律与结合律。</p>
+<p>根据三角形三边关系的不等式，可以得到<strong>三角不等式（triangle inequality）</strong>：</p>
+<script type="math/tex; mode=display">||\mathbf{a}| - |\mathbf{b}|| \le |\mathbf{a} + \mathbf{b}| \le |\mathbf{a}| + |\mathbf{b}|</script><p>向量的减法定义为：</p>
+<script type="math/tex; mode=display">\mathbf{a} - \mathbf{b} = \mathbf{a} + (-\mathbf{b})</script><p><img src="https://i.loli.net/2021/11/06/QPnViayAvKcSJsw.png" alt="向量减法" title="向量减法"></p>
+<p>设任意向量$\mathbf{a} = \overrightarrow{AB}$和实数$\lambda$。<br>$\lambda &gt; 0$时，将线段$AB$延长（缩短）到$\lambda$倍，即$|AC| = \lambda |AB|$，此时定义向量的数乘为：</p>
+<script type="math/tex; mode=display">\lambda \mathbf{a} = \overrightarrow{AC}</script><p>$\lambda &lt; 0$时，定义：</p>
+<script type="math/tex; mode=display">\lambda \mathbf{a} = -((-\lambda) \mathbf{a})</script><p>$\lambda = 0$时，定义</p>
+<script type="math/tex; mode=display">0 \mathbf{a} = \mathbf{0}</script><p>这样就完整地定义了向量的数乘。由定义可得，</p>
+<script type="math/tex; mode=display">|\lambda \mathbf{a}| = |\lambda| |\mathbf{a}|</script><p>数乘满足以下运算律：</p>
+<ul>
+<li>结合律：$(\lambda \mu) \mathbf{a} = \lambda (\mu \mathbf{a}) = \mu (\lambda \mathbf{a})$</li>
+<li>标量分配律：$(\lambda + \mu) \mathbf{a} = \lambda \mathbf{a} + \mu \mathbf{a}$</li>
+<li>向量分配律：$\lambda (\mathbf{a} + \mathbf{b}) = \lambda \mathbf{a} + \lambda \mathbf{b}$</li>
+</ul>
+<p><strong>共线向量定理</strong>有：<br>非零向量$\mathbf{a}$与向量$\mathbf{b}$共线的充要条件是：存在唯一实数$\lambda$，使得$\mathbf{b} = \lambda \mathbf{a}$。<br>证明如下：<br><em>充分性</em>：由数乘定义可知，$\mathbf{a}, \mathbf{b}$共线。<br><em>必要性</em>：$\mathbf{b} = \dfrac{|\mathbf{b}|}{|\mathbf{a}|} \mathbf{a}$，而$\mathbf{a}$非零。<br><em>唯一性</em>：若$\mathbf{b} = \lambda \mathbf{a} = \mu \mathbf{a}$，则$(\lambda - \mu) \mathbf{a} = \mathbf{0}$。由于$\mathbf{a}$非零，所以$\lambda = \mu$。$\Box$</p>
+<p>由共线向量定理，可以得到一个推论：<br>设$A, B, C$为平面内三点，则三点共线的充要条件是：存在实数$\lambda, \mu$满足$\lambda + \mu = 1$，且对于平面内任意一点$O$都有$\overrightarrow{OC} = \lambda \overrightarrow{OA} + \mu \overrightarrow{OB}$。</p>
+<p>向量的加、减、数乘统称为向量的<strong>线性运算</strong>，向量线性运算的结果仍是向量。<br>设向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{n}$，实数$\lambda_{1}, \cdots, \lambda_{n}$不全为零，则称$\sum\limits_{i=1}^{n} \lambda_{i} \mathbf{a}_{i}$为它们的<strong>线性组合（linear combination）</strong>。</p>
+<h2 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h2><p>物理中学过，如果力$\mathbf{F}$与位移$\mathbf{x}$的夹角为$\theta$，则功</p>
+<script type="math/tex; mode=display">W = |\mathbf{F}| |\mathbf{x}| \cos \theta</script><p>我们可以根据这个结果来定义向量的数量积。<br>设$O$为平面内一点，非零向量$\mathbf{a} = \overrightarrow{OA}, \mathbf{b} = \overrightarrow{OB}$，则称$\angle AOB$为向量$\mathbf{a}, \mathbf{b}$的<strong>夹角（included angle）</strong>，记作$\langle \mathbf{a}, \mathbf{b} \rangle, \langle \mathbf{a}, \mathbf{b} \rangle \in [0, \pi]$。<br>显然，夹角为$0$时，两个向量同向；夹角为$\pi$时，两个向量反向。若夹角为$\dfrac{\pi}{2}$，则称两个向量<strong>垂直（perpendicular）</strong>，记作$\mathbf{a} \perp \mathbf{b}$。<br><img src="https://i.loli.net/2021/11/07/Zzfun5GQ729UlMA.png" alt="夹角" title="夹角"></p>
+<p>设向量$\mathbf{a}, \mathbf{b}$的夹角为$\theta$，定义非零向量$\mathbf{a}, \mathbf{b}$的<strong>数量积（scalar product）</strong>或<strong>内积（inner product）</strong>或<strong>点积（dot product）</strong>（严格说来，数量积、内积、点积是有区别的，但这里不作区分）为：</p>
+<script type="math/tex; mode=display">\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos \theta</script><p>注意，向量之间用的是表示点乘运算的点号$\cdot$（读作dot）。</p>
+<p>规定零向量与任意向量的数量积都是$0$。<br>这样，功实际上就是一个数量积：$W = \mathbf{F} \cdot \mathbf{x}$。<br>与线性运算不同，两个向量的数量积是一个标量。</p>
+<p>由数量积的定义可得：</p>
+<script type="math/tex; mode=display">\langle \mathbf{a}, \mathbf{b} \rangle = \arccos \dfrac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| |\mathbf{b}|}</script><p>两个相等向量的数量积$\mathbf{a} \cdot \mathbf{a}$记作$\mathbf{a}^{2}$。易得$\mathbf{a}^{2} = |\mathbf{a}|^{2}$，即$|\mathbf{a}| = \sqrt{\mathbf{a}^{2}}$。</p>
+<p>显然，对于非零向量$\mathbf{a}, \mathbf{b}$，$\mathbf{a} \perp \mathbf{b}$的充要条件是$\mathbf{a} \cdot \mathbf{b} = 0$。这个定理可以用于证明几何上的垂直。</p>
+<p>数量积满足以下运算律：</p>
+<ul>
+<li>交换律：$\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}$</li>
+<li>数乘结合律：$(\lambda \mathbf{a}) \cdot \mathbf{b} = \lambda (\mathbf{a} \cdot \mathbf{b}) = \mathbf{a} \cdot (\lambda \mathbf{b})$</li>
+<li>分配律：$(\mathbf{a} + \mathbf{b}) \cdot \mathbf{c} = \mathbf{a} \cdot \mathbf{c} + \mathbf{b} \cdot \mathbf{c}$</li>
+</ul>
+<p>可以推出，</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& (\mathbf{a} + \mathbf{b})^{2} = \mathbf{a}^{2} + 2 \mathbf{a} \cdot \mathbf{b} + \mathbf{b}^{2} \\
+& (\mathbf{a} + \mathbf{b}) \cdot (\mathbf{a} - \mathbf{b}) = \mathbf{a}^{2} - \mathbf{b}^{2}
+\end{align}</script><p><img src="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png" alt><br>这样，就可以用向量来证明余弦定理了（<a href="/2019/11/24/Proofs-in-Triangle/#余弦定理">几何证明</a>、<a href="/2021/05/14/Function/#解三角形">三角证明</a>）：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+a^{2} &= |\overrightarrow{BC}|^{2} \\
+&= |\overrightarrow{AC} - \overrightarrow{AB}|^{2} \\
+&= |\overrightarrow{AC}|^{2} + |\overrightarrow{AB}|^{2} - 2 \overrightarrow{AC} \cdot \overrightarrow{AB} \\
+&= b^{2} + c^{2} - 2bc \cos A \quad \Box
+\end{align}</script><p>设非零向量$\mathbf{a} = \overrightarrow{OA}, \mathbf{b} = \overrightarrow{OB}$，作$AA_{1} \perp OB$，垂足为$A_{1}$，则称向量$\overrightarrow{OA_{1}}$为向量$\mathbf{a}$在$\mathbf{b}$上的<strong>投影向量（projection）</strong>，记作$\operatorname{proj}_{\mathbf{b}} \mathbf{a}$。显然，投影向量与投影的对象向量总是共线。<br>从投影的角度来看，我们可以认为数量积$\mathbf{a} \cdot \mathbf{b} = |\operatorname{proj}_{\mathbf{b}} \mathbf{a}| |\mathbf{b}| \operatorname{sgn} (\cos \theta) = (\operatorname{proj}_{\mathbf{b}} \mathbf{a}) \cdot \mathbf{b}$。</p>
+<p><img src="https://i.loli.net/2021/11/07/eNIwDBJaZT1ES6F.png" alt="投影" title="投影"></p>
+<p>由$-1 \le \cos \langle \mathbf{a}, \mathbf{b} \rangle \le 1$，可以得到一个非常重要的不等式——<strong>柯西-施瓦茨不等式（Cauchy–Schwarz inequality）</strong>：</p>
+<script type="math/tex; mode=display">|\mathbf{a} \cdot \mathbf{b}| \le |\mathbf{a}| \cdot |\mathbf{b}|</script><p>等号成立当且仅当$\mathbf{a} \parallel \mathbf{b}$。</p>
+<p>此外，还有一个解题时常用的等式——<strong>极化恒等式（polarization identity）</strong>：</p>
+<script type="math/tex; mode=display">\mathbf{a} \cdot \mathbf{b} = \dfrac{1}{4} (|\mathbf{a} + \mathbf{b}|^{2} - |\mathbf{a} - \mathbf{b}|^{2})</script><p>证明非常简单：<br>由</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& (\mathbf{a} + \mathbf{b})^{2} = \mathbf{a}^{2} + 2 \mathbf{a} \cdot \mathbf{b} + \mathbf{b}^{2} \\
+& (\mathbf{a} - \mathbf{b})^{2} = \mathbf{a}^{2} - 2 \mathbf{a} \cdot \mathbf{b} + \mathbf{b}^{2}
+\end{align}</script><p>两式相减，即可得$\mathbf{a} \cdot \mathbf{b} = \dfrac{1}{4} (|\mathbf{a} + \mathbf{b}|^{2} - |\mathbf{a} - \mathbf{b}|^{2})$。$\Box$</p>
+<h2 id="坐标表示"><a href="#坐标表示" class="headerlink" title="坐标表示"></a>坐标表示</h2><p><strong>平面向量基本定理</strong>：<br>如果$\mathbf{e}_{1}, \mathbf{e}_{2}$是同一平面内的两个不共线向量，那么对于这一平面内的任一向量$\mathbf{a}$，有且只有一对实数$\lambda_{1}, \lambda_{2}$，使得</p>
+<script type="math/tex; mode=display">\mathbf{a} = \lambda_{1} \mathbf{e}_{1} + \lambda_{2} \mathbf{e}_{2}</script><p>证明：<br><em>存在性</em>：如图，设$\mathbf{e}_{1} = \overrightarrow{OA}, \mathbf{e}_{2} = \overrightarrow{OB}, \mathbf{a} = \overrightarrow{OC}$。<br><img src="https://i.loli.net/2021/11/13/W1HYpfTsZieQIM3.png" alt><br>过点$C$作$OA, OB$的平行线分别交$OB, OA$于点$E, D$，则$ODCE$为平行四边形。根据向量加法的定义，$\mathbf{a} = \overrightarrow{OD} + \overrightarrow{OE}$。根据共线向量定理，存在实数$\lambda_{1}, \lambda_{2}$使得$\overrightarrow{OD} = \lambda_{1} \mathbf{e}_{1}, \overrightarrow{OE} = \lambda_{2} \mathbf{e}_{2}$。故$\mathbf{a} = \lambda_{1} \mathbf{e}_{1} + \lambda_{2} \mathbf{e}_{2}$。<br><em>唯一性</em>：设$\mathbf{a} = \lambda_{1} \mathbf{e}_{1} + \lambda_{2} \mathbf{e}_{2} = \mu_{1} \mathbf{e}_{1} + \mu_{2} \mathbf{e}_{2}$，则$(\lambda_{1} - \mu_{1}) \mathbf{e}_{1} = (\mu_{2} - \lambda_{2}) \mathbf{e}_{2}$。如果$\lambda_{1} \ne \mu_{1}$，那么$\mathbf{e}_{1} = \dfrac{\mu_{2} - \lambda_{2}}{\lambda_{1} - \mu_{1}} \mathbf{e}_{2}$。根据共线向量定理，$\mathbf{e}_{1}, \mathbf{e}_{2}$共线，矛盾。故$(\mu_{2} - \lambda_{2}) \mathbf{e}_{2} = \mathbf{0}$，因为$\mathbf{e}_{2}$非零，所以$\lambda_{2} = \mu_{2}$。$\Box$</p>
+<p>对于平面内任意两个不共线向量$\mathbf{e}_{1}, \mathbf{e}_{2}$，我们称$\{\mathbf{e}_{1}, \mathbf{e}_{2}\}$为这个平面的一组<strong>基（basis）</strong>或<strong>基底</strong>，$\mathbf{e}_{1}, \mathbf{e}_{2}$称为<strong>基向量（basis vector）</strong>。<br>平面内的一点$O$与一组基$\{\mathbf{e}_{1}, \mathbf{e}_{2}\}$共同构成了这个平面的<strong>仿射标架（affine frame）</strong>，又称<strong>仿射坐标系（affine coordinate system）</strong>，记作$\{O; \mathbf{e}_{1}, \mathbf{e}_{2}\}$。$O$称为<strong>原点（origin）</strong>，平面内任意一点$A$的坐标都可以用向量$\overrightarrow{OA}$表示。这样，一个点与一个向量一一对应就转换为了一个点与一个二元实数对一一对应，每一点的坐标都可以表示为$(\lambda_{1}, \lambda_{2})$。点在仿射标架中的坐标称为<strong>仿射坐标</strong>。<br>如果基向量两两垂直，则称该仿射标架为<strong>直角标架</strong>，也称<strong>直角坐标系</strong>。点在直角坐标系中的坐标称为直角坐标。直角坐标系是特殊的仿射坐标系，它有一些很好的性质，在进行相关计算时会变得非常简便。</p>
+<p>在平面内建立一个直角坐标系$xOy$，分别记$x, y$轴正方向的单位向量为$\mathbf{i}, \mathbf{j}$，就得到了我们熟悉的<strong>平面直角坐标系（二维笛卡尔坐标系，two-dimensional Cartesian coordinate system）</strong>，记作$\{O; \mathbf{i}, \mathbf{j}\}$。<br>根据平面向量基本定理，任一平面向量$\mathbf{a}$必可以表示为</p>
+<script type="math/tex; mode=display">\mathbf{a} = x \mathbf{i} + y \mathbf{j}</script><p>若令$\mathbf{a} = \overrightarrow{OA}$，则点$A$坐标为$(x, y)$。$(x, y)$就叫做向量$\mathbf{a}$的坐标表示，记作</p>
+<script type="math/tex; mode=display">\mathbf{a} = (x, y)</script><p>向量的运算也可以转化为坐标进行运算。<br>设$\mathbf{a} = (x_{1}, y_{1}), \mathbf{b} = (x_{2}, y_{2})$，线性运算很好得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \mathbf{a} \pm \mathbf{b} = (x_{1} \pm x_{2}, y_{1} \pm y_{2}) \\
+& \lambda \mathbf{a} = (\lambda x_{1}, \lambda y_{1})
+\end{align}</script><p>共线向量定理也可以用坐标加以改造，使得判定向量共线更加方便：<br>设$\mathbf{a} = (x_{1}, y_{1}), \mathbf{b} = (x_{2}, y_{2})$，则$\mathbf{a}, \mathbf{b}$共线的充要条件是：</p>
+<script type="math/tex; mode=display">x_{1} y_{2} - x_{2} y_{1} = 0</script><p>接下来，设向量$\mathbf{a} = (x_{1}, y_{1}), \mathbf{b} = (x_{2}, y_{2})$，求数量积</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\mathbf{a} \cdot \mathbf{b} &= (x_{1} \mathbf{i} + y_{1} \mathbf{j}) \cdot (x_{2} \mathbf{i} + y_{2} \mathbf{j}) \\
+&= x_{1} x_{2} \mathbf{i}^{2} + x_{1} y_{2} \mathbf{i} \cdot \mathbf{j} + y_{1} x_{2} \mathbf{j} \cdot \mathbf{i} + y_{1} y_{2} \mathbf{j}^{2}
+\end{align}</script><p>因为$\mathbf{i}^{2} = \mathbf{j}^{2} = 1, \mathbf{i} \cdot \mathbf{j} = \mathbf{j} \cdot \mathbf{i} = 0$，所以</p>
+<script type="math/tex; mode=display">\mathbf{a} \cdot \mathbf{b} = x_{1} x_{2} + y_{1} y_{2}</script><p>设向量$\mathbf{a} = (x, y)$，由此可推得，</p>
+<script type="math/tex; mode=display">|\mathbf{a}| = \sqrt{x^{2} + y^{2}}</script><p>设向量$\mathbf{a} = (x_{1}, y_{1}), \mathbf{b} = (x_{2}, y_{2})$，由数量积定义得到，</p>
+<script type="math/tex; mode=display">\langle \mathbf{a}, \mathbf{b} \rangle = \arccos \dfrac{x_{1} x_{2} + y_{1} y_{2}}{\sqrt{(x_{1}^{2} + y_{1}^{2}) (x_{2}^{2} + y_{2}^{2})}}</script><p>$\mathbf{a} \perp \mathbf{b}$的充要条件是$x_{1} x_{2} + y_{1} y_{2} = 0$。</p>
+<p>由柯西-施瓦茨不等式，即得<strong>二维柯西不等式</strong>：</p>
+<script type="math/tex; mode=display">(x_{1}^{2} + y_{1}^{2}) (x_{2}^{2} + y_{2}^{2}) \ge (x_{1} x_{2} + y_{1} y_{2})^{2}</script><p>等号成立当且仅当$x_{1} y_{2} - x_{2} y_{1} = 0$。</p>
+<h1 id="空间向量"><a href="#空间向量" class="headerlink" title="空间向量"></a>空间向量</h1><p>空间向量的定义与平面向量一致，线性运算、数量积以及共线（平行）向量也完全相同，这里不再赘述，而只研究空间向量特有的内容。</p>
+<p>如果三个向量$\mathbf{a}, \mathbf{b}, \mathbf{c}$可以通过平移放在同一平面内，即令$\mathbf{a} = \overrightarrow{OA}, \mathbf{b} = \overrightarrow{OB}, \mathbf{c} = \overrightarrow{OC}$，则$O, A, B, C$四点共面，那么称它们为<strong>共面向量（coplanar vector）</strong>。<br>根据立体几何基本公理，两个向量永远共面。如果三个向量中包含零向量，那么它们永远共面；也就是说，三个不共面的向量一定不含零向量。</p>
+<p><strong>共面向量定理</strong>有：<br>向量$\mathbf{c}$与不共线的两个向量$\mathbf{a}, \mathbf{b}$共面的充要条件是：存在唯一的有序实数对$(\lambda, \mu)$使得$\mathbf{c} = \lambda \mathbf{a} + \mu \mathbf{b}$。<br>证明如下：<br><em>必要性</em>：由平面向量基本定理得知。<br><img src="https://s2.loli.net/2021/12/17/LwSr17EhMjNOpWb.png" alt><br><em>充分性</em>：如图，设$\mathbf{a}, \mathbf{b}, \mathbf{c}$不共面，$\mathbf{c} = \lambda \mathbf{a} + \mu \mathbf{b}$。令$\mathbf{a} = \overrightarrow{OA}, \mathbf{b} = \overrightarrow{OB}, \mathbf{c} = \overrightarrow{OC}$。过点$C$作平面$OAB$的垂线，垂足为$H$。因为不共面，点$C$在平面外，$\overrightarrow{HC} \ne \mathbf{0}$，此时$\mathbf{c} = \overrightarrow{OH} + \overrightarrow{HC}$。因为$H$在平面$OAB$内，由平面向量基本定理，存在实数$\lambda_{1}, \mu_{1}$使得$\overrightarrow{OH} = \lambda_{1} \mathbf{a} + \mu_{1} \mathbf{b}$。这样，$\overrightarrow{HC} = (\lambda - \lambda_{1}) \mathbf{a} + (\mu - \mu_{1}) \mathbf{b}$，与$\overrightarrow{HC} \perp \mathbf{a}, \overrightarrow{HC} \perp \mathbf{b}$矛盾。故充分性成立。$\Box$</p>
+<p>由共面向量定理，可以得到一个推论：<br>设$A, B, C, D$为空间内四点，则四点共面的充要条件是：存在实数$\lambda, \mu, \nu$满足$\lambda + \mu + \nu = 1$，且对于空间内任意一点$O$都有$\overrightarrow{OD} = \lambda \overrightarrow{OA} + \mu \overrightarrow{OB} + \nu \overrightarrow{OC}$。</p>
+<p>平面向量基本定理在空间上推广，得到<strong>空间向量基本定理</strong>：<br>如果三个向量$\mathbf{a}, \mathbf{b}, \mathbf{c}$不共面，那么对于任一空间向量$\mathbf{d}$，存在唯一的有序实数组$(\lambda, \mu, \nu)$，使得</p>
+<script type="math/tex; mode=display">\mathbf{d} = \lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}</script><p>证明：<br><img src="https://s2.loli.net/2021/12/17/wpLrDenHo91xaPS.png" alt><br><em>存在性</em>：如图，设$\mathbf{a} = \overrightarrow{OA}, \mathbf{b} = \overrightarrow{OB}, \mathbf{c} = \overrightarrow{OC}, \mathbf{cd} = \overrightarrow{OD}$。过点$D$作平面$OAB$的平行平面，与$OC$交于点$E$。由共线向量定理，存在实数$\nu$使得$\overrightarrow{OE} = \nu \mathbf{c}$。<br>设平面$ODE \cap$平面$OAB = l$，根据立体几何，$DE \parallel l$，所以向量$\mathbf{a}, \mathbf{b}, \overrightarrow{ED}$共面。由平面向量基本定理，存在实数$\lambda, \mu$使得$\overrightarrow{ED} = \lambda \mathbf{a} + \mu \mathbf{b}$。<br>所以，$\mathbf{d} = \overrightarrow{OE} + \overrightarrow{ED} = \lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c}$<br><em>唯一性</em>：假设存在实数组$(\lambda_{1}, \mu_{1}, \nu_{1})$，$\lambda \ne \lambda_{1}$，使得$\mathbf{d} = \lambda_{1} \mathbf{a} + \mu_{1} \mathbf{b} + \nu_{1} \mathbf{c}$。此时$\lambda \mathbf{a} + \mu \mathbf{b} + \nu \mathbf{c} = \lambda_{1} \mathbf{a} + \mu_{1} \mathbf{b} + \nu_{1} \mathbf{c}$，即$(\lambda - \lambda_{1}) \mathbf{a} + (\mu - \mu_{1}) \mathbf{b} + (\nu - \nu_{1}) \mathbf{c} = \mathbf{0}$。因为$\lambda \ne \lambda_{1}$，所以$\mathbf{a} = \dfrac{\mu - \mu_{1}}{\lambda_{1} - \lambda} \mathbf{b} + \dfrac{\nu - \nu_{1}}{\lambda_{1} - \lambda} \mathbf{c}$。由共面向量定理，$\mathbf{a}, \mathbf{b}, \mathbf{c}$共面，矛盾。故唯一性成立。$\Box$</p>
+<p>这样的话，空间向量也能表示成基$\{\mathbf{a}, \mathbf{b}, \mathbf{c}\}$的线性组合，从而定义仿射标架和仿射坐标。</p>
+<h2 id="空间直角坐标系"><a href="#空间直角坐标系" class="headerlink" title="空间直角坐标系"></a>空间直角坐标系</h2><p>以空间上一点$O$作为原点，两两垂直的单位向量$\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}$为基底。以$\mathbf{i}, \mathbf{j}, \mathbf{k}$的方向为正方向、模为单位长度建立三条数轴，分别称为<strong>$x$轴</strong>、<strong>$y$轴</strong>和<strong>$z$轴</strong>。这样就建立了<strong>空间直角坐标系（三维笛卡尔坐标系，three-dimensional Cartesian coordinate system）</strong>$Oxyz$。<br>任意两条坐标轴都可以确定一个平面，分别可以确定$Oxy, Oxz, Oyz$三个坐标平面。这三个坐标平面把空间分为八个部分，称为<strong>卦限（octant）</strong>。<br>通常，数学上规定三条坐标轴的方位符合<strong>右手定则</strong>：右手拇指指向$x$轴正方向，食指指向$y$轴正方向，则中指指向$z$轴正方向。这样的坐标系称为<strong>右手系</strong>。如果把右手定则换为左手定则，则为<strong>左手系</strong>。我们一般使用右手系。<br><img src="https://s2.loli.net/2021/12/18/nzPivSerXxFcMdO.png" alt="空间直角坐标系" title="左边为左手系，右边为右手系"></p>
+<p>由空间向量基本定理，对于任一空间向量$\mathbf{a}$，存在唯一的有序实数组$(x, y, z)$，使得</p>
+<script type="math/tex; mode=display">\mathbf{a} = x \mathbf{i} + y \mathbf{j} + z \mathbf{k}</script><p>有序实数组$(x, y, z)$就叫做向量$\mathbf{a}$的坐标表示，记作</p>
+<script type="math/tex; mode=display">\mathbf{a} = (x, y, z)</script><p>设$\mathbf{a} = \overrightarrow{OA}$，则$(x, y, z)$为点$A$在空间直角坐标系中的坐标，记作$A(x, y, z)$。其中，$x$叫做点$A$的<strong>横坐标</strong>，$y$叫做点$A$的<strong>纵坐标</strong>，$z$叫做点$A$的<strong>竖坐标</strong>。</p>
+<p>空间向量的坐标运算与平面向量类似，这里直接给出结论：<br>设$\mathbf{a} = (x_{1}, y_{1}, z_{1}), \mathbf{b} = (x_{2}, y_{2}, z_{2})$，则</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \lambda \mathbf{a} + \mu \mathbf{b} = (\lambda x_{1} + \mu x_{2}, \lambda y_{1} + \mu y_{2}, \lambda z_{1} + \mu z_{2}) \\
+& \mathbf{a} \cdot \mathbf{b} = x_{1} x_{2} + y_{1} y_{2} + z_{1} z_{2} \\
+& \langle \mathbf{a}, \mathbf{b} \rangle = \arccos \dfrac{x_{1} x_{2} + y_{1} y_{2} + z_{1} z_{2}}{\sqrt{(x_{1}^{2} + y_{1}^{2} + z_{1}^{2}) (x_{2}^{2} + y_{2}^{2} + z_{2}^{2})}} \\
+& \mathbf{a} \perp \mathbf{b} \Leftrightarrow x_{1} x_{2} + y_{1} y_{2} + z_{1} z_{2} = 0
+\end{align}</script><p>设$\mathbf{a} = (x, y, z)$，则</p>
+<script type="math/tex; mode=display">|\mathbf{a}| = \sqrt{x^{2} + y^{2} + z^{2}}</script><h2 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h2><p>物理中学过，如果物体受到力$\mathbf{F}$的作用，力臂为$\mathbf{l}$，则力矩的大小</p>
+<script type="math/tex; mode=display">M = |\mathbf{F}| |\mathbf{l}| \sin \langle \mathbf{F}, \mathbf{l} \rangle</script><p>这样，我们也可以定义一种新运算——<strong>向量积（vector product）</strong>，也叫<strong>外积（outer product）</strong>或<strong>叉积（cross product）</strong>，记作$\mathbf{a} \times \mathbf{b}$（这里用的是表示叉乘运算的$\times$，读作cross）。向量积的结果仍是一个向量，满足$(\mathbf{a} \times \mathbf{b}) \perp \mathbf{a}, (\mathbf{a} \times \mathbf{b}) \perp \mathbf{b}$，</p>
+<script type="math/tex; mode=display">|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}| |\mathbf{b}| \sin \theta</script><p>其中$\theta$为两个向量的夹角。<br>向量积可能会得到两个向量，为了保证结果唯一，规定三个向量$\mathbf{a}, \mathbf{b}, \mathbf{a} \times \mathbf{b}$组成右手系，即符合右手定则。<br>规定零向量与任意向量的向量积都是$\mathbf{0}$。</p>
+<p><img src="https://s2.loli.net/2021/12/18/JLW4n26rogspdBM.png" alt="向量积" title="向量积"><br><img src="https://s2.loli.net/2021/12/18/5XMePgl3szNuU1p.png" alt="右手定则" title="右手定则"></p>
+<p>如图，向量积的几何意义：$\mathbf{a} \times \mathbf{b}$的模就是向量$\mathbf{a}, \mathbf{b}$张成的平行四边形的面积。从向量积的几何意义，可以直观地得到，<br>向量$\mathbf{a}, \mathbf{b}$共线的充要条件是$\mathbf{a} \times \mathbf{b} = \mathbf{0}$。<br><img src="https://s2.loli.net/2021/12/18/bsUgGYqFXIPWcJu.png" alt="向量积的几何意义" title="向量积的几何意义"></p>
+<p>设向量$\mathbf{a}, \mathbf{b}$，则称向量$\mathbf{p} = \mathbf{a} - \operatorname{proj}_{\mathbf{b}} \mathbf{a}$为向量$\mathbf{a}$在$\mathbf{b}$上的<strong>外投影向量</strong>，$\mathbf{p} \perp \mathbf{b}$。<br><img src="https://s2.loli.net/2021/12/18/XWnj5siwmRYu9ch.png" alt="外投影向量" title="外投影向量"></p>
+<p>设向量$\mathbf{a}, \mathbf{b}$，$\mathbf{p}$为$\mathbf{b}$在$\mathbf{a}$上的外投影向量，由$|\mathbf{p}| = |\mathbf{b}| \sin \theta$，显然有</p>
+<script type="math/tex; mode=display">\mathbf{a} \times \mathbf{b} = \mathbf{a} \times \mathbf{p}</script><p>而且，$\mathbf{a} \times \mathbf{b}$就是以$\mathbf{a}$为旋转轴，把$\mathbf{p}$逆时针旋转$\dfrac{\pi}{2}$后得到向量的$|\mathbf{a}|$倍。</p>
+<p>向量积满足以下运算律：</p>
+<ul>
+<li>反交换律：$\mathbf{a} \times \mathbf{b} = (-\mathbf{b}) \times \mathbf{a}$</li>
+<li>数乘结合律：$(\lambda \mathbf{a}) \times \mathbf{b} = \lambda (\mathbf{a} \times \mathbf{b}) = \mathbf{a} \times (\lambda \mathbf{b})$</li>
+<li>左分配律：$\mathbf{a} \times (\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a} \times \mathbf{c}$</li>
+<li>右分配律：$(\mathbf{a} + \mathbf{b}) \times \mathbf{c} = \mathbf{a} \times \mathbf{c} + \mathbf{b} \times \mathbf{c}$</li>
+</ul>
+<p>设平面内有两个不共线向量$\mathbf{a}, \mathbf{b}$，若一个向量与$\mathbf{a}, \mathbf{b}$垂直，则必定与该平面垂直，这个向量称为这个平面的<strong>法向量（normal）</strong>。显然，法向量与$\mathbf{a} \times \mathbf{b}$共线。</p>
+<h2 id="向量积的坐标表示"><a href="#向量积的坐标表示" class="headerlink" title="向量积的坐标表示"></a>向量积的坐标表示</h2><p>设$\mathbf{i}, \mathbf{j}, \mathbf{k}$为$x, y, z$轴方向的单位向量，由向量积定义易得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \mathbf{i} \times \mathbf{i} = \mathbf{j} \times \mathbf{j} = \mathbf{k} \times \mathbf{k} = \mathbf{0} \\
+& \mathbf{i} \times \mathbf{j} = \mathbf{k}, \mathbf{j} \times \mathbf{k} = \mathbf{i}, \mathbf{k} \times \mathbf{i} = \mathbf{j}
+\end{align}</script><p>设$\mathbf{a} = (x_{1}, y_{1}, z_{1}), \mathbf{b} = (x_{2}, y_{2}, z_{2})$，则</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\mathbf{a} \times \mathbf{b} &= (x_{1} \mathbf{i} + y_{1} \mathbf{j} + z_{1} \mathbf{k}) \times (x_{2} \mathbf{i} + y_{2} \mathbf{j} + z_{2} \mathbf{k}) \\
+&= x_{1} x_{2} \mathbf{i} \times \mathbf{i} + x_{1} y_{2} \mathbf{i} \times \mathbf{j} + x_{1} z_{2} \mathbf{i} \times \mathbf{k} + y_{1} x_{2} \mathbf{j} \times \mathbf{i} \\
+&+ y_{1} y_{2} \mathbf{j} \times \mathbf{j} + y_{1} z_{2} \mathbf{j} \times \mathbf{k} + z_{1} x_{2} \mathbf{k} \times \mathbf{i} + z_{1} y_{2} \mathbf{k} \times \mathbf{j} + z_{1} z_{2} \mathbf{k} \times \mathbf{k} \\
+&= (y_{1} z_{2} - z_{1} y_{2}) \mathbf{i} + (z_{1} x_{2} - x_{1} z_{2}) \mathbf{j} + (x_{1} y_{2} - y_{1} x_{2}) \mathbf{k}
+\end{align}</script><p>即</p>
+<script type="math/tex; mode=display">\mathbf{a} \times \mathbf{b} = (y_{1} z_{2} - z_{1} y_{2}, z_{1} x_{2} - x_{1} z_{2}, x_{1} y_{2} - y_{1} x_{2})</script><p>设坐标系中点$A(x_{1}, y_{1}, z_{1}), B(x_{2}, y_{2}, z_{2})$，就能推得三角形面积的坐标解法：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+S_{\triangle OAB} &= \dfrac{1}{2} |\overrightarrow{OA} \times \overrightarrow{OB}| \\
+&= \dfrac{1}{2} \sqrt{(y_{1} z_{2} - z_{1} y_{2})^{2} + (z_{1} x_{2} - x_{1} z_{2})^{2} + (x_{1} y_{2} - y_{1} x_{2})^{2}}
+\end{align}</script><p>取$z_{1} = z_{2} = 0$，就能得到平面内的特殊情况：</p>
+<script type="math/tex; mode=display">S_{\triangle OAB} = \dfrac{1}{2} |x_{1} y_{2} - x_{2} y_{1}|</script><p>对于向量积的向量积，可以用<strong>二重外积公式</strong>简化计算：</p>
+<script type="math/tex; mode=display">(\mathbf{a} \times \mathbf{b}) \times \mathbf{c} = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{b} \cdot \mathbf{c}) \mathbf{a}</script><p>要证明，只要建立一个合适的坐标系，使得$\mathbf{a}$与$x$轴平行，且$\mathbf{b}$位于$xOy$平面内。设$\mathbf{a} = (a, 0, 0), \mathbf{b} = (b_{1}, b_{2}, 0), \mathbf{c} = (c_{1}, c_{2}, c_{3})$，直接带入坐标计算即可证得。$\Box$</p>
+<p>设向量$\mathbf{a}, \mathbf{b}, \mathbf{c}$张成的平行六面体体积为$V$，则</p>
+<script type="math/tex; mode=display">V = |(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}|</script><p><img src="https://s2.loli.net/2021/12/18/6sxVFd4WyLwH9SZ.png" alt><br>用坐标法证明非常简单。适当建立坐标系，可以设$\mathbf{a} = (a, 0, 0), \mathbf{b} = (b_{1}, b_{2}, 0), \mathbf{c} = (c_{1}, c_{2}, c_{3})$。此时$\mathbf{a} \times \mathbf{b} = (0, 0, a b_{2}), (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} = a b_{2} c_{3}$；平行四边形面积$S = |a b_{2}|$，高$h = |c_{3}|$，平行六面体体积$V = Sh = |a b_{2} c_{3}|$。$\Box$<br>进一步研究，还可以发现，当$\mathbf{a}, \mathbf{b}, \mathbf{c}$组成右手系时，$(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} = V$；组成左手系时，$(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} = -V$。</p>
+<p>根据其几何意义（平行六面体体积），定义三个向量的<strong>混合积（triple product）</strong>$(\mathbf{a}, \mathbf{b}, \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}$。混合积的结果是一个实数。<br>由混合积的几何意义可知，<br>向量$\mathbf{a}, \mathbf{b}, \mathbf{c}$共面的充要条件是$(\mathbf{a}, \mathbf{b}, \mathbf{c}) = 0$。因此，若$\mathbf{a}, \mathbf{b}, \mathbf{c}$中存在相等向量，则$(\mathbf{a}, \mathbf{b}, \mathbf{c}) = 0$。<br>此外，还能得到混合积的一些运算性质：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& (\mathbf{a}, \mathbf{b}, \mathbf{c}) = (\mathbf{b}, \mathbf{c}, \mathbf{a}) = (\mathbf{c}, \mathbf{a}, \mathbf{b}) \\
+& (\lambda \mathbf{u} + \mu \mathbf{v}, \mathbf{b}, \mathbf{c}) = \lambda (\mathbf{u}, \mathbf{b}, \mathbf{c}) + \mu (\mathbf{v}, \mathbf{b}, \mathbf{c})
+\end{align}</script><p>由$(\mathbf{a}, \mathbf{b}, \mathbf{c}) = (\mathbf{b}, \mathbf{c}, \mathbf{a})$可得，</p>
+<script type="math/tex; mode=display">(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c} = \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})</script><p>点乘和叉乘交换位置后结果不变。</p>
+<p>由混合积的运算性质和二重外积公式可以推出<strong>拉格朗日恒等式（Lagrange’s identity）</strong>：</p>
+<script type="math/tex; mode=display">(\mathbf{a} \times \mathbf{b}) \cdot (\mathbf{c} \times \mathbf{d}) = (\mathbf{a} \cdot \mathbf{c}) (\mathbf{b} \cdot \mathbf{d}) - (\mathbf{a} \cdot \mathbf{d}) (\mathbf{b} \cdot \mathbf{c})</script><script type="math/tex; mode=display">
+\begin{align}
+(\mathbf{a} \times \mathbf{b}) \cdot (\mathbf{c} \times \mathbf{d}) &= (\mathbf{c}, \mathbf{d}, \mathbf{a} \times \mathbf{b}) \\
+&= (\mathbf{a} \times \mathbf{b}, \mathbf{c}, \mathbf{d}) \\
+&= ((\mathbf{a} \times \mathbf{b}) \times \mathbf{c}) \cdot \mathbf{d} \\
+&= ((\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{b} \cdot \mathbf{c}) \mathbf{a}) \cdot \mathbf{d} \\
+&= (\mathbf{a} \cdot \mathbf{c}) (\mathbf{b} \cdot \mathbf{d}) - (\mathbf{a} \cdot \mathbf{d}) (\mathbf{b} \cdot \mathbf{c}) \quad \Box
+\end{align}</script><h1 id="n-维向量"><a href="#n-维向量" class="headerlink" title="$n$维向量"></a>$n$维向量</h1><p>设$n$为正整数，定义<strong>$n$维（欧几里得）空间</strong>$\mathbb{R}^{n}$为所有$n$维实数组的集合，即</p>
+<script type="math/tex; mode=display">\mathbb{R}^{n} = \{(x_{1}, x_{2}, \cdots, x_{n}) | x_{k} \in \mathbb{R}, k = 1, 2, \cdots, n\}</script><p>$n$维空间的每一个元素都是<strong>$n$维向量</strong>。设向量$\mathbf{a} = (x_{1}, x_{2}, \cdots, x_{n})$，则它的<strong>模</strong></p>
+<script type="math/tex; mode=display">|\mathbf{a}| = \sqrt{x_{1}^{2} + x_{2}^{2} + \cdots + x_{n}^{2}}</script><p><strong>零向量</strong>则是指$(0, 0, \cdots, 0)$。</p>
+<p>设$\mathbf{a} = (a_{1}, a_{2}, \cdots, a_{n}), \mathbf{b} = (b_{1}, b_{2}, \cdots, b_{n})$，定义<strong>线性运算</strong></p>
+<script type="math/tex; mode=display">\lambda \mathbf{a} + \mu \mathbf{b} = (\lambda a_{1} + \mu b_{1}, \lambda a_{2} + \mu b_{2}, \cdots, \lambda a_{n} + \mu b_{n})</script><p>设向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{k}$，实数$\lambda_{1}, \cdots, \lambda_{k}$不全为零，则称$\sum\limits_{i=1}^{k} \lambda_{i} \mathbf{a}_{i}$为它们的<strong>线性组合</strong>。<br>若向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{k}$满足它们的线性组合恒不为零向量，即$\sum\limits_{i=1}^{k} \lambda_{i} \mathbf{a}_{i} = \mathbf{0} \Rightarrow \lambda_{1} = \cdots = \lambda_{k} = 0$，则称它们<strong>线性无关（linearly independent）</strong>，否则称<strong>线性相关（linearly dependent）</strong>。<br>两个线性相关的向量称为<strong>共线向量</strong>。</p>
+<p>关于线性无关，有一个非常重要的定理：<br>设$n$维向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{k}$线性无关，则$k \le n$。<br>令$\mathbf{e}_{i} = (0, \cdots, 1, \cdots, 0), i = 1, 2, \cdots, n$，其中$1$排在第$i$位，则易知$\mathbf{e}_{1}, \cdots, \mathbf{e}_{n}$线性无关，此时可以取到$k = n$。<br>$n$个线性无关的向量称为$n$维空间的一组<strong>基</strong>，而$\{\mathbf{e}_{1}, \cdots, \mathbf{e}_{n}\}$则称为<strong>正交标准基</strong>。</p>
+<p>从平面向量和空间向量推广，有<strong>基向量分解定理</strong>：<br>设$\{\mathbf{a}_{1}, \cdots, \mathbf{a}_{n}\}$为$n$维空间的一组基，则对于任一$n$维向量$\mathbf{b}$，存在唯一一组实数$\lambda_{1}, \cdots, \lambda_{n}$使得</p>
+<script type="math/tex; mode=display">\mathbf{b} = \sum_{i=1}^{n} \lambda_{i} \mathbf{a}_{i}</script><p>对于两个$n$维向量$\mathbf{a} = (a_{1}, a_{2}, \cdots, a_{n}), \mathbf{b} = (b_{1}, b_{2}, \cdots, b_{n})$，定义<strong>数量积</strong></p>
+<script type="math/tex; mode=display">\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} a_{i} b_{i}</script><p>非零向量的<strong>夹角</strong></p>
+<script type="math/tex; mode=display">\langle \mathbf{a}, \mathbf{b} \rangle = \arccos \dfrac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| |\mathbf{b}|}</script><p>$\mathbf{a} \cdot \mathbf{b} = 0$或$\langle \mathbf{a}, \mathbf{b} \rangle = \dfrac{\pi}{2}$时称两个非零向量<strong>垂直</strong>或<strong>正交</strong>。</p>
+<p>根据论文<em><a href="https://pdfs.semanticscholar.org/1f6b/ff1e992f60eb87b35c3ceed04272fb5cc298.pdf" title="Cross products of vectors in higher dimensional Euclidean spaces, W. S. Massey. The American Mathematical Monthly." target="_blank" rel="noopener">Cross products of vectors in higher dimensional Euclidean spaces</a></em>，<strong>向量积</strong>只在$3, 7$两个维度中有定义。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2021/11/06/Vector/" title="学习笔记·向量">https://luckyfuy.top/2021/11/06/Vector/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/08/09/Music-Theory-Fundamentals/" rel="next" title="学习笔记·乐理基础">
+                <i class="fa fa-chevron-left"></i> 学习笔记·乐理基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/01/01/Harmony-Fundamentals/" rel="prev" title="学习笔记·和声学基础">
+                学习笔记·和声学基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#平面向量"><span class="nav-number">1.</span> <span class="nav-text">平面向量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性运算"><span class="nav-number">1.1.</span> <span class="nav-text">线性运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数量积"><span class="nav-number">1.2.</span> <span class="nav-text">数量积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标表示"><span class="nav-number">1.3.</span> <span class="nav-text">坐标表示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#空间向量"><span class="nav-number">2.</span> <span class="nav-text">空间向量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#空间直角坐标系"><span class="nav-number">2.1.</span> <span class="nav-text">空间直角坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量积"><span class="nav-number">2.2.</span> <span class="nav-text">向量积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量积的坐标表示"><span class="nav-number">2.3.</span> <span class="nav-text">向量积的坐标表示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#n-维向量"><span class="nav-number">3.</span> <span class="nav-text">$n$维向量</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

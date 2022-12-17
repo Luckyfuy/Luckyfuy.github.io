@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="I50azh-xtEyVuAVrVZHKk8hEXtVX9qeIIFuYWd9DYQM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+  
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu:300,300italic,400,400italic,700,700italic,900,900italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic,900,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Luckyfuy's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="数列极限数列极限的定义对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的极限（limit）是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。更加严格地说，对于任意的$\varepsilon &amp;gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n">
+<meta name="keywords" content="Mathematics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记·极限论">
+<meta property="og:url" content="https://luckyfuy.top/2022/12/09/Limit/index.html">
+<meta property="og:site_name" content="Luckyfuy&#39;s Blog">
+<meta property="og:description" content="数列极限数列极限的定义对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的极限（limit）是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。更加严格地说，对于任意的$\varepsilon &amp;gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.loli.net/2022/12/12/VIFRbOd3xf6Kt98.png">
+<meta property="og:image" content="https://s2.loli.net/2022/12/13/7HzQ8VlAKcYE61r.png">
+<meta property="og:image" content="https://s2.loli.net/2022/12/16/eAUqcKomhf2BFPY.png">
+<meta property="og:image" content="https://s2.loli.net/2022/12/16/fDnCuTJ9YR8GUsx.png">
+<meta property="og:image" content="https://s2.loli.net/2022/12/16/VAwZ83JKok4Q1xr.png">
+<meta property="og:updated_time" content="2022-12-16T11:08:31.360Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记·极限论">
+<meta name="twitter:description" content="数列极限数列极限的定义对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的极限（limit）是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。更加严格地说，对于任意的$\varepsilon &amp;gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n">
+<meta name="twitter:image" content="https://s2.loli.net/2022/12/12/VIFRbOd3xf6Kt98.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://luckyfuy.top/2022/12/09/Limit/">
+
+
+
+
+
+  <title>学习笔记·极限论 | Luckyfuy's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ac92a09b11d3461e592ad135a3ce9163";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+      <a href="https://github.com/Luckyfuy/Luckyfuy.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#66CCFF; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luckyfuy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永远相信美好的事情即将发生</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resources">
+          <a href="/resources/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-games">
+          <a href="/games/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br>
+            
+            有趣的东西
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luckyfuy.top/2022/12/09/Limit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luckyfuy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luckyfuy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记·极限论</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-12-09T12:41:16+08:00">
+                Fri, Dec 9th, 2022
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">数学笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/12/09/Limit/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/12/09/Limit/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2022/12/09/Limit/" class="leancloud_visitors" data-flag-title="学习笔记·极限论">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  8.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  37
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="数列极限"><a href="#数列极限" class="headerlink" title="数列极限"></a>数列极限</h1><h2 id="数列极限的定义"><a href="#数列极限的定义" class="headerlink" title="数列极限的定义"></a>数列极限的定义</h2><p>对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的<strong>极限（limit）</strong>是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。<br>更加严格地说，对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \varepsilon$，那么数列$\{a_{n}\}$的极限是$a$，$\lim\limits_{n \to \infty} a_{n} = a$。</p>
+<a id="more"></a>
+<p>如果数列有极限，那么称数列<strong>收敛（convergent）</strong>，于是$\{a_{n}\}$收敛于$a$。<br>如果数列没有极限，那么称数列<strong>发散（divergent）</strong>。发散数列可以左右摇摆，无法趋近于某一个特定的值；也可以趋于无穷大。设数列$\{a_{n}\}$，如果对于任意的$M &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n}| &gt; M$，那么称数列$\{a_{n}\}$发散至无穷大，记作$\lim\limits_{n \to \infty} a_{n} = \infty$。更加准确地说，数列$\{a_{n}\}$发散至正无穷大或发散至负无穷大，分别记作$\lim\limits_{n \to \infty} a_{n} = +\infty$或$\lim\limits_{n \to \infty} a_{n} = -\infty$。</p>
+<p>显而易见，$\lim\limits_{n \to \infty} a = a$；<br>$\lim\limits_{n \to \infty} \dfrac{1}{n} = 0$，进一步地，$\forall c &gt; 0, \lim\limits_{n \to \infty} \dfrac{1}{n^{c}} = 0$；<br>设实数$q$满足$|q| &lt; 1$，则$\lim\limits_{n \to \infty} q^{n} = 0$。</p>
+<p>极限可以进行四则运算：<br>设$\lim\limits_{n \to \infty} a_{n} = a, \lim\limits_{n \to \infty} b_{n} = b$，<br>$\lim\limits_{n \to \infty} (a_{n} \pm b_{n}) = a \pm b$；<br>$\lim\limits_{n \to \infty} a_{n} b_{n} = ab$，特别地，$\lim\limits_{n \to \infty} ca_{n} = ca$，其中$c$为常数；<br>若$b \ne 0$，则$\lim\limits_{n \to \infty} \dfrac{a_{n}}{b_{n}} = \dfrac{a}{b}$。</p>
+<p>有一些数列是求和的形式。如果$S_{n} = \sum\limits_{i=1}^{n} a_{i}$是收敛数列，极限是$S$，那么称<strong>级数（series）</strong>$\sum\limits_{n=1}^{\infty} a_{n}$收敛，记作$\sum\limits_{n=1}^{\infty} a_{n} = S$。$S$称为级数$\sum\limits_{n=1}^{\infty} a_{n}$的<strong>和（sum）</strong>，$S_{n}$称为级数的<strong>部分和（partial sum）</strong>。</p>
+<h2 id="收敛数列的性质"><a href="#收敛数列的性质" class="headerlink" title="收敛数列的性质"></a>收敛数列的性质</h2><p>收敛数列有三条基本性质。</p>
+<p><strong>唯一性</strong>：<br>收敛数列$\{a_{n}\}$的极限唯一。</p>
+<p>证明：<br>设数列$\{a_{n}\}$有极限$a, b$，则对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \dfrac{\varepsilon}{2}, |a_{n} - b| &lt; \dfrac{\varepsilon}{2}$。那么$|a - b| = |(a_{n} - a) - (a_{n} - b)| \le |a_{n} - a| + |a_{n} - b| &lt; \varepsilon$，于是$a = b$。$Box$</p>
+<p>如果改变数列中有限多项的值，不会改变数列的收敛性和极限。</p>
+<p><strong>有界性</strong>：<br>设数列$\{a_{n}\}$的极限是$a$，则数列$\{a_{n}\}$<strong>有界（bounded）</strong>，即存在正数$M$，使得$\forall n \in \mathbb{N}^{\ast}, |a_{n}| \le M$。否则称数列$\{a_{n}\}$<strong>无界（unbounded）</strong>。</p>
+<p>证明：<br>对于$\varepsilon = 1$，存在正整数$N$，使得$\forall n \ge N, |a_{n} - a| &lt; 1$。那么$|a_{n}| \le |a_{n} - a| + |a| &lt; |a| + 1$。令$M = \max(|a_{1}|, \cdots, |a_{N - 1}|, |a| + 1)$，则对于任意的$n$，如果$n \le N - 1$，那么$|a_{n}| \le \max(|a_{1}|, \cdots, |a_{N - 1}|) \le M$；如果$n \ge N$，那么$|a_{n}| &lt; |a| + 1 \le M$。$\Box$。</p>
+<p>如果实数$l$满足$a &gt; l$，那么存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} &gt; l$。$&gt;$换成$&lt;$同样成立。<br>如果实数$l$满足存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} \ge l$，那么$a \ge l$。$\ge$换成$\le$同样成立。</p>
+<p><strong>保序性</strong>：<br>设数列$\{a_{n}\}, \{b_{n}\}$的极限分别是$a, b$，如果$a &gt; b$，那么存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} &gt; b_{n}$；如果存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} \ge b_{n}$，那么$a \ge b$。</p>
+<p>计算极限时，把需要求的数列夹在两个极限相等的数列之间，就是非常实用的<strong>迫敛定理（squeeze theorem）</strong>：<br>如果数列$\{b_{n}\}, \{c_{n}\}$的极限都是$a$，数列$\{a_{n}\}$满足存在正整数$N$，使得对于任意的$n \ge N$，都有$b_{n} \le a_{n} \le c_{n}$，那么数列$\{a_{n}\}$收敛于$a$。</p>
+<p>证明：<br>对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|b_{n} - a| &lt; \varepsilon, |c_{n} - a| &lt; \varepsilon$，那么$b_{n} &gt; a - \varepsilon, c_{n} &lt; a + \varepsilon$。$n \ge N$时，$b_{n} \le a_{n} \le c_{n}$，这样$a - \varepsilon &lt; b_{n} \le a_{n} \le c_{n} &lt; a + \varepsilon$，也就是$|a_{n} - a| &lt; \varepsilon$，根据极限定义，$\{a_{n}\}$的极限是$a$。$\Box$</p>
+<p>设$\{a_{n}\}$是数列，$n_{1} &lt; n_{2} &lt; \cdots &lt; n_{k} &lt; \cdots$是正整数数列，那么$a_{n_{1}}, a_{n_{2}}, \cdots, a_{n_{k}}, \cdots$组成一个数列，称为数列$\{a_{n}\}$的<strong>子列（subsequence）</strong>，记作$\{a_{n_{k}}\}$。<br>设数列$\{a_{n}\}$收敛于$a$，那么对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \varepsilon$。设$\{a_{n}\}$的子列是$\{a_{n_{k}}\}$。因为$\{n_{k}\}$是递增的无穷数列，所以发散至无穷大。因此存在正整数$K$，使得对于任意的$k \ge K$都有$n_{k} \ge N$，这样就有$|a_{n_{k}} - a| &lt; \varepsilon$。所以$\{a_{n_{k}}\}$也收敛于$a$。<br>这样就得出：数列与其子列的收敛性和极限相同。<br>如果一个数列有不收敛的子列，或者某些不同子列收敛于不同的值，那么就可以说明数列发散。</p>
+<h1 id="实数的完备性"><a href="#实数的完备性" class="headerlink" title="实数的完备性"></a>实数的完备性</h1><p>极限还有一些特殊性质，它们是实数集的本质特征。我们从<strong>完备性公理（completeness axiom）</strong>开始：<br>设$A, B$是$\mathbb{R}$的非空子集，如果$\forall a \in A, \forall b \in B, a \le b$，那么存在实数$c$，使得$\forall a \in A, \forall b \in B, a \le c \le b$。</p>
+<p>完备性公理说明，实数是没有间隙的，任何两个不交叉的实数集合中间必然可以插入一个实数。</p>
+<p>设$X$是$\mathbb{R}$的非空子集，如果实数$a$满足$\forall x \in X, x \le a$，那么称$a$是$X$的一个<strong>上界（upper bound）</strong>；如果$\forall x \in X, x \ge a$，那么称$a$是$X$的一个<strong>下界（lower bound）</strong>。上界或下界可能不存在，也可能存在无穷多个。如果$X$既有上界又有下界，那么称集合$X$<strong>有界（bounded）</strong>，否则称<strong>无界（unbounded）</strong>。<br>我们通常会寻找最小上界或者最大下界。一般地，设$a$是$X$的上界，如果对于任意的$b &gt; a$，$b$也是$X$的上界，那么称$a$是$X$的<strong>上确界（supremum）</strong>，记作$\sup X$；类似地有<strong>下确界（infimum）</strong>，记作$\inf X$。</p>
+<p>实际上，<strong>确界存在定理（least-upper-bound property）</strong>有：<br>任何有上界或下界的集合一定有上确界或下确界。</p>
+<p>证明：<br>设$\mathbb{R}$的子集$X$有上界，$Y$是$X$的所有上界组成的集合，则$\forall x \in X, \forall y \in Y, x \le y$。根据完备性公理，存在实数$c$，使得$\forall x \in X, \forall y \in Y, x \le c \le y$。$x \le c$说明$c$是$X$的一个上界，而对任意的$z &gt; c$，根据$c \le y$，$z$是上界。因此$c$是上确界。下确界同理。$\Box$</p>
+<p><strong>单调有界定理（monotone convergence theorem）</strong>说明了实数集和极限的关联：<br>单调有界数列收敛。</p>
+<p>证明：<br>设递增数列$\{a_{n}\}$满足$\forall n \in \mathbb{N}^{\ast}, |a_{n}| \le M$，$X$是$\{a_{n}\}$的所有项组成的集合，则$M$是$X$的上界。根据确界存在定理，$X$有上确界，记为$a$。则对于任意的$\varepsilon &gt; 0$，存在$a_{N} \in X$，使得$a_{N} &gt; a - \varepsilon$。因为$\{a_{n}\}$递增，所以对于任意的$n \ge N$，都有$a_{n} \ge a_{N} &gt; a - \varepsilon$，又$a_{n} \le a &lt; a + \varepsilon$，所以$|a_{n} - a| &lt; \varepsilon$，根据极限定义，数列$\{a_{n}\}$收敛于$a$。递减数列同理。$\Box$</p>
+<p>我们可以借此定义常数$\mathrm{e}$。令$e_{n} = (1 + \dfrac{1}{n})^{n}$，根据单调有界定理，如果数列$\{e_{n}\}$单调有界，那么它就有极限。<br>由平均值不等式，$e_{n} = (1 + \dfrac{1}{n})^{n} \cdot 1 \le \left(\dfrac{n (1 + \dfrac{1}{n}) + 1}{n + 1} \right)^{n + 1} = (1 + \dfrac{1}{n + 1})^{n + 1} = e_{n + 1}$，所以$\{e_{n}\}$是递增数列。<br>因此$e_{n} \ge e_{1} = 2$，由二项式定理，</p>
+<script type="math/tex; mode=display">
+\begin{align}
+e_{n} &= \sum\limits_{k = 0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
+&= 2 + \sum\limits_{k = 2}^{n} \dfrac{n (n - 1) \cdots (n - k + 1)}{n^{k}} \cdot \dfrac{1}{k!} \\
+&< 2 + \sum\limits_{k = 2}^{n} \dfrac{1}{k!} \\
+&< 2 + \sum\limits_{k = 2}^{n} \dfrac{1}{k (k - 1)} \\
+&= 3 - \dfrac{1}{n} < 3
+\end{align}</script><p>所以$2 \le e_{n} &lt; 3$，$\{e_{n}\}$有界。<br>因此数列$\{e_{n}\}$有极限，记为$\mathrm{e}$，也就是$\mathrm{e} = \lim\limits_{n \to \infty} (1 + \dfrac{1}{n})^{n}$。</p>
+<p><strong>区间套定理（nested intervals theorem）</strong>进一步刻画了实数的完备性：<br>设一系列闭区间$I_{n} = [a_{n}, b_{n}]$满足$I_{1} \supseteq I_{2} \supseteq \cdots \supseteq I_{n} \supseteq \cdots$，且$\lim\limits_{n \to \infty} (b_{n} - a_{n}) = 0$，则存在唯一实数$\xi$属于所有的闭区间$I_{n}$，即$\bigcap\limits_{n = 1}^{\infty} I_{n} = \{\xi\}$。</p>
+<p>证明：<br>由条件，数列$\{a_{n}\}$是递增数列，数列$\{b_{n}\}$是递减数列，且$a_{n}, b_{n} \in [a_{1}, b_{1}]$。根据单调有界定理，两个数列都有极限，分别记为$a, b$。那么$b - a = \lim\limits_{n \to \infty} b_{n} - \lim\limits_{n \to \infty} a_{n} = \lim\limits_{n \to \infty} (b_{n} - a_{n}) = 0$，即$a = b$。令$\xi = a = b$，则$\xi$就是所求的唯一实数。$\Box$</p>
+<p>区间套定理可以形象地表述为：一系列逐渐缩小且环环相套的区间，区间长度缩小到$0$时，区间必缩成一个点。</p>
+<p>从区间套定理出发，可以得到<strong>列紧性定理（sequential compactness theorem）</strong>：<br>有界数列一定存在收敛子列。</p>
+<p>证明：<br>设有界数列$\{a_{n}\}$满足$\forall n \in \mathbb{N}^{\ast}, a_{n} \in [c, d]$。把区间分为$[c, \dfrac{c + d}{2}], [\dfrac{c + d}{2}, d]$两半，则至少有一半含有数列$\{a_{n}\}$中的无限项，将这一半区间记为$I_{1} = [c_{1}, d_{1}]$；把$I_{1}$也这样分为两半，则至少有一半含有$\{a_{n}\}$中的无限项，将这一半区间记为$I_{2} = [c_{2}, d_{2}]$；依此类推，得到一系列区间$I_{n} = [c_{n}, d_{n}]$，且满足$I_{1} \supseteq I_{2} \supseteq \cdots \supseteq I_{n} \supseteq \cdots$，$\lim\limits_{n \to \infty} (d_{n} - c_{n}) = \lim\limits_{n \to \infty} \dfrac{1}{2^{n}} (d - c) = 0$。根据区间套定理，$\lim\limits_{n \to \infty} c_{n} = \lim\limits_{n \to \infty} d_{n} = a$。<br>在区间$I_{1}$中取一个项$a_{n_{1}}$；在区间$I_{2}$中取一个项$a_{n_{2}}$，且$n_{2} &gt; n_{1}$；如此下去，得到子列$a_{n_{k}} \in I_{k}$，即$c_{k} \le a_{n_{k}} \le d_{k}$。根据迫敛定理，$\{a_{n_{k}}\}$收敛于$a$。$\Box$</p>
+<p>设$\{a_{n}\}$是数列，如果对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$m, n \ge N$，都有$|a_{m} - a_{n}| &lt; \varepsilon$，那么称$\{a_{n}\}$为<strong>柯西列（Cauchy sequence）</strong>。<br><strong>柯西收敛准则（Cauchy completeness）</strong>有：<br>数列$\{a_{n}\}$收敛的充要条件是$\{a_{n}\}$是柯西列。</p>
+<p>证明：<br><em>必要性</em>：设$\{a_{n}\}$收敛于$a$，则对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \dfrac{\varepsilon}{2}$。这样，对于任意的$m, n \ge N$，就有$|a_{m} - a_{n}| = |(a_{m} - a) - (a_{n} - a)| \le |a_{m} - a| + |a_{n} - a| &lt; \varepsilon$。<br><em>充分性</em>：如果$\{a_{n}\}$是柯西列，那么对于$\varepsilon = 1$，存在正整数$N$，使得对于任意的$m, n \ge N$，都有$|a_{m} - a_{n}| &lt; 1$。这样$|a_{n} - a_{N}| &lt; 1$，得到$|a_{n}| \le |a_{N}| + 1$。令$M = \max(|a_{1}|, \cdots, |a_{N - 1}|, |a_{N}| + 1)$，则$\forall n \in \mathbb{N}^{\ast}, |a_{n}| \le M$，所以$\{a_{n}\}$有界。根据列紧性定理，$\{a_{n}\}$存在收敛子列$\{a_{n_{k}}\}$，设$\{a_{n_{k}}\}$收敛于$a$。对于任意的$\varepsilon &gt; 0$，都存在正整数$K$，使得对于任意的$k \ge K$，都有$|a_{n_{k}} - a| &lt; \dfrac{\varepsilon}{2}$。根据柯西列的定义，对于任意的$m, n \ge N$，都有$|a_{m} - a_{n}| &lt; \dfrac{\varepsilon}{2}$。取$k \ge K$使得$n_{k} \ge N$，则对于任意的$n \ge N$，$|a_{n} - a| \le |a_{n} - a_{n_{k}}| + |a_{n_{k}} - a| &lt; \varepsilon$，所以$\{a_{n}\}$收敛于$a$。$\Box$</p>
+<h1 id="函数极限"><a href="#函数极限" class="headerlink" title="函数极限"></a>函数极限</h1><h2 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h2><p>我们研究过常数函数、幂函数、指数函数、对数函数、三角函数、反三角函数，它们经过有限次加、减、乘、除、乘方、开方和复合运算，得到的函数称为<strong>初等函数（elementary function）</strong>。初等函数是数学中最基本的一类函数，具有相当重要的性质。<br>例如，正整数次幂函数和常数函数之间可以运算得到形如$f(x) = \sum\limits_{k = 0}^{n} a_{k} x^{k}$的函数，称为<strong>多项式函数（polynomial function）</strong>；两个多项式函数相除，得到形如$f(x) = \sum\limits_{k = 0}^{n} \dfrac{a_{k} x^{k}}{b_{k} x^{k}}$的函数，称为<strong>有理函数（rational function）</strong>。<br><strong>双曲函数（hyperbolic function）</strong>也是一种初等函数，常见的有：</p>
+<ul>
+<li>双曲正弦：$\sinh x = \dfrac{\mathrm{e}^{x} - \mathrm{e}^{-x}}{2}$</li>
+<li>双曲余弦：$\cosh x = \dfrac{\mathrm{e}^{x} + \mathrm{e}^{-x}}{2}$</li>
+<li>双曲正切：$\tanh x = \dfrac{\sinh x}{\cosh x} = \dfrac{\mathrm{e}^{x} - \mathrm{e}^{-x}}{\mathrm{e}^{x} + \mathrm{e}^{-x}}$</li>
+</ul>
+<p>双曲函数有类似三角函数的性质，例如$\sinh(x + y) = \sinh x \cosh y + \cosh x \sinh y$。</p>
+<h2 id="函数极限的定义"><a href="#函数极限的定义" class="headerlink" title="函数极限的定义"></a>函数极限的定义</h2><p>与数列极限类似，我们考虑自变量趋于无穷大时函数值的趋势。如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$，使得对于任意的$|x| &gt; \delta$，都有$|f(x) - l| &lt; \varepsilon$，那么$x$趋于无穷大时，$f(x)$的<strong>极限（limit）</strong>是$l$，记作$\lim\limits_{x \to \infty} f(x) = l$。<br>从图像来看，$\lim\limits_{x \to \infty} f(x) = l$意味着当$|x|$足够大时，函数图像将会落在由直线$y = l + \varepsilon, y = l - \varepsilon$所围成的一个足够狭长的区域内。<br>把条件$|x| &gt; \delta$改为$x &gt; \delta$或$x &lt; -\delta$，就是$x \to \pm \infty$时函数极限的定义，分别记作$\lim\limits_{x \to +\infty} f(x) = l$和$\lim\limits_{x \to -\infty} f(x) = l$。<br>类似地，还有$x \to \infty$时，$f(x)$发散至无穷大：$\lim\limits_{x \to \infty} f(x) = \infty$。更加准确地说，可以写成$\lim\limits_{x \to +\infty} f(x) = +\infty, \lim\limits_{x \to -\infty} f(x) = +\infty, \lim\limits_{x \to +\infty} f(x) = -\infty, \lim\limits_{x \to -\infty} f(x) = -\infty$。</p>
+<p>与数列极限不同的是，我们还要考虑自变量趋于某个有限值时函数值的趋势。设函数$f$在$(x_{0} - \delta_{0}, x_{0}) \cup (x_{0}, x_{0} + \delta_{0})$有定义，如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$满足$\delta &lt; \delta_{0}$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$|f(x) - l| &lt; \varepsilon$，那么$x$趋于$x_{0}$时，$f(x)$的极限是$l$，记作$\lim\limits_{x \to x_{0}} f(x) = l$。<br>$(x_{0} - \delta_{0}, x_{0}) \cup (x_{0}, x_{0} + \delta_{0})$称为$x_{0}$的一个<strong>去心邻域（deleted neighbourhood）</strong>，$(x_{0} - \delta_{0}, x_{0} + \delta_{0})$则称为$x_{0}$的一个<strong>邻域（neighbourhood）</strong>。如果把$x$限制在足够小的去心邻域内，对应的$f(x)$也就会被限制在足够小的邻域内。之所以是去心邻域而非邻域，是因为函数在某一点没有定义时，也存在这一点的极限。<br>类似地，$x \to x_{0}$时，也可以趋于无穷大：$\lim\limits_{x \to x_{0}} f(x) = \infty$，进一步可以写成$\lim\limits_{x \to x_{0}} f(x) = +\infty, \lim\limits_{x \to x_{0}} f(x) = -\infty$。</p>
+<p>有时，函数只在$x_{0}$的一侧有定义，或者函数在$x_{0}$的两侧定义方式不同。这时，设函数$f$在$x_{0}$的一个左邻域$(x_{0} - \delta_{0}, x_{0})$有定义，如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$满足$\delta &lt; \delta_{0}$，使得只要$-\delta &lt; x - x_{0} &lt; 0$，就有$|f(x) - l| &lt; \varepsilon$，那么我们定义$f(x)$在$x_{0}$的<strong>左极限（left limit）</strong>是$l$，记作$\lim\limits_{x \to x_{0}^{-}} f(x) = l$。<br>设函数$f$在$x_{0}$的一个右邻域$(x_{0}, x_{0} + \delta_{0})$有定义，如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$满足$\delta &lt; \delta_{0}$，使得只要$0 &lt; x - x_{0} &lt; \delta$，就有$|f(x) - l| &lt; \varepsilon$，那么定义$f(x)$在$x_{0}$的<strong>右极限（right limit）</strong>是$l$，记作$\lim\limits_{x \to x_{0}^{+}} f(x) = l$。</p>
+<p>显然，函数在$x_{0}$存在极限的充要条件是：它在$x_{0}$存在左极限和右极限且相等。</p>
+<h2 id="函数极限的性质与运算"><a href="#函数极限的性质与运算" class="headerlink" title="函数极限的性质与运算"></a>函数极限的性质与运算</h2><p>函数极限的性质和数列极限类似，证明过程也可以参照数列极限。</p>
+<p><strong>唯一性</strong>：<br>若函数$f(x)$在$x_{0}$有极限，则极限唯一。</p>
+<p><strong>有界性</strong>：<br>设函数$f(x)$在$x_{0}$有极限$l$，则$f(x)$在$x_{0}$附近有界，即存在正数$M$和$\delta$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$|f(x)| \le M$。<br>若$a &lt; l &lt; b$，则在$x_{0}$附近有$a &lt; f(x) &lt; b$。</p>
+<p><strong>保序性</strong>：<br>设$\lim\limits_{x \to x_{0}} f(x) = l_{1}, \lim\limits_{x \to x_{0}} g(x) = l_{2}$，若在$x_{0}$附近有$f(x) \ge g(x)$，则$l_{1} \ge l_{2}$；若$l_{1} &gt; l_{2}$，则在$x_{0}$附近有$f(x) &gt; g(x)$。</p>
+<p>四则运算：<br>设$\lim\limits_{x \to x_{0}} f(x) = l_{1}, \lim\limits_{x \to x_{0}} g(x) = l_{2}$，<br>$\lim\limits_{x \to x_{0}} (f(x) \pm g(x)) = l_{1} \pm l_{2}$；<br>$\lim\limits_{x \to x_{0}} f(x) g(x) = l_{1} l_{2}$，特别地，$\lim\limits_{x \to x_{0}} cf(x) = cl_{1}$，其中$c$为常数；<br>若$l_{2} \ne 0$，则$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = \dfrac{l_{1}}{l_{2}}$。</p>
+<p><strong>迫敛定理</strong>：<br>设在$x_{0}$附近有$g(x) \le f(x) \le h(x)$，且$\lim\limits_{x \to x_{0}} g(x) = \lim\limits_{x \to x_{0}} h(x) = l$，则$\lim\limits_{x \to x_{0}} = l$。</p>
+<p><img src="https://s2.loli.net/2022/12/12/VIFRbOd3xf6Kt98.png" alt="迫敛定理" title="迫敛定理"></p>
+<p>函数与数列的不同点在于可以复合。设函数$f, g$分别在$x_{0}, t_{0}$附近有定义，且在$t_{0}$附近$t \ne t_{0}$时$g(t) \ne x_{0}$，如果$\lim\limits_{x \to x_{0}} f(x) = l, \lim\limits_{t \to t_{0}} g(t) = x_{0}$，那么$\lim\limits_{t \to t_{0}} f(g(t)) = l$。<br>这样，求一些函数极限的问题就可以通过换元转化成两个较简单的极限问题。</p>
+<p><strong>海涅定理（Heine theorem）</strong>沟通了函数极限与数列极限：<br>设函数$f$在$x_{0}$附近有定义，则$\lim\limits_{x \to x_{0}} f(x) = l$的充要条件是：对于任何收敛于$x_{0}$的数列$\{a_{n}\} (a_{n} \ne x_{0})$，都有$\lim\limits_{n \to \infty} f(a_{n}) = l$。</p>
+<p>证明：<br><em>必要性</em>：如果$\lim\limits_{x \to x_{0}} f(x) = l$，那么对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$|f(x) - l| &lt; \varepsilon$。设$\{a_{n}\} (a_{n} \ne x_{0})$收敛于$x_{0}$，则存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - x_{0}| &lt; \delta$。因为$a_{n} \ne x_{0}$，所以$0 &lt; |x - x_{0}| &lt; \delta$，这样$\forall n \ge N, |f(a_{n}) - l| &lt; \varepsilon$，也就是$\lim\limits_{n \to \infty} f(a_{n}) = l$。<br><em>充分性</em>：对于任何收敛于$x_{0}$的数列$\{a_{n}\} (a_{n} \ne x_{0})$，都有$\lim\limits_{n \to \infty} f(a_{n}) = l$。用反证法，假设$\lim\limits_{x \to x_{0}} f(x) = l$不成立，则存在$\varepsilon &gt; 0$，使得对于任意的$\delta &gt; 0$，都存在$x_{\delta}$，使得即使$0 &lt; |x_{\delta} - x_{0}| &lt; \delta$，仍有$|f(x_{\delta}) - l| \ge \varepsilon$。令$\delta_{n} = \dfrac{1}{n}, a_{n} = x_{\delta_{n}}$，则$0 &lt; |a_{n} - x_{0}| &lt; \dfrac{1}{n}, |f(a_{n}) - l| \ge \varepsilon$。由前者可得$\lim\limits_{n \to \infty} a_{n} = x_{0}$，由后者可得$\{f(a_{n})\}$不收敛于$l$，矛盾。$\Box$</p>
+<p>海涅定理可以用于检验极限是否存在。如果存在收敛于$x_{0}$的两个数列$\{a_{n}\}, \{b_{n}\}$，使得$\{f(a_{n})\}, \{f(b_{n})\}$趋于不同的值或者发散，则函数$f(x)$在$x_{0}$不存在极限。</p>
+<h2 id="重要极限与兰道记号"><a href="#重要极限与兰道记号" class="headerlink" title="重要极限与兰道记号"></a>重要极限与兰道记号</h2><p><img src="https://s2.loli.net/2022/12/13/7HzQ8VlAKcYE61r.png" alt></p>
+<p>设$x \in (0, \dfrac{\pi}{2})$。如图，单位圆中$\angle AOD = x$，$CD \perp OA$交$OA$于点$C$，$AB \perp OA$交$OD$于点$B$。显然，$|CD| = \sin x, |AB| = \tan x$。因为三角形$AOD$的面积小于扇形$AOD$的面积又小于三角形$AOB$的面积，所以$\dfrac{1}{2} \sin x &lt; \dfrac{1}{2} x &lt; \dfrac{1}{2} \tan x$。<br>因此$x \in (0, \dfrac{\pi}{2})$时，有$\sin x &lt; x &lt; \tan x$。<br>这样在$x \in \mathbb{R}$时，就有$|\sin x| \le |x|$，等号成立当且仅当$x = 0$。</p>
+<p>从而可以得出一个重要极限：</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to 0} \dfrac{\sin x}{x} = 1</script><p>证明：<br>设$x \in (0, \dfrac{\pi}{2})$，则由上面的不等式，$1 &lt; \dfrac{x}{\sin x} &lt; \dfrac{1}{\cos x}$，即$\cos x &lt; \dfrac{\sin x}{x} &lt; 1$。再由上面的不等式，$\cos x = 1 - 2\sin^{2} \dfrac{x}{2} &gt; 1 - 2 (\dfrac{x}{2})^{2} = 1 - \dfrac{x^{2}}{2}$，所以$1 - \dfrac{x^{2}}{2} &lt; \dfrac{\sin x}{x} &lt; 1$。因为$\lim\limits_{x \to 0^{+}} (1 - \dfrac{x^{2}}{2}) = 1$，根据迫敛定理，$\lim\limits_{x \to 0^{+}} \dfrac{\sin x}{x} = 1$。而令$y = -x$，有$\lim\limits_{x \to 0^{-}} \dfrac{\sin x}{x} = \lim\limits_{y \to 0^{+}} \dfrac{\sin(-y)}{-y} = \lim\limits_{y \to 0^{+}} \dfrac{\sin y}{y} = 1$，所以$\lim\limits_{x \to 0} \dfrac{\sin x}{x} = 1$。$\Box$</p>
+<p>这个极限在物理学和天文学中很重要。如果$\theta$是一个很小的正角，那么可以认为$\sin \theta \approx \tan \theta \approx \theta$。</p>
+<p>我们知道$\mathrm{e} = \lim\limits_{n \to \infty} (1 + \dfrac{1}{n})^{n}$，而对于函数$(1 + \dfrac{1}{x})^{x}$，结果也是一样的。这就是另一个重要极限：</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to \infty} (1 + \dfrac{1}{x})^{x} = \mathrm{e}</script><p>证明：<br>我们可以把一般情况化为整数的情况。因为$[x] \le x &lt; [x] + 1$，根据指数函数和幂函数的单调性，有$(1 + \dfrac{1}{[x] + 1})^{[x]} &lt; (1 + \dfrac{1}{x})^{x} &lt; (1 + \dfrac{1}{[x]})^{[x] + 1}$。因为$\lim\limits_{x \to +\infty} [x] = +\infty$，所以$\lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x] + 1})^{[x]} = \lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x] + 1})^{[x] + 1} (1 + \dfrac{1}{[x] + 1})^{-1} = \mathrm{e}$以及$\lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x]})^{[x] + 1} = \lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x]})^{[x]} (1 + \dfrac{1}{[x]}) = \mathrm{e}$。根据迫敛定理，$\lim\limits_{x \to +\infty} (1 + \dfrac{1}{x})^{x} = \mathrm{e}$。而令$y = -x$，有$\lim\limits_{x \to -\infty} (1 + \dfrac{1}{x})^{x} = \lim\limits_{y \to +\infty} (1 - \dfrac{1}{y})^{-y} = \lim\limits_{y \to +\infty} (1 + \dfrac{1}{y - 1})^{y} = \lim\limits_{y \to +\infty} (1 + \dfrac{1}{y - 1})^{y - 1} (1 + \dfrac{1}{y - 1}) = \mathrm{e}$，所以$\lim\limits_{x \to \infty} (1 + \dfrac{1}{x})^{x} = \mathrm{e}$。$\Box$</p>
+<p>对这个极限进行倒数代换，就得到类似的$\lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = \mathrm{e}$。</p>
+<p>如果函数$f, g$在$x_{0}$附近有定义，满足$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = 1$，则称$x \to x_{0}$时$f, g$等价，记作$f(x) \sim g(x) (x \to x_{0})$。例如，由第一个重要极限可得$\sin x \sim x (x \to 0)$。等价的函数在乘除因式里可以相互替换。<br>如果$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = 0$，则称$x \to x_{0}$时$f$比$g$低阶，记作$f(x) = o(g(x)) (x \to x_{0})$。“低阶”指的就是增长较慢，例如$x^2 = o(x) (x \to 0)$。<br>如果$|\dfrac{f(x)}{g(x)}|$在$x_{0}$附近有界，即存在$M &gt; 0$使得$|\dfrac{f(x)}{g(x)}| \le M$，则称$x \to x_{0}$时$f$的阶不超过$g$，记作$f(x) = O(g(x)) (x \to x_{0})$。例如，$\sinh x = O(\mathrm{e}^{x})$。特别地，$f(x) = O(1) (x \to x_{0})$表示$f$在$x_{0}$附近有界。<br>等价符号$\sim$、小$o$符号和大$O$符号由德国数学家爱德蒙·兰道（Edmund Landau，1877－1938）推广，统称为<strong>兰道记号（Landau notation）</strong>，在渐进分析中相当常用。兰道记号有一些性质：</p>
+<ul>
+<li>$o(f(x)) + o(f(x)) = o(f(x))$</li>
+<li>$o(f(x)) \cdot o(g(x)) = o(f(x) g(x))$</li>
+<li>$o(f(x)) = O(f(x))$</li>
+</ul>
+<p>注意兰道记号中的等号不同于一般的等号，最后一条不能反过来，$O(f(x)) = o(f(x))$不一定成立。</p>
+<h1 id="函数的连续性"><a href="#函数的连续性" class="headerlink" title="函数的连续性"></a>函数的连续性</h1><h2 id="连续性的定义"><a href="#连续性的定义" class="headerlink" title="连续性的定义"></a>连续性的定义</h2><p>我们曾用$\varepsilon - \delta$语言定义过连续性：设函数$f$在$x_{0}$附近有定义，如果对于任意的$\varepsilon &gt; 0$，都存在$\delta &gt; 0$，使得只要$|x - x_{0}| &lt; \delta$，就有$|f(x) - f(x_{0})| &lt; \varepsilon$，那么称$f$在点$x_{0}$<strong>连续</strong>。</p>
+<p>现在可以用极限写出更加简洁的定义：设函数$f$在$x_{0}$附近有定义，如果$\lim\limits_{x \to x_{0}} f(x) = f(x_{0})$，那么称$f$在点$x_{0}$<strong>连续</strong>。<br>从这一定义看，连续性就是某一点处的极限等于函数值。当自变量从$x_{0}$变为$x$时，就产生了一个增量$\Delta x = x - x_{0}$，函数值也对应产生一个增量$\Delta y = f(x) - f(x_{0}) = f(x_{0} + \Delta x) - f(x_{0})$，连续性实际上也就是说$\lim\limits_{\Delta x \to 0} \Delta y = 0$。</p>
+<p>如果函数在某一点不连续，那么称它在这一点<strong>间断</strong>。如果函数$f$在开区间$I$的每一点都连续，那么称函数$f$是开区间$I$上的<strong>连续函数（continuous function）</strong>。<br>函数$f$在点$x_{0}$连续当且仅当$\lim\limits_{x \to x_{0}^{-}} f(x) = \lim\limits_{x \to x_{0}^{+}} f(x) = f(x_{0})$。我们可以同样定义与左右极限对应的左右连续的概念：如果$\lim\limits_{x \to x_{0}^{-}} f(x) = f(x_{0})$，那么称$f$在$x_{0}$<strong>左连续</strong>；如果$\lim\limits_{x \to x_{0}^{+}} f(x) = f(x_{0})$，那么称$f$在$x_{0}$<strong>右连续</strong>。<br>对于闭区间$I$上的函数$f$，如果$f$在区间内每一点都连续，且在左端点左连续，右端点右连续，那么称函数$f$是闭区间$I$上的连续函数。</p>
+<p>我们再来考虑<strong>间断点（discontinuity）</strong>。间断点有三种情况：</p>
+<ol>
+<li>函数在某一点存在极限，即左右极限相等，但与函数值不相等，或者函数在这一点没有定义，即$\lim\limits_{x \to x_{0}^{-}} f(x) = \lim\limits_{x \to x_{0}^{+}} f(x) \ne f(x_{0})$。这类间断点称为<strong>可去间断点（removable discontinuity）</strong>。因为只要修改这一点，就能变为连续函数，例如$g(x) = \begin{cases} f(x), &amp; x \ne x_{0} \\ \lim\limits_{x \to x_{0}^{-}} f(x), &amp; x = x_{0} \end{cases}$。<br><img src="https://s2.loli.net/2022/12/16/eAUqcKomhf2BFPY.png" alt="可去间断点" title="可去间断点"></li>
+<li>函数在某一点的左右极限存在但不相等，即$\lim\limits_{x \to x_{0}^{-}} f(x) \ne \lim\limits_{x \to x_{0}^{+}} f(x)$。这类间断点称为<strong>跳跃间断点（jump discontinuity）</strong>。因为函数在$x_{0}$处发生了$|\lim\limits_{x \to x_{0}^{+}} f(x) - \lim\limits_{x \to x_{0}^{-}} f(x)|$的跳跃。<br>可去间断点和跳跃间断点统称为<strong>第一类间断点</strong>。<br><img src="https://s2.loli.net/2022/12/16/fDnCuTJ9YR8GUsx.png" alt="跳跃间断点" title="跳跃间断点"></li>
+<li>函数在某一点的左右极限至少有一个不存在。这类间断点称为<strong>第二类间断点（essential discontinuity）</strong>。例如，对于<strong>狄利克雷函数（Dirichlet function）</strong>$D(x) = \begin{cases} 1, &amp; x \in \mathbb{Q} \\ 0, &amp; x \in \mathbb{R} - \mathbb{Q} \end{cases}$，任意的$x_{0} \in \mathbb{R}$都是其第二类间断点。<br><img src="https://s2.loli.net/2022/12/16/VAwZ83JKok4Q1xr.png" alt="第二类间断点" title="第二类间断点"></li>
+</ol>
+<p>连续函数的四则运算和复合同样具有连续性。<br>设函数$f(x), g(x)$在$x_{0}$连续，则$f(x) \pm g(x), f(x) g(x), \dfrac{f(x)}{g(x)} (g(x_{0}) \ne 0)$也在$x_{0}$连续。<br>设函数$u = g(x)$在区间$I$有定义，$y = f(u)$在区间$J$有定义，且$g(I) \subseteq J$。若$g$在$x_{0} \in I$处连续，$f$在$u_{0} = g(x_{0})$处连续，则复合函数$f \circ g$在$x_{0}$处连续。即$\lim\limits_{x \to x_{0}} f(g(x)) = f(\lim\limits_{x \to x_{0}} g(x)) = f(g(x_{0}))$，连续函数复合的极限运算可以层层向内进行。<br>此外，连续函数的反函数同样是连续函数。</p>
+<p>连续函数还具有<strong>局部保号性</strong>：<br>设函数$f$在$x_{0}$处连续，且$f(x_{0}) \ne 0$，则存在$\delta &gt; 0$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$f(x) f(x_{0}) &gt; 0$。</p>
+<h2 id="初等函数的连续性"><a href="#初等函数的连续性" class="headerlink" title="初等函数的连续性"></a>初等函数的连续性</h2><p>因为$\lim\limits_{x \to x_{0}} x = x_{0}$，乘法得到$\lim\limits_{x \to x_{0}} x^{k} = x_{0}^{k}$，再加法得到$\lim\limits_{x \to x_{0}} \sum\limits_{k = 0}^{n} a_{k} x^{k} = \sum\limits_{k = 0}^{n} a_{k} x_{0}^{k}$。<br>所以多项式函数是连续函数。</p>
+<p>根据和差化积公式，$|\sin x - \sin x_{0}| = 2 |\sin \dfrac{x - x_{0}}{2} \cos \dfrac{x + x_{0}}{2}| \le 2 |\sin \dfrac{x - x_{0}}{2}| \le |x - x_{0}|$。对于任意的$\varepsilon &gt; 0$，令$\delta = \varepsilon$，则$0 &lt; |x - x_{0}| &lt; \delta$时，$|\sin x - \sin x_{0}| \le |x - x_{0}| &lt; \varepsilon$，所以$\lim\limits_{x \to x_{0}} \sin x = \sin x_{0}$，$\sin x$是连续函数。<br>其它三角函数均可由$\sin x$导出，所以三角函数是连续函数。<br>反三角函数是三角函数的反函数，所以反三角函数也是连续函数。</p>
+<p>设$a &gt; 0$。令$y = x - x_{0}$，则$\lim\limits_{x \to x_{0}} y = 0$。所以$\lim\limits_{x \to x_{0}} (a^{x} - a^{x_{0}}) = a^{x_{0}} \lim\limits_{x \to x_{0}} (a^{x - x_{0}} - 1) = a^{x_{0}} \lim\limits_{y \to 0} (a^{y} - 1) = 0$，即$\lim\limits_{x \to x_{0}} a^{x} = a^{x_{0}}$。<br>所以指数函数是连续函数。<br>对数函数是指数函数的反函数，所以对数函数也是连续函数。</p>
+<p>设$f(x) = x^{\alpha}, x \in (0, +\infty) (\alpha \ne 0)$，则$f(x) = x^{\alpha} = \mathrm{e}^{\alpha \ln x}$，是连续函数的复合。<br>所以幂函数是连续函数。</p>
+<p>所有初等函数都可以由以上函数运算得到。所以，初等函数具有连续性。初等函数在其定义域内是连续函数。若初等函数$f$在$x_{0}$附近有定义，则$\lim\limits_{x \to x_{0}} f(x) = f(x_{0})$。</p>
+<h2 id="闭区间上连续函数的性质"><a href="#闭区间上连续函数的性质" class="headerlink" title="闭区间上连续函数的性质"></a>闭区间上连续函数的性质</h2><p>如果函数在一个闭区间上连续，那么有<strong>零点定理</strong>：<br>设函数$f$在$[a, b]$上连续，且$f(a) f(b) &lt; 0$，则存在$\xi \in (a, b)$使得$f(\xi) = 0$。</p>
+<p>证明：<br>不妨设$f(a) &lt; 0 &lt; f(b)$。把区间$[a, b]$分为$[a, \dfrac{a + b}{2}], [\dfrac{a + b}{2}, b]$两半，如果$f(\dfrac{a + b}{2}) = 0$，定理得证，否则$f(\dfrac{a + b}{2})$必与$f(a), f(b)$之一异号。将异号的这一半区间记为$I_{1} = [a_{1}, b_{1}]$，则$f(a_{1}) &lt; 0 &lt; f(b_{1})$；把$I_{1}$也这样分为两半，如此下去，得到一系列区间$I_{n} = [a_{n}, b_{n}]$，且满足$I_{1} \supseteq I_{2} \supseteq \cdots \supseteq I_{n} \supseteq \cdots$，$\lim\limits_{n \to \infty} (b_{n} - a_{n}) = \lim\limits_{n \to \infty} \dfrac{1}{2^{n}} (b - a) = 0$，$f(a_{n}) &lt; 0 &lt; f(b_{n})$。根据区间套定理，有$\xi = \lim\limits_{n \to \infty} a_{n} = \lim\limits_{n \to \infty} b_{n}$。由海涅定理，$f(\xi) = \lim\limits_{n \to \infty} f(a_{n}) \le 0 \le \lim\limits_{n \to \infty} f(b_{n}) = f(\xi)$，即$f(\xi) = 0$。$\Box$</p>
+<p>上述证明过程体现了<strong>二分法（bisection method）</strong>的算法思想。二分法可以用于计算函数零点，通过不断把零点所在区间对半分来逼近零点，步骤如下：</p>
+<ol>
+<li>指定误差值$\varepsilon$。</li>
+<li>找出一个区间$[a, b]$使得$f(a) f(b) &lt; 0$。</li>
+<li>令$x = \dfrac{a + b}{2}$。若$f(a) f(x) &lt; 0$，则取$[a, x]$为新的区间；若$f(b) f(x) &lt; 0$，则取$[x, b]$为新的区间。</li>
+<li>重复第3步，直到$|f(x)| &lt; \varepsilon$，此时取$x$作为零点。</li>
+</ol>
+<p>零点定理推广可得<strong>介值定理（intermediate value theorem）</strong>：<br>设函数$f$在$[a, b]$上连续，若对于任意实数$u$有$f(a) &lt; u &lt; f(b)$，则存在$\xi \in (a, b)$使得$f(\xi) = u$。</p>
+<p>根据连续性的定义，如果函数$f$在点$x_{0}$连续，那么对于$\varepsilon = 1$，存在$\delta &gt; 0$，使得只要$|x - x_{0}| &lt; \delta$，就有$|f(x) - f(x_{0})| &lt; 1$。这样，$|f(x)| &lt; 1 + |f(x_{0})|$，函数$f$在区间$(x_{0} - \delta, x_{0} + \delta)$有界。<br>进一步推广，如果函数$f$在$[a, b]$上连续，则$f$在$[a, b]$上有界，即存在正数$M$，使得$\forall x \in [a, b], |f(x)| \le M$。</p>
+<p>更进一步有<strong>最值定理（extreme value theorem）</strong>：<br>设函数$f$在$[a, b]$上连续，则$f$在$[a, b]$上存在最大值和最小值，即存在$x_{1}, x_{2} \in [a, b]$，使得$\forall x \in [a, b], f(x_{1}) \le f(x) \le f(x_{2})$。</p>
+<p>介值定理和最值定理说明，连续函数将闭区间映射为闭区间。正是如此，求出闭区间上连续函数的最大值和最小值，才确定了函数的值域。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Luckyfuy 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Luckyfuy 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Luckyfuy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://luckyfuy.top/2022/12/09/Limit/" title="学习笔记·极限论">https://luckyfuy.top/2022/12/09/Limit/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"><i class="fa fa-tag"></i> Mathematics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/12/08/Household-Medications/" rel="next" title="家庭常备药物">
+                <i class="fa fa-chevron-left"></i> 家庭常备药物
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <link rel="stylesheet" href="/sharejs/css/share.min.css">
+<script src="/sharejs/js/social-share.min.js"></script>
+
+<div class="social-share">分享到：</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Luckyfuy">
+            
+              <p class="site-author-name" itemprop="name">Luckyfuy</p>
+              <p class="site-description motion-element" itemprop="description">蒟蒻Luckyfuy的辣鸡博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Luckyfuy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                      
+                        <i class="fa fa-fw fa-code"></i>Luogu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://zh.wikipedia.org/wiki/User:Luckyfuy" target="_blank" title="Wikipedia">
+                      
+                        <i class="fa fa-fw fa-wikipedia-w"></i>Wikipedia</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                      
+                        <i class="fa fa-fw fa-steam"></i>Steam</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://slight.ink/" title="Summer_Light's Blog" target="_blank">Summer_Light's Blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://lzwblog.xyz/" title="Li_zi_wei_blog" target="_blank">Li_zi_wei_blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+
+          <div style align="center">
+  <canvas id="canvas" style="width:60%;"></canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数列极限"><span class="nav-number">1.</span> <span class="nav-text">数列极限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数列极限的定义"><span class="nav-number">1.1.</span> <span class="nav-text">数列极限的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收敛数列的性质"><span class="nav-number">1.2.</span> <span class="nav-text">收敛数列的性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实数的完备性"><span class="nav-number">2.</span> <span class="nav-text">实数的完备性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数极限"><span class="nav-number">3.</span> <span class="nav-text">函数极限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初等函数"><span class="nav-number">3.1.</span> <span class="nav-text">初等函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数极限的定义"><span class="nav-number">3.2.</span> <span class="nav-text">函数极限的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数极限的性质与运算"><span class="nav-number">3.3.</span> <span class="nav-text">函数极限的性质与运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重要极限与兰道记号"><span class="nav-number">3.4.</span> <span class="nav-text">重要极限与兰道记号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数的连续性"><span class="nav-number">4.</span> <span class="nav-text">函数的连续性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连续性的定义"><span class="nav-number">4.1.</span> <span class="nav-text">连续性的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初等函数的连续性"><span class="nav-number">4.2.</span> <span class="nav-text">初等函数的连续性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭区间上连续函数的性质"><span class="nav-number">4.3.</span> <span class="nav-text">闭区间上连续函数的性质</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-battery"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luckyfuy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访问量：<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+  本站访客数：<span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
+
+<br>
+
+<span id="sitetime"></span>
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2018,12,30,15,00,00);
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+<br>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共1738.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+        appKey: 'a4Xz6pahi9vo3xVo2F1FQ80g',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': 'oU6xw8NWQ3rk5XhxfxtRKSMi-MdYXbMMI',
+                'X-LC-Key': 'a4Xz6pahi9vo3xVo2F1FQ80g',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            // if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+  
+
+
+  
+
+  
+
+
+  
+    
+      <script src="/js/cursor/fireworks.js"></script>
+    
+  
+
+  
+    <script src="/js/src/activate-power-mode.min.js"></script>
+    <script>
+      POWERMODE.colorful = true;
+      POWERMODE.shake = false;
+      document.body.addEventListener('input', POWERMODE);
+    </script>
+  
+
+  <style>
+  .copy-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    user-select: none;
+    outline: 0;
+  }
+
+  .highlight-wrap .copy-btn {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    padding: 2px 6px;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+  }
+
+  .highlight-wrap:hover .copy-btn,
+  .highlight-wrap .copy-btn:focus {
+    opacity: 1
+  }
+
+  .highlight-wrap {
+    position: relative;
+  }
+</style>
+
+<script>
+  $('.highlight').each(function (i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap')
+    $(e).after($wrap)
+    $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+      var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+        return $(e).text()
+      }).toArray().join('\n')
+      var ta = document.createElement('textarea')
+      document.body.appendChild(ta)
+      ta.style.position = 'absolute'
+      ta.style.top = '0px'
+      ta.style.left = '0px'
+      ta.value = code
+      ta.select()
+      ta.focus()
+      var result = document.execCommand('copy')
+      document.body.removeChild(ta)
+
+      if(result)$(this).text('success')
+      else $(this).text('failure')
+
+      $(this).blur()
+    })).on('mouseleave', function (e) {
+      var $b = $(this).find('.copy-btn')
+      setTimeout(function () {
+        $b.text('copy')
+      }, 300)
+    }).append(e)
+  })
+</script>
+
+  <script>
+    var str = `
+ _                  _            ___             
+| |                | |          / __)            
+| |     _   _  ____| |  _ _   _| |__ _   _ _   _ 
+| |    | | | |/ ___) | / ) | | |  __) | | | | | |
+| |____| |_| ( (___| |< (| |_| | |  | |_| | |_| |
+|_______)____|\\____)_| \\_)\\__  |_|   \\____|\\__  |
+                         (____/           (____/ `;
+    console.log(str);
+  </script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1671261181435')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>
