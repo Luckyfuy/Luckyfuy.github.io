@@ -657,13 +657,6 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Python/</loc>
-    <lastmod>2023-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://luckyfuy.top/tags/Hexo/</loc>
     <lastmod>2023-01-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -672,6 +665,13 @@
   
   <url>
     <loc>https://luckyfuy.top/tags/GitHub/</loc>
+    <lastmod>2023-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/tags/Python/</loc>
     <lastmod>2023-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -755,14 +755,14 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Marxism/</loc>
+    <loc>https://luckyfuy.top/tags/Music/</loc>
     <lastmod>2023-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Music/</loc>
+    <loc>https://luckyfuy.top/tags/Marxism/</loc>
     <lastmod>2023-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
