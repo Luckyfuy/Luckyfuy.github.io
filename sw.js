@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
+  precacheUrls.push('/2019/03/09/Blog-Building/');
+
   precacheUrls.push('/2018/12/30/Hello-World/');
 
   precacheUrls.push('/2019/03/22/Learn-Python/');
 
-  precacheUrls.push('/2019/03/09/Blog-Building/');
-
-  precacheUrls.push('/2019/05/11/1+1=2/');
-
   precacheUrls.push('/2019/03/30/Python-Data-Types/');
+
+  precacheUrls.push('/2019/04/12/Redstone-Circuits/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
