@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/04/12/Redstone-Circuits/');
 
-  precacheUrls.push('/2019/03/30/Python-Data-Types/');
+  precacheUrls.push('/2019/07/29/Heap/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
