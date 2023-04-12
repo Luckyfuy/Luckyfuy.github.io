@@ -151,7 +151,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="前言相较于传统的Python打包工具pyinstaller，Nuitka具有更高的效率和安全性。不过，Nuitka的上手难度稍高。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-02-21T05:49:04.170Z">
+<meta property="og:updated_time" content="2023-04-12T05:20:58.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nuitka的简要使用">
 <meta name="twitter:description" content="前言相较于传统的Python打包工具pyinstaller，Nuitka具有更高的效率和安全性。不过，Nuitka的上手难度稍高。">
@@ -542,7 +542,8 @@
 <p>为了方便移植，可以添加参数<code>--standalone</code>。此外，<code>--show-progress</code>可以显示编译进度，<code>--show-memory</code>可以显示内存占用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone --show-progress --show-memory main.py</span><br></pre></td></tr></table></figure></p>
 <p>要打包成单个<code>.exe</code>文件，需要用到<code>--onefile</code>参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone --onefile --show-progress --show-memory main.py</span><br></pre></td></tr></table></figure></p>
 <p>程序中调用了某些模块时，需要用到<code>--enable-plugin=</code>参数调用插件。使用<code>nuitka --plugin-list</code>可以查看插件列表。例如，tkinter包有<code>--enable-plugin=tk-inter</code>，PySide6包有<code>--enable-plugin=pyside6</code>。<br><code>--nofollow-imports</code>参数不编译所有模块，此时可以用<code>--follow-import-to=</code>参数编译指定模块。<br>对于一个调用了PySide6的程序，就可以用如下命令打包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone --onefile --show-progress --show-memory --nofollow-imports --follow-import-to=MainWindow.py --enable-plugin=pyside6 --windows-disable-console main.py</span><br></pre></td></tr></table></figure></p>
-<p>其中<code>--windows-disable-console</code>参数会隐藏Windows系统下的控制台。<br>Nuitka还有一些常用参数：</p>
+<p>其中<code>--windows-disable-console</code>参数会隐藏Windows系统下的控制台。</p>
+<p>Nuitka还有一些常用参数：</p>
 <ul>
 <li><code>--include-data-dir=</code>：数据文件夹</li>
 <li><code>--output-dir=</code>：输出文件夹</li>
@@ -1892,7 +1893,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1681276177647')
+  navigator.serviceWorker.register('/sw.js?t=1681276930244')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
