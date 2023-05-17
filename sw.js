@@ -28,11 +28,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/03/09/Blog-Building/');
 
-  precacheUrls.push('/2019/03/30/Python-Data-Types/');
+  precacheUrls.push('/2019/03/22/Learn-Python/');
 
   precacheUrls.push('/2019/05/11/1+1=2/');
 
-  precacheUrls.push('/2019/03/22/Learn-Python/');
+  precacheUrls.push('/2019/06/29/Basic-Mod-Packs/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
