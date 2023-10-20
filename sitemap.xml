@@ -677,6 +677,13 @@
 
   
   <url>
+    <loc>https://luckyfuy.top/tags/Others/</loc>
+    <lastmod>2023-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/tags/Hexo/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -691,13 +698,6 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Mathematics/</loc>
-    <lastmod>2023-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://luckyfuy.top/tags/Python/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -705,14 +705,14 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Others/</loc>
+    <loc>https://luckyfuy.top/tags/Minecraft/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Minecraft/</loc>
+    <loc>https://luckyfuy.top/tags/Mathematics/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -747,14 +747,14 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/MySQL/</loc>
+    <loc>https://luckyfuy.top/tags/Windows/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Windows/</loc>
+    <loc>https://luckyfuy.top/tags/MySQL/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -796,13 +796,6 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Japanese/</loc>
-    <lastmod>2023-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://luckyfuy.top/tags/Maoism/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -810,7 +803,7 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Chinese/</loc>
+    <loc>https://luckyfuy.top/tags/Japanese/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -818,6 +811,13 @@
   
   <url>
     <loc>https://luckyfuy.top/tags/Linux/</loc>
+    <lastmod>2023-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/tags/Chinese/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -847,14 +847,14 @@
 
   
   <url>
-    <loc>https://luckyfuy.top/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://luckyfuy.top/categories/Python%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/categories/Python%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://luckyfuy.top/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
