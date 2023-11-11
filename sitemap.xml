@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luckyfuy.top/2019/11/08/Windows-Shortcut-Keys/</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/2022/02/13/National-System-and-Organization/</loc>
     
     <lastmod>2023-11-11</lastmod>
@@ -623,15 +632,6 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/2019/11/08/Windows-Shortcut-Keys/</loc>
-    
-    <lastmod>2019-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://luckyfuy.top/2019/10/11/Change-Blog-Domain/</loc>
     
     <lastmod>2019-10-11</lastmod>
@@ -684,6 +684,13 @@
   </url>
   
   <url>
+    <loc>https://luckyfuy.top/tags/Python/</loc>
+    <lastmod>2023-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/tags/Hexo/</loc>
     <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -692,13 +699,6 @@
   
   <url>
     <loc>https://luckyfuy.top/tags/GitHub/</loc>
-    <lastmod>2023-11-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/tags/Python/</loc>
     <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -810,14 +810,14 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Linux/</loc>
+    <loc>https://luckyfuy.top/tags/Chinese/</loc>
     <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Chinese/</loc>
+    <loc>https://luckyfuy.top/tags/Linux/</loc>
     <lastmod>2023-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
