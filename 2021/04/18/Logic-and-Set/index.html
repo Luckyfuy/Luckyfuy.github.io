@@ -158,7 +158,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
-<meta property="og:updated_time" content="2022-12-09T05:57:59.001Z">
+<meta property="og:updated_time" content="2023-11-11T04:17:26.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
@@ -542,8 +542,8 @@
       
         <h1 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h1><h2 id="谓词逻辑"><a href="#谓词逻辑" class="headerlink" title="谓词逻辑"></a>谓词逻辑</h2><p><strong>谓词（predicate）</strong>是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为<strong>主词（subject）</strong>。<br>例如，用$P$表示考了100分，$x$表示小刚，那么命题<em>小刚考了100分</em>可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。<br>谓词和主词构成了原子命题，即不可再分的简单命题。</p>
 <h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><p>有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为<strong>量词（quantifier）</strong>。<br>最基本的两种量词是<strong>全称量词（universal quantifier）</strong>和<strong>存在量词（existential quantifier）</strong>。</p>
-<p>全称量词符号为$\forall$，用于表示<em>任意</em>这样的词。<br>例如<em>所有小朋友$x$都考了100分</em>，可以表示为$\forall x \  P(x)$。</p>
-<p>存在量词符号为$\exists$，也称<strong>特称量词（particular quantifier）</strong>，用于表示<em>存在</em>这样的词。<br>例如<em>至少有一个小朋友$x$考了100分</em>，可以表示为$\exists x \  P(x)$。</p>
+<p>全称量词符号为$\forall$，用于表示<em>任意</em>这样的词。<br>例如<em>所有小朋友$x$都考了100分</em>，可以表示为$\forall x, P(x)$。</p>
+<p>存在量词符号为$\exists$，也称<strong>特称量词（particular quantifier）</strong>，用于表示<em>存在</em>这样的词。<br>例如<em>至少有一个小朋友$x$考了100分</em>，可以表示为$\exists x, P(x)$。</p>
 <a id="more"></a>
 <h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p><strong>命题（proposition）</strong>指一个陈述句所表达的判断，不涉及谓词时，我们通常用一个字母来表示命题，如$p, q, r$等。一般我们所指的命题非<strong>真（true）</strong>即<strong>假（false）</strong>，这里的真和假表示的就是命题的<strong>真值（truth value）</strong>。</p>
 <h3 id="逻辑联结词"><a href="#逻辑联结词" class="headerlink" title="逻辑联结词"></a>逻辑联结词</h3><p>命题之间可以用<strong>逻辑联结词（logical connective）</strong>连接起来，构成复合命题。</p>
@@ -724,9 +724,9 @@
 <li><strong>矛盾式（contradiction）</strong>：最后一列全是F，符号为$\bot$。如$p \land \lnot p$。</li>
 <li><strong>或然式（contingency）</strong>：最后一列既存在T也存在F。</li>
 </ul>
-<h3 id="全称命题与存在命题"><a href="#全称命题与存在命题" class="headerlink" title="全称命题与存在命题"></a>全称命题与存在命题</h3><p>设所有的元素为$x_{1}, \cdots, x_{n}$，那么对于全称命题$\forall x \  P(x)$，实际上表示的是$P(x_{1}) \land P(x_{2}) \land \cdots \land P(x_{n})$，即这些命题中每个都是真的。因此不难得出全称命题的否定：</p>
-<script type="math/tex; mode=display">\lnot (\forall x \  P(x)) = \exists x \  \lnot P(x)</script><p>同样，存在命题$\exists x \  P(x)$表示$P(x_{1}) \lor P(x_{2}) \lor \cdots \lor P(x_{n})$，即至少有一个是真的。<br>那么</p>
-<script type="math/tex; mode=display">\lnot (\exists x \  P(x)) = \forall x \  \lnot P(x)</script><p>这样，只要证明$\forall x \  \lnot P(x) \Rightarrow \bot$，就能证明原命题了。</p>
+<h3 id="全称命题与存在命题"><a href="#全称命题与存在命题" class="headerlink" title="全称命题与存在命题"></a>全称命题与存在命题</h3><p>设所有的元素为$x_{1}, \cdots, x_{n}$，那么对于全称命题$\forall x, P(x)$，实际上表示的是$P(x_{1}) \land P(x_{2}) \land \cdots \land P(x_{n})$，即这些命题中每个都是真的。因此不难得出全称命题的否定：</p>
+<script type="math/tex; mode=display">\lnot (\forall x, P(x)) = \exists x, \lnot P(x)</script><p>同样，存在命题$\exists x, P(x)$表示$P(x_{1}) \lor P(x_{2}) \lor \cdots \lor P(x_{n})$，即至少有一个是真的。<br>那么</p>
+<script type="math/tex; mode=display">\lnot (\exists x, P(x)) = \forall x, \lnot P(x)</script><p>这样，只要证明$\forall x, \lnot P(x) \Rightarrow \bot$，就能证明原命题了。</p>
 <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><strong>集合（set）</strong>是一个或多个对象所构成的整体，这些构成的集合的对象称为<strong>元素（element）</strong>。<br>集合通常用大写字母如$A, B, C$等来表示，而元素通常用小写字母如$a, b, c$等表示。</p>
 <p>如果元素$x$在集合$A$内，我们称$x$<strong>属于</strong>$A$，记作$x \in A$；<br>否则，$x$<strong>不属于</strong>$A$，记作$x \notin A$。<br>若两个集合$A, B$中的元素完全一样，即$x \in A \Leftrightarrow x \in B$，则二者相等，记作$A = B$。</p>
 <p>集合可以用在大括号中列举其元素的方式表示，即<strong>列举法</strong>：</p>
@@ -1504,7 +1504,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1804.6k字</span>
+  <span class="post-count">全站共1804.7k字</span>
 </div>
         
 
@@ -2215,7 +2215,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1697790584731')
+  navigator.serviceWorker.register('/sw.js?t=1699684404966')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
