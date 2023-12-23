@@ -156,7 +156,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/eAUqcKomhf2BFPY.png">
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/fDnCuTJ9YR8GUsx.png">
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/VAwZ83JKok4Q1xr.png">
-<meta property="og:updated_time" content="2023-05-07T05:42:15.000Z">
+<meta property="og:updated_time" content="2023-12-23T14:36:01.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·极限论">
 <meta name="twitter:description" content="数列极限数列极限的定义对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的极限（limit）是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。更加严格地说，对于任意的$\varepsilon &amp;gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n">
@@ -588,7 +588,7 @@ e_{n} &= \sum\limits_{k = 0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
 <h2 id="函数极限的定义"><a href="#函数极限的定义" class="headerlink" title="函数极限的定义"></a>函数极限的定义</h2><p>与数列极限类似，我们考虑自变量趋于无穷大时函数值的趋势。如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$，使得对于任意的$|x| &gt; \delta$，都有$|f(x) - l| &lt; \varepsilon$，那么$x$趋于无穷大时，$f(x)$的<strong>极限（limit）</strong>是$l$，记作$\lim\limits_{x \to \infty} f(x) = l$。<br>从图像来看，$\lim\limits_{x \to \infty} f(x) = l$意味着当$|x|$足够大时，函数图像将会落在由直线$y = l + \varepsilon, y = l - \varepsilon$所围成的一个足够狭长的区域内。<br>把条件$|x| &gt; \delta$改为$x &gt; \delta$或$x &lt; -\delta$，就是$x \to \pm \infty$时函数极限的定义，分别记作$\lim\limits_{x \to +\infty} f(x) = l$和$\lim\limits_{x \to -\infty} f(x) = l$。<br>类似地，还有$x \to \infty$时，$f(x)$发散至无穷大：$\lim\limits_{x \to \infty} f(x) = \infty$。更加准确地说，可以写成$\lim\limits_{x \to +\infty} f(x) = +\infty, \lim\limits_{x \to -\infty} f(x) = +\infty, \lim\limits_{x \to +\infty} f(x) = -\infty, \lim\limits_{x \to -\infty} f(x) = -\infty$。</p>
 <p>与数列极限不同的是，我们还要考虑自变量趋于某个有限值时函数值的趋势。设函数$f$在$(x_{0} - \delta_{0}, x_{0}) \cup (x_{0}, x_{0} + \delta_{0})$有定义，如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$满足$\delta &lt; \delta_{0}$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$|f(x) - l| &lt; \varepsilon$，那么$x$趋于$x_{0}$时，$f(x)$的极限是$l$，记作$\lim\limits_{x \to x_{0}} f(x) = l$。<br>$(x_{0} - \delta_{0}, x_{0}) \cup (x_{0}, x_{0} + \delta_{0})$称为$x_{0}$的一个<strong>去心邻域（deleted neighbourhood）</strong>，$(x_{0} - \delta_{0}, x_{0} + \delta_{0})$则称为$x_{0}$的一个<strong>邻域（neighbourhood）</strong>。如果把$x$限制在足够小的去心邻域内，对应的$f(x)$也就会被限制在足够小的邻域内。之所以是去心邻域而非邻域，是因为函数在某一点没有定义时，也存在这一点的极限。<br>类似地，$x \to x_{0}$时，也可以趋于无穷大：$\lim\limits_{x \to x_{0}} f(x) = \infty$，进一步可以写成$\lim\limits_{x \to x_{0}} f(x) = +\infty, \lim\limits_{x \to x_{0}} f(x) = -\infty$。</p>
 <p>有时，函数只在$x_{0}$的一侧有定义，或者函数在$x_{0}$的两侧定义方式不同。这时，设函数$f$在$x_{0}$的一个左邻域$(x_{0} - \delta_{0}, x_{0})$有定义，如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$满足$\delta &lt; \delta_{0}$，使得只要$-\delta &lt; x - x_{0} &lt; 0$，就有$|f(x) - l| &lt; \varepsilon$，那么我们定义$f(x)$在$x_{0}$的<strong>左极限（left limit）</strong>是$l$，记作$\lim\limits_{x \to x_{0}^{-}} f(x) = l$。<br>设函数$f$在$x_{0}$的一个右邻域$(x_{0}, x_{0} + \delta_{0})$有定义，如果实数$l$满足，对于任意的$\varepsilon &gt; 0$，存在$\delta &gt; 0$满足$\delta &lt; \delta_{0}$，使得只要$0 &lt; x - x_{0} &lt; \delta$，就有$|f(x) - l| &lt; \varepsilon$，那么定义$f(x)$在$x_{0}$的<strong>右极限（right limit）</strong>是$l$，记作$\lim\limits_{x \to x_{0}^{+}} f(x) = l$。</p>
-<p>显然，函数在$x_{0}$存在极限的充要条件是：它在$x_{0}$存在左极限和右极限且相等。</p>
+<p>显然，函数在$x_{0}$存在极限的充要条件是：它在$x_{0}$的左极限和右极限存在且相等。</p>
 <h2 id="函数极限的性质与运算"><a href="#函数极限的性质与运算" class="headerlink" title="函数极限的性质与运算"></a>函数极限的性质与运算</h2><p>函数极限的性质和数列极限类似，证明过程也可以参照数列极限。</p>
 <p><strong>唯一性</strong>：<br>若函数$f(x)$在$x_{0}$有极限，则极限唯一。</p>
 <p><strong>有界性</strong>：<br>设函数$f(x)$在$x_{0}$有极限$l$，则$f(x)$在$x_{0}$附近有界，即存在正数$M$和$\delta$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$|f(x)| \le M$。<br>若$a &lt; l &lt; b$，则在$x_{0}$附近有$a &lt; f(x) &lt; b$。</p>
@@ -1301,7 +1301,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1804.7k字</span>
+  <span class="post-count">全站共1805.1k字</span>
 </div>
         
 
@@ -2012,7 +2012,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1702663886754')
+  navigator.serviceWorker.register('/sw.js?t=1703342346975')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

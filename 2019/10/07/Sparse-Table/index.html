@@ -143,19 +143,19 @@
 
 
 
-<meta name="description" content="简介RMQ（Range Minimum/Maximum Query），即区间最值查询。解决RMQ问题主要有两种方法：ST表（Sparse Table）和线段树（Segment Tree），本文主要讲ST表。 ST表适合解决静态区间最值查询，即下面的问题：  给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。  如果暴力做法，每次对区间$[x, y]">
+<meta name="description" content="简介RMQ（range minimum/maximum query），即区间最值查询。解决RMQ问题主要有两种方法：ST表（sparse table）和线段树（segment tree），本文主要讲ST表。 ST表适合解决静态区间最值查询，即下面的问题：  给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。  如果暴力做法，每次对区间$[x, y]">
 <meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ST表">
 <meta property="og:url" content="https://luckyfuy.top/2019/10/07/Sparse-Table/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="简介RMQ（Range Minimum/Maximum Query），即区间最值查询。解决RMQ问题主要有两种方法：ST表（Sparse Table）和线段树（Segment Tree），本文主要讲ST表。 ST表适合解决静态区间最值查询，即下面的问题：  给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。  如果暴力做法，每次对区间$[x, y]">
+<meta property="og:description" content="简介RMQ（range minimum/maximum query），即区间最值查询。解决RMQ问题主要有两种方法：ST表（sparse table）和线段树（segment tree），本文主要讲ST表。 ST表适合解决静态区间最值查询，即下面的问题：  给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。  如果暴力做法，每次对区间$[x, y]">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/10/07/NUQTCnpI3MSaO4W.png">
-<meta property="og:updated_time" content="2023-01-31T09:06:00.583Z">
+<meta property="og:updated_time" content="2023-12-23T12:31:43.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ST表">
-<meta name="twitter:description" content="简介RMQ（Range Minimum/Maximum Query），即区间最值查询。解决RMQ问题主要有两种方法：ST表（Sparse Table）和线段树（Segment Tree），本文主要讲ST表。 ST表适合解决静态区间最值查询，即下面的问题：  给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。  如果暴力做法，每次对区间$[x, y]">
+<meta name="twitter:description" content="简介RMQ（range minimum/maximum query），即区间最值查询。解决RMQ问题主要有两种方法：ST表（sparse table）和线段树（segment tree），本文主要讲ST表。 ST表适合解决静态区间最值查询，即下面的问题：  给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。  如果暴力做法，每次对区间$[x, y]">
 <meta name="twitter:image" content="https://i.loli.net/2019/10/07/NUQTCnpI3MSaO4W.png">
 
 
@@ -534,7 +534,7 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>RMQ（Range Minimum/Maximum Query），即区间最值查询。<br>解决RMQ问题主要有两种方法：ST表（Sparse Table）和线段树（Segment Tree），本文主要讲ST表。</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>RMQ（range minimum/maximum query），即区间最值查询。<br>解决RMQ问题主要有两种方法：ST表（sparse table）和线段树（segment tree），本文主要讲ST表。</p>
 <p>ST表适合解决静态区间最值查询，即下面的问题：</p>
 <blockquote>
 <p>给定$n$个数，进行$m$次询问。对于每次询问，你都需要回答区间$[l, r]$中的最小值或最大值。</p>
@@ -544,7 +544,7 @@
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>ST表基于倍增思想，由于$\min$操作允许区间重叠，也就是$\min(a, b, c) = \min(\min(a, b), \min(b, c))$（$\max$同理），因此我们可以通过两个有重叠的小区间来推出大区间。</p>
 <p>令$f_{i, j}$表示$[i, i + 2^{j} - 1]$的最小值，<br>那么通过定义可得$f_{i, 0} = a_{i}$，<br>状态转移方程：$f_{i, j} = \min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1})$。</p>
 <p><img src="https://i.loli.net/2019/10/07/NUQTCnpI3MSaO4W.png" alt="E.G." title="E.G."></p>
-<p>例如上面这个数组，当$i = 1, j = 2$时，$f_{i, j}$表示的是下标$1 - 4$的最小值$4$,<br>而$\min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1})$表示的是取数组下标$1 - 2$和$3 - 4$中最小值的最小值，即$5, 4$的最小值，所以：<br>$f_{i, j} = \min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1}) = \min(f_{1, 1}, f_{1 + 2, 1}) = \min(5, 4) = 4$</p>
+<p>例如上面这个数组，当$i = 1, j = 2$时，$f_{i, j}$表示的是下标$1 - 4$的最小值$4$,<br>而$\min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1})$表示的是取数组下标$1 - 2$和$3 - 4$中最小值的最小值，即$5, 4$的最小值，所以：<br>$f_{i, j} = \min(f_{i, j - 1}, f_{i + 2^{j - 1}, j - 1}) = \min(f_{1, 1}, f_{1 + 2, 1}) = \min(5, 4) = 4$。</p>
 <p>以下是预处理代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> f[MAXN][LOGN];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= logn; ++j)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; ++i)</span><br><span class="line">            f[i][j] = min(f[i][j - <span class="number">1</span>], f[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>那么查询呢？</p>
 <p>对于每个询问$[l, r]$，记区间长度为$len = r - l + 1$，我们从$l$往右找一段长为$2^{\log_{2} len}$的区间，$r$也往左找一段长为$2^{\log_{2} len}$的区间，也就是$[l, \log_{2} len], [r - 2^{\log_{2} len} + 1, \log_{2} len]$，显然这两个区间是覆盖整个区间的，所以取最小值即可。</p>
@@ -1219,7 +1219,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1804.7k字</span>
+  <span class="post-count">全站共1805.1k字</span>
 </div>
         
 
@@ -1930,7 +1930,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1702663886754')
+  navigator.serviceWorker.register('/sw.js?t=1703342346975')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

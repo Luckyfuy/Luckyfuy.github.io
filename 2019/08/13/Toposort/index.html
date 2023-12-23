@@ -143,19 +143,19 @@
 
 
 
-<meta name="description" content="咕了这么久终于更新了 简介拓扑排序（Topological Sort，可以简写为Toposort），是图论中的一种算法，Wikipedia定义如下：  In computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices suc">
+<meta name="description" content="咕了这么久终于更新了 简介拓扑排序（topological sort），是图论中的一种算法，简单点说就是：对一个有向无环图（DAG）的节点进行线性排序，使得从点$u$到点$v$的每个有向边$uv$，$u$都在$v$之前。当且仅当图没有环，即有向无环图时，该图存在拓扑排序。因此，拓扑排序可以用于判断图是否存在环。 可以形象地解释为：在某校中，每门课可能有若干门先修课，如果要修读某一门课，则必须要先修">
 <meta name="keywords" content="Graph Theory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拓扑排序">
 <meta property="og:url" content="https://luckyfuy.top/2019/08/13/Toposort/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="咕了这么久终于更新了 简介拓扑排序（Topological Sort，可以简写为Toposort），是图论中的一种算法，Wikipedia定义如下：  In computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices suc">
+<meta property="og:description" content="咕了这么久终于更新了 简介拓扑排序（topological sort），是图论中的一种算法，简单点说就是：对一个有向无环图（DAG）的节点进行线性排序，使得从点$u$到点$v$的每个有向边$uv$，$u$都在$v$之前。当且仅当图没有环，即有向无环图时，该图存在拓扑排序。因此，拓扑排序可以用于判断图是否存在环。 可以形象地解释为：在某校中，每门课可能有若干门先修课，如果要修读某一门课，则必须要先修">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/08/13/IU7EQkzY4DPGNiH.png">
-<meta property="og:updated_time" content="2023-01-31T09:09:41.226Z">
+<meta property="og:updated_time" content="2023-12-23T12:25:47.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拓扑排序">
-<meta name="twitter:description" content="咕了这么久终于更新了 简介拓扑排序（Topological Sort，可以简写为Toposort），是图论中的一种算法，Wikipedia定义如下：  In computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices suc">
+<meta name="twitter:description" content="咕了这么久终于更新了 简介拓扑排序（topological sort），是图论中的一种算法，简单点说就是：对一个有向无环图（DAG）的节点进行线性排序，使得从点$u$到点$v$的每个有向边$uv$，$u$都在$v$之前。当且仅当图没有环，即有向无环图时，该图存在拓扑排序。因此，拓扑排序可以用于判断图是否存在环。 可以形象地解释为：在某校中，每门课可能有若干门先修课，如果要修读某一门课，则必须要先修">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/13/IU7EQkzY4DPGNiH.png">
 
 
@@ -497,7 +497,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  848
+                  708
                 </span>
               
 
@@ -513,7 +513,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -535,11 +535,7 @@
 
       
         <p><del>咕了这么久终于更新了</del></p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>拓扑排序（Topological Sort，可以简写为Toposort），是图论中的一种算法，Wikipedia定义如下：</p>
-<blockquote>
-<p>In computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application, a topological ordering is just a valid sequence for the tasks. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a directed acyclic graph (DAG). Any DAG has at least one topological ordering, and algorithms are known for constructing a topological ordering of any DAG in linear time.</p>
-</blockquote>
-<p>简单点说就是：<br>对一个有向无环图（DAG）的节点进行线性排序，使得从点$u$到点$v$的每个有向边$uv$，$u$都在$v$之前。<br>当且仅当图没有环，即有向无环图时，该图存在拓扑排序。因此，拓扑排序可以用于判断图是否存在环。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>拓扑排序（topological sort），是图论中的一种算法，简单点说就是：<br>对一个有向无环图（DAG）的节点进行线性排序，使得从点$u$到点$v$的每个有向边$uv$，$u$都在$v$之前。<br>当且仅当图没有环，即有向无环图时，该图存在拓扑排序。因此，拓扑排序可以用于判断图是否存在环。</p>
 <p>可以形象地解释为：<br>在某校中，每门课可能有若干门先修课，如果要修读某一门课，则必须要先修读此课程所要求的先修课后才能修读。假设一个学生同时只能修读一门课程，那么，他修完所有课程的顺序是一个拓扑序。</p>
 <p>举个栗子：<br>对于下图，拓扑排序的结果是$1 - 6 - 3 - 4 - 2 - 5$。<br><img src="https://i.loli.net/2019/08/13/IU7EQkzY4DPGNiH.png" alt="E.G." title="E.G."><br>当然，拓扑排序的结果肯定是不唯一的，比如图片中$6 - 1 - 4 - 3 - 5 - 2$的顺序显然也可以。</p>
 <a id="more"></a>
@@ -1209,7 +1205,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1804.7k字</span>
+  <span class="post-count">全站共1805.1k字</span>
 </div>
         
 
@@ -1920,7 +1916,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1702663886754')
+  navigator.serviceWorker.register('/sw.js?t=1703342346975')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
