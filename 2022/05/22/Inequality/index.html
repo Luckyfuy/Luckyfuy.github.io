@@ -152,7 +152,7 @@
 <meta property="og:description" content="不等式的基本性质研究不等式的出发点是实数的大小关系。不等式的基础建立在以下两条公理之上：公理1：对于任意实数$a$，$a = 0$、$a$为正数、$a$为负数这三者有且只有一个成立。公理2：对于任意正数$a, b$，$a + b, ab$都是正数。 由这两条公理可以得到推论：对于任意正数$a$和负数$b$，$ab$是负数；对于任意负数$a, b$，$a + b$是负数，$ab$是正数。 如果$a">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.loli.net/2022/05/28/UmYRfrQiMDZWAPw.png">
-<meta property="og:updated_time" content="2022-12-09T05:58:36.972Z">
+<meta property="og:updated_time" content="2023-12-30T16:33:25.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·不等式">
 <meta name="twitter:description" content="不等式的基本性质研究不等式的出发点是实数的大小关系。不等式的基础建立在以下两条公理之上：公理1：对于任意实数$a$，$a = 0$、$a$为正数、$a$为负数这三者有且只有一个成立。公理2：对于任意正数$a, b$，$a + b, ab$都是正数。 由这两条公理可以得到推论：对于任意正数$a$和负数$b$，$ab$是负数；对于任意负数$a, b$，$a + b$是负数，$ab$是正数。 如果$a">
@@ -573,10 +573,10 @@
 <h2 id="分式不等式"><a href="#分式不等式" class="headerlink" title="分式不等式"></a>分式不等式</h2><p>形如$\dfrac{f(x)}{g(x)} &gt; 0$的分式不等式，总是可以化为以下形式：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-& \dfrac{f(x)}{g(x)} > 0 \Leftrightarrow \begin{cases} f(x) > 0 \\ g(x) > 0 \end{cases} \mathrm{\ or\ } \begin{cases} f(x) < 0 \\ g(x) < 0 \end{cases} \\
-& \dfrac{f(x)}{g(x)} \ge 0 \Leftrightarrow \begin{cases} f(x) \ge 0 \\ g(x) > 0 \end{cases} \mathrm{\ or\ } \begin{cases} f(x) \le 0 \\ g(x) < 0 \end{cases} \\
-& \dfrac{f(x)}{g(x)} < 0 \Leftrightarrow \begin{cases} f(x) > 0 \\ g(x) < 0 \end{cases} \mathrm{\ or\ } \begin{cases} f(x) < 0 \\ g(x) > 0 \end{cases} \\
-& \dfrac{f(x)}{g(x)} \le 0 \Leftrightarrow \begin{cases} f(x) \ge 0 \\ g(x) < 0 \end{cases} \mathrm{\ or\ } \begin{cases} f(x) \le 0 \\ g(x) > 0 \end{cases}
+& \dfrac{f(x)}{g(x)} > 0 \Leftrightarrow \begin{cases} f(x) > 0 \\ g(x) > 0 \end{cases} \ \mathrm{or} \ \begin{cases} f(x) < 0 \\ g(x) < 0 \end{cases} \\
+& \dfrac{f(x)}{g(x)} \ge 0 \Leftrightarrow \begin{cases} f(x) \ge 0 \\ g(x) > 0 \end{cases} \ \mathrm{or} \ \begin{cases} f(x) \le 0 \\ g(x) < 0 \end{cases} \\
+& \dfrac{f(x)}{g(x)} < 0 \Leftrightarrow \begin{cases} f(x) > 0 \\ g(x) < 0 \end{cases} \ \mathrm{or} \ \begin{cases} f(x) < 0 \\ g(x) > 0 \end{cases} \\
+& \dfrac{f(x)}{g(x)} \le 0 \Leftrightarrow \begin{cases} f(x) \ge 0 \\ g(x) < 0 \end{cases} \ \mathrm{or} \ \begin{cases} f(x) \le 0 \\ g(x) > 0 \end{cases}
 \end{align}</script><p>此外，我们发现：</p>
 <script type="math/tex; mode=display">f^{2}(x) = f(x) g(x) \cdot \dfrac{f(x)}{g(x)} \ge 0</script><p>那么，</p>
 <script type="math/tex; mode=display">\dfrac{f(x)}{g(x)} > 0 \Leftrightarrow f(x) g(x) > 0</script><p>不过，由于分母不能为零，所以</p>
@@ -598,24 +598,24 @@ x^{3} + y^{3} + z^{3} - 3xyz &= (x + y + z) (x^{2} + y_{2} + z^{2} - xy - yz - z
 <h2 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h2><p>对于任意<a href="/2021/11/06/Vector/#n-维向量" title="n维向量">$n$维向量</a>$\mathbf{a}, \mathbf{b}$，其夹角</p>
 <script type="math/tex; mode=display">\langle \mathbf{a}, \mathbf{b} \rangle = \dfrac{|\mathbf{a} \cdot \mathbf{b}|}{|\mathbf{a}| |\mathbf{b}|} \le 1</script><p>因而有$|\mathbf{a} \cdot \mathbf{b}| \le |\mathbf{a}| |\mathbf{b}|$。令$\mathbf{a} = (a_{1}, \cdots, a_{n}), \mathbf{b} = (b_{1}, \cdots, b_{n})$，平方可得</p>
 <script type="math/tex; mode=display">(a_{1} b_{1} + \cdots + a_{n} b_{n})^{2} \le (a_{1}^{2} + \cdots + a_{n}^{2}) (b_{1}^{2} + \cdots + b_{n}^{2})</script><p>就得到<strong>柯西不等式（Cauchy’s inequality）</strong>：<br>对于两组非负实数$a_{1}, \cdots, a_{n}$和$b_{1}, \cdots, b_{n}$，</p>
-<script type="math/tex; mode=display">\left(\sum_{i=1}^{n} a_{i} b_{i} \right)^{2} \le \left(\sum_{i=1}^{n} a_{i}^{2} \right) \left(\sum_{i=1}^{n} b_{i}^{2} \right)</script><p>等号成立当且仅当$\dfrac{a_{1}}{b_{1}} = \cdots = \dfrac{a_{n}}{b_{n}}$。</p>
+<script type="math/tex; mode=display">\left(\sum\limits_{i=1}^{n} a_{i} b_{i} \right)^{2} \le \left(\sum\limits_{i=1}^{n} a_{i}^{2} \right) \left(\sum\limits_{i=1}^{n} b_{i}^{2} \right)</script><p>等号成立当且仅当$\dfrac{a_{1}}{b_{1}} = \cdots = \dfrac{a_{n}}{b_{n}}$。</p>
 <p>代数证明如下：<br>如果$a_{i}$全为零，不等式显然成立。否则，令二次函数$f(x) = \sum\limits_{i=1}^{n} (a_{i} x + b_{i})^{2}$，展开为</p>
-<script type="math/tex; mode=display">f(x) = \left(\sum_{i=1}^{n} a_{i}^{2} \right) x^{2} + 2 \left(\sum_{i=1}^{n} a_{i} b_{i} \right) x + \sum_{i=1}^{n} b_{i}^{2}</script><p>由于函数值恒不小于零，</p>
-<script type="math/tex; mode=display">\Delta = \left(2 \sum_{i=1}^{n} a_{i} b_{i} \right)^{2} - 4 \left(\sum_{i=1}^{n} a_{i}^{2} \right) \left(\sum_{i=1}^{n} b_{i}^{2} \right) \le 0</script><p>得到结果。$\Box$</p>
+<script type="math/tex; mode=display">f(x) = \left(\sum\limits_{i=1}^{n} a_{i}^{2} \right) x^{2} + 2 \left(\sum\limits_{i=1}^{n} a_{i} b_{i} \right) x + \sum\limits_{i=1}^{n} b_{i}^{2}</script><p>由于函数值恒不小于零，</p>
+<script type="math/tex; mode=display">\Delta = \left(2 \sum\limits_{i=1}^{n} a_{i} b_{i} \right)^{2} - 4 \left(\sum\limits_{i=1}^{n} a_{i}^{2} \right) \left(\sum\limits_{i=1}^{n} b_{i}^{2} \right) \le 0</script><p>得到结果。$\Box$</p>
 <p><strong>调和-几何-算术-平方平均值不等式（HM-GM-AM-QM inequalities）</strong>：<br>对于正数$a_{1}, \cdots, a_{n}$，</p>
 <script type="math/tex; mode=display">\dfrac{n}{a_{1}^{-1} + \cdots + a_{n}^{-1}} \le \sqrt[n]{a_{1} \cdots a_{n}} \le \dfrac{a_{1} + \cdots + a_{n}}{n} \le \sqrt{\dfrac{a_{1}^{2} + \cdots + a_{n}^{2}}{n}}</script><p>等号成立当且仅当$a_{1} = \cdots = a_{n}$。</p>
 <p>从左到右依次证明：<br>第一个不等式：由算术-几何平均值不等式，$a_{1}^{-1} + \cdots + a_{n}^{-1} \ge n \sqrt[n]{a_{1}^{-1} \cdots a_{n}^{-1}} = \dfrac{n}{\sqrt[n]{a_{1} \cdots a_{n}}}$；<br>第二个不等式：即算术-几何平均值不等式；<br>第三个不等式：由柯西不等式，$n (a_{1}^{2} + \cdots + a_{n}^{2}) = (a_{1}^{2} + \cdots + a_{n}^{2}) (1 + \cdots + 1) \ge (a_{1} + \cdots + a_{n})^{2}$，即$a_{1} + \cdots + a_{n} \le \sqrt{n (a_{1}^{2} + \cdots + a_{n}^{2})}$。$\Box$</p>
 <p>其中，$\dfrac{n}{a_{1}^{-1} + \cdots + a_{n}^{-1}}$称为<strong>调和平均数（harmonic mean）</strong>，$\sqrt{\dfrac{a_{1}^{2} + \cdots + a_{n}^{2}}{n}}$称为<strong>平方平均数（quadratic mean）</strong>。</p>
 <h1 id="不等式证明的基本方法"><a href="#不等式证明的基本方法" class="headerlink" title="不等式证明的基本方法"></a>不等式证明的基本方法</h1><h2 id="比较法"><a href="#比较法" class="headerlink" title="比较法"></a>比较法</h2><p><strong>比较法</strong>是证明不等式的最朴素的方法。通常把要证的不等式两边相减，变形为一个容易证明的不等式。</p>
 <p>例如，证明<strong>切比雪夫不等式（Chebyshev’s inequality）</strong>：<br>对于实数$a_{1} &lt; \cdots &lt; a_{n}, b_{1} &lt; \cdots &lt; b_{n}$，</p>
-<script type="math/tex; mode=display">n \sum_{i=1}^{n} a_{i} b_{i} > \left(\sum_{i=1}^{n} a_{i} \right) \left(\sum_{i=1}^{n} b_{i} \right)</script><p>左边减去右边，得</p>
+<script type="math/tex; mode=display">n \sum\limits_{i=1}^{n} a_{i} b_{i} > \left(\sum\limits_{i=1}^{n} a_{i} \right) \left(\sum\limits_{i=1}^{n} b_{i} \right)</script><p>左边减去右边，得</p>
 <script type="math/tex; mode=display">
 \begin{align}
-n \sum_{i=1}^{n} a_{i} b_{i} - \left(\sum_{i=1}^{n} a_{i} \right) \left(\sum_{i=1}^{n} b_{i} \right) &= n \sum_{i=1}^{n} a_{i} b_{i} - \sum_{i=1}^{n} \sum_{j=1}^{n} a_{i} b_{j} \\
-&= (n - 1) \sum_{i=1}^{n} a_{i} b_{i} - \dfrac{1}{2} \sum_{i \ne j} (a_{i} b_{j} + a_{j} b_{i}) \\
-&= \dfrac{1}{2} \sum_{i \ne j} (a_{i} b_{i} + a_{j} b_{j}) - \dfrac{1}{2} \sum_{i \ne j} (a_{i} b_{j} + a_{j} b_{i}) \\
-&= \dfrac{1}{2} \sum_{i \ne j} (a_{i} b_{i} + a_{j} b_{j} - a_{i} b_{j} - a_{j} b_{i}) \\
-&= \dfrac{1}{2} \sum_{i \ne j} (a_{i} - a_{j}) (b_{i} - b_{j})
+n \sum\limits_{i=1}^{n} a_{i} b_{i} - \left(\sum\limits_{i=1}^{n} a_{i} \right) \left(\sum\limits_{i=1}^{n} b_{i} \right) &= n \sum\limits_{i=1}^{n} a_{i} b_{i} - \sum\limits_{i=1}^{n} \sum\limits_{j=1}^{n} a_{i} b_{j} \\
+&= (n - 1) \sum\limits_{i=1}^{n} a_{i} b_{i} - \dfrac{1}{2} \sum\limits_{i \ne j} (a_{i} b_{j} + a_{j} b_{i}) \\
+&= \dfrac{1}{2} \sum\limits_{i \ne j} (a_{i} b_{i} + a_{j} b_{j}) - \dfrac{1}{2} \sum\limits_{i \ne j} (a_{i} b_{j} + a_{j} b_{i}) \\
+&= \dfrac{1}{2} \sum\limits_{i \ne j} (a_{i} b_{i} + a_{j} b_{j} - a_{i} b_{j} - a_{j} b_{i}) \\
+&= \dfrac{1}{2} \sum\limits_{i \ne j} (a_{i} - a_{j}) (b_{i} - b_{j})
 \end{align}</script><p>根据条件，$i &gt; j$时$a_{i} &gt; a_{j}, b_{i} &gt; b_{j}$，$(a_{i} - a_{j}) (b_{i} - b_{j}) &gt; 0$。同理，$i &lt; j$时$(a_{i} - a_{j}) (b_{i} - b_{j}) &gt; 0$。所以两式相减大于零。$\Box$</p>
 <h2 id="分析法"><a href="#分析法" class="headerlink" title="分析法"></a>分析法</h2><p><strong>分析法</strong>是从要证的不等式出发进行等价变形，直到式子可以证明。</p>
 <p>例如，设$a, b, c$为三角形的三条边，求证：<br>对于任意正数$m$都有</p>
@@ -1285,7 +1285,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -1996,7 +1996,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

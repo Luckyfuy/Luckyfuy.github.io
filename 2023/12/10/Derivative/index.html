@@ -143,18 +143,20 @@
 
 
 
-<meta name="description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$处的导数（derivative），记作$f’(x_{0})$或$\">
+<meta name="description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
 <meta name="keywords" content="Mathematics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记·导数">
 <meta property="og:url" content="https://luckyfuy.top/2023/12/10/Derivative/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$处的导数（derivative），记作$f’(x_{0})$或$\">
+<meta property="og:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-12-23T14:35:39.610Z">
+<meta property="og:image" content="https://s2.loli.net/2023/12/30/Xbygr2m8tTnqGd3.png">
+<meta property="og:updated_time" content="2023-12-30T17:12:20.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
-<meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$处的导数（derivative），记作$f’(x_{0})$或$\">
+<meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
+<meta name="twitter:image" content="https://s2.loli.net/2023/12/30/Xbygr2m8tTnqGd3.png">
 
 
 
@@ -495,7 +497,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  209
+                  1.4k
                 </span>
               
 
@@ -511,7 +513,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  7
                 </span>
               
             </div>
@@ -532,9 +534,43 @@
       
 
       
-        <h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><p>如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$处的<strong>导数（derivative）</strong>，记作$f’(x_{0})$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x_{0})$；若设$y = f(x)$，则还可以记作$\left. y’ \right|_{x=x_{0}}$或$\left. \dfrac{\mathrm{d} y}{\mathrm{d} x} \right|_{x=x_{0}}$。此时称$f$在$x_{0}$处<strong>可导（differentiable）</strong>。</p>
+        <h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><p>如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的<strong>导数（derivative）</strong>，记作$f’(x_{0})$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x_{0})$；若设$y = f(x)$，则还可以记作$\left. y’ \right|_{x=x_{0}}$或$\left. \dfrac{\mathrm{d} y}{\mathrm{d} x} \right|_{x=x_{0}}$。此时称$f$在$x_{0}$<strong>可导（differentiable）</strong>。<br>如果函数$f(x)$在$x_{0}$的一个左邻域$(x_{0} - \delta, x_{0}]$有定义，且极限$\lim\limits_{\Delta x \to 0^{-}} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的<strong>左导数（left derivative）</strong>，记作$f’_{-}(x_{0})$；如果函数$f(x)$在$x_{0}$的一个右邻域$[x_{0}, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0^{+}} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的<strong>右导数（right derivative）</strong>，记作$f’_{+}(x_{0})$。<br>显然，函数在$x_{0}$可导的充要条件是：它在$x_{0}$的左导数和右导数存在且相等。</p>
 <a id="more"></a>
-<h1 id="导数的计算"><a href="#导数的计算" class="headerlink" title="导数的计算"></a>导数的计算</h1><h2 id="导数的四则运算"><a href="#导数的四则运算" class="headerlink" title="导数的四则运算"></a>导数的四则运算</h2><h2 id="复合函数和反函数的导数"><a href="#复合函数和反函数的导数" class="headerlink" title="复合函数和反函数的导数"></a>复合函数和反函数的导数</h2><h2 id="隐函数的导数"><a href="#隐函数的导数" class="headerlink" title="隐函数的导数"></a>隐函数的导数</h2><h2 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h2><h1 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h1><h2 id="罗尔中值定理"><a href="#罗尔中值定理" class="headerlink" title="罗尔中值定理"></a>罗尔中值定理</h2><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><h1 id="导数的应用"><a href="#导数的应用" class="headerlink" title="导数的应用"></a>导数的应用</h1><h2 id="函数的单调性"><a href="#函数的单调性" class="headerlink" title="函数的单调性"></a>函数的单调性</h2><h2 id="函数的凹凸性"><a href="#函数的凹凸性" class="headerlink" title="函数的凹凸性"></a>函数的凹凸性</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="方程的根"><a href="#方程的根" class="headerlink" title="方程的根"></a>方程的根</h2>
+<p>如果函数$f$在区间$I$内的每一点都可导，那么称$f$在区间$I$上可导。此时$x \mapsto f’(x), x \in I$确定了一个函数，称为$f$的<strong>导函数（derivative function）</strong>，简称<strong>导数</strong>，记作$f’(x)$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x)$。</p>
+<p>设函数$f$在点$x_{0}$可导，则$f$在点$x_{0}$连续。<br>证明：</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to x_{0}} (f(x) - f(x_{0})) = \lim\limits_{x \to x_{0}} \dfrac{f(x) - f(x_{0})}{x - x_{0}} \cdot (x - x_{0}) = f'(x_{0}) \cdot 0 = 0 \quad \Box</script><p><img src="https://s2.loli.net/2023/12/30/Xbygr2m8tTnqGd3.png" alt><br>观察曲线$y = f(x)$的图像。连接曲线上的两点$(x_{0}, f(x_{0}))$和$(x_{0} + \Delta x, f(x_{0} + \Delta x))$，可以得到曲线的一条割线，其斜率$k = \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。由于函数$f(x)$在$x_{0}$连续，当$\Delta x$趋近于$0$时，割线趋近于某条特定的直线，这条直线称为曲线在点$(x_{0}, f(x_{0}))$的<strong>切线（tangent line）</strong>，其斜率$k = \lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。这就是导数的几何意义。<br>通过点斜式可以写出切线的方程：$y - f(x_{0}) = f’(x_{0}) (x - x_{0})$。</p>
+<h1 id="导数的计算"><a href="#导数的计算" class="headerlink" title="导数的计算"></a>导数的计算</h1><h2 id="基本函数的导数"><a href="#基本函数的导数" class="headerlink" title="基本函数的导数"></a>基本函数的导数</h2><p>常数函数$f(x) = c$的导数为$f’(x) = 0$。<br>证明：</p>
+<script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{c - c}{\Delta x} = 0 \quad \Box</script><p>幂函数$f(x) = x^{n}$的导数为$f’(x) = n x^{n - 1}$。<br>证明（$n \in \mathbb{N}$）：</p>
+<script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{\sum\limits_{k=0}^{n} \mathrm{C}_{n}^{k} (\Delta x)^{k} x^{n - k} - x^{n}}{\Delta x} = \lim\limits_{\Delta x \to 0} \sum\limits_{k=1}^{n} \mathrm{C}_{n}^{k} (\Delta x)^{k - 1} x^{n - k} = n x^{n - 1} \quad \Box</script><p>对数函数$f(x) = \ln x$的导数为$f’(x) = \dfrac{1}{x}$。<br>证明：</p>
+<script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{\ln (1 + \dfrac{\Delta x}{x})}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{1}{x} \cdot \dfrac{\ln (1 + \dfrac{\Delta x}{x})}{\dfrac{\Delta x}{x}} = \dfrac{1}{x} \quad \Box</script><p>三角函数$f(x) = \sin x$的导数为$f’(x) = \cos x$。<br>证明：</p>
+<script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{2 \cos(x + \dfrac{\Delta x}{2}) \sin \dfrac{\Delta x}{2}}{\Delta x} = \lim\limits_{\Delta x \to 0} \cos(x + \dfrac{\Delta x}{2}) \lim\limits_{\Delta x \to 0} \dfrac{\sin \dfrac{\Delta x}{2}}{\dfrac{\Delta x}{2}} = \cos x \quad \Box</script><h2 id="导数的四则运算"><a href="#导数的四则运算" class="headerlink" title="导数的四则运算"></a>导数的四则运算</h2><p>设$f(x), g(x)$可导，则其和、差也可导，满足$(f(x) \pm g(x))’ = f’(x) \pm g’(x)$。<br>证明：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \quad \lim\limits_{\Delta x \to 0} \dfrac{(f(x + \Delta x) \pm g(x + \Delta x)) - (f(x) \pm g(x))}{\Delta x} \\
+&= \lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \pm \lim\limits_{\Delta x \to 0} \dfrac{g(x + \Delta x) - g(x)}{\Delta x} \\
+&= f'(x) \pm g'(x) \quad \Box
+\end{align}</script><p>设$f(x), g(x)$可导，则其积也可导，满足$(f(x) g(x))’ = f’(x) g(x) + f(x) g’(x)$。特别地，$(c f(x))’ = c f’(x)$。<br>证明：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& \quad \lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) g(x + \Delta x) - f(x) g(x)}{\Delta x} \\
+&= \lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) g(x + \Delta x) - f(x) g(x + \Delta x)}{\Delta x} + \lim\limits_{\Delta x \to 0} \dfrac{f(x) g(x + \Delta x) - f(x) g(x)}{\Delta x} \\
+&= g(x) \lim\limits_{\Delta x \to 0} \dfrac{f(x)}{\Delta x} + f(x) \lim\limits_{\Delta x \to 0} \dfrac{g(x)}{\Delta x} \\
+&= f'(x) g(x) + f(x) g'(x) \quad \Box
+\end{align}</script><p>设$f(x), g(x)$可导，若$g(x) \ne 0$，则其商也可导，满足$(\dfrac{f(x)}{g(x)})’ = \dfrac{f’(x) g(x) - f(x) g’(x)}{g^{2}(x)}$。<br>证明：<br>因为$\dfrac{f(x)}{g(x)} = f(x) \cdot \dfrac{1}{g(x)}$，所以先求出$\dfrac{1}{g(x)}$的导数。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+(\dfrac{1}{g(x)})' &= \lim\limits_{\Delta x \to 0} \dfrac{\dfrac{1}{g(x + \Delta x)} - \dfrac{1}{g(x)}}{\Delta x} \\
+&= \lim\limits_{\Delta x \to 0} \dfrac{-\dfrac{g(x + \Delta x) - g(x)}{g(x + \Delta x) g(x)}}{\Delta x} \\
+&= -\lim\limits_{\Delta x \to 0} \dfrac{g(x + \Delta x) - g(x)}{\Delta x} \cdot \dfrac{1}{g(x + \Delta x) g(x)} \\
+&= -\dfrac{g'(x)}{g^{2}(x)}
+\end{align}</script><p>于是：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+(\dfrac{f(x)}{g(x)})' &= (f(x) \cdot \dfrac{1}{g(x)})' \\
+&= f'(x) \cdot \dfrac{1}{g(x)} + f(x) \cdot (\dfrac{1}{g(x)})' \\
+&= \dfrac{f'(x)}{g(x)} - \dfrac{f(x) g'(x)}{g^{2}(x)} \\
+&= \dfrac{f'(x) g(x) - f(x) g'(x)}{g^{2}(x)} \quad \Box
+\end{align}</script><h2 id="复合函数和反函数的导数"><a href="#复合函数和反函数的导数" class="headerlink" title="复合函数和反函数的导数"></a>复合函数和反函数的导数</h2><h2 id="隐函数的导数"><a href="#隐函数的导数" class="headerlink" title="隐函数的导数"></a>隐函数的导数</h2><h2 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h2><h1 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h1><h2 id="罗尔中值定理"><a href="#罗尔中值定理" class="headerlink" title="罗尔中值定理"></a>罗尔中值定理</h2><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><h1 id="导数的应用"><a href="#导数的应用" class="headerlink" title="导数的应用"></a>导数的应用</h1><h2 id="函数的单调性"><a href="#函数的单调性" class="headerlink" title="函数的单调性"></a>函数的单调性</h2><h2 id="函数的凹凸性"><a href="#函数的凹凸性" class="headerlink" title="函数的凹凸性"></a>函数的凹凸性</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="方程的根"><a href="#方程的根" class="headerlink" title="方程的根"></a>方程的根</h2>
       
     </div>
     
@@ -1104,7 +1140,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导数"><span class="nav-number">1.</span> <span class="nav-text">导数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的计算"><span class="nav-number">2.</span> <span class="nav-text">导数的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导数的四则运算"><span class="nav-number">2.1.</span> <span class="nav-text">导数的四则运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数和反函数的导数"><span class="nav-number">2.2.</span> <span class="nav-text">复合函数和反函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐函数的导数"><span class="nav-number">2.3.</span> <span class="nav-text">隐函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶导数"><span class="nav-number">2.4.</span> <span class="nav-text">高阶导数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分中值定理"><span class="nav-number">3.</span> <span class="nav-text">微分中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#罗尔中值定理"><span class="nav-number">3.1.</span> <span class="nav-text">罗尔中值定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日中值定理"><span class="nav-number">3.2.</span> <span class="nav-text">拉格朗日中值定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的应用"><span class="nav-number">4.</span> <span class="nav-text">导数的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的单调性"><span class="nav-number">4.1.</span> <span class="nav-text">函数的单调性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的凹凸性"><span class="nav-number">4.2.</span> <span class="nav-text">函数的凹凸性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平面曲线的曲率"><span class="nav-number">4.3.</span> <span class="nav-text">平面曲线的曲率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未定式的极限"><span class="nav-number">4.4.</span> <span class="nav-text">未定式的极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方程的根"><span class="nav-number">4.5.</span> <span class="nav-text">方程的根</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导数"><span class="nav-number">1.</span> <span class="nav-text">导数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的计算"><span class="nav-number">2.</span> <span class="nav-text">导数的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本函数的导数"><span class="nav-number">2.1.</span> <span class="nav-text">基本函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导数的四则运算"><span class="nav-number">2.2.</span> <span class="nav-text">导数的四则运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数和反函数的导数"><span class="nav-number">2.3.</span> <span class="nav-text">复合函数和反函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐函数的导数"><span class="nav-number">2.4.</span> <span class="nav-text">隐函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶导数"><span class="nav-number">2.5.</span> <span class="nav-text">高阶导数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分中值定理"><span class="nav-number">3.</span> <span class="nav-text">微分中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#罗尔中值定理"><span class="nav-number">3.1.</span> <span class="nav-text">罗尔中值定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日中值定理"><span class="nav-number">3.2.</span> <span class="nav-text">拉格朗日中值定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的应用"><span class="nav-number">4.</span> <span class="nav-text">导数的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的单调性"><span class="nav-number">4.1.</span> <span class="nav-text">函数的单调性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的凹凸性"><span class="nav-number">4.2.</span> <span class="nav-text">函数的凹凸性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平面曲线的曲率"><span class="nav-number">4.3.</span> <span class="nav-text">平面曲线的曲率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未定式的极限"><span class="nav-number">4.4.</span> <span class="nav-text">未定式的极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方程的根"><span class="nav-number">4.5.</span> <span class="nav-text">方程的根</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1187,7 +1223,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -1898,7 +1934,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

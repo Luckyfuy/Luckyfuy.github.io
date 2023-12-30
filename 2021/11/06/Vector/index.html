@@ -166,7 +166,7 @@
 <meta property="og:image" content="https://s2.loli.net/2021/12/18/bsUgGYqFXIPWcJu.png">
 <meta property="og:image" content="https://s2.loli.net/2021/12/18/XWnj5siwmRYu9ch.png">
 <meta property="og:image" content="https://s2.loli.net/2021/12/18/6sxVFd4WyLwH9SZ.png">
-<meta property="og:updated_time" content="2022-06-04T08:14:36.153Z">
+<meta property="og:updated_time" content="2023-12-30T13:37:15.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·向量">
 <meta name="twitter:description" content="平面向量有一些量，既具有大小，也具有方向，例如物理学中的力和速度。这样的量，我们称之为向量（vector），在物理上也称为矢量。与之相对，只有大小、没有方向的量（实际上就是实数），我们称之为标量（scalar）或数量。 在空间中，我们可以用一个带箭头的有向线段来表示向量，箭头指向表示方向，线段长度表示大小。在欧氏几何中，向量被严格定义为空间中点的一个有序对$(A, B)$，$A$为起点（initi">
@@ -718,8 +718,8 @@ S_{\triangle OAB} &= \dfrac{1}{2} |\overrightarrow{OA} \times \overrightarrow{OB
 <script type="math/tex; mode=display">\lambda \mathbf{a} + \mu \mathbf{b} = (\lambda a_{1} + \mu b_{1}, \lambda a_{2} + \mu b_{2}, \cdots, \lambda a_{n} + \mu b_{n})</script><p>设向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{k}$，实数$\lambda_{1}, \cdots, \lambda_{k}$不全为零，则称$\sum\limits_{i=1}^{k} \lambda_{i} \mathbf{a}_{i}$为它们的<strong>线性组合</strong>。<br>若向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{k}$满足它们的线性组合恒不为零向量，即$\sum\limits_{i=1}^{k} \lambda_{i} \mathbf{a}_{i} = \mathbf{0} \Rightarrow \lambda_{1} = \cdots = \lambda_{k} = 0$，则称它们<strong>线性无关（linearly independent）</strong>，否则称<strong>线性相关（linearly dependent）</strong>。<br>两个线性相关的向量称为<strong>共线向量</strong>。</p>
 <p>关于线性无关，有一个非常重要的定理：<br>设$n$维向量$\mathbf{a}_{1}, \cdots, \mathbf{a}_{k}$线性无关，则$k \le n$。<br>令$\mathbf{e}_{i} = (0, \cdots, 1, \cdots, 0), i = 1, 2, \cdots, n$，其中$1$排在第$i$位，则易知$\mathbf{e}_{1}, \cdots, \mathbf{e}_{n}$线性无关，此时可以取到$k = n$。<br>$n$个线性无关的向量称为$n$维空间的一组<strong>基</strong>，而$\{\mathbf{e}_{1}, \cdots, \mathbf{e}_{n}\}$则称为<strong>正交标准基</strong>。</p>
 <p>从平面向量和空间向量推广，有<strong>基向量分解定理</strong>：<br>设$\{\mathbf{a}_{1}, \cdots, \mathbf{a}_{n}\}$为$n$维空间的一组基，则对于任一$n$维向量$\mathbf{b}$，存在唯一一组实数$\lambda_{1}, \cdots, \lambda_{n}$使得</p>
-<script type="math/tex; mode=display">\mathbf{b} = \sum_{i=1}^{n} \lambda_{i} \mathbf{a}_{i}</script><p>对于两个$n$维向量$\mathbf{a} = (a_{1}, a_{2}, \cdots, a_{n}), \mathbf{b} = (b_{1}, b_{2}, \cdots, b_{n})$，定义<strong>数量积</strong></p>
-<script type="math/tex; mode=display">\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} a_{i} b_{i}</script><p>非零向量的<strong>夹角</strong></p>
+<script type="math/tex; mode=display">\mathbf{b} = \sum\limits_{i=1}^{n} \lambda_{i} \mathbf{a}_{i}</script><p>对于两个$n$维向量$\mathbf{a} = (a_{1}, a_{2}, \cdots, a_{n}), \mathbf{b} = (b_{1}, b_{2}, \cdots, b_{n})$，定义<strong>数量积</strong></p>
+<script type="math/tex; mode=display">\mathbf{a} \cdot \mathbf{b} = \sum\limits_{i=1}^{n} a_{i} b_{i}</script><p>非零向量的<strong>夹角</strong></p>
 <script type="math/tex; mode=display">\langle \mathbf{a}, \mathbf{b} \rangle = \arccos \dfrac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| |\mathbf{b}|}</script><p>$\mathbf{a} \cdot \mathbf{b} = 0$或$\langle \mathbf{a}, \mathbf{b} \rangle = \dfrac{\pi}{2}$时称两个非零向量<strong>垂直</strong>或<strong>正交</strong>。</p>
 <p>根据论文<em><a href="https://pdfs.semanticscholar.org/1f6b/ff1e992f60eb87b35c3ceed04272fb5cc298.pdf" title="Cross products of vectors in higher dimensional Euclidean spaces, W. S. Massey. The American Mathematical Monthly." target="_blank" rel="noopener">Cross products of vectors in higher dimensional Euclidean spaces</a></em>，<strong>向量积</strong>只在$3, 7$两个维度中有定义。</p>
 
@@ -1379,7 +1379,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -2090,7 +2090,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

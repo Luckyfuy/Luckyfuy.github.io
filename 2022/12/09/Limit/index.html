@@ -156,7 +156,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/eAUqcKomhf2BFPY.png">
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/fDnCuTJ9YR8GUsx.png">
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/VAwZ83JKok4Q1xr.png">
-<meta property="og:updated_time" content="2023-12-23T14:36:01.066Z">
+<meta property="og:updated_time" content="2023-12-30T13:08:21.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·极限论">
 <meta name="twitter:description" content="数列极限数列极限的定义对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的极限（limit）是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。更加严格地说，对于任意的$\varepsilon &amp;gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n">
@@ -565,10 +565,10 @@
 <p>我们可以借此定义常数$\mathrm{e}$。令$e_{n} = (1 + \dfrac{1}{n})^{n}$，根据单调有界定理，如果数列$\{e_{n}\}$单调有界，那么它就有极限。<br>由平均值不等式，$e_{n} = (1 + \dfrac{1}{n})^{n} \cdot 1 \le \left(\dfrac{n (1 + \dfrac{1}{n}) + 1}{n + 1} \right)^{n + 1} = (1 + \dfrac{1}{n + 1})^{n + 1} = e_{n + 1}$，所以$\{e_{n}\}$是递增数列。<br>因此$e_{n} \ge e_{1} = 2$，由二项式定理，</p>
 <script type="math/tex; mode=display">
 \begin{align}
-e_{n} &= \sum\limits_{k = 0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
-&= 2 + \sum\limits_{k = 2}^{n} \dfrac{n (n - 1) \cdots (n - k + 1)}{n^{k}} \cdot \dfrac{1}{k!} \\
-&< 2 + \sum\limits_{k = 2}^{n} \dfrac{1}{k!} \\
-&< 2 + \sum\limits_{k = 2}^{n} \dfrac{1}{k (k - 1)} \\
+e_{n} &= \sum\limits_{k=0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
+&= 2 + \sum\limits_{k=2}^{n} \dfrac{n (n - 1) \cdots (n - k + 1)}{n^{k}} \cdot \dfrac{1}{k!} \\
+&< 2 + \sum\limits_{k=2}^{n} \dfrac{1}{k!} \\
+&< 2 + \sum\limits_{k=2}^{n} \dfrac{1}{k (k - 1)} \\
 &= 3 - \dfrac{1}{n} < 3
 \end{align}</script><p>所以$2 \le e_{n} &lt; 3$，$\{e_{n}\}$有界。<br>因此数列$\{e_{n}\}$有极限，记为$\mathrm{e}$，也就是$\mathrm{e} = \lim\limits_{n \to \infty} (1 + \dfrac{1}{n})^{n}$。</p>
 <p><strong>区间套定理（nested intervals theorem）</strong>进一步刻画了实数的完备性：<br>设一系列闭区间$I_{n} = [a_{n}, b_{n}]$满足$I_{1} \supseteq I_{2} \supseteq \cdots \supseteq I_{n} \supseteq \cdots$，且$\lim\limits_{n \to \infty} (b_{n} - a_{n}) = 0$，则存在唯一实数$\xi$属于所有的闭区间$I_{n}$，即$\bigcap\limits_{n = 1}^{\infty} I_{n} = \{\xi\}$。</p>
@@ -578,7 +578,7 @@ e_{n} &= \sum\limits_{k = 0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
 <p>证明：<br>设有界数列$\{a_{n}\}$满足$\forall n \in \mathbb{N}^{\ast}, a_{n} \in [c, d]$。把区间分为$[c, \dfrac{c + d}{2}], [\dfrac{c + d}{2}, d]$两半，则至少有一半含有数列$\{a_{n}\}$中的无限项，将这一半区间记为$I_{1} = [c_{1}, d_{1}]$；把$I_{1}$也这样分为两半，则至少有一半含有$\{a_{n}\}$中的无限项，将这一半区间记为$I_{2} = [c_{2}, d_{2}]$；依此类推，得到一系列区间$I_{n} = [c_{n}, d_{n}]$，且满足$I_{1} \supseteq I_{2} \supseteq \cdots \supseteq I_{n} \supseteq \cdots$，$\lim\limits_{n \to \infty} (d_{n} - c_{n}) = \lim\limits_{n \to \infty} \dfrac{1}{2^{n}} (d - c) = 0$。根据区间套定理，$\lim\limits_{n \to \infty} c_{n} = \lim\limits_{n \to \infty} d_{n} = a$。<br>在区间$I_{1}$中取一个项$a_{n_{1}}$；在区间$I_{2}$中取一个项$a_{n_{2}}$，且$n_{2} &gt; n_{1}$；如此下去，得到子列$a_{n_{k}} \in I_{k}$，即$c_{k} \le a_{n_{k}} \le d_{k}$。根据迫敛定理，$\{a_{n_{k}}\}$收敛于$a$。$\Box$</p>
 <p>设$\{a_{n}\}$是数列，如果对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$m, n \ge N$，都有$|a_{m} - a_{n}| &lt; \varepsilon$，那么称$\{a_{n}\}$为<strong>柯西列（Cauchy sequence）</strong>。<br><strong>柯西收敛准则（Cauchy completeness）</strong>有：<br>数列$\{a_{n}\}$收敛的充要条件是$\{a_{n}\}$是柯西列。</p>
 <p>证明：<br><em>必要性</em>：设$\{a_{n}\}$收敛于$a$，则对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \dfrac{\varepsilon}{2}$。这样，对于任意的$m, n \ge N$，就有$|a_{m} - a_{n}| = |(a_{m} - a) - (a_{n} - a)| \le |a_{m} - a| + |a_{n} - a| &lt; \varepsilon$。<br><em>充分性</em>：如果$\{a_{n}\}$是柯西列，那么对于$\varepsilon = 1$，存在正整数$N$，使得对于任意的$m, n \ge N$，都有$|a_{m} - a_{n}| &lt; 1$。这样$|a_{n} - a_{N}| &lt; 1$，得到$|a_{n}| \le |a_{N}| + 1$。令$M = \max(|a_{1}|, \cdots, |a_{N - 1}|, |a_{N}| + 1)$，则$\forall n \in \mathbb{N}^{\ast}, |a_{n}| \le M$，所以$\{a_{n}\}$有界。根据列紧性定理，$\{a_{n}\}$存在收敛子列$\{a_{n_{k}}\}$，设$\{a_{n_{k}}\}$收敛于$a$。对于任意的$\varepsilon &gt; 0$，都存在正整数$K$，使得对于任意的$k \ge K$，都有$|a_{n_{k}} - a| &lt; \dfrac{\varepsilon}{2}$。根据柯西列的定义，对于任意的$m, n \ge N$，都有$|a_{m} - a_{n}| &lt; \dfrac{\varepsilon}{2}$。取$k \ge K$使得$n_{k} \ge N$，则对于任意的$n \ge N$，$|a_{n} - a| \le |a_{n} - a_{n_{k}}| + |a_{n_{k}} - a| &lt; \varepsilon$，所以$\{a_{n}\}$收敛于$a$。$\Box$</p>
-<h1 id="函数极限"><a href="#函数极限" class="headerlink" title="函数极限"></a>函数极限</h1><h2 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h2><p>我们研究过常数函数、幂函数、指数函数、对数函数、三角函数、反三角函数，它们经过有限次加、减、乘、除、乘方、开方和复合运算，得到的函数称为<strong>初等函数（elementary function）</strong>。初等函数是数学中最基本的一类函数，具有相当重要的性质。<br>例如，正整数次幂函数和常数函数之间可以运算得到形如$f(x) = \sum\limits_{k = 0}^{n} a_{k} x^{k}$的函数，称为<strong>多项式函数（polynomial function）</strong>；两个多项式函数相除，得到形如$f(x) = \sum\limits_{k = 0}^{n} \dfrac{a_{k} x^{k}}{b_{k} x^{k}}$的函数，称为<strong>有理函数（rational function）</strong>。<br><strong>双曲函数（hyperbolic function）</strong>也是一种初等函数，常见的有：</p>
+<h1 id="函数极限"><a href="#函数极限" class="headerlink" title="函数极限"></a>函数极限</h1><h2 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h2><p>我们研究过常数函数、幂函数、指数函数、对数函数、三角函数、反三角函数，它们经过有限次加、减、乘、除、乘方、开方和复合运算，得到的函数称为<strong>初等函数（elementary function）</strong>。初等函数是数学中最基本的一类函数，具有相当重要的性质。<br>例如，正整数次幂函数和常数函数之间可以运算得到形如$f(x) = \sum\limits_{k=0}^{n} a_{k} x^{k}$的函数，称为<strong>多项式函数（polynomial function）</strong>；两个多项式函数相除，得到形如$f(x) = \sum\limits_{k=0}^{n} \dfrac{a_{k} x^{k}}{b_{k} x^{k}}$的函数，称为<strong>有理函数（rational function）</strong>。<br><strong>双曲函数（hyperbolic function）</strong>也是一种初等函数，常见的有：</p>
 <ul>
 <li>双曲正弦：$\sinh x = \dfrac{\mathrm{e}^{x} - \mathrm{e}^{-x}}{2}$</li>
 <li>双曲余弦：$\cosh x = \dfrac{\mathrm{e}^{x} + \mathrm{e}^{-x}}{2}$</li>
@@ -626,7 +626,7 @@ e_{n} &= \sum\limits_{k = 0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
 </ol>
 <p>连续函数的四则运算和复合同样具有连续性。<br>设函数$f(x), g(x)$在$x_{0}$连续，则$f(x) \pm g(x), f(x) g(x), \dfrac{f(x)}{g(x)} (g(x_{0}) \ne 0)$也在$x_{0}$连续。<br>设函数$u = g(x)$在区间$I$有定义，$y = f(u)$在区间$J$有定义，且$g(I) \subseteq J$。若$g$在$x_{0} \in I$处连续，$f$在$u_{0} = g(x_{0})$处连续，则复合函数$f \circ g$在$x_{0}$处连续。即$\lim\limits_{x \to x_{0}} f(g(x)) = f(\lim\limits_{x \to x_{0}} g(x)) = f(g(x_{0}))$，连续函数复合的极限运算可以层层向内进行。<br>此外，连续函数的反函数同样是连续函数。</p>
 <p>连续函数还具有<strong>局部保号性</strong>：<br>设函数$f$在$x_{0}$处连续，且$f(x_{0}) \ne 0$，则存在$\delta &gt; 0$，使得只要$0 &lt; |x - x_{0}| &lt; \delta$，就有$f(x) f(x_{0}) &gt; 0$。</p>
-<h2 id="初等函数的连续性"><a href="#初等函数的连续性" class="headerlink" title="初等函数的连续性"></a>初等函数的连续性</h2><p>因为$\lim\limits_{x \to x_{0}} x = x_{0}$，乘法得到$\lim\limits_{x \to x_{0}} x^{k} = x_{0}^{k}$，再加法得到$\lim\limits_{x \to x_{0}} \sum\limits_{k = 0}^{n} a_{k} x^{k} = \sum\limits_{k = 0}^{n} a_{k} x_{0}^{k}$。<br>所以多项式函数是连续函数。</p>
+<h2 id="初等函数的连续性"><a href="#初等函数的连续性" class="headerlink" title="初等函数的连续性"></a>初等函数的连续性</h2><p>因为$\lim\limits_{x \to x_{0}} x = x_{0}$，乘法得到$\lim\limits_{x \to x_{0}} x^{k} = x_{0}^{k}$，再加法得到$\lim\limits_{x \to x_{0}} \sum\limits_{k=0}^{n} a_{k} x^{k} = \sum\limits_{k=0}^{n} a_{k} x_{0}^{k}$。<br>所以多项式函数是连续函数。</p>
 <p>根据和差化积公式，$|\sin x - \sin x_{0}| = 2 |\sin \dfrac{x - x_{0}}{2} \cos \dfrac{x + x_{0}}{2}| \le 2 |\sin \dfrac{x - x_{0}}{2}| \le |x - x_{0}|$。对于任意的$\varepsilon &gt; 0$，令$\delta = \varepsilon$，则$0 &lt; |x - x_{0}| &lt; \delta$时，$|\sin x - \sin x_{0}| \le |x - x_{0}| &lt; \varepsilon$，所以$\lim\limits_{x \to x_{0}} \sin x = \sin x_{0}$，$\sin x$是连续函数。<br>其它三角函数均可由$\sin x$导出，所以三角函数是连续函数。<br>反三角函数是三角函数的反函数，所以反三角函数也是连续函数。</p>
 <p>设$a &gt; 0$。令$y = x - x_{0}$，则$\lim\limits_{x \to x_{0}} y = 0$。所以$\lim\limits_{x \to x_{0}} (a^{x} - a^{x_{0}}) = a^{x_{0}} \lim\limits_{x \to x_{0}} (a^{x - x_{0}} - 1) = a^{x_{0}} \lim\limits_{y \to 0} (a^{y} - 1) = 0$，即$\lim\limits_{x \to x_{0}} a^{x} = a^{x_{0}}$。<br>所以指数函数是连续函数。<br>对数函数是指数函数的反函数，所以对数函数也是连续函数。</p>
 <p>设$f(x) = x^{\alpha}, x \in (0, +\infty) (\alpha \ne 0)$，则$f(x) = x^{\alpha} = \mathrm{e}^{\alpha \ln x}$，是连续函数的复合。<br>所以幂函数是连续函数。</p>
@@ -1301,7 +1301,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -2012,7 +2012,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

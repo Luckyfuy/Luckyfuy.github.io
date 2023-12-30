@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/02/08/oyGX57csfgMYVQO.png">
 <meta property="og:image" content="https://s2.loli.net/2022/02/08/aoL6NtDhGgIxMjW.png">
 <meta property="og:image" content="https://s2.loli.net/2022/02/08/SsPkvQ45H2p9LVd.png">
-<meta property="og:updated_time" content="2022-12-10T09:41:25.321Z">
+<meta property="og:updated_time" content="2023-12-30T13:37:58.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·复数">
 <meta name="twitter:description" content="复数为了解决$x^{2} + 1 = 0$这样的方程在实数系中无解的问题，我们引入一个新数$\mathrm{i}$，使得$x = \mathrm{i}$是方程的解，即满足$\mathrm{i}^{2} = -1$。这样，我们就能扩充数系，新数系中的所有数都可以表示为 z = a + b \mathrm{i} (a, b \in \mathbb{R})形如这种形式的数叫做复数（complex num">
@@ -628,7 +628,7 @@ z_{1} z_{2} &= r_{1} r_{2} (\cos \theta + \mathrm{i} \sin \theta) (\cos \varphi 
 <script type="math/tex; mode=display">0 = \xi_{k}^{n} - 1 = (\xi_{k} - 1) (\xi_{k}^{n - 1} + \xi_{k}^{n - 2} + \cdots + 1)</script><p>得到</p>
 <script type="math/tex; mode=display">\xi_{k}^{n - 1} + \xi_{k}^{n - 2} + \cdots + 1 = 0</script><p>特别地，令$k = 1$，得到</p>
 <script type="math/tex; mode=display">\xi^{n - 1} + \xi^{n - 2} + \cdots + 1 = 0</script><p>由$\xi_{k} = \xi^{k}$，这个式子用求和符号表示就是</p>
-<script type="math/tex; mode=display">\sum_{k=0}^{n - 1} \xi_{k} = 0</script><h1 id="复数与方程"><a href="#复数与方程" class="headerlink" title="复数与方程"></a>复数与方程</h1><h2 id="一元二次方程"><a href="#一元二次方程" class="headerlink" title="一元二次方程"></a>一元二次方程</h2><p>对于方程$a x^{2} + b x + c = 0 (a, b, c \in \mathbb{C}, a \ne 0)$，配方得到：</p>
+<script type="math/tex; mode=display">\sum\limits_{k=0}^{n - 1} \xi_{k} = 0</script><h1 id="复数与方程"><a href="#复数与方程" class="headerlink" title="复数与方程"></a>复数与方程</h1><h2 id="一元二次方程"><a href="#一元二次方程" class="headerlink" title="一元二次方程"></a>一元二次方程</h2><p>对于方程$a x^{2} + b x + c = 0 (a, b, c \in \mathbb{C}, a \ne 0)$，配方得到：</p>
 <script type="math/tex; mode=display">(x + \dfrac{b}{2a})^{2} = \dfrac{b^{2} - 4ac}{4 a^{2}}</script><p>对判别式$b^{2} - 4ac$开方。设开方得到的两个结果为$d_{1, 2}$，那么方程的根</p>
 <script type="math/tex; mode=display">x_{1, 2} = \dfrac{d_{1, 2} - b}{2a}</script><p>根据复数的开方公式，可以得到$d_{1} + d_{2} = 0$。把其中一个记为$\sqrt{b^{2} - 4ac}$，就能得到熟悉的求根公式：</p>
 <script type="math/tex; mode=display">x_{1, 2} = \dfrac{-b \pm \sqrt{b^{2} - 4ac}}{2a}</script><p>如果限定系数范围为$a, b, c \in \mathbb{R}$，那么</p>
@@ -644,15 +644,15 @@ z_{1} z_{2} &= r_{1} r_{2} (\cos \theta + \mathrm{i} \sin \theta) (\cos \varphi 
 <script type="math/tex; mode=display">
 \begin{align}
 f(x) &= f(x) - f(a) \\
-&= \sum_{k=0}^{n} c_{k} x^{k} - \sum_{k=0}^{n} c_{k} a^{k} \\
-&= \sum_{k=0}^{n} c_{k} (x^{k} - a^{k}) \\
-&= (x - a) \left(\sum_{k=1}^{n} c_{k} (x^{k - 1} + x^{k - 2} a + \cdots + a^{k - 1}) \right) \quad \Box
+&= \sum\limits_{k=0}^{n} c_{k} x^{k} - \sum\limits_{k=0}^{n} c_{k} a^{k} \\
+&= \sum\limits_{k=0}^{n} c_{k} (x^{k} - a^{k}) \\
+&= (x - a) \left(\sum\limits_{k=1}^{n} c_{k} (x^{k - 1} + x^{k - 2} a + \cdots + a^{k - 1}) \right) \quad \Box
 \end{align}</script><p>若正整数$k$满足$(x - a)^{k}$为$f(x)$的因式，但$(x - a)^{k + 1}$不为$f(x)$的因式，则称$a$为$f(x)$的<strong>$k$重根</strong>。二重及以上的根称为<strong>重根</strong>。<br>这样，就能由上面两个定理得到推论：<br>任何一元$n (n \in \mathbb{N}^{\ast})$次复系数多项式方程$f(x) = 0$都有$n$个复数根（重根按重数计，即把$k$重根当作$k$个根来计）。</p>
 <p>把重根合到一起就得到<strong>唯一分解定理（unique factorization theorem）</strong>：<br>任何一元$n (n \in \mathbb{N}^{\ast})$次复系数多项式都可以唯一地表示为</p>
 <script type="math/tex; mode=display">f(x) = a \prod_{k=1}^{m} (x - a_{k})^{f_{k}}</script><p>其中$a, a_{1}, \cdots, a_{m} \in \mathbb{C}, f_{1}, f_{2}, \cdots, f_{m} \in \mathbb{N}^{\ast}$，满足$\sum\limits_{k=1}^{m} f_{k} = n$。</p>
 <p>这样，设$f(x) = \sum\limits_{k=0}^{n} a_{k} x^{k} (a_{n} \ne 0)$的根为$x_{1}, x_{2}, \cdots, x_{n}$，$f(x)$就可以表示成：</p>
 <script type="math/tex; mode=display">f(x) = a_{n} (x - x_{1}) (x - x_{2}) \cdots (x - x_{n})</script><p>展开多项式就能得到<strong>韦达定理（Vieta’s formulas）</strong>：</p>
-<script type="math/tex; mode=display">\sum_{1 \le i_{1} < i_{2} < \cdots < i_{k} \le n} x_{i_{1}} x_{i_{2}} \cdots x_{i_{k}} = (-1)^{k} \dfrac{a_{n} - k}{a_{n}}, k = 1, 2, \cdots, n</script><p>这个式子实际上就等价于</p>
+<script type="math/tex; mode=display">\sum\limits_{1 \le i_{1} < i_{2} < \cdots < i_{k} \le n} x_{i_{1}} x_{i_{2}} \cdots x_{i_{k}} = (-1)^{k} \dfrac{a_{n} - k}{a_{n}}, k = 1, 2, \cdots, n</script><p>这个式子实际上就等价于</p>
 <script type="math/tex; mode=display">
 \begin{cases}
 x_{1} + x_{2} + \cdots + x_{n} = -\dfrac{a_{n - 1}}{a_{n}} \\
@@ -674,9 +674,9 @@ x_{1} x_{2} x_{3} = -\dfrac{d}{a}
 <p>要证明这个定理，需要用到一个引理：对于任何实系数多项式$f$和复数$z$有$\overline{f(z)} = f(\bar{z})$。这个引理的证明如下：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-& \quad f(x) = \sum_{k=0}^{n} a_{k} x^{k}, a_{k} \in \mathbb{R} \\
+& \quad f(x) = \sum\limits_{k=0}^{n} a_{k} x^{k}, a_{k} \in \mathbb{R} \\
 &\Rightarrow a_{k} = \overline{a_{k}} \\
-&\Rightarrow \overline{f(z)} = \overline{\sum_{k=0}^{n} a_{k} z^{k}} = \sum_{k=0}^{n} a_{k} \bar{z}^{k} = f(\bar{z})
+&\Rightarrow \overline{f(z)} = \overline{\sum\limits_{k=0}^{n} a_{k} z^{k}} = \sum\limits_{k=0}^{n} a_{k} \bar{z}^{k} = f(\bar{z})
 \end{align}</script><p>这时，因为$f(a) = 0$，所以$f(\bar{a}) = \overline{f(a)} = 0$。$\Box$</p>
 <p>这样，实系数多项式的根，除去实根以外，就都是成对的共轭复数。一元$n (n \in \mathbb{N}^{\ast})$次实系数多项式就能在实数范围内分解为：</p>
 <script type="math/tex; mode=display">f(x) = a \prod_{k=1}^{s} (x - a_{k}) \cdot \prod_{k=1}^{t} (x^{2} + b_{k} x + c_{k})</script><p>其中$a, a_{k}, b_{k}, c_{k} \in \mathbb{R}$，$s + 2t = n$，且$c_{k} &gt; 0, b_{k}^{2} &lt; 4 c_{k}$。</p>
@@ -1337,7 +1337,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -2048,7 +2048,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

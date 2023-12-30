@@ -151,7 +151,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="简介位运算（bitwise operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-12-23T12:26:26.499Z">
+<meta property="og:updated_time" content="2023-12-30T16:28:10.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="位运算">
 <meta name="twitter:description" content="简介位运算（bitwise operation）其实就是将数转换为二进制逐位运算。通常在处理器上，位运算的效率比乘除法高。">
@@ -511,7 +511,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -537,75 +537,75 @@
 <h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="非（NOT）"><a href="#非（NOT）" class="headerlink" title="非（NOT）"></a>非（NOT）</h2><p>非运算会对一个二进制数的每一位执行逻辑非运算，即取反，将$0$变成$1$，将$1$变成$0$。<br>在大多数编程语言中，其符号为<code>~</code>。</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\mathrm{NOT}&\ 0111 \ (= (7)_{10}) \\
-= &\ 1000 \ (= (8)_{10})
-\end{align}</script><p>非运算的结果是值的二进制补码减一，即$\mathrm{NOT}\ x =  -x - 1$。</p>
+\mathrm{NOT} \ & 0111 \ (= (7)_{10}) \\
+= \ & 1000 \ (= (8)_{10})
+\end{align}</script><p>非运算的结果是值的二进制补码减一，即$\mathrm{NOT} \ x =  -x - 1$。</p>
 <h2 id="与（AND）"><a href="#与（AND）" class="headerlink" title="与（AND）"></a>与（AND）</h2><p>与运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑与运算，相当于将它们相乘。若两个bit都为$1$，则结果为$1$（$1 \times 1 =  1$）；否则结果为$0$（$1 \times 0 =  0, 0 \times 0 =  0$）。<br>在大多数编程语言中，其符号为<code>&amp;</code>。</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0101 \ (= (5)_{10}) \\
+& 0101 \ (= (5)_{10}) \\
 \mathrm{AND} \ & 0011 \ (= (3)_{10}) \\
 = \ & 0001 \ (= (1)_{10})
 \end{align}</script><p>与运算可以用于确认某一位是$1$还是$0$。<br>例如，对于给定的数$0011 \ (= (3)_{10})$，我们要确认第$2$位是否是$1$，我们可以用将其和$0010$（只有第$2$位是$1$）进行与运算：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0011 \ (= (3)_{10}) \\
+& 0011 \ (= (3)_{10}) \\
 \mathrm{AND} \ & 0010 \ (= (2)_{10}) \\
 = \ & 0010 \ (= (2)_{10})
-\end{align}</script><p>由于结果$0010$不为$0$，所以我们知道原数的第$2$位是$1$。这被称作位掩码（Bit Mask）。</p>
+\end{align}</script><p>由于结果$0010$不为$0$，所以我们知道原数的第$2$位是$1$。这被称作位掩码（bit mask）。</p>
 <p>与运算可以将某一位设置为$0$。例如，我们要把$0110 \ (= (6)_{10})$的第$3$位设置为$0$，可以将其和$1011$（只有第$3$位是$0$）进行与运算：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0110 \ (= (6)_{10}) \\
+& 0110 \ (= (6)_{10}) \\
 \mathrm{AND} \ & 1011 \ (= (11)_{10}) \\
 = \ & 0010 \ (= (2)_{10})
 \end{align}</script><p>由于这个属性，二进制数的奇偶校验就很方便了：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0110 \ (= (6)_{10}) \\
+& 0110 \ (= (6)_{10}) \\
 \mathrm{AND} \ & 0001 \ (= (1)_{10}) \\
 = \ & 0000 \ (= (0)_{10})
-\end{align}</script><p>因为$6\ \mathrm{AND}\ 1 =  0$，所以$6$可以被$2$整除，因此$6$是偶数。</p>
+\end{align}</script><p>因为$6 \ \mathrm{AND} \ 1 =  0$，所以$6$可以被$2$整除，因此$6$是偶数。</p>
 <h2 id="或（OR）"><a href="#或（OR）" class="headerlink" title="或（OR）"></a>或（OR）</h2><p>或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑或运算。若两个bit都为$0$，则结果为$0$；否则结果为$1$。<br>在大多数编程语言中，其符号为<code>|</code>。</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0101 \ (= (5)_{10}) \\
+& 0101 \ (= (5)_{10}) \\
 \mathrm{OR} \ & 0011 \ (= (3)_{10}) \\
 = \  & 0111 \ (= (7)_{10})
-\end{align}</script><p>或运算可以将某一位设置为$1$。例如，我们要把$0110 \ (= (6)_{10})$的第$4$位设置为$1$，可以将其和$1000$（只有第$4$位是$1$）进行或运算：</p>
+\end{align}</script><p>或运算可以将某一位设置为$1$。例如，我们要把$0110 \ (= (6)_{10})$的第$4$位设置为$1$，可以将其与$1000$（只有第$4$位是$1$）进行或运算：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0110 \ (= (6)_{10}) \\
+& 0110 \ (= (6)_{10}) \\
 \mathrm{OR} \ & 1000 \ (= (8)_{10}) \\
 = \ & 1110 \ (= (14)_{10})
 \end{align}</script><h2 id="异或（XOR）"><a href="#异或（XOR）" class="headerlink" title="异或（XOR）"></a>异或（XOR）</h2><p>异或运算对两个相同长度的二进制数每一组对应的bit进行比较并执行逻辑异或运算。若只有其中一个bit为$1$，则结果为$1$；否则结果为$0$。即两者状态不同，结果为$1$；两者状态相同，结果为$0$。<br>在大多数编程语言中，其符号为<code>^</code>。数学中还可以用符号$\oplus$表示异或。</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0101 \ (= (5)_{10}) \\
+& 0101 \ (= (5)_{10}) \\
 \mathrm{XOR} \ & 0011 \ (= (3)_{10}) \\
 = \ & 0110 \ (= (6)_{10})
 \end{align}</script><p>异或运算可以将某一位反转。例如，我们要把$0110 \ (= (6)_{10})$的第$1$位和第$3$位反转，可以将其和$0101$（第$1$位和第$3$位是$1$）进行异或运算：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\ & 0110 \ (= (6)_{10}) \\
+& 0110 \ (= (6)_{10}) \\
 \mathrm{XOR} \ & 0101 \ (= (5)_{10}) \\
 = \ & 0011 \ (= (3)_{10})
 \end{align}</script><p>通过定义可以得到，一个数异或自己总是得$0$。因此，将一个变量归零可以使用异或自己的方式，这种方式的效率通常比直接赋值为$0$要高。</p>
 <h2 id="数学等价"><a href="#数学等价" class="headerlink" title="数学等价"></a>数学等价</h2><p>对于非负整数$x$和$y$，$x \ge y$，位运算可以写成如下形式：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\mathrm{NOT}\ x &= \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2 + 1) \bmod 2) = 2^{\lfloor \log_2 x \rfloor + 1} - 1 - x \\
-x\ \mathrm{AND}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2) \\
-x\ \mathrm{OR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) \\
-x\ \mathrm{XOR}\ y &= \sum_{n = 0}^{\log_2 x} 2^{n} (((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) = \sum_{n = 0}^{\log_2 x} 2^{n} ((\lfloor \dfrac{x}{2^{n}} + \lfloor \dfrac{y}{2^{n}} \rfloor) \bmod 2)
+\mathrm{NOT} \ x &= \sum\limits_{n=0}^{\lfloor \log_{2} x \rfloor} 2^{n} ((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2 + 1) \bmod 2) = 2^{\lfloor \log_{2} x \rfloor + 1} - 1 - x \\
+x \ \mathrm{AND} \ y &= \sum\limits_{n=0}^{\lfloor \log_{2} x \rfloor} 2^{n} (\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2) \\
+x \ \mathrm{OR} \ y &= \sum\limits_{n=0}^{\lfloor \log_{2} x \rfloor} 2^{n} ((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2) - (\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2)) \\
+x \ \mathrm{XOR} \ y &= \sum\limits_{n=0}^{\lfloor \log_{2} x \rfloor} 2^{n} (((\lfloor \dfrac{x}{2^{n}} \rfloor \bmod 2) + (\lfloor \dfrac{y}{2^{n}} \rfloor \bmod 2)) \bmod 2) = \sum\limits_{n=0}^{\lfloor \log_{2} x \rfloor} 2^{n} ((\lfloor \dfrac{x}{2^{n}} \rfloor + \lfloor \dfrac{y}{2^{n}} \rfloor) \bmod 2)
 \end{align}</script><h1 id="移位"><a href="#移位" class="headerlink" title="移位"></a>移位</h1><p>移位会将二进制数字整体向左或向右移动，任意一端移出的位会被丢弃。<br>在左移中，$0$会从右侧移入；而在右移中，符号位会从左侧移入。<br>左移$n$位等同于乘以$2^{n}$，而右移$n$位等同于除以$2^{n}$并向负无穷取整。<br>在大多数编程语言中，左移为<code>&lt;&lt;</code>，右移为<code>&gt;&gt;</code>。</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\mathrm{LEFT\ SHIFT} \ & 00010111 \ (= (23)_{10}) \\
+\mathrm{LEFT \ SHIFT} \ & 00010111 \ (= (23)_{10}) \\
 = \ & 00101110 \ (= (46)_{10})
 \end{align}</script><script type="math/tex; mode=display">
 \begin{align}
-\mathrm{RIGHT\ SHIFT} \ & 10010111 \ (= (-105)_{10}) \\
+\mathrm{RIGHT \ SHIFT} \ & 10010111 \ (= (-105)_{10}) \\
 = \ & 11001011 \ (= (-53)_{10})
 \end{align}</script><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><ul>
 <li><p>乘以$2^{m}$</p>
@@ -1295,7 +1295,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -2006,7 +2006,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

@@ -151,7 +151,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-12-10T08:11:51.651Z">
+<meta property="og:updated_time" content="2023-12-30T13:10:09.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·数列">
 <meta name="twitter:description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
@@ -592,27 +592,27 @@ S_{nN} - S_{(n - 1) N} &= a_{1} \dfrac{1 - q^{nN}}{1 - q} - a_{1} \dfrac{1 - q^{
 <p>方程$x^{2} - ux - v = 0$称为<strong>特征方程</strong>，$\alpha, \beta$称为<strong>特征根</strong>。这种方法就称为<strong>特征根法</strong>。</p>
 <p>对于一般的递推公式$a_{n} = c_{1} a_{n - 1} + \cdots + c_{k} a_{n - k} (n &gt; k)$，其特征方程是$x^{k} - \sum\limits_{i=1}^{k} c_{i} x^{k - i} = 0$。</p>
 <p>若特征方程有$k$个两两不同的特征根$\alpha_{1}, \cdots, \alpha_{k}$，则数列的通项公式为$a_{n} = \sum\limits_{i=1}^{k} u_{i} \alpha_{i}^{n}$，其中常数$u_{1}, \cdots, u_{k}$满足方程组$\begin{cases} u_{1} \alpha_{1} + \cdots + u_{k} \alpha_{k} = a_{1} \\ u_{1} \alpha_{1}^{2} + \cdots + u_{k} \alpha_{k}^{2} = a_{2} \\ \quad \vdots \\ u_{1} \alpha_{1}^{k} + \cdots + u_{k} \alpha_{k}^{k} = a_{k} \end{cases}$。</p>
-<p>若有些特征根相同，可以将特征方程因式分解为$\prod\limits_{i = 1}^{t} (x - \alpha_{i})^{m_{i}}$，其中$\alpha_{i}$为互不相同的复数，$m_{i} \in \mathbb{N}^{\ast}, \sum\limits_{i = 1}^{t} m_{i} = k$。数列的通项公式则是$a_{n} = \sum\limits_{i = 1}^{t} P_{i}(n) \alpha_{i}^{n}$，其中$P_{i}$为低于$m_{i}$次的多项式。</p>
+<p>若有些特征根相同，可以将特征方程因式分解为$\prod\limits_{i=1}^{t} (x - \alpha_{i})^{m_{i}}$，其中$\alpha_{i}$为互不相同的复数，$m_{i} \in \mathbb{N}^{\ast}, \sum\limits_{i=1}^{t} m_{i} = k$。数列的通项公式则是$a_{n} = \sum\limits_{i=1}^{t} P_{i}(n) \alpha_{i}^{n}$，其中$P_{i}$为低于$m_{i}$次的多项式。</p>
 <h2 id="不动点法"><a href="#不动点法" class="headerlink" title="不动点法"></a>不动点法</h2><p>设数列$\{a_{n}\}$有递推公式$a_{n + 1} = \dfrac{Aa_{n} + B}{Ca_{n} + D} (C \ne 0, AD - BC \ne 0)$，方程$x = \dfrac{Ax + B}{Cx + D}$的根称为数列$\{a_{n}\}$的<strong>不动点</strong>。<br>如果有两个不动点$x_{1}, x_{2}$，对$k \in \{1, 2\}$，$a_{n + 1} - x_{k} = \dfrac{Aa_{n} + B}{Ca_{n} + D} - \dfrac{Ax_{k} + B}{Cx_{k} + D} = \dfrac{(AD - BC) (a_{n} - x_{k})}{(Ca_{n} + D) (Cx_{k} + D)}$。两式相除，得到$\dfrac{a_{n + 1} - x_{1}}{a_{n + 1} - x_{2}} = \dfrac{Cx_{2} + D}{Cx_{1} + D} \cdot \dfrac{a_{n} - x_{1}}{a_{n} - x_{2}}$，数列$\{\dfrac{a_{n} - x_{1}}{a_{n} - x_{2}}\}$就是等比数列。<br>如果只有一个不动点$x_{0}$，那么$\dfrac{1}{a_{n + 1} - x_{0}} = \dfrac{1}{a_{n} - x_{0}} + \dfrac{2C}{A + D}$，数列$\{\dfrac{1}{a_{n} - x_{0}}\}$就是等差数列。</p>
-<h1 id="数列求和"><a href="#数列求和" class="headerlink" title="数列求和"></a>数列求和</h1><h2 id="高阶等差数列"><a href="#高阶等差数列" class="headerlink" title="高阶等差数列"></a>高阶等差数列</h2><p>等差数列的通项公式是一个一次多项式，前$n$项和是一个二次多项式。而对于一般的$N$阶等差数列，其通项公式是$N$次多项式，前$n$项和是$N + 1$次多项式。<br>设数列$\{a_{n}\}$的通项公式是$a_{n} = \sum\limits_{i = 0}^{N} c_{i} n^{i}$，则前$n$项和是$S_{n} = \sum\limits_{k = 1}^{n} a_{k} = \sum\limits_{k = 1}^{n} \sum\limits_{i = 0}^{N} c_{i} k^{i} = \sum\limits_{i = 0}^{N} c_{i} (\sum\limits_{k = 1}^{n} k^{i})$。<br>这样，就只要对$\sum\limits_{k = 1}^{n} k^{i}$求和，称为<strong>正整数的$i$次幂和</strong>。零次幂和即$\sum\limits_{k = 1}^{n} 1 = n$；一次幂和就是等差数列求和，即$\sum\limits_{k = 1}^{n} k = \dfrac{1}{2} n (n + 1)$。</p>
-<p>对于$N$次幂和，可以借助$N$次之前的全部幂和来求解。例如，对任意正整数$k$，由$(k + 1)^{3} - k^{3} = 3k^{2} + 3k + 1$，从而累加可得$(n + 1)^{3} - 1 = \sum\limits_{k = 1}^{n} ((k + 1)^{3} - k^{3}) = \sum\limits_{k = 1}^{n} (3k^{2} + 3k + 1)$。展开得到$n^{3} + 3n^{2} + 3n = 3 \sum\limits_{k = 1}^{n} k^{2} + 3 \sum\limits_{k = 1}^{n} k + n = 3 \sum\limits_{k = 1}^{n} k^{2} + \dfrac{3}{2} n^{2} + \dfrac{5}{2} n$。化简得到</p>
+<h1 id="数列求和"><a href="#数列求和" class="headerlink" title="数列求和"></a>数列求和</h1><h2 id="高阶等差数列"><a href="#高阶等差数列" class="headerlink" title="高阶等差数列"></a>高阶等差数列</h2><p>等差数列的通项公式是一个一次多项式，前$n$项和是一个二次多项式。而对于一般的$N$阶等差数列，其通项公式是$N$次多项式，前$n$项和是$N + 1$次多项式。<br>设数列$\{a_{n}\}$的通项公式是$a_{n} = \sum\limits_{i=0}^{N} c_{i} n^{i}$，则前$n$项和是$S_{n} = \sum\limits_{k=1}^{n} a_{k} = \sum\limits_{k=1}^{n} \sum\limits_{i=0}^{N} c_{i} k^{i} = \sum\limits_{i=0}^{N} c_{i} (\sum\limits_{k=1}^{n} k^{i})$。<br>这样，就只要对$\sum\limits_{k = 1}^{n} k^{i}$求和，称为<strong>正整数的$i$次幂和</strong>。零次幂和即$\sum\limits_{k=1}^{n} 1 = n$；一次幂和就是等差数列求和，即$\sum\limits_{k=1}^{n} k = \dfrac{1}{2} n (n + 1)$。</p>
+<p>对于$N$次幂和，可以借助$N$次之前的全部幂和来求解。例如，对任意正整数$k$，由$(k + 1)^{3} - k^{3} = 3k^{2} + 3k + 1$，从而累加可得$(n + 1)^{3} - 1 = \sum\limits_{k = 1}^{n} ((k + 1)^{3} - k^{3}) = \sum\limits_{k=1}^{n} (3k^{2} + 3k + 1)$。展开得到$n^{3} + 3n^{2} + 3n = 3 \sum\limits_{k=1}^{n} k^{2} + 3 \sum\limits_{k=1}^{n} k + n = 3 \sum\limits_{k=1}^{n} k^{2} + \dfrac{3}{2} n^{2} + \dfrac{5}{2} n$。化简得到</p>
 <script type="math/tex; mode=display">\sum\limits_{k = 1}^{n} k^{2} = \dfrac{1}{6} n (n + 1) (2n + 1)</script><p>类似地，可以得到三次幂和：</p>
-<script type="math/tex; mode=display">\sum\limits_{k = 1}^{n} k^{3} = \dfrac{1}{4} n^{2} (n + 1)^{2}</script><h2 id="错位相减法"><a href="#错位相减法" class="headerlink" title="错位相减法"></a>错位相减法</h2><p>设$\{a_{n}\}, \{b_{n}\}$分别是等差数列和等比数列，公差和公比分别是$d, q$，求数列$\{a_{n} b_{n}\}$的前$n$项和。<br>令$S_{n} = \sum\limits_{i = 1}^{n} a_{i} b_{i}$，那么有$qS_{n} = \sum\limits_{i = 1}^{n} a_{i} (qb_{i}) = \sum\limits_{i = 1}^{n} a_{i} b_{i + 1} = \sum\limits_{i = 2}^{n + 1} a_{i - 1} b_{i}$。我们发现乘以公比之后$a_{i}, b_{i}$之间错开了一位。两式相减，得到</p>
+<script type="math/tex; mode=display">\sum\limits_{k = 1}^{n} k^{3} = \dfrac{1}{4} n^{2} (n + 1)^{2}</script><h2 id="错位相减法"><a href="#错位相减法" class="headerlink" title="错位相减法"></a>错位相减法</h2><p>设$\{a_{n}\}, \{b_{n}\}$分别是等差数列和等比数列，公差和公比分别是$d, q$，求数列$\{a_{n} b_{n}\}$的前$n$项和。<br>令$S_{n} = \sum\limits_{i=1}^{n} a_{i} b_{i}$，那么有$qS_{n} = \sum\limits_{i=1}^{n} a_{i} (qb_{i}) = \sum\limits_{i=1}^{n} a_{i} b_{i + 1} = \sum\limits_{i=2}^{n + 1} a_{i - 1} b_{i}$。我们发现乘以公比之后$a_{i}, b_{i}$之间错开了一位。两式相减，得到</p>
 <script type="math/tex; mode=display">
 \begin{align}
-(1 - q) S_{n} &= \sum\limits_{i = 1}^{n} a_{i} b_{i} - \sum\limits_{i = 2}^{n + 1} a_{i - 1} b_{i} \\
-&= a_{1} b_{1} - a_{n} b_{n + 1} + \sum\limits_{i = 2}^{n} (a_{i} - a_{i - 1}) b_{i} \\
-&= a_{1} b_{1} - a_{n} b_{n + 1} + d \sum\limits_{i = 2}^{n} b_{i} \\
+(1 - q) S_{n} &= \sum\limits_{i=1}^{n} a_{i} b_{i} - \sum\limits_{i=2}^{n + 1} a_{i - 1} b_{i} \\
+&= a_{1} b_{1} - a_{n} b_{n + 1} + \sum\limits_{i=2}^{n} (a_{i} - a_{i - 1}) b_{i} \\
+&= a_{1} b_{1} - a_{n} b_{n + 1} + d \sum\limits_{i=2}^{n} b_{i} \\
 &= a_{1} b_{1} - (a_{1} + (n - 1) d) b_{1} q^{n} + db_{1} \dfrac{q - q^{n}}{1 - q}
 \end{align}</script><p>也就是$S_{n} = \dfrac{a_{1} b_{1} - (a_{1} + (n - 1) d) b_{1} q^{n}}{1 - q} + \dfrac{db_{1} (q - q^{n})}{(1 - q)^{2}}$。这种求数列前$n$项和的方法叫做<strong>错位相减法</strong>。</p>
-<h2 id="裂项法"><a href="#裂项法" class="headerlink" title="裂项法"></a>裂项法</h2><p>对任意数列$\{a_{n}\}$，求$S_{n} = \sum\limits_{i = 1}^{n} a_{i}$时，如果存在一个数列$\{b_{n}\}$使得$a_{n} = b_{n + 1} - b_{n}$，则可以求出$S_{n} = \sum\limits_{i = 1}^{n} (b_{i + 1} - b_{i}) = b_{n + 1} - b_{1}$，将求和问题转化为求解$\{b_{n}\}$。这种方法叫做<strong>裂项法</strong>。</p>
-<p>例如，设数列$\{a_{n}\}$的通项公式是$a_{n} = \dfrac{1}{n (n + 1)}$，求$\{a_{n}\}$的前$n$项和。<br>令$S_{n} = \sum\limits_{i = 1}^{n} \dfrac{1}{i (i + 1)}$，注意到$\dfrac{1}{i (i + 1)} = \dfrac{1}{i} - \dfrac{1}{i + 1}$，那么有$S_{n} = \sum\limits_{i = 1}^{n} (\dfrac{1}{i} - \dfrac{1}{i + 1})$。求和中每一项的减数与下一项的被减数抵消，最后就得到结果$S_{n} = 1 - \dfrac{1}{n + 1} = \dfrac{n}{n + 1}$。</p>
+<h2 id="裂项法"><a href="#裂项法" class="headerlink" title="裂项法"></a>裂项法</h2><p>对任意数列$\{a_{n}\}$，求$S_{n} = \sum\limits_{i=1}^{n} a_{i}$时，如果存在一个数列$\{b_{n}\}$使得$a_{n} = b_{n + 1} - b_{n}$，则可以求出$S_{n} = \sum\limits_{i=1}^{n} (b_{i + 1} - b_{i}) = b_{n + 1} - b_{1}$，将求和问题转化为求解$\{b_{n}\}$。这种方法叫做<strong>裂项法</strong>。</p>
+<p>例如，设数列$\{a_{n}\}$的通项公式是$a_{n} = \dfrac{1}{n (n + 1)}$，求$\{a_{n}\}$的前$n$项和。<br>令$S_{n} = \sum\limits_{i=1}^{n} \dfrac{1}{i (i + 1)}$，注意到$\dfrac{1}{i (i + 1)} = \dfrac{1}{i} - \dfrac{1}{i + 1}$，那么有$S_{n} = \sum\limits_{i=1}^{n} (\dfrac{1}{i} - \dfrac{1}{i + 1})$。求和中每一项的减数与下一项的被减数抵消，最后就得到结果$S_{n} = 1 - \dfrac{1}{n + 1} = \dfrac{n}{n + 1}$。</p>
 <h1 id="数学归纳法"><a href="#数学归纳法" class="headerlink" title="数学归纳法"></a>数学归纳法</h1><p>要证明一个命题对所有值成立，我们可以证明命题对第一个值成立，而且从一个值到下一个值的过程有效。如同多米诺骨牌效应，第一块骨牌的倒下会导致所有骨牌都倒下。这种证明方法叫做<strong>数学归纳法（mathematical induction）</strong>。</p>
 <p><strong>第一数学归纳法原理</strong>有：<br>设$P(n)$是关于正整数$n$的命题。如果$P(1)$成立，且对任意正整数$k$，$P(k)$成立可以推出$P(k + 1)$成立，那么$P(n)$对任意正整数$n$成立。<br>用逻辑符号表示就是：</p>
-<script type="math/tex; mode=display">P(1) \land (\forall k \in \mathbb{N}^{\ast}, P(k) \to P(k + 1)) \to \forall n \in \mathbb{N}^{\ast}, P(n)</script><p>例如，用数学归纳法证明$\sum\limits_{i = 1}^{n} i^{2} = \dfrac{1}{6} n (n + 1) (2n + 1)$。<br>$n = 1$时，$1^{2} = \dfrac{1}{6} \times 1 \times (1 + 1) \times (2 + 1)$成立；<br>假设命题对$n = k$成立，即$\sum\limits_{i = 1}^{k} i^{2} = \dfrac{1}{6} k (k + 1) (2k + 1)$，则$n = k + 1$时，</p>
+<script type="math/tex; mode=display">P(1) \land (\forall k \in \mathbb{N}^{\ast}, P(k) \to P(k + 1)) \to \forall n \in \mathbb{N}^{\ast}, P(n)</script><p>例如，用数学归纳法证明$\sum\limits_{i=1}^{n} i^{2} = \dfrac{1}{6} n (n + 1) (2n + 1)$。<br>$n = 1$时，$1^{2} = \dfrac{1}{6} \times 1 \times (1 + 1) \times (2 + 1)$成立；<br>假设命题对$n = k$成立，即$\sum\limits_{i=1}^{k} i^{2} = \dfrac{1}{6} k (k + 1) (2k + 1)$，则$n = k + 1$时，</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\sum\limits_{i = 1}^{k + 1} i^{2} &= \sum\limits_{i = 1}^{k} i^{2} + (k + 1)^{2} \\
+\sum\limits_{i=1}^{k + 1} i^{2} &= \sum\limits_{i=1}^{k} i^{2} + (k + 1)^{2} \\
 &= \dfrac{1}{6} k (k + 1) (2k + 1) + (k + 1)^{2} \\
 &= \dfrac{1}{6} (k + 1) (k (2k + 1) + 6 (k + 1)) \\
 &= \dfrac{1}{6} (k + 1) (k + 2) (2k + 3)
@@ -1277,7 +1277,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -1988,7 +1988,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

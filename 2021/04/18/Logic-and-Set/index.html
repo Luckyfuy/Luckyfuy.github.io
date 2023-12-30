@@ -158,7 +158,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/05/01/NbsdOD7LUpEr489.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Rj5BJxFHz2Lp6ck.jpg">
 <meta property="og:image" content="https://i.loli.net/2021/05/01/Y1igUoWqyT7tZbw.jpg">
-<meta property="og:updated_time" content="2023-11-11T04:17:26.526Z">
+<meta property="og:updated_time" content="2023-12-30T16:53:04.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·逻辑与集合">
 <meta name="twitter:description" content="逻辑谓词逻辑谓词（predicate）是表示性质或关系的词，通常用大写字母$P, Q, R$等表示，而谓词刻画的对象称为主词（subject）。例如，用$P$表示考了100分，$x$表示小刚，那么命题小刚考了100分可以记作$P(x)$，其中$P$就是谓词，$x$就是主词。谓词和主词构成了原子命题，即不可再分的简单命题。 量词有时候，我们需要对主词限定范围，进行量化。表示量化的词称之为量词（qua">
@@ -547,7 +547,7 @@
 <a id="more"></a>
 <h2 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h2><p><strong>命题（proposition）</strong>指一个陈述句所表达的判断，不涉及谓词时，我们通常用一个字母来表示命题，如$p, q, r$等。一般我们所指的命题非<strong>真（true）</strong>即<strong>假（false）</strong>，这里的真和假表示的就是命题的<strong>真值（truth value）</strong>。</p>
 <h3 id="逻辑联结词"><a href="#逻辑联结词" class="headerlink" title="逻辑联结词"></a>逻辑联结词</h3><p>命题之间可以用<strong>逻辑联结词（logical connective）</strong>连接起来，构成复合命题。</p>
-<p><strong>与（合取，conjunction）</strong>和<strong>或（析取，disjunction）</strong>是最常见的两个连结词，一般用符号$\land$和$\lor$表示。<del>（不是非法符号！）</del><br>例如，用$p$表示小刚考了100分，$q$表示小强考了100分。$p \land q$表示他们都考了100分，而$p \lor q$表示他们之中有人考了100分。</p>
+<p><strong>与（合取，conjunction）</strong>和<strong>或（析取，disjunction）</strong>是最常见的两个联结词，一般用符号$\land$和$\lor$表示。<del>（不是非法符号！）</del><br>例如，用$p$表示小刚考了100分，$q$表示小强考了100分。$p \land q$表示他们都考了100分，而$p \lor q$表示他们之中有人考了100分。</p>
 <p>我们可以用<strong>真值表（truth table）</strong>来计算复合命题的真值：（T表示真，F表示假）</p>
 <div class="table-container">
 <table>
@@ -648,7 +648,7 @@
 <script type="math/tex; mode=display">
 \lnot (p \land q) = \lnot p \lor \lnot q \\
 \lnot (p \lor q) = \lnot p \land \lnot q</script><p>即<strong>反演律</strong>，也称<strong>德·摩根定律（De Morgan’s laws）</strong>。</p>
-<p>此外，<strong>条件</strong>连结词也在数学证明中被大量用到，符号为$\to$，也称<strong>蕴涵（implication）</strong>，但在具体的数学推理中一般使用$\Rightarrow$。条件连结词可以写成<em>若$p$，则$q$</em>的形式，其中$p$称为<strong>前件（antecedent）</strong>，$q$称为<strong>后件（consequent）</strong>。<br>$p \to q$等价于$\lnot p \lor q$，由此可以计算出蕴涵的真值表：</p>
+<p>此外，<strong>条件</strong>联结词也在数学证明中被大量用到，符号为$\to$，也称<strong>蕴涵（implication）</strong>，但在具体的数学推理中一般使用$\Rightarrow$。条件联结词可以写成<em>若$p$，则$q$</em>的形式，其中$p$称为<strong>前件（antecedent）</strong>，$q$称为<strong>后件（consequent）</strong>。<br>$p \to q$等价于$\lnot p \lor q$，由此可以计算出蕴涵的真值表：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -684,7 +684,7 @@
 </div>
 <p>若命题$p \to q$为真，则称$p$为$q$的<strong>充分条件（sufficient condition）</strong>，$q$为$p$的<strong>必要条件（necessary condition）</strong>。</p>
 <p>对于命题$p \to q$，其<strong>否命题</strong>为$\lnot p \to \lnot q$，<strong>逆命题</strong>为$q \to p$，<strong>逆否命题</strong>为$\lnot q \to \lnot p$。其中原命题与其逆否命题是等价的，证明如下：<br>由定义，$\lnot q \to \lnot p = \lnot (\lnot q) \lor \lnot p = \lnot p \lor q = p \to q$。$\Box$</p>
-<p><strong>双条件</strong>连结词，即<strong>等价（equivalence）</strong>，符号为$\leftrightarrow$或$\Leftrightarrow$，也称<strong>当且仅当（if and only if, iff）</strong>。<br>$p \leftrightarrow q$表示$(p \to q) \land (q \to p)$，此时$p$与$q$互为<strong>充要条件（sufficient and necessary condition）</strong>。<br>双条件连结词可以写成<em>当且仅当$p$，则$q$</em>的形式，英文直译导致其并不符合汉语语法。一般<em>当且仅当</em>也用于描述两者互为充要条件。<br>双条件连结词的真值表：</p>
+<p><strong>双条件</strong>联结词，即<strong>等价（equivalence）</strong>，符号为$\leftrightarrow$或$\Leftrightarrow$，也称<strong>当且仅当（if and only if, iff）</strong>。<br>$p \leftrightarrow q$表示$(p \to q) \land (q \to p)$，此时$p$与$q$互为<strong>充要条件（sufficient and necessary condition）</strong>。<br>双条件联结词可以写成<em>当且仅当$p$，则$q$</em>的形式，英文直译导致其并不符合汉语语法。一般<em>当且仅当</em>也用于描述两者互为充要条件。<br>双条件联结词的真值表：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -755,17 +755,17 @@
 <script type="math/tex; mode=display">\mathbb{N}^{\ast} \subseteq \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}</script><p>此外，还有一种特殊的实数集称为<strong>区间（interval）</strong>，有时用字母$I$表示：（$a, b \in \mathbb{R}$且$a &lt; b$）</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\lbrack a, b \rbrack &= \{x \in \mathbb{R} | a \le x \le b\} \\
+[a, b] &= \{x \in \mathbb{R} | a \le x \le b\} \\
 (a, b) &= \{x \in \mathbb{R} | a < x < b\} \\
-\lbrack a, b) &= \{x \in \mathbb{R} | a \le x < b\} \\
-(a, b \rbrack &= \{x \in \mathbb{R} | a < x \le b\}
-\end{align}</script><p>以上区间分别是<strong>闭区间</strong>、<strong>开区间</strong>、<strong>左闭右开区间</strong>和<strong>左开右闭区间</strong>。这些都是<strong>有界区间</strong>。<br>$a$和$b$为区间的<strong>端点</strong>，区间的<strong>长度</strong>为$b - a$，<strong>中点</strong>为$\frac{a + b}{2}$。</p>
+[a, b) &= \{x \in \mathbb{R} | a \le x < b\} \\
+(a, b] &= \{x \in \mathbb{R} | a < x \le b\}
+\end{align}</script><p>以上区间分别是<strong>闭区间</strong>、<strong>开区间</strong>、<strong>左闭右开区间</strong>和<strong>左开右闭区间</strong>。这些都是<strong>有界区间</strong>。<br>$a$和$b$为区间的<strong>端点</strong>，区间的<strong>长度</strong>为$b - a$，<strong>中点</strong>为$\dfrac{a + b}{2}$。</p>
 <p>用符号$+\infty$和$-\infty$表示<strong>正无穷大</strong>和<strong>负无穷大</strong>：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-\lbrack a, +\infty) &= \{x \in \mathbb{R} | x \ge a\} \\
+[a, +\infty) &= \{x \in \mathbb{R} | x \ge a\} \\
 (a, +\infty) &= \{x \in \mathbb{R} | x > a\} \\
-(-\infty, b \rbrack &= \{x \in \mathbb{R} | x \le b\} \\
+(-\infty, b] &= \{x \in \mathbb{R} | x \le b\} \\
 (-\infty, b) &= \{x \in \mathbb{R} | x < b\}
 \end{align}</script><p>特殊地，$(-\infty, +\infty) = \mathbb{R}$。<br>含有符号$\infty$的区间称为<strong>无界区间</strong>。</p>
 <h2 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h2><p>对于两个集合$A, B$，其<strong>并集（union）</strong>定义为：</p>
@@ -829,24 +829,24 @@ A \cup \varnothing = A</script><p>对于两个集合$A, B$，$A$在$B$中的<str
 <script type="math/tex; mode=display">2^{\aleph_{0}} = \aleph_{1}</script><p>这个猜想后来被证明独立于我们常用的这个公理系统之外，即不可被证明或证伪。</p>
 <h1 id="附：大型运算符"><a href="#附：大型运算符" class="headerlink" title="附：大型运算符"></a>附：大型运算符</h1><p>常见的<strong>大型运算符</strong>有</p>
 <script type="math/tex; mode=display">\sum, \prod, \bigcup, \bigcap, \bigvee, \bigwedge</script><p>给定一些数$a_{1}, a_{2}, a_{3}, \cdots, a_{n}$，它们的和$a_{1} + a_{2} + a_{3} + \cdots + a_{n}$可以写作</p>
-<script type="math/tex; mode=display">\sum_{i = 1}^{n} a_{i}</script><p>其中下标$i = 1$表示$i$的初始值为$1$，上标$n$表示$i$从初始值$1$遍历到$n$。上式的意思即$a_{i}$的和，$i$从$1$到$n$。<br>特别注意，如果下标大于上标，式子的值一般定义为$0$。</p>
+<script type="math/tex; mode=display">\sum\limits_{i=1}^{n} a_{i}</script><p>其中下标$i = 1$表示$i$的初始值为$1$，上标$n$表示$i$从初始值$1$遍历到$n$。上式的意思即$a_{i}$的和，$i$从$1$到$n$。<br>特别注意，如果下标大于上标，式子的值一般定义为$0$。</p>
 <p>例如，</p>
-<script type="math/tex; mode=display">\sum_{i = 3}^{6} i^{2} = 3^{2} + 4^{2} + 5^{2} + 6^{2} = 86</script><p>在不造成歧义的情况下，$\sum\limits_{i=1}^{n}$可以直接简写成$\sum$，例如，</p>
-<script type="math/tex; mode=display">\sum a_{i} = \sum_{i = 1}^{n} a_{i}</script><p>同理，<br>$\prod\limits_{i = 1}^{n} a_{i}$表示$a_{1}, a_{2}, \cdots, a_{n}$的乘积；<br>$\bigcap\limits_{i = 1}^{n} A_{i}$表示集合$A_{1}, A_{2}, \cdots, A_{n}$的交集；<br>$\bigvee\limits_{i = 1}^{n} p_{i}$表示对命题$p_{1}, p_{2}, \cdots, p_{n}$取或。</p>
+<script type="math/tex; mode=display">\sum\limits_{i=3}^{6} i^{2} = 3^{2} + 4^{2} + 5^{2} + 6^{2} = 86</script><p>在不造成歧义的情况下，$\sum\limits_{i=1}^{n}$可以直接简写成$\sum\limits$，例如，</p>
+<script type="math/tex; mode=display">\sum\limits a_{i} = \sum\limits_{i=1}^{n} a_{i}</script><p>同理，<br>$\prod\limits_{i=1}^{n} a_{i}$表示$a_{1}, a_{2}, \cdots, a_{n}$的乘积；<br>$\bigcap\limits_{i=1}^{n} A_{i}$表示集合$A_{1}, A_{2}, \cdots, A_{n}$的交集；<br>$\bigvee\limits_{i=1}^{n} p_{i}$表示对命题$p_{1}, p_{2}, \cdots, p_{n}$取或。</p>
 <p>此外，如果我们要限定下标的值，例如下标$i$属于非负整数集合$A$，可以写作</p>
-<script type="math/tex; mode=display">\sum_{i \in A} a_{i}</script><p>如果集合$A$可以用描述法写成$A = \{i | p(i)\}$，那么可以写作</p>
-<script type="math/tex; mode=display">\sum_{p(i)} a_{i}</script><p>如果下标要排除某个数$m$，可以写作</p>
-<script type="math/tex; mode=display">\sum_{i \ne m} a_{i}</script><p>如果要使用多个大型运算符如$\sum\limits_{i} \sum\limits_{j}$，可以简写作</p>
-<script type="math/tex; mode=display">\sum_{i, j}</script><p>求和符号比较特殊，它具有<strong>线性性</strong>：</p>
+<script type="math/tex; mode=display">\sum\limits_{i \in A} a_{i}</script><p>如果集合$A$可以用描述法写成$A = \{i | p(i)\}$，那么可以写作</p>
+<script type="math/tex; mode=display">\sum\limits_{p(i)} a_{i}</script><p>如果下标要排除某个数$m$，可以写作</p>
+<script type="math/tex; mode=display">\sum\limits_{i \ne m} a_{i}</script><p>如果要使用多个大型运算符如$\sum\limits_{i} \sum\limits_{j}$，可以简写作</p>
+<script type="math/tex; mode=display">\sum\limits_{i, j}</script><p>求和符号比较特殊，它具有<strong>线性性</strong>：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-& \sum (a_{i} + b_{i}) = \sum a_{i} + \sum b_{i} \\
-& \sum k a_{i} = k \sum a_{i}
+& \sum\limits (a_{i} + b_{i}) = \sum\limits a_{i} + \sum\limits b_{i} \\
+& \sum\limits k a_{i} = k \sum\limits a_{i}
 \end{align}</script><p>连乘符号也有类似的性质：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-& \prod a_{i} b_{i} = \prod a_{i} \prod b_{i} \\
-& (\prod a_{i})^{k} = \prod a_{i}^{k}
+& \prod\limits a_{i} b_{i} = \prod\limits a_{i} \prod\limits b_{i} \\
+& (\prod\limits a_{i})^{k} = \prod\limits a_{i}^{k}
 \end{align}</script>
       
     </div>
@@ -1504,7 +1504,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -2215,7 +2215,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

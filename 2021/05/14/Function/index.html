@@ -174,7 +174,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/07/09/NlngUV2hfQowk4H.png">
 <meta property="og:image" content="https://i.loli.net/2021/07/09/RxhIcvJd5Pu3OZK.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
-<meta property="og:updated_time" content="2022-12-16T10:56:02.308Z">
+<meta property="og:updated_time" content="2023-12-30T16:38:46.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
@@ -783,8 +783,8 @@ f_{2}(x) = \dfrac{f(x) + f(-x)}{2}
 \end{align}</script><p>用求和符号表示就是</p>
 <script type="math/tex; mode=display">
 \begin{align}
-& \sin x = \sum_{n = 0}^{\infty} \dfrac{(-1)^{n} x^{2n + 1}}{(2n + 1)!} \\
-& \cos x = \sum_{n = 0}^{\infty} \dfrac{(-1)^{n} x^{2n}}{(2n)!}
+& \sin x = \sum\limits_{n=0}^{\infty} \dfrac{(-1)^{n} x^{2n + 1}}{(2n + 1)!} \\
+& \cos x = \sum\limits_{n=0}^{\infty} \dfrac{(-1)^{n} x^{2n}}{(2n)!}
 \end{align}</script><p>在精度要求不是很高的情况下，我们可以取这个式子的前几项粗略地计算三角函数值，$x$越小精度越高。</p>
 <h3 id="同角三角函数关系式"><a href="#同角三角函数关系式" class="headerlink" title="同角三角函数关系式"></a>同角三角函数关系式</h3><p>由三角函数的定义可以得到</p>
 <script type="math/tex; mode=display">\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} (\alpha \ne k \pi + \dfrac{\pi}{2}, k \in \mathbb{Z})</script><p>设角$\alpha$的始边为$x$非负半轴，终边与单位圆的交点是$P(x, y)$。<br>过$P$作$x$轴的垂线，垂足为$M$，则勾股定理有</p>
@@ -945,7 +945,7 @@ a \sin x + b \cos x &= \sqrt{a^{2} + b^{2}} \sin(x + \arctan \dfrac{b}{a}), a > 
 <script type="math/tex; mode=display">\sin^{2} C = \sin^{2} A + \sin^{2} B - 2 \sin A \sin B \cos C</script><p>右边使用二倍角公式与积化和差、和差化积公式化简：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-& \ \quad \sin^{2} A + \sin^{2} B - 2 \sin A \sin B \cos C \\
+& \quad \sin^{2} A + \sin^{2} B - 2 \sin A \sin B \cos C \\
 &= 1 - \dfrac{1}{2} (\cos 2 A + \cos 2 B) - (\cos(A - B) - \cos(A + B)) \cos C \\
 &= 1 - \cos(A - B) \cos(A + B) - \cos(A - B) \cos C - \cos^{2} C \\
 &= 1 - \cos^{2} C \\
@@ -1631,7 +1631,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1805.1k字</span>
+  <span class="post-count">全站共1806.3k字</span>
 </div>
         
 
@@ -2342,7 +2342,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703342346975')
+  navigator.serviceWorker.register('/sw.js?t=1703957508855')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
