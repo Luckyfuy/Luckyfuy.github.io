@@ -174,7 +174,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/07/09/NlngUV2hfQowk4H.png">
 <meta property="og:image" content="https://i.loli.net/2021/07/09/RxhIcvJd5Pu3OZK.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
-<meta property="og:updated_time" content="2023-12-30T16:38:46.951Z">
+<meta property="og:updated_time" content="2024-01-02T14:57:01.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
@@ -618,7 +618,7 @@ f_{2}(x) = \dfrac{f(x) + f(-x)}{2}
 <p>此外，从几何的另一个角度来看，凹凸性的定义也可以表述成这样：<br>设函数$f$在区间$I$上连续，$\forall x_{1}, x_{2} \in I, \forall \lambda \in (0, 1)$，恒有$f(\lambda x_{1} + (1 - \lambda) x_{2}) \le \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$，则称函数在$I$上为凹函数或下凸函数；<br>若恒有$f(\lambda x_{1} + (1 - \lambda) x_{2}) \ge \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$，则称函数在$I$上为凸函数或上凸函数。</p>
 <p>要理解这个定义，可以先分析下凸的情况，上凸的思考过程类似：<br>对于下凸的曲线来说，曲线上任意两点间的弧段总是位于这两点连线的下方。<br>设$(x_{1}, f(x_{1})), (x_{2}, f(x_{2}))$为曲线上两点，则两点连线的方程为</p>
 <script type="math/tex; mode=display">g(x) = f(x_{1}) + \dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}}(x - x_{1})</script><p>而$x_{1}$与$x_{2}$之间的任意一点$x$可以表示为</p>
-<script type="math/tex; mode=display">x = \lambda x_{1} + (1 - x) x_{2}, \lambda \in (0, 1)</script><p>所以曲线上两点间弧段始终位于两点连线下方等价于</p>
+<script type="math/tex; mode=display">x = \lambda x_{1} + (1 - \lambda) x_{2}, \lambda \in (0, 1)</script><p>所以曲线上两点间弧段始终位于两点连线下方等价于</p>
 <script type="math/tex; mode=display">f(\lambda x_{1} + (1 - \lambda) x_{2}) \le g(\lambda x_{1} + (1 - \lambda) x_{2})</script><p>也就是</p>
 <script type="math/tex; mode=display">f(\lambda x_{1} + (1 - \lambda) x_{2}) \le \lambda f(x_{1}) + (1 - \lambda) f(x_{2})</script><h2 id="反函数"><a href="#反函数" class="headerlink" title="反函数"></a>反函数</h2><p>如果函数$f: A \to B$是双射的，即值域$B$中每一个元素的原像都是唯一的，那么这个函数就有<strong>反函数（inverse function）</strong>$f^{-1}$，$(f^{-1} \circ f)(x) = x$。例如函数$f(x) = 2x + 1$，它的反函数为$f^{-1}(x) = \dfrac{x - 1}{2}$。<br>如果一个函数有反函数，那么称这个函数是<strong>可逆的（invertible）</strong>。</p>
 <p>一个函数有反函数当且仅当是双射函数。<br>因此，单调函数总是有反函数，并且反函数的单调性与原函数一致。</p>
@@ -874,7 +874,7 @@ f_{2}(x) = \dfrac{f(x) + f(-x)}{2}
 <script type="math/tex; mode=display">\tan x = \dfrac{\sin x}{\cos x}</script><p>$x$从左边趋近于$\dfrac{\pi}{2}$，$\sin x$增大趋于$1$，而$\cos x$减小趋于$0$，使得$\tan x$趋于正无穷大。$x$从右边趋近于$\dfrac{\pi}{2}$时则$\tan x$趋于负无穷大。<br>因此正切函数的值域是$\mathbb{R}$。</p>
 <h3 id="函数-f-x-A-sin-omega-x-varphi"><a href="#函数-f-x-A-sin-omega-x-varphi" class="headerlink" title="函数$f(x) = A \sin(\omega x + \varphi)$"></a>函数$f(x) = A \sin(\omega x + \varphi)$</h3><p>三角函数常用来刻画一些物理现象，例如匀速圆周运动。<br>设一半径为$r$的圆形水车以角速度$\omega$匀速转动。以水车的中心为原点，一个水桶在开始转动时位于角$\varphi$的终边上，那么在旋转时间$t$后，水桶对应的角就是$\omega t + \varphi$。此时水桶的高度（纵坐标）</p>
 <script type="math/tex; mode=display">h = r \sin(\omega t + \varphi)</script><p>这个函数就是我们所要研究的。</p>
-<p>函数$f(x) = A \sin(\omega x + \varphi)$有三个参数：<br><strong>振幅（amplitude）</strong>$A$、<strong>圆频率（circular frequency）</strong>或<strong>角频率（angular frequency）</strong>$\omega$和<strong>初相（initial phase）</strong>$\varphi$。<br>它们对函数图像的影响各不一样。</p>
+<p>函数$f(x) = A \sin(\omega x + \varphi)$有三个参数：<br><strong>振幅（amplitude）</strong>$A$、<strong>圆频率（circular frequency）</strong>或<strong>角频率（angular frequency）</strong>$\omega$、<strong>初相（initial phase）</strong>$\varphi$。<br>它们对函数图像的影响各不一样。</p>
 <p>首先，$f(x + \varphi)$的图像是$f(x)$平移$\varphi$个单位得到的，那么初相$\varphi$的作用就是平移；<br>其次，从$f(x)$变为$A f(x)$，函数值变为了原来的$A$倍，那么振幅$A$的作用就是纵向的拉伸，由此得到函数的值域为$[-A, A]$；<br>最后，从$f(x)$变为$f(\omega x)$，$f(\omega \cdot \dfrac{x}{\omega}) = f(x)$，函数图像上每一点$(x, f(x))$都变为了$(\dfrac{x}{\omega}, f(x))$，那么振幅$A$的作用就是横向的压缩。</p>
 <p>因此，函数$f(x) = A \sin(\omega x + \varphi) (A &gt; 0, \omega &gt; 0)$的图像可以通过三步从正弦曲线变化而来：</p>
 <ol>
@@ -1570,7 +1570,7 @@ if(canvas.getContext){
       <div class="footer-inner">
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2023</span>
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-battery"></i>
   </span>
@@ -1631,7 +1631,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1806.3k字</span>
+  <span class="post-count">全站共1807.3k字</span>
 </div>
         
 
@@ -2342,7 +2342,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1703957508855')
+  navigator.serviceWorker.register('/sw.js?t=1704207587441')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
