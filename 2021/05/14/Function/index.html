@@ -174,7 +174,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/07/09/NlngUV2hfQowk4H.png">
 <meta property="og:image" content="https://i.loli.net/2021/07/09/RxhIcvJd5Pu3OZK.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
-<meta property="og:updated_time" content="2024-01-02T14:57:01.585Z">
+<meta property="og:updated_time" content="2024-01-20T12:33:23.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
@@ -582,7 +582,7 @@ x, & x \ge 0 \\
 <p>上面的定义都是<strong>严格单调（strictly monotone）</strong>，我们说的单调一般都是指严格单调。<br>如果把定义中的$&gt;$或$&lt;$换成$\ge$或$\le$，那么称之为<strong>不严格单调</strong>。</p>
 <p>由定义反过来，对于增函数$f$、减函数$g$，$f(x) &gt; f(y) \Rightarrow x &gt; y, g(x) &gt; g(y) \Rightarrow x &lt; y$同样成立。换言之，两者互为充要条件。</p>
 <p>（严格）单调函数都是单射。<br>这个定理可以通过反证法证明：<br>不妨设$f: A \to B$为增函数，任取$x, y \in A, x \ne y, f(x) = f(y)$。由于$x \ne y$，那么$x &gt; y$或$x &lt; y$。由增函数的定义可知，此时$f(x) &gt; f(y)$或$f(x) &lt; f(y)$，矛盾。因此$f$为单射。<br>对于减函数的情况，只要考虑函数$g(x) = -f(x)$就好了。$\Box$</p>
-<p>设函数$f: A \to B, C \subseteq A$，若实数$M$满足$\exists x_{0} \in C, f(x_{0}) = M$且$\forall x \in C, f(x) \le M$，那么$M$是区间$C$上的<strong>最大值（maximum value）</strong>，$x_{0}$是<strong>最大值点（maximum point）</strong>。<br>类似地，可以得出<strong>最小值（minimum value）</strong>与<strong>最小值点（minimum point）</strong>的定义。</p>
+<p>设函数$f: A \to B, C \subseteq A$，如果实数$M$满足$\exists x_{0} \in C, f(x_{0}) = M$且$\forall x \in C, f(x) \le M$，那么$M$是区间$C$上的<strong>最大值（maximum）</strong>，$x_{0}$是<strong>最大值点（maximum point）</strong>；如果是$f(x) \ge M$，那么$M$是区间$C$上的<strong>最小值（minimum）</strong>，$x_{0}$是<strong>最小值点（minimum point）</strong>。最大值和最小值统称<strong>最值（extremum）</strong>，最大值点和最小值点统称<strong>最值点（extremum point）</strong>。</p>
 <p>显然，对于单调函数$f: [a, b] \to B$，<br>若$f$为增函数，则最大值为$f(b)$，最小值为$f(a)$；<br>若$f$为减函数，则最大值为$f(a)$，最小值为$f(b)$。</p>
 <h3 id="对称性与奇偶性"><a href="#对称性与奇偶性" class="headerlink" title="对称性与奇偶性"></a>对称性与奇偶性</h3><p>如果一个函数$f: A \to B$的定义域满足$x \in A \Leftrightarrow -x \in A$，且$\forall x \in A, f(x) = f(-x)$，那么称$f$为<strong>偶函数（even function）</strong>。偶函数的图像关于$y$轴对称。<br>例如函数$f(x) = x^{2}$，$\forall x \in \mathbb{R}$，都有$f(-x) = (-x)^{2} = x^{2} = f(x)$，因此$f$为偶函数。</p>
 <p><img src="https://i.loli.net/2021/06/04/m8HKjAuORo7MbSY.png" alt="偶函数" title="偶函数"></p>
@@ -1631,7 +1631,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1807.3k字</span>
+  <span class="post-count">全站共1809.1k字</span>
 </div>
         
 
@@ -2342,7 +2342,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1704207587441')
+  navigator.serviceWorker.register('/sw.js?t=1705757992272')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
