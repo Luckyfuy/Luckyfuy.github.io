@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/6obrp8y3gY1j5D4.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/r9w5GoHmXPxYLnI.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
-<meta property="og:updated_time" content="2024-02-02T17:02:32.978Z">
+<meta property="og:updated_time" content="2024-02-16T17:01:29.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -500,7 +500,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4.2k
+                  4.3k
                 </span>
               
 
@@ -516,7 +516,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  20
+                  21
                 </span>
               
             </div>
@@ -620,7 +620,7 @@
 <p>利用拉格朗日中值定理容易得到一个推论：<br>若函数$f$在区间$I$上可导，且对任意$x \in I$都有$f’(x) = 0$，则$f$在区间$I$上为常数。<br>也就是说，导数为$0$的函数一定是常数函数。<br>证明：<br>设任意两点$x_{1}, x_{2} \in I$且$x_{1} &lt; x_{2}$，由拉格朗日中值定理有$\dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} = f’(\xi)$。因为$f’(\xi) = 0$，所以$f(x_{1}) = f(x_{2})$。$\Box$</p>
 <p>由这个推论又容易得到：<br>若函数$f, g$在区间$I$上可导，且对任意$x \in I$都有$f’(x) = g’(x)$，则$f, g$在区间$I$上相差一个常数。<br>也就是说，导数相同的函数只有常数项不同，这对于积分非常有帮助。<br>证明：<br>令$h(x) = f(x) - g(x)$，则$h’(x) = f’(x) - g’(x) = 0$。由前面的推论可得，$h(x)$为常数，因此$f(x), g(x)$相差一个常数。$\Box$</p>
 <p><strong>柯西中值定理（Cauchy’s mean value theorem）</strong>是拉格朗日中值定理的推广：<br>设函数$f, g$在闭区间$[a, b]$上连续，在开区间$(a, b)$上可导，且对任意$x \in (a, b)$都有$g’(x) \ne 0$，则存在$\xi \in (a, b)$，使得$\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$。<br>拉格朗日中值定理是$g(x) = x$时的特殊情况。<br>证明：<br>令函数$F(x) = f(x) - \left(\dfrac{f(b) - f(a)}{g(b) - g(a)} (g(x) - g(a)) + f(a) \right)$，则$F(a) = F(b) = 0$。显然，函数$F$在$[a, b]$上连续，在$(a, b)$上可导。根据罗尔中值定理，存在$\xi \in (a, b)$，使得$F’(\xi) = 0$。因为$F’(x) = f’(x) - \dfrac{f(b) - f(a)}{g(b) - g(a)} g’(x)$，所以$\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$。$\Box$<br>柯西中值定理的几何意义是：用参数方程$\begin{cases} x = g(t) \\ y = f(t) \end{cases}$表示的曲线上至少有一点的切线平行于曲线两个端点的连线。<br><img src="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png" alt="柯西中值定理的几何意义" title="柯西中值定理的几何意义"></p>
-<h1 id="导数的应用"><a href="#导数的应用" class="headerlink" title="导数的应用"></a>导数的应用</h1><h2 id="函数的单调性"><a href="#函数的单调性" class="headerlink" title="函数的单调性"></a>函数的单调性</h2><h2 id="函数的凹凸性"><a href="#函数的凹凸性" class="headerlink" title="函数的凹凸性"></a>函数的凹凸性</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="方程的根"><a href="#方程的根" class="headerlink" title="方程的根"></a>方程的根</h2>
+<h1 id="导数的应用"><a href="#导数的应用" class="headerlink" title="导数的应用"></a>导数的应用</h1><h2 id="函数的单调性与极值点"><a href="#函数的单调性与极值点" class="headerlink" title="函数的单调性与极值点"></a>函数的单调性与极值点</h2><h2 id="函数的凹凸性与拐点"><a href="#函数的凹凸性与拐点" class="headerlink" title="函数的凹凸性与拐点"></a>函数的凹凸性与拐点</h2><h2 id="函数图像的绘制"><a href="#函数图像的绘制" class="headerlink" title="函数图像的绘制"></a>函数图像的绘制</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
       
     </div>
     
@@ -1190,7 +1190,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导数"><span class="nav-number">1.</span> <span class="nav-text">导数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的计算"><span class="nav-number">2.</span> <span class="nav-text">导数的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本函数的导数"><span class="nav-number">2.1.</span> <span class="nav-text">基本函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导数的四则运算"><span class="nav-number">2.2.</span> <span class="nav-text">导数的四则运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数和反函数的导数"><span class="nav-number">2.3.</span> <span class="nav-text">复合函数和反函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐函数的导数"><span class="nav-number">2.4.</span> <span class="nav-text">隐函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶导数"><span class="nav-number">2.5.</span> <span class="nav-text">高阶导数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分中值定理"><span class="nav-number">3.</span> <span class="nav-text">微分中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#罗尔中值定理"><span class="nav-number">3.1.</span> <span class="nav-text">罗尔中值定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日中值定理与柯西中值定理"><span class="nav-number">3.2.</span> <span class="nav-text">拉格朗日中值定理与柯西中值定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的应用"><span class="nav-number">4.</span> <span class="nav-text">导数的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的单调性"><span class="nav-number">4.1.</span> <span class="nav-text">函数的单调性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的凹凸性"><span class="nav-number">4.2.</span> <span class="nav-text">函数的凹凸性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平面曲线的曲率"><span class="nav-number">4.3.</span> <span class="nav-text">平面曲线的曲率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未定式的极限"><span class="nav-number">4.4.</span> <span class="nav-text">未定式的极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方程的根"><span class="nav-number">4.5.</span> <span class="nav-text">方程的根</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导数"><span class="nav-number">1.</span> <span class="nav-text">导数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的计算"><span class="nav-number">2.</span> <span class="nav-text">导数的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本函数的导数"><span class="nav-number">2.1.</span> <span class="nav-text">基本函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导数的四则运算"><span class="nav-number">2.2.</span> <span class="nav-text">导数的四则运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数和反函数的导数"><span class="nav-number">2.3.</span> <span class="nav-text">复合函数和反函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐函数的导数"><span class="nav-number">2.4.</span> <span class="nav-text">隐函数的导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶导数"><span class="nav-number">2.5.</span> <span class="nav-text">高阶导数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分中值定理"><span class="nav-number">3.</span> <span class="nav-text">微分中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#罗尔中值定理"><span class="nav-number">3.1.</span> <span class="nav-text">罗尔中值定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日中值定理与柯西中值定理"><span class="nav-number">3.2.</span> <span class="nav-text">拉格朗日中值定理与柯西中值定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导数的应用"><span class="nav-number">4.</span> <span class="nav-text">导数的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的单调性与极值点"><span class="nav-number">4.1.</span> <span class="nav-text">函数的单调性与极值点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的凹凸性与拐点"><span class="nav-number">4.2.</span> <span class="nav-text">函数的凹凸性与拐点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数图像的绘制"><span class="nav-number">4.3.</span> <span class="nav-text">函数图像的绘制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平面曲线的曲率"><span class="nav-number">4.4.</span> <span class="nav-text">平面曲线的曲率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未定式的极限"><span class="nav-number">4.5.</span> <span class="nav-text">未定式的极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#牛顿法"><span class="nav-number">4.6.</span> <span class="nav-text">牛顿法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1273,7 +1273,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1809.7k字</span>
+  <span class="post-count">全站共1809.8k字</span>
 </div>
         
 
@@ -1984,7 +1984,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1706893418880')
+  navigator.serviceWorker.register('/sw.js?t=1708103616933')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
