@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/6obrp8y3gY1j5D4.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/r9w5GoHmXPxYLnI.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
-<meta property="og:updated_time" content="2024-02-16T17:01:29.153Z">
+<meta property="og:updated_time" content="2024-02-18T15:28:15.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -500,7 +500,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4.3k
+                  5.2k
                 </span>
               
 
@@ -516,7 +516,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  21
+                  25
                 </span>
               
             </div>
@@ -539,7 +539,7 @@
       
         <h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><p>如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的<strong>导数（derivative）</strong>，记作$f’(x_{0})$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x_{0})$；若设$y = f(x)$，则还可以记作$\left. y’ \right|_{x=x_{0}}$或$\left. \dfrac{\mathrm{d} y}{\mathrm{d} x} \right|_{x=x_{0}}$。此时称$f$在$x_{0}$<strong>可导（differentiable）</strong>。<br>如果函数$f(x)$在$x_{0}$的一个左邻域$(x_{0} - \delta, x_{0}]$有定义，且极限$\lim\limits_{\Delta x \to 0^{-}} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的<strong>左导数（left derivative）</strong>，记作$f’_{-}(x_{0})$；如果函数$f(x)$在$x_{0}$的一个右邻域$[x_{0}, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0^{+}} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的<strong>右导数（right derivative）</strong>，记作$f’_{+}(x_{0})$。<br>显然，函数在$x_{0}$可导的充要条件是：它在$x_{0}$的左导数和右导数存在且相等。</p>
 <a id="more"></a>
-<p>如果函数$f$在区间$I$内的每一点都可导，那么称$f$在区间$I$上可导。此时$x \mapsto f’(x), x \in I$确定了一个函数，称为$f$的<strong>导函数（derivative function）</strong>，简称<strong>导数</strong>，记作$f’(x)$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x)$。后一种符号由德国数学家莱布尼茨（Gottfried Wilhelm Leibniz，1646—1716）发明。</p>
+<p>如果函数$f$在区间$I$内的每一点都可导，且在端点单侧可导，那么称$f$在区间$I$上可导。此时$x \mapsto f’(x), x \in I$确定了一个函数，称为$f$的<strong>导函数（derivative function）</strong>，简称<strong>导数</strong>，记作$f’(x)$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x)$。后一种符号由德国数学家莱布尼茨（Gottfried Wilhelm Leibniz，1646—1716）发明。</p>
 <p>设函数$f$在点$x_{0}$可导，则$f$在点$x_{0}$连续。<br>证明：</p>
 <script type="math/tex; mode=display">\lim\limits_{x \to x_{0}} (f(x) - f(x_{0})) = \lim\limits_{x \to x_{0}} \dfrac{f(x) - f(x_{0})}{x - x_{0}} \cdot (x - x_{0}) = f'(x_{0}) \cdot 0 = 0 \quad \Box</script><p><img src="https://s2.loli.net/2023/12/30/Xbygr2m8tTnqGd3.png" alt><br>观察曲线$y = f(x)$的图像。连接曲线上的两点$(x_{0}, f(x_{0}))$和$(x_{0} + \Delta x, f(x_{0} + \Delta x))$，可以得到曲线的一条割线，其斜率$k = \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。由于函数$f(x)$在$x_{0}$连续，当$\Delta x$趋近于$0$时，割线趋近于某条特定的直线，这条直线称为曲线在点$(x_{0}, f(x_{0}))$的<strong>切线（tangent line）</strong>，其斜率$k = \lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。这就是导数的几何意义。<br>通过点斜式可以写出切线的方程：$y - f(x_{0}) = f’(x_{0}) (x - x_{0})$。</p>
 <h1 id="导数的计算"><a href="#导数的计算" class="headerlink" title="导数的计算"></a>导数的计算</h1><h2 id="基本函数的导数"><a href="#基本函数的导数" class="headerlink" title="基本函数的导数"></a>基本函数的导数</h2><p>常数函数$f(x) = c$的导数为$f’(x) = 0$。<br>证明：</p>
@@ -620,7 +620,16 @@
 <p>利用拉格朗日中值定理容易得到一个推论：<br>若函数$f$在区间$I$上可导，且对任意$x \in I$都有$f’(x) = 0$，则$f$在区间$I$上为常数。<br>也就是说，导数为$0$的函数一定是常数函数。<br>证明：<br>设任意两点$x_{1}, x_{2} \in I$且$x_{1} &lt; x_{2}$，由拉格朗日中值定理有$\dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} = f’(\xi)$。因为$f’(\xi) = 0$，所以$f(x_{1}) = f(x_{2})$。$\Box$</p>
 <p>由这个推论又容易得到：<br>若函数$f, g$在区间$I$上可导，且对任意$x \in I$都有$f’(x) = g’(x)$，则$f, g$在区间$I$上相差一个常数。<br>也就是说，导数相同的函数只有常数项不同，这对于积分非常有帮助。<br>证明：<br>令$h(x) = f(x) - g(x)$，则$h’(x) = f’(x) - g’(x) = 0$。由前面的推论可得，$h(x)$为常数，因此$f(x), g(x)$相差一个常数。$\Box$</p>
 <p><strong>柯西中值定理（Cauchy’s mean value theorem）</strong>是拉格朗日中值定理的推广：<br>设函数$f, g$在闭区间$[a, b]$上连续，在开区间$(a, b)$上可导，且对任意$x \in (a, b)$都有$g’(x) \ne 0$，则存在$\xi \in (a, b)$，使得$\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$。<br>拉格朗日中值定理是$g(x) = x$时的特殊情况。<br>证明：<br>令函数$F(x) = f(x) - \left(\dfrac{f(b) - f(a)}{g(b) - g(a)} (g(x) - g(a)) + f(a) \right)$，则$F(a) = F(b) = 0$。显然，函数$F$在$[a, b]$上连续，在$(a, b)$上可导。根据罗尔中值定理，存在$\xi \in (a, b)$，使得$F’(\xi) = 0$。因为$F’(x) = f’(x) - \dfrac{f(b) - f(a)}{g(b) - g(a)} g’(x)$，所以$\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$。$\Box$<br>柯西中值定理的几何意义是：用参数方程$\begin{cases} x = g(t) \\ y = f(t) \end{cases}$表示的曲线上至少有一点的切线平行于曲线两个端点的连线。<br><img src="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png" alt="柯西中值定理的几何意义" title="柯西中值定理的几何意义"></p>
-<h1 id="导数的应用"><a href="#导数的应用" class="headerlink" title="导数的应用"></a>导数的应用</h1><h2 id="函数的单调性与极值点"><a href="#函数的单调性与极值点" class="headerlink" title="函数的单调性与极值点"></a>函数的单调性与极值点</h2><h2 id="函数的凹凸性与拐点"><a href="#函数的凹凸性与拐点" class="headerlink" title="函数的凹凸性与拐点"></a>函数的凹凸性与拐点</h2><h2 id="函数图像的绘制"><a href="#函数图像的绘制" class="headerlink" title="函数图像的绘制"></a>函数图像的绘制</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
+<h1 id="导数的应用"><a href="#导数的应用" class="headerlink" title="导数的应用"></a>导数的应用</h1><h2 id="函数的单调性与极值点"><a href="#函数的单调性与极值点" class="headerlink" title="函数的单调性与极值点"></a>函数的单调性与极值点</h2><p>从几何上看，函数图像在一点的切线斜率的正负体现了该点附近的图像是上升还是下降。因此，我们可以通过导数判断函数的单调性：<br>设函数$f$在闭区间$[a, b]$上连续，在开区间$(a, b)$上可导。若对任意$x \in (a, b)$都有$f’(x) &gt; 0$，则$f$在$[a, b]$上为增函数；若对任意$x \in (a, b)$都有$f’(x) &lt; 0$，则$f$在$[a, b]$上为减函数。<br>利用中值定理可以证明：<br>设任意两点$x_{1}, x_{2} \in [a, b]$且$x_{1} &lt; x_{2}$，由拉格朗日中值定理有$f(x_{2}) - f(x_{1}) = f’(\xi) (x_{2} - x_{1}), \xi \in (x_{1}, x_{2})$。因为$x_{2} - x_{1} &gt; 0$，所以右边的正负号和$f’(\xi)$一致。$\Box$</p>
+<p>从几何上看，单调性改变的点实际上就是极值点。因此，我们可以通过导数求函数的极值：<br>设函数$f$在一点$x_{0}$连续，以$x_{0}$为界，<br>若$f’$在$x_{0}$的某个去心邻域$(x_{0} - \delta, x_{0}) \cup (x_{0}, x_{0} + \delta)$先正后负，则$x_{0}$是$f$的一个极大值点；<br>若$f’$在$x_{0}$的某个去心邻域$(x_{0} - \delta, x_{0}) \cup (x_{0}, x_{0} + \delta)$先负后正，则$x_{0}$是$f$的一个极小值点；<br>若$f’$在$x_{0}$的某个去心邻域$(x_{0} - \delta, x_{0}) \cup (x_{0}, x_{0} + \delta)$符号不变，则$x_{0}$不是$f$的极值点。</p>
+<p>结合下面凹凸性的判断，我们还可以通过二阶导数求函数的极值：<br>设函数$f$在一个驻点$x_{0}$二阶可导，<br>若$f’’(x_{0}) &gt; 0$，则$x_{0}$为$f$的一个极小值点；<br>若$f’’(x_{0}) &lt; 0$，则$x_{0}$为$f$的一个极大值点。</p>
+<h2 id="函数的凹凸性与拐点"><a href="#函数的凹凸性与拐点" class="headerlink" title="函数的凹凸性与拐点"></a>函数的凹凸性与拐点</h2><p>函数$f$在区间$I$上是凹函数，当且仅当$f$在区间$I$上连续，且对于任意$x_{1}, x_{2} \in I$和任意$\lambda \in (0, 1)$都有$f(\lambda x_{1} + (1 - \lambda) x_{2}) \le \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$。这是凹函数的定义。<br>由$x = \lambda x_{1} + (1 - \lambda) x_{2}$，有$\lambda = \dfrac{x_{2} - x}{x_{2} - x_{1}}, 1 - \lambda = \dfrac{x - x_{1}}{x_{2} - x_{1}}$。<br>因此定义式可以改写为</p>
+<script type="math/tex; mode=display">f(x) \le \dfrac{x_{2} - x}{x_{2} - x_{1}} f(x_{1}) + \dfrac{x - x_{1}}{x_{2} - x_{1}} f(x_{2})</script><p>注意到$x_{2} - x_{1} = (x_{2} - x) + (x - x_{1})$，整理可得，当$x_{1} &lt; x_{2}$时</p>
+<script type="math/tex; mode=display">\dfrac{f(x) - f(x_{1})}{x - x_{1}} \le \dfrac{f(x_{2}) - f(x)}{x_{2} - x}</script><p>这是凸函数的另一种定义式。</p>
+<p>如果$f$在区间$I$上可导，令$x$分别趋于$x_{1}, x_{2}$，得到</p>
+<script type="math/tex; mode=display">f'(x_{1}) \le \dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} \le f'(x_{2})</script><p>于是凹函数的导数单调递增。<br>而对于任意$x_{1} &lt; x &lt; x_{2}$，由拉格朗日中值定理有$\dfrac{f(x) - f(x_{1})}{x - x_{1}} = f’(\xi_{1}), \xi_{1} \in (x_{1}, x)$和$\dfrac{f(x_{2}) - f(x)}{x_{2} - x} = f’(\xi_{2}), \xi_{2} \in (x, x_{2})$。如果$f’$单调递增，那么$f’(\xi_{1}) \le f’(\xi_{2})$，从而得到上面的定义式。<br>于是导数单调递增的函数为凹函数。</p>
+<p>由此我们从充分性和必要性证明了：<br>若$f$在区间$I$上可导，则$f$在区间$I$上为凹函数当且仅当$f’$在区间$I$上为增函数。同理，$f$在区间$I$上为凸函数当且仅当$f’$在区间$I$上为减函数。<br>结合单调性的判断，我们可以通过二阶导数判断函数的凹凸性：<br>若$f$在区间$I$上二阶可导，则$f$在区间$I$上为凹函数当且仅当对任意$x \in I$都有$f’’(x) &gt; 0$，$f$在区间$I$上为凸函数当且仅当对任意$x \in I$都有$f’’(x) &lt; 0$。</p>
+<h2 id="函数图像的绘制"><a href="#函数图像的绘制" class="headerlink" title="函数图像的绘制"></a>函数图像的绘制</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
       
     </div>
     
@@ -1273,7 +1282,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1809.8k字</span>
+  <span class="post-count">全站共1810.8k字</span>
 </div>
         
 
@@ -1984,7 +1993,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1708103616933')
+  navigator.serviceWorker.register('/sw.js?t=1709305546282')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

@@ -160,7 +160,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e66b18f38096530.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e6d1bd0b4d55856.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e652e8487870872.png">
-<meta property="og:updated_time" content="2023-12-23T12:24:40.159Z">
+<meta property="og:updated_time" content="2024-03-01T15:04:32.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆">
 <meta name="twitter:description" content="简介堆（heap）是一种树型数据结构，具有以下特点：  堆中某个节点的值总是不大于或不小于其父节点的值 堆总是一棵完全二叉树  根节点最大的堆称为大根堆，相反则称之为小根堆。堆可以用于排序。 例如图中就是一个大根堆：">
@@ -572,13 +572,13 @@
 <p>用<code>Heap&lt;type&gt;</code>的方式调用即可，例如声明一个<code>long long</code>类型的大根堆<code>hp</code>：<code>Heap&lt;long long&gt; hp</code>。</p>
 <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><p>利用堆的子节点总比父节点小或大的性质，就可以进行$O(n \log n)$的排序。<br>实现过程很简单，只要将待排序数列一个一个压入堆，然后一个一个输出根节点并弹出即可。<br>大根堆可以从大到小排序，小根堆可以从小到大排序。</p>
 <p>用上面的大根堆模板对数组进行从大到小的排序：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">type</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">HeapSort</span>(<span class="title">type</span> <span class="title">num</span>[], <span class="title">int</span> <span class="title">len</span>) &#123;</span></span><br><span class="line">    Heap&lt;type&gt; hp;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">        hp.push(num[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">        num[i] = hp.top();</span><br><span class="line">        hp.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p>STL提供了一种类似于堆的数据结构：优先队列（Priority Queue）。<br><code>priority_queue</code>包含在头文件<code>queue</code>中，共有3个参数：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>, <span class="title">class</span> <span class="title">Container</span> = <span class="title">vector</span>&lt;T&gt;,</span></span><br><span class="line"><span class="class">  <span class="title">class</span> <span class="title">Compare</span> = <span class="title">less</span>&lt;typename Container::value_type&gt; &gt; <span class="title">class</span> <span class="title">priority_queue</span>;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p>STL提供了一种类似于堆的数据结构：优先队列（priority queue）。<br><code>priority_queue</code>包含在头文件<code>queue</code>中，共有3个参数：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>, <span class="title">class</span> <span class="title">Container</span> = <span class="title">vector</span>&lt;T&gt;,</span></span><br><span class="line"><span class="class">  <span class="title">class</span> <span class="title">Compare</span> = <span class="title">less</span>&lt;typename Container::value_type&gt; &gt; <span class="title">class</span> <span class="title">priority_queue</span>;</span></span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><code>T</code>：元素类型</li>
 <li><code>Container</code>：用于储存元素的容器类型，元素类型必须与<code>T</code>一致，默认为<code>vector</code></li>
 <li><code>Compare</code>：比较方式，默认为<code>less</code>即小于（实现大根堆），传入<code>greater</code>可以实现小根堆</li>
 </ul>
-<p>例如，我们要定义一个<code>double</code>类型的小根堆<code>pq</code>，可以用<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">double</span>, <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;, greater&lt;<span class="keyword">double</span>&gt; &gt; pq;</span><br></pre></td></tr></table></figure></p>
+<p>例如，我们要定义一个<code>double</code>类型的小根堆<code>pq</code>，可以用：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">double</span>, <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;, greater&lt;<span class="keyword">double</span>&gt; &gt; pq;</span><br></pre></td></tr></table></figure></p>
 <p><code>priority_queue</code>同样有5个方法：</p>
 <ul>
 <li><code>push()</code></li>
@@ -1250,7 +1250,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1809.8k字</span>
+  <span class="post-count">全站共1810.8k字</span>
 </div>
         
 
@@ -1961,7 +1961,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1708103616933')
+  navigator.serviceWorker.register('/sw.js?t=1709305546282')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

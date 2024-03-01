@@ -30,9 +30,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/03/22/Learn-Python/');
 
-  precacheUrls.push('/2019/03/30/Python-Data-Type/');
+  precacheUrls.push('/2019/07/29/Heap/');
 
-  precacheUrls.push('/2019/04/12/Redstone-Circuit/');
+  precacheUrls.push('/2019/03/30/Python-Data-Type/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
