@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/6obrp8y3gY1j5D4.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/r9w5GoHmXPxYLnI.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
-<meta property="og:updated_time" content="2024-02-18T15:28:15.890Z">
+<meta property="og:updated_time" content="2024-03-22T12:19:34.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -625,7 +625,7 @@
 <p>结合下面凹凸性的判断，我们还可以通过二阶导数求函数的极值：<br>设函数$f$在一个驻点$x_{0}$二阶可导，<br>若$f’’(x_{0}) &gt; 0$，则$x_{0}$为$f$的一个极小值点；<br>若$f’’(x_{0}) &lt; 0$，则$x_{0}$为$f$的一个极大值点。</p>
 <h2 id="函数的凹凸性与拐点"><a href="#函数的凹凸性与拐点" class="headerlink" title="函数的凹凸性与拐点"></a>函数的凹凸性与拐点</h2><p>函数$f$在区间$I$上是凹函数，当且仅当$f$在区间$I$上连续，且对于任意$x_{1}, x_{2} \in I$和任意$\lambda \in (0, 1)$都有$f(\lambda x_{1} + (1 - \lambda) x_{2}) \le \lambda f(x_{1}) + (1 - \lambda) f(x_{2})$。这是凹函数的定义。<br>由$x = \lambda x_{1} + (1 - \lambda) x_{2}$，有$\lambda = \dfrac{x_{2} - x}{x_{2} - x_{1}}, 1 - \lambda = \dfrac{x - x_{1}}{x_{2} - x_{1}}$。<br>因此定义式可以改写为</p>
 <script type="math/tex; mode=display">f(x) \le \dfrac{x_{2} - x}{x_{2} - x_{1}} f(x_{1}) + \dfrac{x - x_{1}}{x_{2} - x_{1}} f(x_{2})</script><p>注意到$x_{2} - x_{1} = (x_{2} - x) + (x - x_{1})$，整理可得，当$x_{1} &lt; x_{2}$时</p>
-<script type="math/tex; mode=display">\dfrac{f(x) - f(x_{1})}{x - x_{1}} \le \dfrac{f(x_{2}) - f(x)}{x_{2} - x}</script><p>这是凸函数的另一种定义式。</p>
+<script type="math/tex; mode=display">\dfrac{f(x) - f(x_{1})}{x - x_{1}} \le \dfrac{f(x_{2}) - f(x)}{x_{2} - x}</script><p>这是凹函数的另一种定义式。</p>
 <p>如果$f$在区间$I$上可导，令$x$分别趋于$x_{1}, x_{2}$，得到</p>
 <script type="math/tex; mode=display">f'(x_{1}) \le \dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} \le f'(x_{2})</script><p>于是凹函数的导数单调递增。<br>而对于任意$x_{1} &lt; x &lt; x_{2}$，由拉格朗日中值定理有$\dfrac{f(x) - f(x_{1})}{x - x_{1}} = f’(\xi_{1}), \xi_{1} \in (x_{1}, x)$和$\dfrac{f(x_{2}) - f(x)}{x_{2} - x} = f’(\xi_{2}), \xi_{2} \in (x, x_{2})$。如果$f’$单调递增，那么$f’(\xi_{1}) \le f’(\xi_{2})$，从而得到上面的定义式。<br>于是导数单调递增的函数为凹函数。</p>
 <p>由此我们从充分性和必要性证明了：<br>若$f$在区间$I$上可导，则$f$在区间$I$上为凹函数当且仅当$f’$在区间$I$上为增函数。同理，$f$在区间$I$上为凸函数当且仅当$f’$在区间$I$上为减函数。<br>结合单调性的判断，我们可以通过二阶导数判断函数的凹凸性：<br>若$f$在区间$I$上二阶可导，则$f$在区间$I$上为凹函数当且仅当对任意$x \in I$都有$f’’(x) &gt; 0$，$f$在区间$I$上为凸函数当且仅当对任意$x \in I$都有$f’’(x) &lt; 0$。</p>
@@ -716,6 +716,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2024/03/22/Integral/" rel="prev" title="学习笔记·积分">
+                学习笔记·积分 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -801,7 +805,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1282,7 +1286,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1811k字</span>
+  <span class="post-count">全站共1809.8k字</span>
 </div>
         
 
@@ -1993,7 +1997,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1709964516968')
+  navigator.serviceWorker.register('/sw.js?t=1711122424254')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
