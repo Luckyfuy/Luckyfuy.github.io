@@ -155,7 +155,7 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/6obrp8y3gY1j5D4.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/r9w5GoHmXPxYLnI.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
-<meta property="og:updated_time" content="2024-03-22T12:19:34.086Z">
+<meta property="og:updated_time" content="2024-03-23T14:29:32.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -500,7 +500,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.2k
+                  5.7k
                 </span>
               
 
@@ -516,7 +516,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  25
+                  27
                 </span>
               
             </div>
@@ -629,7 +629,17 @@
 <p>如果$f$在区间$I$上可导，令$x$分别趋于$x_{1}, x_{2}$，得到</p>
 <script type="math/tex; mode=display">f'(x_{1}) \le \dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} \le f'(x_{2})</script><p>于是凹函数的导数单调递增。<br>而对于任意$x_{1} &lt; x &lt; x_{2}$，由拉格朗日中值定理有$\dfrac{f(x) - f(x_{1})}{x - x_{1}} = f’(\xi_{1}), \xi_{1} \in (x_{1}, x)$和$\dfrac{f(x_{2}) - f(x)}{x_{2} - x} = f’(\xi_{2}), \xi_{2} \in (x, x_{2})$。如果$f’$单调递增，那么$f’(\xi_{1}) \le f’(\xi_{2})$，从而得到上面的定义式。<br>于是导数单调递增的函数为凹函数。</p>
 <p>由此我们从充分性和必要性证明了：<br>若$f$在区间$I$上可导，则$f$在区间$I$上为凹函数当且仅当$f’$在区间$I$上为增函数。同理，$f$在区间$I$上为凸函数当且仅当$f’$在区间$I$上为减函数。<br>结合单调性的判断，我们可以通过二阶导数判断函数的凹凸性：<br>若$f$在区间$I$上二阶可导，则$f$在区间$I$上为凹函数当且仅当对任意$x \in I$都有$f’’(x) &gt; 0$，$f$在区间$I$上为凸函数当且仅当对任意$x \in I$都有$f’’(x) &lt; 0$。</p>
-<h2 id="函数图像的绘制"><a href="#函数图像的绘制" class="headerlink" title="函数图像的绘制"></a>函数图像的绘制</h2><h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
+<p>如果函数$f$在点$x_{0}$凹凸性改变，那么$x_{0}$是$f$的一个<strong>拐点（inflection point）</strong>。<br>显然，以$x_{0}$为界，<br>若函数$f$在$x_{0}$的一个去心邻域$(x_{0} - \delta, x_{0}) \cup (x_{0}, x_{0} + \delta)$可导，且$f’$在该去心邻域单调性改变，则$x_{0}$是$f$的拐点；<br>若函数$f$在$x_{0}$的一个去心邻域$(x_{0} - \delta, x_{0}) \cup (x_{0}, x_{0} + \delta)$二阶可导，且$f’’$在该去心邻域符号改变，则$x_{0}$是$f$的拐点。<br>注意，如同驻点不一定是极值点，$f’’(x_{0}) = 0$不代表$x_{0}$一定是拐点。</p>
+<h2 id="函数图像的绘制"><a href="#函数图像的绘制" class="headerlink" title="函数图像的绘制"></a>函数图像的绘制</h2><p>通过导数，我们可以判断函数的单调性与凹凸性，从而就能粗略地绘制出函数的图像。一般来说，函数图像的绘制有以下步骤：</p>
+<ol>
+<li>确定函数的定义域；</li>
+<li>确定函数的对称性与周期性；</li>
+<li>确定函数的渐近线；</li>
+<li>计算导数，确定函数的单调区间和极值点；</li>
+<li>计算二阶导数，确定函数的凹凸区间和拐点。</li>
+</ol>
+<p>其中，曲线的<strong>渐近线（asymptote）</strong>是当$x$坐标或$y$坐标或两者同时趋于无穷大时，与该曲线距离趋于$0$的直线。<br>直线$x = x_{0}$是曲线$y = f(x)的$<strong>垂直渐近线（vertical asymptote）</strong>当且仅当$\lim\limits_{x \to x_{0}^{-}} f(x) = \infty$或$\lim\limits_{x \to x_{0}^{+}} f(x) = \infty$；<br>直线$y = b$是曲线$y = f(x)的$<strong>水平渐近线（horizontal asymptote）</strong>当且仅当$\lim\limits_{x \to +\infty} f(x) = b$或$\lim\limits_{x \to -\infty} f(x) = b$；<br>直线$y = ax + b (a \ne 0)$是曲线$y = f(x)的$<strong>斜渐近线（oblique asymptote）</strong>当且仅当$\lim\limits_{x \to +\infty} (f(x) - (ax + b)) = 0$或$\lim\limits_{x \to +\infty} (f(x) - (ax + b)) = 0$。</p>
+<h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
       
     </div>
     
@@ -1286,7 +1296,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1809.8k字</span>
+  <span class="post-count">全站共1810.2k字</span>
 </div>
         
 
@@ -1997,7 +2007,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1711122424254')
+  navigator.serviceWorker.register('/sw.js?t=1711217834371')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
