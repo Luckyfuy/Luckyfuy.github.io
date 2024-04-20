@@ -156,7 +156,8 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/r9w5GoHmXPxYLnI.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
 <meta property="og:image" content="https://s2.loli.net/2024/04/20/4cI79iYHjgvNy3X.png">
-<meta property="og:updated_time" content="2024-04-19T17:09:59.163Z">
+<meta property="og:image" content="https://s2.loli.net/2024/04/20/fhWjmgayQedsLHY.png">
+<meta property="og:updated_time" content="2024-04-20T14:45:20.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -491,7 +492,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  6.1k
+                  6.6k
                 </span>
               
 
@@ -507,7 +508,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  29
+                  31
                 </span>
               
             </div>
@@ -630,13 +631,24 @@
 <li>计算二阶导数，确定函数的凹凸区间和拐点。</li>
 </ol>
 <p>其中，曲线的<strong>渐近线（asymptote）</strong>是当$x$坐标或$y$坐标或两者同时趋于无穷大时，与该曲线距离趋于$0$的直线。<br>直线$x = x_{0}$是曲线$y = f(x)的$<strong>垂直渐近线（vertical asymptote）</strong>当且仅当$\lim\limits_{x \to x_{0}^{-}} f(x) = \infty$或$\lim\limits_{x \to x_{0}^{+}} f(x) = \infty$；<br>直线$y = b$是曲线$y = f(x)的$<strong>水平渐近线（horizontal asymptote）</strong>当且仅当$\lim\limits_{x \to +\infty} f(x) = b$或$\lim\limits_{x \to -\infty} f(x) = b$；<br>直线$y = ax + b (a \ne 0)$是曲线$y = f(x)的$<strong>斜渐近线（oblique asymptote）</strong>当且仅当$\lim\limits_{x \to +\infty} (f(x) - (ax + b)) = 0$或$\lim\limits_{x \to +\infty} (f(x) - (ax + b)) = 0$。</p>
-<h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><p><img src="https://s2.loli.net/2024/04/20/4cI79iYHjgvNy3X.png" alt></p>
-<p>假设一个动点沿着曲线从点$A$运动到点$B$，那么曲线在动点的切线便旋转了一个角度$\Delta \varphi$，动点运动的路程就是$\overset{\LARGE{\frown}}{AB}$的弧长$\Delta s$。我们可以用$\Delta \varphi$和$\Delta s$这两个量来描述曲线的弯曲程度：弧长一定时，角度越大，弯曲程度越大；角度一定时，弧长越小，弯曲程度越大。<br>当点$B$趋于点$A$时，我们可以将$\dfrac{\Delta \varphi}{\Delta s}$的极限看作点$A$的弯曲程度，于是我们定义曲线在点$A$的<strong>曲率（curvature）</strong></p>
+<h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><p><img src="https://s2.loli.net/2024/04/20/4cI79iYHjgvNy3X.png" alt><br>假设一个动点沿着曲线从点$A$运动到点$B$，那么曲线在动点的切线便旋转了一个角度$\Delta \varphi$，动点运动的路程就是$\overset{\LARGE{\frown}}{AB}$的弧长$\Delta s$。我们可以用$\Delta \varphi$和$\Delta s$这两个量来描述曲线的弯曲程度：弧长一定时，角度越大，弯曲程度越大；角度一定时，弧长越小，弯曲程度越大。<br>当点$B$趋于点$A$时，我们可以将$\dfrac{\Delta \varphi}{\Delta s}$的极限看作点$A$的弯曲程度，于是我们定义曲线在点$A$的<strong>曲率（curvature）</strong></p>
 <script type="math/tex; mode=display">\kappa = \lim\limits_{\Delta s \to 0} \dfrac{\Delta \varphi}{\Delta s}</script><p>直接用定义求曲率十分困难。对于曲线$y = f(x)$的曲率，我们可以考虑两点$A(x, f(x)), B(x + \Delta x, f(x + \Delta))$，当$\Delta x$趋于$0$时，把$\overset{\LARGE{\frown}}{AB}$看作直线，即$\Delta s \approx \sqrt{(\Delta x)^{2} + (f(x + \Delta x) - f(x))^{2}}$。此时</p>
 <script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{\Delta s}{\Delta x} = \lim\limits_{\Delta x \to 0} \sqrt{1 + \left(\dfrac{f(x + \Delta x) - f(x)}{\Delta x} \right)^{2}} = \sqrt{1 + (f'(x))^{2}}</script><p>切线的斜率就是导数，所以$\Delta \varphi = \arctan f’(x + \Delta x) - \arctan f’(x)$，于是</p>
 <script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{\Delta \varphi}{\Delta x} = (\arctan f'(x))' = \dfrac{f''(x)}{1 + (f'(x))^{2}}</script><p>从而得到曲线在点$A$的曲率</p>
-<script type="math/tex; mode=display">\kappa = \lim\limits_{\Delta x \to 0} \dfrac{\Delta \varphi}{\Delta s} = \lim\limits_{\Delta x \to 0} \dfrac{\dfrac{\Delta \varphi}{\Delta x}}{\dfrac{\Delta s}{\Delta x}} = \dfrac{f''(x)}{(1 + (f'(x))^{2})^{\frac{3}{2}}}</script><p>这就是曲率的公式。不难求出，直线的曲率处处为零。<br>从公式可以看出，$\kappa$的符号与二阶导数一致，这说明曲率也描述了曲线的凹凸性。$\kappa &gt; 0$时曲线为凸，$\kappa &lt; 0$时曲线为凹。$|\kappa|$的大小则描述了曲线的凹凸程度。</p>
-<h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
+<script type="math/tex; mode=display">\kappa = \lim\limits_{\Delta x \to 0} \dfrac{\Delta \varphi}{\Delta s} = \lim\limits_{\Delta x \to 0} \dfrac{\dfrac{\Delta \varphi}{\Delta x}}{\dfrac{\Delta s}{\Delta x}} = \dfrac{f''(x)}{(1 + (f'(x))^{2})^{\frac{3}{2}}}</script><p>这就是曲率的公式。不难求出，直线的曲率处处为零。<br>从公式可以看出，$\kappa$的符号与二阶导数一致，这说明曲率也描述了曲线的凹凸性。$\kappa &gt; 0$时曲线为凹，$\kappa &lt; 0$时曲线为凸。$|\kappa|$的大小则描述了曲线的凹凸程度。</p>
+<p>对于参数方程确定的曲线$\begin{cases} x = g(t) \\ y = h(t) \end{cases}$，我们还可以进一步得到其曲率的公式。将曲线写成隐函数$y = f(x)$的形式，则$f’(x) = \dfrac{h’(t)}{g’(t)}, f’’(x) = \dfrac{g’(t) h’’(t) - g’’(t) h’(t)}{(g’(t))^{3}}$。代入曲率的公式，就能得到</p>
+<script type="math/tex; mode=display">\kappa = \dfrac{g'(t) h''(t) - g''(t) h'(t)}{((g'(t))^{2} + (h'(t))^{2})^{\frac{3}{2}}}</script><p>圆的参数方程是$\begin{cases} x = a + r \cos \theta \\ y = b + r \sin \theta \end{cases}$，据此可以计算圆的曲率：</p>
+<script type="math/tex; mode=display">\kappa = \dfrac{(-r \sin \theta) (-r \sin \theta) - (-r \cos \theta) (r \cos \theta)}{(r^{2} \sin^{2} \theta + r^{2} \cos^{2} \theta)^{\frac{3}{2}}} = \dfrac{r^{2}}{r^{3}} = \dfrac{1}{r}</script><p>由此可知，圆的曲率处处相等。圆的曲率为半径的倒数，半径越小，曲率越大。</p>
+<p>为了方便，我们常常用一个曲率相等的圆来近似一点附近的曲线，称为<strong>曲率圆（osculating circle）</strong>。曲率圆的半径$\rho = \dfrac{1}{|\kappa|}$称为<strong>曲率半径（radius of curvature）</strong>，曲率圆的圆心称为<strong>曲率中心（center of curvature）</strong>。<br>过曲线上一点且与曲线在该点的切线垂直的直线称为<strong>法线（normal）</strong>。过曲线上一点$A$作曲线的法线，在法线上曲线的凹侧取点$C$使得$|CA| = \rho$，则以$C$为圆心、$\rho$为半径的圆就是曲线在点$A$的曲率圆。<br><img src="https://s2.loli.net/2024/04/20/fhWjmgayQedsLHY.png" alt="曲率圆" title="曲率圆"></p>
+<p>要求出曲率圆的方程就要求出曲率中心的坐标。设曲线$y = f(x)$在点$A(x, y)$的曲率中心$C(a, b)$。因为点$A$在曲率圆上，所以</p>
+<script type="math/tex; mode=display">(x - a)^{2} + (y - b)^{2} = \rho^{2} = \dfrac{1}{\kappa^{2}} = \dfrac{(1 + (y')^{2})^{3}}{(y'')^{2}}</script><p>又因为曲线在点$A$的切线与曲率圆的半径$CA$垂直，所以</p>
+<script type="math/tex; mode=display">y' = -\dfrac{x - a}{y - b}</script><p>联立两式，可得</p>
+<script type="math/tex; mode=display">(y - b)^{2} = \dfrac{\rho^{2}}{1 + (y')^{2}} = \dfrac{(1 + (y')^{2})^{2}}{(y'')^{2}}</script><p>$y’’, y - b$异号，两边开根号得$y - b = -\dfrac{1 + (y’)^{2}}{y’’}$。又$x - a = -y’ (y - b) = \dfrac{y’ (1 + (y’)^{2})}{y’’}$，于是得到曲率中心$C$的坐标：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+a = x - \dfrac{y' (1 + (y')^{2})}{y''} \\
+b = y + \dfrac{1 + (y')^{2}}{y''}
+\end{cases}</script><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
       
     </div>
     
@@ -1293,7 +1305,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1810.7k字</span>
+  <span class="post-count">全站共1811.2k字</span>
 </div>
         
 
@@ -2004,7 +2016,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1713593204027')
+  navigator.serviceWorker.register('/sw.js?t=1713624471807')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
