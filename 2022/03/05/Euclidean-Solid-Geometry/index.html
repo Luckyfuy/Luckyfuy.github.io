@@ -189,7 +189,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/03/26/5glX1Ssq4IJeicP.png">
 <meta property="og:image" content="https://s2.loli.net/2022/03/26/GHItBjmLD5QoEWc.png">
 <meta property="og:image" content="https://s2.loli.net/2022/03/26/quEv4fcow7xaTBO.png">
-<meta property="og:updated_time" content="2023-12-30T13:57:18.337Z">
+<meta property="og:updated_time" content="2024-04-19T16:31:06.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·古典立体几何">
 <meta name="twitter:description" content="立体几何基本公理平面几何研究的对象是点（point）与直线（line），而在立体几何中，平面（plane）也成为了研究对象。尽管平面是无限延伸的，但在画图时我们用一个平行四边形来表示平面。平面可以用一个希腊字母表示，例如$\alpha, \beta$；也可以用平面内的点表示，例如平面$ABCD$。 平面几何是在欧几里得（Euclid，约前325－约前270）的五条公理上建立起来的，这些公理在立体几">
@@ -671,7 +671,7 @@ V &= \dfrac{1}{3} (Sh_{2} - S'h_{1}) \\
 <script type="math/tex; mode=display">\dfrac{1}{2} V = \pi r^{2} \cdot r - \dfrac{1}{3} \pi r^{2} \cdot r = \dfrac{2}{3} \pi r^{3}</script><p>于是得到球的体积$V = \dfrac{4}{3} \pi r^{3}$。$\Box$</p>
 <p>球的表面积公式是：</p>
 <script type="math/tex; mode=display">S = 4 \pi r^{2}</script><p>可以通过细分球面的方法来证明：<br>如图，把球面按照经纬线的方式分成很多小块，设有$n$块，每块面积为$S_{i}$，则$\sum\limits_{i=1}^{n} S_{i} = S$。<br><img src="https://s2.loli.net/2022/03/23/u1GEtgQYZ7ipkFf.png" alt><br>如果每块足够小，那就可以近似地看为锥体，所以$V_{i} \approx \dfrac{1}{3} r S_{i}$，从而</p>
-<script type="math/tex; mode=display">V \approx \sum\limits_{i=1}^{n} V_{i} = \dfrac{1}{3} r \sum\limits_{i=1}^{n} S_{i} = \dfrac{1}{3} r S</script><p>当$n$趋于无穷大时，误差趋近于$0$，所以$V = \dfrac{1}{3} r S = \dfrac{4}{3} \pi r^{3}$，得到$S = 4 \pi r^{2}$。$\Box$</p>
+<script type="math/tex; mode=display">V \approx \sum\limits_{i=1}^{n} V_{i} = \dfrac{1}{3} r \sum\limits_{i=1}^{n} S_{i} = \dfrac{1}{3} r S</script><p>当$n$趋于无穷大时，误差趋于$0$，所以$V = \dfrac{1}{3} r S = \dfrac{4}{3} \pi r^{3}$，得到$S = 4 \pi r^{2}$。$\Box$</p>
 <h2 id="球"><a href="#球" class="headerlink" title="球"></a>球</h2><p>球也可以定义为空间中到一个定点距离不大于定长的点的集合，是圆在三维空间中的推广，因此也有一些重要的性质。</p>
 <p>平面几何中，不共线的三点唯一确定一个圆。类似地：<br>不共面的四点唯一确定一个球。</p>
 <p>证明：<br><em>存在性</em>：如图，$A, B, C, D$四点不共面，设$\triangle ABC$的外心是$O_{1}$，$\triangle DBC$的外心是$O_{2}$，$BC$中点是$E$。在平面$O_{1}O_{2}E$内作两条直线$OO_{1} \perp O_{1}E, OO_{2} \perp O_{2}E$，两线交于点$O$。因为$O_{1}, O_{2}$是外心，所以$O_{1}E \perp BC, O_{2} \perp BC$，得到$BC \perp$平面$O_{1}O_{2}E$。<br>$OO_{1} \subset$平面$O_{1}O_{2}E$，所以$BC \perp OO_{1}$，又$BC \perp O_{1}E, BC \cap O_{1}E = E$，且$BC, O_{1}E \subset$平面$ABC$，所以$OO_{1} \perp$平面$ABC$。由$|O_{1}A| = |O_{1}B| = |O_{1}C|$可证得全等三角形，故$|OA| = |OB| = |OC|$，同理$|OD| = |OB| = |OC|$。这样就有$|OA| = |OB| = |OC| = |OD|$，得到球$O$。<br><img src="https://s2.loli.net/2022/03/25/LfhItX8OVl3NzwG.png" alt><br><em>唯一性</em>：$A, B, C, D$四点确定的球心，是由四个三角形$ABC, BCD, CDA, DAB$的外心引出的与各自平面垂直的直线交点。因为两点唯一确定一条直线，所以这样的点至多只有一个。$\Box$</p>
@@ -1364,7 +1364,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1810.3k字</span>
+  <span class="post-count">全站共1810.7k字</span>
 </div>
         
 
@@ -2075,7 +2075,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1713027452918')
+  navigator.serviceWorker.register('/sw.js?t=1713593204027')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

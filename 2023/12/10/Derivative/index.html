@@ -155,7 +155,8 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/6obrp8y3gY1j5D4.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/20/r9w5GoHmXPxYLnI.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
-<meta property="og:updated_time" content="2024-03-23T14:29:32.795Z">
+<meta property="og:image" content="https://s2.loli.net/2024/04/20/4cI79iYHjgvNy3X.png">
+<meta property="og:updated_time" content="2024-04-19T17:09:59.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的某个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -490,7 +491,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.7k
+                  6.1k
                 </span>
               
 
@@ -506,7 +507,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  27
+                  29
                 </span>
               
             </div>
@@ -531,7 +532,7 @@
 <a id="more"></a>
 <p>如果函数$f$在区间$I$内的每一点都可导，且在端点单侧可导，那么称$f$在区间$I$上可导。此时$x \mapsto f’(x), x \in I$确定了一个函数，称为$f$的<strong>导函数（derivative function）</strong>，简称<strong>导数</strong>，记作$f’(x)$或$\dfrac{\mathrm{d} f}{\mathrm{d} x}(x)$。后一种符号由德国数学家莱布尼茨（Gottfried Wilhelm Leibniz，1646—1716）发明。</p>
 <p>设函数$f$在点$x_{0}$可导，则$f$在点$x_{0}$连续。<br>证明：</p>
-<script type="math/tex; mode=display">\lim\limits_{x \to x_{0}} (f(x) - f(x_{0})) = \lim\limits_{x \to x_{0}} \dfrac{f(x) - f(x_{0})}{x - x_{0}} \cdot (x - x_{0}) = f'(x_{0}) \cdot 0 = 0 \quad \Box</script><p><img src="https://s2.loli.net/2023/12/30/Xbygr2m8tTnqGd3.png" alt><br>观察曲线$y = f(x)$的图像。连接曲线上的两点$(x_{0}, f(x_{0}))$和$(x_{0} + \Delta x, f(x_{0} + \Delta x))$，可以得到曲线的一条割线，其斜率$k = \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。由于函数$f(x)$在$x_{0}$连续，当$\Delta x$趋近于$0$时，割线趋近于某条特定的直线，这条直线称为曲线在点$(x_{0}, f(x_{0}))$的<strong>切线（tangent line）</strong>，其斜率$k = \lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。这就是导数的几何意义。<br>通过点斜式可以写出切线的方程：$y - f(x_{0}) = f’(x_{0}) (x - x_{0})$。</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to x_{0}} (f(x) - f(x_{0})) = \lim\limits_{x \to x_{0}} \dfrac{f(x) - f(x_{0})}{x - x_{0}} \cdot (x - x_{0}) = f'(x_{0}) \cdot 0 = 0 \quad \Box</script><p><img src="https://s2.loli.net/2023/12/30/Xbygr2m8tTnqGd3.png" alt><br>观察曲线$y = f(x)$的图像。连接曲线上的两点$(x_{0}, f(x_{0}))$和$(x_{0} + \Delta x, f(x_{0} + \Delta x))$，可以得到曲线的一条割线，其斜率$k = \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。由于函数$f(x)$在$x_{0}$连续，当$\Delta x$趋于$0$时，割线趋于某条特定的直线，这条直线称为曲线在点$(x_{0}, f(x_{0}))$的<strong>切线（tangent line）</strong>，其斜率$k = \lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$。这就是导数的几何意义。<br>通过点斜式可以写出切线的方程：$y - f(x_{0}) = f’(x_{0}) (x - x_{0})$。</p>
 <h1 id="导数的计算"><a href="#导数的计算" class="headerlink" title="导数的计算"></a>导数的计算</h1><h2 id="基本函数的导数"><a href="#基本函数的导数" class="headerlink" title="基本函数的导数"></a>基本函数的导数</h2><p>常数函数$f(x) = c$的导数为$f’(x) = 0$。<br>证明：</p>
 <script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{c - c}{\Delta x} = 0 \quad \Box</script><p>幂函数$f(x) = x^{n}$的导数为$f’(x) = n x^{n - 1}$。<br>证明（$n \in \mathbb{N}$）：</p>
 <script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{\sum\limits_{k=0}^{n} \mathrm{C}_{n}^{k} (\Delta x)^{k} x^{n - k} - x^{n}}{\Delta x} = \lim\limits_{\Delta x \to 0} \sum\limits_{k=1}^{n} \mathrm{C}_{n}^{k} (\Delta x)^{k - 1} x^{n - k} = n x^{n - 1} \quad \Box</script><p>对数函数$f(x) = \ln x$的导数为$f’(x) = \dfrac{1}{x}$。<br>证明：</p>
@@ -629,7 +630,13 @@
 <li>计算二阶导数，确定函数的凹凸区间和拐点。</li>
 </ol>
 <p>其中，曲线的<strong>渐近线（asymptote）</strong>是当$x$坐标或$y$坐标或两者同时趋于无穷大时，与该曲线距离趋于$0$的直线。<br>直线$x = x_{0}$是曲线$y = f(x)的$<strong>垂直渐近线（vertical asymptote）</strong>当且仅当$\lim\limits_{x \to x_{0}^{-}} f(x) = \infty$或$\lim\limits_{x \to x_{0}^{+}} f(x) = \infty$；<br>直线$y = b$是曲线$y = f(x)的$<strong>水平渐近线（horizontal asymptote）</strong>当且仅当$\lim\limits_{x \to +\infty} f(x) = b$或$\lim\limits_{x \to -\infty} f(x) = b$；<br>直线$y = ax + b (a \ne 0)$是曲线$y = f(x)的$<strong>斜渐近线（oblique asymptote）</strong>当且仅当$\lim\limits_{x \to +\infty} (f(x) - (ax + b)) = 0$或$\lim\limits_{x \to +\infty} (f(x) - (ax + b)) = 0$。</p>
-<h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
+<h2 id="平面曲线的曲率"><a href="#平面曲线的曲率" class="headerlink" title="平面曲线的曲率"></a>平面曲线的曲率</h2><p><img src="https://s2.loli.net/2024/04/20/4cI79iYHjgvNy3X.png" alt></p>
+<p>假设一个动点沿着曲线从点$A$运动到点$B$，那么曲线在动点的切线便旋转了一个角度$\Delta \varphi$，动点运动的路程就是$\overset{\LARGE{\frown}}{AB}$的弧长$\Delta s$。我们可以用$\Delta \varphi$和$\Delta s$这两个量来描述曲线的弯曲程度：弧长一定时，角度越大，弯曲程度越大；角度一定时，弧长越小，弯曲程度越大。<br>当点$B$趋于点$A$时，我们可以将$\dfrac{\Delta \varphi}{\Delta s}$的极限看作点$A$的弯曲程度，于是我们定义曲线在点$A$的<strong>曲率（curvature）</strong></p>
+<script type="math/tex; mode=display">\kappa = \lim\limits_{\Delta s \to 0} \dfrac{\Delta \varphi}{\Delta s}</script><p>直接用定义求曲率十分困难。对于曲线$y = f(x)$的曲率，我们可以考虑两点$A(x, f(x)), B(x + \Delta x, f(x + \Delta))$，当$\Delta x$趋于$0$时，把$\overset{\LARGE{\frown}}{AB}$看作直线，即$\Delta s \approx \sqrt{(\Delta x)^{2} + (f(x + \Delta x) - f(x))^{2}}$。此时</p>
+<script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{\Delta s}{\Delta x} = \lim\limits_{\Delta x \to 0} \sqrt{1 + \left(\dfrac{f(x + \Delta x) - f(x)}{\Delta x} \right)^{2}} = \sqrt{1 + (f'(x))^{2}}</script><p>切线的斜率就是导数，所以$\Delta \varphi = \arctan f’(x + \Delta x) - \arctan f’(x)$，于是</p>
+<script type="math/tex; mode=display">\lim\limits_{\Delta x \to 0} \dfrac{\Delta \varphi}{\Delta x} = (\arctan f'(x))' = \dfrac{f''(x)}{1 + (f'(x))^{2}}</script><p>从而得到曲线在点$A$的曲率</p>
+<script type="math/tex; mode=display">\kappa = \lim\limits_{\Delta x \to 0} \dfrac{\Delta \varphi}{\Delta s} = \lim\limits_{\Delta x \to 0} \dfrac{\dfrac{\Delta \varphi}{\Delta x}}{\dfrac{\Delta s}{\Delta x}} = \dfrac{f''(x)}{(1 + (f'(x))^{2})^{\frac{3}{2}}}</script><p>这就是曲率的公式。不难求出，直线的曲率处处为零。<br>从公式可以看出，$\kappa$的符号与二阶导数一致，这说明曲率也描述了曲线的凹凸性。$\kappa &gt; 0$时曲线为凸，$\kappa &lt; 0$时曲线为凹。$|\kappa|$的大小则描述了曲线的凹凸程度。</p>
+<h2 id="未定式的极限"><a href="#未定式的极限" class="headerlink" title="未定式的极限"></a>未定式的极限</h2><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
       
     </div>
     
@@ -1286,7 +1293,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1810.3k字</span>
+  <span class="post-count">全站共1810.7k字</span>
 </div>
         
 
@@ -1997,7 +2004,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1713027452918')
+  navigator.serviceWorker.register('/sw.js?t=1713593204027')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
