@@ -216,7 +216,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Ubuntu', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'IBM Plex Sans', 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
 h2,
 h3,
@@ -486,14 +486,14 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 13px;
   color: #ccc;
   background: #2d2d2d;
   line-height: 1.6;
 }
 pre,
 code {
-  font-family: 'Ubuntu Mono', consolas, Menlo, "Noto Serif SC", monospace;
+  font-family: 'Fira Code', consolas, Menlo, "Noto Serif SC", monospace;
 }
 code {
   padding: 2px 4px;
@@ -501,7 +501,7 @@ code {
   color: #555;
   background: #eee;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 13px;
 }
 pre {
   padding: 10px;
@@ -1131,7 +1131,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 24px;
   font-weight: normal;
-  font-family: 'Ubuntu', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'IBM Plex Sans', 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1220,7 +1220,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Ubuntu', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'IBM Plex Sans', 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1498,7 +1498,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Ubuntu', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'IBM Plex Sans', 'Noto Serif SC', "Noto Serif SC", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1949,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6b752e;
+  background: #00f594;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3268,10 +3268,10 @@ pre .javascript .function {
   font-family: sans-serif;
 }
 .local-search-popup {
-  font-family: 'Ubuntu', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'IBM Plex Sans', 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
 span.jp {
-  font-family: 'Noto Serif JP', "Noto Serif JP", 'Noto Serif SC', "Noto Serif SC", sans-serif;
+  font-family: 'Noto Serif JP', 'Noto Serif SC', "Noto Serif SC", sans-serif;
 }
 .highlight-container {
   position: relative;
