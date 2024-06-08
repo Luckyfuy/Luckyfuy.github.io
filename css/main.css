@@ -404,7 +404,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #ddd;
-  font-size: 14px;
+  font-size: 16px;
   table-layout: fixed;
   word-wrap: break-all;
 }
@@ -1949,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e7fe52;
+  background: #ff4ff9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3272,6 +3272,9 @@ pre .javascript .function {
 }
 span.jp {
   font-family: 'Noto Serif JP', 'Noto Serif SC', "Noto Serif SC", sans-serif;
+}
+table {
+  table-layout: auto;
 }
 .highlight-container {
   position: relative;

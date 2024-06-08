@@ -152,7 +152,7 @@
 <meta property="og:description" content="不等式的基本性质研究不等式的出发点是实数的大小关系。不等式的基础建立在以下两条公理之上：公理1：对于任意实数$a$，$a = 0$、$a$为正数、$a$为负数这三者有且只有一个成立。公理2：对于任意正数$a, b$，$a + b, ab$都是正数。 由这两条公理可以得到推论：对于任意正数$a$和负数$b$，$ab$是负数；对于任意负数$a, b$，$a + b$是负数，$ab$是正数。 如果$a">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.loli.net/2022/05/28/UmYRfrQiMDZWAPw.png">
-<meta property="og:updated_time" content="2023-12-30T16:33:25.358Z">
+<meta property="og:updated_time" content="2024-06-08T14:16:01.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·不等式">
 <meta name="twitter:description" content="不等式的基本性质研究不等式的出发点是实数的大小关系。不等式的基础建立在以下两条公理之上：公理1：对于任意实数$a$，$a = 0$、$a$为正数、$a$为负数这三者有且只有一个成立。公理2：对于任意正数$a, b$，$a + b, ab$都是正数。 由这两条公理可以得到推论：对于任意正数$a$和负数$b$，$ab$是负数；对于任意负数$a, b$，$a + b$是负数，$ab$是正数。 如果$a">
@@ -549,7 +549,7 @@
 <script type="math/tex; mode=display">\dfrac{a + c}{b + c} - \dfrac{a}{b} = \dfrac{b (a + c) - a (b + c)}{b (b + c)} = \dfrac{c (b - a)}{b (b + c)}</script><p>由$0 &lt; a &lt; b, c &gt; 0$，得$\dfrac{c (b - a)}{b (b + c)} &gt; 0$，不等式成立。$\Box$</p>
 <h1 id="简单不等式的求解"><a href="#简单不等式的求解" class="headerlink" title="简单不等式的求解"></a>简单不等式的求解</h1><h2 id="一元一次不等式"><a href="#一元一次不等式" class="headerlink" title="一元一次不等式"></a>一元一次不等式</h2><p>一元一次不等式是最简单的不等式，其基本形式为$ax &gt; b$。<br>如果$a &gt; 0$，那么解集为$x &gt; \dfrac{b}{a}$；<br>如果$a &lt; 0$，那么解集为$x &lt; \dfrac{b}{a}$；<br>如果$a = 0$，且$b &lt; 0$，那么解集为$\mathbb{R}$，若$b \ge 0$，解集为$\varnothing$。</p>
 <h2 id="一元二次不等式"><a href="#一元二次不等式" class="headerlink" title="一元二次不等式"></a>一元二次不等式</h2><p>设二次函数$f(x) = ax^{2} + bx + c (a &gt; 0)$，令$\Delta = b^{2} - 4ac$。由函数图像可以直观地得到：<br>如果$\Delta &gt; 0$，设$f(x) = 0$的两根$x_{1} &lt; x_{2}$，那么$f(x) &gt; 0$的解集为$x &gt; x_{2}$或$x &lt; x_{1}$，$f(x) &lt; 0$的解集为$x_{1} &lt; x &lt; x_{2}$；<br>如果$\Delta = 0$，那么$f(x) = 0$有唯一根$x_{0} = -\dfrac{b}{2a}$，$f(x) \ge 0$恒成立，此时$f(x) &gt; 0$的解集为$x \ne x_{0}$，$f(x) &lt; 0$的解集为$\varnothing$；<br>如果$\Delta &lt; 0$，那么$f(x) &gt; 0$恒成立，解集为$\mathbb{R}$，$f(x) &lt; 0$的解集为$\varnothing$。</p>
-<h2 id="一元-n-次不等式"><a href="#一元-n-次不等式" class="headerlink" title="一元$n$次不等式"></a>一元$n$次不等式</h2><p>一元$n$次不等式是形如$f(x) = a_{0} x^{n} + a_{1} x^{n - 1} + \cdots + a_{n} &gt; 0 (a_{0} \ne 0)$的不等式。从<a href="/2022/02/08/Complex-Number/#一元-n-次方程" title="复数与方程">虚根成对定理</a>的证明中，我们知道任何$n$次实系数多项式$f(x)$都可以在实数范围内分解为</p>
+<h2 id="一元-n-次不等式"><a href="#一元-n-次不等式" class="headerlink" title="一元$n$次不等式"></a>一元$n$次不等式</h2><p>一元$n$次不等式是形如$f(x) = a_{0} x^{n} + a_{1} x^{n - 1} + \cdots + a_{n} &gt; 0 (a_{0} \ne 0)$的不等式。从<a href="/2022/02/08/Complex-Number/#一元-n-次方程&quot;">虚根成对定理</a>的证明中，我们知道任何$n$次实系数多项式$f(x)$都可以在实数范围内分解为</p>
 <script type="math/tex; mode=display">f(x) = a \prod_{k=1}^{s} (x - a_{k}) \cdot \prod_{k=1}^{t} (x^{2} + b_{k} x + c_{k})</script><p>其中$s + 2t = n$。由于二次因式都没有实根，恒大于零，因此我们只要解不等式</p>
 <script type="math/tex; mode=display">(x - x_{1}) (x - x_{2}) \cdots (x - x_{s}) > 0</script><p>其中可能会有重根，因此又可以写成</p>
 <script type="math/tex; mode=display">(x - a_{1})^{n_{1}} (x - a_{2})^{n_{2}} \cdots (x - a_{k})^{n_{k}} > 0 (n_{1}, \cdots, n_{k} \in \mathbb{N}^{\ast})</script><p>通常我们用<strong>穿针引线法</strong>来解这类不等式：</p>
@@ -585,7 +585,7 @@ x^{3} + y^{3} + z^{3} - 3xyz &= (x + y + z) (x^{2} + y_{2} + z^{2} - xy - yz - z
 <p>再推广一些，可以得到一般的<strong>算术-几何平均值不等式（AM–GM inequality）</strong>，可以简称<strong>平均值不等式</strong>：<br>设$n$是正整数，对于非负实数$a_{1}, \cdots, a_{n}$，</p>
 <script type="math/tex; mode=display">\dfrac{a_{1} + \cdots + a_{n}}{n} \ge \sqrt[n]{a_{1} \cdots a_{n}}</script><p>等号成立当且仅当$a_{1} = \cdots = a_{n}$。</p>
 <p>除了数学归纳法，我们也可以使用<strong>调整法</strong>来证明：<br>设$A = \dfrac{a_{1} + \cdots + a_{n}}{n}$。如果$a_{1} = \cdots = a_{n} = A$，那么$\sqrt[n]{a_{1} \cdots a_{n}} = A$。否则，设$f(x_{1}, \cdots, x_{n}) = \sqrt[n]{x_{1} \cdots x_{n}}$，要证明的就是$f(a_{1}, \cdots, a_{n}) \le A$。<br>如果存在$a_{i} &lt; A$，那么必有$a_{j} &gt; A$。设$a_{1} &gt; A &gt; a_{2}$，令$\delta = \min(a_{1} - A, A - a_{2})$，$a_{1}’ = a_{1} - \delta, a_{2}’ = a_{2} + \delta, a_{k}’ = a_{k} (3 \le k \le n)$，则$\dfrac{a_{1}’ + \cdots + a_{n}’}{n} = A$也成立。因为$0 &lt; \delta &lt; a_{1} - a_{2}$，有$a_{1}’ a_{2}’ = (a_{1} - \delta) (a_{2} + \delta) = a_{1} a_{2} + \delta (a_{1} - a_{2} - \delta) &gt; a_{1} a_{2}$，从而有$f(a_{1}, \cdots, a_{n}) &lt; f(a_{1}’, \cdots, a_{n}’)$。<br>这样的操作进行至多$n$次，便可让所有数都变为$A$，最后得到$f(a_{1}, \cdots, a_{n}) &lt; f(a_{1}’, \cdots, a_{n}’) &lt; \cdots &lt; A$。$\Box$</p>
-<h2 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h2><p>对于任意<a href="/2021/11/06/Vector/#n-维向量" title="n维向量">$n$维向量</a>$\mathbf{a}, \mathbf{b}$，其夹角</p>
+<h2 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h2><p>对于任意<a href="/2021/11/06/Vector/#n-维向量">$n$维向量</a>$\mathbf{a}, \mathbf{b}$，其夹角</p>
 <script type="math/tex; mode=display">\langle \mathbf{a}, \mathbf{b} \rangle = \dfrac{|\mathbf{a} \cdot \mathbf{b}|}{|\mathbf{a}| |\mathbf{b}|} \le 1</script><p>因而有$|\mathbf{a} \cdot \mathbf{b}| \le |\mathbf{a}| |\mathbf{b}|$。令$\mathbf{a} = (a_{1}, \cdots, a_{n}), \mathbf{b} = (b_{1}, \cdots, b_{n})$，平方可得</p>
 <script type="math/tex; mode=display">(a_{1} b_{1} + \cdots + a_{n} b_{n})^{2} \le (a_{1}^{2} + \cdots + a_{n}^{2}) (b_{1}^{2} + \cdots + b_{n}^{2})</script><p>就得到<strong>柯西不等式（Cauchy’s inequality）</strong>：<br>对于两组非负实数$a_{1}, \cdots, a_{n}$和$b_{1}, \cdots, b_{n}$，</p>
 <script type="math/tex; mode=display">\left(\sum\limits_{i=1}^{n} a_{i} b_{i} \right)^{2} \le \left(\sum\limits_{i=1}^{n} a_{i}^{2} \right) \left(\sum\limits_{i=1}^{n} b_{i}^{2} \right)</script><p>等号成立当且仅当$\dfrac{a_{1}}{b_{1}} = \cdots = \dfrac{a_{n}}{b_{n}}$。</p>
@@ -1275,7 +1275,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1814.3k字</span>
+  <span class="post-count">全站共1815.1k字</span>
 </div>
         
 
@@ -1986,7 +1986,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1717262990002')
+  navigator.serviceWorker.register('/sw.js?t=1717868675680')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

@@ -157,7 +157,8 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/30/nEAoD36cTkZaKLj.png">
 <meta property="og:image" content="https://s2.loli.net/2024/04/20/4cI79iYHjgvNy3X.png">
 <meta property="og:image" content="https://s2.loli.net/2024/04/20/fhWjmgayQedsLHY.png">
-<meta property="og:updated_time" content="2024-05-19T06:09:00.229Z">
+<meta property="og:image" content="https://s2.loli.net/2024/06/08/bcH9KNqIQLAdvrf.gif">
+<meta property="og:updated_time" content="2024-06-08T14:49:51.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·导数">
 <meta name="twitter:description" content="导数如果函数$f(x)$在$x_{0}$的一个邻域$(x_{0} - \delta, x_{0} + \delta)$有定义，且极限$\lim\limits_{\Delta x \to 0} \dfrac{f(x_{0} + \Delta x) - f(x_{0})}{\Delta x}$存在，那么称这个极限为$f$在$x_{0}$的导数（derivative），记作$f’(x_{0})$或$\d">
@@ -492,7 +493,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7.3k
+                  8k
                 </span>
               
 
@@ -508,7 +509,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  35
+                  38
                 </span>
               
             </div>
@@ -657,7 +658,17 @@ b = y + \dfrac{1 + (y')^{2}}{y''}
 &\le \varepsilon + (|l| + \varepsilon) \varepsilon + \varepsilon \\
 &= (2 + |l| + \varepsilon) \varepsilon
 \end{align}</script><p>得到$\lim\limits_{x \to x_{0}^{+}} \dfrac{f(x)}{g(x)} = l$。同理，$\lim\limits_{x \to x_{0}^{-}} \dfrac{f(x)}{g(x)} = l$。<br>然后考虑$l = \infty$的情况。因为$\lim\limits_{x \to x_{0}} \dfrac{g’(x)}{f’(x)} = 0$，所以$\lim\limits_{x \to x_{0}} \dfrac{g(x)}{f(x)} = 0$，因此$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = \infty$。$\Box$</p>
-<h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2>
+<p>之前给出的重要极限$\lim\limits_{x \to 0} \dfrac{\sin x}{x}$便是一个$\dfrac{0}{0}$型未定式：</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to 0} \dfrac{\sin x}{x} = \lim\limits_{x \to 0} \cos x = 1</script><p>再举一个$\dfrac{\infty}{\infty}$型未定式的例子。设$n$为正整数，$a &gt; 1$，求$\lim\limits_{x \to +\infty} \dfrac{x^{n}}{a^{x}}$：</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to +\infty} \dfrac{x^{n}}{a^{x}} = \lim\limits_{x \to +\infty} \dfrac{n x^{n - 1}}{a^{x} \ln a} = \cdots = \lim\limits_{x \to +\infty} \dfrac{n!}{a^{x} (\ln a)^{n}} = 0</script><p>事实上，对于任意的$0 &lt; \alpha &lt; n$，因为$x &gt; 1$时$0 &lt; \dfrac{x^{\alpha}}{a^{x}} &lt; \dfrac{x^{n}}{a^{x}}$，所以根据迫敛定理$\lim\limits_{x \to +\infty} \dfrac{x^{\alpha}}{a^{x}} = 0$。这个极限说明指数函数的增长速度远大于幂函数。</p>
+<p>对于$0 \cdot \infty, \infty - \infty, 0^{0}, \infty^{0}, 1^{\infty}$型未定式，可以转化为$\dfrac{0}{0}$和$\dfrac{\infty}{\infty}$型未定式来使用洛必达法则。<br>例如，计算$0 \cdot \infty$型未定式$\lim\limits_{x \to 0^{+}} x \ln x$，可以将其转化为$\dfrac{\infty}{\infty}$型未定式：</p>
+<script type="math/tex; mode=display">\lim\limits_{x \to 0^{+}} x \ln x = \lim\limits_{x \to 0^{+}} \dfrac{\ln x}{x^{-1}} = \lim\limits_{x \to 0^{+}} \dfrac{\dfrac{1}{x}}{-\dfrac{1}{x^{2}}} = -\lim\limits_{x \to 0^{+}} x = 0</script><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2><p>很多时候，方程没有解析解，因此计算精确度高的数值解十分重要。<a href="/2022/12/09/Limit/#闭区间上连续函数的性质">二分法</a>是一种近似求解方程的根的方法，但效率较低。于是，利用切线和导数，我们有<strong>牛顿法（Newton’s method）</strong>，或称<strong>牛顿-拉弗森方法（Newton–Raphson method）</strong>。<br>对于函数$f$，我们需要先选取一个$f$零点$\xi$附近的点$x_{0}$，计算过点$(x_{0}, f(x_{0}))$的切线，切线与$x$轴的交点记作$x_{1}$。我们发现，$x_{1}$比$x_{0}$更加接近方程的根$\xi$，于是考虑计算过点$(x_{1}, f(x_{1}))$的切线与$x$轴的交点$x_{2}$，进一步近似方程的根。利用近似值$x_{2}$，又可以计算出下一个近似值$x_{3}$。不断迭代下去，对方程的根的近似精确度越来越高。</p>
+<p>函数$f$在点$(x_{n}, f(x_{n}))$的切线方程为</p>
+<script type="math/tex; mode=display">y - f(x_{n}) = f'(x_{n}) (x - x_{n})</script><p>令$y = 0$，便可解得切线与$x$轴的交点横坐标</p>
+<script type="math/tex; mode=display">x = x_{n} - \dfrac{f(x_{n})}{f'(x_{n})}</script><p>于是我们得到了近似值的迭代公式</p>
+<script type="math/tex; mode=display">x_{n + 1} = x_{n} - \dfrac{f(x_{n})}{f'(x_{n})}</script><p>这样，我们就获得了一个收敛于$\xi$的数列$\{x_{n}\}_{0}^{\infty}$。通过数列中的项，可以不断逼近$\xi$。</p>
+<p><img src="https://s2.loli.net/2024/06/08/bcH9KNqIQLAdvrf.gif" alt="牛顿法" title="牛顿法"></p>
+
       
     </div>
     
@@ -1314,7 +1325,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1814.3k字</span>
+  <span class="post-count">全站共1815.1k字</span>
 </div>
         
 
@@ -2025,7 +2036,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1717262990002')
+  navigator.serviceWorker.register('/sw.js?t=1717868675680')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
