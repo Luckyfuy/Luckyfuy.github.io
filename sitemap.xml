@@ -700,14 +700,7 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Hexo/</loc>
-    <lastmod>2024-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/tags/Git/</loc>
+    <loc>https://luckyfuy.top/tags/Minecraft/</loc>
     <lastmod>2024-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -728,20 +721,6 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Minecraft/</loc>
-    <lastmod>2024-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/tags/Graph-Theory/</loc>
-    <lastmod>2024-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://luckyfuy.top/tags/Resources/</loc>
     <lastmod>2024-06-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -756,7 +735,21 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Windows/</loc>
+    <loc>https://luckyfuy.top/tags/Graph-Theory/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/tags/Hexo/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/tags/Git/</loc>
     <lastmod>2024-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -764,6 +757,13 @@
   
   <url>
     <loc>https://luckyfuy.top/tags/MySQL/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/tags/Windows/</loc>
     <lastmod>2024-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
