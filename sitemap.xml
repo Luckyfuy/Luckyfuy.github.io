@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://luckyfuy.top/2022/01/20/Booklist/</loc>
+    
+    <lastmod>2024-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/2021/06/26/Marxist-Basis-of-the-Cultural-Revolution/</loc>
     
     <lastmod>2024-06-30</lastmod>
@@ -131,15 +140,6 @@
     <loc>https://luckyfuy.top/2022/09/10/Outline-of-Ancient-Japanese-History/</loc>
     
     <lastmod>2024-06-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/2022/01/20/Booklist/</loc>
-    
-    <lastmod>2024-06-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -702,14 +702,21 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Python/</loc>
+    <loc>https://luckyfuy.top/tags/Minecraft/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Minecraft/</loc>
+    <loc>https://luckyfuy.top/tags/Mathematics/</loc>
+    <lastmod>2024-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://luckyfuy.top/tags/Python/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -730,7 +737,7 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/Mathematics/</loc>
+    <loc>https://luckyfuy.top/tags/Data-Structure/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -738,13 +745,6 @@
   
   <url>
     <loc>https://luckyfuy.top/tags/Graph-Theory/</loc>
-    <lastmod>2024-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/tags/Data-Structure/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -765,6 +765,13 @@
   </url>
   
   <url>
+    <loc>https://luckyfuy.top/tags/MySQL/</loc>
+    <lastmod>2024-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://luckyfuy.top/tags/Windows/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -779,14 +786,14 @@
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/MySQL/</loc>
+    <loc>https://luckyfuy.top/tags/MkDocs/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/tags/MkDocs/</loc>
+    <loc>https://luckyfuy.top/tags/Literature/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -801,13 +808,6 @@
   
   <url>
     <loc>https://luckyfuy.top/tags/China/</loc>
-    <lastmod>2024-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://luckyfuy.top/tags/Literature/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -872,14 +872,14 @@
 
   
   <url>
-    <loc>https://luckyfuy.top/categories/Python%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://luckyfuy.top/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://luckyfuy.top/categories/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://luckyfuy.top/categories/Python%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
