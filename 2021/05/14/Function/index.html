@@ -174,7 +174,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/07/09/NlngUV2hfQowk4H.png">
 <meta property="og:image" content="https://i.loli.net/2021/07/09/RxhIcvJd5Pu3OZK.png">
 <meta property="og:image" content="https://i.loli.net/2019/11/24/Ks1iQP2RIwWn6kN.png">
-<meta property="og:updated_time" content="2024-06-08T14:15:27.969Z">
+<meta property="og:updated_time" content="2024-06-30T07:20:11.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·函数">
 <meta name="twitter:description" content="映射设$A, B$为非空集合，对于任意$x \in A$，通过某种法则$f$，都有$B$中唯一确定的$y$与之对应，则称$f$是一个从$A$到$B$的映射（map），记作$f: A \to B$。映射$f: A \to B$严格定义为集合$A, B$的笛卡尔积$A \times B = \{(x, y) | x \in A \land y \in B\}$的一个子集，满足对于任意$x \in A$">
@@ -598,7 +598,7 @@ f_{2}(x) = \dfrac{f(x) + f(-x)}{2}
 <p>例如，方波就是一种周期函数：<br><img src="https://i.loli.net/2021/06/04/E6wtxbQeNSLBXoH.png" alt="方波" title="最小正周期为2"></p>
 <p>如果周期函数$f$存在最小正周期$T_{0}$，那么对于任何$f$的周期$T$，都存在整数$n$使得$T = n T_{0}$。</p>
 <h3 id="连续性"><a href="#连续性" class="headerlink" title="连续性"></a>连续性</h3><p>设函数$f: A \to \mathbb{R}, x_{0} \in A$，如果对于任意的$\varepsilon &gt; 0$，都存在$\delta &gt; 0$，使得只要$x \in A, |x - x_{0}| &lt; \delta$，就有$|f(x) - f(x_{0})| &lt; \varepsilon$，那么称$f$在点$x_{0}$<strong>连续</strong>。<br>如果函数$f$在定义域$A$的每一点$x_{0}$处都连续，那么称$f$为<strong>连续函数（continuous function）</strong>。</p>
-<p>以上是用$\varepsilon - \delta$语言对函数连续性的定义。<br>$\varepsilon - \delta$语言最初由法国数学家柯西（Augustin-Louis Cauchy，1789－1857）提出。$\varepsilon$和$\delta$可以看作是两个无穷小量，无论函数值的距离$\varepsilon$多小，都能找到一段长为$\delta$的区间与之对应。</p>
+<p>以上是用$\varepsilon - \delta$语言对函数连续性的定义。<br>$\varepsilon - \delta$语言最初由法国数学家柯西（Augustin-Louis Cauchy，1789—1857）提出。$\varepsilon$和$\delta$可以看作是两个无穷小量，无论函数值的距离$\varepsilon$多小，都能找到一段长为$\delta$的区间与之对应。</p>
 <p>连续函数有一重要性质，即<strong>介值定理（intermediate value theorem）</strong>：<br>设连续函数$f: [a, b] \to \mathbb{R}$，$u$为$f(a), f(b)$之间的任意实数，则存在$c \in [a, b]$，使得$f(c) = u$。</p>
 <p>如果$f(x) = 0$，$x$称为函数$f$的一个<strong>零点（zero point）</strong>。<br>特殊地，$c = 0$时的介值定理称为<strong>零点定理</strong>：<br>若$f(a) f(b) &lt; 0$，则存在$c \in (a, b)$使得$f(c) = 0$。</p>
 <h3 id="凹凸性"><a href="#凹凸性" class="headerlink" title="凹凸性"></a>凹凸性</h3><p>从函数图像上来看，曲线的凹凸决定了函数的凹凸性，所以，我们可以通过几何直观来得到凹凸性的定义：<br>如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是凹的，反之类似。取一个特殊的点，即弦的中点，凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。</p>
@@ -1621,7 +1621,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1818k字</span>
+  <span class="post-count">全站共1818.6k字</span>
 </div>
         
 
@@ -2332,7 +2332,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1719680086255')
+  navigator.serviceWorker.register('/sw.js?t=1719735896341')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

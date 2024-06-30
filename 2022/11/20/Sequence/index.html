@@ -151,7 +151,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-12-30T13:10:09.173Z">
+<meta property="og:updated_time" content="2024-06-30T07:21:15.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·数列">
 <meta name="twitter:description" content="数列数列（sequence）是数字的序列。一般来说，数列是一个定义在正整数集的子集上的函数，记$a_{n} = f(n)$，则数列可以表示为$\{a_{n}\}$。数列中的每一个数称为数列的项（term），$a_{1}$称为数列的首项（initial term）。定义在无限集合上的数列叫做无穷数列（infinite sequence）；否则叫做有穷数列（finite sequence），最后一项称">
@@ -545,7 +545,7 @@ a_{m} + a_{n} &= a_{1} + (m - 1) d + a_{1} + (n - 1) d \\
 &= a_{1} + (p - 1) d + a_{1} + (q - 1) d \\
 &= a_{p} + a_{q} \quad \Box
 \end{align}</script><p>从这条性质出发可以得到：</p>
-<script type="math/tex; mode=display">a_{n - k} + a_{n + k} = 2a_{n} (n, k \in \mathbb{N}^{\ast}, k < n)</script><p>德国数学家高斯（Carl Friedrich Gauss，1777－1855）读小学时就发现了求等差数列前$n$项和的方法。把$S_{n}$的加项倒过来可得$S_{n} = \sum\limits_{i=1}^{n} a_{n + 1 - i}$，那么，$2S_{n} = \sum\limits_{i=1}^{n} (a_{i} + a_{n + 1 - i}) = \sum\limits_{i=1}^{n} (a_{1} + a_{n}) = n (a_{1} + a_{n})$，即</p>
+<script type="math/tex; mode=display">a_{n - k} + a_{n + k} = 2a_{n} (n, k \in \mathbb{N}^{\ast}, k < n)</script><p>德国数学家高斯（Carl Friedrich Gauss，1777—1855）读小学时就发现了求等差数列前$n$项和的方法。把$S_{n}$的加项倒过来可得$S_{n} = \sum\limits_{i=1}^{n} a_{n + 1 - i}$，那么，$2S_{n} = \sum\limits_{i=1}^{n} (a_{i} + a_{n + 1 - i}) = \sum\limits_{i=1}^{n} (a_{1} + a_{n}) = n (a_{1} + a_{n})$，即</p>
 <script type="math/tex; mode=display">S_{n} = \dfrac{n (a_{1} + a_{n})}{2}</script><p>这就是等差数列的前$n$项和公式。<br>代入$a_{n} = a_{1} + (n - 1) d$，可得</p>
 <script type="math/tex; mode=display">S_{n} = na_{1} + \dfrac{n (n - 1)}{2} d</script><p>设正整数$N$为常数，等差数列$\{a_{n}\}$的前$n$项和是$S_{n}$，令$S_{0} = 0$，则不难发现，数列$\{S_{nN} - S_{(n - 1) N}\}$也是等差数列。<br>设$\{a_{n}\}$的公差是$d$，直接计算：</p>
 <script type="math/tex; mode=display">
@@ -1267,7 +1267,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1818k字</span>
+  <span class="post-count">全站共1818.6k字</span>
 </div>
         
 
@@ -1978,7 +1978,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1719680086255')
+  navigator.serviceWorker.register('/sw.js?t=1719735896341')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
