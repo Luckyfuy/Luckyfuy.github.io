@@ -26,11 +26,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/2018/12/30/Hello-World/');
 
-  precacheUrls.push('/2019/03/30/Python-Data-Type/');
-
   precacheUrls.push('/2019/03/22/Learn-Python/');
 
   precacheUrls.push('/2019/03/09/Blog-Building/');
+
+  precacheUrls.push('/2019/03/30/Python-Data-Type/');
 
   precacheUrls.push('/2019/06/29/Basic-Mod-Pack/');
 
