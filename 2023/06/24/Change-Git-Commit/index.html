@@ -143,18 +143,18 @@
 
 
 
-<meta name="description" content="修改最新Commit如果只要修改最新提交，可以直接使用命令git commit --amend，在文本编辑器中编辑并保存。如果提交已经推送，需要用git push origin master --force强制推送。">
+<meta name="description" content="修改最新Commit如果只要修改最新提交，可以直接使用命令git commit --amend，在文本编辑器中编辑并保存。如果提交已经推送，需要用git push --force强制推送。">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="修改Git Commit">
 <meta property="og:url" content="https://luckyfuy.top/2023/06/24/Change-Git-Commit/index.html">
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
-<meta property="og:description" content="修改最新Commit如果只要修改最新提交，可以直接使用命令git commit --amend，在文本编辑器中编辑并保存。如果提交已经推送，需要用git push origin master --force强制推送。">
+<meta property="og:description" content="修改最新Commit如果只要修改最新提交，可以直接使用命令git commit --amend，在文本编辑器中编辑并保存。如果提交已经推送，需要用git push --force强制推送。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-06-24T07:59:34.900Z">
+<meta property="og:updated_time" content="2024-07-06T14:28:09.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改Git Commit">
-<meta name="twitter:description" content="修改最新Commit如果只要修改最新提交，可以直接使用命令git commit --amend，在文本编辑器中编辑并保存。如果提交已经推送，需要用git push origin master --force强制推送。">
+<meta name="twitter:description" content="修改最新Commit如果只要修改最新提交，可以直接使用命令git commit --amend，在文本编辑器中编辑并保存。如果提交已经推送，需要用git push --force强制推送。">
 
 
 
@@ -500,7 +500,7 @@
       
 
       
-        <h1 id="修改最新Commit"><a href="#修改最新Commit" class="headerlink" title="修改最新Commit"></a>修改最新Commit</h1><p>如果只要修改最新提交，可以直接使用命令<code>git commit --amend</code>，在文本编辑器中编辑并保存。如果提交已经推送，需要用<code>git push origin master --force</code>强制推送。</p>
+        <h1 id="修改最新Commit"><a href="#修改最新Commit" class="headerlink" title="修改最新Commit"></a>修改最新Commit</h1><p>如果只要修改最新提交，可以直接使用命令<code>git commit --amend</code>，在文本编辑器中编辑并保存。如果提交已经推送，需要用<code>git push --force</code>强制推送。</p>
 <a id="more"></a>
 <h1 id="修改历史Commit"><a href="#修改历史Commit" class="headerlink" title="修改历史Commit"></a>修改历史Commit</h1><p>如果要修改历史提交，需要用到命令<code>git rebase</code>。假设一共有三条提交信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">❯ git log</span><br><span class="line">commit a42c6e958969a9e86fa3ef6a1f4116cbc6ce8226 (HEAD -&gt; master, origin/master)</span><br><span class="line">Author: Luckyfuy &lt;abcxlxcba@sina.com&gt;</span><br><span class="line">Date:   Tue Jan 31 16:55:20 2023 +0800</span><br><span class="line"></span><br><span class="line">    commit 3</span><br><span class="line"></span><br><span class="line">commit f7918f949a80ca74c6ec0c9dd18a8d9fff5c120e</span><br><span class="line">Author: Luckyfuy &lt;abcxlxcba@sina.com&gt;</span><br><span class="line">Date:   Tue Aug 24 12:17:29 2021 +0800</span><br><span class="line"></span><br><span class="line">    commit 2</span><br><span class="line"></span><br><span class="line">commit 242c177f16ef0fb05dcaab3f1633268e2a3067a9</span><br><span class="line">Author: Luckyfuy &lt;abcxlxcba@sina.com&gt;</span><br><span class="line">Date:   Sun Apr 4 11:29:49 2021 +0800</span><br><span class="line"></span><br><span class="line">    commit 1</span><br></pre></td></tr></table></figure></p>
 <p>如果要修改第二次提交，执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i HEAD~2</span><br></pre></td></tr></table></figure></p>
@@ -509,12 +509,12 @@
 <p>将第一行的<code>pick</code>改为<code>edit</code>，保存并退出，会得到如下信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Stopped at 242c177...  add 22 files</span><br><span class="line">You can amend the commit now, with</span><br><span class="line"></span><br><span class="line">  git commit --amend</span><br><span class="line"></span><br><span class="line">Once you are satisfied with your changes, run</span><br><span class="line"></span><br><span class="line">  git rebase --continue</span><br></pre></td></tr></table></figure></p>
 <p>执行<code>git commit --amend</code>，修改文件，保存并退出。然后执行<code>git rebase --continue</code>，就完成了本地修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">❯ git commit --amend</span><br><span class="line">[detached HEAD c04c450] commit 114514</span><br><span class="line"> Date: Sun Apr 4 11:29:49 2021 +0800</span><br><span class="line"> 1 files changed, 27 insertions(+)</span><br><span class="line"> create mode 100644 README.md</span><br><span class="line">❯ git rebase --continue</span><br><span class="line">Successfully rebased and updated refs/heads/master.</span><br></pre></td></tr></table></figure></p>
 <p>再用<code>git log</code>检查一遍：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">❯ git log</span><br><span class="line">commit c376ae5c4cf6f3db1ce916d494094fe620fb0edf (HEAD -&gt; master)</span><br><span class="line">Author: Luckyfuy &lt;abcxlxcba@sina.com&gt;</span><br><span class="line">Date:   Tue Jan 31 16:55:20 2023 +0800</span><br><span class="line"></span><br><span class="line">    commit 3</span><br><span class="line"></span><br><span class="line">commit dd92a12db7d0d0f0948d09e98575f7bf83754229</span><br><span class="line">Author: Luckyfuy &lt;abcxlxcba@sina.com&gt;</span><br><span class="line">Date:   Tue Aug 24 12:17:29 2021 +0800</span><br><span class="line"></span><br><span class="line">    commit 2</span><br><span class="line"></span><br><span class="line">commit c04c4500ecbe466808032f4f0337188de7d33bcb</span><br><span class="line">Author: Luckyfuy &lt;abcxlxcba@sina.com&gt;</span><br><span class="line">Date:   Sun Apr 4 11:29:49 2021 +0800</span><br><span class="line"></span><br><span class="line">    commit 114514</span><br></pre></td></tr></table></figure></p>
-<p>最后推送到远程仓库，用<code>--force</code>强制推送：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master --force</span><br></pre></td></tr></table></figure></p>
+<p>最后推送到远程仓库，用<code>--force</code>强制推送：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --force</span><br></pre></td></tr></table></figure></p>
 <h1 id="将CommitDate修改为AuthorDate"><a href="#将CommitDate修改为AuthorDate" class="headerlink" title="将CommitDate修改为AuthorDate"></a>将CommitDate修改为AuthorDate</h1><p>如果推送到GitHub，会发现一个问题：所有提交的时间都变成了<code>git rebase</code>执行完成的时间。这是因为Git对提交有两套时间记录，分别是CommitDate和AuthorDate。执行完成<code>git rebase</code>后，CommitDate会被修改为当前时间，而GitHub只会识别CommitDate。即便使用<code>git commit --amend</code>修改提交时间，修改的也只是AuthorDate。于是我们需要将CommitDate修改为AuthorDate。</p>
 <p>执行<code>git log --format=&quot;%H %ci %ai %s&quot;</code>可以查看CommitDate和AuthorDate：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">❯ git log --format=&quot;%H %ci %ai %s&quot;</span><br><span class="line">c376ae5c4cf6f3db1ce916d494094fe620fb0edf 2023-06-24 11:43:51 +0800 2023-01-31 16:55:20 +0800 commit 3</span><br><span class="line">dd92a12db7d0d0f0948d09e98575f7bf83754229 2023-06-24 11:43:51 +0800 2021-08-24 12:17:29 +0800 commit 2</span><br><span class="line">c04c4500ecbe466808032f4f0337188de7d33bcb 2023-06-24 11:43:09 +0800 2021-04-04 11:29:49 +0800 commit 114514</span><br></pre></td></tr></table></figure></p>
 <p>可以看到，CommitDate和AuthorDate是不一致的。执行以下命令即可将CommitDate修改为AuthorDate：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --env-filter &apos;export GIT_COMMITTER_DATE=&quot;$GIT_AUTHOR_DATE&quot;&apos;</span><br></pre></td></tr></table></figure></p>
 <p>再检查一遍，可以看到CommitDate和AuthorDate已经一致：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">❯ git log --format=&quot;%H %ci %ai %s&quot;</span><br><span class="line">20e42c0504a02c423d2fd8f7eec0d4df41d364f2 2023-01-31 16:55:20 +0800 2023-01-31 16:55:20 +0800 commit 3</span><br><span class="line">65dc5ab4a8300d4449bf79f71e7382cb319c83e9 2021-08-24 12:17:29 +0800 2021-08-24 12:17:29 +0800 commit 2</span><br><span class="line">fc1ce0d35a797a76d25fa0354b5434eae6957f98 2021-04-04 11:29:49 +0800 2021-04-04 11:29:49 +0800 commit 114514</span><br></pre></td></tr></table></figure></p>
-<p>最后再次强制推送即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master --force</span><br></pre></td></tr></table></figure></p>
+<p>最后再次强制推送即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --force</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -740,27 +740,33 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:abcxlxcba@sina.com" target="_blank" title="E-Mail">
+                    <a href="mailto:mcluckyfuy@gmail.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://www.luogu.org/space/show?uid=173016" target="_blank" title="Luogu">
+                    <a href="https://www.luogu.com.cn/user/173016" target="_blank" title="Luogu">
                       
                         <i class="fa fa-fw fa-code"></i>Luogu</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://www.zhihu.com/people/luckyfuy/activities" target="_blank" title="Zhihu">
+                    <a href="https://www.zhihu.com/people/luckyfuy" target="_blank" title="Zhihu">
                       
-                        <i class="fa fa-fw fa-book"></i>Zhihu</a>
+                        <i class="fa fa-fw fa-zhihu"></i>Zhihu</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="http://space.bilibili.com/116328222?" target="_blank" title="Bilibili">
+                    <a href="https://space.bilibili.com/116328222" target="_blank" title="Bilibili">
                       
-                        <i class="fa fa-fw fa-television"></i>Bilibili</a>
+                        <i class="fa fa-fw fa-bilibili"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.youtube.com/channel/UCP_pEHpWVj6-rinh6HzG5Sg" target="_blank" title="YouTube">
+                      
+                        <i class="fa fa-fw fa-youtube"></i>YouTube</a>
                   </span>
                 
                   <span class="links-of-author-item">
@@ -770,15 +776,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://steamcommunity.com/id/Luckyfuy/" target="_blank" title="Steam">
+                    <a href="https://steamcommunity.com/id/miranekomira/" target="_blank" title="Steam">
                       
                         <i class="fa fa-fw fa-steam"></i>Steam</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="http://tieba.baidu.com/home/main?un=%E9%B8%A1%E8%9B%8B%E5%8F%A3%E8%A2%8B&id=c921e9b8a1e89b8be58fa3e8a28b2539?t=1475627358&fr=index&red_tag=q3499662588" target="_blank" title="Baidu Tieba">
-                      
-                        <i class="fa fa-fw fa-cloud"></i>Baidu Tieba</a>
                   </span>
                 
             </div>
@@ -1172,7 +1172,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1819.8k字</span>
+  <span class="post-count">全站共1819.9k字</span>
 </div>
         
 
@@ -1859,7 +1859,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1720191977466')
+  navigator.serviceWorker.register('/sw.js?t=1720281310882')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
