@@ -156,7 +156,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/eAUqcKomhf2BFPY.png">
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/fDnCuTJ9YR8GUsx.png">
 <meta property="og:image" content="https://s2.loli.net/2022/12/16/VAwZ83JKok4Q1xr.png">
-<meta property="og:updated_time" content="2024-06-30T07:21:17.695Z">
+<meta property="og:updated_time" content="2024-09-27T15:10:57.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记·极限论">
 <meta name="twitter:description" content="数列极限数列极限的定义对于无穷实数数列$\{a_{n}\}$，当$n$无限增大时，$a_{n}$无限接近实数$a$，那么我们称数列$\{a_{n}\}$的极限（limit）是$a$，记作$\lim\limits_{n \to \infty} a_{n} = a$。更加严格地说，对于任意的$\varepsilon &amp;gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n">
@@ -536,10 +536,10 @@
 <p>有一些数列是求和的形式。如果$S_{n} = \sum\limits_{i=1}^{n} a_{i}$是收敛数列，极限是$S$，那么称<strong>级数（series）</strong>$\sum\limits_{n=1}^{\infty} a_{n}$收敛，记作$\sum\limits_{n=1}^{\infty} a_{n} = S$。$S$称为级数$\sum\limits_{n=1}^{\infty} a_{n}$的<strong>和（sum）</strong>，$S_{n}$称为级数的<strong>部分和（partial sum）</strong>。</p>
 <h2 id="收敛数列的性质"><a href="#收敛数列的性质" class="headerlink" title="收敛数列的性质"></a>收敛数列的性质</h2><p>收敛数列有三条基本性质。</p>
 <p><strong>唯一性</strong>：<br>收敛数列$\{a_{n}\}$的极限唯一。</p>
-<p>证明：<br>设数列$\{a_{n}\}$有极限$a, b$，则对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \dfrac{\varepsilon}{2}, |a_{n} - b| &lt; \dfrac{\varepsilon}{2}$。那么$|a - b| = |(a_{n} - a) - (a_{n} - b)| \le |a_{n} - a| + |a_{n} - b| &lt; \varepsilon$，于是$a = b$。$Box$</p>
+<p>证明：<br>设数列$\{a_{n}\}$有极限$a, b$，则对于任意的$\varepsilon &gt; 0$，都存在正整数$N$，使得对于任意的$n \ge N$，都有$|a_{n} - a| &lt; \dfrac{\varepsilon}{2}, |a_{n} - b| &lt; \dfrac{\varepsilon}{2}$。那么$|a - b| = |(a_{n} - a) - (a_{n} - b)| \le |a_{n} - a| + |a_{n} - b| &lt; \varepsilon$，于是$a = b$。$\Box$</p>
 <p>如果改变数列中有限多项的值，不会改变数列的收敛性和极限。</p>
 <p><strong>有界性</strong>：<br>设数列$\{a_{n}\}$的极限是$a$，则数列$\{a_{n}\}$<strong>有界（bounded）</strong>，即存在正数$M$，使得$\forall n \in \mathbb{N}^{\ast}, |a_{n}| \le M$。否则称数列$\{a_{n}\}$<strong>无界（unbounded）</strong>。</p>
-<p>证明：<br>对于$\varepsilon = 1$，存在正整数$N$，使得$\forall n \ge N, |a_{n} - a| &lt; 1$。那么$|a_{n}| \le |a_{n} - a| + |a| &lt; |a| + 1$。令$M = \max(|a_{1}|, \cdots, |a_{N - 1}|, |a| + 1)$，则对于任意的$n$，如果$n \le N - 1$，那么$|a_{n}| \le \max(|a_{1}|, \cdots, |a_{N - 1}|) \le M$；如果$n \ge N$，那么$|a_{n}| &lt; |a| + 1 \le M$。$\Box$。</p>
+<p>证明：<br>对于$\varepsilon = 1$，存在正整数$N$，使得$\forall n \ge N, |a_{n} - a| &lt; 1$。那么$|a_{n}| \le |a_{n} - a| + |a| &lt; |a| + 1$。令$M = \max(|a_{1}|, \cdots, |a_{N - 1}|, |a| + 1)$，则对于任意的$n$，如果$n \le N - 1$，那么$|a_{n}| \le \max(|a_{1}|, \cdots, |a_{N - 1}|) \le M$；如果$n \ge N$，那么$|a_{n}| &lt; |a| + 1 \le M$。$\Box$</p>
 <p>如果实数$l$满足$a &gt; l$，那么存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} &gt; l$。$&gt;$换成$&lt;$同样成立。<br>如果实数$l$满足存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} \ge l$，那么$a \ge l$。$\ge$换成$\le$同样成立。</p>
 <p><strong>保序性</strong>：<br>设数列$\{a_{n}\}, \{b_{n}\}$的极限分别是$a, b$，如果$a &gt; b$，那么存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} &gt; b_{n}$；如果存在正整数$N$，使得对于任意的$n \ge N$，都有$a_{n} \ge b_{n}$，那么$a \ge b$。</p>
 <p>计算极限时，把需要求的数列夹在两个极限相等的数列之间，就是非常实用的<strong>迫敛定理（squeeze theorem）</strong>：<br>如果数列$\{b_{n}\}, \{c_{n}\}$的极限都是$a$，数列$\{a_{n}\}$满足存在正整数$N$，使得对于任意的$n \ge N$，都有$b_{n} \le a_{n} \le c_{n}$，那么数列$\{a_{n}\}$收敛于$a$。</p>
@@ -598,13 +598,13 @@ e_{n} &= \sum\limits_{k=0}^{n} \dfrac{\operatorname{C}_{n}^{k}}{n^{k}} \\
 <p>我们知道$\mathrm{e} = \lim\limits_{n \to \infty} (1 + \dfrac{1}{n})^{n}$，而对于函数$(1 + \dfrac{1}{x})^{x}$，结果也是一样的。这就是另一个重要极限：</p>
 <script type="math/tex; mode=display">\lim\limits_{x \to \infty} (1 + \dfrac{1}{x})^{x} = \mathrm{e}</script><p>证明：<br>我们可以把一般情况化为整数的情况。因为$[x] \le x &lt; [x] + 1$，根据指数函数和幂函数的单调性，有$(1 + \dfrac{1}{[x] + 1})^{[x]} &lt; (1 + \dfrac{1}{x})^{x} &lt; (1 + \dfrac{1}{[x]})^{[x] + 1}$。因为$\lim\limits_{x \to +\infty} [x] = +\infty$，所以$\lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x] + 1})^{[x]} = \lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x] + 1})^{[x] + 1} (1 + \dfrac{1}{[x] + 1})^{-1} = \mathrm{e}$以及$\lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x]})^{[x] + 1} = \lim\limits_{x \to +\infty} (1 + \dfrac{1}{[x]})^{[x]} (1 + \dfrac{1}{[x]}) = \mathrm{e}$。根据迫敛定理，$\lim\limits_{x \to +\infty} (1 + \dfrac{1}{x})^{x} = \mathrm{e}$。而令$y = -x$，有$\lim\limits_{x \to -\infty} (1 + \dfrac{1}{x})^{x} = \lim\limits_{y \to +\infty} (1 - \dfrac{1}{y})^{-y} = \lim\limits_{y \to +\infty} (1 + \dfrac{1}{y - 1})^{y} = \lim\limits_{y \to +\infty} (1 + \dfrac{1}{y - 1})^{y - 1} (1 + \dfrac{1}{y - 1}) = \mathrm{e}$，所以$\lim\limits_{x \to \infty} (1 + \dfrac{1}{x})^{x} = \mathrm{e}$。$\Box$</p>
 <p>对这个极限进行倒数代换，就得到类似的$\lim\limits_{x \to 0} (1 + x)^{\frac{1}{x}} = \mathrm{e}$。</p>
-<p>如果函数$f, g$在$x_{0}$附近有定义，满足$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = 1$，则称$x \to x_{0}$时$f, g$等价，记作$f(x) \sim g(x) (x \to x_{0})$。例如，由第一个重要极限可得$\sin x \sim x (x \to 0)$。等价的函数在乘除因式里可以相互替换。<br>如果$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = 0$，则称$x \to x_{0}$时$f$比$g$低阶，记作$f(x) = o(g(x)) (x \to x_{0})$。“低阶”指的就是增长较慢，例如$x^2 = o(x) (x \to 0)$。<br>如果$|\dfrac{f(x)}{g(x)}|$在$x_{0}$附近有界，即存在$M &gt; 0$使得$|\dfrac{f(x)}{g(x)}| \le M$，则称$x \to x_{0}$时$f$的阶不超过$g$，记作$f(x) = O(g(x)) (x \to x_{0})$。例如，$\sinh x = O(\mathrm{e}^{x})$。特别地，$f(x) = O(1) (x \to x_{0})$表示$f$在$x_{0}$附近有界。<br>等价符号$\sim$、小$o$符号和大$O$符号由德国数学家爱德蒙·兰道（Edmund Landau，1877—1938）推广，统称为<strong>兰道记号（Landau notation）</strong>，在渐进分析中相当常用。兰道记号有一些性质：</p>
+<p>如果函数$f, g$在$x_{0}$附近有定义，满足$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = 1$，则称$x \to x_{0}$时$f, g$等价，记作$f(x) \sim g(x) (x \to x_{0})$。例如，由第一个重要极限可得$\sin x \sim x (x \to 0)$。等价的函数在乘除因式里可以相互替换。<br>如果$\lim\limits_{x \to x_{0}} \dfrac{f(x)}{g(x)} = 0$，则称$x \to x_{0}$时$f$比$g$低阶，$g$比$f$高阶，记作$f(x) = o(g(x)) (x \to x_{0})$。“低阶”指的就是增长较慢，例如$x^2 = o(x) (x \to 0)$。<br>如果$\left|\dfrac{f(x)}{g(x)} \right|$在$x_{0}$附近有界，即存在$M &gt; 0$使得$\left|\dfrac{f(x)}{g(x)} \right| \le M$，则称$x \to x_{0}$时$f$的阶不超过$g$，记作$f(x) = O(g(x)) (x \to x_{0})$。例如，$\sinh x = O(\mathrm{e}^{x})$。特别地，$f(x) = O(1) (x \to x_{0})$表示$f$在$x_{0}$附近有界。<br>等价符号$\sim$、小$o$符号和大$O$符号由德国数学家爱德蒙·兰道（Edmund Landau，1877—1938）推广，统称为<strong>兰道记号（Landau notation）</strong>，在渐进分析中相当常用。兰道记号有一些性质：</p>
 <ul>
 <li>$o(f(x)) + o(f(x)) = o(f(x))$</li>
 <li>$o(f(x)) \cdot o(g(x)) = o(f(x) g(x))$</li>
 <li>$o(f(x)) = O(f(x))$</li>
 </ul>
-<p>注意兰道记号中的等号不同于一般的等号，最后一条不能反过来，$O(f(x)) = o(f(x))$不一定成立。</p>
+<p>注意兰道记号中的等号不同于一般的等号，它仅仅表示等号左边满足等号右边的性质。最后一条不能反过来，$O(f(x)) = o(f(x))$不一定成立。</p>
 <h1 id="函数的连续性"><a href="#函数的连续性" class="headerlink" title="函数的连续性"></a>函数的连续性</h1><h2 id="连续性的定义"><a href="#连续性的定义" class="headerlink" title="连续性的定义"></a>连续性的定义</h2><p>我们曾用$\varepsilon - \delta$语言定义过连续性：设函数$f$在$x_{0}$附近有定义，如果对于任意的$\varepsilon &gt; 0$，都存在$\delta &gt; 0$，使得只要$|x - x_{0}| &lt; \delta$，就有$|f(x) - f(x_{0})| &lt; \varepsilon$，那么称$f$在点$x_{0}$<strong>连续</strong>。</p>
 <p>现在可以用极限写出更加简洁的定义：设函数$f$在$x_{0}$附近有定义，如果$\lim\limits_{x \to x_{0}} f(x) = f(x_{0})$，那么称$f$在点$x_{0}$<strong>连续</strong>。<br>从这一定义看，连续性就是某一点处的极限等于函数值。当自变量从$x_{0}$变为$x$时，就产生了一个增量$\Delta x = x - x_{0}$，函数值也对应产生一个增量$\Delta y = f(x) - f(x_{0}) = f(x_{0} + \Delta x) - f(x_{0})$，连续性实际上也就是说$\lim\limits_{\Delta x \to 0} \Delta y = 0$。</p>
 <p>如果函数在某一点不连续，那么称它在这一点<strong>间断</strong>。如果函数$f$在开区间$I$的每一点都连续，那么称函数$f$是开区间$I$上的<strong>连续函数（continuous function）</strong>。<br>函数$f$在点$x_{0}$连续当且仅当$\lim\limits_{x \to x_{0}^{-}} f(x) = \lim\limits_{x \to x_{0}^{+}} f(x) = f(x_{0})$。我们可以同样定义与左右极限对应的左右连续的概念：如果$\lim\limits_{x \to x_{0}^{-}} f(x) = f(x_{0})$，那么称$f$在$x_{0}$<strong>左连续</strong>；如果$\lim\limits_{x \to x_{0}^{+}} f(x) = f(x_{0})$，那么称$f$在$x_{0}$<strong>右连续</strong>。<br>对于闭区间$I$上的函数$f$，如果$f$在区间内每一点都连续，且在左端点左连续，右端点右连续，那么称函数$f$是闭区间$I$上的连续函数。</p>
@@ -2002,7 +2002,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1726991974560')
+  navigator.serviceWorker.register('/sw.js?t=1727449925959')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
