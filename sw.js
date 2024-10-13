@@ -26,11 +26,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/2018/12/30/Hello-World/');
 
-  precacheUrls.push('/2019/03/22/Learn-Python/');
+  precacheUrls.push('/2019/05/11/1+1=2/');
 
   precacheUrls.push('/2019/04/12/Redstone-Circuit/');
 
-  precacheUrls.push('/2019/07/29/Heap/');
+  precacheUrls.push('/2019/03/22/Learn-Python/');
 
   precacheUrls.push('/2019/03/09/Blog-Building/');
 
