@@ -151,7 +151,7 @@
 <meta property="og:site_name" content="Luckyfuy&#39;s Blog">
 <meta property="og:description" content="前言相较于传统的Python打包工具pyinstaller，Nuitka具有更高的效率和安全性。不过，Nuitka的上手难度稍高。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-06-24T08:11:01.739Z">
+<meta property="og:updated_time" content="2024-11-18T09:26:58.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nuitka的简要使用">
 <meta name="twitter:description" content="前言相较于传统的Python打包工具pyinstaller，Nuitka具有更高的效率和安全性。不过，Nuitka的上手难度稍高。">
@@ -527,7 +527,7 @@
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>推荐使用pip安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Nuitka</span><br></pre></td></tr></table></figure></p>
 <p>如果下载缓慢，可以参考<a href="/2019/11/03/PIP-Mirror/" title="PIP更换国内镜像源">这篇文章</a>。</p>
 <p>如果要用到<code>--onefile</code>参数，可以安装zstandard压缩文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install zstandard</span><br></pre></td></tr></table></figure></p>
-<p>此外，还需要下载C++编译器<a href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/" title="MinGW-w64" target="_blank" rel="noopener">MinGW</a>。</p>
+<p>此外，还需要下载C++编译器<a href="https://www.mingw-w64.org/" title="MinGW-w64" target="_blank" rel="noopener">MinGW</a>。</p>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>使用以下命令即可从<code>main.py</code>编译生成<code>.exe</code>文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 main.py</span><br></pre></td></tr></table></figure></p>
 <p><code>--follow-imports</code>参数编译所有调用的模块，此时可以用<code>--nofollow-import-to</code>不编译指定模块。<code>--nofollow-imports</code>参数不编译所有模块，此时可以用<code>--follow-import-to=</code>参数编译指定模块。<br>例如，<code>main.py</code>中调用了<code>config.py</code>，那么就要用参数<code>--follow-imports</code>或<code>--follow-import-to=config.py</code>。</p>
 <p>为了方便移植，可以添加参数<code>--standalone</code>。<code>--standalone</code>包含了参数<code>--follow-imports</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nuitka --mingw64 --standalone main.py</span><br></pre></td></tr></table></figure></p>
@@ -1198,7 +1198,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共1826.1k字</span>
+  <span class="post-count">全站共1826.4k字</span>
 </div>
         
 
@@ -1885,7 +1885,7 @@ if(canvas.getContext){
   </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1731824479009')
+  navigator.serviceWorker.register('/sw.js?t=1731927961184')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
