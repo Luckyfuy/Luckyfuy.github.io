@@ -493,7 +493,7 @@ pre,
 }
 pre,
 code {
-  font-family: 'Fira Code', consolas, Menlo, "Noto Serif SC", monospace;
+  font-family: 'JetBrains Mono', consolas, Menlo, "Noto Serif SC", monospace;
 }
 code {
   padding: 2px 4px;
@@ -1949,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #452a8e;
+  background: #eddd50;
 }
 .links-of-blogroll {
   font-size: 13px;
